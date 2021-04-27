@@ -5,10 +5,9 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
@@ -16,376 +15,181 @@
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_ControlDPC_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_CheckConditions_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ConductingEquipmentTerminalReading_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ConductingEquipment_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ControlMessageInfo_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_EventMessageInfo_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_EventValue_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_IED_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_LogicalNodeForControl_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_PhaseMMTN_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ReadingMessageInfo_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_StatusMessageInfo_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_StatusValue_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_SwitchControlScheduleFSCH_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_ControlValue_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_ENS_DynamicTestKind_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_ReadingMMTR_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_StatusDPS_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_LogicalNodeForEventAndStatus_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<6> scc_info_ReadingMMXU_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_switchmodule_2fswitchmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ProtectedSwitch_switchmodule_2fswitchmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_switchmodule_2fswitchmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_SwitchControlFSCC_switchmodule_2fswitchmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_switchmodule_2fswitchmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_SwitchDiscreteControlXSWI_switchmodule_2fswitchmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_switchmodule_2fswitchmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_SwitchEvent_switchmodule_2fswitchmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_switchmodule_2fswitchmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_SwitchStatus_switchmodule_2fswitchmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_switchmodule_2fswitchmodule_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_SwitchControl_switchmodule_2fswitchmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_switchmodule_2fswitchmodule_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_SwitchDiscreteControl_switchmodule_2fswitchmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_switchmodule_2fswitchmodule_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_SwitchEventXSWI_switchmodule_2fswitchmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_switchmodule_2fswitchmodule_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_SwitchStatusXSWI_switchmodule_2fswitchmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_switchmodule_2fswitchmodule_2eproto ::google::protobuf::internal::SCCInfo<4> scc_info_SwitchReading_switchmodule_2fswitchmodule_2eproto;
+PROTOBUF_PRAGMA_INIT_SEG
 namespace switchmodule {
-class SwitchDiscreteControlXSWIDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SwitchDiscreteControlXSWI> _instance;
-} _SwitchDiscreteControlXSWI_default_instance_;
-class SwitchDiscreteControlDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SwitchDiscreteControl> _instance;
-} _SwitchDiscreteControl_default_instance_;
-class ProtectedSwitchDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<ProtectedSwitch> _instance;
-} _ProtectedSwitch_default_instance_;
-class SwitchDiscreteControlProfileDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SwitchDiscreteControlProfile> _instance;
-} _SwitchDiscreteControlProfile_default_instance_;
-class SwitchEventXSWIDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SwitchEventXSWI> _instance;
-} _SwitchEventXSWI_default_instance_;
-class SwitchEventDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SwitchEvent> _instance;
-} _SwitchEvent_default_instance_;
-class SwitchEventProfileDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SwitchEventProfile> _instance;
-} _SwitchEventProfile_default_instance_;
-class SwitchReadingDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SwitchReading> _instance;
-} _SwitchReading_default_instance_;
-class SwitchReadingProfileDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SwitchReadingProfile> _instance;
-} _SwitchReadingProfile_default_instance_;
-class SwitchStatusXSWIDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SwitchStatusXSWI> _instance;
-} _SwitchStatusXSWI_default_instance_;
-class SwitchStatusDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SwitchStatus> _instance;
-} _SwitchStatus_default_instance_;
-class SwitchStatusProfileDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SwitchStatusProfile> _instance;
-} _SwitchStatusProfile_default_instance_;
-class SwitchControlFSCCDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SwitchControlFSCC> _instance;
-} _SwitchControlFSCC_default_instance_;
-class SwitchControlDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SwitchControl> _instance;
-} _SwitchControl_default_instance_;
-class SwitchControlProfileDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SwitchControlProfile> _instance;
-} _SwitchControlProfile_default_instance_;
+constexpr SwitchDiscreteControlXSWI::SwitchDiscreteControlXSWI(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : logicalnodeforcontrol_(nullptr)
+  , pos_(nullptr)
+  , resetprotectionpickup_(nullptr){}
+struct SwitchDiscreteControlXSWIDefaultTypeInternal {
+  constexpr SwitchDiscreteControlXSWIDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SwitchDiscreteControlXSWIDefaultTypeInternal() {}
+  union {
+    SwitchDiscreteControlXSWI _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SwitchDiscreteControlXSWIDefaultTypeInternal _SwitchDiscreteControlXSWI_default_instance_;
+constexpr SwitchDiscreteControl::SwitchDiscreteControl(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : controlvalue_(nullptr)
+  , check_(nullptr)
+  , switchdiscretecontrolxswi_(nullptr){}
+struct SwitchDiscreteControlDefaultTypeInternal {
+  constexpr SwitchDiscreteControlDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SwitchDiscreteControlDefaultTypeInternal() {}
+  union {
+    SwitchDiscreteControl _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SwitchDiscreteControlDefaultTypeInternal _SwitchDiscreteControl_default_instance_;
+constexpr ProtectedSwitch::ProtectedSwitch(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : conductingequipment_(nullptr){}
+struct ProtectedSwitchDefaultTypeInternal {
+  constexpr ProtectedSwitchDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ProtectedSwitchDefaultTypeInternal() {}
+  union {
+    ProtectedSwitch _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ProtectedSwitchDefaultTypeInternal _ProtectedSwitch_default_instance_;
+constexpr SwitchDiscreteControlProfile::SwitchDiscreteControlProfile(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : controlmessageinfo_(nullptr)
+  , protectedswitch_(nullptr)
+  , switchdiscretecontrol_(nullptr){}
+struct SwitchDiscreteControlProfileDefaultTypeInternal {
+  constexpr SwitchDiscreteControlProfileDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SwitchDiscreteControlProfileDefaultTypeInternal() {}
+  union {
+    SwitchDiscreteControlProfile _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SwitchDiscreteControlProfileDefaultTypeInternal _SwitchDiscreteControlProfile_default_instance_;
+constexpr SwitchEventXSWI::SwitchEventXSWI(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : logicalnodeforeventandstatus_(nullptr)
+  , dynamictest_(nullptr)
+  , pos_(nullptr){}
+struct SwitchEventXSWIDefaultTypeInternal {
+  constexpr SwitchEventXSWIDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SwitchEventXSWIDefaultTypeInternal() {}
+  union {
+    SwitchEventXSWI _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SwitchEventXSWIDefaultTypeInternal _SwitchEventXSWI_default_instance_;
+constexpr SwitchEvent::SwitchEvent(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : eventvalue_(nullptr)
+  , switcheventxswi_(nullptr){}
+struct SwitchEventDefaultTypeInternal {
+  constexpr SwitchEventDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SwitchEventDefaultTypeInternal() {}
+  union {
+    SwitchEvent _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SwitchEventDefaultTypeInternal _SwitchEvent_default_instance_;
+constexpr SwitchEventProfile::SwitchEventProfile(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : eventmessageinfo_(nullptr)
+  , protectedswitch_(nullptr)
+  , switchevent_(nullptr){}
+struct SwitchEventProfileDefaultTypeInternal {
+  constexpr SwitchEventProfileDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SwitchEventProfileDefaultTypeInternal() {}
+  union {
+    SwitchEventProfile _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SwitchEventProfileDefaultTypeInternal _SwitchEventProfile_default_instance_;
+constexpr SwitchReading::SwitchReading(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : conductingequipmentterminalreading_(nullptr)
+  , diffreadingmmxu_(nullptr)
+  , phasemmtn_(nullptr)
+  , readingmmtr_(nullptr)
+  , readingmmxu_(nullptr){}
+struct SwitchReadingDefaultTypeInternal {
+  constexpr SwitchReadingDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SwitchReadingDefaultTypeInternal() {}
+  union {
+    SwitchReading _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SwitchReadingDefaultTypeInternal _SwitchReading_default_instance_;
+constexpr SwitchReadingProfile::SwitchReadingProfile(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : switchreading_()
+  , readingmessageinfo_(nullptr)
+  , protectedswitch_(nullptr){}
+struct SwitchReadingProfileDefaultTypeInternal {
+  constexpr SwitchReadingProfileDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SwitchReadingProfileDefaultTypeInternal() {}
+  union {
+    SwitchReadingProfile _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SwitchReadingProfileDefaultTypeInternal _SwitchReadingProfile_default_instance_;
+constexpr SwitchStatusXSWI::SwitchStatusXSWI(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : logicalnodeforeventandstatus_(nullptr)
+  , dynamictest_(nullptr)
+  , pos_(nullptr)
+  , protectionpickup_(nullptr){}
+struct SwitchStatusXSWIDefaultTypeInternal {
+  constexpr SwitchStatusXSWIDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SwitchStatusXSWIDefaultTypeInternal() {}
+  union {
+    SwitchStatusXSWI _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SwitchStatusXSWIDefaultTypeInternal _SwitchStatusXSWI_default_instance_;
+constexpr SwitchStatus::SwitchStatus(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : statusvalue_(nullptr)
+  , switchstatusxswi_(nullptr){}
+struct SwitchStatusDefaultTypeInternal {
+  constexpr SwitchStatusDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SwitchStatusDefaultTypeInternal() {}
+  union {
+    SwitchStatus _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SwitchStatusDefaultTypeInternal _SwitchStatus_default_instance_;
+constexpr SwitchStatusProfile::SwitchStatusProfile(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : statusmessageinfo_(nullptr)
+  , protectedswitch_(nullptr)
+  , switchstatus_(nullptr){}
+struct SwitchStatusProfileDefaultTypeInternal {
+  constexpr SwitchStatusProfileDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SwitchStatusProfileDefaultTypeInternal() {}
+  union {
+    SwitchStatusProfile _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SwitchStatusProfileDefaultTypeInternal _SwitchStatusProfile_default_instance_;
 }  // namespace switchmodule
-static void InitDefaultsSwitchDiscreteControlXSWI_switchmodule_2fswitchmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_switchmodule_2fswitchmodule_2eproto[12];
+static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_switchmodule_2fswitchmodule_2eproto = nullptr;
+static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_switchmodule_2fswitchmodule_2eproto = nullptr;
 
-  {
-    void* ptr = &::switchmodule::_SwitchDiscreteControlXSWI_default_instance_;
-    new (ptr) ::switchmodule::SwitchDiscreteControlXSWI();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::switchmodule::SwitchDiscreteControlXSWI::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<2> scc_info_SwitchDiscreteControlXSWI_switchmodule_2fswitchmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsSwitchDiscreteControlXSWI_switchmodule_2fswitchmodule_2eproto}, {
-      &scc_info_LogicalNodeForControl_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_ControlDPC_commonmodule_2fcommonmodule_2eproto.base,}};
-
-static void InitDefaultsSwitchDiscreteControl_switchmodule_2fswitchmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::switchmodule::_SwitchDiscreteControl_default_instance_;
-    new (ptr) ::switchmodule::SwitchDiscreteControl();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::switchmodule::SwitchDiscreteControl::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<3> scc_info_SwitchDiscreteControl_switchmodule_2fswitchmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsSwitchDiscreteControl_switchmodule_2fswitchmodule_2eproto}, {
-      &scc_info_ControlValue_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_CheckConditions_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_SwitchDiscreteControlXSWI_switchmodule_2fswitchmodule_2eproto.base,}};
-
-static void InitDefaultsProtectedSwitch_switchmodule_2fswitchmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::switchmodule::_ProtectedSwitch_default_instance_;
-    new (ptr) ::switchmodule::ProtectedSwitch();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::switchmodule::ProtectedSwitch::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<1> scc_info_ProtectedSwitch_switchmodule_2fswitchmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsProtectedSwitch_switchmodule_2fswitchmodule_2eproto}, {
-      &scc_info_ConductingEquipment_commonmodule_2fcommonmodule_2eproto.base,}};
-
-static void InitDefaultsSwitchDiscreteControlProfile_switchmodule_2fswitchmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::switchmodule::_SwitchDiscreteControlProfile_default_instance_;
-    new (ptr) ::switchmodule::SwitchDiscreteControlProfile();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::switchmodule::SwitchDiscreteControlProfile::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<4> scc_info_SwitchDiscreteControlProfile_switchmodule_2fswitchmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsSwitchDiscreteControlProfile_switchmodule_2fswitchmodule_2eproto}, {
-      &scc_info_ControlMessageInfo_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_IED_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_ProtectedSwitch_switchmodule_2fswitchmodule_2eproto.base,
-      &scc_info_SwitchDiscreteControl_switchmodule_2fswitchmodule_2eproto.base,}};
-
-static void InitDefaultsSwitchEventXSWI_switchmodule_2fswitchmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::switchmodule::_SwitchEventXSWI_default_instance_;
-    new (ptr) ::switchmodule::SwitchEventXSWI();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::switchmodule::SwitchEventXSWI::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<3> scc_info_SwitchEventXSWI_switchmodule_2fswitchmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsSwitchEventXSWI_switchmodule_2fswitchmodule_2eproto}, {
-      &scc_info_LogicalNodeForEventAndStatus_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_ENS_DynamicTestKind_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_StatusDPS_commonmodule_2fcommonmodule_2eproto.base,}};
-
-static void InitDefaultsSwitchEvent_switchmodule_2fswitchmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::switchmodule::_SwitchEvent_default_instance_;
-    new (ptr) ::switchmodule::SwitchEvent();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::switchmodule::SwitchEvent::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<2> scc_info_SwitchEvent_switchmodule_2fswitchmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsSwitchEvent_switchmodule_2fswitchmodule_2eproto}, {
-      &scc_info_EventValue_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_SwitchEventXSWI_switchmodule_2fswitchmodule_2eproto.base,}};
-
-static void InitDefaultsSwitchEventProfile_switchmodule_2fswitchmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::switchmodule::_SwitchEventProfile_default_instance_;
-    new (ptr) ::switchmodule::SwitchEventProfile();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::switchmodule::SwitchEventProfile::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<4> scc_info_SwitchEventProfile_switchmodule_2fswitchmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsSwitchEventProfile_switchmodule_2fswitchmodule_2eproto}, {
-      &scc_info_EventMessageInfo_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_IED_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_ProtectedSwitch_switchmodule_2fswitchmodule_2eproto.base,
-      &scc_info_SwitchEvent_switchmodule_2fswitchmodule_2eproto.base,}};
-
-static void InitDefaultsSwitchReading_switchmodule_2fswitchmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::switchmodule::_SwitchReading_default_instance_;
-    new (ptr) ::switchmodule::SwitchReading();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::switchmodule::SwitchReading::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<4> scc_info_SwitchReading_switchmodule_2fswitchmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsSwitchReading_switchmodule_2fswitchmodule_2eproto}, {
-      &scc_info_ConductingEquipmentTerminalReading_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_ReadingMMXU_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_PhaseMMTN_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_ReadingMMTR_commonmodule_2fcommonmodule_2eproto.base,}};
-
-static void InitDefaultsSwitchReadingProfile_switchmodule_2fswitchmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::switchmodule::_SwitchReadingProfile_default_instance_;
-    new (ptr) ::switchmodule::SwitchReadingProfile();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::switchmodule::SwitchReadingProfile::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<4> scc_info_SwitchReadingProfile_switchmodule_2fswitchmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsSwitchReadingProfile_switchmodule_2fswitchmodule_2eproto}, {
-      &scc_info_ReadingMessageInfo_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_IED_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_ProtectedSwitch_switchmodule_2fswitchmodule_2eproto.base,
-      &scc_info_SwitchReading_switchmodule_2fswitchmodule_2eproto.base,}};
-
-static void InitDefaultsSwitchStatusXSWI_switchmodule_2fswitchmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::switchmodule::_SwitchStatusXSWI_default_instance_;
-    new (ptr) ::switchmodule::SwitchStatusXSWI();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::switchmodule::SwitchStatusXSWI::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<3> scc_info_SwitchStatusXSWI_switchmodule_2fswitchmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsSwitchStatusXSWI_switchmodule_2fswitchmodule_2eproto}, {
-      &scc_info_LogicalNodeForEventAndStatus_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_ENS_DynamicTestKind_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_StatusDPS_commonmodule_2fcommonmodule_2eproto.base,}};
-
-static void InitDefaultsSwitchStatus_switchmodule_2fswitchmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::switchmodule::_SwitchStatus_default_instance_;
-    new (ptr) ::switchmodule::SwitchStatus();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::switchmodule::SwitchStatus::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<2> scc_info_SwitchStatus_switchmodule_2fswitchmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsSwitchStatus_switchmodule_2fswitchmodule_2eproto}, {
-      &scc_info_StatusValue_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_SwitchStatusXSWI_switchmodule_2fswitchmodule_2eproto.base,}};
-
-static void InitDefaultsSwitchStatusProfile_switchmodule_2fswitchmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::switchmodule::_SwitchStatusProfile_default_instance_;
-    new (ptr) ::switchmodule::SwitchStatusProfile();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::switchmodule::SwitchStatusProfile::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<4> scc_info_SwitchStatusProfile_switchmodule_2fswitchmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsSwitchStatusProfile_switchmodule_2fswitchmodule_2eproto}, {
-      &scc_info_StatusMessageInfo_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_IED_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_ProtectedSwitch_switchmodule_2fswitchmodule_2eproto.base,
-      &scc_info_SwitchStatus_switchmodule_2fswitchmodule_2eproto.base,}};
-
-static void InitDefaultsSwitchControlFSCC_switchmodule_2fswitchmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::switchmodule::_SwitchControlFSCC_default_instance_;
-    new (ptr) ::switchmodule::SwitchControlFSCC();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::switchmodule::SwitchControlFSCC::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<2> scc_info_SwitchControlFSCC_switchmodule_2fswitchmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsSwitchControlFSCC_switchmodule_2fswitchmodule_2eproto}, {
-      &scc_info_LogicalNodeForControl_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_SwitchControlScheduleFSCH_commonmodule_2fcommonmodule_2eproto.base,}};
-
-static void InitDefaultsSwitchControl_switchmodule_2fswitchmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::switchmodule::_SwitchControl_default_instance_;
-    new (ptr) ::switchmodule::SwitchControl();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::switchmodule::SwitchControl::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<3> scc_info_SwitchControl_switchmodule_2fswitchmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsSwitchControl_switchmodule_2fswitchmodule_2eproto}, {
-      &scc_info_ControlValue_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_CheckConditions_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_SwitchControlFSCC_switchmodule_2fswitchmodule_2eproto.base,}};
-
-static void InitDefaultsSwitchControlProfile_switchmodule_2fswitchmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::switchmodule::_SwitchControlProfile_default_instance_;
-    new (ptr) ::switchmodule::SwitchControlProfile();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::switchmodule::SwitchControlProfile::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<4> scc_info_SwitchControlProfile_switchmodule_2fswitchmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsSwitchControlProfile_switchmodule_2fswitchmodule_2eproto}, {
-      &scc_info_ControlMessageInfo_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_IED_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_ProtectedSwitch_switchmodule_2fswitchmodule_2eproto.base,
-      &scc_info_SwitchControl_switchmodule_2fswitchmodule_2eproto.base,}};
-
-void InitDefaults_switchmodule_2fswitchmodule_2eproto() {
-  ::google::protobuf::internal::InitSCC(&scc_info_SwitchDiscreteControlXSWI_switchmodule_2fswitchmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SwitchDiscreteControl_switchmodule_2fswitchmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_ProtectedSwitch_switchmodule_2fswitchmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SwitchDiscreteControlProfile_switchmodule_2fswitchmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SwitchEventXSWI_switchmodule_2fswitchmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SwitchEvent_switchmodule_2fswitchmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SwitchEventProfile_switchmodule_2fswitchmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SwitchReading_switchmodule_2fswitchmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SwitchReadingProfile_switchmodule_2fswitchmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SwitchStatusXSWI_switchmodule_2fswitchmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SwitchStatus_switchmodule_2fswitchmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SwitchStatusProfile_switchmodule_2fswitchmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SwitchControlFSCC_switchmodule_2fswitchmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SwitchControl_switchmodule_2fswitchmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SwitchControlProfile_switchmodule_2fswitchmodule_2eproto.base);
-}
-
-::google::protobuf::Metadata file_level_metadata_switchmodule_2fswitchmodule_2eproto[15];
-constexpr ::google::protobuf::EnumDescriptor const** file_level_enum_descriptors_switchmodule_2fswitchmodule_2eproto = nullptr;
-constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_switchmodule_2fswitchmodule_2eproto = nullptr;
-
-const ::google::protobuf::uint32 TableStruct_switchmodule_2fswitchmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_switchmodule_2fswitchmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchDiscreteControlXSWI, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -393,6 +197,7 @@ const ::google::protobuf::uint32 TableStruct_switchmodule_2fswitchmodule_2eproto
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchDiscreteControlXSWI, logicalnodeforcontrol_),
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchDiscreteControlXSWI, pos_),
+  PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchDiscreteControlXSWI, resetprotectionpickup_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchDiscreteControl, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -413,7 +218,6 @@ const ::google::protobuf::uint32 TableStruct_switchmodule_2fswitchmodule_2eproto
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchDiscreteControlProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchDiscreteControlProfile, ied_),
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchDiscreteControlProfile, protectedswitch_),
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchDiscreteControlProfile, switchdiscretecontrol_),
   ~0u,  // no _has_bits_
@@ -437,7 +241,6 @@ const ::google::protobuf::uint32 TableStruct_switchmodule_2fswitchmodule_2eproto
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchEventProfile, eventmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchEventProfile, ied_),
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchEventProfile, protectedswitch_),
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchEventProfile, switchevent_),
   ~0u,  // no _has_bits_
@@ -456,7 +259,6 @@ const ::google::protobuf::uint32 TableStruct_switchmodule_2fswitchmodule_2eproto
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchReadingProfile, readingmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchReadingProfile, ied_),
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchReadingProfile, protectedswitch_),
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchReadingProfile, switchreading_),
   ~0u,  // no _has_bits_
@@ -467,6 +269,7 @@ const ::google::protobuf::uint32 TableStruct_switchmodule_2fswitchmodule_2eproto
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchStatusXSWI, logicalnodeforeventandstatus_),
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchStatusXSWI, dynamictest_),
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchStatusXSWI, pos_),
+  PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchStatusXSWI, protectionpickup_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchStatus, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -480,448 +283,329 @@ const ::google::protobuf::uint32 TableStruct_switchmodule_2fswitchmodule_2eproto
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchStatusProfile, statusmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchStatusProfile, ied_),
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchStatusProfile, protectedswitch_),
   PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchStatusProfile, switchstatus_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchControlFSCC, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchControlFSCC, logicalnodeforcontrol_),
-  PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchControlFSCC, switchcontrolschedulefsch_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchControl, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchControl, controlvalue_),
-  PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchControl, check_),
-  PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchControl, switchcontrolfscc_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchControlProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchControlProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchControlProfile, ied_),
-  PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchControlProfile, protectedswitch_),
-  PROTOBUF_FIELD_OFFSET(::switchmodule::SwitchControlProfile, switchcontrol_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::switchmodule::SwitchDiscreteControlXSWI)},
-  { 7, -1, sizeof(::switchmodule::SwitchDiscreteControl)},
-  { 15, -1, sizeof(::switchmodule::ProtectedSwitch)},
-  { 21, -1, sizeof(::switchmodule::SwitchDiscreteControlProfile)},
+  { 8, -1, sizeof(::switchmodule::SwitchDiscreteControl)},
+  { 16, -1, sizeof(::switchmodule::ProtectedSwitch)},
+  { 22, -1, sizeof(::switchmodule::SwitchDiscreteControlProfile)},
   { 30, -1, sizeof(::switchmodule::SwitchEventXSWI)},
   { 38, -1, sizeof(::switchmodule::SwitchEvent)},
   { 45, -1, sizeof(::switchmodule::SwitchEventProfile)},
-  { 54, -1, sizeof(::switchmodule::SwitchReading)},
-  { 64, -1, sizeof(::switchmodule::SwitchReadingProfile)},
-  { 73, -1, sizeof(::switchmodule::SwitchStatusXSWI)},
-  { 81, -1, sizeof(::switchmodule::SwitchStatus)},
-  { 88, -1, sizeof(::switchmodule::SwitchStatusProfile)},
-  { 97, -1, sizeof(::switchmodule::SwitchControlFSCC)},
-  { 104, -1, sizeof(::switchmodule::SwitchControl)},
-  { 112, -1, sizeof(::switchmodule::SwitchControlProfile)},
+  { 53, -1, sizeof(::switchmodule::SwitchReading)},
+  { 63, -1, sizeof(::switchmodule::SwitchReadingProfile)},
+  { 71, -1, sizeof(::switchmodule::SwitchStatusXSWI)},
+  { 80, -1, sizeof(::switchmodule::SwitchStatus)},
+  { 87, -1, sizeof(::switchmodule::SwitchStatusProfile)},
 };
 
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::switchmodule::_SwitchDiscreteControlXSWI_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::switchmodule::_SwitchDiscreteControl_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::switchmodule::_ProtectedSwitch_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::switchmodule::_SwitchDiscreteControlProfile_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::switchmodule::_SwitchEventXSWI_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::switchmodule::_SwitchEvent_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::switchmodule::_SwitchEventProfile_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::switchmodule::_SwitchReading_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::switchmodule::_SwitchReadingProfile_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::switchmodule::_SwitchStatusXSWI_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::switchmodule::_SwitchStatus_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::switchmodule::_SwitchStatusProfile_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::switchmodule::_SwitchControlFSCC_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::switchmodule::_SwitchControl_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::switchmodule::_SwitchControlProfile_default_instance_),
+static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::switchmodule::_SwitchDiscreteControlXSWI_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::switchmodule::_SwitchDiscreteControl_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::switchmodule::_ProtectedSwitch_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::switchmodule::_SwitchDiscreteControlProfile_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::switchmodule::_SwitchEventXSWI_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::switchmodule::_SwitchEvent_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::switchmodule::_SwitchEventProfile_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::switchmodule::_SwitchReading_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::switchmodule::_SwitchReadingProfile_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::switchmodule::_SwitchStatusXSWI_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::switchmodule::_SwitchStatus_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::switchmodule::_SwitchStatusProfile_default_instance_),
 };
 
-::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_switchmodule_2fswitchmodule_2eproto = {
-  {}, AddDescriptors_switchmodule_2fswitchmodule_2eproto, "switchmodule/switchmodule.proto", schemas,
-  file_default_instances, TableStruct_switchmodule_2fswitchmodule_2eproto::offsets,
-  file_level_metadata_switchmodule_2fswitchmodule_2eproto, 15, file_level_enum_descriptors_switchmodule_2fswitchmodule_2eproto, file_level_service_descriptors_switchmodule_2fswitchmodule_2eproto,
-};
-
-const char descriptor_table_protodef_switchmodule_2fswitchmodule_2eproto[] =
+const char descriptor_table_protodef_switchmodule_2fswitchmodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\037switchmodule/switchmodule.proto\022\014switc"
   "hmodule\032\tuml.proto\032\037commonmodule/commonm"
-  "odule.proto\"\214\001\n\031SwitchDiscreteControlXSW"
+  "odule.proto\"\303\001\n\031SwitchDiscreteControlXSW"
   "I\022H\n\025logicalNodeForControl\030\001 \001(\0132#.commo"
-  "nmodule.LogicalNodeForControlB\004\200\265\030\001\022%\n\003P"
-  "os\030\002 \001(\0132\030.commonmodule.ControlDPC\"\323\001\n\025S"
-  "witchDiscreteControl\0226\n\014controlValue\030\001 \001"
-  "(\0132\032.commonmodule.ControlValueB\004\200\265\030\001\022,\n\005"
-  "check\030\002 \001(\0132\035.commonmodule.CheckConditio"
-  "ns\022T\n\031switchDiscreteControlXSWI\030\003 \001(\0132\'."
-  "switchmodule.SwitchDiscreteControlXSWIB\010"
-  "\210\265\030\001\220\265\030\001\"W\n\017ProtectedSwitch\022D\n\023conductin"
-  "gEquipment\030\001 \001(\0132!.commonmodule.Conducti"
-  "ngEquipmentB\004\200\265\030\001\"\242\002\n\034SwitchDiscreteCont"
-  "rolProfile\022B\n\022controlMessageInfo\030\001 \001(\0132 "
-  ".commonmodule.ControlMessageInfoB\004\200\265\030\001\022("
-  "\n\003ied\030\002 \001(\0132\021.commonmodule.IEDB\010\210\265\030\001\220\265\030\001"
-  "\022@\n\017protectedSwitch\030\003 \001(\0132\035.switchmodule"
-  ".ProtectedSwitchB\010\210\265\030\001\220\265\030\001\022L\n\025switchDisc"
-  "reteControl\030\004 \001(\0132#.switchmodule.SwitchD"
-  "iscreteControlB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\321\001\n\017Switc"
-  "hEventXSWI\022V\n\034logicalNodeForEventAndStat"
-  "us\030\001 \001(\0132*.commonmodule.LogicalNodeForEv"
-  "entAndStatusB\004\200\265\030\001\0226\n\013DynamicTest\030\002 \001(\0132"
-  "!.commonmodule.ENS_DynamicTestKind\022.\n\003Po"
-  "s\030\003 \001(\0132\027.commonmodule.StatusDPSB\010\210\265\030\001\220\265"
-  "\030\001\"\203\001\n\013SwitchEvent\0222\n\neventValue\030\001 \001(\0132\030"
-  ".commonmodule.EventValueB\004\200\265\030\001\022@\n\017switch"
-  "EventXSWI\030\002 \001(\0132\035.switchmodule.SwitchEve"
-  "ntXSWIB\010\210\265\030\001\220\265\030\001\"\200\002\n\022SwitchEventProfile\022"
-  ">\n\020eventMessageInfo\030\001 \001(\0132\036.commonmodule"
-  ".EventMessageInfoB\004\200\265\030\001\022(\n\003ied\030\002 \001(\0132\021.c"
-  "ommonmodule.IEDB\010\210\265\030\001\220\265\030\001\022@\n\017protectedSw"
-  "itch\030\003 \001(\0132\035.switchmodule.ProtectedSwitc"
-  "hB\010\210\265\030\001\220\265\030\001\0228\n\013switchEvent\030\004 \001(\0132\031.switc"
-  "hmodule.SwitchEventB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\263\002\n\r"
-  "SwitchReading\022b\n\"conductingEquipmentTerm"
-  "inalReading\030\001 \001(\01320.commonmodule.Conduct"
-  "ingEquipmentTerminalReadingB\004\200\265\030\001\0222\n\017dif"
-  "fReadingMMXU\030\002 \001(\0132\031.commonmodule.Readin"
-  "gMMXU\022*\n\tphaseMMTN\030\003 \001(\0132\027.commonmodule."
-  "PhaseMMTN\022.\n\013readingMMTR\030\004 \001(\0132\031.commonm"
-  "odule.ReadingMMTR\022.\n\013readingMMXU\030\005 \001(\0132\031"
-  ".commonmodule.ReadingMMXU\"\216\002\n\024SwitchRead"
-  "ingProfile\022B\n\022readingMessageInfo\030\001 \001(\0132 "
-  ".commonmodule.ReadingMessageInfoB\004\200\265\030\001\022("
-  "\n\003ied\030\002 \001(\0132\021.commonmodule.IEDB\010\210\265\030\001\220\265\030\001"
-  "\022@\n\017protectedSwitch\030\003 \001(\0132\035.switchmodule"
-  ".ProtectedSwitchB\010\210\265\030\001\220\265\030\001\022@\n\rswitchRead"
-  "ing\030\004 \003(\0132\033.switchmodule.SwitchReadingB\014"
-  "\210\265\030\001\220\265\030\001\230\265\030\002:\004\300\363\030\001\"\322\001\n\020SwitchStatusXSWI\022"
-  "V\n\034logicalNodeForEventAndStatus\030\001 \001(\0132*."
-  "commonmodule.LogicalNodeForEventAndStatu"
-  "sB\004\200\265\030\001\0226\n\013DynamicTest\030\002 \001(\0132!.commonmod"
-  "ule.ENS_DynamicTestKind\022.\n\003Pos\030\003 \001(\0132\027.c"
-  "ommonmodule.StatusDPSB\010\210\265\030\001\220\265\030\001\"\210\001\n\014Swit"
-  "chStatus\0224\n\013statusValue\030\001 \001(\0132\031.commonmo"
-  "dule.StatusValueB\004\200\265\030\001\022B\n\020switchStatusXS"
-  "WI\030\002 \001(\0132\036.switchmodule.SwitchStatusXSWI"
-  "B\010\210\265\030\001\220\265\030\001\"\205\002\n\023SwitchStatusProfile\022@\n\021st"
-  "atusMessageInfo\030\001 \001(\0132\037.commonmodule.Sta"
-  "tusMessageInfoB\004\200\265\030\001\022(\n\003ied\030\002 \001(\0132\021.comm"
-  "onmodule.IEDB\010\210\265\030\001\220\265\030\001\022@\n\017protectedSwitc"
-  "h\030\003 \001(\0132\035.switchmodule.ProtectedSwitchB\010"
-  "\210\265\030\001\220\265\030\001\022:\n\014switchStatus\030\004 \001(\0132\032.switchm"
-  "odule.SwitchStatusB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\251\001\n\021S"
-  "witchControlFSCC\022H\n\025logicalNodeForContro"
-  "l\030\001 \001(\0132#.commonmodule.LogicalNodeForCon"
-  "trolB\004\200\265\030\001\022J\n\031switchControlScheduleFSCH\030"
-  "\002 \001(\0132\'.commonmodule.SwitchControlSchedu"
-  "leFSCH\"\273\001\n\rSwitchControl\0226\n\014controlValue"
-  "\030\001 \001(\0132\032.commonmodule.ControlValueB\004\200\265\030\001"
-  "\022,\n\005check\030\002 \001(\0132\035.commonmodule.CheckCond"
-  "itions\022D\n\021SwitchControlFSCC\030\003 \001(\0132\037.swit"
-  "chmodule.SwitchControlFSCCB\010\210\265\030\001\220\265\030\001\"\212\002\n"
-  "\024SwitchControlProfile\022B\n\022controlMessageI"
-  "nfo\030\001 \001(\0132 .commonmodule.ControlMessageI"
-  "nfoB\004\200\265\030\001\022(\n\003ied\030\002 \001(\0132\021.commonmodule.IE"
-  "DB\010\210\265\030\001\220\265\030\001\022@\n\017protectedSwitch\030\003 \001(\0132\035.s"
-  "witchmodule.ProtectedSwitchB\010\210\265\030\001\220\265\030\001\022<\n"
-  "\rswitchControl\030\004 \001(\0132\033.switchmodule.Swit"
-  "chControlB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001B\201\001\n\024openfmb.sw"
-  "itchmoduleP\001ZPgitlab.com/openfmb/psm/ops"
-  "/protobuf/go-openfmb-ops-protobuf/openfm"
-  "b/switchmodule\252\002\024openfmb.switchmoduleb\006p"
-  "roto3"
+  "nmodule.LogicalNodeForControlB\004\200\265\030\001\022#\n\003P"
+  "os\030\002 \001(\0132\026.commonmodule.PhaseDPC\0227\n\025Rese"
+  "tProtectionPickup\030\003 \001(\0132\030.commonmodule.C"
+  "ontrolSPC\"\311\001\n\025SwitchDiscreteControl\0226\n\014c"
+  "ontrolValue\030\001 \001(\0132\032.commonmodule.Control"
+  "ValueB\004\200\265\030\001\022,\n\005check\030\002 \001(\0132\035.commonmodul"
+  "e.CheckConditions\022J\n\031switchDiscreteContr"
+  "olXSWI\030\003 \001(\0132\'.switchmodule.SwitchDiscre"
+  "teControlXSWI\"W\n\017ProtectedSwitch\022D\n\023cond"
+  "uctingEquipment\030\001 \001(\0132!.commonmodule.Con"
+  "ductingEquipmentB\004\200\265\030\001\"\370\001\n\034SwitchDiscret"
+  "eControlProfile\022B\n\022controlMessageInfo\030\001 "
+  "\001(\0132 .commonmodule.ControlMessageInfoB\004\200"
+  "\265\030\001\022@\n\017protectedSwitch\030\002 \001(\0132\035.switchmod"
+  "ule.ProtectedSwitchB\010\210\265\030\001\220\265\030\001\022L\n\025switchD"
+  "iscreteControl\030\003 \001(\0132#.switchmodule.Swit"
+  "chDiscreteControlB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\306\001\n\017Sw"
+  "itchEventXSWI\022V\n\034logicalNodeForEventAndS"
+  "tatus\030\001 \001(\0132*.commonmodule.LogicalNodeFo"
+  "rEventAndStatusB\004\200\265\030\001\0226\n\013DynamicTest\030\002 \001"
+  "(\0132!.commonmodule.ENS_DynamicTestKind\022#\n"
+  "\003Pos\030\003 \001(\0132\026.commonmodule.PhaseDPS\"y\n\013Sw"
+  "itchEvent\0222\n\neventValue\030\001 \001(\0132\030.commonmo"
+  "dule.EventValueB\004\200\265\030\001\0226\n\017switchEventXSWI"
+  "\030\002 \001(\0132\035.switchmodule.SwitchEventXSWI\"\326\001"
+  "\n\022SwitchEventProfile\022>\n\020eventMessageInfo"
+  "\030\001 \001(\0132\036.commonmodule.EventMessageInfoB\004"
+  "\200\265\030\001\022@\n\017protectedSwitch\030\002 \001(\0132\035.switchmo"
+  "dule.ProtectedSwitchB\010\210\265\030\001\220\265\030\001\0228\n\013switch"
+  "Event\030\003 \001(\0132\031.switchmodule.SwitchEventB\010"
+  "\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\263\002\n\rSwitchReading\022b\n\"cond"
+  "uctingEquipmentTerminalReading\030\001 \001(\01320.c"
+  "ommonmodule.ConductingEquipmentTerminalR"
+  "eadingB\004\200\265\030\001\0222\n\017diffReadingMMXU\030\002 \001(\0132\031."
+  "commonmodule.ReadingMMXU\022*\n\tphaseMMTN\030\003 "
+  "\001(\0132\027.commonmodule.PhaseMMTN\022.\n\013readingM"
+  "MTR\030\004 \001(\0132\031.commonmodule.ReadingMMTR\022.\n\013"
+  "readingMMXU\030\005 \001(\0132\031.commonmodule.Reading"
+  "MMXU\"\344\001\n\024SwitchReadingProfile\022B\n\022reading"
+  "MessageInfo\030\001 \001(\0132 .commonmodule.Reading"
+  "MessageInfoB\004\200\265\030\001\022@\n\017protectedSwitch\030\002 \001"
+  "(\0132\035.switchmodule.ProtectedSwitchB\010\210\265\030\001\220"
+  "\265\030\001\022@\n\rswitchReading\030\003 \003(\0132\033.switchmodul"
+  "e.SwitchReadingB\014\210\265\030\001\220\265\030\001\230\265\030\002:\004\300\363\030\001\"\203\002\n\020"
+  "SwitchStatusXSWI\022V\n\034logicalNodeForEventA"
+  "ndStatus\030\001 \001(\0132*.commonmodule.LogicalNod"
+  "eForEventAndStatusB\004\200\265\030\001\0226\n\013DynamicTest\030"
+  "\002 \001(\0132!.commonmodule.ENS_DynamicTestKind"
+  "\022#\n\003Pos\030\004 \001(\0132\026.commonmodule.PhaseDPS\022:\n"
+  "\020ProtectionPickup\030\005 \001(\0132\026.commonmodule.P"
+  "haseSPSB\010\210\265\030\001\220\265\030\001\"~\n\014SwitchStatus\0224\n\013sta"
+  "tusValue\030\001 \001(\0132\031.commonmodule.StatusValu"
+  "eB\004\200\265\030\001\0228\n\020switchStatusXSWI\030\002 \001(\0132\036.swit"
+  "chmodule.SwitchStatusXSWI\"\333\001\n\023SwitchStat"
+  "usProfile\022@\n\021statusMessageInfo\030\001 \001(\0132\037.c"
+  "ommonmodule.StatusMessageInfoB\004\200\265\030\001\022@\n\017p"
+  "rotectedSwitch\030\002 \001(\0132\035.switchmodule.Prot"
+  "ectedSwitchB\010\210\265\030\001\220\265\030\001\022:\n\014switchStatus\030\003 "
+  "\001(\0132\032.switchmodule.SwitchStatusB\010\210\265\030\001\220\265\030"
+  "\001:\004\300\363\030\001B\204\001\n\024openfmb.switchmoduleP\001ZSgitl"
+  "ab.com/openfmb/psm/ops/protobuf/go-openf"
+  "mb-ops-protobuf/v2/openfmb/switchmodule\252"
+  "\002\024openfmb.switchmoduleb\006proto3"
   ;
-::google::protobuf::internal::DescriptorTable descriptor_table_switchmodule_2fswitchmodule_2eproto = {
-  false, InitDefaults_switchmodule_2fswitchmodule_2eproto, 
-  descriptor_table_protodef_switchmodule_2fswitchmodule_2eproto,
-  "switchmodule/switchmodule.proto", &assign_descriptors_table_switchmodule_2fswitchmodule_2eproto, 3405,
+static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_switchmodule_2fswitchmodule_2eproto_deps[2] = {
+  &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
+  &::descriptor_table_uml_2eproto,
 };
-
-void AddDescriptors_switchmodule_2fswitchmodule_2eproto() {
-  static constexpr ::google::protobuf::internal::InitFunc deps[2] =
-  {
-    ::AddDescriptors_uml_2eproto,
-    ::AddDescriptors_commonmodule_2fcommonmodule_2eproto,
-  };
- ::google::protobuf::internal::AddDescriptors(&descriptor_table_switchmodule_2fswitchmodule_2eproto, deps, 2);
+static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_switchmodule_2fswitchmodule_2eproto_once;
+const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_switchmodule_2fswitchmodule_2eproto = {
+  false, false, 2670, descriptor_table_protodef_switchmodule_2fswitchmodule_2eproto, "switchmodule/switchmodule.proto", 
+  &descriptor_table_switchmodule_2fswitchmodule_2eproto_once, descriptor_table_switchmodule_2fswitchmodule_2eproto_deps, 2, 12,
+  schemas, file_default_instances, TableStruct_switchmodule_2fswitchmodule_2eproto::offsets,
+  file_level_metadata_switchmodule_2fswitchmodule_2eproto, file_level_enum_descriptors_switchmodule_2fswitchmodule_2eproto, file_level_service_descriptors_switchmodule_2fswitchmodule_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
+descriptor_table_switchmodule_2fswitchmodule_2eproto_metadata_getter(int index) {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_switchmodule_2fswitchmodule_2eproto);
+  return descriptor_table_switchmodule_2fswitchmodule_2eproto.file_level_metadata[index];
 }
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_switchmodule_2fswitchmodule_2eproto = []() { AddDescriptors_switchmodule_2fswitchmodule_2eproto(); return true; }();
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_switchmodule_2fswitchmodule_2eproto(&descriptor_table_switchmodule_2fswitchmodule_2eproto);
 namespace switchmodule {
 
 // ===================================================================
 
-void SwitchDiscreteControlXSWI::InitAsDefaultInstance() {
-  ::switchmodule::_SwitchDiscreteControlXSWI_default_instance_._instance.get_mutable()->logicalnodeforcontrol_ = const_cast< ::commonmodule::LogicalNodeForControl*>(
-      ::commonmodule::LogicalNodeForControl::internal_default_instance());
-  ::switchmodule::_SwitchDiscreteControlXSWI_default_instance_._instance.get_mutable()->pos_ = const_cast< ::commonmodule::ControlDPC*>(
-      ::commonmodule::ControlDPC::internal_default_instance());
-}
-class SwitchDiscreteControlXSWI::HasBitSetters {
+class SwitchDiscreteControlXSWI::_Internal {
  public:
   static const ::commonmodule::LogicalNodeForControl& logicalnodeforcontrol(const SwitchDiscreteControlXSWI* msg);
-  static const ::commonmodule::ControlDPC& pos(const SwitchDiscreteControlXSWI* msg);
+  static const ::commonmodule::PhaseDPC& pos(const SwitchDiscreteControlXSWI* msg);
+  static const ::commonmodule::ControlSPC& resetprotectionpickup(const SwitchDiscreteControlXSWI* msg);
 };
 
 const ::commonmodule::LogicalNodeForControl&
-SwitchDiscreteControlXSWI::HasBitSetters::logicalnodeforcontrol(const SwitchDiscreteControlXSWI* msg) {
+SwitchDiscreteControlXSWI::_Internal::logicalnodeforcontrol(const SwitchDiscreteControlXSWI* msg) {
   return *msg->logicalnodeforcontrol_;
 }
-const ::commonmodule::ControlDPC&
-SwitchDiscreteControlXSWI::HasBitSetters::pos(const SwitchDiscreteControlXSWI* msg) {
+const ::commonmodule::PhaseDPC&
+SwitchDiscreteControlXSWI::_Internal::pos(const SwitchDiscreteControlXSWI* msg) {
   return *msg->pos_;
 }
+const ::commonmodule::ControlSPC&
+SwitchDiscreteControlXSWI::_Internal::resetprotectionpickup(const SwitchDiscreteControlXSWI* msg) {
+  return *msg->resetprotectionpickup_;
+}
 void SwitchDiscreteControlXSWI::clear_logicalnodeforcontrol() {
-  if (GetArenaNoVirtual() == nullptr && logicalnodeforcontrol_ != nullptr) {
+  if (GetArena() == nullptr && logicalnodeforcontrol_ != nullptr) {
     delete logicalnodeforcontrol_;
   }
   logicalnodeforcontrol_ = nullptr;
 }
 void SwitchDiscreteControlXSWI::clear_pos() {
-  if (GetArenaNoVirtual() == nullptr && pos_ != nullptr) {
+  if (GetArena() == nullptr && pos_ != nullptr) {
     delete pos_;
   }
   pos_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SwitchDiscreteControlXSWI::kLogicalNodeForControlFieldNumber;
-const int SwitchDiscreteControlXSWI::kPosFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SwitchDiscreteControlXSWI::SwitchDiscreteControlXSWI()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+void SwitchDiscreteControlXSWI::clear_resetprotectionpickup() {
+  if (GetArena() == nullptr && resetprotectionpickup_ != nullptr) {
+    delete resetprotectionpickup_;
+  }
+  resetprotectionpickup_ = nullptr;
+}
+SwitchDiscreteControlXSWI::SwitchDiscreteControlXSWI(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:switchmodule.SwitchDiscreteControlXSWI)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:switchmodule.SwitchDiscreteControlXSWI)
 }
 SwitchDiscreteControlXSWI::SwitchDiscreteControlXSWI(const SwitchDiscreteControlXSWI& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_logicalnodeforcontrol()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_logicalnodeforcontrol()) {
     logicalnodeforcontrol_ = new ::commonmodule::LogicalNodeForControl(*from.logicalnodeforcontrol_);
   } else {
     logicalnodeforcontrol_ = nullptr;
   }
-  if (from.has_pos()) {
-    pos_ = new ::commonmodule::ControlDPC(*from.pos_);
+  if (from._internal_has_pos()) {
+    pos_ = new ::commonmodule::PhaseDPC(*from.pos_);
   } else {
     pos_ = nullptr;
+  }
+  if (from._internal_has_resetprotectionpickup()) {
+    resetprotectionpickup_ = new ::commonmodule::ControlSPC(*from.resetprotectionpickup_);
+  } else {
+    resetprotectionpickup_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:switchmodule.SwitchDiscreteControlXSWI)
 }
 
 void SwitchDiscreteControlXSWI::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SwitchDiscreteControlXSWI_switchmodule_2fswitchmodule_2eproto.base);
-  ::memset(&logicalnodeforcontrol_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&pos_) -
-      reinterpret_cast<char*>(&logicalnodeforcontrol_)) + sizeof(pos_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&logicalnodeforcontrol_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&resetprotectionpickup_) -
+    reinterpret_cast<char*>(&logicalnodeforcontrol_)) + sizeof(resetprotectionpickup_));
 }
 
 SwitchDiscreteControlXSWI::~SwitchDiscreteControlXSWI() {
   // @@protoc_insertion_point(destructor:switchmodule.SwitchDiscreteControlXSWI)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SwitchDiscreteControlXSWI::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete logicalnodeforcontrol_;
   if (this != internal_default_instance()) delete pos_;
+  if (this != internal_default_instance()) delete resetprotectionpickup_;
 }
 
+void SwitchDiscreteControlXSWI::ArenaDtor(void* object) {
+  SwitchDiscreteControlXSWI* _this = reinterpret_cast< SwitchDiscreteControlXSWI* >(object);
+  (void)_this;
+}
+void SwitchDiscreteControlXSWI::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SwitchDiscreteControlXSWI::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SwitchDiscreteControlXSWI& SwitchDiscreteControlXSWI::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SwitchDiscreteControlXSWI_switchmodule_2fswitchmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SwitchDiscreteControlXSWI::Clear() {
 // @@protoc_insertion_point(message_clear_start:switchmodule.SwitchDiscreteControlXSWI)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && logicalnodeforcontrol_ != nullptr) {
+  if (GetArena() == nullptr && logicalnodeforcontrol_ != nullptr) {
     delete logicalnodeforcontrol_;
   }
   logicalnodeforcontrol_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && pos_ != nullptr) {
+  if (GetArena() == nullptr && pos_ != nullptr) {
     delete pos_;
   }
   pos_ = nullptr;
-  _internal_metadata_.Clear();
+  if (GetArena() == nullptr && resetprotectionpickup_ != nullptr) {
+    delete resetprotectionpickup_;
+  }
+  resetprotectionpickup_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SwitchDiscreteControlXSWI::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SwitchDiscreteControlXSWI*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SwitchDiscreteControlXSWI::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::LogicalNodeForControl::_InternalParse;
-        object = msg->mutable_logicalnodeforcontrol();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.ControlDPC Pos = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
-        object = msg->mutable_pos();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforcontrol(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .commonmodule.PhaseDPC Pos = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pos(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .commonmodule.ControlSPC ResetProtectionPickup = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_resetprotectionpickup(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SwitchDiscreteControlXSWI::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:switchmodule.SwitchDiscreteControlXSWI)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_logicalnodeforcontrol()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ControlDPC Pos = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_pos()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:switchmodule.SwitchDiscreteControlXSWI)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:switchmodule.SwitchDiscreteControlXSWI)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SwitchDiscreteControlXSWI::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:switchmodule.SwitchDiscreteControlXSWI)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforcontrol()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::logicalnodeforcontrol(this), output);
-  }
-
-  // .commonmodule.ControlDPC Pos = 2;
-  if (this->has_pos()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::pos(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:switchmodule.SwitchDiscreteControlXSWI)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SwitchDiscreteControlXSWI::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SwitchDiscreteControlXSWI::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:switchmodule.SwitchDiscreteControlXSWI)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
   if (this->has_logicalnodeforcontrol()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::logicalnodeforcontrol(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::logicalnodeforcontrol(this), target, stream);
   }
 
-  // .commonmodule.ControlDPC Pos = 2;
+  // .commonmodule.PhaseDPC Pos = 2;
   if (this->has_pos()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::pos(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::pos(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  // .commonmodule.ControlSPC ResetProtectionPickup = 3;
+  if (this->has_resetprotectionpickup()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::resetprotectionpickup(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:switchmodule.SwitchDiscreteControlXSWI)
   return target;
@@ -931,43 +615,49 @@ size_t SwitchDiscreteControlXSWI::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:switchmodule.SwitchDiscreteControlXSWI)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
   if (this->has_logicalnodeforcontrol()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *logicalnodeforcontrol_);
   }
 
-  // .commonmodule.ControlDPC Pos = 2;
+  // .commonmodule.PhaseDPC Pos = 2;
   if (this->has_pos()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *pos_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  // .commonmodule.ControlSPC ResetProtectionPickup = 3;
+  if (this->has_resetprotectionpickup()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *resetprotectionpickup_);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SwitchDiscreteControlXSWI::MergeFrom(const ::google::protobuf::Message& from) {
+void SwitchDiscreteControlXSWI::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:switchmodule.SwitchDiscreteControlXSWI)
   GOOGLE_DCHECK_NE(&from, this);
   const SwitchDiscreteControlXSWI* source =
-      ::google::protobuf::DynamicCastToGenerated<SwitchDiscreteControlXSWI>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SwitchDiscreteControlXSWI>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:switchmodule.SwitchDiscreteControlXSWI)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:switchmodule.SwitchDiscreteControlXSWI)
     MergeFrom(*source);
@@ -977,19 +667,22 @@ void SwitchDiscreteControlXSWI::MergeFrom(const ::google::protobuf::Message& fro
 void SwitchDiscreteControlXSWI::MergeFrom(const SwitchDiscreteControlXSWI& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:switchmodule.SwitchDiscreteControlXSWI)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_logicalnodeforcontrol()) {
-    mutable_logicalnodeforcontrol()->::commonmodule::LogicalNodeForControl::MergeFrom(from.logicalnodeforcontrol());
+    _internal_mutable_logicalnodeforcontrol()->::commonmodule::LogicalNodeForControl::MergeFrom(from._internal_logicalnodeforcontrol());
   }
   if (from.has_pos()) {
-    mutable_pos()->::commonmodule::ControlDPC::MergeFrom(from.pos());
+    _internal_mutable_pos()->::commonmodule::PhaseDPC::MergeFrom(from._internal_pos());
+  }
+  if (from.has_resetprotectionpickup()) {
+    _internal_mutable_resetprotectionpickup()->::commonmodule::ControlSPC::MergeFrom(from._internal_resetprotectionpickup());
   }
 }
 
-void SwitchDiscreteControlXSWI::CopyFrom(const ::google::protobuf::Message& from) {
+void SwitchDiscreteControlXSWI::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:switchmodule.SwitchDiscreteControlXSWI)
   if (&from == this) return;
   Clear();
@@ -1007,34 +700,25 @@ bool SwitchDiscreteControlXSWI::IsInitialized() const {
   return true;
 }
 
-void SwitchDiscreteControlXSWI::Swap(SwitchDiscreteControlXSWI* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SwitchDiscreteControlXSWI::InternalSwap(SwitchDiscreteControlXSWI* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(logicalnodeforcontrol_, other->logicalnodeforcontrol_);
-  swap(pos_, other->pos_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SwitchDiscreteControlXSWI, resetprotectionpickup_)
+      + sizeof(SwitchDiscreteControlXSWI::resetprotectionpickup_)
+      - PROTOBUF_FIELD_OFFSET(SwitchDiscreteControlXSWI, logicalnodeforcontrol_)>(
+          reinterpret_cast<char*>(&logicalnodeforcontrol_),
+          reinterpret_cast<char*>(&other->logicalnodeforcontrol_));
 }
 
-::google::protobuf::Metadata SwitchDiscreteControlXSWI::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_switchmodule_2fswitchmodule_2eproto);
-  return ::file_level_metadata_switchmodule_2fswitchmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SwitchDiscreteControlXSWI::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SwitchDiscreteControl::InitAsDefaultInstance() {
-  ::switchmodule::_SwitchDiscreteControl_default_instance_._instance.get_mutable()->controlvalue_ = const_cast< ::commonmodule::ControlValue*>(
-      ::commonmodule::ControlValue::internal_default_instance());
-  ::switchmodule::_SwitchDiscreteControl_default_instance_._instance.get_mutable()->check_ = const_cast< ::commonmodule::CheckConditions*>(
-      ::commonmodule::CheckConditions::internal_default_instance());
-  ::switchmodule::_SwitchDiscreteControl_default_instance_._instance.get_mutable()->switchdiscretecontrolxswi_ = const_cast< ::switchmodule::SwitchDiscreteControlXSWI*>(
-      ::switchmodule::SwitchDiscreteControlXSWI::internal_default_instance());
-}
-class SwitchDiscreteControl::HasBitSetters {
+class SwitchDiscreteControl::_Internal {
  public:
   static const ::commonmodule::ControlValue& controlvalue(const SwitchDiscreteControl* msg);
   static const ::commonmodule::CheckConditions& check(const SwitchDiscreteControl* msg);
@@ -1042,55 +726,49 @@ class SwitchDiscreteControl::HasBitSetters {
 };
 
 const ::commonmodule::ControlValue&
-SwitchDiscreteControl::HasBitSetters::controlvalue(const SwitchDiscreteControl* msg) {
+SwitchDiscreteControl::_Internal::controlvalue(const SwitchDiscreteControl* msg) {
   return *msg->controlvalue_;
 }
 const ::commonmodule::CheckConditions&
-SwitchDiscreteControl::HasBitSetters::check(const SwitchDiscreteControl* msg) {
+SwitchDiscreteControl::_Internal::check(const SwitchDiscreteControl* msg) {
   return *msg->check_;
 }
 const ::switchmodule::SwitchDiscreteControlXSWI&
-SwitchDiscreteControl::HasBitSetters::switchdiscretecontrolxswi(const SwitchDiscreteControl* msg) {
+SwitchDiscreteControl::_Internal::switchdiscretecontrolxswi(const SwitchDiscreteControl* msg) {
   return *msg->switchdiscretecontrolxswi_;
 }
 void SwitchDiscreteControl::clear_controlvalue() {
-  if (GetArenaNoVirtual() == nullptr && controlvalue_ != nullptr) {
+  if (GetArena() == nullptr && controlvalue_ != nullptr) {
     delete controlvalue_;
   }
   controlvalue_ = nullptr;
 }
 void SwitchDiscreteControl::clear_check() {
-  if (GetArenaNoVirtual() == nullptr && check_ != nullptr) {
+  if (GetArena() == nullptr && check_ != nullptr) {
     delete check_;
   }
   check_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SwitchDiscreteControl::kControlValueFieldNumber;
-const int SwitchDiscreteControl::kCheckFieldNumber;
-const int SwitchDiscreteControl::kSwitchDiscreteControlXSWIFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SwitchDiscreteControl::SwitchDiscreteControl()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SwitchDiscreteControl::SwitchDiscreteControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:switchmodule.SwitchDiscreteControl)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:switchmodule.SwitchDiscreteControl)
 }
 SwitchDiscreteControl::SwitchDiscreteControl(const SwitchDiscreteControl& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_controlvalue()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_controlvalue()) {
     controlvalue_ = new ::commonmodule::ControlValue(*from.controlvalue_);
   } else {
     controlvalue_ = nullptr;
   }
-  if (from.has_check()) {
+  if (from._internal_has_check()) {
     check_ = new ::commonmodule::CheckConditions(*from.check_);
   } else {
     check_ = nullptr;
   }
-  if (from.has_switchdiscretecontrolxswi()) {
+  if (from._internal_has_switchdiscretecontrolxswi()) {
     switchdiscretecontrolxswi_ = new ::switchmodule::SwitchDiscreteControlXSWI(*from.switchdiscretecontrolxswi_);
   } else {
     switchdiscretecontrolxswi_ = nullptr;
@@ -1099,251 +777,139 @@ SwitchDiscreteControl::SwitchDiscreteControl(const SwitchDiscreteControl& from)
 }
 
 void SwitchDiscreteControl::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SwitchDiscreteControl_switchmodule_2fswitchmodule_2eproto.base);
-  ::memset(&controlvalue_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&switchdiscretecontrolxswi_) -
-      reinterpret_cast<char*>(&controlvalue_)) + sizeof(switchdiscretecontrolxswi_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&controlvalue_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&switchdiscretecontrolxswi_) -
+    reinterpret_cast<char*>(&controlvalue_)) + sizeof(switchdiscretecontrolxswi_));
 }
 
 SwitchDiscreteControl::~SwitchDiscreteControl() {
   // @@protoc_insertion_point(destructor:switchmodule.SwitchDiscreteControl)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SwitchDiscreteControl::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete controlvalue_;
   if (this != internal_default_instance()) delete check_;
   if (this != internal_default_instance()) delete switchdiscretecontrolxswi_;
 }
 
+void SwitchDiscreteControl::ArenaDtor(void* object) {
+  SwitchDiscreteControl* _this = reinterpret_cast< SwitchDiscreteControl* >(object);
+  (void)_this;
+}
+void SwitchDiscreteControl::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SwitchDiscreteControl::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SwitchDiscreteControl& SwitchDiscreteControl::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SwitchDiscreteControl_switchmodule_2fswitchmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SwitchDiscreteControl::Clear() {
 // @@protoc_insertion_point(message_clear_start:switchmodule.SwitchDiscreteControl)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && controlvalue_ != nullptr) {
+  if (GetArena() == nullptr && controlvalue_ != nullptr) {
     delete controlvalue_;
   }
   controlvalue_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && check_ != nullptr) {
+  if (GetArena() == nullptr && check_ != nullptr) {
     delete check_;
   }
   check_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && switchdiscretecontrolxswi_ != nullptr) {
+  if (GetArena() == nullptr && switchdiscretecontrolxswi_ != nullptr) {
     delete switchdiscretecontrolxswi_;
   }
   switchdiscretecontrolxswi_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SwitchDiscreteControl::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SwitchDiscreteControl*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SwitchDiscreteControl::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ControlValue::_InternalParse;
-        object = msg->mutable_controlvalue();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_controlvalue(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.CheckConditions check = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::CheckConditions::_InternalParse;
-        object = msg->mutable_check();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .switchmodule.SwitchDiscreteControlXSWI switchDiscreteControlXSWI = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::switchmodule::SwitchDiscreteControlXSWI::_InternalParse;
-        object = msg->mutable_switchdiscretecontrolxswi();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .switchmodule.SwitchDiscreteControlXSWI switchDiscreteControlXSWI = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_switchdiscretecontrolxswi(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SwitchDiscreteControl::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:switchmodule.SwitchDiscreteControl)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_controlvalue()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.CheckConditions check = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_check()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .switchmodule.SwitchDiscreteControlXSWI switchDiscreteControlXSWI = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_switchdiscretecontrolxswi()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:switchmodule.SwitchDiscreteControl)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:switchmodule.SwitchDiscreteControl)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SwitchDiscreteControl::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:switchmodule.SwitchDiscreteControl)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::controlvalue(this), output);
-  }
-
-  // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::check(this), output);
-  }
-
-  // .switchmodule.SwitchDiscreteControlXSWI switchDiscreteControlXSWI = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_switchdiscretecontrolxswi()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::switchdiscretecontrolxswi(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:switchmodule.SwitchDiscreteControl)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SwitchDiscreteControl::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SwitchDiscreteControl::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:switchmodule.SwitchDiscreteControl)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlvalue()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::controlvalue(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::controlvalue(this), target, stream);
   }
 
   // .commonmodule.CheckConditions check = 2;
   if (this->has_check()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::check(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::check(this), target, stream);
   }
 
-  // .switchmodule.SwitchDiscreteControlXSWI switchDiscreteControlXSWI = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.SwitchDiscreteControlXSWI switchDiscreteControlXSWI = 3;
   if (this->has_switchdiscretecontrolxswi()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::switchdiscretecontrolxswi(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::switchdiscretecontrolxswi(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:switchmodule.SwitchDiscreteControl)
   return target;
@@ -1353,50 +919,49 @@ size_t SwitchDiscreteControl::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:switchmodule.SwitchDiscreteControl)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlvalue()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *controlvalue_);
   }
 
   // .commonmodule.CheckConditions check = 2;
   if (this->has_check()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *check_);
   }
 
-  // .switchmodule.SwitchDiscreteControlXSWI switchDiscreteControlXSWI = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.SwitchDiscreteControlXSWI switchDiscreteControlXSWI = 3;
   if (this->has_switchdiscretecontrolxswi()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *switchdiscretecontrolxswi_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SwitchDiscreteControl::MergeFrom(const ::google::protobuf::Message& from) {
+void SwitchDiscreteControl::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:switchmodule.SwitchDiscreteControl)
   GOOGLE_DCHECK_NE(&from, this);
   const SwitchDiscreteControl* source =
-      ::google::protobuf::DynamicCastToGenerated<SwitchDiscreteControl>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SwitchDiscreteControl>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:switchmodule.SwitchDiscreteControl)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:switchmodule.SwitchDiscreteControl)
     MergeFrom(*source);
@@ -1406,22 +971,22 @@ void SwitchDiscreteControl::MergeFrom(const ::google::protobuf::Message& from) {
 void SwitchDiscreteControl::MergeFrom(const SwitchDiscreteControl& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:switchmodule.SwitchDiscreteControl)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_controlvalue()) {
-    mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(from.controlvalue());
+    _internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(from._internal_controlvalue());
   }
   if (from.has_check()) {
-    mutable_check()->::commonmodule::CheckConditions::MergeFrom(from.check());
+    _internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(from._internal_check());
   }
   if (from.has_switchdiscretecontrolxswi()) {
-    mutable_switchdiscretecontrolxswi()->::switchmodule::SwitchDiscreteControlXSWI::MergeFrom(from.switchdiscretecontrolxswi());
+    _internal_mutable_switchdiscretecontrolxswi()->::switchmodule::SwitchDiscreteControlXSWI::MergeFrom(from._internal_switchdiscretecontrolxswi());
   }
 }
 
-void SwitchDiscreteControl::CopyFrom(const ::google::protobuf::Message& from) {
+void SwitchDiscreteControl::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:switchmodule.SwitchDiscreteControl)
   if (&from == this) return;
   Clear();
@@ -1439,59 +1004,49 @@ bool SwitchDiscreteControl::IsInitialized() const {
   return true;
 }
 
-void SwitchDiscreteControl::Swap(SwitchDiscreteControl* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SwitchDiscreteControl::InternalSwap(SwitchDiscreteControl* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(controlvalue_, other->controlvalue_);
-  swap(check_, other->check_);
-  swap(switchdiscretecontrolxswi_, other->switchdiscretecontrolxswi_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SwitchDiscreteControl, switchdiscretecontrolxswi_)
+      + sizeof(SwitchDiscreteControl::switchdiscretecontrolxswi_)
+      - PROTOBUF_FIELD_OFFSET(SwitchDiscreteControl, controlvalue_)>(
+          reinterpret_cast<char*>(&controlvalue_),
+          reinterpret_cast<char*>(&other->controlvalue_));
 }
 
-::google::protobuf::Metadata SwitchDiscreteControl::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_switchmodule_2fswitchmodule_2eproto);
-  return ::file_level_metadata_switchmodule_2fswitchmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SwitchDiscreteControl::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void ProtectedSwitch::InitAsDefaultInstance() {
-  ::switchmodule::_ProtectedSwitch_default_instance_._instance.get_mutable()->conductingequipment_ = const_cast< ::commonmodule::ConductingEquipment*>(
-      ::commonmodule::ConductingEquipment::internal_default_instance());
-}
-class ProtectedSwitch::HasBitSetters {
+class ProtectedSwitch::_Internal {
  public:
   static const ::commonmodule::ConductingEquipment& conductingequipment(const ProtectedSwitch* msg);
 };
 
 const ::commonmodule::ConductingEquipment&
-ProtectedSwitch::HasBitSetters::conductingequipment(const ProtectedSwitch* msg) {
+ProtectedSwitch::_Internal::conductingequipment(const ProtectedSwitch* msg) {
   return *msg->conductingequipment_;
 }
 void ProtectedSwitch::clear_conductingequipment() {
-  if (GetArenaNoVirtual() == nullptr && conductingequipment_ != nullptr) {
+  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
     delete conductingequipment_;
   }
   conductingequipment_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int ProtectedSwitch::kConductingEquipmentFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-ProtectedSwitch::ProtectedSwitch()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+ProtectedSwitch::ProtectedSwitch(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:switchmodule.ProtectedSwitch)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:switchmodule.ProtectedSwitch)
 }
 ProtectedSwitch::ProtectedSwitch(const ProtectedSwitch& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_conductingequipment()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_conductingequipment()) {
     conductingequipment_ = new ::commonmodule::ConductingEquipment(*from.conductingequipment_);
   } else {
     conductingequipment_ = nullptr;
@@ -1500,165 +1055,96 @@ ProtectedSwitch::ProtectedSwitch(const ProtectedSwitch& from)
 }
 
 void ProtectedSwitch::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_ProtectedSwitch_switchmodule_2fswitchmodule_2eproto.base);
-  conductingequipment_ = nullptr;
+conductingequipment_ = nullptr;
 }
 
 ProtectedSwitch::~ProtectedSwitch() {
   // @@protoc_insertion_point(destructor:switchmodule.ProtectedSwitch)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ProtectedSwitch::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete conductingequipment_;
 }
 
+void ProtectedSwitch::ArenaDtor(void* object) {
+  ProtectedSwitch* _this = reinterpret_cast< ProtectedSwitch* >(object);
+  (void)_this;
+}
+void ProtectedSwitch::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void ProtectedSwitch::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ProtectedSwitch& ProtectedSwitch::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_ProtectedSwitch_switchmodule_2fswitchmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ProtectedSwitch::Clear() {
 // @@protoc_insertion_point(message_clear_start:switchmodule.ProtectedSwitch)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && conductingequipment_ != nullptr) {
+  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
     delete conductingequipment_;
   }
   conductingequipment_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* ProtectedSwitch::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<ProtectedSwitch*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* ProtectedSwitch::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ConductingEquipment::_InternalParse;
-        object = msg->mutable_conductingequipment();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_conductingequipment(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool ProtectedSwitch::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:switchmodule.ProtectedSwitch)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_conductingequipment()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:switchmodule.ProtectedSwitch)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:switchmodule.ProtectedSwitch)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void ProtectedSwitch::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:switchmodule.ProtectedSwitch)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipment()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::conductingequipment(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:switchmodule.ProtectedSwitch)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* ProtectedSwitch::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* ProtectedSwitch::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:switchmodule.ProtectedSwitch)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
   if (this->has_conductingequipment()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::conductingequipment(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::conductingequipment(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:switchmodule.ProtectedSwitch)
   return target;
@@ -1668,36 +1154,35 @@ size_t ProtectedSwitch::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:switchmodule.ProtectedSwitch)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
   if (this->has_conductingequipment()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *conductingequipment_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void ProtectedSwitch::MergeFrom(const ::google::protobuf::Message& from) {
+void ProtectedSwitch::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:switchmodule.ProtectedSwitch)
   GOOGLE_DCHECK_NE(&from, this);
   const ProtectedSwitch* source =
-      ::google::protobuf::DynamicCastToGenerated<ProtectedSwitch>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ProtectedSwitch>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:switchmodule.ProtectedSwitch)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:switchmodule.ProtectedSwitch)
     MergeFrom(*source);
@@ -1707,16 +1192,16 @@ void ProtectedSwitch::MergeFrom(const ::google::protobuf::Message& from) {
 void ProtectedSwitch::MergeFrom(const ProtectedSwitch& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:switchmodule.ProtectedSwitch)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_conductingequipment()) {
-    mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(from.conductingequipment());
+    _internal_mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(from._internal_conductingequipment());
   }
 }
 
-void ProtectedSwitch::CopyFrom(const ::google::protobuf::Message& from) {
+void ProtectedSwitch::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:switchmodule.ProtectedSwitch)
   if (&from == this) return;
   Clear();
@@ -1734,102 +1219,64 @@ bool ProtectedSwitch::IsInitialized() const {
   return true;
 }
 
-void ProtectedSwitch::Swap(ProtectedSwitch* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void ProtectedSwitch::InternalSwap(ProtectedSwitch* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   swap(conductingequipment_, other->conductingequipment_);
 }
 
-::google::protobuf::Metadata ProtectedSwitch::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_switchmodule_2fswitchmodule_2eproto);
-  return ::file_level_metadata_switchmodule_2fswitchmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata ProtectedSwitch::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SwitchDiscreteControlProfile::InitAsDefaultInstance() {
-  ::switchmodule::_SwitchDiscreteControlProfile_default_instance_._instance.get_mutable()->controlmessageinfo_ = const_cast< ::commonmodule::ControlMessageInfo*>(
-      ::commonmodule::ControlMessageInfo::internal_default_instance());
-  ::switchmodule::_SwitchDiscreteControlProfile_default_instance_._instance.get_mutable()->ied_ = const_cast< ::commonmodule::IED*>(
-      ::commonmodule::IED::internal_default_instance());
-  ::switchmodule::_SwitchDiscreteControlProfile_default_instance_._instance.get_mutable()->protectedswitch_ = const_cast< ::switchmodule::ProtectedSwitch*>(
-      ::switchmodule::ProtectedSwitch::internal_default_instance());
-  ::switchmodule::_SwitchDiscreteControlProfile_default_instance_._instance.get_mutable()->switchdiscretecontrol_ = const_cast< ::switchmodule::SwitchDiscreteControl*>(
-      ::switchmodule::SwitchDiscreteControl::internal_default_instance());
-}
-class SwitchDiscreteControlProfile::HasBitSetters {
+class SwitchDiscreteControlProfile::_Internal {
  public:
   static const ::commonmodule::ControlMessageInfo& controlmessageinfo(const SwitchDiscreteControlProfile* msg);
-  static const ::commonmodule::IED& ied(const SwitchDiscreteControlProfile* msg);
   static const ::switchmodule::ProtectedSwitch& protectedswitch(const SwitchDiscreteControlProfile* msg);
   static const ::switchmodule::SwitchDiscreteControl& switchdiscretecontrol(const SwitchDiscreteControlProfile* msg);
 };
 
 const ::commonmodule::ControlMessageInfo&
-SwitchDiscreteControlProfile::HasBitSetters::controlmessageinfo(const SwitchDiscreteControlProfile* msg) {
+SwitchDiscreteControlProfile::_Internal::controlmessageinfo(const SwitchDiscreteControlProfile* msg) {
   return *msg->controlmessageinfo_;
 }
-const ::commonmodule::IED&
-SwitchDiscreteControlProfile::HasBitSetters::ied(const SwitchDiscreteControlProfile* msg) {
-  return *msg->ied_;
-}
 const ::switchmodule::ProtectedSwitch&
-SwitchDiscreteControlProfile::HasBitSetters::protectedswitch(const SwitchDiscreteControlProfile* msg) {
+SwitchDiscreteControlProfile::_Internal::protectedswitch(const SwitchDiscreteControlProfile* msg) {
   return *msg->protectedswitch_;
 }
 const ::switchmodule::SwitchDiscreteControl&
-SwitchDiscreteControlProfile::HasBitSetters::switchdiscretecontrol(const SwitchDiscreteControlProfile* msg) {
+SwitchDiscreteControlProfile::_Internal::switchdiscretecontrol(const SwitchDiscreteControlProfile* msg) {
   return *msg->switchdiscretecontrol_;
 }
 void SwitchDiscreteControlProfile::clear_controlmessageinfo() {
-  if (GetArenaNoVirtual() == nullptr && controlmessageinfo_ != nullptr) {
+  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
     delete controlmessageinfo_;
   }
   controlmessageinfo_ = nullptr;
 }
-void SwitchDiscreteControlProfile::clear_ied() {
-  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
-    delete ied_;
-  }
-  ied_ = nullptr;
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SwitchDiscreteControlProfile::kControlMessageInfoFieldNumber;
-const int SwitchDiscreteControlProfile::kIedFieldNumber;
-const int SwitchDiscreteControlProfile::kProtectedSwitchFieldNumber;
-const int SwitchDiscreteControlProfile::kSwitchDiscreteControlFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SwitchDiscreteControlProfile::SwitchDiscreteControlProfile()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SwitchDiscreteControlProfile::SwitchDiscreteControlProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:switchmodule.SwitchDiscreteControlProfile)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:switchmodule.SwitchDiscreteControlProfile)
 }
 SwitchDiscreteControlProfile::SwitchDiscreteControlProfile(const SwitchDiscreteControlProfile& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_controlmessageinfo()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_controlmessageinfo()) {
     controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
   } else {
     controlmessageinfo_ = nullptr;
   }
-  if (from.has_ied()) {
-    ied_ = new ::commonmodule::IED(*from.ied_);
-  } else {
-    ied_ = nullptr;
-  }
-  if (from.has_protectedswitch()) {
+  if (from._internal_has_protectedswitch()) {
     protectedswitch_ = new ::switchmodule::ProtectedSwitch(*from.protectedswitch_);
   } else {
     protectedswitch_ = nullptr;
   }
-  if (from.has_switchdiscretecontrol()) {
+  if (from._internal_has_switchdiscretecontrol()) {
     switchdiscretecontrol_ = new ::switchmodule::SwitchDiscreteControl(*from.switchdiscretecontrol_);
   } else {
     switchdiscretecontrol_ = nullptr;
@@ -1838,293 +1285,139 @@ SwitchDiscreteControlProfile::SwitchDiscreteControlProfile(const SwitchDiscreteC
 }
 
 void SwitchDiscreteControlProfile::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SwitchDiscreteControlProfile_switchmodule_2fswitchmodule_2eproto.base);
-  ::memset(&controlmessageinfo_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&switchdiscretecontrol_) -
-      reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(switchdiscretecontrol_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&switchdiscretecontrol_) -
+    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(switchdiscretecontrol_));
 }
 
 SwitchDiscreteControlProfile::~SwitchDiscreteControlProfile() {
   // @@protoc_insertion_point(destructor:switchmodule.SwitchDiscreteControlProfile)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SwitchDiscreteControlProfile::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete ied_;
   if (this != internal_default_instance()) delete protectedswitch_;
   if (this != internal_default_instance()) delete switchdiscretecontrol_;
 }
 
+void SwitchDiscreteControlProfile::ArenaDtor(void* object) {
+  SwitchDiscreteControlProfile* _this = reinterpret_cast< SwitchDiscreteControlProfile* >(object);
+  (void)_this;
+}
+void SwitchDiscreteControlProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SwitchDiscreteControlProfile::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SwitchDiscreteControlProfile& SwitchDiscreteControlProfile::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SwitchDiscreteControlProfile_switchmodule_2fswitchmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SwitchDiscreteControlProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:switchmodule.SwitchDiscreteControlProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && controlmessageinfo_ != nullptr) {
+  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
     delete controlmessageinfo_;
   }
   controlmessageinfo_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
-    delete ied_;
-  }
-  ied_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && protectedswitch_ != nullptr) {
+  if (GetArena() == nullptr && protectedswitch_ != nullptr) {
     delete protectedswitch_;
   }
   protectedswitch_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && switchdiscretecontrol_ != nullptr) {
+  if (GetArena() == nullptr && switchdiscretecontrol_ != nullptr) {
     delete switchdiscretecontrol_;
   }
   switchdiscretecontrol_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SwitchDiscreteControlProfile::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SwitchDiscreteControlProfile*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SwitchDiscreteControlProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ControlMessageInfo::_InternalParse;
-        object = msg->mutable_controlmessageinfo();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::IED::_InternalParse;
-        object = msg->mutable_ied();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::switchmodule::ProtectedSwitch::_InternalParse;
-        object = msg->mutable_protectedswitch();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .switchmodule.SwitchDiscreteControl switchDiscreteControl = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::switchmodule::SwitchDiscreteControl::_InternalParse;
-        object = msg->mutable_switchdiscretecontrol();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .switchmodule.ProtectedSwitch protectedSwitch = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_protectedswitch(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .switchmodule.SwitchDiscreteControl switchDiscreteControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_switchdiscretecontrol(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SwitchDiscreteControlProfile::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:switchmodule.SwitchDiscreteControlProfile)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_controlmessageinfo()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_ied()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_protectedswitch()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .switchmodule.SwitchDiscreteControl switchDiscreteControl = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_switchdiscretecontrol()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:switchmodule.SwitchDiscreteControlProfile)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:switchmodule.SwitchDiscreteControlProfile)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SwitchDiscreteControlProfile::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:switchmodule.SwitchDiscreteControlProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::controlmessageinfo(this), output);
-  }
-
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::ied(this), output);
-  }
-
-  // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_protectedswitch()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::protectedswitch(this), output);
-  }
-
-  // .switchmodule.SwitchDiscreteControl switchDiscreteControl = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_switchdiscretecontrol()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, HasBitSetters::switchdiscretecontrol(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:switchmodule.SwitchDiscreteControlProfile)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SwitchDiscreteControlProfile::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SwitchDiscreteControlProfile::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:switchmodule.SwitchDiscreteControlProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlmessageinfo()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::controlmessageinfo(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::controlmessageinfo(this), target, stream);
   }
 
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::ied(this), target);
-  }
-
-  // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.ProtectedSwitch protectedSwitch = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_protectedswitch()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::protectedswitch(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::protectedswitch(this), target, stream);
   }
 
-  // .switchmodule.SwitchDiscreteControl switchDiscreteControl = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.SwitchDiscreteControl switchDiscreteControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_switchdiscretecontrol()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, HasBitSetters::switchdiscretecontrol(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::switchdiscretecontrol(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:switchmodule.SwitchDiscreteControlProfile)
   return target;
@@ -2134,57 +1427,49 @@ size_t SwitchDiscreteControlProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:switchmodule.SwitchDiscreteControlProfile)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlmessageinfo()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *controlmessageinfo_);
   }
 
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *ied_);
-  }
-
-  // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.ProtectedSwitch protectedSwitch = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_protectedswitch()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *protectedswitch_);
   }
 
-  // .switchmodule.SwitchDiscreteControl switchDiscreteControl = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.SwitchDiscreteControl switchDiscreteControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_switchdiscretecontrol()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *switchdiscretecontrol_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SwitchDiscreteControlProfile::MergeFrom(const ::google::protobuf::Message& from) {
+void SwitchDiscreteControlProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:switchmodule.SwitchDiscreteControlProfile)
   GOOGLE_DCHECK_NE(&from, this);
   const SwitchDiscreteControlProfile* source =
-      ::google::protobuf::DynamicCastToGenerated<SwitchDiscreteControlProfile>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SwitchDiscreteControlProfile>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:switchmodule.SwitchDiscreteControlProfile)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:switchmodule.SwitchDiscreteControlProfile)
     MergeFrom(*source);
@@ -2194,25 +1479,22 @@ void SwitchDiscreteControlProfile::MergeFrom(const ::google::protobuf::Message& 
 void SwitchDiscreteControlProfile::MergeFrom(const SwitchDiscreteControlProfile& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:switchmodule.SwitchDiscreteControlProfile)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_controlmessageinfo()) {
-    mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from.controlmessageinfo());
-  }
-  if (from.has_ied()) {
-    mutable_ied()->::commonmodule::IED::MergeFrom(from.ied());
+    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
   }
   if (from.has_protectedswitch()) {
-    mutable_protectedswitch()->::switchmodule::ProtectedSwitch::MergeFrom(from.protectedswitch());
+    _internal_mutable_protectedswitch()->::switchmodule::ProtectedSwitch::MergeFrom(from._internal_protectedswitch());
   }
   if (from.has_switchdiscretecontrol()) {
-    mutable_switchdiscretecontrol()->::switchmodule::SwitchDiscreteControl::MergeFrom(from.switchdiscretecontrol());
+    _internal_mutable_switchdiscretecontrol()->::switchmodule::SwitchDiscreteControl::MergeFrom(from._internal_switchdiscretecontrol());
   }
 }
 
-void SwitchDiscreteControlProfile::CopyFrom(const ::google::protobuf::Message& from) {
+void SwitchDiscreteControlProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:switchmodule.SwitchDiscreteControlProfile)
   if (&from == this) return;
   Clear();
@@ -2230,99 +1512,82 @@ bool SwitchDiscreteControlProfile::IsInitialized() const {
   return true;
 }
 
-void SwitchDiscreteControlProfile::Swap(SwitchDiscreteControlProfile* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SwitchDiscreteControlProfile::InternalSwap(SwitchDiscreteControlProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(controlmessageinfo_, other->controlmessageinfo_);
-  swap(ied_, other->ied_);
-  swap(protectedswitch_, other->protectedswitch_);
-  swap(switchdiscretecontrol_, other->switchdiscretecontrol_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SwitchDiscreteControlProfile, switchdiscretecontrol_)
+      + sizeof(SwitchDiscreteControlProfile::switchdiscretecontrol_)
+      - PROTOBUF_FIELD_OFFSET(SwitchDiscreteControlProfile, controlmessageinfo_)>(
+          reinterpret_cast<char*>(&controlmessageinfo_),
+          reinterpret_cast<char*>(&other->controlmessageinfo_));
 }
 
-::google::protobuf::Metadata SwitchDiscreteControlProfile::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_switchmodule_2fswitchmodule_2eproto);
-  return ::file_level_metadata_switchmodule_2fswitchmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SwitchDiscreteControlProfile::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SwitchEventXSWI::InitAsDefaultInstance() {
-  ::switchmodule::_SwitchEventXSWI_default_instance_._instance.get_mutable()->logicalnodeforeventandstatus_ = const_cast< ::commonmodule::LogicalNodeForEventAndStatus*>(
-      ::commonmodule::LogicalNodeForEventAndStatus::internal_default_instance());
-  ::switchmodule::_SwitchEventXSWI_default_instance_._instance.get_mutable()->dynamictest_ = const_cast< ::commonmodule::ENS_DynamicTestKind*>(
-      ::commonmodule::ENS_DynamicTestKind::internal_default_instance());
-  ::switchmodule::_SwitchEventXSWI_default_instance_._instance.get_mutable()->pos_ = const_cast< ::commonmodule::StatusDPS*>(
-      ::commonmodule::StatusDPS::internal_default_instance());
-}
-class SwitchEventXSWI::HasBitSetters {
+class SwitchEventXSWI::_Internal {
  public:
   static const ::commonmodule::LogicalNodeForEventAndStatus& logicalnodeforeventandstatus(const SwitchEventXSWI* msg);
   static const ::commonmodule::ENS_DynamicTestKind& dynamictest(const SwitchEventXSWI* msg);
-  static const ::commonmodule::StatusDPS& pos(const SwitchEventXSWI* msg);
+  static const ::commonmodule::PhaseDPS& pos(const SwitchEventXSWI* msg);
 };
 
 const ::commonmodule::LogicalNodeForEventAndStatus&
-SwitchEventXSWI::HasBitSetters::logicalnodeforeventandstatus(const SwitchEventXSWI* msg) {
+SwitchEventXSWI::_Internal::logicalnodeforeventandstatus(const SwitchEventXSWI* msg) {
   return *msg->logicalnodeforeventandstatus_;
 }
 const ::commonmodule::ENS_DynamicTestKind&
-SwitchEventXSWI::HasBitSetters::dynamictest(const SwitchEventXSWI* msg) {
+SwitchEventXSWI::_Internal::dynamictest(const SwitchEventXSWI* msg) {
   return *msg->dynamictest_;
 }
-const ::commonmodule::StatusDPS&
-SwitchEventXSWI::HasBitSetters::pos(const SwitchEventXSWI* msg) {
+const ::commonmodule::PhaseDPS&
+SwitchEventXSWI::_Internal::pos(const SwitchEventXSWI* msg) {
   return *msg->pos_;
 }
 void SwitchEventXSWI::clear_logicalnodeforeventandstatus() {
-  if (GetArenaNoVirtual() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
+  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
     delete logicalnodeforeventandstatus_;
   }
   logicalnodeforeventandstatus_ = nullptr;
 }
 void SwitchEventXSWI::clear_dynamictest() {
-  if (GetArenaNoVirtual() == nullptr && dynamictest_ != nullptr) {
+  if (GetArena() == nullptr && dynamictest_ != nullptr) {
     delete dynamictest_;
   }
   dynamictest_ = nullptr;
 }
 void SwitchEventXSWI::clear_pos() {
-  if (GetArenaNoVirtual() == nullptr && pos_ != nullptr) {
+  if (GetArena() == nullptr && pos_ != nullptr) {
     delete pos_;
   }
   pos_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SwitchEventXSWI::kLogicalNodeForEventAndStatusFieldNumber;
-const int SwitchEventXSWI::kDynamicTestFieldNumber;
-const int SwitchEventXSWI::kPosFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SwitchEventXSWI::SwitchEventXSWI()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SwitchEventXSWI::SwitchEventXSWI(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:switchmodule.SwitchEventXSWI)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:switchmodule.SwitchEventXSWI)
 }
 SwitchEventXSWI::SwitchEventXSWI(const SwitchEventXSWI& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_logicalnodeforeventandstatus()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_logicalnodeforeventandstatus()) {
     logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from.logicalnodeforeventandstatus_);
   } else {
     logicalnodeforeventandstatus_ = nullptr;
   }
-  if (from.has_dynamictest()) {
+  if (from._internal_has_dynamictest()) {
     dynamictest_ = new ::commonmodule::ENS_DynamicTestKind(*from.dynamictest_);
   } else {
     dynamictest_ = nullptr;
   }
-  if (from.has_pos()) {
-    pos_ = new ::commonmodule::StatusDPS(*from.pos_);
+  if (from._internal_has_pos()) {
+    pos_ = new ::commonmodule::PhaseDPS(*from.pos_);
   } else {
     pos_ = nullptr;
   }
@@ -2330,251 +1595,139 @@ SwitchEventXSWI::SwitchEventXSWI(const SwitchEventXSWI& from)
 }
 
 void SwitchEventXSWI::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SwitchEventXSWI_switchmodule_2fswitchmodule_2eproto.base);
-  ::memset(&logicalnodeforeventandstatus_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&pos_) -
-      reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(pos_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&logicalnodeforeventandstatus_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&pos_) -
+    reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(pos_));
 }
 
 SwitchEventXSWI::~SwitchEventXSWI() {
   // @@protoc_insertion_point(destructor:switchmodule.SwitchEventXSWI)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SwitchEventXSWI::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete logicalnodeforeventandstatus_;
   if (this != internal_default_instance()) delete dynamictest_;
   if (this != internal_default_instance()) delete pos_;
 }
 
+void SwitchEventXSWI::ArenaDtor(void* object) {
+  SwitchEventXSWI* _this = reinterpret_cast< SwitchEventXSWI* >(object);
+  (void)_this;
+}
+void SwitchEventXSWI::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SwitchEventXSWI::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SwitchEventXSWI& SwitchEventXSWI::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SwitchEventXSWI_switchmodule_2fswitchmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SwitchEventXSWI::Clear() {
 // @@protoc_insertion_point(message_clear_start:switchmodule.SwitchEventXSWI)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
+  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
     delete logicalnodeforeventandstatus_;
   }
   logicalnodeforeventandstatus_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && dynamictest_ != nullptr) {
+  if (GetArena() == nullptr && dynamictest_ != nullptr) {
     delete dynamictest_;
   }
   dynamictest_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && pos_ != nullptr) {
+  if (GetArena() == nullptr && pos_ != nullptr) {
     delete pos_;
   }
   pos_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SwitchEventXSWI::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SwitchEventXSWI*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SwitchEventXSWI::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::LogicalNodeForEventAndStatus::_InternalParse;
-        object = msg->mutable_logicalnodeforeventandstatus();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforeventandstatus(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.ENS_DynamicTestKind DynamicTest = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ENS_DynamicTestKind::_InternalParse;
-        object = msg->mutable_dynamictest();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.StatusDPS Pos = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::StatusDPS::_InternalParse;
-        object = msg->mutable_pos();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_dynamictest(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .commonmodule.PhaseDPS Pos = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pos(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SwitchEventXSWI::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:switchmodule.SwitchEventXSWI)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_logicalnodeforeventandstatus()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ENS_DynamicTestKind DynamicTest = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_dynamictest()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.StatusDPS Pos = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_pos()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:switchmodule.SwitchEventXSWI)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:switchmodule.SwitchEventXSWI)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SwitchEventXSWI::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:switchmodule.SwitchEventXSWI)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforeventandstatus()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::logicalnodeforeventandstatus(this), output);
-  }
-
-  // .commonmodule.ENS_DynamicTestKind DynamicTest = 2;
-  if (this->has_dynamictest()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::dynamictest(this), output);
-  }
-
-  // .commonmodule.StatusDPS Pos = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_pos()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::pos(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:switchmodule.SwitchEventXSWI)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SwitchEventXSWI::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SwitchEventXSWI::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:switchmodule.SwitchEventXSWI)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
   if (this->has_logicalnodeforeventandstatus()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::logicalnodeforeventandstatus(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::logicalnodeforeventandstatus(this), target, stream);
   }
 
   // .commonmodule.ENS_DynamicTestKind DynamicTest = 2;
   if (this->has_dynamictest()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::dynamictest(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::dynamictest(this), target, stream);
   }
 
-  // .commonmodule.StatusDPS Pos = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .commonmodule.PhaseDPS Pos = 3;
   if (this->has_pos()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::pos(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::pos(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:switchmodule.SwitchEventXSWI)
   return target;
@@ -2584,50 +1737,49 @@ size_t SwitchEventXSWI::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:switchmodule.SwitchEventXSWI)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
   if (this->has_logicalnodeforeventandstatus()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *logicalnodeforeventandstatus_);
   }
 
   // .commonmodule.ENS_DynamicTestKind DynamicTest = 2;
   if (this->has_dynamictest()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *dynamictest_);
   }
 
-  // .commonmodule.StatusDPS Pos = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .commonmodule.PhaseDPS Pos = 3;
   if (this->has_pos()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *pos_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SwitchEventXSWI::MergeFrom(const ::google::protobuf::Message& from) {
+void SwitchEventXSWI::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:switchmodule.SwitchEventXSWI)
   GOOGLE_DCHECK_NE(&from, this);
   const SwitchEventXSWI* source =
-      ::google::protobuf::DynamicCastToGenerated<SwitchEventXSWI>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SwitchEventXSWI>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:switchmodule.SwitchEventXSWI)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:switchmodule.SwitchEventXSWI)
     MergeFrom(*source);
@@ -2637,22 +1789,22 @@ void SwitchEventXSWI::MergeFrom(const ::google::protobuf::Message& from) {
 void SwitchEventXSWI::MergeFrom(const SwitchEventXSWI& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:switchmodule.SwitchEventXSWI)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_logicalnodeforeventandstatus()) {
-    mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from.logicalnodeforeventandstatus());
+    _internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from._internal_logicalnodeforeventandstatus());
   }
   if (from.has_dynamictest()) {
-    mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(from.dynamictest());
+    _internal_mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(from._internal_dynamictest());
   }
   if (from.has_pos()) {
-    mutable_pos()->::commonmodule::StatusDPS::MergeFrom(from.pos());
+    _internal_mutable_pos()->::commonmodule::PhaseDPS::MergeFrom(from._internal_pos());
   }
 }
 
-void SwitchEventXSWI::CopyFrom(const ::google::protobuf::Message& from) {
+void SwitchEventXSWI::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:switchmodule.SwitchEventXSWI)
   if (&from == this) return;
   Clear();
@@ -2670,72 +1822,59 @@ bool SwitchEventXSWI::IsInitialized() const {
   return true;
 }
 
-void SwitchEventXSWI::Swap(SwitchEventXSWI* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SwitchEventXSWI::InternalSwap(SwitchEventXSWI* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(logicalnodeforeventandstatus_, other->logicalnodeforeventandstatus_);
-  swap(dynamictest_, other->dynamictest_);
-  swap(pos_, other->pos_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SwitchEventXSWI, pos_)
+      + sizeof(SwitchEventXSWI::pos_)
+      - PROTOBUF_FIELD_OFFSET(SwitchEventXSWI, logicalnodeforeventandstatus_)>(
+          reinterpret_cast<char*>(&logicalnodeforeventandstatus_),
+          reinterpret_cast<char*>(&other->logicalnodeforeventandstatus_));
 }
 
-::google::protobuf::Metadata SwitchEventXSWI::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_switchmodule_2fswitchmodule_2eproto);
-  return ::file_level_metadata_switchmodule_2fswitchmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SwitchEventXSWI::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SwitchEvent::InitAsDefaultInstance() {
-  ::switchmodule::_SwitchEvent_default_instance_._instance.get_mutable()->eventvalue_ = const_cast< ::commonmodule::EventValue*>(
-      ::commonmodule::EventValue::internal_default_instance());
-  ::switchmodule::_SwitchEvent_default_instance_._instance.get_mutable()->switcheventxswi_ = const_cast< ::switchmodule::SwitchEventXSWI*>(
-      ::switchmodule::SwitchEventXSWI::internal_default_instance());
-}
-class SwitchEvent::HasBitSetters {
+class SwitchEvent::_Internal {
  public:
   static const ::commonmodule::EventValue& eventvalue(const SwitchEvent* msg);
   static const ::switchmodule::SwitchEventXSWI& switcheventxswi(const SwitchEvent* msg);
 };
 
 const ::commonmodule::EventValue&
-SwitchEvent::HasBitSetters::eventvalue(const SwitchEvent* msg) {
+SwitchEvent::_Internal::eventvalue(const SwitchEvent* msg) {
   return *msg->eventvalue_;
 }
 const ::switchmodule::SwitchEventXSWI&
-SwitchEvent::HasBitSetters::switcheventxswi(const SwitchEvent* msg) {
+SwitchEvent::_Internal::switcheventxswi(const SwitchEvent* msg) {
   return *msg->switcheventxswi_;
 }
 void SwitchEvent::clear_eventvalue() {
-  if (GetArenaNoVirtual() == nullptr && eventvalue_ != nullptr) {
+  if (GetArena() == nullptr && eventvalue_ != nullptr) {
     delete eventvalue_;
   }
   eventvalue_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SwitchEvent::kEventValueFieldNumber;
-const int SwitchEvent::kSwitchEventXSWIFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SwitchEvent::SwitchEvent()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SwitchEvent::SwitchEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:switchmodule.SwitchEvent)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:switchmodule.SwitchEvent)
 }
 SwitchEvent::SwitchEvent(const SwitchEvent& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_eventvalue()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_eventvalue()) {
     eventvalue_ = new ::commonmodule::EventValue(*from.eventvalue_);
   } else {
     eventvalue_ = nullptr;
   }
-  if (from.has_switcheventxswi()) {
+  if (from._internal_has_switcheventxswi()) {
     switcheventxswi_ = new ::switchmodule::SwitchEventXSWI(*from.switcheventxswi_);
   } else {
     switcheventxswi_ = nullptr;
@@ -2744,209 +1883,119 @@ SwitchEvent::SwitchEvent(const SwitchEvent& from)
 }
 
 void SwitchEvent::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SwitchEvent_switchmodule_2fswitchmodule_2eproto.base);
-  ::memset(&eventvalue_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&switcheventxswi_) -
-      reinterpret_cast<char*>(&eventvalue_)) + sizeof(switcheventxswi_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&eventvalue_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&switcheventxswi_) -
+    reinterpret_cast<char*>(&eventvalue_)) + sizeof(switcheventxswi_));
 }
 
 SwitchEvent::~SwitchEvent() {
   // @@protoc_insertion_point(destructor:switchmodule.SwitchEvent)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SwitchEvent::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete eventvalue_;
   if (this != internal_default_instance()) delete switcheventxswi_;
 }
 
+void SwitchEvent::ArenaDtor(void* object) {
+  SwitchEvent* _this = reinterpret_cast< SwitchEvent* >(object);
+  (void)_this;
+}
+void SwitchEvent::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SwitchEvent::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SwitchEvent& SwitchEvent::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SwitchEvent_switchmodule_2fswitchmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SwitchEvent::Clear() {
 // @@protoc_insertion_point(message_clear_start:switchmodule.SwitchEvent)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && eventvalue_ != nullptr) {
+  if (GetArena() == nullptr && eventvalue_ != nullptr) {
     delete eventvalue_;
   }
   eventvalue_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && switcheventxswi_ != nullptr) {
+  if (GetArena() == nullptr && switcheventxswi_ != nullptr) {
     delete switcheventxswi_;
   }
   switcheventxswi_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SwitchEvent::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SwitchEvent*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SwitchEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::EventValue::_InternalParse;
-        object = msg->mutable_eventvalue();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .switchmodule.SwitchEventXSWI switchEventXSWI = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::switchmodule::SwitchEventXSWI::_InternalParse;
-        object = msg->mutable_switcheventxswi();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_eventvalue(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .switchmodule.SwitchEventXSWI switchEventXSWI = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_switcheventxswi(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SwitchEvent::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:switchmodule.SwitchEvent)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_eventvalue()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .switchmodule.SwitchEventXSWI switchEventXSWI = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_switcheventxswi()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:switchmodule.SwitchEvent)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:switchmodule.SwitchEvent)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SwitchEvent::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:switchmodule.SwitchEvent)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventvalue()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::eventvalue(this), output);
-  }
-
-  // .switchmodule.SwitchEventXSWI switchEventXSWI = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_switcheventxswi()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::switcheventxswi(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:switchmodule.SwitchEvent)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SwitchEvent::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SwitchEvent::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:switchmodule.SwitchEvent)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_eventvalue()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::eventvalue(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::eventvalue(this), target, stream);
   }
 
-  // .switchmodule.SwitchEventXSWI switchEventXSWI = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.SwitchEventXSWI switchEventXSWI = 2;
   if (this->has_switcheventxswi()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::switcheventxswi(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::switcheventxswi(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:switchmodule.SwitchEvent)
   return target;
@@ -2956,43 +2005,42 @@ size_t SwitchEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:switchmodule.SwitchEvent)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_eventvalue()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *eventvalue_);
   }
 
-  // .switchmodule.SwitchEventXSWI switchEventXSWI = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.SwitchEventXSWI switchEventXSWI = 2;
   if (this->has_switcheventxswi()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *switcheventxswi_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SwitchEvent::MergeFrom(const ::google::protobuf::Message& from) {
+void SwitchEvent::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:switchmodule.SwitchEvent)
   GOOGLE_DCHECK_NE(&from, this);
   const SwitchEvent* source =
-      ::google::protobuf::DynamicCastToGenerated<SwitchEvent>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SwitchEvent>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:switchmodule.SwitchEvent)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:switchmodule.SwitchEvent)
     MergeFrom(*source);
@@ -3002,19 +2050,19 @@ void SwitchEvent::MergeFrom(const ::google::protobuf::Message& from) {
 void SwitchEvent::MergeFrom(const SwitchEvent& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:switchmodule.SwitchEvent)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_eventvalue()) {
-    mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(from.eventvalue());
+    _internal_mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(from._internal_eventvalue());
   }
   if (from.has_switcheventxswi()) {
-    mutable_switcheventxswi()->::switchmodule::SwitchEventXSWI::MergeFrom(from.switcheventxswi());
+    _internal_mutable_switcheventxswi()->::switchmodule::SwitchEventXSWI::MergeFrom(from._internal_switcheventxswi());
   }
 }
 
-void SwitchEvent::CopyFrom(const ::google::protobuf::Message& from) {
+void SwitchEvent::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:switchmodule.SwitchEvent)
   if (&from == this) return;
   Clear();
@@ -3032,103 +2080,69 @@ bool SwitchEvent::IsInitialized() const {
   return true;
 }
 
-void SwitchEvent::Swap(SwitchEvent* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SwitchEvent::InternalSwap(SwitchEvent* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(eventvalue_, other->eventvalue_);
-  swap(switcheventxswi_, other->switcheventxswi_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SwitchEvent, switcheventxswi_)
+      + sizeof(SwitchEvent::switcheventxswi_)
+      - PROTOBUF_FIELD_OFFSET(SwitchEvent, eventvalue_)>(
+          reinterpret_cast<char*>(&eventvalue_),
+          reinterpret_cast<char*>(&other->eventvalue_));
 }
 
-::google::protobuf::Metadata SwitchEvent::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_switchmodule_2fswitchmodule_2eproto);
-  return ::file_level_metadata_switchmodule_2fswitchmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SwitchEvent::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SwitchEventProfile::InitAsDefaultInstance() {
-  ::switchmodule::_SwitchEventProfile_default_instance_._instance.get_mutable()->eventmessageinfo_ = const_cast< ::commonmodule::EventMessageInfo*>(
-      ::commonmodule::EventMessageInfo::internal_default_instance());
-  ::switchmodule::_SwitchEventProfile_default_instance_._instance.get_mutable()->ied_ = const_cast< ::commonmodule::IED*>(
-      ::commonmodule::IED::internal_default_instance());
-  ::switchmodule::_SwitchEventProfile_default_instance_._instance.get_mutable()->protectedswitch_ = const_cast< ::switchmodule::ProtectedSwitch*>(
-      ::switchmodule::ProtectedSwitch::internal_default_instance());
-  ::switchmodule::_SwitchEventProfile_default_instance_._instance.get_mutable()->switchevent_ = const_cast< ::switchmodule::SwitchEvent*>(
-      ::switchmodule::SwitchEvent::internal_default_instance());
-}
-class SwitchEventProfile::HasBitSetters {
+class SwitchEventProfile::_Internal {
  public:
   static const ::commonmodule::EventMessageInfo& eventmessageinfo(const SwitchEventProfile* msg);
-  static const ::commonmodule::IED& ied(const SwitchEventProfile* msg);
   static const ::switchmodule::ProtectedSwitch& protectedswitch(const SwitchEventProfile* msg);
   static const ::switchmodule::SwitchEvent& switchevent(const SwitchEventProfile* msg);
 };
 
 const ::commonmodule::EventMessageInfo&
-SwitchEventProfile::HasBitSetters::eventmessageinfo(const SwitchEventProfile* msg) {
+SwitchEventProfile::_Internal::eventmessageinfo(const SwitchEventProfile* msg) {
   return *msg->eventmessageinfo_;
 }
-const ::commonmodule::IED&
-SwitchEventProfile::HasBitSetters::ied(const SwitchEventProfile* msg) {
-  return *msg->ied_;
-}
 const ::switchmodule::ProtectedSwitch&
-SwitchEventProfile::HasBitSetters::protectedswitch(const SwitchEventProfile* msg) {
+SwitchEventProfile::_Internal::protectedswitch(const SwitchEventProfile* msg) {
   return *msg->protectedswitch_;
 }
 const ::switchmodule::SwitchEvent&
-SwitchEventProfile::HasBitSetters::switchevent(const SwitchEventProfile* msg) {
+SwitchEventProfile::_Internal::switchevent(const SwitchEventProfile* msg) {
   return *msg->switchevent_;
 }
 void SwitchEventProfile::clear_eventmessageinfo() {
-  if (GetArenaNoVirtual() == nullptr && eventmessageinfo_ != nullptr) {
+  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
     delete eventmessageinfo_;
   }
   eventmessageinfo_ = nullptr;
 }
-void SwitchEventProfile::clear_ied() {
-  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
-    delete ied_;
-  }
-  ied_ = nullptr;
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SwitchEventProfile::kEventMessageInfoFieldNumber;
-const int SwitchEventProfile::kIedFieldNumber;
-const int SwitchEventProfile::kProtectedSwitchFieldNumber;
-const int SwitchEventProfile::kSwitchEventFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SwitchEventProfile::SwitchEventProfile()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SwitchEventProfile::SwitchEventProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:switchmodule.SwitchEventProfile)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:switchmodule.SwitchEventProfile)
 }
 SwitchEventProfile::SwitchEventProfile(const SwitchEventProfile& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_eventmessageinfo()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_eventmessageinfo()) {
     eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from.eventmessageinfo_);
   } else {
     eventmessageinfo_ = nullptr;
   }
-  if (from.has_ied()) {
-    ied_ = new ::commonmodule::IED(*from.ied_);
-  } else {
-    ied_ = nullptr;
-  }
-  if (from.has_protectedswitch()) {
+  if (from._internal_has_protectedswitch()) {
     protectedswitch_ = new ::switchmodule::ProtectedSwitch(*from.protectedswitch_);
   } else {
     protectedswitch_ = nullptr;
   }
-  if (from.has_switchevent()) {
+  if (from._internal_has_switchevent()) {
     switchevent_ = new ::switchmodule::SwitchEvent(*from.switchevent_);
   } else {
     switchevent_ = nullptr;
@@ -3137,293 +2151,139 @@ SwitchEventProfile::SwitchEventProfile(const SwitchEventProfile& from)
 }
 
 void SwitchEventProfile::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SwitchEventProfile_switchmodule_2fswitchmodule_2eproto.base);
-  ::memset(&eventmessageinfo_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&switchevent_) -
-      reinterpret_cast<char*>(&eventmessageinfo_)) + sizeof(switchevent_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&eventmessageinfo_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&switchevent_) -
+    reinterpret_cast<char*>(&eventmessageinfo_)) + sizeof(switchevent_));
 }
 
 SwitchEventProfile::~SwitchEventProfile() {
   // @@protoc_insertion_point(destructor:switchmodule.SwitchEventProfile)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SwitchEventProfile::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete eventmessageinfo_;
-  if (this != internal_default_instance()) delete ied_;
   if (this != internal_default_instance()) delete protectedswitch_;
   if (this != internal_default_instance()) delete switchevent_;
 }
 
+void SwitchEventProfile::ArenaDtor(void* object) {
+  SwitchEventProfile* _this = reinterpret_cast< SwitchEventProfile* >(object);
+  (void)_this;
+}
+void SwitchEventProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SwitchEventProfile::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SwitchEventProfile& SwitchEventProfile::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SwitchEventProfile_switchmodule_2fswitchmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SwitchEventProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:switchmodule.SwitchEventProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && eventmessageinfo_ != nullptr) {
+  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
     delete eventmessageinfo_;
   }
   eventmessageinfo_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
-    delete ied_;
-  }
-  ied_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && protectedswitch_ != nullptr) {
+  if (GetArena() == nullptr && protectedswitch_ != nullptr) {
     delete protectedswitch_;
   }
   protectedswitch_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && switchevent_ != nullptr) {
+  if (GetArena() == nullptr && switchevent_ != nullptr) {
     delete switchevent_;
   }
   switchevent_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SwitchEventProfile::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SwitchEventProfile*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SwitchEventProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::EventMessageInfo::_InternalParse;
-        object = msg->mutable_eventmessageinfo();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::IED::_InternalParse;
-        object = msg->mutable_ied();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::switchmodule::ProtectedSwitch::_InternalParse;
-        object = msg->mutable_protectedswitch();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .switchmodule.SwitchEvent switchEvent = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::switchmodule::SwitchEvent::_InternalParse;
-        object = msg->mutable_switchevent();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_eventmessageinfo(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .switchmodule.ProtectedSwitch protectedSwitch = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_protectedswitch(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .switchmodule.SwitchEvent switchEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_switchevent(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SwitchEventProfile::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:switchmodule.SwitchEventProfile)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_eventmessageinfo()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_ied()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_protectedswitch()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .switchmodule.SwitchEvent switchEvent = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_switchevent()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:switchmodule.SwitchEventProfile)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:switchmodule.SwitchEventProfile)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SwitchEventProfile::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:switchmodule.SwitchEventProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::eventmessageinfo(this), output);
-  }
-
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::ied(this), output);
-  }
-
-  // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_protectedswitch()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::protectedswitch(this), output);
-  }
-
-  // .switchmodule.SwitchEvent switchEvent = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_switchevent()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, HasBitSetters::switchevent(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:switchmodule.SwitchEventProfile)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SwitchEventProfile::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SwitchEventProfile::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:switchmodule.SwitchEventProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_eventmessageinfo()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::eventmessageinfo(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::eventmessageinfo(this), target, stream);
   }
 
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::ied(this), target);
-  }
-
-  // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.ProtectedSwitch protectedSwitch = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_protectedswitch()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::protectedswitch(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::protectedswitch(this), target, stream);
   }
 
-  // .switchmodule.SwitchEvent switchEvent = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.SwitchEvent switchEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_switchevent()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, HasBitSetters::switchevent(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::switchevent(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:switchmodule.SwitchEventProfile)
   return target;
@@ -3433,57 +2293,49 @@ size_t SwitchEventProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:switchmodule.SwitchEventProfile)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_eventmessageinfo()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *eventmessageinfo_);
   }
 
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *ied_);
-  }
-
-  // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.ProtectedSwitch protectedSwitch = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_protectedswitch()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *protectedswitch_);
   }
 
-  // .switchmodule.SwitchEvent switchEvent = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.SwitchEvent switchEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_switchevent()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *switchevent_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SwitchEventProfile::MergeFrom(const ::google::protobuf::Message& from) {
+void SwitchEventProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:switchmodule.SwitchEventProfile)
   GOOGLE_DCHECK_NE(&from, this);
   const SwitchEventProfile* source =
-      ::google::protobuf::DynamicCastToGenerated<SwitchEventProfile>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SwitchEventProfile>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:switchmodule.SwitchEventProfile)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:switchmodule.SwitchEventProfile)
     MergeFrom(*source);
@@ -3493,25 +2345,22 @@ void SwitchEventProfile::MergeFrom(const ::google::protobuf::Message& from) {
 void SwitchEventProfile::MergeFrom(const SwitchEventProfile& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:switchmodule.SwitchEventProfile)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_eventmessageinfo()) {
-    mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(from.eventmessageinfo());
-  }
-  if (from.has_ied()) {
-    mutable_ied()->::commonmodule::IED::MergeFrom(from.ied());
+    _internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(from._internal_eventmessageinfo());
   }
   if (from.has_protectedswitch()) {
-    mutable_protectedswitch()->::switchmodule::ProtectedSwitch::MergeFrom(from.protectedswitch());
+    _internal_mutable_protectedswitch()->::switchmodule::ProtectedSwitch::MergeFrom(from._internal_protectedswitch());
   }
   if (from.has_switchevent()) {
-    mutable_switchevent()->::switchmodule::SwitchEvent::MergeFrom(from.switchevent());
+    _internal_mutable_switchevent()->::switchmodule::SwitchEvent::MergeFrom(from._internal_switchevent());
   }
 }
 
-void SwitchEventProfile::CopyFrom(const ::google::protobuf::Message& from) {
+void SwitchEventProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:switchmodule.SwitchEventProfile)
   if (&from == this) return;
   Clear();
@@ -3529,40 +2378,25 @@ bool SwitchEventProfile::IsInitialized() const {
   return true;
 }
 
-void SwitchEventProfile::Swap(SwitchEventProfile* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SwitchEventProfile::InternalSwap(SwitchEventProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(eventmessageinfo_, other->eventmessageinfo_);
-  swap(ied_, other->ied_);
-  swap(protectedswitch_, other->protectedswitch_);
-  swap(switchevent_, other->switchevent_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SwitchEventProfile, switchevent_)
+      + sizeof(SwitchEventProfile::switchevent_)
+      - PROTOBUF_FIELD_OFFSET(SwitchEventProfile, eventmessageinfo_)>(
+          reinterpret_cast<char*>(&eventmessageinfo_),
+          reinterpret_cast<char*>(&other->eventmessageinfo_));
 }
 
-::google::protobuf::Metadata SwitchEventProfile::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_switchmodule_2fswitchmodule_2eproto);
-  return ::file_level_metadata_switchmodule_2fswitchmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SwitchEventProfile::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SwitchReading::InitAsDefaultInstance() {
-  ::switchmodule::_SwitchReading_default_instance_._instance.get_mutable()->conductingequipmentterminalreading_ = const_cast< ::commonmodule::ConductingEquipmentTerminalReading*>(
-      ::commonmodule::ConductingEquipmentTerminalReading::internal_default_instance());
-  ::switchmodule::_SwitchReading_default_instance_._instance.get_mutable()->diffreadingmmxu_ = const_cast< ::commonmodule::ReadingMMXU*>(
-      ::commonmodule::ReadingMMXU::internal_default_instance());
-  ::switchmodule::_SwitchReading_default_instance_._instance.get_mutable()->phasemmtn_ = const_cast< ::commonmodule::PhaseMMTN*>(
-      ::commonmodule::PhaseMMTN::internal_default_instance());
-  ::switchmodule::_SwitchReading_default_instance_._instance.get_mutable()->readingmmtr_ = const_cast< ::commonmodule::ReadingMMTR*>(
-      ::commonmodule::ReadingMMTR::internal_default_instance());
-  ::switchmodule::_SwitchReading_default_instance_._instance.get_mutable()->readingmmxu_ = const_cast< ::commonmodule::ReadingMMXU*>(
-      ::commonmodule::ReadingMMXU::internal_default_instance());
-}
-class SwitchReading::HasBitSetters {
+class SwitchReading::_Internal {
  public:
   static const ::commonmodule::ConductingEquipmentTerminalReading& conductingequipmentterminalreading(const SwitchReading* msg);
   static const ::commonmodule::ReadingMMXU& diffreadingmmxu(const SwitchReading* msg);
@@ -3572,93 +2406,85 @@ class SwitchReading::HasBitSetters {
 };
 
 const ::commonmodule::ConductingEquipmentTerminalReading&
-SwitchReading::HasBitSetters::conductingequipmentterminalreading(const SwitchReading* msg) {
+SwitchReading::_Internal::conductingequipmentterminalreading(const SwitchReading* msg) {
   return *msg->conductingequipmentterminalreading_;
 }
 const ::commonmodule::ReadingMMXU&
-SwitchReading::HasBitSetters::diffreadingmmxu(const SwitchReading* msg) {
+SwitchReading::_Internal::diffreadingmmxu(const SwitchReading* msg) {
   return *msg->diffreadingmmxu_;
 }
 const ::commonmodule::PhaseMMTN&
-SwitchReading::HasBitSetters::phasemmtn(const SwitchReading* msg) {
+SwitchReading::_Internal::phasemmtn(const SwitchReading* msg) {
   return *msg->phasemmtn_;
 }
 const ::commonmodule::ReadingMMTR&
-SwitchReading::HasBitSetters::readingmmtr(const SwitchReading* msg) {
+SwitchReading::_Internal::readingmmtr(const SwitchReading* msg) {
   return *msg->readingmmtr_;
 }
 const ::commonmodule::ReadingMMXU&
-SwitchReading::HasBitSetters::readingmmxu(const SwitchReading* msg) {
+SwitchReading::_Internal::readingmmxu(const SwitchReading* msg) {
   return *msg->readingmmxu_;
 }
 void SwitchReading::clear_conductingequipmentterminalreading() {
-  if (GetArenaNoVirtual() == nullptr && conductingequipmentterminalreading_ != nullptr) {
+  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
     delete conductingequipmentterminalreading_;
   }
   conductingequipmentterminalreading_ = nullptr;
 }
 void SwitchReading::clear_diffreadingmmxu() {
-  if (GetArenaNoVirtual() == nullptr && diffreadingmmxu_ != nullptr) {
+  if (GetArena() == nullptr && diffreadingmmxu_ != nullptr) {
     delete diffreadingmmxu_;
   }
   diffreadingmmxu_ = nullptr;
 }
 void SwitchReading::clear_phasemmtn() {
-  if (GetArenaNoVirtual() == nullptr && phasemmtn_ != nullptr) {
+  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
     delete phasemmtn_;
   }
   phasemmtn_ = nullptr;
 }
 void SwitchReading::clear_readingmmtr() {
-  if (GetArenaNoVirtual() == nullptr && readingmmtr_ != nullptr) {
+  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
     delete readingmmtr_;
   }
   readingmmtr_ = nullptr;
 }
 void SwitchReading::clear_readingmmxu() {
-  if (GetArenaNoVirtual() == nullptr && readingmmxu_ != nullptr) {
+  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
     delete readingmmxu_;
   }
   readingmmxu_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SwitchReading::kConductingEquipmentTerminalReadingFieldNumber;
-const int SwitchReading::kDiffReadingMMXUFieldNumber;
-const int SwitchReading::kPhaseMMTNFieldNumber;
-const int SwitchReading::kReadingMMTRFieldNumber;
-const int SwitchReading::kReadingMMXUFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SwitchReading::SwitchReading()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SwitchReading::SwitchReading(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:switchmodule.SwitchReading)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:switchmodule.SwitchReading)
 }
 SwitchReading::SwitchReading(const SwitchReading& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_conductingequipmentterminalreading()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_conductingequipmentterminalreading()) {
     conductingequipmentterminalreading_ = new ::commonmodule::ConductingEquipmentTerminalReading(*from.conductingequipmentterminalreading_);
   } else {
     conductingequipmentterminalreading_ = nullptr;
   }
-  if (from.has_diffreadingmmxu()) {
+  if (from._internal_has_diffreadingmmxu()) {
     diffreadingmmxu_ = new ::commonmodule::ReadingMMXU(*from.diffreadingmmxu_);
   } else {
     diffreadingmmxu_ = nullptr;
   }
-  if (from.has_phasemmtn()) {
+  if (from._internal_has_phasemmtn()) {
     phasemmtn_ = new ::commonmodule::PhaseMMTN(*from.phasemmtn_);
   } else {
     phasemmtn_ = nullptr;
   }
-  if (from.has_readingmmtr()) {
+  if (from._internal_has_readingmmtr()) {
     readingmmtr_ = new ::commonmodule::ReadingMMTR(*from.readingmmtr_);
   } else {
     readingmmtr_ = nullptr;
   }
-  if (from.has_readingmmxu()) {
+  if (from._internal_has_readingmmxu()) {
     readingmmxu_ = new ::commonmodule::ReadingMMXU(*from.readingmmxu_);
   } else {
     readingmmxu_ = nullptr;
@@ -3667,19 +2493,20 @@ SwitchReading::SwitchReading(const SwitchReading& from)
 }
 
 void SwitchReading::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SwitchReading_switchmodule_2fswitchmodule_2eproto.base);
-  ::memset(&conductingequipmentterminalreading_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&readingmmxu_) -
-      reinterpret_cast<char*>(&conductingequipmentterminalreading_)) + sizeof(readingmmxu_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&conductingequipmentterminalreading_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&readingmmxu_) -
+    reinterpret_cast<char*>(&conductingequipmentterminalreading_)) + sizeof(readingmmxu_));
 }
 
 SwitchReading::~SwitchReading() {
   // @@protoc_insertion_point(destructor:switchmodule.SwitchReading)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SwitchReading::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete conductingequipmentterminalreading_;
   if (this != internal_default_instance()) delete diffreadingmmxu_;
   if (this != internal_default_instance()) delete phasemmtn_;
@@ -3687,315 +2514,158 @@ void SwitchReading::SharedDtor() {
   if (this != internal_default_instance()) delete readingmmxu_;
 }
 
+void SwitchReading::ArenaDtor(void* object) {
+  SwitchReading* _this = reinterpret_cast< SwitchReading* >(object);
+  (void)_this;
+}
+void SwitchReading::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SwitchReading::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SwitchReading& SwitchReading::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SwitchReading_switchmodule_2fswitchmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SwitchReading::Clear() {
 // @@protoc_insertion_point(message_clear_start:switchmodule.SwitchReading)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && conductingequipmentterminalreading_ != nullptr) {
+  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
     delete conductingequipmentterminalreading_;
   }
   conductingequipmentterminalreading_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && diffreadingmmxu_ != nullptr) {
+  if (GetArena() == nullptr && diffreadingmmxu_ != nullptr) {
     delete diffreadingmmxu_;
   }
   diffreadingmmxu_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && phasemmtn_ != nullptr) {
+  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
     delete phasemmtn_;
   }
   phasemmtn_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && readingmmtr_ != nullptr) {
+  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
     delete readingmmtr_;
   }
   readingmmtr_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && readingmmxu_ != nullptr) {
+  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
     delete readingmmxu_;
   }
   readingmmxu_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SwitchReading::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SwitchReading*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SwitchReading::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ConductingEquipmentTerminalReading::_InternalParse;
-        object = msg->mutable_conductingequipmentterminalreading();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_conductingequipmentterminalreading(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.ReadingMMXU diffReadingMMXU = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ReadingMMXU::_InternalParse;
-        object = msg->mutable_diffreadingmmxu();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_diffreadingmmxu(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.PhaseMMTN phaseMMTN = 3;
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::PhaseMMTN::_InternalParse;
-        object = msg->mutable_phasemmtn();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_phasemmtn(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.ReadingMMTR readingMMTR = 4;
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ReadingMMTR::_InternalParse;
-        object = msg->mutable_readingmmtr();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_readingmmtr(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.ReadingMMXU readingMMXU = 5;
-      case 5: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ReadingMMXU::_InternalParse;
-        object = msg->mutable_readingmmxu();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_readingmmxu(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SwitchReading::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:switchmodule.SwitchReading)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_conductingequipmentterminalreading()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ReadingMMXU diffReadingMMXU = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_diffreadingmmxu()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.PhaseMMTN phaseMMTN = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_phasemmtn()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ReadingMMTR readingMMTR = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_readingmmtr()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ReadingMMXU readingMMXU = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_readingmmxu()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:switchmodule.SwitchReading)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:switchmodule.SwitchReading)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SwitchReading::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:switchmodule.SwitchReading)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipmentterminalreading()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::conductingequipmentterminalreading(this), output);
-  }
-
-  // .commonmodule.ReadingMMXU diffReadingMMXU = 2;
-  if (this->has_diffreadingmmxu()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::diffreadingmmxu(this), output);
-  }
-
-  // .commonmodule.PhaseMMTN phaseMMTN = 3;
-  if (this->has_phasemmtn()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::phasemmtn(this), output);
-  }
-
-  // .commonmodule.ReadingMMTR readingMMTR = 4;
-  if (this->has_readingmmtr()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, HasBitSetters::readingmmtr(this), output);
-  }
-
-  // .commonmodule.ReadingMMXU readingMMXU = 5;
-  if (this->has_readingmmxu()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, HasBitSetters::readingmmxu(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:switchmodule.SwitchReading)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SwitchReading::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SwitchReading::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:switchmodule.SwitchReading)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
   if (this->has_conductingequipmentterminalreading()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::conductingequipmentterminalreading(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::conductingequipmentterminalreading(this), target, stream);
   }
 
   // .commonmodule.ReadingMMXU diffReadingMMXU = 2;
   if (this->has_diffreadingmmxu()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::diffreadingmmxu(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::diffreadingmmxu(this), target, stream);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 3;
   if (this->has_phasemmtn()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::phasemmtn(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::phasemmtn(this), target, stream);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 4;
   if (this->has_readingmmtr()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, HasBitSetters::readingmmtr(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        4, _Internal::readingmmtr(this), target, stream);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 5;
   if (this->has_readingmmxu()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, HasBitSetters::readingmmxu(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        5, _Internal::readingmmxu(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:switchmodule.SwitchReading)
   return target;
@@ -4005,64 +2675,63 @@ size_t SwitchReading::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:switchmodule.SwitchReading)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
   if (this->has_conductingequipmentterminalreading()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *conductingequipmentterminalreading_);
   }
 
   // .commonmodule.ReadingMMXU diffReadingMMXU = 2;
   if (this->has_diffreadingmmxu()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *diffreadingmmxu_);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 3;
   if (this->has_phasemmtn()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *phasemmtn_);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 4;
   if (this->has_readingmmtr()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *readingmmtr_);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 5;
   if (this->has_readingmmxu()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *readingmmxu_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SwitchReading::MergeFrom(const ::google::protobuf::Message& from) {
+void SwitchReading::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:switchmodule.SwitchReading)
   GOOGLE_DCHECK_NE(&from, this);
   const SwitchReading* source =
-      ::google::protobuf::DynamicCastToGenerated<SwitchReading>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SwitchReading>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:switchmodule.SwitchReading)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:switchmodule.SwitchReading)
     MergeFrom(*source);
@@ -4072,28 +2741,28 @@ void SwitchReading::MergeFrom(const ::google::protobuf::Message& from) {
 void SwitchReading::MergeFrom(const SwitchReading& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:switchmodule.SwitchReading)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_conductingequipmentterminalreading()) {
-    mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(from.conductingequipmentterminalreading());
+    _internal_mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(from._internal_conductingequipmentterminalreading());
   }
   if (from.has_diffreadingmmxu()) {
-    mutable_diffreadingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from.diffreadingmmxu());
+    _internal_mutable_diffreadingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from._internal_diffreadingmmxu());
   }
   if (from.has_phasemmtn()) {
-    mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(from.phasemmtn());
+    _internal_mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(from._internal_phasemmtn());
   }
   if (from.has_readingmmtr()) {
-    mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(from.readingmmtr());
+    _internal_mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(from._internal_readingmmtr());
   }
   if (from.has_readingmmxu()) {
-    mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from.readingmmxu());
+    _internal_mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from._internal_readingmmxu());
   }
 }
 
-void SwitchReading::CopyFrom(const ::google::protobuf::Message& from) {
+void SwitchReading::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:switchmodule.SwitchReading)
   if (&from == this) return;
   Clear();
@@ -4111,95 +2780,61 @@ bool SwitchReading::IsInitialized() const {
   return true;
 }
 
-void SwitchReading::Swap(SwitchReading* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SwitchReading::InternalSwap(SwitchReading* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(conductingequipmentterminalreading_, other->conductingequipmentterminalreading_);
-  swap(diffreadingmmxu_, other->diffreadingmmxu_);
-  swap(phasemmtn_, other->phasemmtn_);
-  swap(readingmmtr_, other->readingmmtr_);
-  swap(readingmmxu_, other->readingmmxu_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SwitchReading, readingmmxu_)
+      + sizeof(SwitchReading::readingmmxu_)
+      - PROTOBUF_FIELD_OFFSET(SwitchReading, conductingequipmentterminalreading_)>(
+          reinterpret_cast<char*>(&conductingequipmentterminalreading_),
+          reinterpret_cast<char*>(&other->conductingequipmentterminalreading_));
 }
 
-::google::protobuf::Metadata SwitchReading::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_switchmodule_2fswitchmodule_2eproto);
-  return ::file_level_metadata_switchmodule_2fswitchmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SwitchReading::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SwitchReadingProfile::InitAsDefaultInstance() {
-  ::switchmodule::_SwitchReadingProfile_default_instance_._instance.get_mutable()->readingmessageinfo_ = const_cast< ::commonmodule::ReadingMessageInfo*>(
-      ::commonmodule::ReadingMessageInfo::internal_default_instance());
-  ::switchmodule::_SwitchReadingProfile_default_instance_._instance.get_mutable()->ied_ = const_cast< ::commonmodule::IED*>(
-      ::commonmodule::IED::internal_default_instance());
-  ::switchmodule::_SwitchReadingProfile_default_instance_._instance.get_mutable()->protectedswitch_ = const_cast< ::switchmodule::ProtectedSwitch*>(
-      ::switchmodule::ProtectedSwitch::internal_default_instance());
-}
-class SwitchReadingProfile::HasBitSetters {
+class SwitchReadingProfile::_Internal {
  public:
   static const ::commonmodule::ReadingMessageInfo& readingmessageinfo(const SwitchReadingProfile* msg);
-  static const ::commonmodule::IED& ied(const SwitchReadingProfile* msg);
   static const ::switchmodule::ProtectedSwitch& protectedswitch(const SwitchReadingProfile* msg);
 };
 
 const ::commonmodule::ReadingMessageInfo&
-SwitchReadingProfile::HasBitSetters::readingmessageinfo(const SwitchReadingProfile* msg) {
+SwitchReadingProfile::_Internal::readingmessageinfo(const SwitchReadingProfile* msg) {
   return *msg->readingmessageinfo_;
 }
-const ::commonmodule::IED&
-SwitchReadingProfile::HasBitSetters::ied(const SwitchReadingProfile* msg) {
-  return *msg->ied_;
-}
 const ::switchmodule::ProtectedSwitch&
-SwitchReadingProfile::HasBitSetters::protectedswitch(const SwitchReadingProfile* msg) {
+SwitchReadingProfile::_Internal::protectedswitch(const SwitchReadingProfile* msg) {
   return *msg->protectedswitch_;
 }
 void SwitchReadingProfile::clear_readingmessageinfo() {
-  if (GetArenaNoVirtual() == nullptr && readingmessageinfo_ != nullptr) {
+  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
     delete readingmessageinfo_;
   }
   readingmessageinfo_ = nullptr;
 }
-void SwitchReadingProfile::clear_ied() {
-  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
-    delete ied_;
-  }
-  ied_ = nullptr;
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SwitchReadingProfile::kReadingMessageInfoFieldNumber;
-const int SwitchReadingProfile::kIedFieldNumber;
-const int SwitchReadingProfile::kProtectedSwitchFieldNumber;
-const int SwitchReadingProfile::kSwitchReadingFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SwitchReadingProfile::SwitchReadingProfile()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SwitchReadingProfile::SwitchReadingProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  switchreading_(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:switchmodule.SwitchReadingProfile)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:switchmodule.SwitchReadingProfile)
 }
 SwitchReadingProfile::SwitchReadingProfile(const SwitchReadingProfile& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr),
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
       switchreading_(from.switchreading_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_readingmessageinfo()) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_readingmessageinfo()) {
     readingmessageinfo_ = new ::commonmodule::ReadingMessageInfo(*from.readingmessageinfo_);
   } else {
     readingmessageinfo_ = nullptr;
   }
-  if (from.has_ied()) {
-    ied_ = new ::commonmodule::IED(*from.ied_);
-  } else {
-    ied_ = nullptr;
-  }
-  if (from.has_protectedswitch()) {
+  if (from._internal_has_protectedswitch()) {
     protectedswitch_ = new ::switchmodule::ProtectedSwitch(*from.protectedswitch_);
   } else {
     protectedswitch_ = nullptr;
@@ -4208,296 +2843,140 @@ SwitchReadingProfile::SwitchReadingProfile(const SwitchReadingProfile& from)
 }
 
 void SwitchReadingProfile::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SwitchReadingProfile_switchmodule_2fswitchmodule_2eproto.base);
-  ::memset(&readingmessageinfo_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&protectedswitch_) -
-      reinterpret_cast<char*>(&readingmessageinfo_)) + sizeof(protectedswitch_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&readingmessageinfo_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&protectedswitch_) -
+    reinterpret_cast<char*>(&readingmessageinfo_)) + sizeof(protectedswitch_));
 }
 
 SwitchReadingProfile::~SwitchReadingProfile() {
   // @@protoc_insertion_point(destructor:switchmodule.SwitchReadingProfile)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SwitchReadingProfile::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete readingmessageinfo_;
-  if (this != internal_default_instance()) delete ied_;
   if (this != internal_default_instance()) delete protectedswitch_;
 }
 
+void SwitchReadingProfile::ArenaDtor(void* object) {
+  SwitchReadingProfile* _this = reinterpret_cast< SwitchReadingProfile* >(object);
+  (void)_this;
+}
+void SwitchReadingProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SwitchReadingProfile::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SwitchReadingProfile& SwitchReadingProfile::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SwitchReadingProfile_switchmodule_2fswitchmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SwitchReadingProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:switchmodule.SwitchReadingProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   switchreading_.Clear();
-  if (GetArenaNoVirtual() == nullptr && readingmessageinfo_ != nullptr) {
+  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
     delete readingmessageinfo_;
   }
   readingmessageinfo_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
-    delete ied_;
-  }
-  ied_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && protectedswitch_ != nullptr) {
+  if (GetArena() == nullptr && protectedswitch_ != nullptr) {
     delete protectedswitch_;
   }
   protectedswitch_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SwitchReadingProfile::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SwitchReadingProfile*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SwitchReadingProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ReadingMessageInfo::_InternalParse;
-        object = msg->mutable_readingmessageinfo();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::IED::_InternalParse;
-        object = msg->mutable_ied();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::switchmodule::ProtectedSwitch::_InternalParse;
-        object = msg->mutable_protectedswitch();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // repeated .switchmodule.SwitchReading switchReading = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1, (.uml.option_multiplicity_max) = 2];
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        do {
-          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-          parser_till_end = ::switchmodule::SwitchReading::_InternalParse;
-          object = msg->add_switchreading();
-          if (size > end - ptr) goto len_delim_till_end;
-          ptr += size;
-          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-              {parser_till_end, object}, ptr - size, ptr));
-          if (ptr >= end) break;
-        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 34 && (ptr += 1));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_readingmessageinfo(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .switchmodule.ProtectedSwitch protectedSwitch = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_protectedswitch(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated .switchmodule.SwitchReading switchReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1, (.uml.option_multiplicity_max) = 2];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_switchreading(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SwitchReadingProfile::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:switchmodule.SwitchReadingProfile)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_readingmessageinfo()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_ied()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_protectedswitch()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .switchmodule.SwitchReading switchReading = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1, (.uml.option_multiplicity_max) = 2];
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_switchreading()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:switchmodule.SwitchReadingProfile)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:switchmodule.SwitchReadingProfile)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SwitchReadingProfile::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:switchmodule.SwitchReadingProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_readingmessageinfo()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::readingmessageinfo(this), output);
-  }
-
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::ied(this), output);
-  }
-
-  // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_protectedswitch()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::protectedswitch(this), output);
-  }
-
-  // repeated .switchmodule.SwitchReading switchReading = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1, (.uml.option_multiplicity_max) = 2];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->switchreading_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4,
-      this->switchreading(static_cast<int>(i)),
-      output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:switchmodule.SwitchReadingProfile)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SwitchReadingProfile::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SwitchReadingProfile::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:switchmodule.SwitchReadingProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_readingmessageinfo()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::readingmessageinfo(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::readingmessageinfo(this), target, stream);
   }
 
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::ied(this), target);
-  }
-
-  // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.ProtectedSwitch protectedSwitch = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_protectedswitch()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::protectedswitch(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::protectedswitch(this), target, stream);
   }
 
-  // repeated .switchmodule.SwitchReading switchReading = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1, (.uml.option_multiplicity_max) = 2];
+  // repeated .switchmodule.SwitchReading switchReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1, (.uml.option_multiplicity_max) = 2];
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->switchreading_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, this->switchreading(static_cast<int>(i)), target);
+      n = static_cast<unsigned int>(this->_internal_switchreading_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, this->_internal_switchreading(i), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:switchmodule.SwitchReadingProfile)
   return target;
@@ -4507,61 +2986,49 @@ size_t SwitchReadingProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:switchmodule.SwitchReadingProfile)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .switchmodule.SwitchReading switchReading = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1, (.uml.option_multiplicity_max) = 2];
-  {
-    unsigned int count = static_cast<unsigned int>(this->switchreading_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->switchreading(static_cast<int>(i)));
-    }
+  // repeated .switchmodule.SwitchReading switchReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1, (.uml.option_multiplicity_max) = 2];
+  total_size += 1UL * this->_internal_switchreading_size();
+  for (const auto& msg : this->switchreading_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_readingmessageinfo()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *readingmessageinfo_);
   }
 
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *ied_);
-  }
-
-  // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.ProtectedSwitch protectedSwitch = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_protectedswitch()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *protectedswitch_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SwitchReadingProfile::MergeFrom(const ::google::protobuf::Message& from) {
+void SwitchReadingProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:switchmodule.SwitchReadingProfile)
   GOOGLE_DCHECK_NE(&from, this);
   const SwitchReadingProfile* source =
-      ::google::protobuf::DynamicCastToGenerated<SwitchReadingProfile>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SwitchReadingProfile>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:switchmodule.SwitchReadingProfile)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:switchmodule.SwitchReadingProfile)
     MergeFrom(*source);
@@ -4571,23 +3038,20 @@ void SwitchReadingProfile::MergeFrom(const ::google::protobuf::Message& from) {
 void SwitchReadingProfile::MergeFrom(const SwitchReadingProfile& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:switchmodule.SwitchReadingProfile)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   switchreading_.MergeFrom(from.switchreading_);
   if (from.has_readingmessageinfo()) {
-    mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(from.readingmessageinfo());
-  }
-  if (from.has_ied()) {
-    mutable_ied()->::commonmodule::IED::MergeFrom(from.ied());
+    _internal_mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(from._internal_readingmessageinfo());
   }
   if (from.has_protectedswitch()) {
-    mutable_protectedswitch()->::switchmodule::ProtectedSwitch::MergeFrom(from.protectedswitch());
+    _internal_mutable_protectedswitch()->::switchmodule::ProtectedSwitch::MergeFrom(from._internal_protectedswitch());
   }
 }
 
-void SwitchReadingProfile::CopyFrom(const ::google::protobuf::Message& from) {
+void SwitchReadingProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:switchmodule.SwitchReadingProfile)
   if (&from == this) return;
   Clear();
@@ -4605,351 +3069,259 @@ bool SwitchReadingProfile::IsInitialized() const {
   return true;
 }
 
-void SwitchReadingProfile::Swap(SwitchReadingProfile* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SwitchReadingProfile::InternalSwap(SwitchReadingProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&switchreading_)->InternalSwap(CastToBase(&other->switchreading_));
-  swap(readingmessageinfo_, other->readingmessageinfo_);
-  swap(ied_, other->ied_);
-  swap(protectedswitch_, other->protectedswitch_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  switchreading_.InternalSwap(&other->switchreading_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SwitchReadingProfile, protectedswitch_)
+      + sizeof(SwitchReadingProfile::protectedswitch_)
+      - PROTOBUF_FIELD_OFFSET(SwitchReadingProfile, readingmessageinfo_)>(
+          reinterpret_cast<char*>(&readingmessageinfo_),
+          reinterpret_cast<char*>(&other->readingmessageinfo_));
 }
 
-::google::protobuf::Metadata SwitchReadingProfile::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_switchmodule_2fswitchmodule_2eproto);
-  return ::file_level_metadata_switchmodule_2fswitchmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SwitchReadingProfile::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SwitchStatusXSWI::InitAsDefaultInstance() {
-  ::switchmodule::_SwitchStatusXSWI_default_instance_._instance.get_mutable()->logicalnodeforeventandstatus_ = const_cast< ::commonmodule::LogicalNodeForEventAndStatus*>(
-      ::commonmodule::LogicalNodeForEventAndStatus::internal_default_instance());
-  ::switchmodule::_SwitchStatusXSWI_default_instance_._instance.get_mutable()->dynamictest_ = const_cast< ::commonmodule::ENS_DynamicTestKind*>(
-      ::commonmodule::ENS_DynamicTestKind::internal_default_instance());
-  ::switchmodule::_SwitchStatusXSWI_default_instance_._instance.get_mutable()->pos_ = const_cast< ::commonmodule::StatusDPS*>(
-      ::commonmodule::StatusDPS::internal_default_instance());
-}
-class SwitchStatusXSWI::HasBitSetters {
+class SwitchStatusXSWI::_Internal {
  public:
   static const ::commonmodule::LogicalNodeForEventAndStatus& logicalnodeforeventandstatus(const SwitchStatusXSWI* msg);
   static const ::commonmodule::ENS_DynamicTestKind& dynamictest(const SwitchStatusXSWI* msg);
-  static const ::commonmodule::StatusDPS& pos(const SwitchStatusXSWI* msg);
+  static const ::commonmodule::PhaseDPS& pos(const SwitchStatusXSWI* msg);
+  static const ::commonmodule::PhaseSPS& protectionpickup(const SwitchStatusXSWI* msg);
 };
 
 const ::commonmodule::LogicalNodeForEventAndStatus&
-SwitchStatusXSWI::HasBitSetters::logicalnodeforeventandstatus(const SwitchStatusXSWI* msg) {
+SwitchStatusXSWI::_Internal::logicalnodeforeventandstatus(const SwitchStatusXSWI* msg) {
   return *msg->logicalnodeforeventandstatus_;
 }
 const ::commonmodule::ENS_DynamicTestKind&
-SwitchStatusXSWI::HasBitSetters::dynamictest(const SwitchStatusXSWI* msg) {
+SwitchStatusXSWI::_Internal::dynamictest(const SwitchStatusXSWI* msg) {
   return *msg->dynamictest_;
 }
-const ::commonmodule::StatusDPS&
-SwitchStatusXSWI::HasBitSetters::pos(const SwitchStatusXSWI* msg) {
+const ::commonmodule::PhaseDPS&
+SwitchStatusXSWI::_Internal::pos(const SwitchStatusXSWI* msg) {
   return *msg->pos_;
 }
+const ::commonmodule::PhaseSPS&
+SwitchStatusXSWI::_Internal::protectionpickup(const SwitchStatusXSWI* msg) {
+  return *msg->protectionpickup_;
+}
 void SwitchStatusXSWI::clear_logicalnodeforeventandstatus() {
-  if (GetArenaNoVirtual() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
+  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
     delete logicalnodeforeventandstatus_;
   }
   logicalnodeforeventandstatus_ = nullptr;
 }
 void SwitchStatusXSWI::clear_dynamictest() {
-  if (GetArenaNoVirtual() == nullptr && dynamictest_ != nullptr) {
+  if (GetArena() == nullptr && dynamictest_ != nullptr) {
     delete dynamictest_;
   }
   dynamictest_ = nullptr;
 }
 void SwitchStatusXSWI::clear_pos() {
-  if (GetArenaNoVirtual() == nullptr && pos_ != nullptr) {
+  if (GetArena() == nullptr && pos_ != nullptr) {
     delete pos_;
   }
   pos_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SwitchStatusXSWI::kLogicalNodeForEventAndStatusFieldNumber;
-const int SwitchStatusXSWI::kDynamicTestFieldNumber;
-const int SwitchStatusXSWI::kPosFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SwitchStatusXSWI::SwitchStatusXSWI()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+void SwitchStatusXSWI::clear_protectionpickup() {
+  if (GetArena() == nullptr && protectionpickup_ != nullptr) {
+    delete protectionpickup_;
+  }
+  protectionpickup_ = nullptr;
+}
+SwitchStatusXSWI::SwitchStatusXSWI(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:switchmodule.SwitchStatusXSWI)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:switchmodule.SwitchStatusXSWI)
 }
 SwitchStatusXSWI::SwitchStatusXSWI(const SwitchStatusXSWI& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_logicalnodeforeventandstatus()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_logicalnodeforeventandstatus()) {
     logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from.logicalnodeforeventandstatus_);
   } else {
     logicalnodeforeventandstatus_ = nullptr;
   }
-  if (from.has_dynamictest()) {
+  if (from._internal_has_dynamictest()) {
     dynamictest_ = new ::commonmodule::ENS_DynamicTestKind(*from.dynamictest_);
   } else {
     dynamictest_ = nullptr;
   }
-  if (from.has_pos()) {
-    pos_ = new ::commonmodule::StatusDPS(*from.pos_);
+  if (from._internal_has_pos()) {
+    pos_ = new ::commonmodule::PhaseDPS(*from.pos_);
   } else {
     pos_ = nullptr;
+  }
+  if (from._internal_has_protectionpickup()) {
+    protectionpickup_ = new ::commonmodule::PhaseSPS(*from.protectionpickup_);
+  } else {
+    protectionpickup_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:switchmodule.SwitchStatusXSWI)
 }
 
 void SwitchStatusXSWI::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SwitchStatusXSWI_switchmodule_2fswitchmodule_2eproto.base);
-  ::memset(&logicalnodeforeventandstatus_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&pos_) -
-      reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(pos_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&logicalnodeforeventandstatus_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&protectionpickup_) -
+    reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(protectionpickup_));
 }
 
 SwitchStatusXSWI::~SwitchStatusXSWI() {
   // @@protoc_insertion_point(destructor:switchmodule.SwitchStatusXSWI)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SwitchStatusXSWI::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete logicalnodeforeventandstatus_;
   if (this != internal_default_instance()) delete dynamictest_;
   if (this != internal_default_instance()) delete pos_;
+  if (this != internal_default_instance()) delete protectionpickup_;
 }
 
+void SwitchStatusXSWI::ArenaDtor(void* object) {
+  SwitchStatusXSWI* _this = reinterpret_cast< SwitchStatusXSWI* >(object);
+  (void)_this;
+}
+void SwitchStatusXSWI::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SwitchStatusXSWI::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SwitchStatusXSWI& SwitchStatusXSWI::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SwitchStatusXSWI_switchmodule_2fswitchmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SwitchStatusXSWI::Clear() {
 // @@protoc_insertion_point(message_clear_start:switchmodule.SwitchStatusXSWI)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
+  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
     delete logicalnodeforeventandstatus_;
   }
   logicalnodeforeventandstatus_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && dynamictest_ != nullptr) {
+  if (GetArena() == nullptr && dynamictest_ != nullptr) {
     delete dynamictest_;
   }
   dynamictest_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && pos_ != nullptr) {
+  if (GetArena() == nullptr && pos_ != nullptr) {
     delete pos_;
   }
   pos_ = nullptr;
-  _internal_metadata_.Clear();
+  if (GetArena() == nullptr && protectionpickup_ != nullptr) {
+    delete protectionpickup_;
+  }
+  protectionpickup_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SwitchStatusXSWI::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SwitchStatusXSWI*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SwitchStatusXSWI::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::LogicalNodeForEventAndStatus::_InternalParse;
-        object = msg->mutable_logicalnodeforeventandstatus();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforeventandstatus(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.ENS_DynamicTestKind DynamicTest = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ENS_DynamicTestKind::_InternalParse;
-        object = msg->mutable_dynamictest();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.StatusDPS Pos = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::StatusDPS::_InternalParse;
-        object = msg->mutable_pos();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_dynamictest(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .commonmodule.PhaseDPS Pos = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pos(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .commonmodule.PhaseSPS ProtectionPickup = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_protectionpickup(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SwitchStatusXSWI::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:switchmodule.SwitchStatusXSWI)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_logicalnodeforeventandstatus()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ENS_DynamicTestKind DynamicTest = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_dynamictest()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.StatusDPS Pos = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_pos()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:switchmodule.SwitchStatusXSWI)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:switchmodule.SwitchStatusXSWI)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SwitchStatusXSWI::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:switchmodule.SwitchStatusXSWI)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforeventandstatus()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::logicalnodeforeventandstatus(this), output);
-  }
-
-  // .commonmodule.ENS_DynamicTestKind DynamicTest = 2;
-  if (this->has_dynamictest()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::dynamictest(this), output);
-  }
-
-  // .commonmodule.StatusDPS Pos = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_pos()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::pos(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:switchmodule.SwitchStatusXSWI)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SwitchStatusXSWI::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SwitchStatusXSWI::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:switchmodule.SwitchStatusXSWI)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
   if (this->has_logicalnodeforeventandstatus()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::logicalnodeforeventandstatus(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::logicalnodeforeventandstatus(this), target, stream);
   }
 
   // .commonmodule.ENS_DynamicTestKind DynamicTest = 2;
   if (this->has_dynamictest()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::dynamictest(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::dynamictest(this), target, stream);
   }
 
-  // .commonmodule.StatusDPS Pos = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .commonmodule.PhaseDPS Pos = 4;
   if (this->has_pos()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::pos(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        4, _Internal::pos(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  // .commonmodule.PhaseSPS ProtectionPickup = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_protectionpickup()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        5, _Internal::protectionpickup(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:switchmodule.SwitchStatusXSWI)
   return target;
@@ -4959,50 +3331,56 @@ size_t SwitchStatusXSWI::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:switchmodule.SwitchStatusXSWI)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
   if (this->has_logicalnodeforeventandstatus()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *logicalnodeforeventandstatus_);
   }
 
   // .commonmodule.ENS_DynamicTestKind DynamicTest = 2;
   if (this->has_dynamictest()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *dynamictest_);
   }
 
-  // .commonmodule.StatusDPS Pos = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .commonmodule.PhaseDPS Pos = 4;
   if (this->has_pos()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *pos_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  // .commonmodule.PhaseSPS ProtectionPickup = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_protectionpickup()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *protectionpickup_);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SwitchStatusXSWI::MergeFrom(const ::google::protobuf::Message& from) {
+void SwitchStatusXSWI::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:switchmodule.SwitchStatusXSWI)
   GOOGLE_DCHECK_NE(&from, this);
   const SwitchStatusXSWI* source =
-      ::google::protobuf::DynamicCastToGenerated<SwitchStatusXSWI>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SwitchStatusXSWI>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:switchmodule.SwitchStatusXSWI)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:switchmodule.SwitchStatusXSWI)
     MergeFrom(*source);
@@ -5012,22 +3390,25 @@ void SwitchStatusXSWI::MergeFrom(const ::google::protobuf::Message& from) {
 void SwitchStatusXSWI::MergeFrom(const SwitchStatusXSWI& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:switchmodule.SwitchStatusXSWI)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_logicalnodeforeventandstatus()) {
-    mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from.logicalnodeforeventandstatus());
+    _internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from._internal_logicalnodeforeventandstatus());
   }
   if (from.has_dynamictest()) {
-    mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(from.dynamictest());
+    _internal_mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(from._internal_dynamictest());
   }
   if (from.has_pos()) {
-    mutable_pos()->::commonmodule::StatusDPS::MergeFrom(from.pos());
+    _internal_mutable_pos()->::commonmodule::PhaseDPS::MergeFrom(from._internal_pos());
+  }
+  if (from.has_protectionpickup()) {
+    _internal_mutable_protectionpickup()->::commonmodule::PhaseSPS::MergeFrom(from._internal_protectionpickup());
   }
 }
 
-void SwitchStatusXSWI::CopyFrom(const ::google::protobuf::Message& from) {
+void SwitchStatusXSWI::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:switchmodule.SwitchStatusXSWI)
   if (&from == this) return;
   Clear();
@@ -5045,72 +3426,59 @@ bool SwitchStatusXSWI::IsInitialized() const {
   return true;
 }
 
-void SwitchStatusXSWI::Swap(SwitchStatusXSWI* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SwitchStatusXSWI::InternalSwap(SwitchStatusXSWI* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(logicalnodeforeventandstatus_, other->logicalnodeforeventandstatus_);
-  swap(dynamictest_, other->dynamictest_);
-  swap(pos_, other->pos_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SwitchStatusXSWI, protectionpickup_)
+      + sizeof(SwitchStatusXSWI::protectionpickup_)
+      - PROTOBUF_FIELD_OFFSET(SwitchStatusXSWI, logicalnodeforeventandstatus_)>(
+          reinterpret_cast<char*>(&logicalnodeforeventandstatus_),
+          reinterpret_cast<char*>(&other->logicalnodeforeventandstatus_));
 }
 
-::google::protobuf::Metadata SwitchStatusXSWI::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_switchmodule_2fswitchmodule_2eproto);
-  return ::file_level_metadata_switchmodule_2fswitchmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SwitchStatusXSWI::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SwitchStatus::InitAsDefaultInstance() {
-  ::switchmodule::_SwitchStatus_default_instance_._instance.get_mutable()->statusvalue_ = const_cast< ::commonmodule::StatusValue*>(
-      ::commonmodule::StatusValue::internal_default_instance());
-  ::switchmodule::_SwitchStatus_default_instance_._instance.get_mutable()->switchstatusxswi_ = const_cast< ::switchmodule::SwitchStatusXSWI*>(
-      ::switchmodule::SwitchStatusXSWI::internal_default_instance());
-}
-class SwitchStatus::HasBitSetters {
+class SwitchStatus::_Internal {
  public:
   static const ::commonmodule::StatusValue& statusvalue(const SwitchStatus* msg);
   static const ::switchmodule::SwitchStatusXSWI& switchstatusxswi(const SwitchStatus* msg);
 };
 
 const ::commonmodule::StatusValue&
-SwitchStatus::HasBitSetters::statusvalue(const SwitchStatus* msg) {
+SwitchStatus::_Internal::statusvalue(const SwitchStatus* msg) {
   return *msg->statusvalue_;
 }
 const ::switchmodule::SwitchStatusXSWI&
-SwitchStatus::HasBitSetters::switchstatusxswi(const SwitchStatus* msg) {
+SwitchStatus::_Internal::switchstatusxswi(const SwitchStatus* msg) {
   return *msg->switchstatusxswi_;
 }
 void SwitchStatus::clear_statusvalue() {
-  if (GetArenaNoVirtual() == nullptr && statusvalue_ != nullptr) {
+  if (GetArena() == nullptr && statusvalue_ != nullptr) {
     delete statusvalue_;
   }
   statusvalue_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SwitchStatus::kStatusValueFieldNumber;
-const int SwitchStatus::kSwitchStatusXSWIFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SwitchStatus::SwitchStatus()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SwitchStatus::SwitchStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:switchmodule.SwitchStatus)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:switchmodule.SwitchStatus)
 }
 SwitchStatus::SwitchStatus(const SwitchStatus& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_statusvalue()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_statusvalue()) {
     statusvalue_ = new ::commonmodule::StatusValue(*from.statusvalue_);
   } else {
     statusvalue_ = nullptr;
   }
-  if (from.has_switchstatusxswi()) {
+  if (from._internal_has_switchstatusxswi()) {
     switchstatusxswi_ = new ::switchmodule::SwitchStatusXSWI(*from.switchstatusxswi_);
   } else {
     switchstatusxswi_ = nullptr;
@@ -5119,209 +3487,119 @@ SwitchStatus::SwitchStatus(const SwitchStatus& from)
 }
 
 void SwitchStatus::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SwitchStatus_switchmodule_2fswitchmodule_2eproto.base);
-  ::memset(&statusvalue_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&switchstatusxswi_) -
-      reinterpret_cast<char*>(&statusvalue_)) + sizeof(switchstatusxswi_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&statusvalue_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&switchstatusxswi_) -
+    reinterpret_cast<char*>(&statusvalue_)) + sizeof(switchstatusxswi_));
 }
 
 SwitchStatus::~SwitchStatus() {
   // @@protoc_insertion_point(destructor:switchmodule.SwitchStatus)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SwitchStatus::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete statusvalue_;
   if (this != internal_default_instance()) delete switchstatusxswi_;
 }
 
+void SwitchStatus::ArenaDtor(void* object) {
+  SwitchStatus* _this = reinterpret_cast< SwitchStatus* >(object);
+  (void)_this;
+}
+void SwitchStatus::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SwitchStatus::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SwitchStatus& SwitchStatus::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SwitchStatus_switchmodule_2fswitchmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SwitchStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:switchmodule.SwitchStatus)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && statusvalue_ != nullptr) {
+  if (GetArena() == nullptr && statusvalue_ != nullptr) {
     delete statusvalue_;
   }
   statusvalue_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && switchstatusxswi_ != nullptr) {
+  if (GetArena() == nullptr && switchstatusxswi_ != nullptr) {
     delete switchstatusxswi_;
   }
   switchstatusxswi_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SwitchStatus::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SwitchStatus*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SwitchStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::StatusValue::_InternalParse;
-        object = msg->mutable_statusvalue();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .switchmodule.SwitchStatusXSWI switchStatusXSWI = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::switchmodule::SwitchStatusXSWI::_InternalParse;
-        object = msg->mutable_switchstatusxswi();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_statusvalue(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .switchmodule.SwitchStatusXSWI switchStatusXSWI = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_switchstatusxswi(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SwitchStatus::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:switchmodule.SwitchStatus)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_statusvalue()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .switchmodule.SwitchStatusXSWI switchStatusXSWI = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_switchstatusxswi()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:switchmodule.SwitchStatus)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:switchmodule.SwitchStatus)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SwitchStatus::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:switchmodule.SwitchStatus)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusvalue()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::statusvalue(this), output);
-  }
-
-  // .switchmodule.SwitchStatusXSWI switchStatusXSWI = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_switchstatusxswi()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::switchstatusxswi(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:switchmodule.SwitchStatus)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SwitchStatus::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SwitchStatus::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:switchmodule.SwitchStatus)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_statusvalue()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::statusvalue(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::statusvalue(this), target, stream);
   }
 
-  // .switchmodule.SwitchStatusXSWI switchStatusXSWI = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.SwitchStatusXSWI switchStatusXSWI = 2;
   if (this->has_switchstatusxswi()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::switchstatusxswi(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::switchstatusxswi(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:switchmodule.SwitchStatus)
   return target;
@@ -5331,43 +3609,42 @@ size_t SwitchStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:switchmodule.SwitchStatus)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_statusvalue()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *statusvalue_);
   }
 
-  // .switchmodule.SwitchStatusXSWI switchStatusXSWI = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.SwitchStatusXSWI switchStatusXSWI = 2;
   if (this->has_switchstatusxswi()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *switchstatusxswi_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SwitchStatus::MergeFrom(const ::google::protobuf::Message& from) {
+void SwitchStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:switchmodule.SwitchStatus)
   GOOGLE_DCHECK_NE(&from, this);
   const SwitchStatus* source =
-      ::google::protobuf::DynamicCastToGenerated<SwitchStatus>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SwitchStatus>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:switchmodule.SwitchStatus)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:switchmodule.SwitchStatus)
     MergeFrom(*source);
@@ -5377,19 +3654,19 @@ void SwitchStatus::MergeFrom(const ::google::protobuf::Message& from) {
 void SwitchStatus::MergeFrom(const SwitchStatus& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:switchmodule.SwitchStatus)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_statusvalue()) {
-    mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(from.statusvalue());
+    _internal_mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(from._internal_statusvalue());
   }
   if (from.has_switchstatusxswi()) {
-    mutable_switchstatusxswi()->::switchmodule::SwitchStatusXSWI::MergeFrom(from.switchstatusxswi());
+    _internal_mutable_switchstatusxswi()->::switchmodule::SwitchStatusXSWI::MergeFrom(from._internal_switchstatusxswi());
   }
 }
 
-void SwitchStatus::CopyFrom(const ::google::protobuf::Message& from) {
+void SwitchStatus::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:switchmodule.SwitchStatus)
   if (&from == this) return;
   Clear();
@@ -5407,103 +3684,69 @@ bool SwitchStatus::IsInitialized() const {
   return true;
 }
 
-void SwitchStatus::Swap(SwitchStatus* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SwitchStatus::InternalSwap(SwitchStatus* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(statusvalue_, other->statusvalue_);
-  swap(switchstatusxswi_, other->switchstatusxswi_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SwitchStatus, switchstatusxswi_)
+      + sizeof(SwitchStatus::switchstatusxswi_)
+      - PROTOBUF_FIELD_OFFSET(SwitchStatus, statusvalue_)>(
+          reinterpret_cast<char*>(&statusvalue_),
+          reinterpret_cast<char*>(&other->statusvalue_));
 }
 
-::google::protobuf::Metadata SwitchStatus::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_switchmodule_2fswitchmodule_2eproto);
-  return ::file_level_metadata_switchmodule_2fswitchmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SwitchStatus::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SwitchStatusProfile::InitAsDefaultInstance() {
-  ::switchmodule::_SwitchStatusProfile_default_instance_._instance.get_mutable()->statusmessageinfo_ = const_cast< ::commonmodule::StatusMessageInfo*>(
-      ::commonmodule::StatusMessageInfo::internal_default_instance());
-  ::switchmodule::_SwitchStatusProfile_default_instance_._instance.get_mutable()->ied_ = const_cast< ::commonmodule::IED*>(
-      ::commonmodule::IED::internal_default_instance());
-  ::switchmodule::_SwitchStatusProfile_default_instance_._instance.get_mutable()->protectedswitch_ = const_cast< ::switchmodule::ProtectedSwitch*>(
-      ::switchmodule::ProtectedSwitch::internal_default_instance());
-  ::switchmodule::_SwitchStatusProfile_default_instance_._instance.get_mutable()->switchstatus_ = const_cast< ::switchmodule::SwitchStatus*>(
-      ::switchmodule::SwitchStatus::internal_default_instance());
-}
-class SwitchStatusProfile::HasBitSetters {
+class SwitchStatusProfile::_Internal {
  public:
   static const ::commonmodule::StatusMessageInfo& statusmessageinfo(const SwitchStatusProfile* msg);
-  static const ::commonmodule::IED& ied(const SwitchStatusProfile* msg);
   static const ::switchmodule::ProtectedSwitch& protectedswitch(const SwitchStatusProfile* msg);
   static const ::switchmodule::SwitchStatus& switchstatus(const SwitchStatusProfile* msg);
 };
 
 const ::commonmodule::StatusMessageInfo&
-SwitchStatusProfile::HasBitSetters::statusmessageinfo(const SwitchStatusProfile* msg) {
+SwitchStatusProfile::_Internal::statusmessageinfo(const SwitchStatusProfile* msg) {
   return *msg->statusmessageinfo_;
 }
-const ::commonmodule::IED&
-SwitchStatusProfile::HasBitSetters::ied(const SwitchStatusProfile* msg) {
-  return *msg->ied_;
-}
 const ::switchmodule::ProtectedSwitch&
-SwitchStatusProfile::HasBitSetters::protectedswitch(const SwitchStatusProfile* msg) {
+SwitchStatusProfile::_Internal::protectedswitch(const SwitchStatusProfile* msg) {
   return *msg->protectedswitch_;
 }
 const ::switchmodule::SwitchStatus&
-SwitchStatusProfile::HasBitSetters::switchstatus(const SwitchStatusProfile* msg) {
+SwitchStatusProfile::_Internal::switchstatus(const SwitchStatusProfile* msg) {
   return *msg->switchstatus_;
 }
 void SwitchStatusProfile::clear_statusmessageinfo() {
-  if (GetArenaNoVirtual() == nullptr && statusmessageinfo_ != nullptr) {
+  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
     delete statusmessageinfo_;
   }
   statusmessageinfo_ = nullptr;
 }
-void SwitchStatusProfile::clear_ied() {
-  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
-    delete ied_;
-  }
-  ied_ = nullptr;
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SwitchStatusProfile::kStatusMessageInfoFieldNumber;
-const int SwitchStatusProfile::kIedFieldNumber;
-const int SwitchStatusProfile::kProtectedSwitchFieldNumber;
-const int SwitchStatusProfile::kSwitchStatusFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SwitchStatusProfile::SwitchStatusProfile()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SwitchStatusProfile::SwitchStatusProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:switchmodule.SwitchStatusProfile)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:switchmodule.SwitchStatusProfile)
 }
 SwitchStatusProfile::SwitchStatusProfile(const SwitchStatusProfile& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_statusmessageinfo()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_statusmessageinfo()) {
     statusmessageinfo_ = new ::commonmodule::StatusMessageInfo(*from.statusmessageinfo_);
   } else {
     statusmessageinfo_ = nullptr;
   }
-  if (from.has_ied()) {
-    ied_ = new ::commonmodule::IED(*from.ied_);
-  } else {
-    ied_ = nullptr;
-  }
-  if (from.has_protectedswitch()) {
+  if (from._internal_has_protectedswitch()) {
     protectedswitch_ = new ::switchmodule::ProtectedSwitch(*from.protectedswitch_);
   } else {
     protectedswitch_ = nullptr;
   }
-  if (from.has_switchstatus()) {
+  if (from._internal_has_switchstatus()) {
     switchstatus_ = new ::switchmodule::SwitchStatus(*from.switchstatus_);
   } else {
     switchstatus_ = nullptr;
@@ -5512,293 +3755,139 @@ SwitchStatusProfile::SwitchStatusProfile(const SwitchStatusProfile& from)
 }
 
 void SwitchStatusProfile::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SwitchStatusProfile_switchmodule_2fswitchmodule_2eproto.base);
-  ::memset(&statusmessageinfo_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&switchstatus_) -
-      reinterpret_cast<char*>(&statusmessageinfo_)) + sizeof(switchstatus_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&statusmessageinfo_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&switchstatus_) -
+    reinterpret_cast<char*>(&statusmessageinfo_)) + sizeof(switchstatus_));
 }
 
 SwitchStatusProfile::~SwitchStatusProfile() {
   // @@protoc_insertion_point(destructor:switchmodule.SwitchStatusProfile)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SwitchStatusProfile::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete statusmessageinfo_;
-  if (this != internal_default_instance()) delete ied_;
   if (this != internal_default_instance()) delete protectedswitch_;
   if (this != internal_default_instance()) delete switchstatus_;
 }
 
+void SwitchStatusProfile::ArenaDtor(void* object) {
+  SwitchStatusProfile* _this = reinterpret_cast< SwitchStatusProfile* >(object);
+  (void)_this;
+}
+void SwitchStatusProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SwitchStatusProfile::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SwitchStatusProfile& SwitchStatusProfile::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SwitchStatusProfile_switchmodule_2fswitchmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SwitchStatusProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:switchmodule.SwitchStatusProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && statusmessageinfo_ != nullptr) {
+  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
     delete statusmessageinfo_;
   }
   statusmessageinfo_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
-    delete ied_;
-  }
-  ied_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && protectedswitch_ != nullptr) {
+  if (GetArena() == nullptr && protectedswitch_ != nullptr) {
     delete protectedswitch_;
   }
   protectedswitch_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && switchstatus_ != nullptr) {
+  if (GetArena() == nullptr && switchstatus_ != nullptr) {
     delete switchstatus_;
   }
   switchstatus_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SwitchStatusProfile::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SwitchStatusProfile*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SwitchStatusProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::StatusMessageInfo::_InternalParse;
-        object = msg->mutable_statusmessageinfo();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::IED::_InternalParse;
-        object = msg->mutable_ied();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::switchmodule::ProtectedSwitch::_InternalParse;
-        object = msg->mutable_protectedswitch();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .switchmodule.SwitchStatus switchStatus = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::switchmodule::SwitchStatus::_InternalParse;
-        object = msg->mutable_switchstatus();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_statusmessageinfo(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .switchmodule.ProtectedSwitch protectedSwitch = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_protectedswitch(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .switchmodule.SwitchStatus switchStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_switchstatus(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SwitchStatusProfile::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:switchmodule.SwitchStatusProfile)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_statusmessageinfo()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_ied()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_protectedswitch()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .switchmodule.SwitchStatus switchStatus = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_switchstatus()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:switchmodule.SwitchStatusProfile)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:switchmodule.SwitchStatusProfile)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SwitchStatusProfile::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:switchmodule.SwitchStatusProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusmessageinfo()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::statusmessageinfo(this), output);
-  }
-
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::ied(this), output);
-  }
-
-  // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_protectedswitch()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::protectedswitch(this), output);
-  }
-
-  // .switchmodule.SwitchStatus switchStatus = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_switchstatus()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, HasBitSetters::switchstatus(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:switchmodule.SwitchStatusProfile)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SwitchStatusProfile::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SwitchStatusProfile::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:switchmodule.SwitchStatusProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_statusmessageinfo()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::statusmessageinfo(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::statusmessageinfo(this), target, stream);
   }
 
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::ied(this), target);
-  }
-
-  // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.ProtectedSwitch protectedSwitch = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_protectedswitch()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::protectedswitch(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::protectedswitch(this), target, stream);
   }
 
-  // .switchmodule.SwitchStatus switchStatus = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.SwitchStatus switchStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_switchstatus()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, HasBitSetters::switchstatus(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::switchstatus(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:switchmodule.SwitchStatusProfile)
   return target;
@@ -5808,57 +3897,49 @@ size_t SwitchStatusProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:switchmodule.SwitchStatusProfile)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_statusmessageinfo()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *statusmessageinfo_);
   }
 
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *ied_);
-  }
-
-  // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.ProtectedSwitch protectedSwitch = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_protectedswitch()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *protectedswitch_);
   }
 
-  // .switchmodule.SwitchStatus switchStatus = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .switchmodule.SwitchStatus switchStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_switchstatus()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *switchstatus_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SwitchStatusProfile::MergeFrom(const ::google::protobuf::Message& from) {
+void SwitchStatusProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:switchmodule.SwitchStatusProfile)
   GOOGLE_DCHECK_NE(&from, this);
   const SwitchStatusProfile* source =
-      ::google::protobuf::DynamicCastToGenerated<SwitchStatusProfile>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SwitchStatusProfile>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:switchmodule.SwitchStatusProfile)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:switchmodule.SwitchStatusProfile)
     MergeFrom(*source);
@@ -5868,25 +3949,22 @@ void SwitchStatusProfile::MergeFrom(const ::google::protobuf::Message& from) {
 void SwitchStatusProfile::MergeFrom(const SwitchStatusProfile& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:switchmodule.SwitchStatusProfile)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_statusmessageinfo()) {
-    mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(from.statusmessageinfo());
-  }
-  if (from.has_ied()) {
-    mutable_ied()->::commonmodule::IED::MergeFrom(from.ied());
+    _internal_mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(from._internal_statusmessageinfo());
   }
   if (from.has_protectedswitch()) {
-    mutable_protectedswitch()->::switchmodule::ProtectedSwitch::MergeFrom(from.protectedswitch());
+    _internal_mutable_protectedswitch()->::switchmodule::ProtectedSwitch::MergeFrom(from._internal_protectedswitch());
   }
   if (from.has_switchstatus()) {
-    mutable_switchstatus()->::switchmodule::SwitchStatus::MergeFrom(from.switchstatus());
+    _internal_mutable_switchstatus()->::switchmodule::SwitchStatus::MergeFrom(from._internal_switchstatus());
   }
 }
 
-void SwitchStatusProfile::CopyFrom(const ::google::protobuf::Message& from) {
+void SwitchStatusProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:switchmodule.SwitchStatusProfile)
   if (&from == this) return;
   Clear();
@@ -5904,1375 +3982,62 @@ bool SwitchStatusProfile::IsInitialized() const {
   return true;
 }
 
-void SwitchStatusProfile::Swap(SwitchStatusProfile* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SwitchStatusProfile::InternalSwap(SwitchStatusProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(statusmessageinfo_, other->statusmessageinfo_);
-  swap(ied_, other->ied_);
-  swap(protectedswitch_, other->protectedswitch_);
-  swap(switchstatus_, other->switchstatus_);
-}
-
-::google::protobuf::Metadata SwitchStatusProfile::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_switchmodule_2fswitchmodule_2eproto);
-  return ::file_level_metadata_switchmodule_2fswitchmodule_2eproto[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void SwitchControlFSCC::InitAsDefaultInstance() {
-  ::switchmodule::_SwitchControlFSCC_default_instance_._instance.get_mutable()->logicalnodeforcontrol_ = const_cast< ::commonmodule::LogicalNodeForControl*>(
-      ::commonmodule::LogicalNodeForControl::internal_default_instance());
-  ::switchmodule::_SwitchControlFSCC_default_instance_._instance.get_mutable()->switchcontrolschedulefsch_ = const_cast< ::commonmodule::SwitchControlScheduleFSCH*>(
-      ::commonmodule::SwitchControlScheduleFSCH::internal_default_instance());
-}
-class SwitchControlFSCC::HasBitSetters {
- public:
-  static const ::commonmodule::LogicalNodeForControl& logicalnodeforcontrol(const SwitchControlFSCC* msg);
-  static const ::commonmodule::SwitchControlScheduleFSCH& switchcontrolschedulefsch(const SwitchControlFSCC* msg);
-};
-
-const ::commonmodule::LogicalNodeForControl&
-SwitchControlFSCC::HasBitSetters::logicalnodeforcontrol(const SwitchControlFSCC* msg) {
-  return *msg->logicalnodeforcontrol_;
-}
-const ::commonmodule::SwitchControlScheduleFSCH&
-SwitchControlFSCC::HasBitSetters::switchcontrolschedulefsch(const SwitchControlFSCC* msg) {
-  return *msg->switchcontrolschedulefsch_;
-}
-void SwitchControlFSCC::clear_logicalnodeforcontrol() {
-  if (GetArenaNoVirtual() == nullptr && logicalnodeforcontrol_ != nullptr) {
-    delete logicalnodeforcontrol_;
-  }
-  logicalnodeforcontrol_ = nullptr;
-}
-void SwitchControlFSCC::clear_switchcontrolschedulefsch() {
-  if (GetArenaNoVirtual() == nullptr && switchcontrolschedulefsch_ != nullptr) {
-    delete switchcontrolschedulefsch_;
-  }
-  switchcontrolschedulefsch_ = nullptr;
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SwitchControlFSCC::kLogicalNodeForControlFieldNumber;
-const int SwitchControlFSCC::kSwitchControlScheduleFSCHFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SwitchControlFSCC::SwitchControlFSCC()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:switchmodule.SwitchControlFSCC)
-}
-SwitchControlFSCC::SwitchControlFSCC(const SwitchControlFSCC& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_logicalnodeforcontrol()) {
-    logicalnodeforcontrol_ = new ::commonmodule::LogicalNodeForControl(*from.logicalnodeforcontrol_);
-  } else {
-    logicalnodeforcontrol_ = nullptr;
-  }
-  if (from.has_switchcontrolschedulefsch()) {
-    switchcontrolschedulefsch_ = new ::commonmodule::SwitchControlScheduleFSCH(*from.switchcontrolschedulefsch_);
-  } else {
-    switchcontrolschedulefsch_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:switchmodule.SwitchControlFSCC)
-}
-
-void SwitchControlFSCC::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SwitchControlFSCC_switchmodule_2fswitchmodule_2eproto.base);
-  ::memset(&logicalnodeforcontrol_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&switchcontrolschedulefsch_) -
-      reinterpret_cast<char*>(&logicalnodeforcontrol_)) + sizeof(switchcontrolschedulefsch_));
-}
-
-SwitchControlFSCC::~SwitchControlFSCC() {
-  // @@protoc_insertion_point(destructor:switchmodule.SwitchControlFSCC)
-  SharedDtor();
-}
-
-void SwitchControlFSCC::SharedDtor() {
-  if (this != internal_default_instance()) delete logicalnodeforcontrol_;
-  if (this != internal_default_instance()) delete switchcontrolschedulefsch_;
-}
-
-void SwitchControlFSCC::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const SwitchControlFSCC& SwitchControlFSCC::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SwitchControlFSCC_switchmodule_2fswitchmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void SwitchControlFSCC::Clear() {
-// @@protoc_insertion_point(message_clear_start:switchmodule.SwitchControlFSCC)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArenaNoVirtual() == nullptr && logicalnodeforcontrol_ != nullptr) {
-    delete logicalnodeforcontrol_;
-  }
-  logicalnodeforcontrol_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && switchcontrolschedulefsch_ != nullptr) {
-    delete switchcontrolschedulefsch_;
-  }
-  switchcontrolschedulefsch_ = nullptr;
-  _internal_metadata_.Clear();
-}
-
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SwitchControlFSCC::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SwitchControlFSCC*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::LogicalNodeForControl::_InternalParse;
-        object = msg->mutable_logicalnodeforcontrol();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.SwitchControlScheduleFSCH switchControlScheduleFSCH = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::SwitchControlScheduleFSCH::_InternalParse;
-        object = msg->mutable_switchcontrolschedulefsch();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
-        }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SwitchControlFSCC::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:switchmodule.SwitchControlFSCC)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_logicalnodeforcontrol()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.SwitchControlScheduleFSCH switchControlScheduleFSCH = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_switchcontrolschedulefsch()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:switchmodule.SwitchControlFSCC)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:switchmodule.SwitchControlFSCC)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SwitchControlFSCC::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:switchmodule.SwitchControlFSCC)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforcontrol()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::logicalnodeforcontrol(this), output);
-  }
-
-  // .commonmodule.SwitchControlScheduleFSCH switchControlScheduleFSCH = 2;
-  if (this->has_switchcontrolschedulefsch()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::switchcontrolschedulefsch(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:switchmodule.SwitchControlFSCC)
-}
-
-::google::protobuf::uint8* SwitchControlFSCC::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:switchmodule.SwitchControlFSCC)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforcontrol()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::logicalnodeforcontrol(this), target);
-  }
-
-  // .commonmodule.SwitchControlScheduleFSCH switchControlScheduleFSCH = 2;
-  if (this->has_switchcontrolschedulefsch()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::switchcontrolschedulefsch(this), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:switchmodule.SwitchControlFSCC)
-  return target;
-}
-
-size_t SwitchControlFSCC::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:switchmodule.SwitchControlFSCC)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforcontrol()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *logicalnodeforcontrol_);
-  }
-
-  // .commonmodule.SwitchControlScheduleFSCH switchControlScheduleFSCH = 2;
-  if (this->has_switchcontrolschedulefsch()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *switchcontrolschedulefsch_);
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void SwitchControlFSCC::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:switchmodule.SwitchControlFSCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SwitchControlFSCC* source =
-      ::google::protobuf::DynamicCastToGenerated<SwitchControlFSCC>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:switchmodule.SwitchControlFSCC)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:switchmodule.SwitchControlFSCC)
-    MergeFrom(*source);
-  }
-}
-
-void SwitchControlFSCC::MergeFrom(const SwitchControlFSCC& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:switchmodule.SwitchControlFSCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_logicalnodeforcontrol()) {
-    mutable_logicalnodeforcontrol()->::commonmodule::LogicalNodeForControl::MergeFrom(from.logicalnodeforcontrol());
-  }
-  if (from.has_switchcontrolschedulefsch()) {
-    mutable_switchcontrolschedulefsch()->::commonmodule::SwitchControlScheduleFSCH::MergeFrom(from.switchcontrolschedulefsch());
-  }
-}
-
-void SwitchControlFSCC::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:switchmodule.SwitchControlFSCC)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void SwitchControlFSCC::CopyFrom(const SwitchControlFSCC& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:switchmodule.SwitchControlFSCC)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool SwitchControlFSCC::IsInitialized() const {
-  return true;
-}
-
-void SwitchControlFSCC::Swap(SwitchControlFSCC* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void SwitchControlFSCC::InternalSwap(SwitchControlFSCC* other) {
-  using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(logicalnodeforcontrol_, other->logicalnodeforcontrol_);
-  swap(switchcontrolschedulefsch_, other->switchcontrolschedulefsch_);
-}
-
-::google::protobuf::Metadata SwitchControlFSCC::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_switchmodule_2fswitchmodule_2eproto);
-  return ::file_level_metadata_switchmodule_2fswitchmodule_2eproto[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void SwitchControl::InitAsDefaultInstance() {
-  ::switchmodule::_SwitchControl_default_instance_._instance.get_mutable()->controlvalue_ = const_cast< ::commonmodule::ControlValue*>(
-      ::commonmodule::ControlValue::internal_default_instance());
-  ::switchmodule::_SwitchControl_default_instance_._instance.get_mutable()->check_ = const_cast< ::commonmodule::CheckConditions*>(
-      ::commonmodule::CheckConditions::internal_default_instance());
-  ::switchmodule::_SwitchControl_default_instance_._instance.get_mutable()->switchcontrolfscc_ = const_cast< ::switchmodule::SwitchControlFSCC*>(
-      ::switchmodule::SwitchControlFSCC::internal_default_instance());
-}
-class SwitchControl::HasBitSetters {
- public:
-  static const ::commonmodule::ControlValue& controlvalue(const SwitchControl* msg);
-  static const ::commonmodule::CheckConditions& check(const SwitchControl* msg);
-  static const ::switchmodule::SwitchControlFSCC& switchcontrolfscc(const SwitchControl* msg);
-};
-
-const ::commonmodule::ControlValue&
-SwitchControl::HasBitSetters::controlvalue(const SwitchControl* msg) {
-  return *msg->controlvalue_;
-}
-const ::commonmodule::CheckConditions&
-SwitchControl::HasBitSetters::check(const SwitchControl* msg) {
-  return *msg->check_;
-}
-const ::switchmodule::SwitchControlFSCC&
-SwitchControl::HasBitSetters::switchcontrolfscc(const SwitchControl* msg) {
-  return *msg->switchcontrolfscc_;
-}
-void SwitchControl::clear_controlvalue() {
-  if (GetArenaNoVirtual() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
-  }
-  controlvalue_ = nullptr;
-}
-void SwitchControl::clear_check() {
-  if (GetArenaNoVirtual() == nullptr && check_ != nullptr) {
-    delete check_;
-  }
-  check_ = nullptr;
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SwitchControl::kControlValueFieldNumber;
-const int SwitchControl::kCheckFieldNumber;
-const int SwitchControl::kSwitchControlFSCCFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SwitchControl::SwitchControl()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:switchmodule.SwitchControl)
-}
-SwitchControl::SwitchControl(const SwitchControl& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_controlvalue()) {
-    controlvalue_ = new ::commonmodule::ControlValue(*from.controlvalue_);
-  } else {
-    controlvalue_ = nullptr;
-  }
-  if (from.has_check()) {
-    check_ = new ::commonmodule::CheckConditions(*from.check_);
-  } else {
-    check_ = nullptr;
-  }
-  if (from.has_switchcontrolfscc()) {
-    switchcontrolfscc_ = new ::switchmodule::SwitchControlFSCC(*from.switchcontrolfscc_);
-  } else {
-    switchcontrolfscc_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:switchmodule.SwitchControl)
-}
-
-void SwitchControl::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SwitchControl_switchmodule_2fswitchmodule_2eproto.base);
-  ::memset(&controlvalue_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&switchcontrolfscc_) -
-      reinterpret_cast<char*>(&controlvalue_)) + sizeof(switchcontrolfscc_));
-}
-
-SwitchControl::~SwitchControl() {
-  // @@protoc_insertion_point(destructor:switchmodule.SwitchControl)
-  SharedDtor();
-}
-
-void SwitchControl::SharedDtor() {
-  if (this != internal_default_instance()) delete controlvalue_;
-  if (this != internal_default_instance()) delete check_;
-  if (this != internal_default_instance()) delete switchcontrolfscc_;
-}
-
-void SwitchControl::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const SwitchControl& SwitchControl::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SwitchControl_switchmodule_2fswitchmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void SwitchControl::Clear() {
-// @@protoc_insertion_point(message_clear_start:switchmodule.SwitchControl)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArenaNoVirtual() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
-  }
-  controlvalue_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && check_ != nullptr) {
-    delete check_;
-  }
-  check_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && switchcontrolfscc_ != nullptr) {
-    delete switchcontrolfscc_;
-  }
-  switchcontrolfscc_ = nullptr;
-  _internal_metadata_.Clear();
-}
-
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SwitchControl::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SwitchControl*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ControlValue::_InternalParse;
-        object = msg->mutable_controlvalue();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.CheckConditions check = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::CheckConditions::_InternalParse;
-        object = msg->mutable_check();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .switchmodule.SwitchControlFSCC SwitchControlFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::switchmodule::SwitchControlFSCC::_InternalParse;
-        object = msg->mutable_switchcontrolfscc();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
-        }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SwitchControl::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:switchmodule.SwitchControl)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_controlvalue()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.CheckConditions check = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_check()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .switchmodule.SwitchControlFSCC SwitchControlFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_switchcontrolfscc()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:switchmodule.SwitchControl)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:switchmodule.SwitchControl)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SwitchControl::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:switchmodule.SwitchControl)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::controlvalue(this), output);
-  }
-
-  // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::check(this), output);
-  }
-
-  // .switchmodule.SwitchControlFSCC SwitchControlFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_switchcontrolfscc()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::switchcontrolfscc(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:switchmodule.SwitchControl)
-}
-
-::google::protobuf::uint8* SwitchControl::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:switchmodule.SwitchControl)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::controlvalue(this), target);
-  }
-
-  // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::check(this), target);
-  }
-
-  // .switchmodule.SwitchControlFSCC SwitchControlFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_switchcontrolfscc()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::switchcontrolfscc(this), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:switchmodule.SwitchControl)
-  return target;
-}
-
-size_t SwitchControl::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:switchmodule.SwitchControl)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *controlvalue_);
-  }
-
-  // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *check_);
-  }
-
-  // .switchmodule.SwitchControlFSCC SwitchControlFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_switchcontrolfscc()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *switchcontrolfscc_);
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void SwitchControl::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:switchmodule.SwitchControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SwitchControl* source =
-      ::google::protobuf::DynamicCastToGenerated<SwitchControl>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:switchmodule.SwitchControl)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:switchmodule.SwitchControl)
-    MergeFrom(*source);
-  }
-}
-
-void SwitchControl::MergeFrom(const SwitchControl& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:switchmodule.SwitchControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_controlvalue()) {
-    mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(from.controlvalue());
-  }
-  if (from.has_check()) {
-    mutable_check()->::commonmodule::CheckConditions::MergeFrom(from.check());
-  }
-  if (from.has_switchcontrolfscc()) {
-    mutable_switchcontrolfscc()->::switchmodule::SwitchControlFSCC::MergeFrom(from.switchcontrolfscc());
-  }
-}
-
-void SwitchControl::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:switchmodule.SwitchControl)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void SwitchControl::CopyFrom(const SwitchControl& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:switchmodule.SwitchControl)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool SwitchControl::IsInitialized() const {
-  return true;
-}
-
-void SwitchControl::Swap(SwitchControl* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void SwitchControl::InternalSwap(SwitchControl* other) {
-  using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(controlvalue_, other->controlvalue_);
-  swap(check_, other->check_);
-  swap(switchcontrolfscc_, other->switchcontrolfscc_);
-}
-
-::google::protobuf::Metadata SwitchControl::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_switchmodule_2fswitchmodule_2eproto);
-  return ::file_level_metadata_switchmodule_2fswitchmodule_2eproto[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void SwitchControlProfile::InitAsDefaultInstance() {
-  ::switchmodule::_SwitchControlProfile_default_instance_._instance.get_mutable()->controlmessageinfo_ = const_cast< ::commonmodule::ControlMessageInfo*>(
-      ::commonmodule::ControlMessageInfo::internal_default_instance());
-  ::switchmodule::_SwitchControlProfile_default_instance_._instance.get_mutable()->ied_ = const_cast< ::commonmodule::IED*>(
-      ::commonmodule::IED::internal_default_instance());
-  ::switchmodule::_SwitchControlProfile_default_instance_._instance.get_mutable()->protectedswitch_ = const_cast< ::switchmodule::ProtectedSwitch*>(
-      ::switchmodule::ProtectedSwitch::internal_default_instance());
-  ::switchmodule::_SwitchControlProfile_default_instance_._instance.get_mutable()->switchcontrol_ = const_cast< ::switchmodule::SwitchControl*>(
-      ::switchmodule::SwitchControl::internal_default_instance());
-}
-class SwitchControlProfile::HasBitSetters {
- public:
-  static const ::commonmodule::ControlMessageInfo& controlmessageinfo(const SwitchControlProfile* msg);
-  static const ::commonmodule::IED& ied(const SwitchControlProfile* msg);
-  static const ::switchmodule::ProtectedSwitch& protectedswitch(const SwitchControlProfile* msg);
-  static const ::switchmodule::SwitchControl& switchcontrol(const SwitchControlProfile* msg);
-};
-
-const ::commonmodule::ControlMessageInfo&
-SwitchControlProfile::HasBitSetters::controlmessageinfo(const SwitchControlProfile* msg) {
-  return *msg->controlmessageinfo_;
-}
-const ::commonmodule::IED&
-SwitchControlProfile::HasBitSetters::ied(const SwitchControlProfile* msg) {
-  return *msg->ied_;
-}
-const ::switchmodule::ProtectedSwitch&
-SwitchControlProfile::HasBitSetters::protectedswitch(const SwitchControlProfile* msg) {
-  return *msg->protectedswitch_;
-}
-const ::switchmodule::SwitchControl&
-SwitchControlProfile::HasBitSetters::switchcontrol(const SwitchControlProfile* msg) {
-  return *msg->switchcontrol_;
-}
-void SwitchControlProfile::clear_controlmessageinfo() {
-  if (GetArenaNoVirtual() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
-  }
-  controlmessageinfo_ = nullptr;
-}
-void SwitchControlProfile::clear_ied() {
-  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
-    delete ied_;
-  }
-  ied_ = nullptr;
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SwitchControlProfile::kControlMessageInfoFieldNumber;
-const int SwitchControlProfile::kIedFieldNumber;
-const int SwitchControlProfile::kProtectedSwitchFieldNumber;
-const int SwitchControlProfile::kSwitchControlFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SwitchControlProfile::SwitchControlProfile()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:switchmodule.SwitchControlProfile)
-}
-SwitchControlProfile::SwitchControlProfile(const SwitchControlProfile& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_controlmessageinfo()) {
-    controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
-  } else {
-    controlmessageinfo_ = nullptr;
-  }
-  if (from.has_ied()) {
-    ied_ = new ::commonmodule::IED(*from.ied_);
-  } else {
-    ied_ = nullptr;
-  }
-  if (from.has_protectedswitch()) {
-    protectedswitch_ = new ::switchmodule::ProtectedSwitch(*from.protectedswitch_);
-  } else {
-    protectedswitch_ = nullptr;
-  }
-  if (from.has_switchcontrol()) {
-    switchcontrol_ = new ::switchmodule::SwitchControl(*from.switchcontrol_);
-  } else {
-    switchcontrol_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:switchmodule.SwitchControlProfile)
-}
-
-void SwitchControlProfile::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SwitchControlProfile_switchmodule_2fswitchmodule_2eproto.base);
-  ::memset(&controlmessageinfo_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&switchcontrol_) -
-      reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(switchcontrol_));
-}
-
-SwitchControlProfile::~SwitchControlProfile() {
-  // @@protoc_insertion_point(destructor:switchmodule.SwitchControlProfile)
-  SharedDtor();
-}
-
-void SwitchControlProfile::SharedDtor() {
-  if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete ied_;
-  if (this != internal_default_instance()) delete protectedswitch_;
-  if (this != internal_default_instance()) delete switchcontrol_;
-}
-
-void SwitchControlProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const SwitchControlProfile& SwitchControlProfile::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SwitchControlProfile_switchmodule_2fswitchmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void SwitchControlProfile::Clear() {
-// @@protoc_insertion_point(message_clear_start:switchmodule.SwitchControlProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArenaNoVirtual() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
-  }
-  controlmessageinfo_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
-    delete ied_;
-  }
-  ied_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && protectedswitch_ != nullptr) {
-    delete protectedswitch_;
-  }
-  protectedswitch_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && switchcontrol_ != nullptr) {
-    delete switchcontrol_;
-  }
-  switchcontrol_ = nullptr;
-  _internal_metadata_.Clear();
-}
-
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SwitchControlProfile::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SwitchControlProfile*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ControlMessageInfo::_InternalParse;
-        object = msg->mutable_controlmessageinfo();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::IED::_InternalParse;
-        object = msg->mutable_ied();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::switchmodule::ProtectedSwitch::_InternalParse;
-        object = msg->mutable_protectedswitch();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .switchmodule.SwitchControl switchControl = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::switchmodule::SwitchControl::_InternalParse;
-        object = msg->mutable_switchcontrol();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
-        }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SwitchControlProfile::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:switchmodule.SwitchControlProfile)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_controlmessageinfo()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_ied()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_protectedswitch()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .switchmodule.SwitchControl switchControl = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_switchcontrol()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:switchmodule.SwitchControlProfile)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:switchmodule.SwitchControlProfile)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SwitchControlProfile::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:switchmodule.SwitchControlProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::controlmessageinfo(this), output);
-  }
-
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::ied(this), output);
-  }
-
-  // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_protectedswitch()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::protectedswitch(this), output);
-  }
-
-  // .switchmodule.SwitchControl switchControl = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_switchcontrol()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, HasBitSetters::switchcontrol(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:switchmodule.SwitchControlProfile)
-}
-
-::google::protobuf::uint8* SwitchControlProfile::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:switchmodule.SwitchControlProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::controlmessageinfo(this), target);
-  }
-
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::ied(this), target);
-  }
-
-  // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_protectedswitch()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::protectedswitch(this), target);
-  }
-
-  // .switchmodule.SwitchControl switchControl = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_switchcontrol()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, HasBitSetters::switchcontrol(this), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:switchmodule.SwitchControlProfile)
-  return target;
-}
-
-size_t SwitchControlProfile::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:switchmodule.SwitchControlProfile)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *controlmessageinfo_);
-  }
-
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *ied_);
-  }
-
-  // .switchmodule.ProtectedSwitch protectedSwitch = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_protectedswitch()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *protectedswitch_);
-  }
-
-  // .switchmodule.SwitchControl switchControl = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_switchcontrol()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *switchcontrol_);
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void SwitchControlProfile::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:switchmodule.SwitchControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SwitchControlProfile* source =
-      ::google::protobuf::DynamicCastToGenerated<SwitchControlProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:switchmodule.SwitchControlProfile)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:switchmodule.SwitchControlProfile)
-    MergeFrom(*source);
-  }
-}
-
-void SwitchControlProfile::MergeFrom(const SwitchControlProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:switchmodule.SwitchControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_controlmessageinfo()) {
-    mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from.controlmessageinfo());
-  }
-  if (from.has_ied()) {
-    mutable_ied()->::commonmodule::IED::MergeFrom(from.ied());
-  }
-  if (from.has_protectedswitch()) {
-    mutable_protectedswitch()->::switchmodule::ProtectedSwitch::MergeFrom(from.protectedswitch());
-  }
-  if (from.has_switchcontrol()) {
-    mutable_switchcontrol()->::switchmodule::SwitchControl::MergeFrom(from.switchcontrol());
-  }
-}
-
-void SwitchControlProfile::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:switchmodule.SwitchControlProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void SwitchControlProfile::CopyFrom(const SwitchControlProfile& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:switchmodule.SwitchControlProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool SwitchControlProfile::IsInitialized() const {
-  return true;
-}
-
-void SwitchControlProfile::Swap(SwitchControlProfile* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void SwitchControlProfile::InternalSwap(SwitchControlProfile* other) {
-  using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(controlmessageinfo_, other->controlmessageinfo_);
-  swap(ied_, other->ied_);
-  swap(protectedswitch_, other->protectedswitch_);
-  swap(switchcontrol_, other->switchcontrol_);
-}
-
-::google::protobuf::Metadata SwitchControlProfile::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_switchmodule_2fswitchmodule_2eproto);
-  return ::file_level_metadata_switchmodule_2fswitchmodule_2eproto[kIndexInFileMessages];
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SwitchStatusProfile, switchstatus_)
+      + sizeof(SwitchStatusProfile::switchstatus_)
+      - PROTOBUF_FIELD_OFFSET(SwitchStatusProfile, statusmessageinfo_)>(
+          reinterpret_cast<char*>(&statusmessageinfo_),
+          reinterpret_cast<char*>(&other->statusmessageinfo_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SwitchStatusProfile::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace switchmodule
-namespace google {
-namespace protobuf {
+PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::switchmodule::SwitchDiscreteControlXSWI* Arena::CreateMaybeMessage< ::switchmodule::SwitchDiscreteControlXSWI >(Arena* arena) {
-  return Arena::CreateInternal< ::switchmodule::SwitchDiscreteControlXSWI >(arena);
+  return Arena::CreateMessageInternal< ::switchmodule::SwitchDiscreteControlXSWI >(arena);
 }
 template<> PROTOBUF_NOINLINE ::switchmodule::SwitchDiscreteControl* Arena::CreateMaybeMessage< ::switchmodule::SwitchDiscreteControl >(Arena* arena) {
-  return Arena::CreateInternal< ::switchmodule::SwitchDiscreteControl >(arena);
+  return Arena::CreateMessageInternal< ::switchmodule::SwitchDiscreteControl >(arena);
 }
 template<> PROTOBUF_NOINLINE ::switchmodule::ProtectedSwitch* Arena::CreateMaybeMessage< ::switchmodule::ProtectedSwitch >(Arena* arena) {
-  return Arena::CreateInternal< ::switchmodule::ProtectedSwitch >(arena);
+  return Arena::CreateMessageInternal< ::switchmodule::ProtectedSwitch >(arena);
 }
 template<> PROTOBUF_NOINLINE ::switchmodule::SwitchDiscreteControlProfile* Arena::CreateMaybeMessage< ::switchmodule::SwitchDiscreteControlProfile >(Arena* arena) {
-  return Arena::CreateInternal< ::switchmodule::SwitchDiscreteControlProfile >(arena);
+  return Arena::CreateMessageInternal< ::switchmodule::SwitchDiscreteControlProfile >(arena);
 }
 template<> PROTOBUF_NOINLINE ::switchmodule::SwitchEventXSWI* Arena::CreateMaybeMessage< ::switchmodule::SwitchEventXSWI >(Arena* arena) {
-  return Arena::CreateInternal< ::switchmodule::SwitchEventXSWI >(arena);
+  return Arena::CreateMessageInternal< ::switchmodule::SwitchEventXSWI >(arena);
 }
 template<> PROTOBUF_NOINLINE ::switchmodule::SwitchEvent* Arena::CreateMaybeMessage< ::switchmodule::SwitchEvent >(Arena* arena) {
-  return Arena::CreateInternal< ::switchmodule::SwitchEvent >(arena);
+  return Arena::CreateMessageInternal< ::switchmodule::SwitchEvent >(arena);
 }
 template<> PROTOBUF_NOINLINE ::switchmodule::SwitchEventProfile* Arena::CreateMaybeMessage< ::switchmodule::SwitchEventProfile >(Arena* arena) {
-  return Arena::CreateInternal< ::switchmodule::SwitchEventProfile >(arena);
+  return Arena::CreateMessageInternal< ::switchmodule::SwitchEventProfile >(arena);
 }
 template<> PROTOBUF_NOINLINE ::switchmodule::SwitchReading* Arena::CreateMaybeMessage< ::switchmodule::SwitchReading >(Arena* arena) {
-  return Arena::CreateInternal< ::switchmodule::SwitchReading >(arena);
+  return Arena::CreateMessageInternal< ::switchmodule::SwitchReading >(arena);
 }
 template<> PROTOBUF_NOINLINE ::switchmodule::SwitchReadingProfile* Arena::CreateMaybeMessage< ::switchmodule::SwitchReadingProfile >(Arena* arena) {
-  return Arena::CreateInternal< ::switchmodule::SwitchReadingProfile >(arena);
+  return Arena::CreateMessageInternal< ::switchmodule::SwitchReadingProfile >(arena);
 }
 template<> PROTOBUF_NOINLINE ::switchmodule::SwitchStatusXSWI* Arena::CreateMaybeMessage< ::switchmodule::SwitchStatusXSWI >(Arena* arena) {
-  return Arena::CreateInternal< ::switchmodule::SwitchStatusXSWI >(arena);
+  return Arena::CreateMessageInternal< ::switchmodule::SwitchStatusXSWI >(arena);
 }
 template<> PROTOBUF_NOINLINE ::switchmodule::SwitchStatus* Arena::CreateMaybeMessage< ::switchmodule::SwitchStatus >(Arena* arena) {
-  return Arena::CreateInternal< ::switchmodule::SwitchStatus >(arena);
+  return Arena::CreateMessageInternal< ::switchmodule::SwitchStatus >(arena);
 }
 template<> PROTOBUF_NOINLINE ::switchmodule::SwitchStatusProfile* Arena::CreateMaybeMessage< ::switchmodule::SwitchStatusProfile >(Arena* arena) {
-  return Arena::CreateInternal< ::switchmodule::SwitchStatusProfile >(arena);
+  return Arena::CreateMessageInternal< ::switchmodule::SwitchStatusProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::switchmodule::SwitchControlFSCC* Arena::CreateMaybeMessage< ::switchmodule::SwitchControlFSCC >(Arena* arena) {
-  return Arena::CreateInternal< ::switchmodule::SwitchControlFSCC >(arena);
-}
-template<> PROTOBUF_NOINLINE ::switchmodule::SwitchControl* Arena::CreateMaybeMessage< ::switchmodule::SwitchControl >(Arena* arena) {
-  return Arena::CreateInternal< ::switchmodule::SwitchControl >(arena);
-}
-template<> PROTOBUF_NOINLINE ::switchmodule::SwitchControlProfile* Arena::CreateMaybeMessage< ::switchmodule::SwitchControlProfile >(Arena* arena) {
-  return Arena::CreateInternal< ::switchmodule::SwitchControlProfile >(arena);
-}
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
 #include <google/protobuf/port_undef.inc>
