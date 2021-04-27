@@ -5,9 +5,10 @@
 
 #include <algorithm>
 
+#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite.h>
+#include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
@@ -15,429 +16,659 @@
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
-PROTOBUF_PRAGMA_INIT_SEG
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_ControlDPC_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_ControlTimestamp_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Optional_StateKind_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_CheckConditions_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ConductingEquipmentTerminalReading_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ControlMessageInfo_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ENG_GridConnectModeKind_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ESS_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_EventMessageInfo_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_EventValue_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_IED_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_PhaseMMTN_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_RampRate_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ReadingMessageInfo_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_StatusMessageInfo_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_StatusValue_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_ControlFSCC_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_ControlValue_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_ENS_DynamicTestKind_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_ReadingMMTR_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_StatusSPS_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_LogicalNodeForEventAndStatus_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<4> scc_info_MV_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<6> scc_info_ReadingMMXU_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ESSCSG_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ESSControlScheduleFSCH_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ESSEventZGEN_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ESSStatusZGEN_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_VoltageRegulation_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_CapacityFirming_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_EssControlFSCC_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_FrequencyRegulation_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_PeakShaving_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_SOCManagement_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_SocLimit_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_VoltageDroop_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_VoltagePI_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_ESSControl_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_ESSEvent_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_ESSStatus_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_EssEventZBAT_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<4> scc_info_ESSEventAndStatusZGEN_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<4> scc_info_ESSReading_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<4> scc_info_EssStatusZBAT_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<6> scc_info_ESSPointStatus_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<7> scc_info_ESSFunction_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_essmodule_2fessmodule_2eproto ::google::protobuf::internal::SCCInfo<7> scc_info_ESSPoint_essmodule_2fessmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_google_2fprotobuf_2fwrappers_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_BoolValue_google_2fprotobuf_2fwrappers_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_google_2fprotobuf_2fwrappers_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_FloatValue_google_2fprotobuf_2fwrappers_2eproto;
 namespace essmodule {
-constexpr EssEventZBAT::EssEventZBAT(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnodeforeventandstatus_(nullptr)
-  , bathi_(nullptr)
-  , batlo_(nullptr)
-  , batst_(nullptr)
-  , soc_(nullptr)
-  , stdby_(nullptr){}
-struct EssEventZBATDefaultTypeInternal {
-  constexpr EssEventZBATDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~EssEventZBATDefaultTypeInternal() {}
-  union {
-    EssEventZBAT _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EssEventZBATDefaultTypeInternal _EssEventZBAT_default_instance_;
-constexpr FrequencyRegulation::FrequencyRegulation(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : frequencydeadbandminus_(nullptr)
-  , frequencydeadbandplus_(nullptr)
-  , frequencyregulationctl_(nullptr)
-  , frequencysetpoint_(nullptr)
-  , gridfrequencystablebandminus_(nullptr)
-  , gridfrequencystablebandplus_(nullptr)
-  , overfrequencydroop_(nullptr)
-  , underfrequencydroop_(nullptr){}
-struct FrequencyRegulationDefaultTypeInternal {
-  constexpr FrequencyRegulationDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~FrequencyRegulationDefaultTypeInternal() {}
-  union {
-    FrequencyRegulation _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FrequencyRegulationDefaultTypeInternal _FrequencyRegulation_default_instance_;
-constexpr PeakShaving::PeakShaving(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : baseshavinglimit_(nullptr)
-  , peakshavingctl_(nullptr)
-  , peakshavinglimit_(nullptr)
-  , socmanagementallowedhighlimit_(nullptr)
-  , socmanagementallowedlowlimit_(nullptr){}
-struct PeakShavingDefaultTypeInternal {
-  constexpr PeakShavingDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~PeakShavingDefaultTypeInternal() {}
-  union {
-    PeakShaving _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PeakShavingDefaultTypeInternal _PeakShaving_default_instance_;
-constexpr SocLimit::SocLimit(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : sochighlimit_(nullptr)
-  , sochighlimithysteresis_(nullptr)
-  , soclimitctl_(nullptr)
-  , soclowlimit_(nullptr)
-  , soclowlimithysteresis_(nullptr){}
-struct SocLimitDefaultTypeInternal {
-  constexpr SocLimitDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~SocLimitDefaultTypeInternal() {}
-  union {
-    SocLimit _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SocLimitDefaultTypeInternal _SocLimit_default_instance_;
-constexpr SOCManagement::SOCManagement(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : socdeadbandminus_(nullptr)
-  , socdeadbandplus_(nullptr)
-  , socmanagementctl_(nullptr)
-  , socpowersetpoint_(nullptr)
-  , socsetpoint_(nullptr){}
-struct SOCManagementDefaultTypeInternal {
-  constexpr SOCManagementDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~SOCManagementDefaultTypeInternal() {}
-  union {
-    SOCManagement _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SOCManagementDefaultTypeInternal _SOCManagement_default_instance_;
-constexpr VoltageRegulation::VoltageRegulation(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : overvoltagedroop_(nullptr)
-  , undervoltagedroop_(nullptr)
-  , voltagedeadbandminus_(nullptr)
-  , voltagedeadbandplus_(nullptr)
-  , voltagesetpoint_(nullptr){}
-struct VoltageRegulationDefaultTypeInternal {
-  constexpr VoltageRegulationDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~VoltageRegulationDefaultTypeInternal() {}
-  union {
-    VoltageRegulation _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT VoltageRegulationDefaultTypeInternal _VoltageRegulation_default_instance_;
-constexpr VoltageDroop::VoltageDroop(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : voltagedroopctl_(nullptr)
-  , voltageregulation_(nullptr){}
-struct VoltageDroopDefaultTypeInternal {
-  constexpr VoltageDroopDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~VoltageDroopDefaultTypeInternal() {}
-  union {
-    VoltageDroop _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT VoltageDroopDefaultTypeInternal _VoltageDroop_default_instance_;
-constexpr VoltagePI::VoltagePI(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : voltagepictl_(nullptr)
-  , voltageregulation_(nullptr){}
-struct VoltagePIDefaultTypeInternal {
-  constexpr VoltagePIDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~VoltagePIDefaultTypeInternal() {}
-  union {
-    VoltagePI _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT VoltagePIDefaultTypeInternal _VoltagePI_default_instance_;
-constexpr CapacityFirming::CapacityFirming(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : capacityfirmingctl_(nullptr)
-  , limitnegative_dp_dt_(nullptr)
-  , limitpositive_dp_dt_(nullptr){}
-struct CapacityFirmingDefaultTypeInternal {
-  constexpr CapacityFirmingDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~CapacityFirmingDefaultTypeInternal() {}
-  union {
-    CapacityFirming _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapacityFirmingDefaultTypeInternal _CapacityFirming_default_instance_;
-constexpr ESSFunction::ESSFunction(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : capacityfirming_(nullptr)
-  , frequencyregulation_(nullptr)
-  , peakshaving_(nullptr)
-  , soclimit_(nullptr)
-  , socmanagement_(nullptr)
-  , voltagedroop_(nullptr)
-  , voltagepi_(nullptr){}
-struct ESSFunctionDefaultTypeInternal {
-  constexpr ESSFunctionDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSFunctionDefaultTypeInternal() {}
-  union {
-    ESSFunction _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSFunctionDefaultTypeInternal _ESSFunction_default_instance_;
-constexpr ESSPointStatus::ESSPointStatus(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : blackstartenabled_(nullptr)
-  , frequencysetpointenabled_(nullptr)
-  , function_(nullptr)
-  , mode_(nullptr)
-  , pcthzdroop_(nullptr)
-  , pctvdroop_(nullptr)
-  , ramprates_(nullptr)
-  , reactivepwrsetpointenabled_(nullptr)
-  , realpwrsetpointenabled_(nullptr)
-  , state_(nullptr)
-  , syncbacktogrid_(nullptr)
-  , transtoislndongridlossenabled_(nullptr)
-  , voltagesetpointenabled_(nullptr){}
-struct ESSPointStatusDefaultTypeInternal {
-  constexpr ESSPointStatusDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSPointStatusDefaultTypeInternal() {}
-  union {
-    ESSPointStatus _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSPointStatusDefaultTypeInternal _ESSPointStatus_default_instance_;
-constexpr ESSEventAndStatusZGEN::ESSEventAndStatusZGEN(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnodeforeventandstatus_(nullptr)
-  , auxpwrst_(nullptr)
-  , dynamictest_(nullptr)
-  , emgstop_(nullptr)
-  , gnsynst_(nullptr)
-  , pointstatus_(nullptr){}
-struct ESSEventAndStatusZGENDefaultTypeInternal {
-  constexpr ESSEventAndStatusZGENDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSEventAndStatusZGENDefaultTypeInternal() {}
-  union {
-    ESSEventAndStatusZGEN _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSEventAndStatusZGENDefaultTypeInternal _ESSEventAndStatusZGEN_default_instance_;
-constexpr ESSEventZGEN::ESSEventZGEN(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : esseventandstatuszgen_(nullptr){}
-struct ESSEventZGENDefaultTypeInternal {
-  constexpr ESSEventZGENDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSEventZGENDefaultTypeInternal() {}
-  union {
-    ESSEventZGEN _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSEventZGENDefaultTypeInternal _ESSEventZGEN_default_instance_;
-constexpr ESSEvent::ESSEvent(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : eventvalue_(nullptr)
-  , esseventzbat_(nullptr)
-  , esseventzgen_(nullptr){}
-struct ESSEventDefaultTypeInternal {
-  constexpr ESSEventDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSEventDefaultTypeInternal() {}
-  union {
-    ESSEvent _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSEventDefaultTypeInternal _ESSEvent_default_instance_;
-constexpr ESSEventProfile::ESSEventProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : eventmessageinfo_(nullptr)
-  , ess_(nullptr)
-  , essevent_(nullptr){}
-struct ESSEventProfileDefaultTypeInternal {
-  constexpr ESSEventProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSEventProfileDefaultTypeInternal() {}
-  union {
-    ESSEventProfile _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSEventProfileDefaultTypeInternal _ESSEventProfile_default_instance_;
-constexpr ESSReading::ESSReading(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : conductingequipmentterminalreading_(nullptr)
-  , phasemmtn_(nullptr)
-  , readingmmtr_(nullptr)
-  , readingmmxu_(nullptr){}
-struct ESSReadingDefaultTypeInternal {
-  constexpr ESSReadingDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSReadingDefaultTypeInternal() {}
-  union {
-    ESSReading _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSReadingDefaultTypeInternal _ESSReading_default_instance_;
-constexpr ESSReadingProfile::ESSReadingProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : readingmessageinfo_(nullptr)
-  , ess_(nullptr)
-  , essreading_(nullptr){}
-struct ESSReadingProfileDefaultTypeInternal {
-  constexpr ESSReadingProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSReadingProfileDefaultTypeInternal() {}
-  union {
-    ESSReadingProfile _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSReadingProfileDefaultTypeInternal _ESSReadingProfile_default_instance_;
-constexpr EssStatusZBAT::EssStatusZBAT(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnodeforeventandstatus_(nullptr)
-  , batst_(nullptr)
-  , grimod_(nullptr)
-  , soc_(nullptr)
-  , stdby_(nullptr){}
-struct EssStatusZBATDefaultTypeInternal {
-  constexpr EssStatusZBATDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~EssStatusZBATDefaultTypeInternal() {}
-  union {
-    EssStatusZBAT _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EssStatusZBATDefaultTypeInternal _EssStatusZBAT_default_instance_;
-constexpr ESSStatusZGEN::ESSStatusZGEN(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : esseventandstatuszgen_(nullptr){}
-struct ESSStatusZGENDefaultTypeInternal {
-  constexpr ESSStatusZGENDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSStatusZGENDefaultTypeInternal() {}
-  union {
-    ESSStatusZGEN _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSStatusZGENDefaultTypeInternal _ESSStatusZGEN_default_instance_;
-constexpr ESSStatus::ESSStatus(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : statusvalue_(nullptr)
-  , essstatuszbat_(nullptr)
-  , essstatuszgen_(nullptr){}
-struct ESSStatusDefaultTypeInternal {
-  constexpr ESSStatusDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSStatusDefaultTypeInternal() {}
-  union {
-    ESSStatus _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSStatusDefaultTypeInternal _ESSStatus_default_instance_;
-constexpr ESSStatusProfile::ESSStatusProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : statusmessageinfo_(nullptr)
-  , ess_(nullptr)
-  , essstatus_(nullptr){}
-struct ESSStatusProfileDefaultTypeInternal {
-  constexpr ESSStatusProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSStatusProfileDefaultTypeInternal() {}
-  union {
-    ESSStatusProfile _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSStatusProfileDefaultTypeInternal _ESSStatusProfile_default_instance_;
-constexpr ESSPoint::ESSPoint(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : blackstartenabled_(nullptr)
-  , frequencysetpointenabled_(nullptr)
-  , function_(nullptr)
-  , mode_(nullptr)
-  , pcthzdroop_(nullptr)
-  , pctvdroop_(nullptr)
-  , ramprates_(nullptr)
-  , reactivepwrsetpointenabled_(nullptr)
-  , realpwrsetpointenabled_(nullptr)
-  , reset_(nullptr)
-  , state_(nullptr)
-  , syncbacktogrid_(nullptr)
-  , transtoislndongridlossenabled_(nullptr)
-  , voltagesetpointenabled_(nullptr)
-  , starttime_(nullptr){}
-struct ESSPointDefaultTypeInternal {
-  constexpr ESSPointDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSPointDefaultTypeInternal() {}
-  union {
-    ESSPoint _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSPointDefaultTypeInternal _ESSPoint_default_instance_;
-constexpr ESSCSG::ESSCSG(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : crvpts_(){}
-struct ESSCSGDefaultTypeInternal {
-  constexpr ESSCSGDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSCSGDefaultTypeInternal() {}
-  union {
-    ESSCSG _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSCSGDefaultTypeInternal _ESSCSG_default_instance_;
-constexpr ESSControlScheduleFSCH::ESSControlScheduleFSCH(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : valdcsg_(nullptr){}
-struct ESSControlScheduleFSCHDefaultTypeInternal {
-  constexpr ESSControlScheduleFSCHDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSControlScheduleFSCHDefaultTypeInternal() {}
-  union {
-    ESSControlScheduleFSCH _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSControlScheduleFSCHDefaultTypeInternal _ESSControlScheduleFSCH_default_instance_;
-constexpr EssControlFSCC::EssControlFSCC(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlfscc_(nullptr)
-  , esscontrolschedulefsch_(nullptr){}
-struct EssControlFSCCDefaultTypeInternal {
-  constexpr EssControlFSCCDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~EssControlFSCCDefaultTypeInternal() {}
-  union {
-    EssControlFSCC _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EssControlFSCCDefaultTypeInternal _EssControlFSCC_default_instance_;
-constexpr ESSControl::ESSControl(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlvalue_(nullptr)
-  , check_(nullptr)
-  , esscontrolfscc_(nullptr){}
-struct ESSControlDefaultTypeInternal {
-  constexpr ESSControlDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSControlDefaultTypeInternal() {}
-  union {
-    ESSControl _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSControlDefaultTypeInternal _ESSControl_default_instance_;
-constexpr ESSControlProfile::ESSControlProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlmessageinfo_(nullptr)
-  , ess_(nullptr)
-  , esscontrol_(nullptr){}
-struct ESSControlProfileDefaultTypeInternal {
-  constexpr ESSControlProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSControlProfileDefaultTypeInternal() {}
-  union {
-    ESSControlProfile _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSControlProfileDefaultTypeInternal _ESSControlProfile_default_instance_;
+class EssEventZBATDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<EssEventZBAT> _instance;
+} _EssEventZBAT_default_instance_;
+class FrequencyRegulationDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<FrequencyRegulation> _instance;
+} _FrequencyRegulation_default_instance_;
+class PeakShavingDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<PeakShaving> _instance;
+} _PeakShaving_default_instance_;
+class SocLimitDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<SocLimit> _instance;
+} _SocLimit_default_instance_;
+class SOCManagementDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<SOCManagement> _instance;
+} _SOCManagement_default_instance_;
+class VoltageRegulationDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<VoltageRegulation> _instance;
+} _VoltageRegulation_default_instance_;
+class VoltageDroopDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<VoltageDroop> _instance;
+} _VoltageDroop_default_instance_;
+class VoltagePIDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<VoltagePI> _instance;
+} _VoltagePI_default_instance_;
+class CapacityFirmingDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<CapacityFirming> _instance;
+} _CapacityFirming_default_instance_;
+class ESSFunctionDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ESSFunction> _instance;
+} _ESSFunction_default_instance_;
+class ESSPointStatusDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ESSPointStatus> _instance;
+} _ESSPointStatus_default_instance_;
+class ESSEventAndStatusZGENDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ESSEventAndStatusZGEN> _instance;
+} _ESSEventAndStatusZGEN_default_instance_;
+class ESSEventZGENDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ESSEventZGEN> _instance;
+} _ESSEventZGEN_default_instance_;
+class ESSEventDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ESSEvent> _instance;
+} _ESSEvent_default_instance_;
+class ESSEventProfileDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ESSEventProfile> _instance;
+} _ESSEventProfile_default_instance_;
+class ESSReadingDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ESSReading> _instance;
+} _ESSReading_default_instance_;
+class ESSReadingProfileDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ESSReadingProfile> _instance;
+} _ESSReadingProfile_default_instance_;
+class EssStatusZBATDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<EssStatusZBAT> _instance;
+} _EssStatusZBAT_default_instance_;
+class ESSStatusZGENDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ESSStatusZGEN> _instance;
+} _ESSStatusZGEN_default_instance_;
+class ESSStatusDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ESSStatus> _instance;
+} _ESSStatus_default_instance_;
+class ESSStatusProfileDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ESSStatusProfile> _instance;
+} _ESSStatusProfile_default_instance_;
+class ESSPointDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ESSPoint> _instance;
+} _ESSPoint_default_instance_;
+class ESSCSGDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ESSCSG> _instance;
+} _ESSCSG_default_instance_;
+class ESSControlScheduleFSCHDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ESSControlScheduleFSCH> _instance;
+} _ESSControlScheduleFSCH_default_instance_;
+class EssControlFSCCDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<EssControlFSCC> _instance;
+} _EssControlFSCC_default_instance_;
+class ESSControlDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ESSControl> _instance;
+} _ESSControl_default_instance_;
+class ESSControlProfileDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ESSControlProfile> _instance;
+} _ESSControlProfile_default_instance_;
 }  // namespace essmodule
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_essmodule_2fessmodule_2eproto[27];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_essmodule_2fessmodule_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_essmodule_2fessmodule_2eproto = nullptr;
+static void InitDefaultsEssEventZBAT_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_essmodule_2fessmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  {
+    void* ptr = &::essmodule::_EssEventZBAT_default_instance_;
+    new (ptr) ::essmodule::EssEventZBAT();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::EssEventZBAT::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<3> scc_info_EssEventZBAT_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsEssEventZBAT_essmodule_2fessmodule_2eproto}, {
+      &scc_info_LogicalNodeForEventAndStatus_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_StatusSPS_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_MV_commonmodule_2fcommonmodule_2eproto.base,}};
+
+static void InitDefaultsFrequencyRegulation_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_FrequencyRegulation_default_instance_;
+    new (ptr) ::essmodule::FrequencyRegulation();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::FrequencyRegulation::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<2> scc_info_FrequencyRegulation_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsFrequencyRegulation_essmodule_2fessmodule_2eproto}, {
+      &scc_info_FloatValue_google_2fprotobuf_2fwrappers_2eproto.base,
+      &scc_info_BoolValue_google_2fprotobuf_2fwrappers_2eproto.base,}};
+
+static void InitDefaultsPeakShaving_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_PeakShaving_default_instance_;
+    new (ptr) ::essmodule::PeakShaving();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::PeakShaving::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<2> scc_info_PeakShaving_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsPeakShaving_essmodule_2fessmodule_2eproto}, {
+      &scc_info_FloatValue_google_2fprotobuf_2fwrappers_2eproto.base,
+      &scc_info_BoolValue_google_2fprotobuf_2fwrappers_2eproto.base,}};
+
+static void InitDefaultsSocLimit_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_SocLimit_default_instance_;
+    new (ptr) ::essmodule::SocLimit();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::SocLimit::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<2> scc_info_SocLimit_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsSocLimit_essmodule_2fessmodule_2eproto}, {
+      &scc_info_FloatValue_google_2fprotobuf_2fwrappers_2eproto.base,
+      &scc_info_BoolValue_google_2fprotobuf_2fwrappers_2eproto.base,}};
+
+static void InitDefaultsSOCManagement_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_SOCManagement_default_instance_;
+    new (ptr) ::essmodule::SOCManagement();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::SOCManagement::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<2> scc_info_SOCManagement_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsSOCManagement_essmodule_2fessmodule_2eproto}, {
+      &scc_info_FloatValue_google_2fprotobuf_2fwrappers_2eproto.base,
+      &scc_info_BoolValue_google_2fprotobuf_2fwrappers_2eproto.base,}};
+
+static void InitDefaultsVoltageRegulation_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_VoltageRegulation_default_instance_;
+    new (ptr) ::essmodule::VoltageRegulation();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::VoltageRegulation::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_VoltageRegulation_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsVoltageRegulation_essmodule_2fessmodule_2eproto}, {
+      &scc_info_FloatValue_google_2fprotobuf_2fwrappers_2eproto.base,}};
+
+static void InitDefaultsVoltageDroop_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_VoltageDroop_default_instance_;
+    new (ptr) ::essmodule::VoltageDroop();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::VoltageDroop::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<2> scc_info_VoltageDroop_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsVoltageDroop_essmodule_2fessmodule_2eproto}, {
+      &scc_info_BoolValue_google_2fprotobuf_2fwrappers_2eproto.base,
+      &scc_info_VoltageRegulation_essmodule_2fessmodule_2eproto.base,}};
+
+static void InitDefaultsVoltagePI_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_VoltagePI_default_instance_;
+    new (ptr) ::essmodule::VoltagePI();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::VoltagePI::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<2> scc_info_VoltagePI_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsVoltagePI_essmodule_2fessmodule_2eproto}, {
+      &scc_info_BoolValue_google_2fprotobuf_2fwrappers_2eproto.base,
+      &scc_info_VoltageRegulation_essmodule_2fessmodule_2eproto.base,}};
+
+static void InitDefaultsCapacityFirming_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_CapacityFirming_default_instance_;
+    new (ptr) ::essmodule::CapacityFirming();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::CapacityFirming::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<2> scc_info_CapacityFirming_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsCapacityFirming_essmodule_2fessmodule_2eproto}, {
+      &scc_info_BoolValue_google_2fprotobuf_2fwrappers_2eproto.base,
+      &scc_info_FloatValue_google_2fprotobuf_2fwrappers_2eproto.base,}};
+
+static void InitDefaultsESSFunction_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_ESSFunction_default_instance_;
+    new (ptr) ::essmodule::ESSFunction();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::ESSFunction::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<7> scc_info_ESSFunction_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 7, InitDefaultsESSFunction_essmodule_2fessmodule_2eproto}, {
+      &scc_info_CapacityFirming_essmodule_2fessmodule_2eproto.base,
+      &scc_info_FrequencyRegulation_essmodule_2fessmodule_2eproto.base,
+      &scc_info_PeakShaving_essmodule_2fessmodule_2eproto.base,
+      &scc_info_SocLimit_essmodule_2fessmodule_2eproto.base,
+      &scc_info_SOCManagement_essmodule_2fessmodule_2eproto.base,
+      &scc_info_VoltageDroop_essmodule_2fessmodule_2eproto.base,
+      &scc_info_VoltagePI_essmodule_2fessmodule_2eproto.base,}};
+
+static void InitDefaultsESSPointStatus_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_ESSPointStatus_default_instance_;
+    new (ptr) ::essmodule::ESSPointStatus();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::ESSPointStatus::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<6> scc_info_ESSPointStatus_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 6, InitDefaultsESSPointStatus_essmodule_2fessmodule_2eproto}, {
+      &scc_info_ControlDPC_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ESSFunction_essmodule_2fessmodule_2eproto.base,
+      &scc_info_ENG_GridConnectModeKind_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_FloatValue_google_2fprotobuf_2fwrappers_2eproto.base,
+      &scc_info_RampRate_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_Optional_StateKind_commonmodule_2fcommonmodule_2eproto.base,}};
+
+static void InitDefaultsESSEventAndStatusZGEN_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_ESSEventAndStatusZGEN_default_instance_;
+    new (ptr) ::essmodule::ESSEventAndStatusZGEN();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::ESSEventAndStatusZGEN::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<4> scc_info_ESSEventAndStatusZGEN_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsESSEventAndStatusZGEN_essmodule_2fessmodule_2eproto}, {
+      &scc_info_LogicalNodeForEventAndStatus_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_StatusSPS_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ENS_DynamicTestKind_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ESSPointStatus_essmodule_2fessmodule_2eproto.base,}};
+
+static void InitDefaultsESSEventZGEN_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_ESSEventZGEN_default_instance_;
+    new (ptr) ::essmodule::ESSEventZGEN();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::ESSEventZGEN::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_ESSEventZGEN_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsESSEventZGEN_essmodule_2fessmodule_2eproto}, {
+      &scc_info_ESSEventAndStatusZGEN_essmodule_2fessmodule_2eproto.base,}};
+
+static void InitDefaultsESSEvent_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_ESSEvent_default_instance_;
+    new (ptr) ::essmodule::ESSEvent();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::ESSEvent::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<3> scc_info_ESSEvent_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsESSEvent_essmodule_2fessmodule_2eproto}, {
+      &scc_info_EventValue_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_EssEventZBAT_essmodule_2fessmodule_2eproto.base,
+      &scc_info_ESSEventZGEN_essmodule_2fessmodule_2eproto.base,}};
+
+static void InitDefaultsESSEventProfile_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_ESSEventProfile_default_instance_;
+    new (ptr) ::essmodule::ESSEventProfile();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::ESSEventProfile::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<4> scc_info_ESSEventProfile_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsESSEventProfile_essmodule_2fessmodule_2eproto}, {
+      &scc_info_EventMessageInfo_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ESS_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ESSEvent_essmodule_2fessmodule_2eproto.base,
+      &scc_info_IED_commonmodule_2fcommonmodule_2eproto.base,}};
+
+static void InitDefaultsESSReading_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_ESSReading_default_instance_;
+    new (ptr) ::essmodule::ESSReading();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::ESSReading::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<4> scc_info_ESSReading_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsESSReading_essmodule_2fessmodule_2eproto}, {
+      &scc_info_ConductingEquipmentTerminalReading_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_PhaseMMTN_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ReadingMMTR_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ReadingMMXU_commonmodule_2fcommonmodule_2eproto.base,}};
+
+static void InitDefaultsESSReadingProfile_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_ESSReadingProfile_default_instance_;
+    new (ptr) ::essmodule::ESSReadingProfile();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::ESSReadingProfile::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<4> scc_info_ESSReadingProfile_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsESSReadingProfile_essmodule_2fessmodule_2eproto}, {
+      &scc_info_ReadingMessageInfo_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ESS_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ESSReading_essmodule_2fessmodule_2eproto.base,
+      &scc_info_IED_commonmodule_2fcommonmodule_2eproto.base,}};
+
+static void InitDefaultsEssStatusZBAT_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_EssStatusZBAT_default_instance_;
+    new (ptr) ::essmodule::EssStatusZBAT();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::EssStatusZBAT::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<4> scc_info_EssStatusZBAT_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsEssStatusZBAT_essmodule_2fessmodule_2eproto}, {
+      &scc_info_LogicalNodeForEventAndStatus_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_StatusSPS_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ENG_GridConnectModeKind_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_MV_commonmodule_2fcommonmodule_2eproto.base,}};
+
+static void InitDefaultsESSStatusZGEN_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_ESSStatusZGEN_default_instance_;
+    new (ptr) ::essmodule::ESSStatusZGEN();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::ESSStatusZGEN::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_ESSStatusZGEN_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsESSStatusZGEN_essmodule_2fessmodule_2eproto}, {
+      &scc_info_ESSEventAndStatusZGEN_essmodule_2fessmodule_2eproto.base,}};
+
+static void InitDefaultsESSStatus_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_ESSStatus_default_instance_;
+    new (ptr) ::essmodule::ESSStatus();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::ESSStatus::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<3> scc_info_ESSStatus_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsESSStatus_essmodule_2fessmodule_2eproto}, {
+      &scc_info_StatusValue_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_EssStatusZBAT_essmodule_2fessmodule_2eproto.base,
+      &scc_info_ESSStatusZGEN_essmodule_2fessmodule_2eproto.base,}};
+
+static void InitDefaultsESSStatusProfile_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_ESSStatusProfile_default_instance_;
+    new (ptr) ::essmodule::ESSStatusProfile();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::ESSStatusProfile::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<4> scc_info_ESSStatusProfile_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsESSStatusProfile_essmodule_2fessmodule_2eproto}, {
+      &scc_info_StatusMessageInfo_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ESS_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ESSStatus_essmodule_2fessmodule_2eproto.base,
+      &scc_info_IED_commonmodule_2fcommonmodule_2eproto.base,}};
+
+static void InitDefaultsESSPoint_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_ESSPoint_default_instance_;
+    new (ptr) ::essmodule::ESSPoint();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::ESSPoint::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<7> scc_info_ESSPoint_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 7, InitDefaultsESSPoint_essmodule_2fessmodule_2eproto}, {
+      &scc_info_ControlDPC_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ESSFunction_essmodule_2fessmodule_2eproto.base,
+      &scc_info_ENG_GridConnectModeKind_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_FloatValue_google_2fprotobuf_2fwrappers_2eproto.base,
+      &scc_info_RampRate_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_Optional_StateKind_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ControlTimestamp_commonmodule_2fcommonmodule_2eproto.base,}};
+
+static void InitDefaultsESSCSG_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_ESSCSG_default_instance_;
+    new (ptr) ::essmodule::ESSCSG();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::ESSCSG::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_ESSCSG_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsESSCSG_essmodule_2fessmodule_2eproto}, {
+      &scc_info_ESSPoint_essmodule_2fessmodule_2eproto.base,}};
+
+static void InitDefaultsESSControlScheduleFSCH_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_ESSControlScheduleFSCH_default_instance_;
+    new (ptr) ::essmodule::ESSControlScheduleFSCH();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::ESSControlScheduleFSCH::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_ESSControlScheduleFSCH_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsESSControlScheduleFSCH_essmodule_2fessmodule_2eproto}, {
+      &scc_info_ESSCSG_essmodule_2fessmodule_2eproto.base,}};
+
+static void InitDefaultsEssControlFSCC_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_EssControlFSCC_default_instance_;
+    new (ptr) ::essmodule::EssControlFSCC();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::EssControlFSCC::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<2> scc_info_EssControlFSCC_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsEssControlFSCC_essmodule_2fessmodule_2eproto}, {
+      &scc_info_ControlFSCC_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ESSControlScheduleFSCH_essmodule_2fessmodule_2eproto.base,}};
+
+static void InitDefaultsESSControl_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_ESSControl_default_instance_;
+    new (ptr) ::essmodule::ESSControl();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::ESSControl::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<3> scc_info_ESSControl_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsESSControl_essmodule_2fessmodule_2eproto}, {
+      &scc_info_ControlValue_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_CheckConditions_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_EssControlFSCC_essmodule_2fessmodule_2eproto.base,}};
+
+static void InitDefaultsESSControlProfile_essmodule_2fessmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::essmodule::_ESSControlProfile_default_instance_;
+    new (ptr) ::essmodule::ESSControlProfile();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::essmodule::ESSControlProfile::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<4> scc_info_ESSControlProfile_essmodule_2fessmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsESSControlProfile_essmodule_2fessmodule_2eproto}, {
+      &scc_info_ControlMessageInfo_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ESS_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ESSControl_essmodule_2fessmodule_2eproto.base,
+      &scc_info_IED_commonmodule_2fcommonmodule_2eproto.base,}};
+
+void InitDefaults_essmodule_2fessmodule_2eproto() {
+  ::google::protobuf::internal::InitSCC(&scc_info_EssEventZBAT_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_FrequencyRegulation_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_PeakShaving_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_SocLimit_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_SOCManagement_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_VoltageRegulation_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_VoltageDroop_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_VoltagePI_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_CapacityFirming_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ESSFunction_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ESSPointStatus_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ESSEventAndStatusZGEN_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ESSEventZGEN_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ESSEvent_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ESSEventProfile_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ESSReading_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ESSReadingProfile_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_EssStatusZBAT_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ESSStatusZGEN_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ESSStatus_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ESSStatusProfile_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ESSPoint_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ESSCSG_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ESSControlScheduleFSCH_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_EssControlFSCC_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ESSControl_essmodule_2fessmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ESSControlProfile_essmodule_2fessmodule_2eproto.base);
+}
+
+::google::protobuf::Metadata file_level_metadata_essmodule_2fessmodule_2eproto[27];
+constexpr ::google::protobuf::EnumDescriptor const** file_level_enum_descriptors_essmodule_2fessmodule_2eproto = nullptr;
+constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_essmodule_2fessmodule_2eproto = nullptr;
+
+const ::google::protobuf::uint32 TableStruct_essmodule_2fessmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::essmodule::EssEventZBAT, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -587,6 +818,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_essmodule_2fessmodule_2eproto:
   PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventProfile, eventmessageinfo_),
   PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventProfile, ess_),
   PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventProfile, essevent_),
+  PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventProfile, ied_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::essmodule::ESSReading, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -604,6 +836,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_essmodule_2fessmodule_2eproto:
   PROTOBUF_FIELD_OFFSET(::essmodule::ESSReadingProfile, readingmessageinfo_),
   PROTOBUF_FIELD_OFFSET(::essmodule::ESSReadingProfile, ess_),
   PROTOBUF_FIELD_OFFSET(::essmodule::ESSReadingProfile, essreading_),
+  PROTOBUF_FIELD_OFFSET(::essmodule::ESSReadingProfile, ied_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::essmodule::EssStatusZBAT, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -636,6 +869,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_essmodule_2fessmodule_2eproto:
   PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatusProfile, statusmessageinfo_),
   PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatusProfile, ess_),
   PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatusProfile, essstatus_),
+  PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatusProfile, ied_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -691,8 +925,9 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_essmodule_2fessmodule_2eproto:
   PROTOBUF_FIELD_OFFSET(::essmodule::ESSControlProfile, controlmessageinfo_),
   PROTOBUF_FIELD_OFFSET(::essmodule::ESSControlProfile, ess_),
   PROTOBUF_FIELD_OFFSET(::essmodule::ESSControlProfile, esscontrol_),
+  PROTOBUF_FIELD_OFFSET(::essmodule::ESSControlProfile, ied_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::essmodule::EssEventZBAT)},
   { 11, -1, sizeof(::essmodule::FrequencyRegulation)},
   { 24, -1, sizeof(::essmodule::PeakShaving)},
@@ -708,51 +943,57 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 127, -1, sizeof(::essmodule::ESSEventZGEN)},
   { 133, -1, sizeof(::essmodule::ESSEvent)},
   { 141, -1, sizeof(::essmodule::ESSEventProfile)},
-  { 149, -1, sizeof(::essmodule::ESSReading)},
-  { 158, -1, sizeof(::essmodule::ESSReadingProfile)},
-  { 166, -1, sizeof(::essmodule::EssStatusZBAT)},
-  { 176, -1, sizeof(::essmodule::ESSStatusZGEN)},
-  { 182, -1, sizeof(::essmodule::ESSStatus)},
-  { 190, -1, sizeof(::essmodule::ESSStatusProfile)},
-  { 198, -1, sizeof(::essmodule::ESSPoint)},
-  { 218, -1, sizeof(::essmodule::ESSCSG)},
-  { 224, -1, sizeof(::essmodule::ESSControlScheduleFSCH)},
-  { 230, -1, sizeof(::essmodule::EssControlFSCC)},
-  { 237, -1, sizeof(::essmodule::ESSControl)},
-  { 245, -1, sizeof(::essmodule::ESSControlProfile)},
+  { 150, -1, sizeof(::essmodule::ESSReading)},
+  { 159, -1, sizeof(::essmodule::ESSReadingProfile)},
+  { 168, -1, sizeof(::essmodule::EssStatusZBAT)},
+  { 178, -1, sizeof(::essmodule::ESSStatusZGEN)},
+  { 184, -1, sizeof(::essmodule::ESSStatus)},
+  { 192, -1, sizeof(::essmodule::ESSStatusProfile)},
+  { 201, -1, sizeof(::essmodule::ESSPoint)},
+  { 221, -1, sizeof(::essmodule::ESSCSG)},
+  { 227, -1, sizeof(::essmodule::ESSControlScheduleFSCH)},
+  { 233, -1, sizeof(::essmodule::EssControlFSCC)},
+  { 240, -1, sizeof(::essmodule::ESSControl)},
+  { 248, -1, sizeof(::essmodule::ESSControlProfile)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_EssEventZBAT_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_FrequencyRegulation_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_PeakShaving_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_SocLimit_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_SOCManagement_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_VoltageRegulation_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_VoltageDroop_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_VoltagePI_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_CapacityFirming_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSFunction_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSPointStatus_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSEventAndStatusZGEN_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSEventZGEN_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSEvent_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSEventProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSReading_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSReadingProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_EssStatusZBAT_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSStatusZGEN_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSStatus_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSStatusProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSPoint_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSCSG_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSControlScheduleFSCH_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_EssControlFSCC_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSControl_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSControlProfile_default_instance_),
+static ::google::protobuf::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_EssEventZBAT_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_FrequencyRegulation_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_PeakShaving_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_SocLimit_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_SOCManagement_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_VoltageRegulation_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_VoltageDroop_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_VoltagePI_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_CapacityFirming_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_ESSFunction_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_ESSPointStatus_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_ESSEventAndStatusZGEN_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_ESSEventZGEN_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_ESSEvent_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_ESSEventProfile_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_ESSReading_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_ESSReadingProfile_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_EssStatusZBAT_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_ESSStatusZGEN_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_ESSStatus_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_ESSStatusProfile_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_ESSPoint_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_ESSCSG_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_ESSControlScheduleFSCH_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_EssControlFSCC_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_ESSControl_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::essmodule::_ESSControlProfile_default_instance_),
 };
 
-const char descriptor_table_protodef_essmodule_2fessmodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_essmodule_2fessmodule_2eproto = {
+  {}, AddDescriptors_essmodule_2fessmodule_2eproto, "essmodule/essmodule.proto", schemas,
+  file_default_instances, TableStruct_essmodule_2fessmodule_2eproto::offsets,
+  file_level_metadata_essmodule_2fessmodule_2eproto, 27, file_level_enum_descriptors_essmodule_2fessmodule_2eproto, file_level_service_descriptors_essmodule_2fessmodule_2eproto,
+};
+
+const char descriptor_table_protodef_essmodule_2fessmodule_2eproto[] =
   "\n\031essmodule/essmodule.proto\022\tessmodule\032\t"
   "uml.proto\032\036google/protobuf/wrappers.prot"
   "o\032\037commonmodule/commonmodule.proto\"\245\002\n\014E"
@@ -825,138 +1066,155 @@ const char descriptor_table_protodef_essmodule_2fessmodule_2eproto[] PROTOBUF_SE
   "\n\rsocManagement\030\005 \001(\0132\030.essmodule.SOCMan"
   "agement\022-\n\014voltageDroop\030\006 \001(\0132\027.essmodul"
   "e.VoltageDroop\022\'\n\tvoltagePI\030\007 \001(\0132\024.essm"
-  "odule.VoltagePI\"\273\005\n\016ESSPointStatus\0222\n\021bl"
-  "ackStartEnabled\030\001 \001(\0132\027.commonmodule.Sta"
-  "tusSPS\0229\n\030frequencySetPointEnabled\030\002 \001(\013"
-  "2\027.commonmodule.StatusSPS\022(\n\010function\030\003 "
-  "\001(\0132\026.essmodule.ESSFunction\0223\n\004mode\030\004 \001("
-  "\0132%.commonmodule.ENG_GridConnectModeKind"
-  "\022/\n\npctHzDroop\030\005 \001(\0132\033.google.protobuf.F"
-  "loatValue\022.\n\tpctVDroop\030\006 \001(\0132\033.google.pr"
-  "otobuf.FloatValue\022)\n\trampRates\030\007 \001(\0132\026.c"
-  "ommonmodule.RampRate\022;\n\032reactivePwrSetPo"
-  "intEnabled\030\010 \001(\0132\027.commonmodule.StatusSP"
-  "S\0227\n\026realPwrSetPointEnabled\030\t \001(\0132\027.comm"
-  "onmodule.StatusSPS\022/\n\005state\030\n \001(\0132 .comm"
-  "onmodule.Optional_StateKind\022/\n\016syncBackT"
-  "oGrid\030\013 \001(\0132\027.commonmodule.StatusSPS\022>\n\035"
-  "transToIslndOnGridLossEnabled\030\014 \001(\0132\027.co"
-  "mmonmodule.StatusSPS\0227\n\026voltageSetPointE"
-  "nabled\030\r \001(\0132\027.commonmodule.StatusSPS\"\326\002"
-  "\n\025ESSEventAndStatusZGEN\022V\n\034logicalNodeFo"
-  "rEventAndStatus\030\001 \001(\0132*.commonmodule.Log"
-  "icalNodeForEventAndStatusB\004\200\265\030\001\022)\n\010AuxPw"
-  "rSt\030\002 \001(\0132\027.commonmodule.StatusSPS\0226\n\013Dy"
-  "namicTest\030\003 \001(\0132!.commonmodule.ENS_Dynam"
-  "icTestKind\022(\n\007EmgStop\030\004 \001(\0132\027.commonmodu"
-  "le.StatusSPS\022(\n\007GnSynSt\030\005 \001(\0132\027.commonmo"
-  "dule.StatusSPS\022.\n\013PointStatus\030\006 \001(\0132\031.es"
-  "smodule.ESSPointStatus\"U\n\014ESSEventZGEN\022E"
-  "\n\025eSSEventAndStatusZGEN\030\001 \001(\0132 .essmodul"
-  "e.ESSEventAndStatusZGENB\004\200\265\030\001\"\234\001\n\010ESSEve"
-  "nt\0222\n\neventValue\030\001 \001(\0132\030.commonmodule.Ev"
-  "entValueB\004\200\265\030\001\022-\n\014essEventZBAT\030\002 \001(\0132\027.e"
-  "ssmodule.EssEventZBAT\022-\n\014essEventZGEN\030\003 "
-  "\001(\0132\027.essmodule.ESSEventZGEN\"\262\001\n\017ESSEven"
-  "tProfile\022>\n\020eventMessageInfo\030\001 \001(\0132\036.com"
-  "monmodule.EventMessageInfoB\004\200\265\030\001\022(\n\003ess\030"
-  "\002 \001(\0132\021.commonmodule.ESSB\010\210\265\030\001\220\265\030\001\022/\n\010es"
-  "sEvent\030\003 \001(\0132\023.essmodule.ESSEventB\010\210\265\030\001\220"
-  "\265\030\001:\004\300\363\030\001\"\374\001\n\nESSReading\022b\n\"conductingEq"
-  "uipmentTerminalReading\030\001 \001(\01320.commonmod"
-  "ule.ConductingEquipmentTerminalReadingB\004"
-  "\200\265\030\001\022*\n\tphaseMMTN\030\002 \001(\0132\027.commonmodule.P"
-  "haseMMTN\022.\n\013readingMMTR\030\003 \001(\0132\031.commonmo"
-  "dule.ReadingMMTR\022.\n\013readingMMXU\030\004 \001(\0132\031."
-  "commonmodule.ReadingMMXU\"\274\001\n\021ESSReadingP"
-  "rofile\022B\n\022readingMessageInfo\030\001 \001(\0132 .com"
-  "monmodule.ReadingMessageInfoB\004\200\265\030\001\022(\n\003es"
-  "s\030\002 \001(\0132\021.commonmodule.ESSB\010\210\265\030\001\220\265\030\001\0223\n\n"
-  "essReading\030\003 \001(\0132\025.essmodule.ESSReadingB"
-  "\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\215\002\n\rEssStatusZBAT\022V\n\034log"
-  "icalNodeForEventAndStatus\030\001 \001(\0132*.common"
-  "module.LogicalNodeForEventAndStatusB\004\200\265\030"
-  "\001\022&\n\005BatSt\030\002 \001(\0132\027.commonmodule.StatusSP"
-  "S\0225\n\006GriMod\030\003 \001(\0132%.commonmodule.ENG_Gri"
-  "dConnectModeKind\022\035\n\003Soc\030\004 \001(\0132\020.commonmo"
-  "dule.MV\022&\n\005Stdby\030\005 \001(\0132\027.commonmodule.St"
-  "atusSPS\"V\n\rESSStatusZGEN\022E\n\025eSSEventAndS"
-  "tatusZGEN\030\001 \001(\0132 .essmodule.ESSEventAndS"
-  "tatusZGENB\004\200\265\030\001\"\243\001\n\tESSStatus\0224\n\013statusV"
-  "alue\030\001 \001(\0132\031.commonmodule.StatusValueB\004\200"
-  "\265\030\001\022/\n\ressStatusZBAT\030\002 \001(\0132\030.essmodule.E"
-  "ssStatusZBAT\022/\n\ressStatusZGEN\030\003 \001(\0132\030.es"
-  "smodule.ESSStatusZGEN\"\267\001\n\020ESSStatusProfi"
-  "le\022@\n\021statusMessageInfo\030\001 \001(\0132\037.commonmo"
-  "dule.StatusMessageInfoB\004\200\265\030\001\022(\n\003ess\030\002 \001("
-  "\0132\021.commonmodule.ESSB\010\210\265\030\001\220\265\030\001\0221\n\tessSta"
-  "tus\030\003 \001(\0132\024.essmodule.ESSStatusB\010\210\265\030\001\220\265\030"
-  "\001:\004\300\363\030\001\"\242\006\n\010ESSPoint\0223\n\021blackStartEnable"
-  "d\030\001 \001(\0132\030.commonmodule.ControlSPC\022:\n\030fre"
-  "quencySetPointEnabled\030\002 \001(\0132\030.commonmodu"
-  "le.ControlSPC\022(\n\010function\030\003 \001(\0132\026.essmod"
-  "ule.ESSFunction\0223\n\004mode\030\004 \001(\0132%.commonmo"
-  "dule.ENG_GridConnectModeKind\022/\n\npctHzDro"
-  "op\030\005 \001(\0132\033.google.protobuf.FloatValue\022.\n"
-  "\tpctVDroop\030\006 \001(\0132\033.google.protobuf.Float"
-  "Value\022)\n\trampRates\030\007 \001(\0132\026.commonmodule."
-  "RampRate\022<\n\032reactivePwrSetPointEnabled\030\010"
-  " \001(\0132\030.commonmodule.ControlSPC\0228\n\026realPw"
-  "rSetPointEnabled\030\t \001(\0132\030.commonmodule.Co"
-  "ntrolSPC\022\'\n\005reset\030\n \001(\0132\030.commonmodule.C"
-  "ontrolSPC\022/\n\005state\030\013 \001(\0132 .commonmodule."
-  "Optional_StateKind\0220\n\016syncBackToGrid\030\014 \001"
-  "(\0132\030.commonmodule.ControlSPC\022\?\n\035transToI"
-  "slndOnGridLossEnabled\030\r \001(\0132\030.commonmodu"
-  "le.ControlSPC\0228\n\026voltageSetPointEnabled\030"
-  "\016 \001(\0132\030.commonmodule.ControlSPC\022;\n\tstart"
-  "Time\030\017 \001(\0132\036.commonmodule.ControlTimesta"
-  "mpB\010\210\265\030\001\220\265\030\001\"7\n\006ESSCSG\022-\n\006crvPts\030\001 \003(\0132\023"
-  ".essmodule.ESSPointB\010\210\265\030\001\220\265\030\001\"F\n\026ESSCont"
-  "rolScheduleFSCH\022,\n\007ValDCSG\030\001 \001(\0132\021.essmo"
-  "dule.ESSCSGB\010\210\265\030\001\220\265\030\001\"\211\001\n\016EssControlFSCC"
-  "\0224\n\013controlFSCC\030\001 \001(\0132\031.commonmodule.Con"
-  "trolFSCCB\004\200\265\030\001\022A\n\026essControlScheduleFSCH"
-  "\030\002 \001(\0132!.essmodule.ESSControlScheduleFSC"
-  "H\"\245\001\n\nESSControl\0226\n\014controlValue\030\001 \001(\0132\032"
-  ".commonmodule.ControlValueB\004\200\265\030\001\022,\n\005chec"
-  "k\030\002 \001(\0132\035.commonmodule.CheckConditions\0221"
-  "\n\016essControlFSCC\030\003 \001(\0132\031.essmodule.EssCo"
-  "ntrolFSCC\"\274\001\n\021ESSControlProfile\022B\n\022contr"
-  "olMessageInfo\030\001 \001(\0132 .commonmodule.Contr"
-  "olMessageInfoB\004\200\265\030\001\022(\n\003ess\030\002 \001(\0132\021.commo"
-  "nmodule.ESSB\010\210\265\030\001\220\265\030\001\0223\n\nessControl\030\003 \001("
-  "\0132\025.essmodule.ESSControlB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001"
-  "B{\n\021openfmb.essmoduleP\001ZPgitlab.com/open"
-  "fmb/psm/ops/protobuf/go-openfmb-ops-prot"
-  "obuf/v2/openfmb/essmodule\252\002\021openfmb.essm"
-  "oduleb\006proto3"
+  "odule.VoltagePI\"\302\005\n\016ESSPointStatus\0223\n\021bl"
+  "ackStartEnabled\030\001 \001(\0132\030.commonmodule.Con"
+  "trolDPC\022:\n\030frequencySetPointEnabled\030\002 \001("
+  "\0132\030.commonmodule.ControlDPC\022(\n\010function\030"
+  "\003 \001(\0132\026.essmodule.ESSFunction\0223\n\004mode\030\004 "
+  "\001(\0132%.commonmodule.ENG_GridConnectModeKi"
+  "nd\022/\n\npctHzDroop\030\005 \001(\0132\033.google.protobuf"
+  ".FloatValue\022.\n\tpctVDroop\030\006 \001(\0132\033.google."
+  "protobuf.FloatValue\022)\n\trampRates\030\007 \001(\0132\026"
+  ".commonmodule.RampRate\022<\n\032reactivePwrSet"
+  "PointEnabled\030\010 \001(\0132\030.commonmodule.Contro"
+  "lDPC\0228\n\026realPwrSetPointEnabled\030\t \001(\0132\030.c"
+  "ommonmodule.ControlDPC\022/\n\005state\030\n \001(\0132 ."
+  "commonmodule.Optional_StateKind\0220\n\016syncB"
+  "ackToGrid\030\013 \001(\0132\030.commonmodule.ControlDP"
+  "C\022\?\n\035transToIslndOnGridLossEnabled\030\014 \001(\013"
+  "2\030.commonmodule.ControlDPC\0228\n\026voltageSet"
+  "PointEnabled\030\r \001(\0132\030.commonmodule.Contro"
+  "lDPC\"\326\002\n\025ESSEventAndStatusZGEN\022V\n\034logica"
+  "lNodeForEventAndStatus\030\001 \001(\0132*.commonmod"
+  "ule.LogicalNodeForEventAndStatusB\004\200\265\030\001\022)"
+  "\n\010AuxPwrSt\030\002 \001(\0132\027.commonmodule.StatusSP"
+  "S\0226\n\013DynamicTest\030\003 \001(\0132!.commonmodule.EN"
+  "S_DynamicTestKind\022(\n\007EmgStop\030\004 \001(\0132\027.com"
+  "monmodule.StatusSPS\022(\n\007GnSynSt\030\005 \001(\0132\027.c"
+  "ommonmodule.StatusSPS\022.\n\013PointStatus\030\006 \001"
+  "(\0132\031.essmodule.ESSPointStatus\"U\n\014ESSEven"
+  "tZGEN\022E\n\025eSSEventAndStatusZGEN\030\001 \001(\0132 .e"
+  "ssmodule.ESSEventAndStatusZGENB\004\200\265\030\001\"\234\001\n"
+  "\010ESSEvent\0222\n\neventValue\030\001 \001(\0132\030.commonmo"
+  "dule.EventValueB\004\200\265\030\001\022-\n\014essEventZBAT\030\002 "
+  "\001(\0132\027.essmodule.EssEventZBAT\022-\n\014essEvent"
+  "ZGEN\030\003 \001(\0132\027.essmodule.ESSEventZGEN\"\334\001\n\017"
+  "ESSEventProfile\022>\n\020eventMessageInfo\030\001 \001("
+  "\0132\036.commonmodule.EventMessageInfoB\004\200\265\030\001\022"
+  "(\n\003ess\030\002 \001(\0132\021.commonmodule.ESSB\010\210\265\030\001\220\265\030"
+  "\001\022/\n\010essEvent\030\003 \001(\0132\023.essmodule.ESSEvent"
+  "B\010\210\265\030\001\220\265\030\001\022(\n\003ied\030\004 \001(\0132\021.commonmodule.I"
+  "EDB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\374\001\n\nESSReading\022b\n\"con"
+  "ductingEquipmentTerminalReading\030\001 \001(\01320."
+  "commonmodule.ConductingEquipmentTerminal"
+  "ReadingB\004\200\265\030\001\022*\n\tphaseMMTN\030\002 \001(\0132\027.commo"
+  "nmodule.PhaseMMTN\022.\n\013readingMMTR\030\003 \001(\0132\031"
+  ".commonmodule.ReadingMMTR\022.\n\013readingMMXU"
+  "\030\004 \001(\0132\031.commonmodule.ReadingMMXU\"\346\001\n\021ES"
+  "SReadingProfile\022B\n\022readingMessageInfo\030\001 "
+  "\001(\0132 .commonmodule.ReadingMessageInfoB\004\200"
+  "\265\030\001\022(\n\003ess\030\002 \001(\0132\021.commonmodule.ESSB\010\210\265\030"
+  "\001\220\265\030\001\0223\n\nessReading\030\003 \001(\0132\025.essmodule.ES"
+  "SReadingB\010\210\265\030\001\220\265\030\001\022(\n\003ied\030\004 \001(\0132\021.common"
+  "module.IEDB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\227\002\n\rEssStatus"
+  "ZBAT\022V\n\034logicalNodeForEventAndStatus\030\001 \001"
+  "(\0132*.commonmodule.LogicalNodeForEventAnd"
+  "StatusB\004\200\265\030\001\0220\n\005BatSt\030\002 \001(\0132\027.commonmodu"
+  "le.StatusSPSB\010\210\265\030\001\220\265\030\001\0225\n\006GriMod\030\003 \001(\0132%"
+  ".commonmodule.ENG_GridConnectModeKind\022\035\n"
+  "\003Soc\030\004 \001(\0132\020.commonmodule.MV\022&\n\005Stdby\030\005 "
+  "\001(\0132\027.commonmodule.StatusSPS\"V\n\rESSStatu"
+  "sZGEN\022E\n\025eSSEventAndStatusZGEN\030\001 \001(\0132 .e"
+  "ssmodule.ESSEventAndStatusZGENB\004\200\265\030\001\"\243\001\n"
+  "\tESSStatus\0224\n\013statusValue\030\001 \001(\0132\031.common"
+  "module.StatusValueB\004\200\265\030\001\022/\n\ressStatusZBA"
+  "T\030\002 \001(\0132\030.essmodule.EssStatusZBAT\022/\n\ress"
+  "StatusZGEN\030\003 \001(\0132\030.essmodule.ESSStatusZG"
+  "EN\"\341\001\n\020ESSStatusProfile\022@\n\021statusMessage"
+  "Info\030\001 \001(\0132\037.commonmodule.StatusMessageI"
+  "nfoB\004\200\265\030\001\022(\n\003ess\030\002 \001(\0132\021.commonmodule.ES"
+  "SB\010\210\265\030\001\220\265\030\001\0221\n\tessStatus\030\003 \001(\0132\024.essmodu"
+  "le.ESSStatusB\010\210\265\030\001\220\265\030\001\022(\n\003ied\030\004 \001(\0132\021.co"
+  "mmonmodule.IEDB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\242\006\n\010ESSPo"
+  "int\0223\n\021blackStartEnabled\030\001 \001(\0132\030.commonm"
+  "odule.ControlDPC\022:\n\030frequencySetPointEna"
+  "bled\030\002 \001(\0132\030.commonmodule.ControlDPC\022(\n\010"
+  "function\030\003 \001(\0132\026.essmodule.ESSFunction\0223"
+  "\n\004mode\030\004 \001(\0132%.commonmodule.ENG_GridConn"
+  "ectModeKind\022/\n\npctHzDroop\030\005 \001(\0132\033.google"
+  ".protobuf.FloatValue\022.\n\tpctVDroop\030\006 \001(\0132"
+  "\033.google.protobuf.FloatValue\022)\n\trampRate"
+  "s\030\007 \001(\0132\026.commonmodule.RampRate\022<\n\032react"
+  "ivePwrSetPointEnabled\030\010 \001(\0132\030.commonmodu"
+  "le.ControlDPC\0228\n\026realPwrSetPointEnabled\030"
+  "\t \001(\0132\030.commonmodule.ControlDPC\022\'\n\005reset"
+  "\030\n \001(\0132\030.commonmodule.ControlDPC\022/\n\005stat"
+  "e\030\013 \001(\0132 .commonmodule.Optional_StateKin"
+  "d\0220\n\016syncBackToGrid\030\014 \001(\0132\030.commonmodule"
+  ".ControlDPC\022\?\n\035transToIslndOnGridLossEna"
+  "bled\030\r \001(\0132\030.commonmodule.ControlDPC\0228\n\026"
+  "voltageSetPointEnabled\030\016 \001(\0132\030.commonmod"
+  "ule.ControlDPC\022;\n\tstartTime\030\017 \001(\0132\036.comm"
+  "onmodule.ControlTimestampB\010\210\265\030\001\220\265\030\001\"7\n\006E"
+  "SSCSG\022-\n\006crvPts\030\001 \003(\0132\023.essmodule.ESSPoi"
+  "ntB\010\210\265\030\001\220\265\030\001\"F\n\026ESSControlScheduleFSCH\022,"
+  "\n\007ValDCSG\030\001 \001(\0132\021.essmodule.ESSCSGB\010\210\265\030\001"
+  "\220\265\030\001\"\211\001\n\016EssControlFSCC\0224\n\013controlFSCC\030\001"
+  " \001(\0132\031.commonmodule.ControlFSCCB\004\200\265\030\001\022A\n"
+  "\026essControlScheduleFSCH\030\002 \001(\0132!.essmodul"
+  "e.ESSControlScheduleFSCH\"\257\001\n\nESSControl\022"
+  "6\n\014controlValue\030\001 \001(\0132\032.commonmodule.Con"
+  "trolValueB\004\200\265\030\001\022,\n\005check\030\002 \001(\0132\035.commonm"
+  "odule.CheckConditions\022;\n\016essControlFSCC\030"
+  "\003 \001(\0132\031.essmodule.EssControlFSCCB\010\210\265\030\001\220\265"
+  "\030\001\"\346\001\n\021ESSControlProfile\022B\n\022controlMessa"
+  "geInfo\030\001 \001(\0132 .commonmodule.ControlMessa"
+  "geInfoB\004\200\265\030\001\022(\n\003ess\030\002 \001(\0132\021.commonmodule"
+  ".ESSB\010\210\265\030\001\220\265\030\001\0223\n\nessControl\030\003 \001(\0132\025.ess"
+  "module.ESSControlB\010\210\265\030\001\220\265\030\001\022(\n\003ied\030\004 \001(\013"
+  "2\021.commonmodule.IEDB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001Bx\n\021o"
+  "penfmb.essmoduleP\001ZMgitlab.com/openfmb/p"
+  "sm/ops/protobuf/go-openfmb-ops-protobuf/"
+  "openfmb/essmodule\252\002\021openfmb.essmoduleb\006p"
+  "roto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_essmodule_2fessmodule_2eproto_deps[3] = {
-  &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
-  &::descriptor_table_google_2fprotobuf_2fwrappers_2eproto,
-  &::descriptor_table_uml_2eproto,
+::google::protobuf::internal::DescriptorTable descriptor_table_essmodule_2fessmodule_2eproto = {
+  false, InitDefaults_essmodule_2fessmodule_2eproto, 
+  descriptor_table_protodef_essmodule_2fessmodule_2eproto,
+  "essmodule/essmodule.proto", &assign_descriptors_table_essmodule_2fessmodule_2eproto, 7285,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_essmodule_2fessmodule_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_essmodule_2fessmodule_2eproto = {
-  false, false, 7093, descriptor_table_protodef_essmodule_2fessmodule_2eproto, "essmodule/essmodule.proto", 
-  &descriptor_table_essmodule_2fessmodule_2eproto_once, descriptor_table_essmodule_2fessmodule_2eproto_deps, 3, 27,
-  schemas, file_default_instances, TableStruct_essmodule_2fessmodule_2eproto::offsets,
-  file_level_metadata_essmodule_2fessmodule_2eproto, file_level_enum_descriptors_essmodule_2fessmodule_2eproto, file_level_service_descriptors_essmodule_2fessmodule_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
-descriptor_table_essmodule_2fessmodule_2eproto_metadata_getter(int index) {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_essmodule_2fessmodule_2eproto);
-  return descriptor_table_essmodule_2fessmodule_2eproto.file_level_metadata[index];
+
+void AddDescriptors_essmodule_2fessmodule_2eproto() {
+  static constexpr ::google::protobuf::internal::InitFunc deps[3] =
+  {
+    ::AddDescriptors_uml_2eproto,
+    ::AddDescriptors_google_2fprotobuf_2fwrappers_2eproto,
+    ::AddDescriptors_commonmodule_2fcommonmodule_2eproto,
+  };
+ ::google::protobuf::internal::AddDescriptors(&descriptor_table_essmodule_2fessmodule_2eproto, deps, 3);
 }
 
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_essmodule_2fessmodule_2eproto(&descriptor_table_essmodule_2fessmodule_2eproto);
+static bool dynamic_init_dummy_essmodule_2fessmodule_2eproto = []() { AddDescriptors_essmodule_2fessmodule_2eproto(); return true; }();
 namespace essmodule {
 
 // ===================================================================
 
-class EssEventZBAT::_Internal {
+void EssEventZBAT::InitAsDefaultInstance() {
+  ::essmodule::_EssEventZBAT_default_instance_._instance.get_mutable()->logicalnodeforeventandstatus_ = const_cast< ::commonmodule::LogicalNodeForEventAndStatus*>(
+      ::commonmodule::LogicalNodeForEventAndStatus::internal_default_instance());
+  ::essmodule::_EssEventZBAT_default_instance_._instance.get_mutable()->bathi_ = const_cast< ::commonmodule::StatusSPS*>(
+      ::commonmodule::StatusSPS::internal_default_instance());
+  ::essmodule::_EssEventZBAT_default_instance_._instance.get_mutable()->batlo_ = const_cast< ::commonmodule::StatusSPS*>(
+      ::commonmodule::StatusSPS::internal_default_instance());
+  ::essmodule::_EssEventZBAT_default_instance_._instance.get_mutable()->batst_ = const_cast< ::commonmodule::StatusSPS*>(
+      ::commonmodule::StatusSPS::internal_default_instance());
+  ::essmodule::_EssEventZBAT_default_instance_._instance.get_mutable()->soc_ = const_cast< ::commonmodule::MV*>(
+      ::commonmodule::MV::internal_default_instance());
+  ::essmodule::_EssEventZBAT_default_instance_._instance.get_mutable()->stdby_ = const_cast< ::commonmodule::StatusSPS*>(
+      ::commonmodule::StatusSPS::internal_default_instance());
+}
+class EssEventZBAT::HasBitSetters {
  public:
   static const ::commonmodule::LogicalNodeForEventAndStatus& logicalnodeforeventandstatus(const EssEventZBAT* msg);
   static const ::commonmodule::StatusSPS& bathi(const EssEventZBAT* msg);
@@ -967,100 +1225,109 @@ class EssEventZBAT::_Internal {
 };
 
 const ::commonmodule::LogicalNodeForEventAndStatus&
-EssEventZBAT::_Internal::logicalnodeforeventandstatus(const EssEventZBAT* msg) {
+EssEventZBAT::HasBitSetters::logicalnodeforeventandstatus(const EssEventZBAT* msg) {
   return *msg->logicalnodeforeventandstatus_;
 }
 const ::commonmodule::StatusSPS&
-EssEventZBAT::_Internal::bathi(const EssEventZBAT* msg) {
+EssEventZBAT::HasBitSetters::bathi(const EssEventZBAT* msg) {
   return *msg->bathi_;
 }
 const ::commonmodule::StatusSPS&
-EssEventZBAT::_Internal::batlo(const EssEventZBAT* msg) {
+EssEventZBAT::HasBitSetters::batlo(const EssEventZBAT* msg) {
   return *msg->batlo_;
 }
 const ::commonmodule::StatusSPS&
-EssEventZBAT::_Internal::batst(const EssEventZBAT* msg) {
+EssEventZBAT::HasBitSetters::batst(const EssEventZBAT* msg) {
   return *msg->batst_;
 }
 const ::commonmodule::MV&
-EssEventZBAT::_Internal::soc(const EssEventZBAT* msg) {
+EssEventZBAT::HasBitSetters::soc(const EssEventZBAT* msg) {
   return *msg->soc_;
 }
 const ::commonmodule::StatusSPS&
-EssEventZBAT::_Internal::stdby(const EssEventZBAT* msg) {
+EssEventZBAT::HasBitSetters::stdby(const EssEventZBAT* msg) {
   return *msg->stdby_;
 }
 void EssEventZBAT::clear_logicalnodeforeventandstatus() {
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
     delete logicalnodeforeventandstatus_;
   }
   logicalnodeforeventandstatus_ = nullptr;
 }
 void EssEventZBAT::clear_bathi() {
-  if (GetArena() == nullptr && bathi_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && bathi_ != nullptr) {
     delete bathi_;
   }
   bathi_ = nullptr;
 }
 void EssEventZBAT::clear_batlo() {
-  if (GetArena() == nullptr && batlo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && batlo_ != nullptr) {
     delete batlo_;
   }
   batlo_ = nullptr;
 }
 void EssEventZBAT::clear_batst() {
-  if (GetArena() == nullptr && batst_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && batst_ != nullptr) {
     delete batst_;
   }
   batst_ = nullptr;
 }
 void EssEventZBAT::clear_soc() {
-  if (GetArena() == nullptr && soc_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && soc_ != nullptr) {
     delete soc_;
   }
   soc_ = nullptr;
 }
 void EssEventZBAT::clear_stdby() {
-  if (GetArena() == nullptr && stdby_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && stdby_ != nullptr) {
     delete stdby_;
   }
   stdby_ = nullptr;
 }
-EssEventZBAT::EssEventZBAT(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int EssEventZBAT::kLogicalNodeForEventAndStatusFieldNumber;
+const int EssEventZBAT::kBatHiFieldNumber;
+const int EssEventZBAT::kBatLoFieldNumber;
+const int EssEventZBAT::kBatStFieldNumber;
+const int EssEventZBAT::kSocFieldNumber;
+const int EssEventZBAT::kStdbyFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+EssEventZBAT::EssEventZBAT()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.EssEventZBAT)
+  // @@protoc_insertion_point(constructor:essmodule.EssEventZBAT)
 }
 EssEventZBAT::EssEventZBAT(const EssEventZBAT& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_logicalnodeforeventandstatus()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_logicalnodeforeventandstatus()) {
     logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from.logicalnodeforeventandstatus_);
   } else {
     logicalnodeforeventandstatus_ = nullptr;
   }
-  if (from._internal_has_bathi()) {
+  if (from.has_bathi()) {
     bathi_ = new ::commonmodule::StatusSPS(*from.bathi_);
   } else {
     bathi_ = nullptr;
   }
-  if (from._internal_has_batlo()) {
+  if (from.has_batlo()) {
     batlo_ = new ::commonmodule::StatusSPS(*from.batlo_);
   } else {
     batlo_ = nullptr;
   }
-  if (from._internal_has_batst()) {
+  if (from.has_batst()) {
     batst_ = new ::commonmodule::StatusSPS(*from.batst_);
   } else {
     batst_ = nullptr;
   }
-  if (from._internal_has_soc()) {
+  if (from.has_soc()) {
     soc_ = new ::commonmodule::MV(*from.soc_);
   } else {
     soc_ = nullptr;
   }
-  if (from._internal_has_stdby()) {
+  if (from.has_stdby()) {
     stdby_ = new ::commonmodule::StatusSPS(*from.stdby_);
   } else {
     stdby_ = nullptr;
@@ -1069,20 +1336,19 @@ EssEventZBAT::EssEventZBAT(const EssEventZBAT& from)
 }
 
 void EssEventZBAT::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&stdby_) -
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(stdby_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_EssEventZBAT_essmodule_2fessmodule_2eproto.base);
+  ::memset(&logicalnodeforeventandstatus_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&stdby_) -
+      reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(stdby_));
 }
 
 EssEventZBAT::~EssEventZBAT() {
   // @@protoc_insertion_point(destructor:essmodule.EssEventZBAT)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void EssEventZBAT::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete logicalnodeforeventandstatus_;
   if (this != internal_default_instance()) delete bathi_;
   if (this != internal_default_instance()) delete batlo_;
@@ -1091,177 +1357,356 @@ void EssEventZBAT::SharedDtor() {
   if (this != internal_default_instance()) delete stdby_;
 }
 
-void EssEventZBAT::ArenaDtor(void* object) {
-  EssEventZBAT* _this = reinterpret_cast< EssEventZBAT* >(object);
-  (void)_this;
-}
-void EssEventZBAT::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void EssEventZBAT::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const EssEventZBAT& EssEventZBAT::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_EssEventZBAT_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void EssEventZBAT::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.EssEventZBAT)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
     delete logicalnodeforeventandstatus_;
   }
   logicalnodeforeventandstatus_ = nullptr;
-  if (GetArena() == nullptr && bathi_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && bathi_ != nullptr) {
     delete bathi_;
   }
   bathi_ = nullptr;
-  if (GetArena() == nullptr && batlo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && batlo_ != nullptr) {
     delete batlo_;
   }
   batlo_ = nullptr;
-  if (GetArena() == nullptr && batst_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && batst_ != nullptr) {
     delete batst_;
   }
   batst_ = nullptr;
-  if (GetArena() == nullptr && soc_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && soc_ != nullptr) {
     delete soc_;
   }
   soc_ = nullptr;
-  if (GetArena() == nullptr && stdby_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && stdby_ != nullptr) {
     delete stdby_;
   }
   stdby_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* EssEventZBAT::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* EssEventZBAT::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<EssEventZBAT*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforeventandstatus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::LogicalNodeForEventAndStatus::_InternalParse;
+        object = msg->mutable_logicalnodeforeventandstatus();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.StatusSPS BatHi = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_bathi(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::StatusSPS::_InternalParse;
+        object = msg->mutable_bathi();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.StatusSPS BatLo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_batlo(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::StatusSPS::_InternalParse;
+        object = msg->mutable_batlo();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.StatusSPS BatSt = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_batst(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::StatusSPS::_InternalParse;
+        object = msg->mutable_batst();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.MV Soc = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_soc(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::MV::_InternalParse;
+        object = msg->mutable_soc();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.StatusSPS Stdby = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(_internal_mutable_stdby(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::StatusSPS::_InternalParse;
+        object = msg->mutable_stdby();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool EssEventZBAT::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.EssEventZBAT)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_logicalnodeforeventandstatus()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* EssEventZBAT::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.EssEventZBAT)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.StatusSPS BatHi = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_bathi()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.StatusSPS BatLo = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_batlo()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.StatusSPS BatSt = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_batst()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.MV Soc = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_soc()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.StatusSPS Stdby = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_stdby()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.EssEventZBAT)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.EssEventZBAT)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void EssEventZBAT::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.EssEventZBAT)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
   if (this->has_logicalnodeforeventandstatus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnodeforeventandstatus(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::logicalnodeforeventandstatus(this), output);
   }
 
   // .commonmodule.StatusSPS BatHi = 2;
   if (this->has_bathi()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::bathi(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::bathi(this), output);
   }
 
   // .commonmodule.StatusSPS BatLo = 3;
   if (this->has_batlo()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::batlo(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::batlo(this), output);
   }
 
   // .commonmodule.StatusSPS BatSt = 4;
   if (this->has_batst()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::batst(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::batst(this), output);
   }
 
   // .commonmodule.MV Soc = 5;
   if (this->has_soc()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::soc(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, HasBitSetters::soc(this), output);
   }
 
   // .commonmodule.StatusSPS Stdby = 6;
   if (this->has_stdby()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::stdby(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, HasBitSetters::stdby(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.EssEventZBAT)
+}
+
+::google::protobuf::uint8* EssEventZBAT::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.EssEventZBAT)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
+  if (this->has_logicalnodeforeventandstatus()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::logicalnodeforeventandstatus(this), target);
+  }
+
+  // .commonmodule.StatusSPS BatHi = 2;
+  if (this->has_bathi()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::bathi(this), target);
+  }
+
+  // .commonmodule.StatusSPS BatLo = 3;
+  if (this->has_batlo()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::batlo(this), target);
+  }
+
+  // .commonmodule.StatusSPS BatSt = 4;
+  if (this->has_batst()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::batst(this), target);
+  }
+
+  // .commonmodule.MV Soc = 5;
+  if (this->has_soc()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, HasBitSetters::soc(this), target);
+  }
+
+  // .commonmodule.StatusSPS Stdby = 6;
+  if (this->has_stdby()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        6, HasBitSetters::stdby(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.EssEventZBAT)
   return target;
@@ -1271,70 +1716,71 @@ size_t EssEventZBAT::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.EssEventZBAT)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
   if (this->has_logicalnodeforeventandstatus()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *logicalnodeforeventandstatus_);
   }
 
   // .commonmodule.StatusSPS BatHi = 2;
   if (this->has_bathi()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *bathi_);
   }
 
   // .commonmodule.StatusSPS BatLo = 3;
   if (this->has_batlo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *batlo_);
   }
 
   // .commonmodule.StatusSPS BatSt = 4;
   if (this->has_batst()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *batst_);
   }
 
   // .commonmodule.MV Soc = 5;
   if (this->has_soc()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *soc_);
   }
 
   // .commonmodule.StatusSPS Stdby = 6;
   if (this->has_stdby()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *stdby_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void EssEventZBAT::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void EssEventZBAT::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.EssEventZBAT)
   GOOGLE_DCHECK_NE(&from, this);
   const EssEventZBAT* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<EssEventZBAT>(
+      ::google::protobuf::DynamicCastToGenerated<EssEventZBAT>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.EssEventZBAT)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.EssEventZBAT)
     MergeFrom(*source);
@@ -1344,31 +1790,31 @@ void EssEventZBAT::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void EssEventZBAT::MergeFrom(const EssEventZBAT& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.EssEventZBAT)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_logicalnodeforeventandstatus()) {
-    _internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from._internal_logicalnodeforeventandstatus());
+    mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from.logicalnodeforeventandstatus());
   }
   if (from.has_bathi()) {
-    _internal_mutable_bathi()->::commonmodule::StatusSPS::MergeFrom(from._internal_bathi());
+    mutable_bathi()->::commonmodule::StatusSPS::MergeFrom(from.bathi());
   }
   if (from.has_batlo()) {
-    _internal_mutable_batlo()->::commonmodule::StatusSPS::MergeFrom(from._internal_batlo());
+    mutable_batlo()->::commonmodule::StatusSPS::MergeFrom(from.batlo());
   }
   if (from.has_batst()) {
-    _internal_mutable_batst()->::commonmodule::StatusSPS::MergeFrom(from._internal_batst());
+    mutable_batst()->::commonmodule::StatusSPS::MergeFrom(from.batst());
   }
   if (from.has_soc()) {
-    _internal_mutable_soc()->::commonmodule::MV::MergeFrom(from._internal_soc());
+    mutable_soc()->::commonmodule::MV::MergeFrom(from.soc());
   }
   if (from.has_stdby()) {
-    _internal_mutable_stdby()->::commonmodule::StatusSPS::MergeFrom(from._internal_stdby());
+    mutable_stdby()->::commonmodule::StatusSPS::MergeFrom(from.stdby());
   }
 }
 
-void EssEventZBAT::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void EssEventZBAT::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.EssEventZBAT)
   if (&from == this) return;
   Clear();
@@ -1386,162 +1832,196 @@ bool EssEventZBAT::IsInitialized() const {
   return true;
 }
 
+void EssEventZBAT::Swap(EssEventZBAT* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void EssEventZBAT::InternalSwap(EssEventZBAT* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(EssEventZBAT, stdby_)
-      + sizeof(EssEventZBAT::stdby_)
-      - PROTOBUF_FIELD_OFFSET(EssEventZBAT, logicalnodeforeventandstatus_)>(
-          reinterpret_cast<char*>(&logicalnodeforeventandstatus_),
-          reinterpret_cast<char*>(&other->logicalnodeforeventandstatus_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(logicalnodeforeventandstatus_, other->logicalnodeforeventandstatus_);
+  swap(bathi_, other->bathi_);
+  swap(batlo_, other->batlo_);
+  swap(batst_, other->batst_);
+  swap(soc_, other->soc_);
+  swap(stdby_, other->stdby_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata EssEventZBAT::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata EssEventZBAT::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class FrequencyRegulation::_Internal {
+void FrequencyRegulation::InitAsDefaultInstance() {
+  ::essmodule::_FrequencyRegulation_default_instance_._instance.get_mutable()->frequencydeadbandminus_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_FrequencyRegulation_default_instance_._instance.get_mutable()->frequencydeadbandplus_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_FrequencyRegulation_default_instance_._instance.get_mutable()->frequencyregulationctl_ = const_cast< ::google::protobuf::BoolValue*>(
+      ::google::protobuf::BoolValue::internal_default_instance());
+  ::essmodule::_FrequencyRegulation_default_instance_._instance.get_mutable()->frequencysetpoint_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_FrequencyRegulation_default_instance_._instance.get_mutable()->gridfrequencystablebandminus_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_FrequencyRegulation_default_instance_._instance.get_mutable()->gridfrequencystablebandplus_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_FrequencyRegulation_default_instance_._instance.get_mutable()->overfrequencydroop_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_FrequencyRegulation_default_instance_._instance.get_mutable()->underfrequencydroop_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+}
+class FrequencyRegulation::HasBitSetters {
  public:
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& frequencydeadbandminus(const FrequencyRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& frequencydeadbandplus(const FrequencyRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::BoolValue& frequencyregulationctl(const FrequencyRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& frequencysetpoint(const FrequencyRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& gridfrequencystablebandminus(const FrequencyRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& gridfrequencystablebandplus(const FrequencyRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& overfrequencydroop(const FrequencyRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& underfrequencydroop(const FrequencyRegulation* msg);
+  static const ::google::protobuf::FloatValue& frequencydeadbandminus(const FrequencyRegulation* msg);
+  static const ::google::protobuf::FloatValue& frequencydeadbandplus(const FrequencyRegulation* msg);
+  static const ::google::protobuf::BoolValue& frequencyregulationctl(const FrequencyRegulation* msg);
+  static const ::google::protobuf::FloatValue& frequencysetpoint(const FrequencyRegulation* msg);
+  static const ::google::protobuf::FloatValue& gridfrequencystablebandminus(const FrequencyRegulation* msg);
+  static const ::google::protobuf::FloatValue& gridfrequencystablebandplus(const FrequencyRegulation* msg);
+  static const ::google::protobuf::FloatValue& overfrequencydroop(const FrequencyRegulation* msg);
+  static const ::google::protobuf::FloatValue& underfrequencydroop(const FrequencyRegulation* msg);
 };
 
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-FrequencyRegulation::_Internal::frequencydeadbandminus(const FrequencyRegulation* msg) {
+const ::google::protobuf::FloatValue&
+FrequencyRegulation::HasBitSetters::frequencydeadbandminus(const FrequencyRegulation* msg) {
   return *msg->frequencydeadbandminus_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-FrequencyRegulation::_Internal::frequencydeadbandplus(const FrequencyRegulation* msg) {
+const ::google::protobuf::FloatValue&
+FrequencyRegulation::HasBitSetters::frequencydeadbandplus(const FrequencyRegulation* msg) {
   return *msg->frequencydeadbandplus_;
 }
-const PROTOBUF_NAMESPACE_ID::BoolValue&
-FrequencyRegulation::_Internal::frequencyregulationctl(const FrequencyRegulation* msg) {
+const ::google::protobuf::BoolValue&
+FrequencyRegulation::HasBitSetters::frequencyregulationctl(const FrequencyRegulation* msg) {
   return *msg->frequencyregulationctl_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-FrequencyRegulation::_Internal::frequencysetpoint(const FrequencyRegulation* msg) {
+const ::google::protobuf::FloatValue&
+FrequencyRegulation::HasBitSetters::frequencysetpoint(const FrequencyRegulation* msg) {
   return *msg->frequencysetpoint_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-FrequencyRegulation::_Internal::gridfrequencystablebandminus(const FrequencyRegulation* msg) {
+const ::google::protobuf::FloatValue&
+FrequencyRegulation::HasBitSetters::gridfrequencystablebandminus(const FrequencyRegulation* msg) {
   return *msg->gridfrequencystablebandminus_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-FrequencyRegulation::_Internal::gridfrequencystablebandplus(const FrequencyRegulation* msg) {
+const ::google::protobuf::FloatValue&
+FrequencyRegulation::HasBitSetters::gridfrequencystablebandplus(const FrequencyRegulation* msg) {
   return *msg->gridfrequencystablebandplus_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-FrequencyRegulation::_Internal::overfrequencydroop(const FrequencyRegulation* msg) {
+const ::google::protobuf::FloatValue&
+FrequencyRegulation::HasBitSetters::overfrequencydroop(const FrequencyRegulation* msg) {
   return *msg->overfrequencydroop_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-FrequencyRegulation::_Internal::underfrequencydroop(const FrequencyRegulation* msg) {
+const ::google::protobuf::FloatValue&
+FrequencyRegulation::HasBitSetters::underfrequencydroop(const FrequencyRegulation* msg) {
   return *msg->underfrequencydroop_;
 }
 void FrequencyRegulation::clear_frequencydeadbandminus() {
-  if (GetArena() == nullptr && frequencydeadbandminus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && frequencydeadbandminus_ != nullptr) {
     delete frequencydeadbandminus_;
   }
   frequencydeadbandminus_ = nullptr;
 }
 void FrequencyRegulation::clear_frequencydeadbandplus() {
-  if (GetArena() == nullptr && frequencydeadbandplus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && frequencydeadbandplus_ != nullptr) {
     delete frequencydeadbandplus_;
   }
   frequencydeadbandplus_ = nullptr;
 }
 void FrequencyRegulation::clear_frequencyregulationctl() {
-  if (GetArena() == nullptr && frequencyregulationctl_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && frequencyregulationctl_ != nullptr) {
     delete frequencyregulationctl_;
   }
   frequencyregulationctl_ = nullptr;
 }
 void FrequencyRegulation::clear_frequencysetpoint() {
-  if (GetArena() == nullptr && frequencysetpoint_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && frequencysetpoint_ != nullptr) {
     delete frequencysetpoint_;
   }
   frequencysetpoint_ = nullptr;
 }
 void FrequencyRegulation::clear_gridfrequencystablebandminus() {
-  if (GetArena() == nullptr && gridfrequencystablebandminus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && gridfrequencystablebandminus_ != nullptr) {
     delete gridfrequencystablebandminus_;
   }
   gridfrequencystablebandminus_ = nullptr;
 }
 void FrequencyRegulation::clear_gridfrequencystablebandplus() {
-  if (GetArena() == nullptr && gridfrequencystablebandplus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && gridfrequencystablebandplus_ != nullptr) {
     delete gridfrequencystablebandplus_;
   }
   gridfrequencystablebandplus_ = nullptr;
 }
 void FrequencyRegulation::clear_overfrequencydroop() {
-  if (GetArena() == nullptr && overfrequencydroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && overfrequencydroop_ != nullptr) {
     delete overfrequencydroop_;
   }
   overfrequencydroop_ = nullptr;
 }
 void FrequencyRegulation::clear_underfrequencydroop() {
-  if (GetArena() == nullptr && underfrequencydroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && underfrequencydroop_ != nullptr) {
     delete underfrequencydroop_;
   }
   underfrequencydroop_ = nullptr;
 }
-FrequencyRegulation::FrequencyRegulation(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int FrequencyRegulation::kFrequencyDeadBandMinusFieldNumber;
+const int FrequencyRegulation::kFrequencyDeadBandPlusFieldNumber;
+const int FrequencyRegulation::kFrequencyRegulationCtlFieldNumber;
+const int FrequencyRegulation::kFrequencySetPointFieldNumber;
+const int FrequencyRegulation::kGridFrequencyStableBandMinusFieldNumber;
+const int FrequencyRegulation::kGridFrequencyStableBandPlusFieldNumber;
+const int FrequencyRegulation::kOverFrequencyDroopFieldNumber;
+const int FrequencyRegulation::kUnderFrequencyDroopFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+FrequencyRegulation::FrequencyRegulation()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.FrequencyRegulation)
+  // @@protoc_insertion_point(constructor:essmodule.FrequencyRegulation)
 }
 FrequencyRegulation::FrequencyRegulation(const FrequencyRegulation& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_frequencydeadbandminus()) {
-    frequencydeadbandminus_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.frequencydeadbandminus_);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_frequencydeadbandminus()) {
+    frequencydeadbandminus_ = new ::google::protobuf::FloatValue(*from.frequencydeadbandminus_);
   } else {
     frequencydeadbandminus_ = nullptr;
   }
-  if (from._internal_has_frequencydeadbandplus()) {
-    frequencydeadbandplus_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.frequencydeadbandplus_);
+  if (from.has_frequencydeadbandplus()) {
+    frequencydeadbandplus_ = new ::google::protobuf::FloatValue(*from.frequencydeadbandplus_);
   } else {
     frequencydeadbandplus_ = nullptr;
   }
-  if (from._internal_has_frequencyregulationctl()) {
-    frequencyregulationctl_ = new PROTOBUF_NAMESPACE_ID::BoolValue(*from.frequencyregulationctl_);
+  if (from.has_frequencyregulationctl()) {
+    frequencyregulationctl_ = new ::google::protobuf::BoolValue(*from.frequencyregulationctl_);
   } else {
     frequencyregulationctl_ = nullptr;
   }
-  if (from._internal_has_frequencysetpoint()) {
-    frequencysetpoint_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.frequencysetpoint_);
+  if (from.has_frequencysetpoint()) {
+    frequencysetpoint_ = new ::google::protobuf::FloatValue(*from.frequencysetpoint_);
   } else {
     frequencysetpoint_ = nullptr;
   }
-  if (from._internal_has_gridfrequencystablebandminus()) {
-    gridfrequencystablebandminus_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.gridfrequencystablebandminus_);
+  if (from.has_gridfrequencystablebandminus()) {
+    gridfrequencystablebandminus_ = new ::google::protobuf::FloatValue(*from.gridfrequencystablebandminus_);
   } else {
     gridfrequencystablebandminus_ = nullptr;
   }
-  if (from._internal_has_gridfrequencystablebandplus()) {
-    gridfrequencystablebandplus_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.gridfrequencystablebandplus_);
+  if (from.has_gridfrequencystablebandplus()) {
+    gridfrequencystablebandplus_ = new ::google::protobuf::FloatValue(*from.gridfrequencystablebandplus_);
   } else {
     gridfrequencystablebandplus_ = nullptr;
   }
-  if (from._internal_has_overfrequencydroop()) {
-    overfrequencydroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.overfrequencydroop_);
+  if (from.has_overfrequencydroop()) {
+    overfrequencydroop_ = new ::google::protobuf::FloatValue(*from.overfrequencydroop_);
   } else {
     overfrequencydroop_ = nullptr;
   }
-  if (from._internal_has_underfrequencydroop()) {
-    underfrequencydroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.underfrequencydroop_);
+  if (from.has_underfrequencydroop()) {
+    underfrequencydroop_ = new ::google::protobuf::FloatValue(*from.underfrequencydroop_);
   } else {
     underfrequencydroop_ = nullptr;
   }
@@ -1549,20 +2029,19 @@ FrequencyRegulation::FrequencyRegulation(const FrequencyRegulation& from)
 }
 
 void FrequencyRegulation::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&frequencydeadbandminus_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&underfrequencydroop_) -
-    reinterpret_cast<char*>(&frequencydeadbandminus_)) + sizeof(underfrequencydroop_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_FrequencyRegulation_essmodule_2fessmodule_2eproto.base);
+  ::memset(&frequencydeadbandminus_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&underfrequencydroop_) -
+      reinterpret_cast<char*>(&frequencydeadbandminus_)) + sizeof(underfrequencydroop_));
 }
 
 FrequencyRegulation::~FrequencyRegulation() {
   // @@protoc_insertion_point(destructor:essmodule.FrequencyRegulation)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void FrequencyRegulation::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete frequencydeadbandminus_;
   if (this != internal_default_instance()) delete frequencydeadbandplus_;
   if (this != internal_default_instance()) delete frequencyregulationctl_;
@@ -1573,215 +2052,438 @@ void FrequencyRegulation::SharedDtor() {
   if (this != internal_default_instance()) delete underfrequencydroop_;
 }
 
-void FrequencyRegulation::ArenaDtor(void* object) {
-  FrequencyRegulation* _this = reinterpret_cast< FrequencyRegulation* >(object);
-  (void)_this;
-}
-void FrequencyRegulation::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void FrequencyRegulation::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const FrequencyRegulation& FrequencyRegulation::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_FrequencyRegulation_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void FrequencyRegulation::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.FrequencyRegulation)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && frequencydeadbandminus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && frequencydeadbandminus_ != nullptr) {
     delete frequencydeadbandminus_;
   }
   frequencydeadbandminus_ = nullptr;
-  if (GetArena() == nullptr && frequencydeadbandplus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && frequencydeadbandplus_ != nullptr) {
     delete frequencydeadbandplus_;
   }
   frequencydeadbandplus_ = nullptr;
-  if (GetArena() == nullptr && frequencyregulationctl_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && frequencyregulationctl_ != nullptr) {
     delete frequencyregulationctl_;
   }
   frequencyregulationctl_ = nullptr;
-  if (GetArena() == nullptr && frequencysetpoint_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && frequencysetpoint_ != nullptr) {
     delete frequencysetpoint_;
   }
   frequencysetpoint_ = nullptr;
-  if (GetArena() == nullptr && gridfrequencystablebandminus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && gridfrequencystablebandminus_ != nullptr) {
     delete gridfrequencystablebandminus_;
   }
   gridfrequencystablebandminus_ = nullptr;
-  if (GetArena() == nullptr && gridfrequencystablebandplus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && gridfrequencystablebandplus_ != nullptr) {
     delete gridfrequencystablebandplus_;
   }
   gridfrequencystablebandplus_ = nullptr;
-  if (GetArena() == nullptr && overfrequencydroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && overfrequencydroop_ != nullptr) {
     delete overfrequencydroop_;
   }
   overfrequencydroop_ = nullptr;
-  if (GetArena() == nullptr && underfrequencydroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && underfrequencydroop_ != nullptr) {
     delete underfrequencydroop_;
   }
   underfrequencydroop_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* FrequencyRegulation::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* FrequencyRegulation::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<FrequencyRegulation*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .google.protobuf.FloatValue frequencyDeadBandMinus = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_frequencydeadbandminus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_frequencydeadbandminus();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue frequencyDeadBandPlus = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_frequencydeadbandplus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_frequencydeadbandplus();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.BoolValue frequencyRegulationCtl = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_frequencyregulationctl(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::BoolValue::_InternalParse;
+        object = msg->mutable_frequencyregulationctl();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue frequencySetPoint = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_frequencysetpoint(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_frequencysetpoint();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue gridFrequencyStableBandMinus = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_gridfrequencystablebandminus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_gridfrequencystablebandminus();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue gridFrequencyStableBandPlus = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(_internal_mutable_gridfrequencystablebandplus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_gridfrequencystablebandplus();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue overFrequencyDroop = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ctx->ParseMessage(_internal_mutable_overfrequencydroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 7: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_overfrequencydroop();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue underFrequencyDroop = 8;
-      case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          ptr = ctx->ParseMessage(_internal_mutable_underfrequencydroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 8: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 66) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_underfrequencydroop();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool FrequencyRegulation::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.FrequencyRegulation)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .google.protobuf.FloatValue frequencyDeadBandMinus = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_frequencydeadbandminus()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* FrequencyRegulation::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.FrequencyRegulation)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .google.protobuf.FloatValue frequencyDeadBandPlus = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_frequencydeadbandplus()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.BoolValue frequencyRegulationCtl = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_frequencyregulationctl()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue frequencySetPoint = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_frequencysetpoint()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue gridFrequencyStableBandMinus = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_gridfrequencystablebandminus()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue gridFrequencyStableBandPlus = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_gridfrequencystablebandplus()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue overFrequencyDroop = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (58 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_overfrequencydroop()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue underFrequencyDroop = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (66 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_underfrequencydroop()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.FrequencyRegulation)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.FrequencyRegulation)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void FrequencyRegulation::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.FrequencyRegulation)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue frequencyDeadBandMinus = 1;
   if (this->has_frequencydeadbandminus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::frequencydeadbandminus(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::frequencydeadbandminus(this), output);
   }
 
   // .google.protobuf.FloatValue frequencyDeadBandPlus = 2;
   if (this->has_frequencydeadbandplus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::frequencydeadbandplus(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::frequencydeadbandplus(this), output);
   }
 
   // .google.protobuf.BoolValue frequencyRegulationCtl = 3;
   if (this->has_frequencyregulationctl()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::frequencyregulationctl(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::frequencyregulationctl(this), output);
   }
 
   // .google.protobuf.FloatValue frequencySetPoint = 4;
   if (this->has_frequencysetpoint()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::frequencysetpoint(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::frequencysetpoint(this), output);
   }
 
   // .google.protobuf.FloatValue gridFrequencyStableBandMinus = 5;
   if (this->has_gridfrequencystablebandminus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::gridfrequencystablebandminus(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, HasBitSetters::gridfrequencystablebandminus(this), output);
   }
 
   // .google.protobuf.FloatValue gridFrequencyStableBandPlus = 6;
   if (this->has_gridfrequencystablebandplus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::gridfrequencystablebandplus(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, HasBitSetters::gridfrequencystablebandplus(this), output);
   }
 
   // .google.protobuf.FloatValue overFrequencyDroop = 7;
   if (this->has_overfrequencydroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::overfrequencydroop(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      7, HasBitSetters::overfrequencydroop(this), output);
   }
 
   // .google.protobuf.FloatValue underFrequencyDroop = 8;
   if (this->has_underfrequencydroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::underfrequencydroop(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      8, HasBitSetters::underfrequencydroop(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.FrequencyRegulation)
+}
+
+::google::protobuf::uint8* FrequencyRegulation::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.FrequencyRegulation)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .google.protobuf.FloatValue frequencyDeadBandMinus = 1;
+  if (this->has_frequencydeadbandminus()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::frequencydeadbandminus(this), target);
+  }
+
+  // .google.protobuf.FloatValue frequencyDeadBandPlus = 2;
+  if (this->has_frequencydeadbandplus()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::frequencydeadbandplus(this), target);
+  }
+
+  // .google.protobuf.BoolValue frequencyRegulationCtl = 3;
+  if (this->has_frequencyregulationctl()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::frequencyregulationctl(this), target);
+  }
+
+  // .google.protobuf.FloatValue frequencySetPoint = 4;
+  if (this->has_frequencysetpoint()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::frequencysetpoint(this), target);
+  }
+
+  // .google.protobuf.FloatValue gridFrequencyStableBandMinus = 5;
+  if (this->has_gridfrequencystablebandminus()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, HasBitSetters::gridfrequencystablebandminus(this), target);
+  }
+
+  // .google.protobuf.FloatValue gridFrequencyStableBandPlus = 6;
+  if (this->has_gridfrequencystablebandplus()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        6, HasBitSetters::gridfrequencystablebandplus(this), target);
+  }
+
+  // .google.protobuf.FloatValue overFrequencyDroop = 7;
+  if (this->has_overfrequencydroop()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        7, HasBitSetters::overfrequencydroop(this), target);
+  }
+
+  // .google.protobuf.FloatValue underFrequencyDroop = 8;
+  if (this->has_underfrequencydroop()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        8, HasBitSetters::underfrequencydroop(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.FrequencyRegulation)
   return target;
@@ -1791,84 +2493,85 @@ size_t FrequencyRegulation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.FrequencyRegulation)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue frequencyDeadBandMinus = 1;
   if (this->has_frequencydeadbandminus()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *frequencydeadbandminus_);
   }
 
   // .google.protobuf.FloatValue frequencyDeadBandPlus = 2;
   if (this->has_frequencydeadbandplus()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *frequencydeadbandplus_);
   }
 
   // .google.protobuf.BoolValue frequencyRegulationCtl = 3;
   if (this->has_frequencyregulationctl()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *frequencyregulationctl_);
   }
 
   // .google.protobuf.FloatValue frequencySetPoint = 4;
   if (this->has_frequencysetpoint()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *frequencysetpoint_);
   }
 
   // .google.protobuf.FloatValue gridFrequencyStableBandMinus = 5;
   if (this->has_gridfrequencystablebandminus()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *gridfrequencystablebandminus_);
   }
 
   // .google.protobuf.FloatValue gridFrequencyStableBandPlus = 6;
   if (this->has_gridfrequencystablebandplus()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *gridfrequencystablebandplus_);
   }
 
   // .google.protobuf.FloatValue overFrequencyDroop = 7;
   if (this->has_overfrequencydroop()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *overfrequencydroop_);
   }
 
   // .google.protobuf.FloatValue underFrequencyDroop = 8;
   if (this->has_underfrequencydroop()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *underfrequencydroop_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void FrequencyRegulation::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void FrequencyRegulation::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.FrequencyRegulation)
   GOOGLE_DCHECK_NE(&from, this);
   const FrequencyRegulation* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<FrequencyRegulation>(
+      ::google::protobuf::DynamicCastToGenerated<FrequencyRegulation>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.FrequencyRegulation)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.FrequencyRegulation)
     MergeFrom(*source);
@@ -1878,37 +2581,37 @@ void FrequencyRegulation::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from
 void FrequencyRegulation::MergeFrom(const FrequencyRegulation& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.FrequencyRegulation)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_frequencydeadbandminus()) {
-    _internal_mutable_frequencydeadbandminus()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_frequencydeadbandminus());
+    mutable_frequencydeadbandminus()->::google::protobuf::FloatValue::MergeFrom(from.frequencydeadbandminus());
   }
   if (from.has_frequencydeadbandplus()) {
-    _internal_mutable_frequencydeadbandplus()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_frequencydeadbandplus());
+    mutable_frequencydeadbandplus()->::google::protobuf::FloatValue::MergeFrom(from.frequencydeadbandplus());
   }
   if (from.has_frequencyregulationctl()) {
-    _internal_mutable_frequencyregulationctl()->PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(from._internal_frequencyregulationctl());
+    mutable_frequencyregulationctl()->::google::protobuf::BoolValue::MergeFrom(from.frequencyregulationctl());
   }
   if (from.has_frequencysetpoint()) {
-    _internal_mutable_frequencysetpoint()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_frequencysetpoint());
+    mutable_frequencysetpoint()->::google::protobuf::FloatValue::MergeFrom(from.frequencysetpoint());
   }
   if (from.has_gridfrequencystablebandminus()) {
-    _internal_mutable_gridfrequencystablebandminus()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_gridfrequencystablebandminus());
+    mutable_gridfrequencystablebandminus()->::google::protobuf::FloatValue::MergeFrom(from.gridfrequencystablebandminus());
   }
   if (from.has_gridfrequencystablebandplus()) {
-    _internal_mutable_gridfrequencystablebandplus()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_gridfrequencystablebandplus());
+    mutable_gridfrequencystablebandplus()->::google::protobuf::FloatValue::MergeFrom(from.gridfrequencystablebandplus());
   }
   if (from.has_overfrequencydroop()) {
-    _internal_mutable_overfrequencydroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_overfrequencydroop());
+    mutable_overfrequencydroop()->::google::protobuf::FloatValue::MergeFrom(from.overfrequencydroop());
   }
   if (from.has_underfrequencydroop()) {
-    _internal_mutable_underfrequencydroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_underfrequencydroop());
+    mutable_underfrequencydroop()->::google::protobuf::FloatValue::MergeFrom(from.underfrequencydroop());
   }
 }
 
-void FrequencyRegulation::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void FrequencyRegulation::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.FrequencyRegulation)
   if (&from == this) return;
   Clear();
@@ -1926,114 +2629,141 @@ bool FrequencyRegulation::IsInitialized() const {
   return true;
 }
 
+void FrequencyRegulation::Swap(FrequencyRegulation* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void FrequencyRegulation::InternalSwap(FrequencyRegulation* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FrequencyRegulation, underfrequencydroop_)
-      + sizeof(FrequencyRegulation::underfrequencydroop_)
-      - PROTOBUF_FIELD_OFFSET(FrequencyRegulation, frequencydeadbandminus_)>(
-          reinterpret_cast<char*>(&frequencydeadbandminus_),
-          reinterpret_cast<char*>(&other->frequencydeadbandminus_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(frequencydeadbandminus_, other->frequencydeadbandminus_);
+  swap(frequencydeadbandplus_, other->frequencydeadbandplus_);
+  swap(frequencyregulationctl_, other->frequencyregulationctl_);
+  swap(frequencysetpoint_, other->frequencysetpoint_);
+  swap(gridfrequencystablebandminus_, other->gridfrequencystablebandminus_);
+  swap(gridfrequencystablebandplus_, other->gridfrequencystablebandplus_);
+  swap(overfrequencydroop_, other->overfrequencydroop_);
+  swap(underfrequencydroop_, other->underfrequencydroop_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FrequencyRegulation::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata FrequencyRegulation::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class PeakShaving::_Internal {
+void PeakShaving::InitAsDefaultInstance() {
+  ::essmodule::_PeakShaving_default_instance_._instance.get_mutable()->baseshavinglimit_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_PeakShaving_default_instance_._instance.get_mutable()->peakshavingctl_ = const_cast< ::google::protobuf::BoolValue*>(
+      ::google::protobuf::BoolValue::internal_default_instance());
+  ::essmodule::_PeakShaving_default_instance_._instance.get_mutable()->peakshavinglimit_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_PeakShaving_default_instance_._instance.get_mutable()->socmanagementallowedhighlimit_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_PeakShaving_default_instance_._instance.get_mutable()->socmanagementallowedlowlimit_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+}
+class PeakShaving::HasBitSetters {
  public:
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& baseshavinglimit(const PeakShaving* msg);
-  static const PROTOBUF_NAMESPACE_ID::BoolValue& peakshavingctl(const PeakShaving* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& peakshavinglimit(const PeakShaving* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& socmanagementallowedhighlimit(const PeakShaving* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& socmanagementallowedlowlimit(const PeakShaving* msg);
+  static const ::google::protobuf::FloatValue& baseshavinglimit(const PeakShaving* msg);
+  static const ::google::protobuf::BoolValue& peakshavingctl(const PeakShaving* msg);
+  static const ::google::protobuf::FloatValue& peakshavinglimit(const PeakShaving* msg);
+  static const ::google::protobuf::FloatValue& socmanagementallowedhighlimit(const PeakShaving* msg);
+  static const ::google::protobuf::FloatValue& socmanagementallowedlowlimit(const PeakShaving* msg);
 };
 
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-PeakShaving::_Internal::baseshavinglimit(const PeakShaving* msg) {
+const ::google::protobuf::FloatValue&
+PeakShaving::HasBitSetters::baseshavinglimit(const PeakShaving* msg) {
   return *msg->baseshavinglimit_;
 }
-const PROTOBUF_NAMESPACE_ID::BoolValue&
-PeakShaving::_Internal::peakshavingctl(const PeakShaving* msg) {
+const ::google::protobuf::BoolValue&
+PeakShaving::HasBitSetters::peakshavingctl(const PeakShaving* msg) {
   return *msg->peakshavingctl_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-PeakShaving::_Internal::peakshavinglimit(const PeakShaving* msg) {
+const ::google::protobuf::FloatValue&
+PeakShaving::HasBitSetters::peakshavinglimit(const PeakShaving* msg) {
   return *msg->peakshavinglimit_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-PeakShaving::_Internal::socmanagementallowedhighlimit(const PeakShaving* msg) {
+const ::google::protobuf::FloatValue&
+PeakShaving::HasBitSetters::socmanagementallowedhighlimit(const PeakShaving* msg) {
   return *msg->socmanagementallowedhighlimit_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-PeakShaving::_Internal::socmanagementallowedlowlimit(const PeakShaving* msg) {
+const ::google::protobuf::FloatValue&
+PeakShaving::HasBitSetters::socmanagementallowedlowlimit(const PeakShaving* msg) {
   return *msg->socmanagementallowedlowlimit_;
 }
 void PeakShaving::clear_baseshavinglimit() {
-  if (GetArena() == nullptr && baseshavinglimit_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && baseshavinglimit_ != nullptr) {
     delete baseshavinglimit_;
   }
   baseshavinglimit_ = nullptr;
 }
 void PeakShaving::clear_peakshavingctl() {
-  if (GetArena() == nullptr && peakshavingctl_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && peakshavingctl_ != nullptr) {
     delete peakshavingctl_;
   }
   peakshavingctl_ = nullptr;
 }
 void PeakShaving::clear_peakshavinglimit() {
-  if (GetArena() == nullptr && peakshavinglimit_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && peakshavinglimit_ != nullptr) {
     delete peakshavinglimit_;
   }
   peakshavinglimit_ = nullptr;
 }
 void PeakShaving::clear_socmanagementallowedhighlimit() {
-  if (GetArena() == nullptr && socmanagementallowedhighlimit_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && socmanagementallowedhighlimit_ != nullptr) {
     delete socmanagementallowedhighlimit_;
   }
   socmanagementallowedhighlimit_ = nullptr;
 }
 void PeakShaving::clear_socmanagementallowedlowlimit() {
-  if (GetArena() == nullptr && socmanagementallowedlowlimit_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && socmanagementallowedlowlimit_ != nullptr) {
     delete socmanagementallowedlowlimit_;
   }
   socmanagementallowedlowlimit_ = nullptr;
 }
-PeakShaving::PeakShaving(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int PeakShaving::kBaseShavingLimitFieldNumber;
+const int PeakShaving::kPeakShavingCtlFieldNumber;
+const int PeakShaving::kPeakShavingLimitFieldNumber;
+const int PeakShaving::kSocManagementAllowedHighLimitFieldNumber;
+const int PeakShaving::kSocManagementAllowedLowLimitFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+PeakShaving::PeakShaving()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.PeakShaving)
+  // @@protoc_insertion_point(constructor:essmodule.PeakShaving)
 }
 PeakShaving::PeakShaving(const PeakShaving& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_baseshavinglimit()) {
-    baseshavinglimit_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.baseshavinglimit_);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_baseshavinglimit()) {
+    baseshavinglimit_ = new ::google::protobuf::FloatValue(*from.baseshavinglimit_);
   } else {
     baseshavinglimit_ = nullptr;
   }
-  if (from._internal_has_peakshavingctl()) {
-    peakshavingctl_ = new PROTOBUF_NAMESPACE_ID::BoolValue(*from.peakshavingctl_);
+  if (from.has_peakshavingctl()) {
+    peakshavingctl_ = new ::google::protobuf::BoolValue(*from.peakshavingctl_);
   } else {
     peakshavingctl_ = nullptr;
   }
-  if (from._internal_has_peakshavinglimit()) {
-    peakshavinglimit_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.peakshavinglimit_);
+  if (from.has_peakshavinglimit()) {
+    peakshavinglimit_ = new ::google::protobuf::FloatValue(*from.peakshavinglimit_);
   } else {
     peakshavinglimit_ = nullptr;
   }
-  if (from._internal_has_socmanagementallowedhighlimit()) {
-    socmanagementallowedhighlimit_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.socmanagementallowedhighlimit_);
+  if (from.has_socmanagementallowedhighlimit()) {
+    socmanagementallowedhighlimit_ = new ::google::protobuf::FloatValue(*from.socmanagementallowedhighlimit_);
   } else {
     socmanagementallowedhighlimit_ = nullptr;
   }
-  if (from._internal_has_socmanagementallowedlowlimit()) {
-    socmanagementallowedlowlimit_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.socmanagementallowedlowlimit_);
+  if (from.has_socmanagementallowedlowlimit()) {
+    socmanagementallowedlowlimit_ = new ::google::protobuf::FloatValue(*from.socmanagementallowedlowlimit_);
   } else {
     socmanagementallowedlowlimit_ = nullptr;
   }
@@ -2041,20 +2771,19 @@ PeakShaving::PeakShaving(const PeakShaving& from)
 }
 
 void PeakShaving::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&baseshavinglimit_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&socmanagementallowedlowlimit_) -
-    reinterpret_cast<char*>(&baseshavinglimit_)) + sizeof(socmanagementallowedlowlimit_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_PeakShaving_essmodule_2fessmodule_2eproto.base);
+  ::memset(&baseshavinglimit_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&socmanagementallowedlowlimit_) -
+      reinterpret_cast<char*>(&baseshavinglimit_)) + sizeof(socmanagementallowedlowlimit_));
 }
 
 PeakShaving::~PeakShaving() {
   // @@protoc_insertion_point(destructor:essmodule.PeakShaving)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void PeakShaving::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete baseshavinglimit_;
   if (this != internal_default_instance()) delete peakshavingctl_;
   if (this != internal_default_instance()) delete peakshavinglimit_;
@@ -2062,158 +2791,315 @@ void PeakShaving::SharedDtor() {
   if (this != internal_default_instance()) delete socmanagementallowedlowlimit_;
 }
 
-void PeakShaving::ArenaDtor(void* object) {
-  PeakShaving* _this = reinterpret_cast< PeakShaving* >(object);
-  (void)_this;
-}
-void PeakShaving::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void PeakShaving::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const PeakShaving& PeakShaving::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_PeakShaving_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void PeakShaving::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.PeakShaving)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && baseshavinglimit_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && baseshavinglimit_ != nullptr) {
     delete baseshavinglimit_;
   }
   baseshavinglimit_ = nullptr;
-  if (GetArena() == nullptr && peakshavingctl_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && peakshavingctl_ != nullptr) {
     delete peakshavingctl_;
   }
   peakshavingctl_ = nullptr;
-  if (GetArena() == nullptr && peakshavinglimit_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && peakshavinglimit_ != nullptr) {
     delete peakshavinglimit_;
   }
   peakshavinglimit_ = nullptr;
-  if (GetArena() == nullptr && socmanagementallowedhighlimit_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && socmanagementallowedhighlimit_ != nullptr) {
     delete socmanagementallowedhighlimit_;
   }
   socmanagementallowedhighlimit_ = nullptr;
-  if (GetArena() == nullptr && socmanagementallowedlowlimit_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && socmanagementallowedlowlimit_ != nullptr) {
     delete socmanagementallowedlowlimit_;
   }
   socmanagementallowedlowlimit_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* PeakShaving::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* PeakShaving::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<PeakShaving*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .google.protobuf.FloatValue baseShavingLimit = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_baseshavinglimit(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_baseshavinglimit();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.BoolValue peakShavingCtl = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_peakshavingctl(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::BoolValue::_InternalParse;
+        object = msg->mutable_peakshavingctl();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue peakShavingLimit = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_peakshavinglimit(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_peakshavinglimit();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue socManagementAllowedHighLimit = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_socmanagementallowedhighlimit(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_socmanagementallowedhighlimit();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue socManagementAllowedLowLimit = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_socmanagementallowedlowlimit(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_socmanagementallowedlowlimit();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool PeakShaving::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.PeakShaving)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .google.protobuf.FloatValue baseShavingLimit = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_baseshavinglimit()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* PeakShaving::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.PeakShaving)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .google.protobuf.BoolValue peakShavingCtl = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_peakshavingctl()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue peakShavingLimit = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_peakshavinglimit()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue socManagementAllowedHighLimit = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_socmanagementallowedhighlimit()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue socManagementAllowedLowLimit = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_socmanagementallowedlowlimit()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.PeakShaving)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.PeakShaving)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void PeakShaving::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.PeakShaving)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue baseShavingLimit = 1;
   if (this->has_baseshavinglimit()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::baseshavinglimit(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::baseshavinglimit(this), output);
   }
 
   // .google.protobuf.BoolValue peakShavingCtl = 2;
   if (this->has_peakshavingctl()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::peakshavingctl(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::peakshavingctl(this), output);
   }
 
   // .google.protobuf.FloatValue peakShavingLimit = 3;
   if (this->has_peakshavinglimit()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::peakshavinglimit(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::peakshavinglimit(this), output);
   }
 
   // .google.protobuf.FloatValue socManagementAllowedHighLimit = 4;
   if (this->has_socmanagementallowedhighlimit()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::socmanagementallowedhighlimit(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::socmanagementallowedhighlimit(this), output);
   }
 
   // .google.protobuf.FloatValue socManagementAllowedLowLimit = 5;
   if (this->has_socmanagementallowedlowlimit()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::socmanagementallowedlowlimit(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, HasBitSetters::socmanagementallowedlowlimit(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.PeakShaving)
+}
+
+::google::protobuf::uint8* PeakShaving::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.PeakShaving)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .google.protobuf.FloatValue baseShavingLimit = 1;
+  if (this->has_baseshavinglimit()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::baseshavinglimit(this), target);
+  }
+
+  // .google.protobuf.BoolValue peakShavingCtl = 2;
+  if (this->has_peakshavingctl()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::peakshavingctl(this), target);
+  }
+
+  // .google.protobuf.FloatValue peakShavingLimit = 3;
+  if (this->has_peakshavinglimit()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::peakshavinglimit(this), target);
+  }
+
+  // .google.protobuf.FloatValue socManagementAllowedHighLimit = 4;
+  if (this->has_socmanagementallowedhighlimit()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::socmanagementallowedhighlimit(this), target);
+  }
+
+  // .google.protobuf.FloatValue socManagementAllowedLowLimit = 5;
+  if (this->has_socmanagementallowedlowlimit()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, HasBitSetters::socmanagementallowedlowlimit(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.PeakShaving)
   return target;
@@ -2223,63 +3109,64 @@ size_t PeakShaving::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.PeakShaving)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue baseShavingLimit = 1;
   if (this->has_baseshavinglimit()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *baseshavinglimit_);
   }
 
   // .google.protobuf.BoolValue peakShavingCtl = 2;
   if (this->has_peakshavingctl()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *peakshavingctl_);
   }
 
   // .google.protobuf.FloatValue peakShavingLimit = 3;
   if (this->has_peakshavinglimit()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *peakshavinglimit_);
   }
 
   // .google.protobuf.FloatValue socManagementAllowedHighLimit = 4;
   if (this->has_socmanagementallowedhighlimit()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *socmanagementallowedhighlimit_);
   }
 
   // .google.protobuf.FloatValue socManagementAllowedLowLimit = 5;
   if (this->has_socmanagementallowedlowlimit()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *socmanagementallowedlowlimit_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void PeakShaving::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void PeakShaving::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.PeakShaving)
   GOOGLE_DCHECK_NE(&from, this);
   const PeakShaving* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PeakShaving>(
+      ::google::protobuf::DynamicCastToGenerated<PeakShaving>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.PeakShaving)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.PeakShaving)
     MergeFrom(*source);
@@ -2289,28 +3176,28 @@ void PeakShaving::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void PeakShaving::MergeFrom(const PeakShaving& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.PeakShaving)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_baseshavinglimit()) {
-    _internal_mutable_baseshavinglimit()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_baseshavinglimit());
+    mutable_baseshavinglimit()->::google::protobuf::FloatValue::MergeFrom(from.baseshavinglimit());
   }
   if (from.has_peakshavingctl()) {
-    _internal_mutable_peakshavingctl()->PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(from._internal_peakshavingctl());
+    mutable_peakshavingctl()->::google::protobuf::BoolValue::MergeFrom(from.peakshavingctl());
   }
   if (from.has_peakshavinglimit()) {
-    _internal_mutable_peakshavinglimit()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_peakshavinglimit());
+    mutable_peakshavinglimit()->::google::protobuf::FloatValue::MergeFrom(from.peakshavinglimit());
   }
   if (from.has_socmanagementallowedhighlimit()) {
-    _internal_mutable_socmanagementallowedhighlimit()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_socmanagementallowedhighlimit());
+    mutable_socmanagementallowedhighlimit()->::google::protobuf::FloatValue::MergeFrom(from.socmanagementallowedhighlimit());
   }
   if (from.has_socmanagementallowedlowlimit()) {
-    _internal_mutable_socmanagementallowedlowlimit()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_socmanagementallowedlowlimit());
+    mutable_socmanagementallowedlowlimit()->::google::protobuf::FloatValue::MergeFrom(from.socmanagementallowedlowlimit());
   }
 }
 
-void PeakShaving::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void PeakShaving::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.PeakShaving)
   if (&from == this) return;
   Clear();
@@ -2328,114 +3215,138 @@ bool PeakShaving::IsInitialized() const {
   return true;
 }
 
+void PeakShaving::Swap(PeakShaving* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void PeakShaving::InternalSwap(PeakShaving* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(PeakShaving, socmanagementallowedlowlimit_)
-      + sizeof(PeakShaving::socmanagementallowedlowlimit_)
-      - PROTOBUF_FIELD_OFFSET(PeakShaving, baseshavinglimit_)>(
-          reinterpret_cast<char*>(&baseshavinglimit_),
-          reinterpret_cast<char*>(&other->baseshavinglimit_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(baseshavinglimit_, other->baseshavinglimit_);
+  swap(peakshavingctl_, other->peakshavingctl_);
+  swap(peakshavinglimit_, other->peakshavinglimit_);
+  swap(socmanagementallowedhighlimit_, other->socmanagementallowedhighlimit_);
+  swap(socmanagementallowedlowlimit_, other->socmanagementallowedlowlimit_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata PeakShaving::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata PeakShaving::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class SocLimit::_Internal {
+void SocLimit::InitAsDefaultInstance() {
+  ::essmodule::_SocLimit_default_instance_._instance.get_mutable()->sochighlimit_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_SocLimit_default_instance_._instance.get_mutable()->sochighlimithysteresis_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_SocLimit_default_instance_._instance.get_mutable()->soclimitctl_ = const_cast< ::google::protobuf::BoolValue*>(
+      ::google::protobuf::BoolValue::internal_default_instance());
+  ::essmodule::_SocLimit_default_instance_._instance.get_mutable()->soclowlimit_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_SocLimit_default_instance_._instance.get_mutable()->soclowlimithysteresis_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+}
+class SocLimit::HasBitSetters {
  public:
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& sochighlimit(const SocLimit* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& sochighlimithysteresis(const SocLimit* msg);
-  static const PROTOBUF_NAMESPACE_ID::BoolValue& soclimitctl(const SocLimit* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& soclowlimit(const SocLimit* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& soclowlimithysteresis(const SocLimit* msg);
+  static const ::google::protobuf::FloatValue& sochighlimit(const SocLimit* msg);
+  static const ::google::protobuf::FloatValue& sochighlimithysteresis(const SocLimit* msg);
+  static const ::google::protobuf::BoolValue& soclimitctl(const SocLimit* msg);
+  static const ::google::protobuf::FloatValue& soclowlimit(const SocLimit* msg);
+  static const ::google::protobuf::FloatValue& soclowlimithysteresis(const SocLimit* msg);
 };
 
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-SocLimit::_Internal::sochighlimit(const SocLimit* msg) {
+const ::google::protobuf::FloatValue&
+SocLimit::HasBitSetters::sochighlimit(const SocLimit* msg) {
   return *msg->sochighlimit_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-SocLimit::_Internal::sochighlimithysteresis(const SocLimit* msg) {
+const ::google::protobuf::FloatValue&
+SocLimit::HasBitSetters::sochighlimithysteresis(const SocLimit* msg) {
   return *msg->sochighlimithysteresis_;
 }
-const PROTOBUF_NAMESPACE_ID::BoolValue&
-SocLimit::_Internal::soclimitctl(const SocLimit* msg) {
+const ::google::protobuf::BoolValue&
+SocLimit::HasBitSetters::soclimitctl(const SocLimit* msg) {
   return *msg->soclimitctl_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-SocLimit::_Internal::soclowlimit(const SocLimit* msg) {
+const ::google::protobuf::FloatValue&
+SocLimit::HasBitSetters::soclowlimit(const SocLimit* msg) {
   return *msg->soclowlimit_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-SocLimit::_Internal::soclowlimithysteresis(const SocLimit* msg) {
+const ::google::protobuf::FloatValue&
+SocLimit::HasBitSetters::soclowlimithysteresis(const SocLimit* msg) {
   return *msg->soclowlimithysteresis_;
 }
 void SocLimit::clear_sochighlimit() {
-  if (GetArena() == nullptr && sochighlimit_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && sochighlimit_ != nullptr) {
     delete sochighlimit_;
   }
   sochighlimit_ = nullptr;
 }
 void SocLimit::clear_sochighlimithysteresis() {
-  if (GetArena() == nullptr && sochighlimithysteresis_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && sochighlimithysteresis_ != nullptr) {
     delete sochighlimithysteresis_;
   }
   sochighlimithysteresis_ = nullptr;
 }
 void SocLimit::clear_soclimitctl() {
-  if (GetArena() == nullptr && soclimitctl_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && soclimitctl_ != nullptr) {
     delete soclimitctl_;
   }
   soclimitctl_ = nullptr;
 }
 void SocLimit::clear_soclowlimit() {
-  if (GetArena() == nullptr && soclowlimit_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && soclowlimit_ != nullptr) {
     delete soclowlimit_;
   }
   soclowlimit_ = nullptr;
 }
 void SocLimit::clear_soclowlimithysteresis() {
-  if (GetArena() == nullptr && soclowlimithysteresis_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && soclowlimithysteresis_ != nullptr) {
     delete soclowlimithysteresis_;
   }
   soclowlimithysteresis_ = nullptr;
 }
-SocLimit::SocLimit(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int SocLimit::kSocHighLimitFieldNumber;
+const int SocLimit::kSocHighLimitHysteresisFieldNumber;
+const int SocLimit::kSocLimitCtlFieldNumber;
+const int SocLimit::kSocLowLimitFieldNumber;
+const int SocLimit::kSocLowLimitHysteresisFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+SocLimit::SocLimit()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.SocLimit)
+  // @@protoc_insertion_point(constructor:essmodule.SocLimit)
 }
 SocLimit::SocLimit(const SocLimit& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_sochighlimit()) {
-    sochighlimit_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.sochighlimit_);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_sochighlimit()) {
+    sochighlimit_ = new ::google::protobuf::FloatValue(*from.sochighlimit_);
   } else {
     sochighlimit_ = nullptr;
   }
-  if (from._internal_has_sochighlimithysteresis()) {
-    sochighlimithysteresis_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.sochighlimithysteresis_);
+  if (from.has_sochighlimithysteresis()) {
+    sochighlimithysteresis_ = new ::google::protobuf::FloatValue(*from.sochighlimithysteresis_);
   } else {
     sochighlimithysteresis_ = nullptr;
   }
-  if (from._internal_has_soclimitctl()) {
-    soclimitctl_ = new PROTOBUF_NAMESPACE_ID::BoolValue(*from.soclimitctl_);
+  if (from.has_soclimitctl()) {
+    soclimitctl_ = new ::google::protobuf::BoolValue(*from.soclimitctl_);
   } else {
     soclimitctl_ = nullptr;
   }
-  if (from._internal_has_soclowlimit()) {
-    soclowlimit_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.soclowlimit_);
+  if (from.has_soclowlimit()) {
+    soclowlimit_ = new ::google::protobuf::FloatValue(*from.soclowlimit_);
   } else {
     soclowlimit_ = nullptr;
   }
-  if (from._internal_has_soclowlimithysteresis()) {
-    soclowlimithysteresis_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.soclowlimithysteresis_);
+  if (from.has_soclowlimithysteresis()) {
+    soclowlimithysteresis_ = new ::google::protobuf::FloatValue(*from.soclowlimithysteresis_);
   } else {
     soclowlimithysteresis_ = nullptr;
   }
@@ -2443,20 +3354,19 @@ SocLimit::SocLimit(const SocLimit& from)
 }
 
 void SocLimit::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&sochighlimit_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&soclowlimithysteresis_) -
-    reinterpret_cast<char*>(&sochighlimit_)) + sizeof(soclowlimithysteresis_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_SocLimit_essmodule_2fessmodule_2eproto.base);
+  ::memset(&sochighlimit_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&soclowlimithysteresis_) -
+      reinterpret_cast<char*>(&sochighlimit_)) + sizeof(soclowlimithysteresis_));
 }
 
 SocLimit::~SocLimit() {
   // @@protoc_insertion_point(destructor:essmodule.SocLimit)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SocLimit::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete sochighlimit_;
   if (this != internal_default_instance()) delete sochighlimithysteresis_;
   if (this != internal_default_instance()) delete soclimitctl_;
@@ -2464,158 +3374,315 @@ void SocLimit::SharedDtor() {
   if (this != internal_default_instance()) delete soclowlimithysteresis_;
 }
 
-void SocLimit::ArenaDtor(void* object) {
-  SocLimit* _this = reinterpret_cast< SocLimit* >(object);
-  (void)_this;
-}
-void SocLimit::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SocLimit::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const SocLimit& SocLimit::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_SocLimit_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void SocLimit::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.SocLimit)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && sochighlimit_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && sochighlimit_ != nullptr) {
     delete sochighlimit_;
   }
   sochighlimit_ = nullptr;
-  if (GetArena() == nullptr && sochighlimithysteresis_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && sochighlimithysteresis_ != nullptr) {
     delete sochighlimithysteresis_;
   }
   sochighlimithysteresis_ = nullptr;
-  if (GetArena() == nullptr && soclimitctl_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && soclimitctl_ != nullptr) {
     delete soclimitctl_;
   }
   soclimitctl_ = nullptr;
-  if (GetArena() == nullptr && soclowlimit_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && soclowlimit_ != nullptr) {
     delete soclowlimit_;
   }
   soclowlimit_ = nullptr;
-  if (GetArena() == nullptr && soclowlimithysteresis_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && soclowlimithysteresis_ != nullptr) {
     delete soclowlimithysteresis_;
   }
   soclowlimithysteresis_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* SocLimit::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* SocLimit::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<SocLimit*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .google.protobuf.FloatValue socHighLimit = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_sochighlimit(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_sochighlimit();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue socHighLimitHysteresis = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_sochighlimithysteresis(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_sochighlimithysteresis();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.BoolValue socLimitCtl = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_soclimitctl(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::BoolValue::_InternalParse;
+        object = msg->mutable_soclimitctl();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue socLowLimit = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_soclowlimit(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_soclowlimit();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue socLowLimitHysteresis = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_soclowlimithysteresis(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_soclowlimithysteresis();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool SocLimit::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.SocLimit)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .google.protobuf.FloatValue socHighLimit = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_sochighlimit()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SocLimit::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.SocLimit)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .google.protobuf.FloatValue socHighLimitHysteresis = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_sochighlimithysteresis()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.BoolValue socLimitCtl = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_soclimitctl()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue socLowLimit = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_soclowlimit()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue socLowLimitHysteresis = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_soclowlimithysteresis()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.SocLimit)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.SocLimit)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void SocLimit::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.SocLimit)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue socHighLimit = 1;
   if (this->has_sochighlimit()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::sochighlimit(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::sochighlimit(this), output);
   }
 
   // .google.protobuf.FloatValue socHighLimitHysteresis = 2;
   if (this->has_sochighlimithysteresis()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::sochighlimithysteresis(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::sochighlimithysteresis(this), output);
   }
 
   // .google.protobuf.BoolValue socLimitCtl = 3;
   if (this->has_soclimitctl()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::soclimitctl(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::soclimitctl(this), output);
   }
 
   // .google.protobuf.FloatValue socLowLimit = 4;
   if (this->has_soclowlimit()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::soclowlimit(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::soclowlimit(this), output);
   }
 
   // .google.protobuf.FloatValue socLowLimitHysteresis = 5;
   if (this->has_soclowlimithysteresis()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::soclowlimithysteresis(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, HasBitSetters::soclowlimithysteresis(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.SocLimit)
+}
+
+::google::protobuf::uint8* SocLimit::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.SocLimit)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .google.protobuf.FloatValue socHighLimit = 1;
+  if (this->has_sochighlimit()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::sochighlimit(this), target);
+  }
+
+  // .google.protobuf.FloatValue socHighLimitHysteresis = 2;
+  if (this->has_sochighlimithysteresis()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::sochighlimithysteresis(this), target);
+  }
+
+  // .google.protobuf.BoolValue socLimitCtl = 3;
+  if (this->has_soclimitctl()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::soclimitctl(this), target);
+  }
+
+  // .google.protobuf.FloatValue socLowLimit = 4;
+  if (this->has_soclowlimit()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::soclowlimit(this), target);
+  }
+
+  // .google.protobuf.FloatValue socLowLimitHysteresis = 5;
+  if (this->has_soclowlimithysteresis()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, HasBitSetters::soclowlimithysteresis(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.SocLimit)
   return target;
@@ -2625,63 +3692,64 @@ size_t SocLimit::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.SocLimit)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue socHighLimit = 1;
   if (this->has_sochighlimit()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *sochighlimit_);
   }
 
   // .google.protobuf.FloatValue socHighLimitHysteresis = 2;
   if (this->has_sochighlimithysteresis()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *sochighlimithysteresis_);
   }
 
   // .google.protobuf.BoolValue socLimitCtl = 3;
   if (this->has_soclimitctl()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *soclimitctl_);
   }
 
   // .google.protobuf.FloatValue socLowLimit = 4;
   if (this->has_soclowlimit()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *soclowlimit_);
   }
 
   // .google.protobuf.FloatValue socLowLimitHysteresis = 5;
   if (this->has_soclowlimithysteresis()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *soclowlimithysteresis_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SocLimit::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void SocLimit::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.SocLimit)
   GOOGLE_DCHECK_NE(&from, this);
   const SocLimit* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SocLimit>(
+      ::google::protobuf::DynamicCastToGenerated<SocLimit>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.SocLimit)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.SocLimit)
     MergeFrom(*source);
@@ -2691,28 +3759,28 @@ void SocLimit::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void SocLimit::MergeFrom(const SocLimit& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.SocLimit)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_sochighlimit()) {
-    _internal_mutable_sochighlimit()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_sochighlimit());
+    mutable_sochighlimit()->::google::protobuf::FloatValue::MergeFrom(from.sochighlimit());
   }
   if (from.has_sochighlimithysteresis()) {
-    _internal_mutable_sochighlimithysteresis()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_sochighlimithysteresis());
+    mutable_sochighlimithysteresis()->::google::protobuf::FloatValue::MergeFrom(from.sochighlimithysteresis());
   }
   if (from.has_soclimitctl()) {
-    _internal_mutable_soclimitctl()->PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(from._internal_soclimitctl());
+    mutable_soclimitctl()->::google::protobuf::BoolValue::MergeFrom(from.soclimitctl());
   }
   if (from.has_soclowlimit()) {
-    _internal_mutable_soclowlimit()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_soclowlimit());
+    mutable_soclowlimit()->::google::protobuf::FloatValue::MergeFrom(from.soclowlimit());
   }
   if (from.has_soclowlimithysteresis()) {
-    _internal_mutable_soclowlimithysteresis()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_soclowlimithysteresis());
+    mutable_soclowlimithysteresis()->::google::protobuf::FloatValue::MergeFrom(from.soclowlimithysteresis());
   }
 }
 
-void SocLimit::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void SocLimit::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.SocLimit)
   if (&from == this) return;
   Clear();
@@ -2730,114 +3798,138 @@ bool SocLimit::IsInitialized() const {
   return true;
 }
 
+void SocLimit::Swap(SocLimit* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void SocLimit::InternalSwap(SocLimit* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SocLimit, soclowlimithysteresis_)
-      + sizeof(SocLimit::soclowlimithysteresis_)
-      - PROTOBUF_FIELD_OFFSET(SocLimit, sochighlimit_)>(
-          reinterpret_cast<char*>(&sochighlimit_),
-          reinterpret_cast<char*>(&other->sochighlimit_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(sochighlimit_, other->sochighlimit_);
+  swap(sochighlimithysteresis_, other->sochighlimithysteresis_);
+  swap(soclimitctl_, other->soclimitctl_);
+  swap(soclowlimit_, other->soclowlimit_);
+  swap(soclowlimithysteresis_, other->soclowlimithysteresis_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SocLimit::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata SocLimit::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class SOCManagement::_Internal {
+void SOCManagement::InitAsDefaultInstance() {
+  ::essmodule::_SOCManagement_default_instance_._instance.get_mutable()->socdeadbandminus_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_SOCManagement_default_instance_._instance.get_mutable()->socdeadbandplus_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_SOCManagement_default_instance_._instance.get_mutable()->socmanagementctl_ = const_cast< ::google::protobuf::BoolValue*>(
+      ::google::protobuf::BoolValue::internal_default_instance());
+  ::essmodule::_SOCManagement_default_instance_._instance.get_mutable()->socpowersetpoint_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_SOCManagement_default_instance_._instance.get_mutable()->socsetpoint_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+}
+class SOCManagement::HasBitSetters {
  public:
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& socdeadbandminus(const SOCManagement* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& socdeadbandplus(const SOCManagement* msg);
-  static const PROTOBUF_NAMESPACE_ID::BoolValue& socmanagementctl(const SOCManagement* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& socpowersetpoint(const SOCManagement* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& socsetpoint(const SOCManagement* msg);
+  static const ::google::protobuf::FloatValue& socdeadbandminus(const SOCManagement* msg);
+  static const ::google::protobuf::FloatValue& socdeadbandplus(const SOCManagement* msg);
+  static const ::google::protobuf::BoolValue& socmanagementctl(const SOCManagement* msg);
+  static const ::google::protobuf::FloatValue& socpowersetpoint(const SOCManagement* msg);
+  static const ::google::protobuf::FloatValue& socsetpoint(const SOCManagement* msg);
 };
 
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-SOCManagement::_Internal::socdeadbandminus(const SOCManagement* msg) {
+const ::google::protobuf::FloatValue&
+SOCManagement::HasBitSetters::socdeadbandminus(const SOCManagement* msg) {
   return *msg->socdeadbandminus_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-SOCManagement::_Internal::socdeadbandplus(const SOCManagement* msg) {
+const ::google::protobuf::FloatValue&
+SOCManagement::HasBitSetters::socdeadbandplus(const SOCManagement* msg) {
   return *msg->socdeadbandplus_;
 }
-const PROTOBUF_NAMESPACE_ID::BoolValue&
-SOCManagement::_Internal::socmanagementctl(const SOCManagement* msg) {
+const ::google::protobuf::BoolValue&
+SOCManagement::HasBitSetters::socmanagementctl(const SOCManagement* msg) {
   return *msg->socmanagementctl_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-SOCManagement::_Internal::socpowersetpoint(const SOCManagement* msg) {
+const ::google::protobuf::FloatValue&
+SOCManagement::HasBitSetters::socpowersetpoint(const SOCManagement* msg) {
   return *msg->socpowersetpoint_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-SOCManagement::_Internal::socsetpoint(const SOCManagement* msg) {
+const ::google::protobuf::FloatValue&
+SOCManagement::HasBitSetters::socsetpoint(const SOCManagement* msg) {
   return *msg->socsetpoint_;
 }
 void SOCManagement::clear_socdeadbandminus() {
-  if (GetArena() == nullptr && socdeadbandminus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && socdeadbandminus_ != nullptr) {
     delete socdeadbandminus_;
   }
   socdeadbandminus_ = nullptr;
 }
 void SOCManagement::clear_socdeadbandplus() {
-  if (GetArena() == nullptr && socdeadbandplus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && socdeadbandplus_ != nullptr) {
     delete socdeadbandplus_;
   }
   socdeadbandplus_ = nullptr;
 }
 void SOCManagement::clear_socmanagementctl() {
-  if (GetArena() == nullptr && socmanagementctl_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && socmanagementctl_ != nullptr) {
     delete socmanagementctl_;
   }
   socmanagementctl_ = nullptr;
 }
 void SOCManagement::clear_socpowersetpoint() {
-  if (GetArena() == nullptr && socpowersetpoint_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && socpowersetpoint_ != nullptr) {
     delete socpowersetpoint_;
   }
   socpowersetpoint_ = nullptr;
 }
 void SOCManagement::clear_socsetpoint() {
-  if (GetArena() == nullptr && socsetpoint_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && socsetpoint_ != nullptr) {
     delete socsetpoint_;
   }
   socsetpoint_ = nullptr;
 }
-SOCManagement::SOCManagement(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int SOCManagement::kSocDeadBandMinusFieldNumber;
+const int SOCManagement::kSocDeadBandPlusFieldNumber;
+const int SOCManagement::kSocManagementCtlFieldNumber;
+const int SOCManagement::kSocPowerSetPointFieldNumber;
+const int SOCManagement::kSocSetPointFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+SOCManagement::SOCManagement()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.SOCManagement)
+  // @@protoc_insertion_point(constructor:essmodule.SOCManagement)
 }
 SOCManagement::SOCManagement(const SOCManagement& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_socdeadbandminus()) {
-    socdeadbandminus_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.socdeadbandminus_);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_socdeadbandminus()) {
+    socdeadbandminus_ = new ::google::protobuf::FloatValue(*from.socdeadbandminus_);
   } else {
     socdeadbandminus_ = nullptr;
   }
-  if (from._internal_has_socdeadbandplus()) {
-    socdeadbandplus_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.socdeadbandplus_);
+  if (from.has_socdeadbandplus()) {
+    socdeadbandplus_ = new ::google::protobuf::FloatValue(*from.socdeadbandplus_);
   } else {
     socdeadbandplus_ = nullptr;
   }
-  if (from._internal_has_socmanagementctl()) {
-    socmanagementctl_ = new PROTOBUF_NAMESPACE_ID::BoolValue(*from.socmanagementctl_);
+  if (from.has_socmanagementctl()) {
+    socmanagementctl_ = new ::google::protobuf::BoolValue(*from.socmanagementctl_);
   } else {
     socmanagementctl_ = nullptr;
   }
-  if (from._internal_has_socpowersetpoint()) {
-    socpowersetpoint_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.socpowersetpoint_);
+  if (from.has_socpowersetpoint()) {
+    socpowersetpoint_ = new ::google::protobuf::FloatValue(*from.socpowersetpoint_);
   } else {
     socpowersetpoint_ = nullptr;
   }
-  if (from._internal_has_socsetpoint()) {
-    socsetpoint_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.socsetpoint_);
+  if (from.has_socsetpoint()) {
+    socsetpoint_ = new ::google::protobuf::FloatValue(*from.socsetpoint_);
   } else {
     socsetpoint_ = nullptr;
   }
@@ -2845,20 +3937,19 @@ SOCManagement::SOCManagement(const SOCManagement& from)
 }
 
 void SOCManagement::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&socdeadbandminus_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&socsetpoint_) -
-    reinterpret_cast<char*>(&socdeadbandminus_)) + sizeof(socsetpoint_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_SOCManagement_essmodule_2fessmodule_2eproto.base);
+  ::memset(&socdeadbandminus_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&socsetpoint_) -
+      reinterpret_cast<char*>(&socdeadbandminus_)) + sizeof(socsetpoint_));
 }
 
 SOCManagement::~SOCManagement() {
   // @@protoc_insertion_point(destructor:essmodule.SOCManagement)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SOCManagement::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete socdeadbandminus_;
   if (this != internal_default_instance()) delete socdeadbandplus_;
   if (this != internal_default_instance()) delete socmanagementctl_;
@@ -2866,158 +3957,315 @@ void SOCManagement::SharedDtor() {
   if (this != internal_default_instance()) delete socsetpoint_;
 }
 
-void SOCManagement::ArenaDtor(void* object) {
-  SOCManagement* _this = reinterpret_cast< SOCManagement* >(object);
-  (void)_this;
-}
-void SOCManagement::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SOCManagement::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const SOCManagement& SOCManagement::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_SOCManagement_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void SOCManagement::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.SOCManagement)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && socdeadbandminus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && socdeadbandminus_ != nullptr) {
     delete socdeadbandminus_;
   }
   socdeadbandminus_ = nullptr;
-  if (GetArena() == nullptr && socdeadbandplus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && socdeadbandplus_ != nullptr) {
     delete socdeadbandplus_;
   }
   socdeadbandplus_ = nullptr;
-  if (GetArena() == nullptr && socmanagementctl_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && socmanagementctl_ != nullptr) {
     delete socmanagementctl_;
   }
   socmanagementctl_ = nullptr;
-  if (GetArena() == nullptr && socpowersetpoint_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && socpowersetpoint_ != nullptr) {
     delete socpowersetpoint_;
   }
   socpowersetpoint_ = nullptr;
-  if (GetArena() == nullptr && socsetpoint_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && socsetpoint_ != nullptr) {
     delete socsetpoint_;
   }
   socsetpoint_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* SOCManagement::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* SOCManagement::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<SOCManagement*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .google.protobuf.FloatValue socDeadBandMinus = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_socdeadbandminus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_socdeadbandminus();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue socDeadBandPlus = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_socdeadbandplus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_socdeadbandplus();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.BoolValue socManagementCtl = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_socmanagementctl(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::BoolValue::_InternalParse;
+        object = msg->mutable_socmanagementctl();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue socPowerSetPoint = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_socpowersetpoint(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_socpowersetpoint();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue socSetPoint = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_socsetpoint(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_socsetpoint();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool SOCManagement::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.SOCManagement)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .google.protobuf.FloatValue socDeadBandMinus = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_socdeadbandminus()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SOCManagement::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.SOCManagement)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .google.protobuf.FloatValue socDeadBandPlus = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_socdeadbandplus()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.BoolValue socManagementCtl = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_socmanagementctl()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue socPowerSetPoint = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_socpowersetpoint()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue socSetPoint = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_socsetpoint()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.SOCManagement)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.SOCManagement)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void SOCManagement::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.SOCManagement)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue socDeadBandMinus = 1;
   if (this->has_socdeadbandminus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::socdeadbandminus(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::socdeadbandminus(this), output);
   }
 
   // .google.protobuf.FloatValue socDeadBandPlus = 2;
   if (this->has_socdeadbandplus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::socdeadbandplus(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::socdeadbandplus(this), output);
   }
 
   // .google.protobuf.BoolValue socManagementCtl = 3;
   if (this->has_socmanagementctl()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::socmanagementctl(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::socmanagementctl(this), output);
   }
 
   // .google.protobuf.FloatValue socPowerSetPoint = 4;
   if (this->has_socpowersetpoint()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::socpowersetpoint(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::socpowersetpoint(this), output);
   }
 
   // .google.protobuf.FloatValue socSetPoint = 5;
   if (this->has_socsetpoint()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::socsetpoint(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, HasBitSetters::socsetpoint(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.SOCManagement)
+}
+
+::google::protobuf::uint8* SOCManagement::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.SOCManagement)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .google.protobuf.FloatValue socDeadBandMinus = 1;
+  if (this->has_socdeadbandminus()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::socdeadbandminus(this), target);
+  }
+
+  // .google.protobuf.FloatValue socDeadBandPlus = 2;
+  if (this->has_socdeadbandplus()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::socdeadbandplus(this), target);
+  }
+
+  // .google.protobuf.BoolValue socManagementCtl = 3;
+  if (this->has_socmanagementctl()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::socmanagementctl(this), target);
+  }
+
+  // .google.protobuf.FloatValue socPowerSetPoint = 4;
+  if (this->has_socpowersetpoint()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::socpowersetpoint(this), target);
+  }
+
+  // .google.protobuf.FloatValue socSetPoint = 5;
+  if (this->has_socsetpoint()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, HasBitSetters::socsetpoint(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.SOCManagement)
   return target;
@@ -3027,63 +4275,64 @@ size_t SOCManagement::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.SOCManagement)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue socDeadBandMinus = 1;
   if (this->has_socdeadbandminus()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *socdeadbandminus_);
   }
 
   // .google.protobuf.FloatValue socDeadBandPlus = 2;
   if (this->has_socdeadbandplus()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *socdeadbandplus_);
   }
 
   // .google.protobuf.BoolValue socManagementCtl = 3;
   if (this->has_socmanagementctl()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *socmanagementctl_);
   }
 
   // .google.protobuf.FloatValue socPowerSetPoint = 4;
   if (this->has_socpowersetpoint()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *socpowersetpoint_);
   }
 
   // .google.protobuf.FloatValue socSetPoint = 5;
   if (this->has_socsetpoint()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *socsetpoint_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SOCManagement::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void SOCManagement::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.SOCManagement)
   GOOGLE_DCHECK_NE(&from, this);
   const SOCManagement* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SOCManagement>(
+      ::google::protobuf::DynamicCastToGenerated<SOCManagement>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.SOCManagement)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.SOCManagement)
     MergeFrom(*source);
@@ -3093,28 +4342,28 @@ void SOCManagement::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void SOCManagement::MergeFrom(const SOCManagement& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.SOCManagement)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_socdeadbandminus()) {
-    _internal_mutable_socdeadbandminus()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_socdeadbandminus());
+    mutable_socdeadbandminus()->::google::protobuf::FloatValue::MergeFrom(from.socdeadbandminus());
   }
   if (from.has_socdeadbandplus()) {
-    _internal_mutable_socdeadbandplus()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_socdeadbandplus());
+    mutable_socdeadbandplus()->::google::protobuf::FloatValue::MergeFrom(from.socdeadbandplus());
   }
   if (from.has_socmanagementctl()) {
-    _internal_mutable_socmanagementctl()->PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(from._internal_socmanagementctl());
+    mutable_socmanagementctl()->::google::protobuf::BoolValue::MergeFrom(from.socmanagementctl());
   }
   if (from.has_socpowersetpoint()) {
-    _internal_mutable_socpowersetpoint()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_socpowersetpoint());
+    mutable_socpowersetpoint()->::google::protobuf::FloatValue::MergeFrom(from.socpowersetpoint());
   }
   if (from.has_socsetpoint()) {
-    _internal_mutable_socsetpoint()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_socsetpoint());
+    mutable_socsetpoint()->::google::protobuf::FloatValue::MergeFrom(from.socsetpoint());
   }
 }
 
-void SOCManagement::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void SOCManagement::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.SOCManagement)
   if (&from == this) return;
   Clear();
@@ -3132,114 +4381,138 @@ bool SOCManagement::IsInitialized() const {
   return true;
 }
 
+void SOCManagement::Swap(SOCManagement* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void SOCManagement::InternalSwap(SOCManagement* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SOCManagement, socsetpoint_)
-      + sizeof(SOCManagement::socsetpoint_)
-      - PROTOBUF_FIELD_OFFSET(SOCManagement, socdeadbandminus_)>(
-          reinterpret_cast<char*>(&socdeadbandminus_),
-          reinterpret_cast<char*>(&other->socdeadbandminus_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(socdeadbandminus_, other->socdeadbandminus_);
+  swap(socdeadbandplus_, other->socdeadbandplus_);
+  swap(socmanagementctl_, other->socmanagementctl_);
+  swap(socpowersetpoint_, other->socpowersetpoint_);
+  swap(socsetpoint_, other->socsetpoint_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SOCManagement::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata SOCManagement::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class VoltageRegulation::_Internal {
+void VoltageRegulation::InitAsDefaultInstance() {
+  ::essmodule::_VoltageRegulation_default_instance_._instance.get_mutable()->overvoltagedroop_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_VoltageRegulation_default_instance_._instance.get_mutable()->undervoltagedroop_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_VoltageRegulation_default_instance_._instance.get_mutable()->voltagedeadbandminus_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_VoltageRegulation_default_instance_._instance.get_mutable()->voltagedeadbandplus_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_VoltageRegulation_default_instance_._instance.get_mutable()->voltagesetpoint_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+}
+class VoltageRegulation::HasBitSetters {
  public:
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& overvoltagedroop(const VoltageRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& undervoltagedroop(const VoltageRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& voltagedeadbandminus(const VoltageRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& voltagedeadbandplus(const VoltageRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& voltagesetpoint(const VoltageRegulation* msg);
+  static const ::google::protobuf::FloatValue& overvoltagedroop(const VoltageRegulation* msg);
+  static const ::google::protobuf::FloatValue& undervoltagedroop(const VoltageRegulation* msg);
+  static const ::google::protobuf::FloatValue& voltagedeadbandminus(const VoltageRegulation* msg);
+  static const ::google::protobuf::FloatValue& voltagedeadbandplus(const VoltageRegulation* msg);
+  static const ::google::protobuf::FloatValue& voltagesetpoint(const VoltageRegulation* msg);
 };
 
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-VoltageRegulation::_Internal::overvoltagedroop(const VoltageRegulation* msg) {
+const ::google::protobuf::FloatValue&
+VoltageRegulation::HasBitSetters::overvoltagedroop(const VoltageRegulation* msg) {
   return *msg->overvoltagedroop_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-VoltageRegulation::_Internal::undervoltagedroop(const VoltageRegulation* msg) {
+const ::google::protobuf::FloatValue&
+VoltageRegulation::HasBitSetters::undervoltagedroop(const VoltageRegulation* msg) {
   return *msg->undervoltagedroop_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-VoltageRegulation::_Internal::voltagedeadbandminus(const VoltageRegulation* msg) {
+const ::google::protobuf::FloatValue&
+VoltageRegulation::HasBitSetters::voltagedeadbandminus(const VoltageRegulation* msg) {
   return *msg->voltagedeadbandminus_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-VoltageRegulation::_Internal::voltagedeadbandplus(const VoltageRegulation* msg) {
+const ::google::protobuf::FloatValue&
+VoltageRegulation::HasBitSetters::voltagedeadbandplus(const VoltageRegulation* msg) {
   return *msg->voltagedeadbandplus_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-VoltageRegulation::_Internal::voltagesetpoint(const VoltageRegulation* msg) {
+const ::google::protobuf::FloatValue&
+VoltageRegulation::HasBitSetters::voltagesetpoint(const VoltageRegulation* msg) {
   return *msg->voltagesetpoint_;
 }
 void VoltageRegulation::clear_overvoltagedroop() {
-  if (GetArena() == nullptr && overvoltagedroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && overvoltagedroop_ != nullptr) {
     delete overvoltagedroop_;
   }
   overvoltagedroop_ = nullptr;
 }
 void VoltageRegulation::clear_undervoltagedroop() {
-  if (GetArena() == nullptr && undervoltagedroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && undervoltagedroop_ != nullptr) {
     delete undervoltagedroop_;
   }
   undervoltagedroop_ = nullptr;
 }
 void VoltageRegulation::clear_voltagedeadbandminus() {
-  if (GetArena() == nullptr && voltagedeadbandminus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagedeadbandminus_ != nullptr) {
     delete voltagedeadbandminus_;
   }
   voltagedeadbandminus_ = nullptr;
 }
 void VoltageRegulation::clear_voltagedeadbandplus() {
-  if (GetArena() == nullptr && voltagedeadbandplus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagedeadbandplus_ != nullptr) {
     delete voltagedeadbandplus_;
   }
   voltagedeadbandplus_ = nullptr;
 }
 void VoltageRegulation::clear_voltagesetpoint() {
-  if (GetArena() == nullptr && voltagesetpoint_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagesetpoint_ != nullptr) {
     delete voltagesetpoint_;
   }
   voltagesetpoint_ = nullptr;
 }
-VoltageRegulation::VoltageRegulation(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int VoltageRegulation::kOverVoltageDroopFieldNumber;
+const int VoltageRegulation::kUnderVoltageDroopFieldNumber;
+const int VoltageRegulation::kVoltageDeadBandMinusFieldNumber;
+const int VoltageRegulation::kVoltageDeadBandPlusFieldNumber;
+const int VoltageRegulation::kVoltageSetPointFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+VoltageRegulation::VoltageRegulation()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.VoltageRegulation)
+  // @@protoc_insertion_point(constructor:essmodule.VoltageRegulation)
 }
 VoltageRegulation::VoltageRegulation(const VoltageRegulation& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_overvoltagedroop()) {
-    overvoltagedroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.overvoltagedroop_);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_overvoltagedroop()) {
+    overvoltagedroop_ = new ::google::protobuf::FloatValue(*from.overvoltagedroop_);
   } else {
     overvoltagedroop_ = nullptr;
   }
-  if (from._internal_has_undervoltagedroop()) {
-    undervoltagedroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.undervoltagedroop_);
+  if (from.has_undervoltagedroop()) {
+    undervoltagedroop_ = new ::google::protobuf::FloatValue(*from.undervoltagedroop_);
   } else {
     undervoltagedroop_ = nullptr;
   }
-  if (from._internal_has_voltagedeadbandminus()) {
-    voltagedeadbandminus_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.voltagedeadbandminus_);
+  if (from.has_voltagedeadbandminus()) {
+    voltagedeadbandminus_ = new ::google::protobuf::FloatValue(*from.voltagedeadbandminus_);
   } else {
     voltagedeadbandminus_ = nullptr;
   }
-  if (from._internal_has_voltagedeadbandplus()) {
-    voltagedeadbandplus_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.voltagedeadbandplus_);
+  if (from.has_voltagedeadbandplus()) {
+    voltagedeadbandplus_ = new ::google::protobuf::FloatValue(*from.voltagedeadbandplus_);
   } else {
     voltagedeadbandplus_ = nullptr;
   }
-  if (from._internal_has_voltagesetpoint()) {
-    voltagesetpoint_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.voltagesetpoint_);
+  if (from.has_voltagesetpoint()) {
+    voltagesetpoint_ = new ::google::protobuf::FloatValue(*from.voltagesetpoint_);
   } else {
     voltagesetpoint_ = nullptr;
   }
@@ -3247,20 +4520,19 @@ VoltageRegulation::VoltageRegulation(const VoltageRegulation& from)
 }
 
 void VoltageRegulation::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&overvoltagedroop_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&voltagesetpoint_) -
-    reinterpret_cast<char*>(&overvoltagedroop_)) + sizeof(voltagesetpoint_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_VoltageRegulation_essmodule_2fessmodule_2eproto.base);
+  ::memset(&overvoltagedroop_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&voltagesetpoint_) -
+      reinterpret_cast<char*>(&overvoltagedroop_)) + sizeof(voltagesetpoint_));
 }
 
 VoltageRegulation::~VoltageRegulation() {
   // @@protoc_insertion_point(destructor:essmodule.VoltageRegulation)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void VoltageRegulation::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete overvoltagedroop_;
   if (this != internal_default_instance()) delete undervoltagedroop_;
   if (this != internal_default_instance()) delete voltagedeadbandminus_;
@@ -3268,158 +4540,315 @@ void VoltageRegulation::SharedDtor() {
   if (this != internal_default_instance()) delete voltagesetpoint_;
 }
 
-void VoltageRegulation::ArenaDtor(void* object) {
-  VoltageRegulation* _this = reinterpret_cast< VoltageRegulation* >(object);
-  (void)_this;
-}
-void VoltageRegulation::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void VoltageRegulation::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const VoltageRegulation& VoltageRegulation::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_VoltageRegulation_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void VoltageRegulation::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.VoltageRegulation)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && overvoltagedroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && overvoltagedroop_ != nullptr) {
     delete overvoltagedroop_;
   }
   overvoltagedroop_ = nullptr;
-  if (GetArena() == nullptr && undervoltagedroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && undervoltagedroop_ != nullptr) {
     delete undervoltagedroop_;
   }
   undervoltagedroop_ = nullptr;
-  if (GetArena() == nullptr && voltagedeadbandminus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagedeadbandminus_ != nullptr) {
     delete voltagedeadbandminus_;
   }
   voltagedeadbandminus_ = nullptr;
-  if (GetArena() == nullptr && voltagedeadbandplus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagedeadbandplus_ != nullptr) {
     delete voltagedeadbandplus_;
   }
   voltagedeadbandplus_ = nullptr;
-  if (GetArena() == nullptr && voltagesetpoint_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagesetpoint_ != nullptr) {
     delete voltagesetpoint_;
   }
   voltagesetpoint_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* VoltageRegulation::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* VoltageRegulation::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<VoltageRegulation*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .google.protobuf.FloatValue overVoltageDroop = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_overvoltagedroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_overvoltagedroop();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue underVoltageDroop = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_undervoltagedroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_undervoltagedroop();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue voltageDeadBandMinus = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_voltagedeadbandminus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_voltagedeadbandminus();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue voltageDeadBandPlus = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_voltagedeadbandplus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_voltagedeadbandplus();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue voltageSetPoint = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_voltagesetpoint(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_voltagesetpoint();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool VoltageRegulation::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.VoltageRegulation)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .google.protobuf.FloatValue overVoltageDroop = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_overvoltagedroop()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* VoltageRegulation::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.VoltageRegulation)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .google.protobuf.FloatValue underVoltageDroop = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_undervoltagedroop()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue voltageDeadBandMinus = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_voltagedeadbandminus()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue voltageDeadBandPlus = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_voltagedeadbandplus()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue voltageSetPoint = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_voltagesetpoint()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.VoltageRegulation)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.VoltageRegulation)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void VoltageRegulation::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.VoltageRegulation)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue overVoltageDroop = 1;
   if (this->has_overvoltagedroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::overvoltagedroop(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::overvoltagedroop(this), output);
   }
 
   // .google.protobuf.FloatValue underVoltageDroop = 2;
   if (this->has_undervoltagedroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::undervoltagedroop(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::undervoltagedroop(this), output);
   }
 
   // .google.protobuf.FloatValue voltageDeadBandMinus = 3;
   if (this->has_voltagedeadbandminus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::voltagedeadbandminus(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::voltagedeadbandminus(this), output);
   }
 
   // .google.protobuf.FloatValue voltageDeadBandPlus = 4;
   if (this->has_voltagedeadbandplus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::voltagedeadbandplus(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::voltagedeadbandplus(this), output);
   }
 
   // .google.protobuf.FloatValue voltageSetPoint = 5;
   if (this->has_voltagesetpoint()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::voltagesetpoint(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, HasBitSetters::voltagesetpoint(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.VoltageRegulation)
+}
+
+::google::protobuf::uint8* VoltageRegulation::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.VoltageRegulation)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .google.protobuf.FloatValue overVoltageDroop = 1;
+  if (this->has_overvoltagedroop()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::overvoltagedroop(this), target);
+  }
+
+  // .google.protobuf.FloatValue underVoltageDroop = 2;
+  if (this->has_undervoltagedroop()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::undervoltagedroop(this), target);
+  }
+
+  // .google.protobuf.FloatValue voltageDeadBandMinus = 3;
+  if (this->has_voltagedeadbandminus()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::voltagedeadbandminus(this), target);
+  }
+
+  // .google.protobuf.FloatValue voltageDeadBandPlus = 4;
+  if (this->has_voltagedeadbandplus()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::voltagedeadbandplus(this), target);
+  }
+
+  // .google.protobuf.FloatValue voltageSetPoint = 5;
+  if (this->has_voltagesetpoint()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, HasBitSetters::voltagesetpoint(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.VoltageRegulation)
   return target;
@@ -3429,63 +4858,64 @@ size_t VoltageRegulation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.VoltageRegulation)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue overVoltageDroop = 1;
   if (this->has_overvoltagedroop()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *overvoltagedroop_);
   }
 
   // .google.protobuf.FloatValue underVoltageDroop = 2;
   if (this->has_undervoltagedroop()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *undervoltagedroop_);
   }
 
   // .google.protobuf.FloatValue voltageDeadBandMinus = 3;
   if (this->has_voltagedeadbandminus()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *voltagedeadbandminus_);
   }
 
   // .google.protobuf.FloatValue voltageDeadBandPlus = 4;
   if (this->has_voltagedeadbandplus()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *voltagedeadbandplus_);
   }
 
   // .google.protobuf.FloatValue voltageSetPoint = 5;
   if (this->has_voltagesetpoint()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *voltagesetpoint_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void VoltageRegulation::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void VoltageRegulation::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.VoltageRegulation)
   GOOGLE_DCHECK_NE(&from, this);
   const VoltageRegulation* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<VoltageRegulation>(
+      ::google::protobuf::DynamicCastToGenerated<VoltageRegulation>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.VoltageRegulation)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.VoltageRegulation)
     MergeFrom(*source);
@@ -3495,28 +4925,28 @@ void VoltageRegulation::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) 
 void VoltageRegulation::MergeFrom(const VoltageRegulation& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.VoltageRegulation)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_overvoltagedroop()) {
-    _internal_mutable_overvoltagedroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_overvoltagedroop());
+    mutable_overvoltagedroop()->::google::protobuf::FloatValue::MergeFrom(from.overvoltagedroop());
   }
   if (from.has_undervoltagedroop()) {
-    _internal_mutable_undervoltagedroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_undervoltagedroop());
+    mutable_undervoltagedroop()->::google::protobuf::FloatValue::MergeFrom(from.undervoltagedroop());
   }
   if (from.has_voltagedeadbandminus()) {
-    _internal_mutable_voltagedeadbandminus()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_voltagedeadbandminus());
+    mutable_voltagedeadbandminus()->::google::protobuf::FloatValue::MergeFrom(from.voltagedeadbandminus());
   }
   if (from.has_voltagedeadbandplus()) {
-    _internal_mutable_voltagedeadbandplus()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_voltagedeadbandplus());
+    mutable_voltagedeadbandplus()->::google::protobuf::FloatValue::MergeFrom(from.voltagedeadbandplus());
   }
   if (from.has_voltagesetpoint()) {
-    _internal_mutable_voltagesetpoint()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_voltagesetpoint());
+    mutable_voltagesetpoint()->::google::protobuf::FloatValue::MergeFrom(from.voltagesetpoint());
   }
 }
 
-void VoltageRegulation::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void VoltageRegulation::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.VoltageRegulation)
   if (&from == this) return;
   Clear();
@@ -3534,59 +4964,74 @@ bool VoltageRegulation::IsInitialized() const {
   return true;
 }
 
+void VoltageRegulation::Swap(VoltageRegulation* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void VoltageRegulation::InternalSwap(VoltageRegulation* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(VoltageRegulation, voltagesetpoint_)
-      + sizeof(VoltageRegulation::voltagesetpoint_)
-      - PROTOBUF_FIELD_OFFSET(VoltageRegulation, overvoltagedroop_)>(
-          reinterpret_cast<char*>(&overvoltagedroop_),
-          reinterpret_cast<char*>(&other->overvoltagedroop_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(overvoltagedroop_, other->overvoltagedroop_);
+  swap(undervoltagedroop_, other->undervoltagedroop_);
+  swap(voltagedeadbandminus_, other->voltagedeadbandminus_);
+  swap(voltagedeadbandplus_, other->voltagedeadbandplus_);
+  swap(voltagesetpoint_, other->voltagesetpoint_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata VoltageRegulation::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata VoltageRegulation::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class VoltageDroop::_Internal {
+void VoltageDroop::InitAsDefaultInstance() {
+  ::essmodule::_VoltageDroop_default_instance_._instance.get_mutable()->voltagedroopctl_ = const_cast< ::google::protobuf::BoolValue*>(
+      ::google::protobuf::BoolValue::internal_default_instance());
+  ::essmodule::_VoltageDroop_default_instance_._instance.get_mutable()->voltageregulation_ = const_cast< ::essmodule::VoltageRegulation*>(
+      ::essmodule::VoltageRegulation::internal_default_instance());
+}
+class VoltageDroop::HasBitSetters {
  public:
-  static const PROTOBUF_NAMESPACE_ID::BoolValue& voltagedroopctl(const VoltageDroop* msg);
+  static const ::google::protobuf::BoolValue& voltagedroopctl(const VoltageDroop* msg);
   static const ::essmodule::VoltageRegulation& voltageregulation(const VoltageDroop* msg);
 };
 
-const PROTOBUF_NAMESPACE_ID::BoolValue&
-VoltageDroop::_Internal::voltagedroopctl(const VoltageDroop* msg) {
+const ::google::protobuf::BoolValue&
+VoltageDroop::HasBitSetters::voltagedroopctl(const VoltageDroop* msg) {
   return *msg->voltagedroopctl_;
 }
 const ::essmodule::VoltageRegulation&
-VoltageDroop::_Internal::voltageregulation(const VoltageDroop* msg) {
+VoltageDroop::HasBitSetters::voltageregulation(const VoltageDroop* msg) {
   return *msg->voltageregulation_;
 }
 void VoltageDroop::clear_voltagedroopctl() {
-  if (GetArena() == nullptr && voltagedroopctl_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagedroopctl_ != nullptr) {
     delete voltagedroopctl_;
   }
   voltagedroopctl_ = nullptr;
 }
-VoltageDroop::VoltageDroop(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int VoltageDroop::kVoltageDroopCtlFieldNumber;
+const int VoltageDroop::kVoltageRegulationFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+VoltageDroop::VoltageDroop()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.VoltageDroop)
+  // @@protoc_insertion_point(constructor:essmodule.VoltageDroop)
 }
 VoltageDroop::VoltageDroop(const VoltageDroop& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_voltagedroopctl()) {
-    voltagedroopctl_ = new PROTOBUF_NAMESPACE_ID::BoolValue(*from.voltagedroopctl_);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_voltagedroopctl()) {
+    voltagedroopctl_ = new ::google::protobuf::BoolValue(*from.voltagedroopctl_);
   } else {
     voltagedroopctl_ = nullptr;
   }
-  if (from._internal_has_voltageregulation()) {
+  if (from.has_voltageregulation()) {
     voltageregulation_ = new ::essmodule::VoltageRegulation(*from.voltageregulation_);
   } else {
     voltageregulation_ = nullptr;
@@ -3595,119 +5040,209 @@ VoltageDroop::VoltageDroop(const VoltageDroop& from)
 }
 
 void VoltageDroop::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&voltagedroopctl_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&voltageregulation_) -
-    reinterpret_cast<char*>(&voltagedroopctl_)) + sizeof(voltageregulation_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_VoltageDroop_essmodule_2fessmodule_2eproto.base);
+  ::memset(&voltagedroopctl_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&voltageregulation_) -
+      reinterpret_cast<char*>(&voltagedroopctl_)) + sizeof(voltageregulation_));
 }
 
 VoltageDroop::~VoltageDroop() {
   // @@protoc_insertion_point(destructor:essmodule.VoltageDroop)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void VoltageDroop::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete voltagedroopctl_;
   if (this != internal_default_instance()) delete voltageregulation_;
 }
 
-void VoltageDroop::ArenaDtor(void* object) {
-  VoltageDroop* _this = reinterpret_cast< VoltageDroop* >(object);
-  (void)_this;
-}
-void VoltageDroop::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void VoltageDroop::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const VoltageDroop& VoltageDroop::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_VoltageDroop_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void VoltageDroop::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.VoltageDroop)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && voltagedroopctl_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagedroopctl_ != nullptr) {
     delete voltagedroopctl_;
   }
   voltagedroopctl_ = nullptr;
-  if (GetArena() == nullptr && voltageregulation_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltageregulation_ != nullptr) {
     delete voltageregulation_;
   }
   voltageregulation_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* VoltageDroop::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* VoltageDroop::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<VoltageDroop*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .google.protobuf.BoolValue voltageDroopCtl = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_voltagedroopctl(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::BoolValue::_InternalParse;
+        object = msg->mutable_voltagedroopctl();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.VoltageRegulation voltageRegulation = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_voltageregulation(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::VoltageRegulation::_InternalParse;
+        object = msg->mutable_voltageregulation();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool VoltageDroop::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.VoltageDroop)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .google.protobuf.BoolValue voltageDroopCtl = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_voltagedroopctl()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* VoltageDroop::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.VoltageDroop)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .essmodule.VoltageRegulation voltageRegulation = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_voltageregulation()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.VoltageDroop)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.VoltageDroop)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void VoltageDroop::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.VoltageDroop)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.BoolValue voltageDroopCtl = 1;
   if (this->has_voltagedroopctl()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::voltagedroopctl(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::voltagedroopctl(this), output);
   }
 
   // .essmodule.VoltageRegulation voltageRegulation = 2;
   if (this->has_voltageregulation()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::voltageregulation(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::voltageregulation(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.VoltageDroop)
+}
+
+::google::protobuf::uint8* VoltageDroop::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.VoltageDroop)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .google.protobuf.BoolValue voltageDroopCtl = 1;
+  if (this->has_voltagedroopctl()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::voltagedroopctl(this), target);
+  }
+
+  // .essmodule.VoltageRegulation voltageRegulation = 2;
+  if (this->has_voltageregulation()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::voltageregulation(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.VoltageDroop)
   return target;
@@ -3717,42 +5252,43 @@ size_t VoltageDroop::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.VoltageDroop)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .google.protobuf.BoolValue voltageDroopCtl = 1;
   if (this->has_voltagedroopctl()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *voltagedroopctl_);
   }
 
   // .essmodule.VoltageRegulation voltageRegulation = 2;
   if (this->has_voltageregulation()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *voltageregulation_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void VoltageDroop::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void VoltageDroop::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.VoltageDroop)
   GOOGLE_DCHECK_NE(&from, this);
   const VoltageDroop* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<VoltageDroop>(
+      ::google::protobuf::DynamicCastToGenerated<VoltageDroop>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.VoltageDroop)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.VoltageDroop)
     MergeFrom(*source);
@@ -3762,19 +5298,19 @@ void VoltageDroop::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void VoltageDroop::MergeFrom(const VoltageDroop& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.VoltageDroop)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_voltagedroopctl()) {
-    _internal_mutable_voltagedroopctl()->PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(from._internal_voltagedroopctl());
+    mutable_voltagedroopctl()->::google::protobuf::BoolValue::MergeFrom(from.voltagedroopctl());
   }
   if (from.has_voltageregulation()) {
-    _internal_mutable_voltageregulation()->::essmodule::VoltageRegulation::MergeFrom(from._internal_voltageregulation());
+    mutable_voltageregulation()->::essmodule::VoltageRegulation::MergeFrom(from.voltageregulation());
   }
 }
 
-void VoltageDroop::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void VoltageDroop::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.VoltageDroop)
   if (&from == this) return;
   Clear();
@@ -3792,59 +5328,71 @@ bool VoltageDroop::IsInitialized() const {
   return true;
 }
 
+void VoltageDroop::Swap(VoltageDroop* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void VoltageDroop::InternalSwap(VoltageDroop* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(VoltageDroop, voltageregulation_)
-      + sizeof(VoltageDroop::voltageregulation_)
-      - PROTOBUF_FIELD_OFFSET(VoltageDroop, voltagedroopctl_)>(
-          reinterpret_cast<char*>(&voltagedroopctl_),
-          reinterpret_cast<char*>(&other->voltagedroopctl_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(voltagedroopctl_, other->voltagedroopctl_);
+  swap(voltageregulation_, other->voltageregulation_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata VoltageDroop::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata VoltageDroop::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class VoltagePI::_Internal {
+void VoltagePI::InitAsDefaultInstance() {
+  ::essmodule::_VoltagePI_default_instance_._instance.get_mutable()->voltagepictl_ = const_cast< ::google::protobuf::BoolValue*>(
+      ::google::protobuf::BoolValue::internal_default_instance());
+  ::essmodule::_VoltagePI_default_instance_._instance.get_mutable()->voltageregulation_ = const_cast< ::essmodule::VoltageRegulation*>(
+      ::essmodule::VoltageRegulation::internal_default_instance());
+}
+class VoltagePI::HasBitSetters {
  public:
-  static const PROTOBUF_NAMESPACE_ID::BoolValue& voltagepictl(const VoltagePI* msg);
+  static const ::google::protobuf::BoolValue& voltagepictl(const VoltagePI* msg);
   static const ::essmodule::VoltageRegulation& voltageregulation(const VoltagePI* msg);
 };
 
-const PROTOBUF_NAMESPACE_ID::BoolValue&
-VoltagePI::_Internal::voltagepictl(const VoltagePI* msg) {
+const ::google::protobuf::BoolValue&
+VoltagePI::HasBitSetters::voltagepictl(const VoltagePI* msg) {
   return *msg->voltagepictl_;
 }
 const ::essmodule::VoltageRegulation&
-VoltagePI::_Internal::voltageregulation(const VoltagePI* msg) {
+VoltagePI::HasBitSetters::voltageregulation(const VoltagePI* msg) {
   return *msg->voltageregulation_;
 }
 void VoltagePI::clear_voltagepictl() {
-  if (GetArena() == nullptr && voltagepictl_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagepictl_ != nullptr) {
     delete voltagepictl_;
   }
   voltagepictl_ = nullptr;
 }
-VoltagePI::VoltagePI(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int VoltagePI::kVoltagePICtlFieldNumber;
+const int VoltagePI::kVoltageRegulationFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+VoltagePI::VoltagePI()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.VoltagePI)
+  // @@protoc_insertion_point(constructor:essmodule.VoltagePI)
 }
 VoltagePI::VoltagePI(const VoltagePI& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_voltagepictl()) {
-    voltagepictl_ = new PROTOBUF_NAMESPACE_ID::BoolValue(*from.voltagepictl_);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_voltagepictl()) {
+    voltagepictl_ = new ::google::protobuf::BoolValue(*from.voltagepictl_);
   } else {
     voltagepictl_ = nullptr;
   }
-  if (from._internal_has_voltageregulation()) {
+  if (from.has_voltageregulation()) {
     voltageregulation_ = new ::essmodule::VoltageRegulation(*from.voltageregulation_);
   } else {
     voltageregulation_ = nullptr;
@@ -3853,119 +5401,209 @@ VoltagePI::VoltagePI(const VoltagePI& from)
 }
 
 void VoltagePI::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&voltagepictl_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&voltageregulation_) -
-    reinterpret_cast<char*>(&voltagepictl_)) + sizeof(voltageregulation_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_VoltagePI_essmodule_2fessmodule_2eproto.base);
+  ::memset(&voltagepictl_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&voltageregulation_) -
+      reinterpret_cast<char*>(&voltagepictl_)) + sizeof(voltageregulation_));
 }
 
 VoltagePI::~VoltagePI() {
   // @@protoc_insertion_point(destructor:essmodule.VoltagePI)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void VoltagePI::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete voltagepictl_;
   if (this != internal_default_instance()) delete voltageregulation_;
 }
 
-void VoltagePI::ArenaDtor(void* object) {
-  VoltagePI* _this = reinterpret_cast< VoltagePI* >(object);
-  (void)_this;
-}
-void VoltagePI::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void VoltagePI::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const VoltagePI& VoltagePI::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_VoltagePI_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void VoltagePI::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.VoltagePI)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && voltagepictl_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagepictl_ != nullptr) {
     delete voltagepictl_;
   }
   voltagepictl_ = nullptr;
-  if (GetArena() == nullptr && voltageregulation_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltageregulation_ != nullptr) {
     delete voltageregulation_;
   }
   voltageregulation_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* VoltagePI::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* VoltagePI::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<VoltagePI*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .google.protobuf.BoolValue voltagePICtl = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_voltagepictl(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::BoolValue::_InternalParse;
+        object = msg->mutable_voltagepictl();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.VoltageRegulation voltageRegulation = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_voltageregulation(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::VoltageRegulation::_InternalParse;
+        object = msg->mutable_voltageregulation();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool VoltagePI::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.VoltagePI)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .google.protobuf.BoolValue voltagePICtl = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_voltagepictl()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* VoltagePI::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.VoltagePI)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .essmodule.VoltageRegulation voltageRegulation = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_voltageregulation()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.VoltagePI)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.VoltagePI)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void VoltagePI::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.VoltagePI)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.BoolValue voltagePICtl = 1;
   if (this->has_voltagepictl()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::voltagepictl(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::voltagepictl(this), output);
   }
 
   // .essmodule.VoltageRegulation voltageRegulation = 2;
   if (this->has_voltageregulation()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::voltageregulation(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::voltageregulation(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.VoltagePI)
+}
+
+::google::protobuf::uint8* VoltagePI::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.VoltagePI)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .google.protobuf.BoolValue voltagePICtl = 1;
+  if (this->has_voltagepictl()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::voltagepictl(this), target);
+  }
+
+  // .essmodule.VoltageRegulation voltageRegulation = 2;
+  if (this->has_voltageregulation()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::voltageregulation(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.VoltagePI)
   return target;
@@ -3975,42 +5613,43 @@ size_t VoltagePI::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.VoltagePI)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .google.protobuf.BoolValue voltagePICtl = 1;
   if (this->has_voltagepictl()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *voltagepictl_);
   }
 
   // .essmodule.VoltageRegulation voltageRegulation = 2;
   if (this->has_voltageregulation()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *voltageregulation_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void VoltagePI::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void VoltagePI::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.VoltagePI)
   GOOGLE_DCHECK_NE(&from, this);
   const VoltagePI* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<VoltagePI>(
+      ::google::protobuf::DynamicCastToGenerated<VoltagePI>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.VoltagePI)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.VoltagePI)
     MergeFrom(*source);
@@ -4020,19 +5659,19 @@ void VoltagePI::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void VoltagePI::MergeFrom(const VoltagePI& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.VoltagePI)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_voltagepictl()) {
-    _internal_mutable_voltagepictl()->PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(from._internal_voltagepictl());
+    mutable_voltagepictl()->::google::protobuf::BoolValue::MergeFrom(from.voltagepictl());
   }
   if (from.has_voltageregulation()) {
-    _internal_mutable_voltageregulation()->::essmodule::VoltageRegulation::MergeFrom(from._internal_voltageregulation());
+    mutable_voltageregulation()->::essmodule::VoltageRegulation::MergeFrom(from.voltageregulation());
   }
 }
 
-void VoltagePI::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void VoltagePI::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.VoltagePI)
   if (&from == this) return;
   Clear();
@@ -4050,82 +5689,97 @@ bool VoltagePI::IsInitialized() const {
   return true;
 }
 
+void VoltagePI::Swap(VoltagePI* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void VoltagePI::InternalSwap(VoltagePI* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(VoltagePI, voltageregulation_)
-      + sizeof(VoltagePI::voltageregulation_)
-      - PROTOBUF_FIELD_OFFSET(VoltagePI, voltagepictl_)>(
-          reinterpret_cast<char*>(&voltagepictl_),
-          reinterpret_cast<char*>(&other->voltagepictl_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(voltagepictl_, other->voltagepictl_);
+  swap(voltageregulation_, other->voltageregulation_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata VoltagePI::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata VoltagePI::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class CapacityFirming::_Internal {
+void CapacityFirming::InitAsDefaultInstance() {
+  ::essmodule::_CapacityFirming_default_instance_._instance.get_mutable()->capacityfirmingctl_ = const_cast< ::google::protobuf::BoolValue*>(
+      ::google::protobuf::BoolValue::internal_default_instance());
+  ::essmodule::_CapacityFirming_default_instance_._instance.get_mutable()->limitnegative_dp_dt_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_CapacityFirming_default_instance_._instance.get_mutable()->limitpositive_dp_dt_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+}
+class CapacityFirming::HasBitSetters {
  public:
-  static const PROTOBUF_NAMESPACE_ID::BoolValue& capacityfirmingctl(const CapacityFirming* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& limitnegative_dp_dt(const CapacityFirming* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& limitpositive_dp_dt(const CapacityFirming* msg);
+  static const ::google::protobuf::BoolValue& capacityfirmingctl(const CapacityFirming* msg);
+  static const ::google::protobuf::FloatValue& limitnegative_dp_dt(const CapacityFirming* msg);
+  static const ::google::protobuf::FloatValue& limitpositive_dp_dt(const CapacityFirming* msg);
 };
 
-const PROTOBUF_NAMESPACE_ID::BoolValue&
-CapacityFirming::_Internal::capacityfirmingctl(const CapacityFirming* msg) {
+const ::google::protobuf::BoolValue&
+CapacityFirming::HasBitSetters::capacityfirmingctl(const CapacityFirming* msg) {
   return *msg->capacityfirmingctl_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-CapacityFirming::_Internal::limitnegative_dp_dt(const CapacityFirming* msg) {
+const ::google::protobuf::FloatValue&
+CapacityFirming::HasBitSetters::limitnegative_dp_dt(const CapacityFirming* msg) {
   return *msg->limitnegative_dp_dt_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-CapacityFirming::_Internal::limitpositive_dp_dt(const CapacityFirming* msg) {
+const ::google::protobuf::FloatValue&
+CapacityFirming::HasBitSetters::limitpositive_dp_dt(const CapacityFirming* msg) {
   return *msg->limitpositive_dp_dt_;
 }
 void CapacityFirming::clear_capacityfirmingctl() {
-  if (GetArena() == nullptr && capacityfirmingctl_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && capacityfirmingctl_ != nullptr) {
     delete capacityfirmingctl_;
   }
   capacityfirmingctl_ = nullptr;
 }
 void CapacityFirming::clear_limitnegative_dp_dt() {
-  if (GetArena() == nullptr && limitnegative_dp_dt_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && limitnegative_dp_dt_ != nullptr) {
     delete limitnegative_dp_dt_;
   }
   limitnegative_dp_dt_ = nullptr;
 }
 void CapacityFirming::clear_limitpositive_dp_dt() {
-  if (GetArena() == nullptr && limitpositive_dp_dt_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && limitpositive_dp_dt_ != nullptr) {
     delete limitpositive_dp_dt_;
   }
   limitpositive_dp_dt_ = nullptr;
 }
-CapacityFirming::CapacityFirming(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CapacityFirming::kCapacityFirmingCtlFieldNumber;
+const int CapacityFirming::kLimitNegativeDpDtFieldNumber;
+const int CapacityFirming::kLimitPositiveDpDtFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CapacityFirming::CapacityFirming()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.CapacityFirming)
+  // @@protoc_insertion_point(constructor:essmodule.CapacityFirming)
 }
 CapacityFirming::CapacityFirming(const CapacityFirming& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_capacityfirmingctl()) {
-    capacityfirmingctl_ = new PROTOBUF_NAMESPACE_ID::BoolValue(*from.capacityfirmingctl_);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_capacityfirmingctl()) {
+    capacityfirmingctl_ = new ::google::protobuf::BoolValue(*from.capacityfirmingctl_);
   } else {
     capacityfirmingctl_ = nullptr;
   }
-  if (from._internal_has_limitnegative_dp_dt()) {
-    limitnegative_dp_dt_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.limitnegative_dp_dt_);
+  if (from.has_limitnegative_dp_dt()) {
+    limitnegative_dp_dt_ = new ::google::protobuf::FloatValue(*from.limitnegative_dp_dt_);
   } else {
     limitnegative_dp_dt_ = nullptr;
   }
-  if (from._internal_has_limitpositive_dp_dt()) {
-    limitpositive_dp_dt_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.limitpositive_dp_dt_);
+  if (from.has_limitpositive_dp_dt()) {
+    limitpositive_dp_dt_ = new ::google::protobuf::FloatValue(*from.limitpositive_dp_dt_);
   } else {
     limitpositive_dp_dt_ = nullptr;
   }
@@ -4133,139 +5787,251 @@ CapacityFirming::CapacityFirming(const CapacityFirming& from)
 }
 
 void CapacityFirming::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&capacityfirmingctl_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&limitpositive_dp_dt_) -
-    reinterpret_cast<char*>(&capacityfirmingctl_)) + sizeof(limitpositive_dp_dt_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_CapacityFirming_essmodule_2fessmodule_2eproto.base);
+  ::memset(&capacityfirmingctl_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&limitpositive_dp_dt_) -
+      reinterpret_cast<char*>(&capacityfirmingctl_)) + sizeof(limitpositive_dp_dt_));
 }
 
 CapacityFirming::~CapacityFirming() {
   // @@protoc_insertion_point(destructor:essmodule.CapacityFirming)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void CapacityFirming::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete capacityfirmingctl_;
   if (this != internal_default_instance()) delete limitnegative_dp_dt_;
   if (this != internal_default_instance()) delete limitpositive_dp_dt_;
 }
 
-void CapacityFirming::ArenaDtor(void* object) {
-  CapacityFirming* _this = reinterpret_cast< CapacityFirming* >(object);
-  (void)_this;
-}
-void CapacityFirming::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapacityFirming::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const CapacityFirming& CapacityFirming::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_CapacityFirming_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void CapacityFirming::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.CapacityFirming)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && capacityfirmingctl_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && capacityfirmingctl_ != nullptr) {
     delete capacityfirmingctl_;
   }
   capacityfirmingctl_ = nullptr;
-  if (GetArena() == nullptr && limitnegative_dp_dt_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && limitnegative_dp_dt_ != nullptr) {
     delete limitnegative_dp_dt_;
   }
   limitnegative_dp_dt_ = nullptr;
-  if (GetArena() == nullptr && limitpositive_dp_dt_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && limitpositive_dp_dt_ != nullptr) {
     delete limitpositive_dp_dt_;
   }
   limitpositive_dp_dt_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* CapacityFirming::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* CapacityFirming::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<CapacityFirming*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .google.protobuf.BoolValue capacityFirmingCtl = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_capacityfirmingctl(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::BoolValue::_InternalParse;
+        object = msg->mutable_capacityfirmingctl();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue limitNegative_dp_dt = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_limitnegative_dp_dt(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_limitnegative_dp_dt();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue limitPositive_dp_dt = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_limitpositive_dp_dt(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_limitpositive_dp_dt();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool CapacityFirming::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.CapacityFirming)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .google.protobuf.BoolValue capacityFirmingCtl = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_capacityfirmingctl()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapacityFirming::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.CapacityFirming)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .google.protobuf.FloatValue limitNegative_dp_dt = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_limitnegative_dp_dt()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue limitPositive_dp_dt = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_limitpositive_dp_dt()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.CapacityFirming)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.CapacityFirming)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void CapacityFirming::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.CapacityFirming)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.BoolValue capacityFirmingCtl = 1;
   if (this->has_capacityfirmingctl()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::capacityfirmingctl(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::capacityfirmingctl(this), output);
   }
 
   // .google.protobuf.FloatValue limitNegative_dp_dt = 2;
   if (this->has_limitnegative_dp_dt()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::limitnegative_dp_dt(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::limitnegative_dp_dt(this), output);
   }
 
   // .google.protobuf.FloatValue limitPositive_dp_dt = 3;
   if (this->has_limitpositive_dp_dt()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::limitpositive_dp_dt(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::limitpositive_dp_dt(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.CapacityFirming)
+}
+
+::google::protobuf::uint8* CapacityFirming::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.CapacityFirming)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .google.protobuf.BoolValue capacityFirmingCtl = 1;
+  if (this->has_capacityfirmingctl()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::capacityfirmingctl(this), target);
+  }
+
+  // .google.protobuf.FloatValue limitNegative_dp_dt = 2;
+  if (this->has_limitnegative_dp_dt()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::limitnegative_dp_dt(this), target);
+  }
+
+  // .google.protobuf.FloatValue limitPositive_dp_dt = 3;
+  if (this->has_limitpositive_dp_dt()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::limitpositive_dp_dt(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.CapacityFirming)
   return target;
@@ -4275,49 +6041,50 @@ size_t CapacityFirming::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.CapacityFirming)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .google.protobuf.BoolValue capacityFirmingCtl = 1;
   if (this->has_capacityfirmingctl()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *capacityfirmingctl_);
   }
 
   // .google.protobuf.FloatValue limitNegative_dp_dt = 2;
   if (this->has_limitnegative_dp_dt()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *limitnegative_dp_dt_);
   }
 
   // .google.protobuf.FloatValue limitPositive_dp_dt = 3;
   if (this->has_limitpositive_dp_dt()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *limitpositive_dp_dt_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void CapacityFirming::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void CapacityFirming::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.CapacityFirming)
   GOOGLE_DCHECK_NE(&from, this);
   const CapacityFirming* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapacityFirming>(
+      ::google::protobuf::DynamicCastToGenerated<CapacityFirming>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.CapacityFirming)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.CapacityFirming)
     MergeFrom(*source);
@@ -4327,22 +6094,22 @@ void CapacityFirming::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void CapacityFirming::MergeFrom(const CapacityFirming& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.CapacityFirming)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_capacityfirmingctl()) {
-    _internal_mutable_capacityfirmingctl()->PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(from._internal_capacityfirmingctl());
+    mutable_capacityfirmingctl()->::google::protobuf::BoolValue::MergeFrom(from.capacityfirmingctl());
   }
   if (from.has_limitnegative_dp_dt()) {
-    _internal_mutable_limitnegative_dp_dt()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_limitnegative_dp_dt());
+    mutable_limitnegative_dp_dt()->::google::protobuf::FloatValue::MergeFrom(from.limitnegative_dp_dt());
   }
   if (from.has_limitpositive_dp_dt()) {
-    _internal_mutable_limitpositive_dp_dt()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_limitpositive_dp_dt());
+    mutable_limitpositive_dp_dt()->::google::protobuf::FloatValue::MergeFrom(from.limitpositive_dp_dt());
   }
 }
 
-void CapacityFirming::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void CapacityFirming::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.CapacityFirming)
   if (&from == this) return;
   Clear();
@@ -4360,25 +6127,43 @@ bool CapacityFirming::IsInitialized() const {
   return true;
 }
 
+void CapacityFirming::Swap(CapacityFirming* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void CapacityFirming::InternalSwap(CapacityFirming* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CapacityFirming, limitpositive_dp_dt_)
-      + sizeof(CapacityFirming::limitpositive_dp_dt_)
-      - PROTOBUF_FIELD_OFFSET(CapacityFirming, capacityfirmingctl_)>(
-          reinterpret_cast<char*>(&capacityfirmingctl_),
-          reinterpret_cast<char*>(&other->capacityfirmingctl_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(capacityfirmingctl_, other->capacityfirmingctl_);
+  swap(limitnegative_dp_dt_, other->limitnegative_dp_dt_);
+  swap(limitpositive_dp_dt_, other->limitpositive_dp_dt_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata CapacityFirming::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata CapacityFirming::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class ESSFunction::_Internal {
+void ESSFunction::InitAsDefaultInstance() {
+  ::essmodule::_ESSFunction_default_instance_._instance.get_mutable()->capacityfirming_ = const_cast< ::essmodule::CapacityFirming*>(
+      ::essmodule::CapacityFirming::internal_default_instance());
+  ::essmodule::_ESSFunction_default_instance_._instance.get_mutable()->frequencyregulation_ = const_cast< ::essmodule::FrequencyRegulation*>(
+      ::essmodule::FrequencyRegulation::internal_default_instance());
+  ::essmodule::_ESSFunction_default_instance_._instance.get_mutable()->peakshaving_ = const_cast< ::essmodule::PeakShaving*>(
+      ::essmodule::PeakShaving::internal_default_instance());
+  ::essmodule::_ESSFunction_default_instance_._instance.get_mutable()->soclimit_ = const_cast< ::essmodule::SocLimit*>(
+      ::essmodule::SocLimit::internal_default_instance());
+  ::essmodule::_ESSFunction_default_instance_._instance.get_mutable()->socmanagement_ = const_cast< ::essmodule::SOCManagement*>(
+      ::essmodule::SOCManagement::internal_default_instance());
+  ::essmodule::_ESSFunction_default_instance_._instance.get_mutable()->voltagedroop_ = const_cast< ::essmodule::VoltageDroop*>(
+      ::essmodule::VoltageDroop::internal_default_instance());
+  ::essmodule::_ESSFunction_default_instance_._instance.get_mutable()->voltagepi_ = const_cast< ::essmodule::VoltagePI*>(
+      ::essmodule::VoltagePI::internal_default_instance());
+}
+class ESSFunction::HasBitSetters {
  public:
   static const ::essmodule::CapacityFirming& capacityfirming(const ESSFunction* msg);
   static const ::essmodule::FrequencyRegulation& frequencyregulation(const ESSFunction* msg);
@@ -4390,73 +6175,83 @@ class ESSFunction::_Internal {
 };
 
 const ::essmodule::CapacityFirming&
-ESSFunction::_Internal::capacityfirming(const ESSFunction* msg) {
+ESSFunction::HasBitSetters::capacityfirming(const ESSFunction* msg) {
   return *msg->capacityfirming_;
 }
 const ::essmodule::FrequencyRegulation&
-ESSFunction::_Internal::frequencyregulation(const ESSFunction* msg) {
+ESSFunction::HasBitSetters::frequencyregulation(const ESSFunction* msg) {
   return *msg->frequencyregulation_;
 }
 const ::essmodule::PeakShaving&
-ESSFunction::_Internal::peakshaving(const ESSFunction* msg) {
+ESSFunction::HasBitSetters::peakshaving(const ESSFunction* msg) {
   return *msg->peakshaving_;
 }
 const ::essmodule::SocLimit&
-ESSFunction::_Internal::soclimit(const ESSFunction* msg) {
+ESSFunction::HasBitSetters::soclimit(const ESSFunction* msg) {
   return *msg->soclimit_;
 }
 const ::essmodule::SOCManagement&
-ESSFunction::_Internal::socmanagement(const ESSFunction* msg) {
+ESSFunction::HasBitSetters::socmanagement(const ESSFunction* msg) {
   return *msg->socmanagement_;
 }
 const ::essmodule::VoltageDroop&
-ESSFunction::_Internal::voltagedroop(const ESSFunction* msg) {
+ESSFunction::HasBitSetters::voltagedroop(const ESSFunction* msg) {
   return *msg->voltagedroop_;
 }
 const ::essmodule::VoltagePI&
-ESSFunction::_Internal::voltagepi(const ESSFunction* msg) {
+ESSFunction::HasBitSetters::voltagepi(const ESSFunction* msg) {
   return *msg->voltagepi_;
 }
-ESSFunction::ESSFunction(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ESSFunction::kCapacityFirmingFieldNumber;
+const int ESSFunction::kFrequencyRegulationFieldNumber;
+const int ESSFunction::kPeakShavingFieldNumber;
+const int ESSFunction::kSocLimitFieldNumber;
+const int ESSFunction::kSocManagementFieldNumber;
+const int ESSFunction::kVoltageDroopFieldNumber;
+const int ESSFunction::kVoltagePIFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ESSFunction::ESSFunction()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSFunction)
+  // @@protoc_insertion_point(constructor:essmodule.ESSFunction)
 }
 ESSFunction::ESSFunction(const ESSFunction& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_capacityfirming()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_capacityfirming()) {
     capacityfirming_ = new ::essmodule::CapacityFirming(*from.capacityfirming_);
   } else {
     capacityfirming_ = nullptr;
   }
-  if (from._internal_has_frequencyregulation()) {
+  if (from.has_frequencyregulation()) {
     frequencyregulation_ = new ::essmodule::FrequencyRegulation(*from.frequencyregulation_);
   } else {
     frequencyregulation_ = nullptr;
   }
-  if (from._internal_has_peakshaving()) {
+  if (from.has_peakshaving()) {
     peakshaving_ = new ::essmodule::PeakShaving(*from.peakshaving_);
   } else {
     peakshaving_ = nullptr;
   }
-  if (from._internal_has_soclimit()) {
+  if (from.has_soclimit()) {
     soclimit_ = new ::essmodule::SocLimit(*from.soclimit_);
   } else {
     soclimit_ = nullptr;
   }
-  if (from._internal_has_socmanagement()) {
+  if (from.has_socmanagement()) {
     socmanagement_ = new ::essmodule::SOCManagement(*from.socmanagement_);
   } else {
     socmanagement_ = nullptr;
   }
-  if (from._internal_has_voltagedroop()) {
+  if (from.has_voltagedroop()) {
     voltagedroop_ = new ::essmodule::VoltageDroop(*from.voltagedroop_);
   } else {
     voltagedroop_ = nullptr;
   }
-  if (from._internal_has_voltagepi()) {
+  if (from.has_voltagepi()) {
     voltagepi_ = new ::essmodule::VoltagePI(*from.voltagepi_);
   } else {
     voltagepi_ = nullptr;
@@ -4465,20 +6260,19 @@ ESSFunction::ESSFunction(const ESSFunction& from)
 }
 
 void ESSFunction::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&capacityfirming_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&voltagepi_) -
-    reinterpret_cast<char*>(&capacityfirming_)) + sizeof(voltagepi_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ESSFunction_essmodule_2fessmodule_2eproto.base);
+  ::memset(&capacityfirming_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&voltagepi_) -
+      reinterpret_cast<char*>(&capacityfirming_)) + sizeof(voltagepi_));
 }
 
 ESSFunction::~ESSFunction() {
   // @@protoc_insertion_point(destructor:essmodule.ESSFunction)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ESSFunction::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete capacityfirming_;
   if (this != internal_default_instance()) delete frequencyregulation_;
   if (this != internal_default_instance()) delete peakshaving_;
@@ -4488,196 +6282,397 @@ void ESSFunction::SharedDtor() {
   if (this != internal_default_instance()) delete voltagepi_;
 }
 
-void ESSFunction::ArenaDtor(void* object) {
-  ESSFunction* _this = reinterpret_cast< ESSFunction* >(object);
-  (void)_this;
-}
-void ESSFunction::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSFunction::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const ESSFunction& ESSFunction::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ESSFunction_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void ESSFunction::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSFunction)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && capacityfirming_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && capacityfirming_ != nullptr) {
     delete capacityfirming_;
   }
   capacityfirming_ = nullptr;
-  if (GetArena() == nullptr && frequencyregulation_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && frequencyregulation_ != nullptr) {
     delete frequencyregulation_;
   }
   frequencyregulation_ = nullptr;
-  if (GetArena() == nullptr && peakshaving_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && peakshaving_ != nullptr) {
     delete peakshaving_;
   }
   peakshaving_ = nullptr;
-  if (GetArena() == nullptr && soclimit_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && soclimit_ != nullptr) {
     delete soclimit_;
   }
   soclimit_ = nullptr;
-  if (GetArena() == nullptr && socmanagement_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && socmanagement_ != nullptr) {
     delete socmanagement_;
   }
   socmanagement_ = nullptr;
-  if (GetArena() == nullptr && voltagedroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagedroop_ != nullptr) {
     delete voltagedroop_;
   }
   voltagedroop_ = nullptr;
-  if (GetArena() == nullptr && voltagepi_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagepi_ != nullptr) {
     delete voltagepi_;
   }
   voltagepi_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* ESSFunction::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ESSFunction::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ESSFunction*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .essmodule.CapacityFirming capacityFirming = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_capacityfirming(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::CapacityFirming::_InternalParse;
+        object = msg->mutable_capacityfirming();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.FrequencyRegulation frequencyRegulation = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_frequencyregulation(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::FrequencyRegulation::_InternalParse;
+        object = msg->mutable_frequencyregulation();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.PeakShaving peakShaving = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_peakshaving(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::PeakShaving::_InternalParse;
+        object = msg->mutable_peakshaving();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.SocLimit socLimit = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_soclimit(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::SocLimit::_InternalParse;
+        object = msg->mutable_soclimit();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.SOCManagement socManagement = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_socmanagement(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::SOCManagement::_InternalParse;
+        object = msg->mutable_socmanagement();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.VoltageDroop voltageDroop = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(_internal_mutable_voltagedroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::VoltageDroop::_InternalParse;
+        object = msg->mutable_voltagedroop();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.VoltagePI voltagePI = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ctx->ParseMessage(_internal_mutable_voltagepi(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 7: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::VoltagePI::_InternalParse;
+        object = msg->mutable_voltagepi();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ESSFunction::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.ESSFunction)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .essmodule.CapacityFirming capacityFirming = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_capacityfirming()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSFunction::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSFunction)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .essmodule.FrequencyRegulation frequencyRegulation = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_frequencyregulation()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .essmodule.PeakShaving peakShaving = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_peakshaving()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .essmodule.SocLimit socLimit = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_soclimit()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .essmodule.SOCManagement socManagement = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_socmanagement()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .essmodule.VoltageDroop voltageDroop = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_voltagedroop()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .essmodule.VoltagePI voltagePI = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (58 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_voltagepi()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.ESSFunction)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.ESSFunction)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ESSFunction::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.ESSFunction)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .essmodule.CapacityFirming capacityFirming = 1;
   if (this->has_capacityfirming()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::capacityfirming(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::capacityfirming(this), output);
   }
 
   // .essmodule.FrequencyRegulation frequencyRegulation = 2;
   if (this->has_frequencyregulation()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::frequencyregulation(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::frequencyregulation(this), output);
   }
 
   // .essmodule.PeakShaving peakShaving = 3;
   if (this->has_peakshaving()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::peakshaving(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::peakshaving(this), output);
   }
 
   // .essmodule.SocLimit socLimit = 4;
   if (this->has_soclimit()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::soclimit(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::soclimit(this), output);
   }
 
   // .essmodule.SOCManagement socManagement = 5;
   if (this->has_socmanagement()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::socmanagement(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, HasBitSetters::socmanagement(this), output);
   }
 
   // .essmodule.VoltageDroop voltageDroop = 6;
   if (this->has_voltagedroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::voltagedroop(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, HasBitSetters::voltagedroop(this), output);
   }
 
   // .essmodule.VoltagePI voltagePI = 7;
   if (this->has_voltagepi()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::voltagepi(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      7, HasBitSetters::voltagepi(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.ESSFunction)
+}
+
+::google::protobuf::uint8* ESSFunction::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSFunction)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .essmodule.CapacityFirming capacityFirming = 1;
+  if (this->has_capacityfirming()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::capacityfirming(this), target);
+  }
+
+  // .essmodule.FrequencyRegulation frequencyRegulation = 2;
+  if (this->has_frequencyregulation()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::frequencyregulation(this), target);
+  }
+
+  // .essmodule.PeakShaving peakShaving = 3;
+  if (this->has_peakshaving()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::peakshaving(this), target);
+  }
+
+  // .essmodule.SocLimit socLimit = 4;
+  if (this->has_soclimit()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::soclimit(this), target);
+  }
+
+  // .essmodule.SOCManagement socManagement = 5;
+  if (this->has_socmanagement()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, HasBitSetters::socmanagement(this), target);
+  }
+
+  // .essmodule.VoltageDroop voltageDroop = 6;
+  if (this->has_voltagedroop()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        6, HasBitSetters::voltagedroop(this), target);
+  }
+
+  // .essmodule.VoltagePI voltagePI = 7;
+  if (this->has_voltagepi()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        7, HasBitSetters::voltagepi(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSFunction)
   return target;
@@ -4687,77 +6682,78 @@ size_t ESSFunction::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSFunction)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .essmodule.CapacityFirming capacityFirming = 1;
   if (this->has_capacityfirming()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *capacityfirming_);
   }
 
   // .essmodule.FrequencyRegulation frequencyRegulation = 2;
   if (this->has_frequencyregulation()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *frequencyregulation_);
   }
 
   // .essmodule.PeakShaving peakShaving = 3;
   if (this->has_peakshaving()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *peakshaving_);
   }
 
   // .essmodule.SocLimit socLimit = 4;
   if (this->has_soclimit()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *soclimit_);
   }
 
   // .essmodule.SOCManagement socManagement = 5;
   if (this->has_socmanagement()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *socmanagement_);
   }
 
   // .essmodule.VoltageDroop voltageDroop = 6;
   if (this->has_voltagedroop()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *voltagedroop_);
   }
 
   // .essmodule.VoltagePI voltagePI = 7;
   if (this->has_voltagepi()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *voltagepi_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void ESSFunction::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSFunction::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSFunction)
   GOOGLE_DCHECK_NE(&from, this);
   const ESSFunction* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSFunction>(
+      ::google::protobuf::DynamicCastToGenerated<ESSFunction>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSFunction)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSFunction)
     MergeFrom(*source);
@@ -4767,34 +6763,34 @@ void ESSFunction::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void ESSFunction::MergeFrom(const ESSFunction& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSFunction)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_capacityfirming()) {
-    _internal_mutable_capacityfirming()->::essmodule::CapacityFirming::MergeFrom(from._internal_capacityfirming());
+    mutable_capacityfirming()->::essmodule::CapacityFirming::MergeFrom(from.capacityfirming());
   }
   if (from.has_frequencyregulation()) {
-    _internal_mutable_frequencyregulation()->::essmodule::FrequencyRegulation::MergeFrom(from._internal_frequencyregulation());
+    mutable_frequencyregulation()->::essmodule::FrequencyRegulation::MergeFrom(from.frequencyregulation());
   }
   if (from.has_peakshaving()) {
-    _internal_mutable_peakshaving()->::essmodule::PeakShaving::MergeFrom(from._internal_peakshaving());
+    mutable_peakshaving()->::essmodule::PeakShaving::MergeFrom(from.peakshaving());
   }
   if (from.has_soclimit()) {
-    _internal_mutable_soclimit()->::essmodule::SocLimit::MergeFrom(from._internal_soclimit());
+    mutable_soclimit()->::essmodule::SocLimit::MergeFrom(from.soclimit());
   }
   if (from.has_socmanagement()) {
-    _internal_mutable_socmanagement()->::essmodule::SOCManagement::MergeFrom(from._internal_socmanagement());
+    mutable_socmanagement()->::essmodule::SOCManagement::MergeFrom(from.socmanagement());
   }
   if (from.has_voltagedroop()) {
-    _internal_mutable_voltagedroop()->::essmodule::VoltageDroop::MergeFrom(from._internal_voltagedroop());
+    mutable_voltagedroop()->::essmodule::VoltageDroop::MergeFrom(from.voltagedroop());
   }
   if (from.has_voltagepi()) {
-    _internal_mutable_voltagepi()->::essmodule::VoltagePI::MergeFrom(from._internal_voltagepi());
+    mutable_voltagepi()->::essmodule::VoltagePI::MergeFrom(from.voltagepi());
   }
 }
 
-void ESSFunction::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSFunction::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSFunction)
   if (&from == this) return;
   Clear();
@@ -4812,236 +6808,286 @@ bool ESSFunction::IsInitialized() const {
   return true;
 }
 
+void ESSFunction::Swap(ESSFunction* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void ESSFunction::InternalSwap(ESSFunction* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSFunction, voltagepi_)
-      + sizeof(ESSFunction::voltagepi_)
-      - PROTOBUF_FIELD_OFFSET(ESSFunction, capacityfirming_)>(
-          reinterpret_cast<char*>(&capacityfirming_),
-          reinterpret_cast<char*>(&other->capacityfirming_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(capacityfirming_, other->capacityfirming_);
+  swap(frequencyregulation_, other->frequencyregulation_);
+  swap(peakshaving_, other->peakshaving_);
+  swap(soclimit_, other->soclimit_);
+  swap(socmanagement_, other->socmanagement_);
+  swap(voltagedroop_, other->voltagedroop_);
+  swap(voltagepi_, other->voltagepi_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ESSFunction::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata ESSFunction::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class ESSPointStatus::_Internal {
+void ESSPointStatus::InitAsDefaultInstance() {
+  ::essmodule::_ESSPointStatus_default_instance_._instance.get_mutable()->blackstartenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::essmodule::_ESSPointStatus_default_instance_._instance.get_mutable()->frequencysetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::essmodule::_ESSPointStatus_default_instance_._instance.get_mutable()->function_ = const_cast< ::essmodule::ESSFunction*>(
+      ::essmodule::ESSFunction::internal_default_instance());
+  ::essmodule::_ESSPointStatus_default_instance_._instance.get_mutable()->mode_ = const_cast< ::commonmodule::ENG_GridConnectModeKind*>(
+      ::commonmodule::ENG_GridConnectModeKind::internal_default_instance());
+  ::essmodule::_ESSPointStatus_default_instance_._instance.get_mutable()->pcthzdroop_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_ESSPointStatus_default_instance_._instance.get_mutable()->pctvdroop_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_ESSPointStatus_default_instance_._instance.get_mutable()->ramprates_ = const_cast< ::commonmodule::RampRate*>(
+      ::commonmodule::RampRate::internal_default_instance());
+  ::essmodule::_ESSPointStatus_default_instance_._instance.get_mutable()->reactivepwrsetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::essmodule::_ESSPointStatus_default_instance_._instance.get_mutable()->realpwrsetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::essmodule::_ESSPointStatus_default_instance_._instance.get_mutable()->state_ = const_cast< ::commonmodule::Optional_StateKind*>(
+      ::commonmodule::Optional_StateKind::internal_default_instance());
+  ::essmodule::_ESSPointStatus_default_instance_._instance.get_mutable()->syncbacktogrid_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::essmodule::_ESSPointStatus_default_instance_._instance.get_mutable()->transtoislndongridlossenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::essmodule::_ESSPointStatus_default_instance_._instance.get_mutable()->voltagesetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+}
+class ESSPointStatus::HasBitSetters {
  public:
-  static const ::commonmodule::StatusSPS& blackstartenabled(const ESSPointStatus* msg);
-  static const ::commonmodule::StatusSPS& frequencysetpointenabled(const ESSPointStatus* msg);
+  static const ::commonmodule::ControlDPC& blackstartenabled(const ESSPointStatus* msg);
+  static const ::commonmodule::ControlDPC& frequencysetpointenabled(const ESSPointStatus* msg);
   static const ::essmodule::ESSFunction& function(const ESSPointStatus* msg);
   static const ::commonmodule::ENG_GridConnectModeKind& mode(const ESSPointStatus* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pcthzdroop(const ESSPointStatus* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pctvdroop(const ESSPointStatus* msg);
+  static const ::google::protobuf::FloatValue& pcthzdroop(const ESSPointStatus* msg);
+  static const ::google::protobuf::FloatValue& pctvdroop(const ESSPointStatus* msg);
   static const ::commonmodule::RampRate& ramprates(const ESSPointStatus* msg);
-  static const ::commonmodule::StatusSPS& reactivepwrsetpointenabled(const ESSPointStatus* msg);
-  static const ::commonmodule::StatusSPS& realpwrsetpointenabled(const ESSPointStatus* msg);
+  static const ::commonmodule::ControlDPC& reactivepwrsetpointenabled(const ESSPointStatus* msg);
+  static const ::commonmodule::ControlDPC& realpwrsetpointenabled(const ESSPointStatus* msg);
   static const ::commonmodule::Optional_StateKind& state(const ESSPointStatus* msg);
-  static const ::commonmodule::StatusSPS& syncbacktogrid(const ESSPointStatus* msg);
-  static const ::commonmodule::StatusSPS& transtoislndongridlossenabled(const ESSPointStatus* msg);
-  static const ::commonmodule::StatusSPS& voltagesetpointenabled(const ESSPointStatus* msg);
+  static const ::commonmodule::ControlDPC& syncbacktogrid(const ESSPointStatus* msg);
+  static const ::commonmodule::ControlDPC& transtoislndongridlossenabled(const ESSPointStatus* msg);
+  static const ::commonmodule::ControlDPC& voltagesetpointenabled(const ESSPointStatus* msg);
 };
 
-const ::commonmodule::StatusSPS&
-ESSPointStatus::_Internal::blackstartenabled(const ESSPointStatus* msg) {
+const ::commonmodule::ControlDPC&
+ESSPointStatus::HasBitSetters::blackstartenabled(const ESSPointStatus* msg) {
   return *msg->blackstartenabled_;
 }
-const ::commonmodule::StatusSPS&
-ESSPointStatus::_Internal::frequencysetpointenabled(const ESSPointStatus* msg) {
+const ::commonmodule::ControlDPC&
+ESSPointStatus::HasBitSetters::frequencysetpointenabled(const ESSPointStatus* msg) {
   return *msg->frequencysetpointenabled_;
 }
 const ::essmodule::ESSFunction&
-ESSPointStatus::_Internal::function(const ESSPointStatus* msg) {
+ESSPointStatus::HasBitSetters::function(const ESSPointStatus* msg) {
   return *msg->function_;
 }
 const ::commonmodule::ENG_GridConnectModeKind&
-ESSPointStatus::_Internal::mode(const ESSPointStatus* msg) {
+ESSPointStatus::HasBitSetters::mode(const ESSPointStatus* msg) {
   return *msg->mode_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-ESSPointStatus::_Internal::pcthzdroop(const ESSPointStatus* msg) {
+const ::google::protobuf::FloatValue&
+ESSPointStatus::HasBitSetters::pcthzdroop(const ESSPointStatus* msg) {
   return *msg->pcthzdroop_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-ESSPointStatus::_Internal::pctvdroop(const ESSPointStatus* msg) {
+const ::google::protobuf::FloatValue&
+ESSPointStatus::HasBitSetters::pctvdroop(const ESSPointStatus* msg) {
   return *msg->pctvdroop_;
 }
 const ::commonmodule::RampRate&
-ESSPointStatus::_Internal::ramprates(const ESSPointStatus* msg) {
+ESSPointStatus::HasBitSetters::ramprates(const ESSPointStatus* msg) {
   return *msg->ramprates_;
 }
-const ::commonmodule::StatusSPS&
-ESSPointStatus::_Internal::reactivepwrsetpointenabled(const ESSPointStatus* msg) {
+const ::commonmodule::ControlDPC&
+ESSPointStatus::HasBitSetters::reactivepwrsetpointenabled(const ESSPointStatus* msg) {
   return *msg->reactivepwrsetpointenabled_;
 }
-const ::commonmodule::StatusSPS&
-ESSPointStatus::_Internal::realpwrsetpointenabled(const ESSPointStatus* msg) {
+const ::commonmodule::ControlDPC&
+ESSPointStatus::HasBitSetters::realpwrsetpointenabled(const ESSPointStatus* msg) {
   return *msg->realpwrsetpointenabled_;
 }
 const ::commonmodule::Optional_StateKind&
-ESSPointStatus::_Internal::state(const ESSPointStatus* msg) {
+ESSPointStatus::HasBitSetters::state(const ESSPointStatus* msg) {
   return *msg->state_;
 }
-const ::commonmodule::StatusSPS&
-ESSPointStatus::_Internal::syncbacktogrid(const ESSPointStatus* msg) {
+const ::commonmodule::ControlDPC&
+ESSPointStatus::HasBitSetters::syncbacktogrid(const ESSPointStatus* msg) {
   return *msg->syncbacktogrid_;
 }
-const ::commonmodule::StatusSPS&
-ESSPointStatus::_Internal::transtoislndongridlossenabled(const ESSPointStatus* msg) {
+const ::commonmodule::ControlDPC&
+ESSPointStatus::HasBitSetters::transtoislndongridlossenabled(const ESSPointStatus* msg) {
   return *msg->transtoislndongridlossenabled_;
 }
-const ::commonmodule::StatusSPS&
-ESSPointStatus::_Internal::voltagesetpointenabled(const ESSPointStatus* msg) {
+const ::commonmodule::ControlDPC&
+ESSPointStatus::HasBitSetters::voltagesetpointenabled(const ESSPointStatus* msg) {
   return *msg->voltagesetpointenabled_;
 }
 void ESSPointStatus::clear_blackstartenabled() {
-  if (GetArena() == nullptr && blackstartenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && blackstartenabled_ != nullptr) {
     delete blackstartenabled_;
   }
   blackstartenabled_ = nullptr;
 }
 void ESSPointStatus::clear_frequencysetpointenabled() {
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && frequencysetpointenabled_ != nullptr) {
     delete frequencysetpointenabled_;
   }
   frequencysetpointenabled_ = nullptr;
 }
 void ESSPointStatus::clear_mode() {
-  if (GetArena() == nullptr && mode_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && mode_ != nullptr) {
     delete mode_;
   }
   mode_ = nullptr;
 }
 void ESSPointStatus::clear_pcthzdroop() {
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pcthzdroop_ != nullptr) {
     delete pcthzdroop_;
   }
   pcthzdroop_ = nullptr;
 }
 void ESSPointStatus::clear_pctvdroop() {
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pctvdroop_ != nullptr) {
     delete pctvdroop_;
   }
   pctvdroop_ = nullptr;
 }
 void ESSPointStatus::clear_ramprates() {
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && ramprates_ != nullptr) {
     delete ramprates_;
   }
   ramprates_ = nullptr;
 }
 void ESSPointStatus::clear_reactivepwrsetpointenabled() {
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
     delete reactivepwrsetpointenabled_;
   }
   reactivepwrsetpointenabled_ = nullptr;
 }
 void ESSPointStatus::clear_realpwrsetpointenabled() {
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && realpwrsetpointenabled_ != nullptr) {
     delete realpwrsetpointenabled_;
   }
   realpwrsetpointenabled_ = nullptr;
 }
 void ESSPointStatus::clear_state() {
-  if (GetArena() == nullptr && state_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && state_ != nullptr) {
     delete state_;
   }
   state_ = nullptr;
 }
 void ESSPointStatus::clear_syncbacktogrid() {
-  if (GetArena() == nullptr && syncbacktogrid_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && syncbacktogrid_ != nullptr) {
     delete syncbacktogrid_;
   }
   syncbacktogrid_ = nullptr;
 }
 void ESSPointStatus::clear_transtoislndongridlossenabled() {
-  if (GetArena() == nullptr && transtoislndongridlossenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && transtoislndongridlossenabled_ != nullptr) {
     delete transtoislndongridlossenabled_;
   }
   transtoislndongridlossenabled_ = nullptr;
 }
 void ESSPointStatus::clear_voltagesetpointenabled() {
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagesetpointenabled_ != nullptr) {
     delete voltagesetpointenabled_;
   }
   voltagesetpointenabled_ = nullptr;
 }
-ESSPointStatus::ESSPointStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ESSPointStatus::kBlackStartEnabledFieldNumber;
+const int ESSPointStatus::kFrequencySetPointEnabledFieldNumber;
+const int ESSPointStatus::kFunctionFieldNumber;
+const int ESSPointStatus::kModeFieldNumber;
+const int ESSPointStatus::kPctHzDroopFieldNumber;
+const int ESSPointStatus::kPctVDroopFieldNumber;
+const int ESSPointStatus::kRampRatesFieldNumber;
+const int ESSPointStatus::kReactivePwrSetPointEnabledFieldNumber;
+const int ESSPointStatus::kRealPwrSetPointEnabledFieldNumber;
+const int ESSPointStatus::kStateFieldNumber;
+const int ESSPointStatus::kSyncBackToGridFieldNumber;
+const int ESSPointStatus::kTransToIslndOnGridLossEnabledFieldNumber;
+const int ESSPointStatus::kVoltageSetPointEnabledFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ESSPointStatus::ESSPointStatus()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSPointStatus)
+  // @@protoc_insertion_point(constructor:essmodule.ESSPointStatus)
 }
 ESSPointStatus::ESSPointStatus(const ESSPointStatus& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_blackstartenabled()) {
-    blackstartenabled_ = new ::commonmodule::StatusSPS(*from.blackstartenabled_);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_blackstartenabled()) {
+    blackstartenabled_ = new ::commonmodule::ControlDPC(*from.blackstartenabled_);
   } else {
     blackstartenabled_ = nullptr;
   }
-  if (from._internal_has_frequencysetpointenabled()) {
-    frequencysetpointenabled_ = new ::commonmodule::StatusSPS(*from.frequencysetpointenabled_);
+  if (from.has_frequencysetpointenabled()) {
+    frequencysetpointenabled_ = new ::commonmodule::ControlDPC(*from.frequencysetpointenabled_);
   } else {
     frequencysetpointenabled_ = nullptr;
   }
-  if (from._internal_has_function()) {
+  if (from.has_function()) {
     function_ = new ::essmodule::ESSFunction(*from.function_);
   } else {
     function_ = nullptr;
   }
-  if (from._internal_has_mode()) {
+  if (from.has_mode()) {
     mode_ = new ::commonmodule::ENG_GridConnectModeKind(*from.mode_);
   } else {
     mode_ = nullptr;
   }
-  if (from._internal_has_pcthzdroop()) {
-    pcthzdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pcthzdroop_);
+  if (from.has_pcthzdroop()) {
+    pcthzdroop_ = new ::google::protobuf::FloatValue(*from.pcthzdroop_);
   } else {
     pcthzdroop_ = nullptr;
   }
-  if (from._internal_has_pctvdroop()) {
-    pctvdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pctvdroop_);
+  if (from.has_pctvdroop()) {
+    pctvdroop_ = new ::google::protobuf::FloatValue(*from.pctvdroop_);
   } else {
     pctvdroop_ = nullptr;
   }
-  if (from._internal_has_ramprates()) {
+  if (from.has_ramprates()) {
     ramprates_ = new ::commonmodule::RampRate(*from.ramprates_);
   } else {
     ramprates_ = nullptr;
   }
-  if (from._internal_has_reactivepwrsetpointenabled()) {
-    reactivepwrsetpointenabled_ = new ::commonmodule::StatusSPS(*from.reactivepwrsetpointenabled_);
+  if (from.has_reactivepwrsetpointenabled()) {
+    reactivepwrsetpointenabled_ = new ::commonmodule::ControlDPC(*from.reactivepwrsetpointenabled_);
   } else {
     reactivepwrsetpointenabled_ = nullptr;
   }
-  if (from._internal_has_realpwrsetpointenabled()) {
-    realpwrsetpointenabled_ = new ::commonmodule::StatusSPS(*from.realpwrsetpointenabled_);
+  if (from.has_realpwrsetpointenabled()) {
+    realpwrsetpointenabled_ = new ::commonmodule::ControlDPC(*from.realpwrsetpointenabled_);
   } else {
     realpwrsetpointenabled_ = nullptr;
   }
-  if (from._internal_has_state()) {
+  if (from.has_state()) {
     state_ = new ::commonmodule::Optional_StateKind(*from.state_);
   } else {
     state_ = nullptr;
   }
-  if (from._internal_has_syncbacktogrid()) {
-    syncbacktogrid_ = new ::commonmodule::StatusSPS(*from.syncbacktogrid_);
+  if (from.has_syncbacktogrid()) {
+    syncbacktogrid_ = new ::commonmodule::ControlDPC(*from.syncbacktogrid_);
   } else {
     syncbacktogrid_ = nullptr;
   }
-  if (from._internal_has_transtoislndongridlossenabled()) {
-    transtoislndongridlossenabled_ = new ::commonmodule::StatusSPS(*from.transtoislndongridlossenabled_);
+  if (from.has_transtoislndongridlossenabled()) {
+    transtoislndongridlossenabled_ = new ::commonmodule::ControlDPC(*from.transtoislndongridlossenabled_);
   } else {
     transtoislndongridlossenabled_ = nullptr;
   }
-  if (from._internal_has_voltagesetpointenabled()) {
-    voltagesetpointenabled_ = new ::commonmodule::StatusSPS(*from.voltagesetpointenabled_);
+  if (from.has_voltagesetpointenabled()) {
+    voltagesetpointenabled_ = new ::commonmodule::ControlDPC(*from.voltagesetpointenabled_);
   } else {
     voltagesetpointenabled_ = nullptr;
   }
@@ -5049,20 +7095,19 @@ ESSPointStatus::ESSPointStatus(const ESSPointStatus& from)
 }
 
 void ESSPointStatus::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&blackstartenabled_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&voltagesetpointenabled_) -
-    reinterpret_cast<char*>(&blackstartenabled_)) + sizeof(voltagesetpointenabled_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ESSPointStatus_essmodule_2fessmodule_2eproto.base);
+  ::memset(&blackstartenabled_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&voltagesetpointenabled_) -
+      reinterpret_cast<char*>(&blackstartenabled_)) + sizeof(voltagesetpointenabled_));
 }
 
 ESSPointStatus::~ESSPointStatus() {
   // @@protoc_insertion_point(destructor:essmodule.ESSPointStatus)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ESSPointStatus::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete blackstartenabled_;
   if (this != internal_default_instance()) delete frequencysetpointenabled_;
   if (this != internal_default_instance()) delete function_;
@@ -5078,310 +7123,643 @@ void ESSPointStatus::SharedDtor() {
   if (this != internal_default_instance()) delete voltagesetpointenabled_;
 }
 
-void ESSPointStatus::ArenaDtor(void* object) {
-  ESSPointStatus* _this = reinterpret_cast< ESSPointStatus* >(object);
-  (void)_this;
-}
-void ESSPointStatus::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSPointStatus::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const ESSPointStatus& ESSPointStatus::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ESSPointStatus_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void ESSPointStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSPointStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && blackstartenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && blackstartenabled_ != nullptr) {
     delete blackstartenabled_;
   }
   blackstartenabled_ = nullptr;
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && frequencysetpointenabled_ != nullptr) {
     delete frequencysetpointenabled_;
   }
   frequencysetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && function_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && function_ != nullptr) {
     delete function_;
   }
   function_ = nullptr;
-  if (GetArena() == nullptr && mode_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && mode_ != nullptr) {
     delete mode_;
   }
   mode_ = nullptr;
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pcthzdroop_ != nullptr) {
     delete pcthzdroop_;
   }
   pcthzdroop_ = nullptr;
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pctvdroop_ != nullptr) {
     delete pctvdroop_;
   }
   pctvdroop_ = nullptr;
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && ramprates_ != nullptr) {
     delete ramprates_;
   }
   ramprates_ = nullptr;
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
     delete reactivepwrsetpointenabled_;
   }
   reactivepwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && realpwrsetpointenabled_ != nullptr) {
     delete realpwrsetpointenabled_;
   }
   realpwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && state_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && state_ != nullptr) {
     delete state_;
   }
   state_ = nullptr;
-  if (GetArena() == nullptr && syncbacktogrid_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && syncbacktogrid_ != nullptr) {
     delete syncbacktogrid_;
   }
   syncbacktogrid_ = nullptr;
-  if (GetArena() == nullptr && transtoislndongridlossenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && transtoislndongridlossenabled_ != nullptr) {
     delete transtoislndongridlossenabled_;
   }
   transtoislndongridlossenabled_ = nullptr;
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagesetpointenabled_ != nullptr) {
     delete voltagesetpointenabled_;
   }
   voltagesetpointenabled_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* ESSPointStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ESSPointStatus::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ESSPointStatus*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
-      // .commonmodule.StatusSPS blackStartEnabled = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_blackstartenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS frequencySetPointEnabled = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_frequencysetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      // .commonmodule.ControlDPC blackStartEnabled = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_blackstartenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_frequencysetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.ESSFunction function = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_function(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::ESSFunction::_InternalParse;
+        object = msg->mutable_function();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.ENG_GridConnectModeKind mode = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mode(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ENG_GridConnectModeKind::_InternalParse;
+        object = msg->mutable_mode();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue pctHzDroop = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_pcthzdroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_pcthzdroop();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue pctVDroop = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(_internal_mutable_pctvdroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_pctvdroop();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.RampRate rampRates = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ctx->ParseMessage(_internal_mutable_ramprates(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 8;
-      case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          ptr = ctx->ParseMessage(_internal_mutable_reactivepwrsetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS realPwrSetPointEnabled = 9;
-      case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
-          ptr = ctx->ParseMessage(_internal_mutable_realpwrsetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 7: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::RampRate::_InternalParse;
+        object = msg->mutable_ramprates();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 8;
+      case 8: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 66) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_reactivepwrsetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC realPwrSetPointEnabled = 9;
+      case 9: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 74) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_realpwrsetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.Optional_StateKind state = 10;
-      case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
-          ptr = ctx->ParseMessage(_internal_mutable_state(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS syncBackToGrid = 11;
-      case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
-          ptr = ctx->ParseMessage(_internal_mutable_syncbacktogrid(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS transToIslndOnGridLossEnabled = 12;
-      case 12:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
-          ptr = ctx->ParseMessage(_internal_mutable_transtoislndongridlossenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS voltageSetPointEnabled = 13;
-      case 13:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
-          ptr = ctx->ParseMessage(_internal_mutable_voltagesetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 10: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 82) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::Optional_StateKind::_InternalParse;
+        object = msg->mutable_state();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC syncBackToGrid = 11;
+      case 11: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 90) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_syncbacktogrid();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 12;
+      case 12: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 98) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_transtoislndongridlossenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC voltageSetPointEnabled = 13;
+      case 13: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 106) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_voltagesetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ESSPointStatus::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.ESSPointStatus)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ControlDPC blackStartEnabled = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_blackstartenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSPointStatus::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSPointStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_frequencysetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .essmodule.ESSFunction function = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_function()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ENG_GridConnectModeKind mode = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_mode()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue pctHzDroop = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_pcthzdroop()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue pctVDroop = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_pctvdroop()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.RampRate rampRates = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (58 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_ramprates()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (66 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_reactivepwrsetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC realPwrSetPointEnabled = 9;
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (74 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_realpwrsetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.Optional_StateKind state = 10;
+      case 10: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (82 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_state()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC syncBackToGrid = 11;
+      case 11: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (90 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_syncbacktogrid()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 12;
+      case 12: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (98 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_transtoislndongridlossenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC voltageSetPointEnabled = 13;
+      case 13: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (106 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_voltagesetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.ESSPointStatus)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.ESSPointStatus)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ESSPointStatus::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.ESSPointStatus)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .commonmodule.StatusSPS blackStartEnabled = 1;
+  // .commonmodule.ControlDPC blackStartEnabled = 1;
   if (this->has_blackstartenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::blackstartenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::blackstartenabled(this), output);
   }
 
-  // .commonmodule.StatusSPS frequencySetPointEnabled = 2;
+  // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
   if (this->has_frequencysetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::frequencysetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::frequencysetpointenabled(this), output);
   }
 
   // .essmodule.ESSFunction function = 3;
   if (this->has_function()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::function(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::function(this), output);
   }
 
   // .commonmodule.ENG_GridConnectModeKind mode = 4;
   if (this->has_mode()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::mode(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::mode(this), output);
   }
 
   // .google.protobuf.FloatValue pctHzDroop = 5;
   if (this->has_pcthzdroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::pcthzdroop(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, HasBitSetters::pcthzdroop(this), output);
   }
 
   // .google.protobuf.FloatValue pctVDroop = 6;
   if (this->has_pctvdroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::pctvdroop(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, HasBitSetters::pctvdroop(this), output);
   }
 
   // .commonmodule.RampRate rampRates = 7;
   if (this->has_ramprates()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::ramprates(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      7, HasBitSetters::ramprates(this), output);
   }
 
-  // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 8;
+  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 8;
   if (this->has_reactivepwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::reactivepwrsetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      8, HasBitSetters::reactivepwrsetpointenabled(this), output);
   }
 
-  // .commonmodule.StatusSPS realPwrSetPointEnabled = 9;
+  // .commonmodule.ControlDPC realPwrSetPointEnabled = 9;
   if (this->has_realpwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        9, _Internal::realpwrsetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      9, HasBitSetters::realpwrsetpointenabled(this), output);
   }
 
   // .commonmodule.Optional_StateKind state = 10;
   if (this->has_state()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        10, _Internal::state(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      10, HasBitSetters::state(this), output);
   }
 
-  // .commonmodule.StatusSPS syncBackToGrid = 11;
+  // .commonmodule.ControlDPC syncBackToGrid = 11;
   if (this->has_syncbacktogrid()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        11, _Internal::syncbacktogrid(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      11, HasBitSetters::syncbacktogrid(this), output);
   }
 
-  // .commonmodule.StatusSPS transToIslndOnGridLossEnabled = 12;
+  // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 12;
   if (this->has_transtoislndongridlossenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        12, _Internal::transtoislndongridlossenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      12, HasBitSetters::transtoislndongridlossenabled(this), output);
   }
 
-  // .commonmodule.StatusSPS voltageSetPointEnabled = 13;
+  // .commonmodule.ControlDPC voltageSetPointEnabled = 13;
   if (this->has_voltagesetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        13, _Internal::voltagesetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      13, HasBitSetters::voltagesetpointenabled(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.ESSPointStatus)
+}
+
+::google::protobuf::uint8* ESSPointStatus::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSPointStatus)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlDPC blackStartEnabled = 1;
+  if (this->has_blackstartenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::blackstartenabled(this), target);
+  }
+
+  // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
+  if (this->has_frequencysetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::frequencysetpointenabled(this), target);
+  }
+
+  // .essmodule.ESSFunction function = 3;
+  if (this->has_function()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::function(this), target);
+  }
+
+  // .commonmodule.ENG_GridConnectModeKind mode = 4;
+  if (this->has_mode()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::mode(this), target);
+  }
+
+  // .google.protobuf.FloatValue pctHzDroop = 5;
+  if (this->has_pcthzdroop()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, HasBitSetters::pcthzdroop(this), target);
+  }
+
+  // .google.protobuf.FloatValue pctVDroop = 6;
+  if (this->has_pctvdroop()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        6, HasBitSetters::pctvdroop(this), target);
+  }
+
+  // .commonmodule.RampRate rampRates = 7;
+  if (this->has_ramprates()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        7, HasBitSetters::ramprates(this), target);
+  }
+
+  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 8;
+  if (this->has_reactivepwrsetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        8, HasBitSetters::reactivepwrsetpointenabled(this), target);
+  }
+
+  // .commonmodule.ControlDPC realPwrSetPointEnabled = 9;
+  if (this->has_realpwrsetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        9, HasBitSetters::realpwrsetpointenabled(this), target);
+  }
+
+  // .commonmodule.Optional_StateKind state = 10;
+  if (this->has_state()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        10, HasBitSetters::state(this), target);
+  }
+
+  // .commonmodule.ControlDPC syncBackToGrid = 11;
+  if (this->has_syncbacktogrid()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        11, HasBitSetters::syncbacktogrid(this), target);
+  }
+
+  // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 12;
+  if (this->has_transtoislndongridlossenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        12, HasBitSetters::transtoislndongridlossenabled(this), target);
+  }
+
+  // .commonmodule.ControlDPC voltageSetPointEnabled = 13;
+  if (this->has_voltagesetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        13, HasBitSetters::voltagesetpointenabled(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSPointStatus)
   return target;
@@ -5391,119 +7769,120 @@ size_t ESSPointStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSPointStatus)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .commonmodule.StatusSPS blackStartEnabled = 1;
+  // .commonmodule.ControlDPC blackStartEnabled = 1;
   if (this->has_blackstartenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *blackstartenabled_);
   }
 
-  // .commonmodule.StatusSPS frequencySetPointEnabled = 2;
+  // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
   if (this->has_frequencysetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *frequencysetpointenabled_);
   }
 
   // .essmodule.ESSFunction function = 3;
   if (this->has_function()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *function_);
   }
 
   // .commonmodule.ENG_GridConnectModeKind mode = 4;
   if (this->has_mode()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *mode_);
   }
 
   // .google.protobuf.FloatValue pctHzDroop = 5;
   if (this->has_pcthzdroop()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *pcthzdroop_);
   }
 
   // .google.protobuf.FloatValue pctVDroop = 6;
   if (this->has_pctvdroop()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *pctvdroop_);
   }
 
   // .commonmodule.RampRate rampRates = 7;
   if (this->has_ramprates()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *ramprates_);
   }
 
-  // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 8;
+  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 8;
   if (this->has_reactivepwrsetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *reactivepwrsetpointenabled_);
   }
 
-  // .commonmodule.StatusSPS realPwrSetPointEnabled = 9;
+  // .commonmodule.ControlDPC realPwrSetPointEnabled = 9;
   if (this->has_realpwrsetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *realpwrsetpointenabled_);
   }
 
   // .commonmodule.Optional_StateKind state = 10;
   if (this->has_state()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *state_);
   }
 
-  // .commonmodule.StatusSPS syncBackToGrid = 11;
+  // .commonmodule.ControlDPC syncBackToGrid = 11;
   if (this->has_syncbacktogrid()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *syncbacktogrid_);
   }
 
-  // .commonmodule.StatusSPS transToIslndOnGridLossEnabled = 12;
+  // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 12;
   if (this->has_transtoislndongridlossenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *transtoislndongridlossenabled_);
   }
 
-  // .commonmodule.StatusSPS voltageSetPointEnabled = 13;
+  // .commonmodule.ControlDPC voltageSetPointEnabled = 13;
   if (this->has_voltagesetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *voltagesetpointenabled_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void ESSPointStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSPointStatus::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSPointStatus)
   GOOGLE_DCHECK_NE(&from, this);
   const ESSPointStatus* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSPointStatus>(
+      ::google::protobuf::DynamicCastToGenerated<ESSPointStatus>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSPointStatus)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSPointStatus)
     MergeFrom(*source);
@@ -5513,52 +7892,52 @@ void ESSPointStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void ESSPointStatus::MergeFrom(const ESSPointStatus& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSPointStatus)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_blackstartenabled()) {
-    _internal_mutable_blackstartenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_blackstartenabled());
+    mutable_blackstartenabled()->::commonmodule::ControlDPC::MergeFrom(from.blackstartenabled());
   }
   if (from.has_frequencysetpointenabled()) {
-    _internal_mutable_frequencysetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_frequencysetpointenabled());
+    mutable_frequencysetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.frequencysetpointenabled());
   }
   if (from.has_function()) {
-    _internal_mutable_function()->::essmodule::ESSFunction::MergeFrom(from._internal_function());
+    mutable_function()->::essmodule::ESSFunction::MergeFrom(from.function());
   }
   if (from.has_mode()) {
-    _internal_mutable_mode()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from._internal_mode());
+    mutable_mode()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from.mode());
   }
   if (from.has_pcthzdroop()) {
-    _internal_mutable_pcthzdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pcthzdroop());
+    mutable_pcthzdroop()->::google::protobuf::FloatValue::MergeFrom(from.pcthzdroop());
   }
   if (from.has_pctvdroop()) {
-    _internal_mutable_pctvdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pctvdroop());
+    mutable_pctvdroop()->::google::protobuf::FloatValue::MergeFrom(from.pctvdroop());
   }
   if (from.has_ramprates()) {
-    _internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from._internal_ramprates());
+    mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from.ramprates());
   }
   if (from.has_reactivepwrsetpointenabled()) {
-    _internal_mutable_reactivepwrsetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_reactivepwrsetpointenabled());
+    mutable_reactivepwrsetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.reactivepwrsetpointenabled());
   }
   if (from.has_realpwrsetpointenabled()) {
-    _internal_mutable_realpwrsetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_realpwrsetpointenabled());
+    mutable_realpwrsetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.realpwrsetpointenabled());
   }
   if (from.has_state()) {
-    _internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from._internal_state());
+    mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from.state());
   }
   if (from.has_syncbacktogrid()) {
-    _internal_mutable_syncbacktogrid()->::commonmodule::StatusSPS::MergeFrom(from._internal_syncbacktogrid());
+    mutable_syncbacktogrid()->::commonmodule::ControlDPC::MergeFrom(from.syncbacktogrid());
   }
   if (from.has_transtoislndongridlossenabled()) {
-    _internal_mutable_transtoislndongridlossenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_transtoislndongridlossenabled());
+    mutable_transtoislndongridlossenabled()->::commonmodule::ControlDPC::MergeFrom(from.transtoislndongridlossenabled());
   }
   if (from.has_voltagesetpointenabled()) {
-    _internal_mutable_voltagesetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_voltagesetpointenabled());
+    mutable_voltagesetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.voltagesetpointenabled());
   }
 }
 
-void ESSPointStatus::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSPointStatus::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSPointStatus)
   if (&from == this) return;
   Clear();
@@ -5576,25 +7955,51 @@ bool ESSPointStatus::IsInitialized() const {
   return true;
 }
 
+void ESSPointStatus::Swap(ESSPointStatus* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void ESSPointStatus::InternalSwap(ESSPointStatus* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSPointStatus, voltagesetpointenabled_)
-      + sizeof(ESSPointStatus::voltagesetpointenabled_)
-      - PROTOBUF_FIELD_OFFSET(ESSPointStatus, blackstartenabled_)>(
-          reinterpret_cast<char*>(&blackstartenabled_),
-          reinterpret_cast<char*>(&other->blackstartenabled_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(blackstartenabled_, other->blackstartenabled_);
+  swap(frequencysetpointenabled_, other->frequencysetpointenabled_);
+  swap(function_, other->function_);
+  swap(mode_, other->mode_);
+  swap(pcthzdroop_, other->pcthzdroop_);
+  swap(pctvdroop_, other->pctvdroop_);
+  swap(ramprates_, other->ramprates_);
+  swap(reactivepwrsetpointenabled_, other->reactivepwrsetpointenabled_);
+  swap(realpwrsetpointenabled_, other->realpwrsetpointenabled_);
+  swap(state_, other->state_);
+  swap(syncbacktogrid_, other->syncbacktogrid_);
+  swap(transtoislndongridlossenabled_, other->transtoislndongridlossenabled_);
+  swap(voltagesetpointenabled_, other->voltagesetpointenabled_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ESSPointStatus::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata ESSPointStatus::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class ESSEventAndStatusZGEN::_Internal {
+void ESSEventAndStatusZGEN::InitAsDefaultInstance() {
+  ::essmodule::_ESSEventAndStatusZGEN_default_instance_._instance.get_mutable()->logicalnodeforeventandstatus_ = const_cast< ::commonmodule::LogicalNodeForEventAndStatus*>(
+      ::commonmodule::LogicalNodeForEventAndStatus::internal_default_instance());
+  ::essmodule::_ESSEventAndStatusZGEN_default_instance_._instance.get_mutable()->auxpwrst_ = const_cast< ::commonmodule::StatusSPS*>(
+      ::commonmodule::StatusSPS::internal_default_instance());
+  ::essmodule::_ESSEventAndStatusZGEN_default_instance_._instance.get_mutable()->dynamictest_ = const_cast< ::commonmodule::ENS_DynamicTestKind*>(
+      ::commonmodule::ENS_DynamicTestKind::internal_default_instance());
+  ::essmodule::_ESSEventAndStatusZGEN_default_instance_._instance.get_mutable()->emgstop_ = const_cast< ::commonmodule::StatusSPS*>(
+      ::commonmodule::StatusSPS::internal_default_instance());
+  ::essmodule::_ESSEventAndStatusZGEN_default_instance_._instance.get_mutable()->gnsynst_ = const_cast< ::commonmodule::StatusSPS*>(
+      ::commonmodule::StatusSPS::internal_default_instance());
+  ::essmodule::_ESSEventAndStatusZGEN_default_instance_._instance.get_mutable()->pointstatus_ = const_cast< ::essmodule::ESSPointStatus*>(
+      ::essmodule::ESSPointStatus::internal_default_instance());
+}
+class ESSEventAndStatusZGEN::HasBitSetters {
  public:
   static const ::commonmodule::LogicalNodeForEventAndStatus& logicalnodeforeventandstatus(const ESSEventAndStatusZGEN* msg);
   static const ::commonmodule::StatusSPS& auxpwrst(const ESSEventAndStatusZGEN* msg);
@@ -5605,94 +8010,103 @@ class ESSEventAndStatusZGEN::_Internal {
 };
 
 const ::commonmodule::LogicalNodeForEventAndStatus&
-ESSEventAndStatusZGEN::_Internal::logicalnodeforeventandstatus(const ESSEventAndStatusZGEN* msg) {
+ESSEventAndStatusZGEN::HasBitSetters::logicalnodeforeventandstatus(const ESSEventAndStatusZGEN* msg) {
   return *msg->logicalnodeforeventandstatus_;
 }
 const ::commonmodule::StatusSPS&
-ESSEventAndStatusZGEN::_Internal::auxpwrst(const ESSEventAndStatusZGEN* msg) {
+ESSEventAndStatusZGEN::HasBitSetters::auxpwrst(const ESSEventAndStatusZGEN* msg) {
   return *msg->auxpwrst_;
 }
 const ::commonmodule::ENS_DynamicTestKind&
-ESSEventAndStatusZGEN::_Internal::dynamictest(const ESSEventAndStatusZGEN* msg) {
+ESSEventAndStatusZGEN::HasBitSetters::dynamictest(const ESSEventAndStatusZGEN* msg) {
   return *msg->dynamictest_;
 }
 const ::commonmodule::StatusSPS&
-ESSEventAndStatusZGEN::_Internal::emgstop(const ESSEventAndStatusZGEN* msg) {
+ESSEventAndStatusZGEN::HasBitSetters::emgstop(const ESSEventAndStatusZGEN* msg) {
   return *msg->emgstop_;
 }
 const ::commonmodule::StatusSPS&
-ESSEventAndStatusZGEN::_Internal::gnsynst(const ESSEventAndStatusZGEN* msg) {
+ESSEventAndStatusZGEN::HasBitSetters::gnsynst(const ESSEventAndStatusZGEN* msg) {
   return *msg->gnsynst_;
 }
 const ::essmodule::ESSPointStatus&
-ESSEventAndStatusZGEN::_Internal::pointstatus(const ESSEventAndStatusZGEN* msg) {
+ESSEventAndStatusZGEN::HasBitSetters::pointstatus(const ESSEventAndStatusZGEN* msg) {
   return *msg->pointstatus_;
 }
 void ESSEventAndStatusZGEN::clear_logicalnodeforeventandstatus() {
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
     delete logicalnodeforeventandstatus_;
   }
   logicalnodeforeventandstatus_ = nullptr;
 }
 void ESSEventAndStatusZGEN::clear_auxpwrst() {
-  if (GetArena() == nullptr && auxpwrst_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && auxpwrst_ != nullptr) {
     delete auxpwrst_;
   }
   auxpwrst_ = nullptr;
 }
 void ESSEventAndStatusZGEN::clear_dynamictest() {
-  if (GetArena() == nullptr && dynamictest_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && dynamictest_ != nullptr) {
     delete dynamictest_;
   }
   dynamictest_ = nullptr;
 }
 void ESSEventAndStatusZGEN::clear_emgstop() {
-  if (GetArena() == nullptr && emgstop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && emgstop_ != nullptr) {
     delete emgstop_;
   }
   emgstop_ = nullptr;
 }
 void ESSEventAndStatusZGEN::clear_gnsynst() {
-  if (GetArena() == nullptr && gnsynst_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && gnsynst_ != nullptr) {
     delete gnsynst_;
   }
   gnsynst_ = nullptr;
 }
-ESSEventAndStatusZGEN::ESSEventAndStatusZGEN(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ESSEventAndStatusZGEN::kLogicalNodeForEventAndStatusFieldNumber;
+const int ESSEventAndStatusZGEN::kAuxPwrStFieldNumber;
+const int ESSEventAndStatusZGEN::kDynamicTestFieldNumber;
+const int ESSEventAndStatusZGEN::kEmgStopFieldNumber;
+const int ESSEventAndStatusZGEN::kGnSynStFieldNumber;
+const int ESSEventAndStatusZGEN::kPointStatusFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ESSEventAndStatusZGEN::ESSEventAndStatusZGEN()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSEventAndStatusZGEN)
+  // @@protoc_insertion_point(constructor:essmodule.ESSEventAndStatusZGEN)
 }
 ESSEventAndStatusZGEN::ESSEventAndStatusZGEN(const ESSEventAndStatusZGEN& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_logicalnodeforeventandstatus()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_logicalnodeforeventandstatus()) {
     logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from.logicalnodeforeventandstatus_);
   } else {
     logicalnodeforeventandstatus_ = nullptr;
   }
-  if (from._internal_has_auxpwrst()) {
+  if (from.has_auxpwrst()) {
     auxpwrst_ = new ::commonmodule::StatusSPS(*from.auxpwrst_);
   } else {
     auxpwrst_ = nullptr;
   }
-  if (from._internal_has_dynamictest()) {
+  if (from.has_dynamictest()) {
     dynamictest_ = new ::commonmodule::ENS_DynamicTestKind(*from.dynamictest_);
   } else {
     dynamictest_ = nullptr;
   }
-  if (from._internal_has_emgstop()) {
+  if (from.has_emgstop()) {
     emgstop_ = new ::commonmodule::StatusSPS(*from.emgstop_);
   } else {
     emgstop_ = nullptr;
   }
-  if (from._internal_has_gnsynst()) {
+  if (from.has_gnsynst()) {
     gnsynst_ = new ::commonmodule::StatusSPS(*from.gnsynst_);
   } else {
     gnsynst_ = nullptr;
   }
-  if (from._internal_has_pointstatus()) {
+  if (from.has_pointstatus()) {
     pointstatus_ = new ::essmodule::ESSPointStatus(*from.pointstatus_);
   } else {
     pointstatus_ = nullptr;
@@ -5701,20 +8115,19 @@ ESSEventAndStatusZGEN::ESSEventAndStatusZGEN(const ESSEventAndStatusZGEN& from)
 }
 
 void ESSEventAndStatusZGEN::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&pointstatus_) -
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(pointstatus_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ESSEventAndStatusZGEN_essmodule_2fessmodule_2eproto.base);
+  ::memset(&logicalnodeforeventandstatus_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&pointstatus_) -
+      reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(pointstatus_));
 }
 
 ESSEventAndStatusZGEN::~ESSEventAndStatusZGEN() {
   // @@protoc_insertion_point(destructor:essmodule.ESSEventAndStatusZGEN)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ESSEventAndStatusZGEN::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete logicalnodeforeventandstatus_;
   if (this != internal_default_instance()) delete auxpwrst_;
   if (this != internal_default_instance()) delete dynamictest_;
@@ -5723,177 +8136,356 @@ void ESSEventAndStatusZGEN::SharedDtor() {
   if (this != internal_default_instance()) delete pointstatus_;
 }
 
-void ESSEventAndStatusZGEN::ArenaDtor(void* object) {
-  ESSEventAndStatusZGEN* _this = reinterpret_cast< ESSEventAndStatusZGEN* >(object);
-  (void)_this;
-}
-void ESSEventAndStatusZGEN::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSEventAndStatusZGEN::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const ESSEventAndStatusZGEN& ESSEventAndStatusZGEN::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ESSEventAndStatusZGEN_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void ESSEventAndStatusZGEN::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSEventAndStatusZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
     delete logicalnodeforeventandstatus_;
   }
   logicalnodeforeventandstatus_ = nullptr;
-  if (GetArena() == nullptr && auxpwrst_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && auxpwrst_ != nullptr) {
     delete auxpwrst_;
   }
   auxpwrst_ = nullptr;
-  if (GetArena() == nullptr && dynamictest_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && dynamictest_ != nullptr) {
     delete dynamictest_;
   }
   dynamictest_ = nullptr;
-  if (GetArena() == nullptr && emgstop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && emgstop_ != nullptr) {
     delete emgstop_;
   }
   emgstop_ = nullptr;
-  if (GetArena() == nullptr && gnsynst_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && gnsynst_ != nullptr) {
     delete gnsynst_;
   }
   gnsynst_ = nullptr;
-  if (GetArena() == nullptr && pointstatus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pointstatus_ != nullptr) {
     delete pointstatus_;
   }
   pointstatus_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* ESSEventAndStatusZGEN::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ESSEventAndStatusZGEN::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ESSEventAndStatusZGEN*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforeventandstatus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::LogicalNodeForEventAndStatus::_InternalParse;
+        object = msg->mutable_logicalnodeforeventandstatus();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.StatusSPS AuxPwrSt = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_auxpwrst(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::StatusSPS::_InternalParse;
+        object = msg->mutable_auxpwrst();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_dynamictest(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ENS_DynamicTestKind::_InternalParse;
+        object = msg->mutable_dynamictest();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.StatusSPS EmgStop = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_emgstop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::StatusSPS::_InternalParse;
+        object = msg->mutable_emgstop();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.StatusSPS GnSynSt = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_gnsynst(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::StatusSPS::_InternalParse;
+        object = msg->mutable_gnsynst();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.ESSPointStatus PointStatus = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(_internal_mutable_pointstatus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::ESSPointStatus::_InternalParse;
+        object = msg->mutable_pointstatus();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ESSEventAndStatusZGEN::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.ESSEventAndStatusZGEN)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_logicalnodeforeventandstatus()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSEventAndStatusZGEN::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSEventAndStatusZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.StatusSPS AuxPwrSt = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_auxpwrst()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_dynamictest()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.StatusSPS EmgStop = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_emgstop()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.StatusSPS GnSynSt = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_gnsynst()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .essmodule.ESSPointStatus PointStatus = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_pointstatus()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.ESSEventAndStatusZGEN)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.ESSEventAndStatusZGEN)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ESSEventAndStatusZGEN::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.ESSEventAndStatusZGEN)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
   if (this->has_logicalnodeforeventandstatus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnodeforeventandstatus(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::logicalnodeforeventandstatus(this), output);
   }
 
   // .commonmodule.StatusSPS AuxPwrSt = 2;
   if (this->has_auxpwrst()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::auxpwrst(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::auxpwrst(this), output);
   }
 
   // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
   if (this->has_dynamictest()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::dynamictest(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::dynamictest(this), output);
   }
 
   // .commonmodule.StatusSPS EmgStop = 4;
   if (this->has_emgstop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::emgstop(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::emgstop(this), output);
   }
 
   // .commonmodule.StatusSPS GnSynSt = 5;
   if (this->has_gnsynst()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::gnsynst(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, HasBitSetters::gnsynst(this), output);
   }
 
   // .essmodule.ESSPointStatus PointStatus = 6;
   if (this->has_pointstatus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::pointstatus(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, HasBitSetters::pointstatus(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.ESSEventAndStatusZGEN)
+}
+
+::google::protobuf::uint8* ESSEventAndStatusZGEN::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSEventAndStatusZGEN)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
+  if (this->has_logicalnodeforeventandstatus()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::logicalnodeforeventandstatus(this), target);
+  }
+
+  // .commonmodule.StatusSPS AuxPwrSt = 2;
+  if (this->has_auxpwrst()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::auxpwrst(this), target);
+  }
+
+  // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
+  if (this->has_dynamictest()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::dynamictest(this), target);
+  }
+
+  // .commonmodule.StatusSPS EmgStop = 4;
+  if (this->has_emgstop()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::emgstop(this), target);
+  }
+
+  // .commonmodule.StatusSPS GnSynSt = 5;
+  if (this->has_gnsynst()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, HasBitSetters::gnsynst(this), target);
+  }
+
+  // .essmodule.ESSPointStatus PointStatus = 6;
+  if (this->has_pointstatus()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        6, HasBitSetters::pointstatus(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSEventAndStatusZGEN)
   return target;
@@ -5903,70 +8495,71 @@ size_t ESSEventAndStatusZGEN::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSEventAndStatusZGEN)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
   if (this->has_logicalnodeforeventandstatus()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *logicalnodeforeventandstatus_);
   }
 
   // .commonmodule.StatusSPS AuxPwrSt = 2;
   if (this->has_auxpwrst()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *auxpwrst_);
   }
 
   // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
   if (this->has_dynamictest()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *dynamictest_);
   }
 
   // .commonmodule.StatusSPS EmgStop = 4;
   if (this->has_emgstop()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *emgstop_);
   }
 
   // .commonmodule.StatusSPS GnSynSt = 5;
   if (this->has_gnsynst()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *gnsynst_);
   }
 
   // .essmodule.ESSPointStatus PointStatus = 6;
   if (this->has_pointstatus()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *pointstatus_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void ESSEventAndStatusZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSEventAndStatusZGEN::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSEventAndStatusZGEN)
   GOOGLE_DCHECK_NE(&from, this);
   const ESSEventAndStatusZGEN* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSEventAndStatusZGEN>(
+      ::google::protobuf::DynamicCastToGenerated<ESSEventAndStatusZGEN>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSEventAndStatusZGEN)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSEventAndStatusZGEN)
     MergeFrom(*source);
@@ -5976,31 +8569,31 @@ void ESSEventAndStatusZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& fr
 void ESSEventAndStatusZGEN::MergeFrom(const ESSEventAndStatusZGEN& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSEventAndStatusZGEN)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_logicalnodeforeventandstatus()) {
-    _internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from._internal_logicalnodeforeventandstatus());
+    mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from.logicalnodeforeventandstatus());
   }
   if (from.has_auxpwrst()) {
-    _internal_mutable_auxpwrst()->::commonmodule::StatusSPS::MergeFrom(from._internal_auxpwrst());
+    mutable_auxpwrst()->::commonmodule::StatusSPS::MergeFrom(from.auxpwrst());
   }
   if (from.has_dynamictest()) {
-    _internal_mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(from._internal_dynamictest());
+    mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(from.dynamictest());
   }
   if (from.has_emgstop()) {
-    _internal_mutable_emgstop()->::commonmodule::StatusSPS::MergeFrom(from._internal_emgstop());
+    mutable_emgstop()->::commonmodule::StatusSPS::MergeFrom(from.emgstop());
   }
   if (from.has_gnsynst()) {
-    _internal_mutable_gnsynst()->::commonmodule::StatusSPS::MergeFrom(from._internal_gnsynst());
+    mutable_gnsynst()->::commonmodule::StatusSPS::MergeFrom(from.gnsynst());
   }
   if (from.has_pointstatus()) {
-    _internal_mutable_pointstatus()->::essmodule::ESSPointStatus::MergeFrom(from._internal_pointstatus());
+    mutable_pointstatus()->::essmodule::ESSPointStatus::MergeFrom(from.pointstatus());
   }
 }
 
-void ESSEventAndStatusZGEN::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSEventAndStatusZGEN::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSEventAndStatusZGEN)
   if (&from == this) return;
   Clear();
@@ -6018,43 +8611,56 @@ bool ESSEventAndStatusZGEN::IsInitialized() const {
   return true;
 }
 
+void ESSEventAndStatusZGEN::Swap(ESSEventAndStatusZGEN* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void ESSEventAndStatusZGEN::InternalSwap(ESSEventAndStatusZGEN* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSEventAndStatusZGEN, pointstatus_)
-      + sizeof(ESSEventAndStatusZGEN::pointstatus_)
-      - PROTOBUF_FIELD_OFFSET(ESSEventAndStatusZGEN, logicalnodeforeventandstatus_)>(
-          reinterpret_cast<char*>(&logicalnodeforeventandstatus_),
-          reinterpret_cast<char*>(&other->logicalnodeforeventandstatus_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(logicalnodeforeventandstatus_, other->logicalnodeforeventandstatus_);
+  swap(auxpwrst_, other->auxpwrst_);
+  swap(dynamictest_, other->dynamictest_);
+  swap(emgstop_, other->emgstop_);
+  swap(gnsynst_, other->gnsynst_);
+  swap(pointstatus_, other->pointstatus_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ESSEventAndStatusZGEN::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata ESSEventAndStatusZGEN::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class ESSEventZGEN::_Internal {
+void ESSEventZGEN::InitAsDefaultInstance() {
+  ::essmodule::_ESSEventZGEN_default_instance_._instance.get_mutable()->esseventandstatuszgen_ = const_cast< ::essmodule::ESSEventAndStatusZGEN*>(
+      ::essmodule::ESSEventAndStatusZGEN::internal_default_instance());
+}
+class ESSEventZGEN::HasBitSetters {
  public:
   static const ::essmodule::ESSEventAndStatusZGEN& esseventandstatuszgen(const ESSEventZGEN* msg);
 };
 
 const ::essmodule::ESSEventAndStatusZGEN&
-ESSEventZGEN::_Internal::esseventandstatuszgen(const ESSEventZGEN* msg) {
+ESSEventZGEN::HasBitSetters::esseventandstatuszgen(const ESSEventZGEN* msg) {
   return *msg->esseventandstatuszgen_;
 }
-ESSEventZGEN::ESSEventZGEN(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ESSEventZGEN::kESSEventAndStatusZGENFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ESSEventZGEN::ESSEventZGEN()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSEventZGEN)
+  // @@protoc_insertion_point(constructor:essmodule.ESSEventZGEN)
 }
 ESSEventZGEN::ESSEventZGEN(const ESSEventZGEN& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_esseventandstatuszgen()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_esseventandstatuszgen()) {
     esseventandstatuszgen_ = new ::essmodule::ESSEventAndStatusZGEN(*from.esseventandstatuszgen_);
   } else {
     esseventandstatuszgen_ = nullptr;
@@ -6063,96 +8669,165 @@ ESSEventZGEN::ESSEventZGEN(const ESSEventZGEN& from)
 }
 
 void ESSEventZGEN::SharedCtor() {
-esseventandstatuszgen_ = nullptr;
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ESSEventZGEN_essmodule_2fessmodule_2eproto.base);
+  esseventandstatuszgen_ = nullptr;
 }
 
 ESSEventZGEN::~ESSEventZGEN() {
   // @@protoc_insertion_point(destructor:essmodule.ESSEventZGEN)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ESSEventZGEN::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete esseventandstatuszgen_;
 }
 
-void ESSEventZGEN::ArenaDtor(void* object) {
-  ESSEventZGEN* _this = reinterpret_cast< ESSEventZGEN* >(object);
-  (void)_this;
-}
-void ESSEventZGEN::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSEventZGEN::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const ESSEventZGEN& ESSEventZGEN::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ESSEventZGEN_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void ESSEventZGEN::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSEventZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && esseventandstatuszgen_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && esseventandstatuszgen_ != nullptr) {
     delete esseventandstatuszgen_;
   }
   esseventandstatuszgen_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* ESSEventZGEN::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ESSEventZGEN::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ESSEventZGEN*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_esseventandstatuszgen(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::ESSEventAndStatusZGEN::_InternalParse;
+        object = msg->mutable_esseventandstatuszgen();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ESSEventZGEN::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.ESSEventZGEN)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_esseventandstatuszgen()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSEventZGEN::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSEventZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.ESSEventZGEN)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.ESSEventZGEN)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ESSEventZGEN::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.ESSEventZGEN)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
   if (this->has_esseventandstatuszgen()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::esseventandstatuszgen(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::esseventandstatuszgen(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.ESSEventZGEN)
+}
+
+::google::protobuf::uint8* ESSEventZGEN::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSEventZGEN)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
+  if (this->has_esseventandstatuszgen()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::esseventandstatuszgen(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSEventZGEN)
   return target;
@@ -6162,35 +8837,36 @@ size_t ESSEventZGEN::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSEventZGEN)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
   if (this->has_esseventandstatuszgen()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *esseventandstatuszgen_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void ESSEventZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSEventZGEN::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSEventZGEN)
   GOOGLE_DCHECK_NE(&from, this);
   const ESSEventZGEN* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSEventZGEN>(
+      ::google::protobuf::DynamicCastToGenerated<ESSEventZGEN>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSEventZGEN)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSEventZGEN)
     MergeFrom(*source);
@@ -6200,16 +8876,16 @@ void ESSEventZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void ESSEventZGEN::MergeFrom(const ESSEventZGEN& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSEventZGEN)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_esseventandstatuszgen()) {
-    _internal_mutable_esseventandstatuszgen()->::essmodule::ESSEventAndStatusZGEN::MergeFrom(from._internal_esseventandstatuszgen());
+    mutable_esseventandstatuszgen()->::essmodule::ESSEventAndStatusZGEN::MergeFrom(from.esseventandstatuszgen());
   }
 }
 
-void ESSEventZGEN::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSEventZGEN::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSEventZGEN)
   if (&from == this) return;
   Clear();
@@ -6227,20 +8903,33 @@ bool ESSEventZGEN::IsInitialized() const {
   return true;
 }
 
+void ESSEventZGEN::Swap(ESSEventZGEN* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void ESSEventZGEN::InternalSwap(ESSEventZGEN* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(esseventandstatuszgen_, other->esseventandstatuszgen_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ESSEventZGEN::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata ESSEventZGEN::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class ESSEvent::_Internal {
+void ESSEvent::InitAsDefaultInstance() {
+  ::essmodule::_ESSEvent_default_instance_._instance.get_mutable()->eventvalue_ = const_cast< ::commonmodule::EventValue*>(
+      ::commonmodule::EventValue::internal_default_instance());
+  ::essmodule::_ESSEvent_default_instance_._instance.get_mutable()->esseventzbat_ = const_cast< ::essmodule::EssEventZBAT*>(
+      ::essmodule::EssEventZBAT::internal_default_instance());
+  ::essmodule::_ESSEvent_default_instance_._instance.get_mutable()->esseventzgen_ = const_cast< ::essmodule::ESSEventZGEN*>(
+      ::essmodule::ESSEventZGEN::internal_default_instance());
+}
+class ESSEvent::HasBitSetters {
  public:
   static const ::commonmodule::EventValue& eventvalue(const ESSEvent* msg);
   static const ::essmodule::EssEventZBAT& esseventzbat(const ESSEvent* msg);
@@ -6248,43 +8937,49 @@ class ESSEvent::_Internal {
 };
 
 const ::commonmodule::EventValue&
-ESSEvent::_Internal::eventvalue(const ESSEvent* msg) {
+ESSEvent::HasBitSetters::eventvalue(const ESSEvent* msg) {
   return *msg->eventvalue_;
 }
 const ::essmodule::EssEventZBAT&
-ESSEvent::_Internal::esseventzbat(const ESSEvent* msg) {
+ESSEvent::HasBitSetters::esseventzbat(const ESSEvent* msg) {
   return *msg->esseventzbat_;
 }
 const ::essmodule::ESSEventZGEN&
-ESSEvent::_Internal::esseventzgen(const ESSEvent* msg) {
+ESSEvent::HasBitSetters::esseventzgen(const ESSEvent* msg) {
   return *msg->esseventzgen_;
 }
 void ESSEvent::clear_eventvalue() {
-  if (GetArena() == nullptr && eventvalue_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && eventvalue_ != nullptr) {
     delete eventvalue_;
   }
   eventvalue_ = nullptr;
 }
-ESSEvent::ESSEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ESSEvent::kEventValueFieldNumber;
+const int ESSEvent::kEssEventZBATFieldNumber;
+const int ESSEvent::kEssEventZGENFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ESSEvent::ESSEvent()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSEvent)
+  // @@protoc_insertion_point(constructor:essmodule.ESSEvent)
 }
 ESSEvent::ESSEvent(const ESSEvent& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_eventvalue()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_eventvalue()) {
     eventvalue_ = new ::commonmodule::EventValue(*from.eventvalue_);
   } else {
     eventvalue_ = nullptr;
   }
-  if (from._internal_has_esseventzbat()) {
+  if (from.has_esseventzbat()) {
     esseventzbat_ = new ::essmodule::EssEventZBAT(*from.esseventzbat_);
   } else {
     esseventzbat_ = nullptr;
   }
-  if (from._internal_has_esseventzgen()) {
+  if (from.has_esseventzgen()) {
     esseventzgen_ = new ::essmodule::ESSEventZGEN(*from.esseventzgen_);
   } else {
     esseventzgen_ = nullptr;
@@ -6293,139 +8988,251 @@ ESSEvent::ESSEvent(const ESSEvent& from)
 }
 
 void ESSEvent::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&eventvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&esseventzgen_) -
-    reinterpret_cast<char*>(&eventvalue_)) + sizeof(esseventzgen_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ESSEvent_essmodule_2fessmodule_2eproto.base);
+  ::memset(&eventvalue_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&esseventzgen_) -
+      reinterpret_cast<char*>(&eventvalue_)) + sizeof(esseventzgen_));
 }
 
 ESSEvent::~ESSEvent() {
   // @@protoc_insertion_point(destructor:essmodule.ESSEvent)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ESSEvent::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete eventvalue_;
   if (this != internal_default_instance()) delete esseventzbat_;
   if (this != internal_default_instance()) delete esseventzgen_;
 }
 
-void ESSEvent::ArenaDtor(void* object) {
-  ESSEvent* _this = reinterpret_cast< ESSEvent* >(object);
-  (void)_this;
-}
-void ESSEvent::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSEvent::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const ESSEvent& ESSEvent::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ESSEvent_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void ESSEvent::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && eventvalue_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && eventvalue_ != nullptr) {
     delete eventvalue_;
   }
   eventvalue_ = nullptr;
-  if (GetArena() == nullptr && esseventzbat_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && esseventzbat_ != nullptr) {
     delete esseventzbat_;
   }
   esseventzbat_ = nullptr;
-  if (GetArena() == nullptr && esseventzgen_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && esseventzgen_ != nullptr) {
     delete esseventzgen_;
   }
   esseventzgen_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* ESSEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ESSEvent::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ESSEvent*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_eventvalue(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::EventValue::_InternalParse;
+        object = msg->mutable_eventvalue();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.EssEventZBAT essEventZBAT = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_esseventzbat(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::EssEventZBAT::_InternalParse;
+        object = msg->mutable_esseventzbat();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.ESSEventZGEN essEventZGEN = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_esseventzgen(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::ESSEventZGEN::_InternalParse;
+        object = msg->mutable_esseventzgen();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ESSEvent::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.ESSEvent)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_eventvalue()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSEvent::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .essmodule.EssEventZBAT essEventZBAT = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_esseventzbat()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .essmodule.ESSEventZGEN essEventZGEN = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_esseventzgen()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.ESSEvent)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.ESSEvent)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ESSEvent::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.ESSEvent)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_eventvalue()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::eventvalue(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::eventvalue(this), output);
   }
 
   // .essmodule.EssEventZBAT essEventZBAT = 2;
   if (this->has_esseventzbat()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::esseventzbat(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::esseventzbat(this), output);
   }
 
   // .essmodule.ESSEventZGEN essEventZGEN = 3;
   if (this->has_esseventzgen()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::esseventzgen(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::esseventzgen(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.ESSEvent)
+}
+
+::google::protobuf::uint8* ESSEvent::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSEvent)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
+  if (this->has_eventvalue()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::eventvalue(this), target);
+  }
+
+  // .essmodule.EssEventZBAT essEventZBAT = 2;
+  if (this->has_esseventzbat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::esseventzbat(this), target);
+  }
+
+  // .essmodule.ESSEventZGEN essEventZGEN = 3;
+  if (this->has_esseventzgen()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::esseventzgen(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSEvent)
   return target;
@@ -6435,49 +9242,50 @@ size_t ESSEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSEvent)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_eventvalue()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *eventvalue_);
   }
 
   // .essmodule.EssEventZBAT essEventZBAT = 2;
   if (this->has_esseventzbat()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *esseventzbat_);
   }
 
   // .essmodule.ESSEventZGEN essEventZGEN = 3;
   if (this->has_esseventzgen()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *esseventzgen_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void ESSEvent::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSEvent::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSEvent)
   GOOGLE_DCHECK_NE(&from, this);
   const ESSEvent* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSEvent>(
+      ::google::protobuf::DynamicCastToGenerated<ESSEvent>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSEvent)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSEvent)
     MergeFrom(*source);
@@ -6487,22 +9295,22 @@ void ESSEvent::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void ESSEvent::MergeFrom(const ESSEvent& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSEvent)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_eventvalue()) {
-    _internal_mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(from._internal_eventvalue());
+    mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(from.eventvalue());
   }
   if (from.has_esseventzbat()) {
-    _internal_mutable_esseventzbat()->::essmodule::EssEventZBAT::MergeFrom(from._internal_esseventzbat());
+    mutable_esseventzbat()->::essmodule::EssEventZBAT::MergeFrom(from.esseventzbat());
   }
   if (from.has_esseventzgen()) {
-    _internal_mutable_esseventzgen()->::essmodule::ESSEventZGEN::MergeFrom(from._internal_esseventzgen());
+    mutable_esseventzgen()->::essmodule::ESSEventZGEN::MergeFrom(from.esseventzgen());
   }
 }
 
-void ESSEvent::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSEvent::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSEvent)
   if (&from == this) return;
   Clear();
@@ -6520,216 +9328,405 @@ bool ESSEvent::IsInitialized() const {
   return true;
 }
 
+void ESSEvent::Swap(ESSEvent* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void ESSEvent::InternalSwap(ESSEvent* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSEvent, esseventzgen_)
-      + sizeof(ESSEvent::esseventzgen_)
-      - PROTOBUF_FIELD_OFFSET(ESSEvent, eventvalue_)>(
-          reinterpret_cast<char*>(&eventvalue_),
-          reinterpret_cast<char*>(&other->eventvalue_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(eventvalue_, other->eventvalue_);
+  swap(esseventzbat_, other->esseventzbat_);
+  swap(esseventzgen_, other->esseventzgen_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ESSEvent::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata ESSEvent::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class ESSEventProfile::_Internal {
+void ESSEventProfile::InitAsDefaultInstance() {
+  ::essmodule::_ESSEventProfile_default_instance_._instance.get_mutable()->eventmessageinfo_ = const_cast< ::commonmodule::EventMessageInfo*>(
+      ::commonmodule::EventMessageInfo::internal_default_instance());
+  ::essmodule::_ESSEventProfile_default_instance_._instance.get_mutable()->ess_ = const_cast< ::commonmodule::ESS*>(
+      ::commonmodule::ESS::internal_default_instance());
+  ::essmodule::_ESSEventProfile_default_instance_._instance.get_mutable()->essevent_ = const_cast< ::essmodule::ESSEvent*>(
+      ::essmodule::ESSEvent::internal_default_instance());
+  ::essmodule::_ESSEventProfile_default_instance_._instance.get_mutable()->ied_ = const_cast< ::commonmodule::IED*>(
+      ::commonmodule::IED::internal_default_instance());
+}
+class ESSEventProfile::HasBitSetters {
  public:
   static const ::commonmodule::EventMessageInfo& eventmessageinfo(const ESSEventProfile* msg);
   static const ::commonmodule::ESS& ess(const ESSEventProfile* msg);
   static const ::essmodule::ESSEvent& essevent(const ESSEventProfile* msg);
+  static const ::commonmodule::IED& ied(const ESSEventProfile* msg);
 };
 
 const ::commonmodule::EventMessageInfo&
-ESSEventProfile::_Internal::eventmessageinfo(const ESSEventProfile* msg) {
+ESSEventProfile::HasBitSetters::eventmessageinfo(const ESSEventProfile* msg) {
   return *msg->eventmessageinfo_;
 }
 const ::commonmodule::ESS&
-ESSEventProfile::_Internal::ess(const ESSEventProfile* msg) {
+ESSEventProfile::HasBitSetters::ess(const ESSEventProfile* msg) {
   return *msg->ess_;
 }
 const ::essmodule::ESSEvent&
-ESSEventProfile::_Internal::essevent(const ESSEventProfile* msg) {
+ESSEventProfile::HasBitSetters::essevent(const ESSEventProfile* msg) {
   return *msg->essevent_;
 }
+const ::commonmodule::IED&
+ESSEventProfile::HasBitSetters::ied(const ESSEventProfile* msg) {
+  return *msg->ied_;
+}
 void ESSEventProfile::clear_eventmessageinfo() {
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && eventmessageinfo_ != nullptr) {
     delete eventmessageinfo_;
   }
   eventmessageinfo_ = nullptr;
 }
 void ESSEventProfile::clear_ess() {
-  if (GetArena() == nullptr && ess_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && ess_ != nullptr) {
     delete ess_;
   }
   ess_ = nullptr;
 }
-ESSEventProfile::ESSEventProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+void ESSEventProfile::clear_ied() {
+  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
+    delete ied_;
+  }
+  ied_ = nullptr;
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ESSEventProfile::kEventMessageInfoFieldNumber;
+const int ESSEventProfile::kEssFieldNumber;
+const int ESSEventProfile::kEssEventFieldNumber;
+const int ESSEventProfile::kIedFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ESSEventProfile::ESSEventProfile()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSEventProfile)
+  // @@protoc_insertion_point(constructor:essmodule.ESSEventProfile)
 }
 ESSEventProfile::ESSEventProfile(const ESSEventProfile& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_eventmessageinfo()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_eventmessageinfo()) {
     eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from.eventmessageinfo_);
   } else {
     eventmessageinfo_ = nullptr;
   }
-  if (from._internal_has_ess()) {
+  if (from.has_ess()) {
     ess_ = new ::commonmodule::ESS(*from.ess_);
   } else {
     ess_ = nullptr;
   }
-  if (from._internal_has_essevent()) {
+  if (from.has_essevent()) {
     essevent_ = new ::essmodule::ESSEvent(*from.essevent_);
   } else {
     essevent_ = nullptr;
+  }
+  if (from.has_ied()) {
+    ied_ = new ::commonmodule::IED(*from.ied_);
+  } else {
+    ied_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:essmodule.ESSEventProfile)
 }
 
 void ESSEventProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&eventmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&essevent_) -
-    reinterpret_cast<char*>(&eventmessageinfo_)) + sizeof(essevent_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ESSEventProfile_essmodule_2fessmodule_2eproto.base);
+  ::memset(&eventmessageinfo_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&ied_) -
+      reinterpret_cast<char*>(&eventmessageinfo_)) + sizeof(ied_));
 }
 
 ESSEventProfile::~ESSEventProfile() {
   // @@protoc_insertion_point(destructor:essmodule.ESSEventProfile)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ESSEventProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete eventmessageinfo_;
   if (this != internal_default_instance()) delete ess_;
   if (this != internal_default_instance()) delete essevent_;
+  if (this != internal_default_instance()) delete ied_;
 }
 
-void ESSEventProfile::ArenaDtor(void* object) {
-  ESSEventProfile* _this = reinterpret_cast< ESSEventProfile* >(object);
-  (void)_this;
-}
-void ESSEventProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSEventProfile::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const ESSEventProfile& ESSEventProfile::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ESSEventProfile_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void ESSEventProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && eventmessageinfo_ != nullptr) {
     delete eventmessageinfo_;
   }
   eventmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && ess_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && ess_ != nullptr) {
     delete ess_;
   }
   ess_ = nullptr;
-  if (GetArena() == nullptr && essevent_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && essevent_ != nullptr) {
     delete essevent_;
   }
   essevent_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
+    delete ied_;
+  }
+  ied_ = nullptr;
+  _internal_metadata_.Clear();
 }
 
-const char* ESSEventProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ESSEventProfile::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ESSEventProfile*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_eventmessageinfo(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::EventMessageInfo::_InternalParse;
+        object = msg->mutable_eventmessageinfo();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_ess(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ESS::_InternalParse;
+        object = msg->mutable_ess();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.ESSEvent essEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_essevent(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::ESSEvent::_InternalParse;
+        object = msg->mutable_essevent();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::IED::_InternalParse;
+        object = msg->mutable_ied();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ESSEventProfile::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.ESSEventProfile)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_eventmessageinfo()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSEventProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_ess()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .essmodule.ESSEvent essEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_essevent()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_ied()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.ESSEventProfile)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.ESSEventProfile)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ESSEventProfile::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.ESSEventProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_eventmessageinfo()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::eventmessageinfo(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::eventmessageinfo(this), output);
   }
 
   // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_ess()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::ess(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::ess(this), output);
   }
 
   // .essmodule.ESSEvent essEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_essevent()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::essevent(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::essevent(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::ied(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.ESSEventProfile)
+}
+
+::google::protobuf::uint8* ESSEventProfile::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSEventProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->has_eventmessageinfo()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::eventmessageinfo(this), target);
+  }
+
+  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ess()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::ess(this), target);
+  }
+
+  // .essmodule.ESSEvent essEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_essevent()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::essevent(this), target);
+  }
+
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::ied(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSEventProfile)
   return target;
@@ -6739,49 +9736,57 @@ size_t ESSEventProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSEventProfile)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_eventmessageinfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *eventmessageinfo_);
   }
 
   // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_ess()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *ess_);
   }
 
   // .essmodule.ESSEvent essEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_essevent()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *essevent_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *ied_);
   }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void ESSEventProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSEventProfile::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSEventProfile)
   GOOGLE_DCHECK_NE(&from, this);
   const ESSEventProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSEventProfile>(
+      ::google::protobuf::DynamicCastToGenerated<ESSEventProfile>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSEventProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSEventProfile)
     MergeFrom(*source);
@@ -6791,22 +9796,25 @@ void ESSEventProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void ESSEventProfile::MergeFrom(const ESSEventProfile& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSEventProfile)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_eventmessageinfo()) {
-    _internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(from._internal_eventmessageinfo());
+    mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(from.eventmessageinfo());
   }
   if (from.has_ess()) {
-    _internal_mutable_ess()->::commonmodule::ESS::MergeFrom(from._internal_ess());
+    mutable_ess()->::commonmodule::ESS::MergeFrom(from.ess());
   }
   if (from.has_essevent()) {
-    _internal_mutable_essevent()->::essmodule::ESSEvent::MergeFrom(from._internal_essevent());
+    mutable_essevent()->::essmodule::ESSEvent::MergeFrom(from.essevent());
+  }
+  if (from.has_ied()) {
+    mutable_ied()->::commonmodule::IED::MergeFrom(from.ied());
   }
 }
 
-void ESSEventProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSEventProfile::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSEventProfile)
   if (&from == this) return;
   Clear();
@@ -6824,25 +9832,38 @@ bool ESSEventProfile::IsInitialized() const {
   return true;
 }
 
+void ESSEventProfile::Swap(ESSEventProfile* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void ESSEventProfile::InternalSwap(ESSEventProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSEventProfile, essevent_)
-      + sizeof(ESSEventProfile::essevent_)
-      - PROTOBUF_FIELD_OFFSET(ESSEventProfile, eventmessageinfo_)>(
-          reinterpret_cast<char*>(&eventmessageinfo_),
-          reinterpret_cast<char*>(&other->eventmessageinfo_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(eventmessageinfo_, other->eventmessageinfo_);
+  swap(ess_, other->ess_);
+  swap(essevent_, other->essevent_);
+  swap(ied_, other->ied_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ESSEventProfile::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata ESSEventProfile::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class ESSReading::_Internal {
+void ESSReading::InitAsDefaultInstance() {
+  ::essmodule::_ESSReading_default_instance_._instance.get_mutable()->conductingequipmentterminalreading_ = const_cast< ::commonmodule::ConductingEquipmentTerminalReading*>(
+      ::commonmodule::ConductingEquipmentTerminalReading::internal_default_instance());
+  ::essmodule::_ESSReading_default_instance_._instance.get_mutable()->phasemmtn_ = const_cast< ::commonmodule::PhaseMMTN*>(
+      ::commonmodule::PhaseMMTN::internal_default_instance());
+  ::essmodule::_ESSReading_default_instance_._instance.get_mutable()->readingmmtr_ = const_cast< ::commonmodule::ReadingMMTR*>(
+      ::commonmodule::ReadingMMTR::internal_default_instance());
+  ::essmodule::_ESSReading_default_instance_._instance.get_mutable()->readingmmxu_ = const_cast< ::commonmodule::ReadingMMXU*>(
+      ::commonmodule::ReadingMMXU::internal_default_instance());
+}
+class ESSReading::HasBitSetters {
  public:
   static const ::commonmodule::ConductingEquipmentTerminalReading& conductingequipmentterminalreading(const ESSReading* msg);
   static const ::commonmodule::PhaseMMTN& phasemmtn(const ESSReading* msg);
@@ -6851,70 +9872,77 @@ class ESSReading::_Internal {
 };
 
 const ::commonmodule::ConductingEquipmentTerminalReading&
-ESSReading::_Internal::conductingequipmentterminalreading(const ESSReading* msg) {
+ESSReading::HasBitSetters::conductingequipmentterminalreading(const ESSReading* msg) {
   return *msg->conductingequipmentterminalreading_;
 }
 const ::commonmodule::PhaseMMTN&
-ESSReading::_Internal::phasemmtn(const ESSReading* msg) {
+ESSReading::HasBitSetters::phasemmtn(const ESSReading* msg) {
   return *msg->phasemmtn_;
 }
 const ::commonmodule::ReadingMMTR&
-ESSReading::_Internal::readingmmtr(const ESSReading* msg) {
+ESSReading::HasBitSetters::readingmmtr(const ESSReading* msg) {
   return *msg->readingmmtr_;
 }
 const ::commonmodule::ReadingMMXU&
-ESSReading::_Internal::readingmmxu(const ESSReading* msg) {
+ESSReading::HasBitSetters::readingmmxu(const ESSReading* msg) {
   return *msg->readingmmxu_;
 }
 void ESSReading::clear_conductingequipmentterminalreading() {
-  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && conductingequipmentterminalreading_ != nullptr) {
     delete conductingequipmentterminalreading_;
   }
   conductingequipmentterminalreading_ = nullptr;
 }
 void ESSReading::clear_phasemmtn() {
-  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && phasemmtn_ != nullptr) {
     delete phasemmtn_;
   }
   phasemmtn_ = nullptr;
 }
 void ESSReading::clear_readingmmtr() {
-  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && readingmmtr_ != nullptr) {
     delete readingmmtr_;
   }
   readingmmtr_ = nullptr;
 }
 void ESSReading::clear_readingmmxu() {
-  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && readingmmxu_ != nullptr) {
     delete readingmmxu_;
   }
   readingmmxu_ = nullptr;
 }
-ESSReading::ESSReading(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ESSReading::kConductingEquipmentTerminalReadingFieldNumber;
+const int ESSReading::kPhaseMMTNFieldNumber;
+const int ESSReading::kReadingMMTRFieldNumber;
+const int ESSReading::kReadingMMXUFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ESSReading::ESSReading()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSReading)
+  // @@protoc_insertion_point(constructor:essmodule.ESSReading)
 }
 ESSReading::ESSReading(const ESSReading& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_conductingequipmentterminalreading()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_conductingequipmentterminalreading()) {
     conductingequipmentterminalreading_ = new ::commonmodule::ConductingEquipmentTerminalReading(*from.conductingequipmentterminalreading_);
   } else {
     conductingequipmentterminalreading_ = nullptr;
   }
-  if (from._internal_has_phasemmtn()) {
+  if (from.has_phasemmtn()) {
     phasemmtn_ = new ::commonmodule::PhaseMMTN(*from.phasemmtn_);
   } else {
     phasemmtn_ = nullptr;
   }
-  if (from._internal_has_readingmmtr()) {
+  if (from.has_readingmmtr()) {
     readingmmtr_ = new ::commonmodule::ReadingMMTR(*from.readingmmtr_);
   } else {
     readingmmtr_ = nullptr;
   }
-  if (from._internal_has_readingmmxu()) {
+  if (from.has_readingmmxu()) {
     readingmmxu_ = new ::commonmodule::ReadingMMXU(*from.readingmmxu_);
   } else {
     readingmmxu_ = nullptr;
@@ -6923,159 +9951,293 @@ ESSReading::ESSReading(const ESSReading& from)
 }
 
 void ESSReading::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&conductingequipmentterminalreading_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&readingmmxu_) -
-    reinterpret_cast<char*>(&conductingequipmentterminalreading_)) + sizeof(readingmmxu_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ESSReading_essmodule_2fessmodule_2eproto.base);
+  ::memset(&conductingequipmentterminalreading_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&readingmmxu_) -
+      reinterpret_cast<char*>(&conductingequipmentterminalreading_)) + sizeof(readingmmxu_));
 }
 
 ESSReading::~ESSReading() {
   // @@protoc_insertion_point(destructor:essmodule.ESSReading)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ESSReading::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete conductingequipmentterminalreading_;
   if (this != internal_default_instance()) delete phasemmtn_;
   if (this != internal_default_instance()) delete readingmmtr_;
   if (this != internal_default_instance()) delete readingmmxu_;
 }
 
-void ESSReading::ArenaDtor(void* object) {
-  ESSReading* _this = reinterpret_cast< ESSReading* >(object);
-  (void)_this;
-}
-void ESSReading::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSReading::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const ESSReading& ESSReading::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ESSReading_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void ESSReading::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSReading)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && conductingequipmentterminalreading_ != nullptr) {
     delete conductingequipmentterminalreading_;
   }
   conductingequipmentterminalreading_ = nullptr;
-  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && phasemmtn_ != nullptr) {
     delete phasemmtn_;
   }
   phasemmtn_ = nullptr;
-  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && readingmmtr_ != nullptr) {
     delete readingmmtr_;
   }
   readingmmtr_ = nullptr;
-  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && readingmmxu_ != nullptr) {
     delete readingmmxu_;
   }
   readingmmxu_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* ESSReading::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ESSReading::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ESSReading*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_conductingequipmentterminalreading(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ConductingEquipmentTerminalReading::_InternalParse;
+        object = msg->mutable_conductingequipmentterminalreading();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.PhaseMMTN phaseMMTN = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_phasemmtn(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::PhaseMMTN::_InternalParse;
+        object = msg->mutable_phasemmtn();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.ReadingMMTR readingMMTR = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_readingmmtr(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ReadingMMTR::_InternalParse;
+        object = msg->mutable_readingmmtr();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.ReadingMMXU readingMMXU = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_readingmmxu(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ReadingMMXU::_InternalParse;
+        object = msg->mutable_readingmmxu();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ESSReading::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.ESSReading)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_conductingequipmentterminalreading()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSReading::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSReading)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.PhaseMMTN phaseMMTN = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_phasemmtn()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ReadingMMTR readingMMTR = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_readingmmtr()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ReadingMMXU readingMMXU = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_readingmmxu()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.ESSReading)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.ESSReading)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ESSReading::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.ESSReading)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
   if (this->has_conductingequipmentterminalreading()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::conductingequipmentterminalreading(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::conductingequipmentterminalreading(this), output);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 2;
   if (this->has_phasemmtn()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::phasemmtn(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::phasemmtn(this), output);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 3;
   if (this->has_readingmmtr()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::readingmmtr(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::readingmmtr(this), output);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 4;
   if (this->has_readingmmxu()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::readingmmxu(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::readingmmxu(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.ESSReading)
+}
+
+::google::protobuf::uint8* ESSReading::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSReading)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
+  if (this->has_conductingequipmentterminalreading()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::conductingequipmentterminalreading(this), target);
+  }
+
+  // .commonmodule.PhaseMMTN phaseMMTN = 2;
+  if (this->has_phasemmtn()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::phasemmtn(this), target);
+  }
+
+  // .commonmodule.ReadingMMTR readingMMTR = 3;
+  if (this->has_readingmmtr()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::readingmmtr(this), target);
+  }
+
+  // .commonmodule.ReadingMMXU readingMMXU = 4;
+  if (this->has_readingmmxu()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::readingmmxu(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSReading)
   return target;
@@ -7085,56 +10247,57 @@ size_t ESSReading::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSReading)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
   if (this->has_conductingequipmentterminalreading()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *conductingequipmentterminalreading_);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 2;
   if (this->has_phasemmtn()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *phasemmtn_);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 3;
   if (this->has_readingmmtr()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *readingmmtr_);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 4;
   if (this->has_readingmmxu()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *readingmmxu_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void ESSReading::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSReading::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSReading)
   GOOGLE_DCHECK_NE(&from, this);
   const ESSReading* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSReading>(
+      ::google::protobuf::DynamicCastToGenerated<ESSReading>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSReading)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSReading)
     MergeFrom(*source);
@@ -7144,25 +10307,25 @@ void ESSReading::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void ESSReading::MergeFrom(const ESSReading& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSReading)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_conductingequipmentterminalreading()) {
-    _internal_mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(from._internal_conductingequipmentterminalreading());
+    mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(from.conductingequipmentterminalreading());
   }
   if (from.has_phasemmtn()) {
-    _internal_mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(from._internal_phasemmtn());
+    mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(from.phasemmtn());
   }
   if (from.has_readingmmtr()) {
-    _internal_mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(from._internal_readingmmtr());
+    mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(from.readingmmtr());
   }
   if (from.has_readingmmxu()) {
-    _internal_mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from._internal_readingmmxu());
+    mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from.readingmmxu());
   }
 }
 
-void ESSReading::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSReading::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSReading)
   if (&from == this) return;
   Clear();
@@ -7180,216 +10343,406 @@ bool ESSReading::IsInitialized() const {
   return true;
 }
 
+void ESSReading::Swap(ESSReading* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void ESSReading::InternalSwap(ESSReading* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSReading, readingmmxu_)
-      + sizeof(ESSReading::readingmmxu_)
-      - PROTOBUF_FIELD_OFFSET(ESSReading, conductingequipmentterminalreading_)>(
-          reinterpret_cast<char*>(&conductingequipmentterminalreading_),
-          reinterpret_cast<char*>(&other->conductingequipmentterminalreading_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(conductingequipmentterminalreading_, other->conductingequipmentterminalreading_);
+  swap(phasemmtn_, other->phasemmtn_);
+  swap(readingmmtr_, other->readingmmtr_);
+  swap(readingmmxu_, other->readingmmxu_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ESSReading::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata ESSReading::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class ESSReadingProfile::_Internal {
+void ESSReadingProfile::InitAsDefaultInstance() {
+  ::essmodule::_ESSReadingProfile_default_instance_._instance.get_mutable()->readingmessageinfo_ = const_cast< ::commonmodule::ReadingMessageInfo*>(
+      ::commonmodule::ReadingMessageInfo::internal_default_instance());
+  ::essmodule::_ESSReadingProfile_default_instance_._instance.get_mutable()->ess_ = const_cast< ::commonmodule::ESS*>(
+      ::commonmodule::ESS::internal_default_instance());
+  ::essmodule::_ESSReadingProfile_default_instance_._instance.get_mutable()->essreading_ = const_cast< ::essmodule::ESSReading*>(
+      ::essmodule::ESSReading::internal_default_instance());
+  ::essmodule::_ESSReadingProfile_default_instance_._instance.get_mutable()->ied_ = const_cast< ::commonmodule::IED*>(
+      ::commonmodule::IED::internal_default_instance());
+}
+class ESSReadingProfile::HasBitSetters {
  public:
   static const ::commonmodule::ReadingMessageInfo& readingmessageinfo(const ESSReadingProfile* msg);
   static const ::commonmodule::ESS& ess(const ESSReadingProfile* msg);
   static const ::essmodule::ESSReading& essreading(const ESSReadingProfile* msg);
+  static const ::commonmodule::IED& ied(const ESSReadingProfile* msg);
 };
 
 const ::commonmodule::ReadingMessageInfo&
-ESSReadingProfile::_Internal::readingmessageinfo(const ESSReadingProfile* msg) {
+ESSReadingProfile::HasBitSetters::readingmessageinfo(const ESSReadingProfile* msg) {
   return *msg->readingmessageinfo_;
 }
 const ::commonmodule::ESS&
-ESSReadingProfile::_Internal::ess(const ESSReadingProfile* msg) {
+ESSReadingProfile::HasBitSetters::ess(const ESSReadingProfile* msg) {
   return *msg->ess_;
 }
 const ::essmodule::ESSReading&
-ESSReadingProfile::_Internal::essreading(const ESSReadingProfile* msg) {
+ESSReadingProfile::HasBitSetters::essreading(const ESSReadingProfile* msg) {
   return *msg->essreading_;
 }
+const ::commonmodule::IED&
+ESSReadingProfile::HasBitSetters::ied(const ESSReadingProfile* msg) {
+  return *msg->ied_;
+}
 void ESSReadingProfile::clear_readingmessageinfo() {
-  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && readingmessageinfo_ != nullptr) {
     delete readingmessageinfo_;
   }
   readingmessageinfo_ = nullptr;
 }
 void ESSReadingProfile::clear_ess() {
-  if (GetArena() == nullptr && ess_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && ess_ != nullptr) {
     delete ess_;
   }
   ess_ = nullptr;
 }
-ESSReadingProfile::ESSReadingProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+void ESSReadingProfile::clear_ied() {
+  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
+    delete ied_;
+  }
+  ied_ = nullptr;
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ESSReadingProfile::kReadingMessageInfoFieldNumber;
+const int ESSReadingProfile::kEssFieldNumber;
+const int ESSReadingProfile::kEssReadingFieldNumber;
+const int ESSReadingProfile::kIedFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ESSReadingProfile::ESSReadingProfile()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSReadingProfile)
+  // @@protoc_insertion_point(constructor:essmodule.ESSReadingProfile)
 }
 ESSReadingProfile::ESSReadingProfile(const ESSReadingProfile& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_readingmessageinfo()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_readingmessageinfo()) {
     readingmessageinfo_ = new ::commonmodule::ReadingMessageInfo(*from.readingmessageinfo_);
   } else {
     readingmessageinfo_ = nullptr;
   }
-  if (from._internal_has_ess()) {
+  if (from.has_ess()) {
     ess_ = new ::commonmodule::ESS(*from.ess_);
   } else {
     ess_ = nullptr;
   }
-  if (from._internal_has_essreading()) {
+  if (from.has_essreading()) {
     essreading_ = new ::essmodule::ESSReading(*from.essreading_);
   } else {
     essreading_ = nullptr;
+  }
+  if (from.has_ied()) {
+    ied_ = new ::commonmodule::IED(*from.ied_);
+  } else {
+    ied_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:essmodule.ESSReadingProfile)
 }
 
 void ESSReadingProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&readingmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&essreading_) -
-    reinterpret_cast<char*>(&readingmessageinfo_)) + sizeof(essreading_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ESSReadingProfile_essmodule_2fessmodule_2eproto.base);
+  ::memset(&readingmessageinfo_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&ied_) -
+      reinterpret_cast<char*>(&readingmessageinfo_)) + sizeof(ied_));
 }
 
 ESSReadingProfile::~ESSReadingProfile() {
   // @@protoc_insertion_point(destructor:essmodule.ESSReadingProfile)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ESSReadingProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete readingmessageinfo_;
   if (this != internal_default_instance()) delete ess_;
   if (this != internal_default_instance()) delete essreading_;
+  if (this != internal_default_instance()) delete ied_;
 }
 
-void ESSReadingProfile::ArenaDtor(void* object) {
-  ESSReadingProfile* _this = reinterpret_cast< ESSReadingProfile* >(object);
-  (void)_this;
-}
-void ESSReadingProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSReadingProfile::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const ESSReadingProfile& ESSReadingProfile::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ESSReadingProfile_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void ESSReadingProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSReadingProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && readingmessageinfo_ != nullptr) {
     delete readingmessageinfo_;
   }
   readingmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && ess_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && ess_ != nullptr) {
     delete ess_;
   }
   ess_ = nullptr;
-  if (GetArena() == nullptr && essreading_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && essreading_ != nullptr) {
     delete essreading_;
   }
   essreading_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
+    delete ied_;
+  }
+  ied_ = nullptr;
+  _internal_metadata_.Clear();
 }
 
-const char* ESSReadingProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ESSReadingProfile::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ESSReadingProfile*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_readingmessageinfo(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ReadingMessageInfo::_InternalParse;
+        object = msg->mutable_readingmessageinfo();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_ess(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ESS::_InternalParse;
+        object = msg->mutable_ess();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.ESSReading essReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_essreading(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::ESSReading::_InternalParse;
+        object = msg->mutable_essreading();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::IED::_InternalParse;
+        object = msg->mutable_ied();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ESSReadingProfile::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.ESSReadingProfile)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_readingmessageinfo()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSReadingProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSReadingProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_ess()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .essmodule.ESSReading essReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_essreading()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_ied()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.ESSReadingProfile)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.ESSReadingProfile)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ESSReadingProfile::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.ESSReadingProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_readingmessageinfo()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::readingmessageinfo(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::readingmessageinfo(this), output);
   }
 
   // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_ess()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::ess(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::ess(this), output);
   }
 
   // .essmodule.ESSReading essReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_essreading()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::essreading(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::essreading(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::ied(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.ESSReadingProfile)
+}
+
+::google::protobuf::uint8* ESSReadingProfile::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSReadingProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->has_readingmessageinfo()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::readingmessageinfo(this), target);
+  }
+
+  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ess()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::ess(this), target);
+  }
+
+  // .essmodule.ESSReading essReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_essreading()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::essreading(this), target);
+  }
+
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::ied(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSReadingProfile)
   return target;
@@ -7399,49 +10752,57 @@ size_t ESSReadingProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSReadingProfile)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_readingmessageinfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *readingmessageinfo_);
   }
 
   // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_ess()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *ess_);
   }
 
   // .essmodule.ESSReading essReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_essreading()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *essreading_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *ied_);
   }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void ESSReadingProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSReadingProfile::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSReadingProfile)
   GOOGLE_DCHECK_NE(&from, this);
   const ESSReadingProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSReadingProfile>(
+      ::google::protobuf::DynamicCastToGenerated<ESSReadingProfile>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSReadingProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSReadingProfile)
     MergeFrom(*source);
@@ -7451,22 +10812,25 @@ void ESSReadingProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) 
 void ESSReadingProfile::MergeFrom(const ESSReadingProfile& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSReadingProfile)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_readingmessageinfo()) {
-    _internal_mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(from._internal_readingmessageinfo());
+    mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(from.readingmessageinfo());
   }
   if (from.has_ess()) {
-    _internal_mutable_ess()->::commonmodule::ESS::MergeFrom(from._internal_ess());
+    mutable_ess()->::commonmodule::ESS::MergeFrom(from.ess());
   }
   if (from.has_essreading()) {
-    _internal_mutable_essreading()->::essmodule::ESSReading::MergeFrom(from._internal_essreading());
+    mutable_essreading()->::essmodule::ESSReading::MergeFrom(from.essreading());
+  }
+  if (from.has_ied()) {
+    mutable_ied()->::commonmodule::IED::MergeFrom(from.ied());
   }
 }
 
-void ESSReadingProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSReadingProfile::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSReadingProfile)
   if (&from == this) return;
   Clear();
@@ -7484,25 +10848,40 @@ bool ESSReadingProfile::IsInitialized() const {
   return true;
 }
 
+void ESSReadingProfile::Swap(ESSReadingProfile* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void ESSReadingProfile::InternalSwap(ESSReadingProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSReadingProfile, essreading_)
-      + sizeof(ESSReadingProfile::essreading_)
-      - PROTOBUF_FIELD_OFFSET(ESSReadingProfile, readingmessageinfo_)>(
-          reinterpret_cast<char*>(&readingmessageinfo_),
-          reinterpret_cast<char*>(&other->readingmessageinfo_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(readingmessageinfo_, other->readingmessageinfo_);
+  swap(ess_, other->ess_);
+  swap(essreading_, other->essreading_);
+  swap(ied_, other->ied_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ESSReadingProfile::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata ESSReadingProfile::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class EssStatusZBAT::_Internal {
+void EssStatusZBAT::InitAsDefaultInstance() {
+  ::essmodule::_EssStatusZBAT_default_instance_._instance.get_mutable()->logicalnodeforeventandstatus_ = const_cast< ::commonmodule::LogicalNodeForEventAndStatus*>(
+      ::commonmodule::LogicalNodeForEventAndStatus::internal_default_instance());
+  ::essmodule::_EssStatusZBAT_default_instance_._instance.get_mutable()->batst_ = const_cast< ::commonmodule::StatusSPS*>(
+      ::commonmodule::StatusSPS::internal_default_instance());
+  ::essmodule::_EssStatusZBAT_default_instance_._instance.get_mutable()->grimod_ = const_cast< ::commonmodule::ENG_GridConnectModeKind*>(
+      ::commonmodule::ENG_GridConnectModeKind::internal_default_instance());
+  ::essmodule::_EssStatusZBAT_default_instance_._instance.get_mutable()->soc_ = const_cast< ::commonmodule::MV*>(
+      ::commonmodule::MV::internal_default_instance());
+  ::essmodule::_EssStatusZBAT_default_instance_._instance.get_mutable()->stdby_ = const_cast< ::commonmodule::StatusSPS*>(
+      ::commonmodule::StatusSPS::internal_default_instance());
+}
+class EssStatusZBAT::HasBitSetters {
  public:
   static const ::commonmodule::LogicalNodeForEventAndStatus& logicalnodeforeventandstatus(const EssStatusZBAT* msg);
   static const ::commonmodule::StatusSPS& batst(const EssStatusZBAT* msg);
@@ -7512,85 +10891,93 @@ class EssStatusZBAT::_Internal {
 };
 
 const ::commonmodule::LogicalNodeForEventAndStatus&
-EssStatusZBAT::_Internal::logicalnodeforeventandstatus(const EssStatusZBAT* msg) {
+EssStatusZBAT::HasBitSetters::logicalnodeforeventandstatus(const EssStatusZBAT* msg) {
   return *msg->logicalnodeforeventandstatus_;
 }
 const ::commonmodule::StatusSPS&
-EssStatusZBAT::_Internal::batst(const EssStatusZBAT* msg) {
+EssStatusZBAT::HasBitSetters::batst(const EssStatusZBAT* msg) {
   return *msg->batst_;
 }
 const ::commonmodule::ENG_GridConnectModeKind&
-EssStatusZBAT::_Internal::grimod(const EssStatusZBAT* msg) {
+EssStatusZBAT::HasBitSetters::grimod(const EssStatusZBAT* msg) {
   return *msg->grimod_;
 }
 const ::commonmodule::MV&
-EssStatusZBAT::_Internal::soc(const EssStatusZBAT* msg) {
+EssStatusZBAT::HasBitSetters::soc(const EssStatusZBAT* msg) {
   return *msg->soc_;
 }
 const ::commonmodule::StatusSPS&
-EssStatusZBAT::_Internal::stdby(const EssStatusZBAT* msg) {
+EssStatusZBAT::HasBitSetters::stdby(const EssStatusZBAT* msg) {
   return *msg->stdby_;
 }
 void EssStatusZBAT::clear_logicalnodeforeventandstatus() {
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
     delete logicalnodeforeventandstatus_;
   }
   logicalnodeforeventandstatus_ = nullptr;
 }
 void EssStatusZBAT::clear_batst() {
-  if (GetArena() == nullptr && batst_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && batst_ != nullptr) {
     delete batst_;
   }
   batst_ = nullptr;
 }
 void EssStatusZBAT::clear_grimod() {
-  if (GetArena() == nullptr && grimod_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && grimod_ != nullptr) {
     delete grimod_;
   }
   grimod_ = nullptr;
 }
 void EssStatusZBAT::clear_soc() {
-  if (GetArena() == nullptr && soc_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && soc_ != nullptr) {
     delete soc_;
   }
   soc_ = nullptr;
 }
 void EssStatusZBAT::clear_stdby() {
-  if (GetArena() == nullptr && stdby_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && stdby_ != nullptr) {
     delete stdby_;
   }
   stdby_ = nullptr;
 }
-EssStatusZBAT::EssStatusZBAT(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int EssStatusZBAT::kLogicalNodeForEventAndStatusFieldNumber;
+const int EssStatusZBAT::kBatStFieldNumber;
+const int EssStatusZBAT::kGriModFieldNumber;
+const int EssStatusZBAT::kSocFieldNumber;
+const int EssStatusZBAT::kStdbyFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+EssStatusZBAT::EssStatusZBAT()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.EssStatusZBAT)
+  // @@protoc_insertion_point(constructor:essmodule.EssStatusZBAT)
 }
 EssStatusZBAT::EssStatusZBAT(const EssStatusZBAT& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_logicalnodeforeventandstatus()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_logicalnodeforeventandstatus()) {
     logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from.logicalnodeforeventandstatus_);
   } else {
     logicalnodeforeventandstatus_ = nullptr;
   }
-  if (from._internal_has_batst()) {
+  if (from.has_batst()) {
     batst_ = new ::commonmodule::StatusSPS(*from.batst_);
   } else {
     batst_ = nullptr;
   }
-  if (from._internal_has_grimod()) {
+  if (from.has_grimod()) {
     grimod_ = new ::commonmodule::ENG_GridConnectModeKind(*from.grimod_);
   } else {
     grimod_ = nullptr;
   }
-  if (from._internal_has_soc()) {
+  if (from.has_soc()) {
     soc_ = new ::commonmodule::MV(*from.soc_);
   } else {
     soc_ = nullptr;
   }
-  if (from._internal_has_stdby()) {
+  if (from.has_stdby()) {
     stdby_ = new ::commonmodule::StatusSPS(*from.stdby_);
   } else {
     stdby_ = nullptr;
@@ -7599,20 +10986,19 @@ EssStatusZBAT::EssStatusZBAT(const EssStatusZBAT& from)
 }
 
 void EssStatusZBAT::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&stdby_) -
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(stdby_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_EssStatusZBAT_essmodule_2fessmodule_2eproto.base);
+  ::memset(&logicalnodeforeventandstatus_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&stdby_) -
+      reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(stdby_));
 }
 
 EssStatusZBAT::~EssStatusZBAT() {
   // @@protoc_insertion_point(destructor:essmodule.EssStatusZBAT)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void EssStatusZBAT::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete logicalnodeforeventandstatus_;
   if (this != internal_default_instance()) delete batst_;
   if (this != internal_default_instance()) delete grimod_;
@@ -7620,158 +11006,315 @@ void EssStatusZBAT::SharedDtor() {
   if (this != internal_default_instance()) delete stdby_;
 }
 
-void EssStatusZBAT::ArenaDtor(void* object) {
-  EssStatusZBAT* _this = reinterpret_cast< EssStatusZBAT* >(object);
-  (void)_this;
-}
-void EssStatusZBAT::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void EssStatusZBAT::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const EssStatusZBAT& EssStatusZBAT::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_EssStatusZBAT_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void EssStatusZBAT::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.EssStatusZBAT)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
     delete logicalnodeforeventandstatus_;
   }
   logicalnodeforeventandstatus_ = nullptr;
-  if (GetArena() == nullptr && batst_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && batst_ != nullptr) {
     delete batst_;
   }
   batst_ = nullptr;
-  if (GetArena() == nullptr && grimod_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && grimod_ != nullptr) {
     delete grimod_;
   }
   grimod_ = nullptr;
-  if (GetArena() == nullptr && soc_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && soc_ != nullptr) {
     delete soc_;
   }
   soc_ = nullptr;
-  if (GetArena() == nullptr && stdby_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && stdby_ != nullptr) {
     delete stdby_;
   }
   stdby_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* EssStatusZBAT::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* EssStatusZBAT::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<EssStatusZBAT*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforeventandstatus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS BatSt = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_batst(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::LogicalNodeForEventAndStatus::_InternalParse;
+        object = msg->mutable_logicalnodeforeventandstatus();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.StatusSPS BatSt = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::StatusSPS::_InternalParse;
+        object = msg->mutable_batst();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.ENG_GridConnectModeKind GriMod = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_grimod(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ENG_GridConnectModeKind::_InternalParse;
+        object = msg->mutable_grimod();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.MV Soc = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_soc(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::MV::_InternalParse;
+        object = msg->mutable_soc();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.StatusSPS Stdby = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_stdby(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::StatusSPS::_InternalParse;
+        object = msg->mutable_stdby();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool EssStatusZBAT::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.EssStatusZBAT)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_logicalnodeforeventandstatus()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* EssStatusZBAT::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.EssStatusZBAT)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.StatusSPS BatSt = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_batst()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ENG_GridConnectModeKind GriMod = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_grimod()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.MV Soc = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_soc()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.StatusSPS Stdby = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_stdby()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.EssStatusZBAT)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.EssStatusZBAT)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void EssStatusZBAT::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.EssStatusZBAT)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
   if (this->has_logicalnodeforeventandstatus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnodeforeventandstatus(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::logicalnodeforeventandstatus(this), output);
   }
 
-  // .commonmodule.StatusSPS BatSt = 2;
+  // .commonmodule.StatusSPS BatSt = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_batst()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::batst(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::batst(this), output);
   }
 
   // .commonmodule.ENG_GridConnectModeKind GriMod = 3;
   if (this->has_grimod()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::grimod(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::grimod(this), output);
   }
 
   // .commonmodule.MV Soc = 4;
   if (this->has_soc()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::soc(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::soc(this), output);
   }
 
   // .commonmodule.StatusSPS Stdby = 5;
   if (this->has_stdby()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::stdby(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, HasBitSetters::stdby(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.EssStatusZBAT)
+}
+
+::google::protobuf::uint8* EssStatusZBAT::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.EssStatusZBAT)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
+  if (this->has_logicalnodeforeventandstatus()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::logicalnodeforeventandstatus(this), target);
+  }
+
+  // .commonmodule.StatusSPS BatSt = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_batst()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::batst(this), target);
+  }
+
+  // .commonmodule.ENG_GridConnectModeKind GriMod = 3;
+  if (this->has_grimod()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::grimod(this), target);
+  }
+
+  // .commonmodule.MV Soc = 4;
+  if (this->has_soc()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::soc(this), target);
+  }
+
+  // .commonmodule.StatusSPS Stdby = 5;
+  if (this->has_stdby()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, HasBitSetters::stdby(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.EssStatusZBAT)
   return target;
@@ -7781,63 +11324,64 @@ size_t EssStatusZBAT::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.EssStatusZBAT)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
   if (this->has_logicalnodeforeventandstatus()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *logicalnodeforeventandstatus_);
   }
 
-  // .commonmodule.StatusSPS BatSt = 2;
+  // .commonmodule.StatusSPS BatSt = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_batst()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *batst_);
   }
 
   // .commonmodule.ENG_GridConnectModeKind GriMod = 3;
   if (this->has_grimod()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *grimod_);
   }
 
   // .commonmodule.MV Soc = 4;
   if (this->has_soc()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *soc_);
   }
 
   // .commonmodule.StatusSPS Stdby = 5;
   if (this->has_stdby()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *stdby_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void EssStatusZBAT::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void EssStatusZBAT::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.EssStatusZBAT)
   GOOGLE_DCHECK_NE(&from, this);
   const EssStatusZBAT* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<EssStatusZBAT>(
+      ::google::protobuf::DynamicCastToGenerated<EssStatusZBAT>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.EssStatusZBAT)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.EssStatusZBAT)
     MergeFrom(*source);
@@ -7847,28 +11391,28 @@ void EssStatusZBAT::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void EssStatusZBAT::MergeFrom(const EssStatusZBAT& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.EssStatusZBAT)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_logicalnodeforeventandstatus()) {
-    _internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from._internal_logicalnodeforeventandstatus());
+    mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from.logicalnodeforeventandstatus());
   }
   if (from.has_batst()) {
-    _internal_mutable_batst()->::commonmodule::StatusSPS::MergeFrom(from._internal_batst());
+    mutable_batst()->::commonmodule::StatusSPS::MergeFrom(from.batst());
   }
   if (from.has_grimod()) {
-    _internal_mutable_grimod()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from._internal_grimod());
+    mutable_grimod()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from.grimod());
   }
   if (from.has_soc()) {
-    _internal_mutable_soc()->::commonmodule::MV::MergeFrom(from._internal_soc());
+    mutable_soc()->::commonmodule::MV::MergeFrom(from.soc());
   }
   if (from.has_stdby()) {
-    _internal_mutable_stdby()->::commonmodule::StatusSPS::MergeFrom(from._internal_stdby());
+    mutable_stdby()->::commonmodule::StatusSPS::MergeFrom(from.stdby());
   }
 }
 
-void EssStatusZBAT::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void EssStatusZBAT::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.EssStatusZBAT)
   if (&from == this) return;
   Clear();
@@ -7886,43 +11430,55 @@ bool EssStatusZBAT::IsInitialized() const {
   return true;
 }
 
+void EssStatusZBAT::Swap(EssStatusZBAT* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void EssStatusZBAT::InternalSwap(EssStatusZBAT* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(EssStatusZBAT, stdby_)
-      + sizeof(EssStatusZBAT::stdby_)
-      - PROTOBUF_FIELD_OFFSET(EssStatusZBAT, logicalnodeforeventandstatus_)>(
-          reinterpret_cast<char*>(&logicalnodeforeventandstatus_),
-          reinterpret_cast<char*>(&other->logicalnodeforeventandstatus_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(logicalnodeforeventandstatus_, other->logicalnodeforeventandstatus_);
+  swap(batst_, other->batst_);
+  swap(grimod_, other->grimod_);
+  swap(soc_, other->soc_);
+  swap(stdby_, other->stdby_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata EssStatusZBAT::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata EssStatusZBAT::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class ESSStatusZGEN::_Internal {
+void ESSStatusZGEN::InitAsDefaultInstance() {
+  ::essmodule::_ESSStatusZGEN_default_instance_._instance.get_mutable()->esseventandstatuszgen_ = const_cast< ::essmodule::ESSEventAndStatusZGEN*>(
+      ::essmodule::ESSEventAndStatusZGEN::internal_default_instance());
+}
+class ESSStatusZGEN::HasBitSetters {
  public:
   static const ::essmodule::ESSEventAndStatusZGEN& esseventandstatuszgen(const ESSStatusZGEN* msg);
 };
 
 const ::essmodule::ESSEventAndStatusZGEN&
-ESSStatusZGEN::_Internal::esseventandstatuszgen(const ESSStatusZGEN* msg) {
+ESSStatusZGEN::HasBitSetters::esseventandstatuszgen(const ESSStatusZGEN* msg) {
   return *msg->esseventandstatuszgen_;
 }
-ESSStatusZGEN::ESSStatusZGEN(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ESSStatusZGEN::kESSEventAndStatusZGENFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ESSStatusZGEN::ESSStatusZGEN()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSStatusZGEN)
+  // @@protoc_insertion_point(constructor:essmodule.ESSStatusZGEN)
 }
 ESSStatusZGEN::ESSStatusZGEN(const ESSStatusZGEN& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_esseventandstatuszgen()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_esseventandstatuszgen()) {
     esseventandstatuszgen_ = new ::essmodule::ESSEventAndStatusZGEN(*from.esseventandstatuszgen_);
   } else {
     esseventandstatuszgen_ = nullptr;
@@ -7931,96 +11487,165 @@ ESSStatusZGEN::ESSStatusZGEN(const ESSStatusZGEN& from)
 }
 
 void ESSStatusZGEN::SharedCtor() {
-esseventandstatuszgen_ = nullptr;
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ESSStatusZGEN_essmodule_2fessmodule_2eproto.base);
+  esseventandstatuszgen_ = nullptr;
 }
 
 ESSStatusZGEN::~ESSStatusZGEN() {
   // @@protoc_insertion_point(destructor:essmodule.ESSStatusZGEN)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ESSStatusZGEN::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete esseventandstatuszgen_;
 }
 
-void ESSStatusZGEN::ArenaDtor(void* object) {
-  ESSStatusZGEN* _this = reinterpret_cast< ESSStatusZGEN* >(object);
-  (void)_this;
-}
-void ESSStatusZGEN::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSStatusZGEN::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const ESSStatusZGEN& ESSStatusZGEN::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ESSStatusZGEN_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void ESSStatusZGEN::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSStatusZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && esseventandstatuszgen_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && esseventandstatuszgen_ != nullptr) {
     delete esseventandstatuszgen_;
   }
   esseventandstatuszgen_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* ESSStatusZGEN::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ESSStatusZGEN::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ESSStatusZGEN*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_esseventandstatuszgen(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::ESSEventAndStatusZGEN::_InternalParse;
+        object = msg->mutable_esseventandstatuszgen();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ESSStatusZGEN::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.ESSStatusZGEN)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_esseventandstatuszgen()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSStatusZGEN::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSStatusZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.ESSStatusZGEN)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.ESSStatusZGEN)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ESSStatusZGEN::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.ESSStatusZGEN)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
   if (this->has_esseventandstatuszgen()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::esseventandstatuszgen(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::esseventandstatuszgen(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.ESSStatusZGEN)
+}
+
+::google::protobuf::uint8* ESSStatusZGEN::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSStatusZGEN)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
+  if (this->has_esseventandstatuszgen()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::esseventandstatuszgen(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSStatusZGEN)
   return target;
@@ -8030,35 +11655,36 @@ size_t ESSStatusZGEN::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSStatusZGEN)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
   if (this->has_esseventandstatuszgen()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *esseventandstatuszgen_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void ESSStatusZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSStatusZGEN::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSStatusZGEN)
   GOOGLE_DCHECK_NE(&from, this);
   const ESSStatusZGEN* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSStatusZGEN>(
+      ::google::protobuf::DynamicCastToGenerated<ESSStatusZGEN>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSStatusZGEN)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSStatusZGEN)
     MergeFrom(*source);
@@ -8068,16 +11694,16 @@ void ESSStatusZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void ESSStatusZGEN::MergeFrom(const ESSStatusZGEN& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSStatusZGEN)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_esseventandstatuszgen()) {
-    _internal_mutable_esseventandstatuszgen()->::essmodule::ESSEventAndStatusZGEN::MergeFrom(from._internal_esseventandstatuszgen());
+    mutable_esseventandstatuszgen()->::essmodule::ESSEventAndStatusZGEN::MergeFrom(from.esseventandstatuszgen());
   }
 }
 
-void ESSStatusZGEN::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSStatusZGEN::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSStatusZGEN)
   if (&from == this) return;
   Clear();
@@ -8095,20 +11721,33 @@ bool ESSStatusZGEN::IsInitialized() const {
   return true;
 }
 
+void ESSStatusZGEN::Swap(ESSStatusZGEN* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void ESSStatusZGEN::InternalSwap(ESSStatusZGEN* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(esseventandstatuszgen_, other->esseventandstatuszgen_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ESSStatusZGEN::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata ESSStatusZGEN::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class ESSStatus::_Internal {
+void ESSStatus::InitAsDefaultInstance() {
+  ::essmodule::_ESSStatus_default_instance_._instance.get_mutable()->statusvalue_ = const_cast< ::commonmodule::StatusValue*>(
+      ::commonmodule::StatusValue::internal_default_instance());
+  ::essmodule::_ESSStatus_default_instance_._instance.get_mutable()->essstatuszbat_ = const_cast< ::essmodule::EssStatusZBAT*>(
+      ::essmodule::EssStatusZBAT::internal_default_instance());
+  ::essmodule::_ESSStatus_default_instance_._instance.get_mutable()->essstatuszgen_ = const_cast< ::essmodule::ESSStatusZGEN*>(
+      ::essmodule::ESSStatusZGEN::internal_default_instance());
+}
+class ESSStatus::HasBitSetters {
  public:
   static const ::commonmodule::StatusValue& statusvalue(const ESSStatus* msg);
   static const ::essmodule::EssStatusZBAT& essstatuszbat(const ESSStatus* msg);
@@ -8116,43 +11755,49 @@ class ESSStatus::_Internal {
 };
 
 const ::commonmodule::StatusValue&
-ESSStatus::_Internal::statusvalue(const ESSStatus* msg) {
+ESSStatus::HasBitSetters::statusvalue(const ESSStatus* msg) {
   return *msg->statusvalue_;
 }
 const ::essmodule::EssStatusZBAT&
-ESSStatus::_Internal::essstatuszbat(const ESSStatus* msg) {
+ESSStatus::HasBitSetters::essstatuszbat(const ESSStatus* msg) {
   return *msg->essstatuszbat_;
 }
 const ::essmodule::ESSStatusZGEN&
-ESSStatus::_Internal::essstatuszgen(const ESSStatus* msg) {
+ESSStatus::HasBitSetters::essstatuszgen(const ESSStatus* msg) {
   return *msg->essstatuszgen_;
 }
 void ESSStatus::clear_statusvalue() {
-  if (GetArena() == nullptr && statusvalue_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && statusvalue_ != nullptr) {
     delete statusvalue_;
   }
   statusvalue_ = nullptr;
 }
-ESSStatus::ESSStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ESSStatus::kStatusValueFieldNumber;
+const int ESSStatus::kEssStatusZBATFieldNumber;
+const int ESSStatus::kEssStatusZGENFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ESSStatus::ESSStatus()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSStatus)
+  // @@protoc_insertion_point(constructor:essmodule.ESSStatus)
 }
 ESSStatus::ESSStatus(const ESSStatus& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_statusvalue()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_statusvalue()) {
     statusvalue_ = new ::commonmodule::StatusValue(*from.statusvalue_);
   } else {
     statusvalue_ = nullptr;
   }
-  if (from._internal_has_essstatuszbat()) {
+  if (from.has_essstatuszbat()) {
     essstatuszbat_ = new ::essmodule::EssStatusZBAT(*from.essstatuszbat_);
   } else {
     essstatuszbat_ = nullptr;
   }
-  if (from._internal_has_essstatuszgen()) {
+  if (from.has_essstatuszgen()) {
     essstatuszgen_ = new ::essmodule::ESSStatusZGEN(*from.essstatuszgen_);
   } else {
     essstatuszgen_ = nullptr;
@@ -8161,139 +11806,251 @@ ESSStatus::ESSStatus(const ESSStatus& from)
 }
 
 void ESSStatus::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&statusvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&essstatuszgen_) -
-    reinterpret_cast<char*>(&statusvalue_)) + sizeof(essstatuszgen_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ESSStatus_essmodule_2fessmodule_2eproto.base);
+  ::memset(&statusvalue_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&essstatuszgen_) -
+      reinterpret_cast<char*>(&statusvalue_)) + sizeof(essstatuszgen_));
 }
 
 ESSStatus::~ESSStatus() {
   // @@protoc_insertion_point(destructor:essmodule.ESSStatus)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ESSStatus::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete statusvalue_;
   if (this != internal_default_instance()) delete essstatuszbat_;
   if (this != internal_default_instance()) delete essstatuszgen_;
 }
 
-void ESSStatus::ArenaDtor(void* object) {
-  ESSStatus* _this = reinterpret_cast< ESSStatus* >(object);
-  (void)_this;
-}
-void ESSStatus::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSStatus::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const ESSStatus& ESSStatus::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ESSStatus_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void ESSStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && statusvalue_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && statusvalue_ != nullptr) {
     delete statusvalue_;
   }
   statusvalue_ = nullptr;
-  if (GetArena() == nullptr && essstatuszbat_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && essstatuszbat_ != nullptr) {
     delete essstatuszbat_;
   }
   essstatuszbat_ = nullptr;
-  if (GetArena() == nullptr && essstatuszgen_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && essstatuszgen_ != nullptr) {
     delete essstatuszgen_;
   }
   essstatuszgen_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* ESSStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ESSStatus::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ESSStatus*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_statusvalue(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::StatusValue::_InternalParse;
+        object = msg->mutable_statusvalue();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.EssStatusZBAT essStatusZBAT = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_essstatuszbat(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::EssStatusZBAT::_InternalParse;
+        object = msg->mutable_essstatuszbat();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.ESSStatusZGEN essStatusZGEN = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_essstatuszgen(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::ESSStatusZGEN::_InternalParse;
+        object = msg->mutable_essstatuszgen();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ESSStatus::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.ESSStatus)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_statusvalue()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSStatus::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .essmodule.EssStatusZBAT essStatusZBAT = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_essstatuszbat()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .essmodule.ESSStatusZGEN essStatusZGEN = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_essstatuszgen()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.ESSStatus)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.ESSStatus)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ESSStatus::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.ESSStatus)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_statusvalue()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::statusvalue(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::statusvalue(this), output);
   }
 
   // .essmodule.EssStatusZBAT essStatusZBAT = 2;
   if (this->has_essstatuszbat()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::essstatuszbat(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::essstatuszbat(this), output);
   }
 
   // .essmodule.ESSStatusZGEN essStatusZGEN = 3;
   if (this->has_essstatuszgen()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::essstatuszgen(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::essstatuszgen(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.ESSStatus)
+}
+
+::google::protobuf::uint8* ESSStatus::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSStatus)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
+  if (this->has_statusvalue()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::statusvalue(this), target);
+  }
+
+  // .essmodule.EssStatusZBAT essStatusZBAT = 2;
+  if (this->has_essstatuszbat()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::essstatuszbat(this), target);
+  }
+
+  // .essmodule.ESSStatusZGEN essStatusZGEN = 3;
+  if (this->has_essstatuszgen()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::essstatuszgen(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSStatus)
   return target;
@@ -8303,49 +12060,50 @@ size_t ESSStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSStatus)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_statusvalue()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *statusvalue_);
   }
 
   // .essmodule.EssStatusZBAT essStatusZBAT = 2;
   if (this->has_essstatuszbat()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *essstatuszbat_);
   }
 
   // .essmodule.ESSStatusZGEN essStatusZGEN = 3;
   if (this->has_essstatuszgen()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *essstatuszgen_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void ESSStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSStatus::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSStatus)
   GOOGLE_DCHECK_NE(&from, this);
   const ESSStatus* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSStatus>(
+      ::google::protobuf::DynamicCastToGenerated<ESSStatus>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSStatus)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSStatus)
     MergeFrom(*source);
@@ -8355,22 +12113,22 @@ void ESSStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void ESSStatus::MergeFrom(const ESSStatus& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSStatus)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_statusvalue()) {
-    _internal_mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(from._internal_statusvalue());
+    mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(from.statusvalue());
   }
   if (from.has_essstatuszbat()) {
-    _internal_mutable_essstatuszbat()->::essmodule::EssStatusZBAT::MergeFrom(from._internal_essstatuszbat());
+    mutable_essstatuszbat()->::essmodule::EssStatusZBAT::MergeFrom(from.essstatuszbat());
   }
   if (from.has_essstatuszgen()) {
-    _internal_mutable_essstatuszgen()->::essmodule::ESSStatusZGEN::MergeFrom(from._internal_essstatuszgen());
+    mutable_essstatuszgen()->::essmodule::ESSStatusZGEN::MergeFrom(from.essstatuszgen());
   }
 }
 
-void ESSStatus::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSStatus::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSStatus)
   if (&from == this) return;
   Clear();
@@ -8388,216 +12146,405 @@ bool ESSStatus::IsInitialized() const {
   return true;
 }
 
+void ESSStatus::Swap(ESSStatus* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void ESSStatus::InternalSwap(ESSStatus* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSStatus, essstatuszgen_)
-      + sizeof(ESSStatus::essstatuszgen_)
-      - PROTOBUF_FIELD_OFFSET(ESSStatus, statusvalue_)>(
-          reinterpret_cast<char*>(&statusvalue_),
-          reinterpret_cast<char*>(&other->statusvalue_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(statusvalue_, other->statusvalue_);
+  swap(essstatuszbat_, other->essstatuszbat_);
+  swap(essstatuszgen_, other->essstatuszgen_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ESSStatus::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata ESSStatus::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class ESSStatusProfile::_Internal {
+void ESSStatusProfile::InitAsDefaultInstance() {
+  ::essmodule::_ESSStatusProfile_default_instance_._instance.get_mutable()->statusmessageinfo_ = const_cast< ::commonmodule::StatusMessageInfo*>(
+      ::commonmodule::StatusMessageInfo::internal_default_instance());
+  ::essmodule::_ESSStatusProfile_default_instance_._instance.get_mutable()->ess_ = const_cast< ::commonmodule::ESS*>(
+      ::commonmodule::ESS::internal_default_instance());
+  ::essmodule::_ESSStatusProfile_default_instance_._instance.get_mutable()->essstatus_ = const_cast< ::essmodule::ESSStatus*>(
+      ::essmodule::ESSStatus::internal_default_instance());
+  ::essmodule::_ESSStatusProfile_default_instance_._instance.get_mutable()->ied_ = const_cast< ::commonmodule::IED*>(
+      ::commonmodule::IED::internal_default_instance());
+}
+class ESSStatusProfile::HasBitSetters {
  public:
   static const ::commonmodule::StatusMessageInfo& statusmessageinfo(const ESSStatusProfile* msg);
   static const ::commonmodule::ESS& ess(const ESSStatusProfile* msg);
   static const ::essmodule::ESSStatus& essstatus(const ESSStatusProfile* msg);
+  static const ::commonmodule::IED& ied(const ESSStatusProfile* msg);
 };
 
 const ::commonmodule::StatusMessageInfo&
-ESSStatusProfile::_Internal::statusmessageinfo(const ESSStatusProfile* msg) {
+ESSStatusProfile::HasBitSetters::statusmessageinfo(const ESSStatusProfile* msg) {
   return *msg->statusmessageinfo_;
 }
 const ::commonmodule::ESS&
-ESSStatusProfile::_Internal::ess(const ESSStatusProfile* msg) {
+ESSStatusProfile::HasBitSetters::ess(const ESSStatusProfile* msg) {
   return *msg->ess_;
 }
 const ::essmodule::ESSStatus&
-ESSStatusProfile::_Internal::essstatus(const ESSStatusProfile* msg) {
+ESSStatusProfile::HasBitSetters::essstatus(const ESSStatusProfile* msg) {
   return *msg->essstatus_;
 }
+const ::commonmodule::IED&
+ESSStatusProfile::HasBitSetters::ied(const ESSStatusProfile* msg) {
+  return *msg->ied_;
+}
 void ESSStatusProfile::clear_statusmessageinfo() {
-  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && statusmessageinfo_ != nullptr) {
     delete statusmessageinfo_;
   }
   statusmessageinfo_ = nullptr;
 }
 void ESSStatusProfile::clear_ess() {
-  if (GetArena() == nullptr && ess_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && ess_ != nullptr) {
     delete ess_;
   }
   ess_ = nullptr;
 }
-ESSStatusProfile::ESSStatusProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+void ESSStatusProfile::clear_ied() {
+  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
+    delete ied_;
+  }
+  ied_ = nullptr;
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ESSStatusProfile::kStatusMessageInfoFieldNumber;
+const int ESSStatusProfile::kEssFieldNumber;
+const int ESSStatusProfile::kEssStatusFieldNumber;
+const int ESSStatusProfile::kIedFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ESSStatusProfile::ESSStatusProfile()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSStatusProfile)
+  // @@protoc_insertion_point(constructor:essmodule.ESSStatusProfile)
 }
 ESSStatusProfile::ESSStatusProfile(const ESSStatusProfile& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_statusmessageinfo()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_statusmessageinfo()) {
     statusmessageinfo_ = new ::commonmodule::StatusMessageInfo(*from.statusmessageinfo_);
   } else {
     statusmessageinfo_ = nullptr;
   }
-  if (from._internal_has_ess()) {
+  if (from.has_ess()) {
     ess_ = new ::commonmodule::ESS(*from.ess_);
   } else {
     ess_ = nullptr;
   }
-  if (from._internal_has_essstatus()) {
+  if (from.has_essstatus()) {
     essstatus_ = new ::essmodule::ESSStatus(*from.essstatus_);
   } else {
     essstatus_ = nullptr;
+  }
+  if (from.has_ied()) {
+    ied_ = new ::commonmodule::IED(*from.ied_);
+  } else {
+    ied_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:essmodule.ESSStatusProfile)
 }
 
 void ESSStatusProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&statusmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&essstatus_) -
-    reinterpret_cast<char*>(&statusmessageinfo_)) + sizeof(essstatus_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ESSStatusProfile_essmodule_2fessmodule_2eproto.base);
+  ::memset(&statusmessageinfo_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&ied_) -
+      reinterpret_cast<char*>(&statusmessageinfo_)) + sizeof(ied_));
 }
 
 ESSStatusProfile::~ESSStatusProfile() {
   // @@protoc_insertion_point(destructor:essmodule.ESSStatusProfile)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ESSStatusProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete statusmessageinfo_;
   if (this != internal_default_instance()) delete ess_;
   if (this != internal_default_instance()) delete essstatus_;
+  if (this != internal_default_instance()) delete ied_;
 }
 
-void ESSStatusProfile::ArenaDtor(void* object) {
-  ESSStatusProfile* _this = reinterpret_cast< ESSStatusProfile* >(object);
-  (void)_this;
-}
-void ESSStatusProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSStatusProfile::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const ESSStatusProfile& ESSStatusProfile::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ESSStatusProfile_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void ESSStatusProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && statusmessageinfo_ != nullptr) {
     delete statusmessageinfo_;
   }
   statusmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && ess_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && ess_ != nullptr) {
     delete ess_;
   }
   ess_ = nullptr;
-  if (GetArena() == nullptr && essstatus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && essstatus_ != nullptr) {
     delete essstatus_;
   }
   essstatus_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
+    delete ied_;
+  }
+  ied_ = nullptr;
+  _internal_metadata_.Clear();
 }
 
-const char* ESSStatusProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ESSStatusProfile::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ESSStatusProfile*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_statusmessageinfo(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::StatusMessageInfo::_InternalParse;
+        object = msg->mutable_statusmessageinfo();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_ess(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ESS::_InternalParse;
+        object = msg->mutable_ess();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.ESSStatus essStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_essstatus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::ESSStatus::_InternalParse;
+        object = msg->mutable_essstatus();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::IED::_InternalParse;
+        object = msg->mutable_ied();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ESSStatusProfile::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.ESSStatusProfile)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_statusmessageinfo()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSStatusProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_ess()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .essmodule.ESSStatus essStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_essstatus()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_ied()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.ESSStatusProfile)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.ESSStatusProfile)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ESSStatusProfile::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.ESSStatusProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_statusmessageinfo()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::statusmessageinfo(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::statusmessageinfo(this), output);
   }
 
   // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_ess()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::ess(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::ess(this), output);
   }
 
   // .essmodule.ESSStatus essStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_essstatus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::essstatus(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::essstatus(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::ied(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.ESSStatusProfile)
+}
+
+::google::protobuf::uint8* ESSStatusProfile::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSStatusProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->has_statusmessageinfo()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::statusmessageinfo(this), target);
+  }
+
+  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ess()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::ess(this), target);
+  }
+
+  // .essmodule.ESSStatus essStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_essstatus()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::essstatus(this), target);
+  }
+
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::ied(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSStatusProfile)
   return target;
@@ -8607,49 +12554,57 @@ size_t ESSStatusProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSStatusProfile)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_statusmessageinfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *statusmessageinfo_);
   }
 
   // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_ess()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *ess_);
   }
 
   // .essmodule.ESSStatus essStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_essstatus()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *essstatus_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *ied_);
   }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void ESSStatusProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSStatusProfile::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSStatusProfile)
   GOOGLE_DCHECK_NE(&from, this);
   const ESSStatusProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSStatusProfile>(
+      ::google::protobuf::DynamicCastToGenerated<ESSStatusProfile>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSStatusProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSStatusProfile)
     MergeFrom(*source);
@@ -8659,22 +12614,25 @@ void ESSStatusProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void ESSStatusProfile::MergeFrom(const ESSStatusProfile& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSStatusProfile)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_statusmessageinfo()) {
-    _internal_mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(from._internal_statusmessageinfo());
+    mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(from.statusmessageinfo());
   }
   if (from.has_ess()) {
-    _internal_mutable_ess()->::commonmodule::ESS::MergeFrom(from._internal_ess());
+    mutable_ess()->::commonmodule::ESS::MergeFrom(from.ess());
   }
   if (from.has_essstatus()) {
-    _internal_mutable_essstatus()->::essmodule::ESSStatus::MergeFrom(from._internal_essstatus());
+    mutable_essstatus()->::essmodule::ESSStatus::MergeFrom(from.essstatus());
+  }
+  if (from.has_ied()) {
+    mutable_ied()->::commonmodule::IED::MergeFrom(from.ied());
   }
 }
 
-void ESSStatusProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSStatusProfile::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSStatusProfile)
   if (&from == this) return;
   Clear();
@@ -8692,267 +12650,320 @@ bool ESSStatusProfile::IsInitialized() const {
   return true;
 }
 
+void ESSStatusProfile::Swap(ESSStatusProfile* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void ESSStatusProfile::InternalSwap(ESSStatusProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSStatusProfile, essstatus_)
-      + sizeof(ESSStatusProfile::essstatus_)
-      - PROTOBUF_FIELD_OFFSET(ESSStatusProfile, statusmessageinfo_)>(
-          reinterpret_cast<char*>(&statusmessageinfo_),
-          reinterpret_cast<char*>(&other->statusmessageinfo_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(statusmessageinfo_, other->statusmessageinfo_);
+  swap(ess_, other->ess_);
+  swap(essstatus_, other->essstatus_);
+  swap(ied_, other->ied_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ESSStatusProfile::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata ESSStatusProfile::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class ESSPoint::_Internal {
+void ESSPoint::InitAsDefaultInstance() {
+  ::essmodule::_ESSPoint_default_instance_._instance.get_mutable()->blackstartenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::essmodule::_ESSPoint_default_instance_._instance.get_mutable()->frequencysetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::essmodule::_ESSPoint_default_instance_._instance.get_mutable()->function_ = const_cast< ::essmodule::ESSFunction*>(
+      ::essmodule::ESSFunction::internal_default_instance());
+  ::essmodule::_ESSPoint_default_instance_._instance.get_mutable()->mode_ = const_cast< ::commonmodule::ENG_GridConnectModeKind*>(
+      ::commonmodule::ENG_GridConnectModeKind::internal_default_instance());
+  ::essmodule::_ESSPoint_default_instance_._instance.get_mutable()->pcthzdroop_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_ESSPoint_default_instance_._instance.get_mutable()->pctvdroop_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::essmodule::_ESSPoint_default_instance_._instance.get_mutable()->ramprates_ = const_cast< ::commonmodule::RampRate*>(
+      ::commonmodule::RampRate::internal_default_instance());
+  ::essmodule::_ESSPoint_default_instance_._instance.get_mutable()->reactivepwrsetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::essmodule::_ESSPoint_default_instance_._instance.get_mutable()->realpwrsetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::essmodule::_ESSPoint_default_instance_._instance.get_mutable()->reset_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::essmodule::_ESSPoint_default_instance_._instance.get_mutable()->state_ = const_cast< ::commonmodule::Optional_StateKind*>(
+      ::commonmodule::Optional_StateKind::internal_default_instance());
+  ::essmodule::_ESSPoint_default_instance_._instance.get_mutable()->syncbacktogrid_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::essmodule::_ESSPoint_default_instance_._instance.get_mutable()->transtoislndongridlossenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::essmodule::_ESSPoint_default_instance_._instance.get_mutable()->voltagesetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::essmodule::_ESSPoint_default_instance_._instance.get_mutable()->starttime_ = const_cast< ::commonmodule::ControlTimestamp*>(
+      ::commonmodule::ControlTimestamp::internal_default_instance());
+}
+class ESSPoint::HasBitSetters {
  public:
-  static const ::commonmodule::ControlSPC& blackstartenabled(const ESSPoint* msg);
-  static const ::commonmodule::ControlSPC& frequencysetpointenabled(const ESSPoint* msg);
+  static const ::commonmodule::ControlDPC& blackstartenabled(const ESSPoint* msg);
+  static const ::commonmodule::ControlDPC& frequencysetpointenabled(const ESSPoint* msg);
   static const ::essmodule::ESSFunction& function(const ESSPoint* msg);
   static const ::commonmodule::ENG_GridConnectModeKind& mode(const ESSPoint* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pcthzdroop(const ESSPoint* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pctvdroop(const ESSPoint* msg);
+  static const ::google::protobuf::FloatValue& pcthzdroop(const ESSPoint* msg);
+  static const ::google::protobuf::FloatValue& pctvdroop(const ESSPoint* msg);
   static const ::commonmodule::RampRate& ramprates(const ESSPoint* msg);
-  static const ::commonmodule::ControlSPC& reactivepwrsetpointenabled(const ESSPoint* msg);
-  static const ::commonmodule::ControlSPC& realpwrsetpointenabled(const ESSPoint* msg);
-  static const ::commonmodule::ControlSPC& reset(const ESSPoint* msg);
+  static const ::commonmodule::ControlDPC& reactivepwrsetpointenabled(const ESSPoint* msg);
+  static const ::commonmodule::ControlDPC& realpwrsetpointenabled(const ESSPoint* msg);
+  static const ::commonmodule::ControlDPC& reset(const ESSPoint* msg);
   static const ::commonmodule::Optional_StateKind& state(const ESSPoint* msg);
-  static const ::commonmodule::ControlSPC& syncbacktogrid(const ESSPoint* msg);
-  static const ::commonmodule::ControlSPC& transtoislndongridlossenabled(const ESSPoint* msg);
-  static const ::commonmodule::ControlSPC& voltagesetpointenabled(const ESSPoint* msg);
+  static const ::commonmodule::ControlDPC& syncbacktogrid(const ESSPoint* msg);
+  static const ::commonmodule::ControlDPC& transtoislndongridlossenabled(const ESSPoint* msg);
+  static const ::commonmodule::ControlDPC& voltagesetpointenabled(const ESSPoint* msg);
   static const ::commonmodule::ControlTimestamp& starttime(const ESSPoint* msg);
 };
 
-const ::commonmodule::ControlSPC&
-ESSPoint::_Internal::blackstartenabled(const ESSPoint* msg) {
+const ::commonmodule::ControlDPC&
+ESSPoint::HasBitSetters::blackstartenabled(const ESSPoint* msg) {
   return *msg->blackstartenabled_;
 }
-const ::commonmodule::ControlSPC&
-ESSPoint::_Internal::frequencysetpointenabled(const ESSPoint* msg) {
+const ::commonmodule::ControlDPC&
+ESSPoint::HasBitSetters::frequencysetpointenabled(const ESSPoint* msg) {
   return *msg->frequencysetpointenabled_;
 }
 const ::essmodule::ESSFunction&
-ESSPoint::_Internal::function(const ESSPoint* msg) {
+ESSPoint::HasBitSetters::function(const ESSPoint* msg) {
   return *msg->function_;
 }
 const ::commonmodule::ENG_GridConnectModeKind&
-ESSPoint::_Internal::mode(const ESSPoint* msg) {
+ESSPoint::HasBitSetters::mode(const ESSPoint* msg) {
   return *msg->mode_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-ESSPoint::_Internal::pcthzdroop(const ESSPoint* msg) {
+const ::google::protobuf::FloatValue&
+ESSPoint::HasBitSetters::pcthzdroop(const ESSPoint* msg) {
   return *msg->pcthzdroop_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-ESSPoint::_Internal::pctvdroop(const ESSPoint* msg) {
+const ::google::protobuf::FloatValue&
+ESSPoint::HasBitSetters::pctvdroop(const ESSPoint* msg) {
   return *msg->pctvdroop_;
 }
 const ::commonmodule::RampRate&
-ESSPoint::_Internal::ramprates(const ESSPoint* msg) {
+ESSPoint::HasBitSetters::ramprates(const ESSPoint* msg) {
   return *msg->ramprates_;
 }
-const ::commonmodule::ControlSPC&
-ESSPoint::_Internal::reactivepwrsetpointenabled(const ESSPoint* msg) {
+const ::commonmodule::ControlDPC&
+ESSPoint::HasBitSetters::reactivepwrsetpointenabled(const ESSPoint* msg) {
   return *msg->reactivepwrsetpointenabled_;
 }
-const ::commonmodule::ControlSPC&
-ESSPoint::_Internal::realpwrsetpointenabled(const ESSPoint* msg) {
+const ::commonmodule::ControlDPC&
+ESSPoint::HasBitSetters::realpwrsetpointenabled(const ESSPoint* msg) {
   return *msg->realpwrsetpointenabled_;
 }
-const ::commonmodule::ControlSPC&
-ESSPoint::_Internal::reset(const ESSPoint* msg) {
+const ::commonmodule::ControlDPC&
+ESSPoint::HasBitSetters::reset(const ESSPoint* msg) {
   return *msg->reset_;
 }
 const ::commonmodule::Optional_StateKind&
-ESSPoint::_Internal::state(const ESSPoint* msg) {
+ESSPoint::HasBitSetters::state(const ESSPoint* msg) {
   return *msg->state_;
 }
-const ::commonmodule::ControlSPC&
-ESSPoint::_Internal::syncbacktogrid(const ESSPoint* msg) {
+const ::commonmodule::ControlDPC&
+ESSPoint::HasBitSetters::syncbacktogrid(const ESSPoint* msg) {
   return *msg->syncbacktogrid_;
 }
-const ::commonmodule::ControlSPC&
-ESSPoint::_Internal::transtoislndongridlossenabled(const ESSPoint* msg) {
+const ::commonmodule::ControlDPC&
+ESSPoint::HasBitSetters::transtoislndongridlossenabled(const ESSPoint* msg) {
   return *msg->transtoislndongridlossenabled_;
 }
-const ::commonmodule::ControlSPC&
-ESSPoint::_Internal::voltagesetpointenabled(const ESSPoint* msg) {
+const ::commonmodule::ControlDPC&
+ESSPoint::HasBitSetters::voltagesetpointenabled(const ESSPoint* msg) {
   return *msg->voltagesetpointenabled_;
 }
 const ::commonmodule::ControlTimestamp&
-ESSPoint::_Internal::starttime(const ESSPoint* msg) {
+ESSPoint::HasBitSetters::starttime(const ESSPoint* msg) {
   return *msg->starttime_;
 }
 void ESSPoint::clear_blackstartenabled() {
-  if (GetArena() == nullptr && blackstartenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && blackstartenabled_ != nullptr) {
     delete blackstartenabled_;
   }
   blackstartenabled_ = nullptr;
 }
 void ESSPoint::clear_frequencysetpointenabled() {
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && frequencysetpointenabled_ != nullptr) {
     delete frequencysetpointenabled_;
   }
   frequencysetpointenabled_ = nullptr;
 }
 void ESSPoint::clear_mode() {
-  if (GetArena() == nullptr && mode_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && mode_ != nullptr) {
     delete mode_;
   }
   mode_ = nullptr;
 }
 void ESSPoint::clear_pcthzdroop() {
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pcthzdroop_ != nullptr) {
     delete pcthzdroop_;
   }
   pcthzdroop_ = nullptr;
 }
 void ESSPoint::clear_pctvdroop() {
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pctvdroop_ != nullptr) {
     delete pctvdroop_;
   }
   pctvdroop_ = nullptr;
 }
 void ESSPoint::clear_ramprates() {
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && ramprates_ != nullptr) {
     delete ramprates_;
   }
   ramprates_ = nullptr;
 }
 void ESSPoint::clear_reactivepwrsetpointenabled() {
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
     delete reactivepwrsetpointenabled_;
   }
   reactivepwrsetpointenabled_ = nullptr;
 }
 void ESSPoint::clear_realpwrsetpointenabled() {
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && realpwrsetpointenabled_ != nullptr) {
     delete realpwrsetpointenabled_;
   }
   realpwrsetpointenabled_ = nullptr;
 }
 void ESSPoint::clear_reset() {
-  if (GetArena() == nullptr && reset_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && reset_ != nullptr) {
     delete reset_;
   }
   reset_ = nullptr;
 }
 void ESSPoint::clear_state() {
-  if (GetArena() == nullptr && state_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && state_ != nullptr) {
     delete state_;
   }
   state_ = nullptr;
 }
 void ESSPoint::clear_syncbacktogrid() {
-  if (GetArena() == nullptr && syncbacktogrid_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && syncbacktogrid_ != nullptr) {
     delete syncbacktogrid_;
   }
   syncbacktogrid_ = nullptr;
 }
 void ESSPoint::clear_transtoislndongridlossenabled() {
-  if (GetArena() == nullptr && transtoislndongridlossenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && transtoislndongridlossenabled_ != nullptr) {
     delete transtoislndongridlossenabled_;
   }
   transtoislndongridlossenabled_ = nullptr;
 }
 void ESSPoint::clear_voltagesetpointenabled() {
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagesetpointenabled_ != nullptr) {
     delete voltagesetpointenabled_;
   }
   voltagesetpointenabled_ = nullptr;
 }
 void ESSPoint::clear_starttime() {
-  if (GetArena() == nullptr && starttime_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && starttime_ != nullptr) {
     delete starttime_;
   }
   starttime_ = nullptr;
 }
-ESSPoint::ESSPoint(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ESSPoint::kBlackStartEnabledFieldNumber;
+const int ESSPoint::kFrequencySetPointEnabledFieldNumber;
+const int ESSPoint::kFunctionFieldNumber;
+const int ESSPoint::kModeFieldNumber;
+const int ESSPoint::kPctHzDroopFieldNumber;
+const int ESSPoint::kPctVDroopFieldNumber;
+const int ESSPoint::kRampRatesFieldNumber;
+const int ESSPoint::kReactivePwrSetPointEnabledFieldNumber;
+const int ESSPoint::kRealPwrSetPointEnabledFieldNumber;
+const int ESSPoint::kResetFieldNumber;
+const int ESSPoint::kStateFieldNumber;
+const int ESSPoint::kSyncBackToGridFieldNumber;
+const int ESSPoint::kTransToIslndOnGridLossEnabledFieldNumber;
+const int ESSPoint::kVoltageSetPointEnabledFieldNumber;
+const int ESSPoint::kStartTimeFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ESSPoint::ESSPoint()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSPoint)
+  // @@protoc_insertion_point(constructor:essmodule.ESSPoint)
 }
 ESSPoint::ESSPoint(const ESSPoint& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_blackstartenabled()) {
-    blackstartenabled_ = new ::commonmodule::ControlSPC(*from.blackstartenabled_);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_blackstartenabled()) {
+    blackstartenabled_ = new ::commonmodule::ControlDPC(*from.blackstartenabled_);
   } else {
     blackstartenabled_ = nullptr;
   }
-  if (from._internal_has_frequencysetpointenabled()) {
-    frequencysetpointenabled_ = new ::commonmodule::ControlSPC(*from.frequencysetpointenabled_);
+  if (from.has_frequencysetpointenabled()) {
+    frequencysetpointenabled_ = new ::commonmodule::ControlDPC(*from.frequencysetpointenabled_);
   } else {
     frequencysetpointenabled_ = nullptr;
   }
-  if (from._internal_has_function()) {
+  if (from.has_function()) {
     function_ = new ::essmodule::ESSFunction(*from.function_);
   } else {
     function_ = nullptr;
   }
-  if (from._internal_has_mode()) {
+  if (from.has_mode()) {
     mode_ = new ::commonmodule::ENG_GridConnectModeKind(*from.mode_);
   } else {
     mode_ = nullptr;
   }
-  if (from._internal_has_pcthzdroop()) {
-    pcthzdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pcthzdroop_);
+  if (from.has_pcthzdroop()) {
+    pcthzdroop_ = new ::google::protobuf::FloatValue(*from.pcthzdroop_);
   } else {
     pcthzdroop_ = nullptr;
   }
-  if (from._internal_has_pctvdroop()) {
-    pctvdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pctvdroop_);
+  if (from.has_pctvdroop()) {
+    pctvdroop_ = new ::google::protobuf::FloatValue(*from.pctvdroop_);
   } else {
     pctvdroop_ = nullptr;
   }
-  if (from._internal_has_ramprates()) {
+  if (from.has_ramprates()) {
     ramprates_ = new ::commonmodule::RampRate(*from.ramprates_);
   } else {
     ramprates_ = nullptr;
   }
-  if (from._internal_has_reactivepwrsetpointenabled()) {
-    reactivepwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from.reactivepwrsetpointenabled_);
+  if (from.has_reactivepwrsetpointenabled()) {
+    reactivepwrsetpointenabled_ = new ::commonmodule::ControlDPC(*from.reactivepwrsetpointenabled_);
   } else {
     reactivepwrsetpointenabled_ = nullptr;
   }
-  if (from._internal_has_realpwrsetpointenabled()) {
-    realpwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from.realpwrsetpointenabled_);
+  if (from.has_realpwrsetpointenabled()) {
+    realpwrsetpointenabled_ = new ::commonmodule::ControlDPC(*from.realpwrsetpointenabled_);
   } else {
     realpwrsetpointenabled_ = nullptr;
   }
-  if (from._internal_has_reset()) {
-    reset_ = new ::commonmodule::ControlSPC(*from.reset_);
+  if (from.has_reset()) {
+    reset_ = new ::commonmodule::ControlDPC(*from.reset_);
   } else {
     reset_ = nullptr;
   }
-  if (from._internal_has_state()) {
+  if (from.has_state()) {
     state_ = new ::commonmodule::Optional_StateKind(*from.state_);
   } else {
     state_ = nullptr;
   }
-  if (from._internal_has_syncbacktogrid()) {
-    syncbacktogrid_ = new ::commonmodule::ControlSPC(*from.syncbacktogrid_);
+  if (from.has_syncbacktogrid()) {
+    syncbacktogrid_ = new ::commonmodule::ControlDPC(*from.syncbacktogrid_);
   } else {
     syncbacktogrid_ = nullptr;
   }
-  if (from._internal_has_transtoislndongridlossenabled()) {
-    transtoislndongridlossenabled_ = new ::commonmodule::ControlSPC(*from.transtoislndongridlossenabled_);
+  if (from.has_transtoislndongridlossenabled()) {
+    transtoislndongridlossenabled_ = new ::commonmodule::ControlDPC(*from.transtoislndongridlossenabled_);
   } else {
     transtoislndongridlossenabled_ = nullptr;
   }
-  if (from._internal_has_voltagesetpointenabled()) {
-    voltagesetpointenabled_ = new ::commonmodule::ControlSPC(*from.voltagesetpointenabled_);
+  if (from.has_voltagesetpointenabled()) {
+    voltagesetpointenabled_ = new ::commonmodule::ControlDPC(*from.voltagesetpointenabled_);
   } else {
     voltagesetpointenabled_ = nullptr;
   }
-  if (from._internal_has_starttime()) {
+  if (from.has_starttime()) {
     starttime_ = new ::commonmodule::ControlTimestamp(*from.starttime_);
   } else {
     starttime_ = nullptr;
@@ -8961,20 +12972,19 @@ ESSPoint::ESSPoint(const ESSPoint& from)
 }
 
 void ESSPoint::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&blackstartenabled_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&starttime_) -
-    reinterpret_cast<char*>(&blackstartenabled_)) + sizeof(starttime_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ESSPoint_essmodule_2fessmodule_2eproto.base);
+  ::memset(&blackstartenabled_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&starttime_) -
+      reinterpret_cast<char*>(&blackstartenabled_)) + sizeof(starttime_));
 }
 
 ESSPoint::~ESSPoint() {
   // @@protoc_insertion_point(destructor:essmodule.ESSPoint)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ESSPoint::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete blackstartenabled_;
   if (this != internal_default_instance()) delete frequencysetpointenabled_;
   if (this != internal_default_instance()) delete function_;
@@ -8992,348 +13002,725 @@ void ESSPoint::SharedDtor() {
   if (this != internal_default_instance()) delete starttime_;
 }
 
-void ESSPoint::ArenaDtor(void* object) {
-  ESSPoint* _this = reinterpret_cast< ESSPoint* >(object);
-  (void)_this;
-}
-void ESSPoint::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSPoint::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const ESSPoint& ESSPoint::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ESSPoint_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void ESSPoint::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && blackstartenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && blackstartenabled_ != nullptr) {
     delete blackstartenabled_;
   }
   blackstartenabled_ = nullptr;
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && frequencysetpointenabled_ != nullptr) {
     delete frequencysetpointenabled_;
   }
   frequencysetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && function_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && function_ != nullptr) {
     delete function_;
   }
   function_ = nullptr;
-  if (GetArena() == nullptr && mode_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && mode_ != nullptr) {
     delete mode_;
   }
   mode_ = nullptr;
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pcthzdroop_ != nullptr) {
     delete pcthzdroop_;
   }
   pcthzdroop_ = nullptr;
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pctvdroop_ != nullptr) {
     delete pctvdroop_;
   }
   pctvdroop_ = nullptr;
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && ramprates_ != nullptr) {
     delete ramprates_;
   }
   ramprates_ = nullptr;
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
     delete reactivepwrsetpointenabled_;
   }
   reactivepwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && realpwrsetpointenabled_ != nullptr) {
     delete realpwrsetpointenabled_;
   }
   realpwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && reset_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && reset_ != nullptr) {
     delete reset_;
   }
   reset_ = nullptr;
-  if (GetArena() == nullptr && state_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && state_ != nullptr) {
     delete state_;
   }
   state_ = nullptr;
-  if (GetArena() == nullptr && syncbacktogrid_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && syncbacktogrid_ != nullptr) {
     delete syncbacktogrid_;
   }
   syncbacktogrid_ = nullptr;
-  if (GetArena() == nullptr && transtoislndongridlossenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && transtoislndongridlossenabled_ != nullptr) {
     delete transtoislndongridlossenabled_;
   }
   transtoislndongridlossenabled_ = nullptr;
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagesetpointenabled_ != nullptr) {
     delete voltagesetpointenabled_;
   }
   voltagesetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && starttime_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && starttime_ != nullptr) {
     delete starttime_;
   }
   starttime_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* ESSPoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ESSPoint::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ESSPoint*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
-      // .commonmodule.ControlSPC blackStartEnabled = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_blackstartenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC frequencySetPointEnabled = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_frequencysetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      // .commonmodule.ControlDPC blackStartEnabled = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_blackstartenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_frequencysetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.ESSFunction function = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_function(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::ESSFunction::_InternalParse;
+        object = msg->mutable_function();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.ENG_GridConnectModeKind mode = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mode(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ENG_GridConnectModeKind::_InternalParse;
+        object = msg->mutable_mode();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue pctHzDroop = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_pcthzdroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_pcthzdroop();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue pctVDroop = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(_internal_mutable_pctvdroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_pctvdroop();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.RampRate rampRates = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ctx->ParseMessage(_internal_mutable_ramprates(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 8;
-      case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          ptr = ctx->ParseMessage(_internal_mutable_reactivepwrsetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC realPwrSetPointEnabled = 9;
-      case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
-          ptr = ctx->ParseMessage(_internal_mutable_realpwrsetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC reset = 10;
-      case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
-          ptr = ctx->ParseMessage(_internal_mutable_reset(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 7: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::RampRate::_InternalParse;
+        object = msg->mutable_ramprates();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 8;
+      case 8: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 66) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_reactivepwrsetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC realPwrSetPointEnabled = 9;
+      case 9: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 74) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_realpwrsetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC reset = 10;
+      case 10: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 82) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_reset();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.Optional_StateKind state = 11;
-      case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
-          ptr = ctx->ParseMessage(_internal_mutable_state(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC syncBackToGrid = 12;
-      case 12:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
-          ptr = ctx->ParseMessage(_internal_mutable_syncbacktogrid(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC transToIslndOnGridLossEnabled = 13;
-      case 13:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
-          ptr = ctx->ParseMessage(_internal_mutable_transtoislndongridlossenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC voltageSetPointEnabled = 14;
-      case 14:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 114)) {
-          ptr = ctx->ParseMessage(_internal_mutable_voltagesetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 11: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 90) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::Optional_StateKind::_InternalParse;
+        object = msg->mutable_state();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC syncBackToGrid = 12;
+      case 12: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 98) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_syncbacktogrid();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 13;
+      case 13: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 106) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_transtoislndongridlossenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC voltageSetPointEnabled = 14;
+      case 14: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 114) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_voltagesetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.ControlTimestamp startTime = 15 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 15:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 122)) {
-          ptr = ctx->ParseMessage(_internal_mutable_starttime(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 15: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 122) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlTimestamp::_InternalParse;
+        object = msg->mutable_starttime();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ESSPoint::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.ESSPoint)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ControlDPC blackStartEnabled = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_blackstartenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSPoint::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_frequencysetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .essmodule.ESSFunction function = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_function()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ENG_GridConnectModeKind mode = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_mode()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue pctHzDroop = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_pcthzdroop()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue pctVDroop = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_pctvdroop()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.RampRate rampRates = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (58 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_ramprates()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (66 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_reactivepwrsetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC realPwrSetPointEnabled = 9;
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (74 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_realpwrsetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC reset = 10;
+      case 10: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (82 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_reset()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.Optional_StateKind state = 11;
+      case 11: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (90 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_state()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC syncBackToGrid = 12;
+      case 12: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (98 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_syncbacktogrid()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 13;
+      case 13: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (106 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_transtoislndongridlossenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC voltageSetPointEnabled = 14;
+      case 14: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (114 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_voltagesetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlTimestamp startTime = 15 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 15: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (122 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_starttime()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.ESSPoint)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.ESSPoint)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ESSPoint::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.ESSPoint)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .commonmodule.ControlSPC blackStartEnabled = 1;
+  // .commonmodule.ControlDPC blackStartEnabled = 1;
   if (this->has_blackstartenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::blackstartenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::blackstartenabled(this), output);
   }
 
-  // .commonmodule.ControlSPC frequencySetPointEnabled = 2;
+  // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
   if (this->has_frequencysetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::frequencysetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::frequencysetpointenabled(this), output);
   }
 
   // .essmodule.ESSFunction function = 3;
   if (this->has_function()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::function(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::function(this), output);
   }
 
   // .commonmodule.ENG_GridConnectModeKind mode = 4;
   if (this->has_mode()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::mode(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::mode(this), output);
   }
 
   // .google.protobuf.FloatValue pctHzDroop = 5;
   if (this->has_pcthzdroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::pcthzdroop(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, HasBitSetters::pcthzdroop(this), output);
   }
 
   // .google.protobuf.FloatValue pctVDroop = 6;
   if (this->has_pctvdroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::pctvdroop(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, HasBitSetters::pctvdroop(this), output);
   }
 
   // .commonmodule.RampRate rampRates = 7;
   if (this->has_ramprates()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::ramprates(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      7, HasBitSetters::ramprates(this), output);
   }
 
-  // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 8;
+  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 8;
   if (this->has_reactivepwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::reactivepwrsetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      8, HasBitSetters::reactivepwrsetpointenabled(this), output);
   }
 
-  // .commonmodule.ControlSPC realPwrSetPointEnabled = 9;
+  // .commonmodule.ControlDPC realPwrSetPointEnabled = 9;
   if (this->has_realpwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        9, _Internal::realpwrsetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      9, HasBitSetters::realpwrsetpointenabled(this), output);
   }
 
-  // .commonmodule.ControlSPC reset = 10;
+  // .commonmodule.ControlDPC reset = 10;
   if (this->has_reset()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        10, _Internal::reset(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      10, HasBitSetters::reset(this), output);
   }
 
   // .commonmodule.Optional_StateKind state = 11;
   if (this->has_state()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        11, _Internal::state(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      11, HasBitSetters::state(this), output);
   }
 
-  // .commonmodule.ControlSPC syncBackToGrid = 12;
+  // .commonmodule.ControlDPC syncBackToGrid = 12;
   if (this->has_syncbacktogrid()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        12, _Internal::syncbacktogrid(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      12, HasBitSetters::syncbacktogrid(this), output);
   }
 
-  // .commonmodule.ControlSPC transToIslndOnGridLossEnabled = 13;
+  // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 13;
   if (this->has_transtoislndongridlossenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        13, _Internal::transtoislndongridlossenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      13, HasBitSetters::transtoislndongridlossenabled(this), output);
   }
 
-  // .commonmodule.ControlSPC voltageSetPointEnabled = 14;
+  // .commonmodule.ControlDPC voltageSetPointEnabled = 14;
   if (this->has_voltagesetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        14, _Internal::voltagesetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      14, HasBitSetters::voltagesetpointenabled(this), output);
   }
 
   // .commonmodule.ControlTimestamp startTime = 15 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_starttime()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        15, _Internal::starttime(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      15, HasBitSetters::starttime(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.ESSPoint)
+}
+
+::google::protobuf::uint8* ESSPoint::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSPoint)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlDPC blackStartEnabled = 1;
+  if (this->has_blackstartenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::blackstartenabled(this), target);
+  }
+
+  // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
+  if (this->has_frequencysetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::frequencysetpointenabled(this), target);
+  }
+
+  // .essmodule.ESSFunction function = 3;
+  if (this->has_function()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::function(this), target);
+  }
+
+  // .commonmodule.ENG_GridConnectModeKind mode = 4;
+  if (this->has_mode()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::mode(this), target);
+  }
+
+  // .google.protobuf.FloatValue pctHzDroop = 5;
+  if (this->has_pcthzdroop()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, HasBitSetters::pcthzdroop(this), target);
+  }
+
+  // .google.protobuf.FloatValue pctVDroop = 6;
+  if (this->has_pctvdroop()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        6, HasBitSetters::pctvdroop(this), target);
+  }
+
+  // .commonmodule.RampRate rampRates = 7;
+  if (this->has_ramprates()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        7, HasBitSetters::ramprates(this), target);
+  }
+
+  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 8;
+  if (this->has_reactivepwrsetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        8, HasBitSetters::reactivepwrsetpointenabled(this), target);
+  }
+
+  // .commonmodule.ControlDPC realPwrSetPointEnabled = 9;
+  if (this->has_realpwrsetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        9, HasBitSetters::realpwrsetpointenabled(this), target);
+  }
+
+  // .commonmodule.ControlDPC reset = 10;
+  if (this->has_reset()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        10, HasBitSetters::reset(this), target);
+  }
+
+  // .commonmodule.Optional_StateKind state = 11;
+  if (this->has_state()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        11, HasBitSetters::state(this), target);
+  }
+
+  // .commonmodule.ControlDPC syncBackToGrid = 12;
+  if (this->has_syncbacktogrid()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        12, HasBitSetters::syncbacktogrid(this), target);
+  }
+
+  // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 13;
+  if (this->has_transtoislndongridlossenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        13, HasBitSetters::transtoislndongridlossenabled(this), target);
+  }
+
+  // .commonmodule.ControlDPC voltageSetPointEnabled = 14;
+  if (this->has_voltagesetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        14, HasBitSetters::voltagesetpointenabled(this), target);
+  }
+
+  // .commonmodule.ControlTimestamp startTime = 15 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_starttime()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        15, HasBitSetters::starttime(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSPoint)
   return target;
@@ -9343,133 +13730,134 @@ size_t ESSPoint::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSPoint)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .commonmodule.ControlSPC blackStartEnabled = 1;
+  // .commonmodule.ControlDPC blackStartEnabled = 1;
   if (this->has_blackstartenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *blackstartenabled_);
   }
 
-  // .commonmodule.ControlSPC frequencySetPointEnabled = 2;
+  // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
   if (this->has_frequencysetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *frequencysetpointenabled_);
   }
 
   // .essmodule.ESSFunction function = 3;
   if (this->has_function()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *function_);
   }
 
   // .commonmodule.ENG_GridConnectModeKind mode = 4;
   if (this->has_mode()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *mode_);
   }
 
   // .google.protobuf.FloatValue pctHzDroop = 5;
   if (this->has_pcthzdroop()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *pcthzdroop_);
   }
 
   // .google.protobuf.FloatValue pctVDroop = 6;
   if (this->has_pctvdroop()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *pctvdroop_);
   }
 
   // .commonmodule.RampRate rampRates = 7;
   if (this->has_ramprates()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *ramprates_);
   }
 
-  // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 8;
+  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 8;
   if (this->has_reactivepwrsetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *reactivepwrsetpointenabled_);
   }
 
-  // .commonmodule.ControlSPC realPwrSetPointEnabled = 9;
+  // .commonmodule.ControlDPC realPwrSetPointEnabled = 9;
   if (this->has_realpwrsetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *realpwrsetpointenabled_);
   }
 
-  // .commonmodule.ControlSPC reset = 10;
+  // .commonmodule.ControlDPC reset = 10;
   if (this->has_reset()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *reset_);
   }
 
   // .commonmodule.Optional_StateKind state = 11;
   if (this->has_state()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *state_);
   }
 
-  // .commonmodule.ControlSPC syncBackToGrid = 12;
+  // .commonmodule.ControlDPC syncBackToGrid = 12;
   if (this->has_syncbacktogrid()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *syncbacktogrid_);
   }
 
-  // .commonmodule.ControlSPC transToIslndOnGridLossEnabled = 13;
+  // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 13;
   if (this->has_transtoislndongridlossenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *transtoislndongridlossenabled_);
   }
 
-  // .commonmodule.ControlSPC voltageSetPointEnabled = 14;
+  // .commonmodule.ControlDPC voltageSetPointEnabled = 14;
   if (this->has_voltagesetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *voltagesetpointenabled_);
   }
 
   // .commonmodule.ControlTimestamp startTime = 15 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_starttime()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *starttime_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void ESSPoint::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSPoint::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSPoint)
   GOOGLE_DCHECK_NE(&from, this);
   const ESSPoint* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSPoint>(
+      ::google::protobuf::DynamicCastToGenerated<ESSPoint>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSPoint)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSPoint)
     MergeFrom(*source);
@@ -9479,58 +13867,58 @@ void ESSPoint::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void ESSPoint::MergeFrom(const ESSPoint& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSPoint)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_blackstartenabled()) {
-    _internal_mutable_blackstartenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_blackstartenabled());
+    mutable_blackstartenabled()->::commonmodule::ControlDPC::MergeFrom(from.blackstartenabled());
   }
   if (from.has_frequencysetpointenabled()) {
-    _internal_mutable_frequencysetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_frequencysetpointenabled());
+    mutable_frequencysetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.frequencysetpointenabled());
   }
   if (from.has_function()) {
-    _internal_mutable_function()->::essmodule::ESSFunction::MergeFrom(from._internal_function());
+    mutable_function()->::essmodule::ESSFunction::MergeFrom(from.function());
   }
   if (from.has_mode()) {
-    _internal_mutable_mode()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from._internal_mode());
+    mutable_mode()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from.mode());
   }
   if (from.has_pcthzdroop()) {
-    _internal_mutable_pcthzdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pcthzdroop());
+    mutable_pcthzdroop()->::google::protobuf::FloatValue::MergeFrom(from.pcthzdroop());
   }
   if (from.has_pctvdroop()) {
-    _internal_mutable_pctvdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pctvdroop());
+    mutable_pctvdroop()->::google::protobuf::FloatValue::MergeFrom(from.pctvdroop());
   }
   if (from.has_ramprates()) {
-    _internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from._internal_ramprates());
+    mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from.ramprates());
   }
   if (from.has_reactivepwrsetpointenabled()) {
-    _internal_mutable_reactivepwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_reactivepwrsetpointenabled());
+    mutable_reactivepwrsetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.reactivepwrsetpointenabled());
   }
   if (from.has_realpwrsetpointenabled()) {
-    _internal_mutable_realpwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_realpwrsetpointenabled());
+    mutable_realpwrsetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.realpwrsetpointenabled());
   }
   if (from.has_reset()) {
-    _internal_mutable_reset()->::commonmodule::ControlSPC::MergeFrom(from._internal_reset());
+    mutable_reset()->::commonmodule::ControlDPC::MergeFrom(from.reset());
   }
   if (from.has_state()) {
-    _internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from._internal_state());
+    mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from.state());
   }
   if (from.has_syncbacktogrid()) {
-    _internal_mutable_syncbacktogrid()->::commonmodule::ControlSPC::MergeFrom(from._internal_syncbacktogrid());
+    mutable_syncbacktogrid()->::commonmodule::ControlDPC::MergeFrom(from.syncbacktogrid());
   }
   if (from.has_transtoislndongridlossenabled()) {
-    _internal_mutable_transtoislndongridlossenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_transtoislndongridlossenabled());
+    mutable_transtoislndongridlossenabled()->::commonmodule::ControlDPC::MergeFrom(from.transtoislndongridlossenabled());
   }
   if (from.has_voltagesetpointenabled()) {
-    _internal_mutable_voltagesetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_voltagesetpointenabled());
+    mutable_voltagesetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.voltagesetpointenabled());
   }
   if (from.has_starttime()) {
-    _internal_mutable_starttime()->::commonmodule::ControlTimestamp::MergeFrom(from._internal_starttime());
+    mutable_starttime()->::commonmodule::ControlTimestamp::MergeFrom(from.starttime());
   }
 }
 
-void ESSPoint::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSPoint::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSPoint)
   if (&from == this) return;
   Clear();
@@ -9548,133 +13936,223 @@ bool ESSPoint::IsInitialized() const {
   return true;
 }
 
+void ESSPoint::Swap(ESSPoint* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void ESSPoint::InternalSwap(ESSPoint* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSPoint, starttime_)
-      + sizeof(ESSPoint::starttime_)
-      - PROTOBUF_FIELD_OFFSET(ESSPoint, blackstartenabled_)>(
-          reinterpret_cast<char*>(&blackstartenabled_),
-          reinterpret_cast<char*>(&other->blackstartenabled_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(blackstartenabled_, other->blackstartenabled_);
+  swap(frequencysetpointenabled_, other->frequencysetpointenabled_);
+  swap(function_, other->function_);
+  swap(mode_, other->mode_);
+  swap(pcthzdroop_, other->pcthzdroop_);
+  swap(pctvdroop_, other->pctvdroop_);
+  swap(ramprates_, other->ramprates_);
+  swap(reactivepwrsetpointenabled_, other->reactivepwrsetpointenabled_);
+  swap(realpwrsetpointenabled_, other->realpwrsetpointenabled_);
+  swap(reset_, other->reset_);
+  swap(state_, other->state_);
+  swap(syncbacktogrid_, other->syncbacktogrid_);
+  swap(transtoislndongridlossenabled_, other->transtoislndongridlossenabled_);
+  swap(voltagesetpointenabled_, other->voltagesetpointenabled_);
+  swap(starttime_, other->starttime_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ESSPoint::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata ESSPoint::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class ESSCSG::_Internal {
+void ESSCSG::InitAsDefaultInstance() {
+}
+class ESSCSG::HasBitSetters {
  public:
 };
 
-ESSCSG::ESSCSG(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  crvpts_(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ESSCSG::kCrvPtsFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ESSCSG::ESSCSG()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSCSG)
+  // @@protoc_insertion_point(constructor:essmodule.ESSCSG)
 }
 ESSCSG::ESSCSG(const ESSCSG& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr),
       crvpts_(from.crvpts_) {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:essmodule.ESSCSG)
 }
 
 void ESSCSG::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ESSCSG_essmodule_2fessmodule_2eproto.base);
 }
 
 ESSCSG::~ESSCSG() {
   // @@protoc_insertion_point(destructor:essmodule.ESSCSG)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ESSCSG::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
 }
 
-void ESSCSG::ArenaDtor(void* object) {
-  ESSCSG* _this = reinterpret_cast< ESSCSG* >(object);
-  (void)_this;
-}
-void ESSCSG::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSCSG::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const ESSCSG& ESSCSG::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ESSCSG_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void ESSCSG::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSCSG)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   crvpts_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* ESSCSG::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ESSCSG::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ESSCSG*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // repeated .essmodule.ESSPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_crvpts(), ptr);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::essmodule::ESSPoint::_InternalParse;
+          object = msg->add_crvpts();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 10 && (ptr += 1));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ESSCSG::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.ESSCSG)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .essmodule.ESSPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_crvpts()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSCSG::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSCSG)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.ESSCSG)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.ESSCSG)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ESSCSG::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.ESSCSG)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .essmodule.ESSPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_crvpts_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_crvpts(i), target, stream);
+      n = static_cast<unsigned int>(this->crvpts_size()); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1,
+      this->crvpts(static_cast<int>(i)),
+      output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.ESSCSG)
+}
+
+::google::protobuf::uint8* ESSCSG::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSCSG)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .essmodule.ESSPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->crvpts_size()); i < n; i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, this->crvpts(static_cast<int>(i)), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSCSG)
   return target;
@@ -9684,35 +14162,40 @@ size_t ESSCSG::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSCSG)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .essmodule.ESSPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  total_size += 1UL * this->_internal_crvpts_size();
-  for (const auto& msg : this->crvpts_) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  {
+    unsigned int count = static_cast<unsigned int>(this->crvpts_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          this->crvpts(static_cast<int>(i)));
+    }
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void ESSCSG::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSCSG::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSCSG)
   GOOGLE_DCHECK_NE(&from, this);
   const ESSCSG* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSCSG>(
+      ::google::protobuf::DynamicCastToGenerated<ESSCSG>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSCSG)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSCSG)
     MergeFrom(*source);
@@ -9722,14 +14205,14 @@ void ESSCSG::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void ESSCSG::MergeFrom(const ESSCSG& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSCSG)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   crvpts_.MergeFrom(from.crvpts_);
 }
 
-void ESSCSG::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSCSG::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSCSG)
   if (&from == this) return;
   Clear();
@@ -9747,38 +14230,51 @@ bool ESSCSG::IsInitialized() const {
   return true;
 }
 
+void ESSCSG::Swap(ESSCSG* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void ESSCSG::InternalSwap(ESSCSG* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  crvpts_.InternalSwap(&other->crvpts_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  CastToBase(&crvpts_)->InternalSwap(CastToBase(&other->crvpts_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ESSCSG::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata ESSCSG::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class ESSControlScheduleFSCH::_Internal {
+void ESSControlScheduleFSCH::InitAsDefaultInstance() {
+  ::essmodule::_ESSControlScheduleFSCH_default_instance_._instance.get_mutable()->valdcsg_ = const_cast< ::essmodule::ESSCSG*>(
+      ::essmodule::ESSCSG::internal_default_instance());
+}
+class ESSControlScheduleFSCH::HasBitSetters {
  public:
   static const ::essmodule::ESSCSG& valdcsg(const ESSControlScheduleFSCH* msg);
 };
 
 const ::essmodule::ESSCSG&
-ESSControlScheduleFSCH::_Internal::valdcsg(const ESSControlScheduleFSCH* msg) {
+ESSControlScheduleFSCH::HasBitSetters::valdcsg(const ESSControlScheduleFSCH* msg) {
   return *msg->valdcsg_;
 }
-ESSControlScheduleFSCH::ESSControlScheduleFSCH(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ESSControlScheduleFSCH::kValDCSGFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ESSControlScheduleFSCH::ESSControlScheduleFSCH()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSControlScheduleFSCH)
+  // @@protoc_insertion_point(constructor:essmodule.ESSControlScheduleFSCH)
 }
 ESSControlScheduleFSCH::ESSControlScheduleFSCH(const ESSControlScheduleFSCH& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_valdcsg()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_valdcsg()) {
     valdcsg_ = new ::essmodule::ESSCSG(*from.valdcsg_);
   } else {
     valdcsg_ = nullptr;
@@ -9787,96 +14283,165 @@ ESSControlScheduleFSCH::ESSControlScheduleFSCH(const ESSControlScheduleFSCH& fro
 }
 
 void ESSControlScheduleFSCH::SharedCtor() {
-valdcsg_ = nullptr;
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ESSControlScheduleFSCH_essmodule_2fessmodule_2eproto.base);
+  valdcsg_ = nullptr;
 }
 
 ESSControlScheduleFSCH::~ESSControlScheduleFSCH() {
   // @@protoc_insertion_point(destructor:essmodule.ESSControlScheduleFSCH)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ESSControlScheduleFSCH::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete valdcsg_;
 }
 
-void ESSControlScheduleFSCH::ArenaDtor(void* object) {
-  ESSControlScheduleFSCH* _this = reinterpret_cast< ESSControlScheduleFSCH* >(object);
-  (void)_this;
-}
-void ESSControlScheduleFSCH::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSControlScheduleFSCH::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const ESSControlScheduleFSCH& ESSControlScheduleFSCH::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ESSControlScheduleFSCH_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void ESSControlScheduleFSCH::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSControlScheduleFSCH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && valdcsg_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && valdcsg_ != nullptr) {
     delete valdcsg_;
   }
   valdcsg_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* ESSControlScheduleFSCH::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ESSControlScheduleFSCH::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ESSControlScheduleFSCH*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .essmodule.ESSCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_valdcsg(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::ESSCSG::_InternalParse;
+        object = msg->mutable_valdcsg();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ESSControlScheduleFSCH::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.ESSControlScheduleFSCH)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .essmodule.ESSCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_valdcsg()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSControlScheduleFSCH::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSControlScheduleFSCH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.ESSControlScheduleFSCH)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.ESSControlScheduleFSCH)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ESSControlScheduleFSCH::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.ESSControlScheduleFSCH)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .essmodule.ESSCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_valdcsg()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::valdcsg(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::valdcsg(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.ESSControlScheduleFSCH)
+}
+
+::google::protobuf::uint8* ESSControlScheduleFSCH::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSControlScheduleFSCH)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .essmodule.ESSCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_valdcsg()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::valdcsg(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSControlScheduleFSCH)
   return target;
@@ -9886,35 +14451,36 @@ size_t ESSControlScheduleFSCH::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSControlScheduleFSCH)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .essmodule.ESSCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_valdcsg()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *valdcsg_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void ESSControlScheduleFSCH::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSControlScheduleFSCH::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSControlScheduleFSCH)
   GOOGLE_DCHECK_NE(&from, this);
   const ESSControlScheduleFSCH* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSControlScheduleFSCH>(
+      ::google::protobuf::DynamicCastToGenerated<ESSControlScheduleFSCH>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSControlScheduleFSCH)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSControlScheduleFSCH)
     MergeFrom(*source);
@@ -9924,16 +14490,16 @@ void ESSControlScheduleFSCH::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& f
 void ESSControlScheduleFSCH::MergeFrom(const ESSControlScheduleFSCH& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSControlScheduleFSCH)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_valdcsg()) {
-    _internal_mutable_valdcsg()->::essmodule::ESSCSG::MergeFrom(from._internal_valdcsg());
+    mutable_valdcsg()->::essmodule::ESSCSG::MergeFrom(from.valdcsg());
   }
 }
 
-void ESSControlScheduleFSCH::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSControlScheduleFSCH::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSControlScheduleFSCH)
   if (&from == this) return;
   Clear();
@@ -9951,54 +14517,70 @@ bool ESSControlScheduleFSCH::IsInitialized() const {
   return true;
 }
 
+void ESSControlScheduleFSCH::Swap(ESSControlScheduleFSCH* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void ESSControlScheduleFSCH::InternalSwap(ESSControlScheduleFSCH* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(valdcsg_, other->valdcsg_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ESSControlScheduleFSCH::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata ESSControlScheduleFSCH::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class EssControlFSCC::_Internal {
+void EssControlFSCC::InitAsDefaultInstance() {
+  ::essmodule::_EssControlFSCC_default_instance_._instance.get_mutable()->controlfscc_ = const_cast< ::commonmodule::ControlFSCC*>(
+      ::commonmodule::ControlFSCC::internal_default_instance());
+  ::essmodule::_EssControlFSCC_default_instance_._instance.get_mutable()->esscontrolschedulefsch_ = const_cast< ::essmodule::ESSControlScheduleFSCH*>(
+      ::essmodule::ESSControlScheduleFSCH::internal_default_instance());
+}
+class EssControlFSCC::HasBitSetters {
  public:
   static const ::commonmodule::ControlFSCC& controlfscc(const EssControlFSCC* msg);
   static const ::essmodule::ESSControlScheduleFSCH& esscontrolschedulefsch(const EssControlFSCC* msg);
 };
 
 const ::commonmodule::ControlFSCC&
-EssControlFSCC::_Internal::controlfscc(const EssControlFSCC* msg) {
+EssControlFSCC::HasBitSetters::controlfscc(const EssControlFSCC* msg) {
   return *msg->controlfscc_;
 }
 const ::essmodule::ESSControlScheduleFSCH&
-EssControlFSCC::_Internal::esscontrolschedulefsch(const EssControlFSCC* msg) {
+EssControlFSCC::HasBitSetters::esscontrolschedulefsch(const EssControlFSCC* msg) {
   return *msg->esscontrolschedulefsch_;
 }
 void EssControlFSCC::clear_controlfscc() {
-  if (GetArena() == nullptr && controlfscc_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && controlfscc_ != nullptr) {
     delete controlfscc_;
   }
   controlfscc_ = nullptr;
 }
-EssControlFSCC::EssControlFSCC(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int EssControlFSCC::kControlFSCCFieldNumber;
+const int EssControlFSCC::kEssControlScheduleFSCHFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+EssControlFSCC::EssControlFSCC()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.EssControlFSCC)
+  // @@protoc_insertion_point(constructor:essmodule.EssControlFSCC)
 }
 EssControlFSCC::EssControlFSCC(const EssControlFSCC& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_controlfscc()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_controlfscc()) {
     controlfscc_ = new ::commonmodule::ControlFSCC(*from.controlfscc_);
   } else {
     controlfscc_ = nullptr;
   }
-  if (from._internal_has_esscontrolschedulefsch()) {
+  if (from.has_esscontrolschedulefsch()) {
     esscontrolschedulefsch_ = new ::essmodule::ESSControlScheduleFSCH(*from.esscontrolschedulefsch_);
   } else {
     esscontrolschedulefsch_ = nullptr;
@@ -10007,119 +14589,209 @@ EssControlFSCC::EssControlFSCC(const EssControlFSCC& from)
 }
 
 void EssControlFSCC::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlfscc_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&esscontrolschedulefsch_) -
-    reinterpret_cast<char*>(&controlfscc_)) + sizeof(esscontrolschedulefsch_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_EssControlFSCC_essmodule_2fessmodule_2eproto.base);
+  ::memset(&controlfscc_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&esscontrolschedulefsch_) -
+      reinterpret_cast<char*>(&controlfscc_)) + sizeof(esscontrolschedulefsch_));
 }
 
 EssControlFSCC::~EssControlFSCC() {
   // @@protoc_insertion_point(destructor:essmodule.EssControlFSCC)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void EssControlFSCC::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete controlfscc_;
   if (this != internal_default_instance()) delete esscontrolschedulefsch_;
 }
 
-void EssControlFSCC::ArenaDtor(void* object) {
-  EssControlFSCC* _this = reinterpret_cast< EssControlFSCC* >(object);
-  (void)_this;
-}
-void EssControlFSCC::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void EssControlFSCC::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const EssControlFSCC& EssControlFSCC::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_EssControlFSCC_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void EssControlFSCC::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.EssControlFSCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlfscc_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && controlfscc_ != nullptr) {
     delete controlfscc_;
   }
   controlfscc_ = nullptr;
-  if (GetArena() == nullptr && esscontrolschedulefsch_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && esscontrolschedulefsch_ != nullptr) {
     delete esscontrolschedulefsch_;
   }
   esscontrolschedulefsch_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* EssControlFSCC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* EssControlFSCC::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<EssControlFSCC*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_controlfscc(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlFSCC::_InternalParse;
+        object = msg->mutable_controlfscc();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.ESSControlScheduleFSCH essControlScheduleFSCH = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_esscontrolschedulefsch(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::ESSControlScheduleFSCH::_InternalParse;
+        object = msg->mutable_esscontrolschedulefsch();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool EssControlFSCC::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.EssControlFSCC)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_controlfscc()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* EssControlFSCC::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.EssControlFSCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .essmodule.ESSControlScheduleFSCH essControlScheduleFSCH = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_esscontrolschedulefsch()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.EssControlFSCC)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.EssControlFSCC)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void EssControlFSCC::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.EssControlFSCC)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlfscc()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlfscc(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::controlfscc(this), output);
   }
 
   // .essmodule.ESSControlScheduleFSCH essControlScheduleFSCH = 2;
   if (this->has_esscontrolschedulefsch()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::esscontrolschedulefsch(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::esscontrolschedulefsch(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.EssControlFSCC)
+}
+
+::google::protobuf::uint8* EssControlFSCC::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.EssControlFSCC)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
+  if (this->has_controlfscc()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::controlfscc(this), target);
+  }
+
+  // .essmodule.ESSControlScheduleFSCH essControlScheduleFSCH = 2;
+  if (this->has_esscontrolschedulefsch()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::esscontrolschedulefsch(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.EssControlFSCC)
   return target;
@@ -10129,42 +14801,43 @@ size_t EssControlFSCC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.EssControlFSCC)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlfscc()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *controlfscc_);
   }
 
   // .essmodule.ESSControlScheduleFSCH essControlScheduleFSCH = 2;
   if (this->has_esscontrolschedulefsch()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *esscontrolschedulefsch_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void EssControlFSCC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void EssControlFSCC::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.EssControlFSCC)
   GOOGLE_DCHECK_NE(&from, this);
   const EssControlFSCC* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<EssControlFSCC>(
+      ::google::protobuf::DynamicCastToGenerated<EssControlFSCC>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.EssControlFSCC)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.EssControlFSCC)
     MergeFrom(*source);
@@ -10174,19 +14847,19 @@ void EssControlFSCC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void EssControlFSCC::MergeFrom(const EssControlFSCC& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.EssControlFSCC)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_controlfscc()) {
-    _internal_mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(from._internal_controlfscc());
+    mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(from.controlfscc());
   }
   if (from.has_esscontrolschedulefsch()) {
-    _internal_mutable_esscontrolschedulefsch()->::essmodule::ESSControlScheduleFSCH::MergeFrom(from._internal_esscontrolschedulefsch());
+    mutable_esscontrolschedulefsch()->::essmodule::ESSControlScheduleFSCH::MergeFrom(from.esscontrolschedulefsch());
   }
 }
 
-void EssControlFSCC::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void EssControlFSCC::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.EssControlFSCC)
   if (&from == this) return;
   Clear();
@@ -10204,25 +14877,34 @@ bool EssControlFSCC::IsInitialized() const {
   return true;
 }
 
+void EssControlFSCC::Swap(EssControlFSCC* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void EssControlFSCC::InternalSwap(EssControlFSCC* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(EssControlFSCC, esscontrolschedulefsch_)
-      + sizeof(EssControlFSCC::esscontrolschedulefsch_)
-      - PROTOBUF_FIELD_OFFSET(EssControlFSCC, controlfscc_)>(
-          reinterpret_cast<char*>(&controlfscc_),
-          reinterpret_cast<char*>(&other->controlfscc_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(controlfscc_, other->controlfscc_);
+  swap(esscontrolschedulefsch_, other->esscontrolschedulefsch_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata EssControlFSCC::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata EssControlFSCC::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class ESSControl::_Internal {
+void ESSControl::InitAsDefaultInstance() {
+  ::essmodule::_ESSControl_default_instance_._instance.get_mutable()->controlvalue_ = const_cast< ::commonmodule::ControlValue*>(
+      ::commonmodule::ControlValue::internal_default_instance());
+  ::essmodule::_ESSControl_default_instance_._instance.get_mutable()->check_ = const_cast< ::commonmodule::CheckConditions*>(
+      ::commonmodule::CheckConditions::internal_default_instance());
+  ::essmodule::_ESSControl_default_instance_._instance.get_mutable()->esscontrolfscc_ = const_cast< ::essmodule::EssControlFSCC*>(
+      ::essmodule::EssControlFSCC::internal_default_instance());
+}
+class ESSControl::HasBitSetters {
  public:
   static const ::commonmodule::ControlValue& controlvalue(const ESSControl* msg);
   static const ::commonmodule::CheckConditions& check(const ESSControl* msg);
@@ -10230,49 +14912,55 @@ class ESSControl::_Internal {
 };
 
 const ::commonmodule::ControlValue&
-ESSControl::_Internal::controlvalue(const ESSControl* msg) {
+ESSControl::HasBitSetters::controlvalue(const ESSControl* msg) {
   return *msg->controlvalue_;
 }
 const ::commonmodule::CheckConditions&
-ESSControl::_Internal::check(const ESSControl* msg) {
+ESSControl::HasBitSetters::check(const ESSControl* msg) {
   return *msg->check_;
 }
 const ::essmodule::EssControlFSCC&
-ESSControl::_Internal::esscontrolfscc(const ESSControl* msg) {
+ESSControl::HasBitSetters::esscontrolfscc(const ESSControl* msg) {
   return *msg->esscontrolfscc_;
 }
 void ESSControl::clear_controlvalue() {
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && controlvalue_ != nullptr) {
     delete controlvalue_;
   }
   controlvalue_ = nullptr;
 }
 void ESSControl::clear_check() {
-  if (GetArena() == nullptr && check_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && check_ != nullptr) {
     delete check_;
   }
   check_ = nullptr;
 }
-ESSControl::ESSControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ESSControl::kControlValueFieldNumber;
+const int ESSControl::kCheckFieldNumber;
+const int ESSControl::kEssControlFSCCFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ESSControl::ESSControl()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSControl)
+  // @@protoc_insertion_point(constructor:essmodule.ESSControl)
 }
 ESSControl::ESSControl(const ESSControl& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_controlvalue()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_controlvalue()) {
     controlvalue_ = new ::commonmodule::ControlValue(*from.controlvalue_);
   } else {
     controlvalue_ = nullptr;
   }
-  if (from._internal_has_check()) {
+  if (from.has_check()) {
     check_ = new ::commonmodule::CheckConditions(*from.check_);
   } else {
     check_ = nullptr;
   }
-  if (from._internal_has_esscontrolfscc()) {
+  if (from.has_esscontrolfscc()) {
     esscontrolfscc_ = new ::essmodule::EssControlFSCC(*from.esscontrolfscc_);
   } else {
     esscontrolfscc_ = nullptr;
@@ -10281,139 +14969,251 @@ ESSControl::ESSControl(const ESSControl& from)
 }
 
 void ESSControl::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&esscontrolfscc_) -
-    reinterpret_cast<char*>(&controlvalue_)) + sizeof(esscontrolfscc_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ESSControl_essmodule_2fessmodule_2eproto.base);
+  ::memset(&controlvalue_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&esscontrolfscc_) -
+      reinterpret_cast<char*>(&controlvalue_)) + sizeof(esscontrolfscc_));
 }
 
 ESSControl::~ESSControl() {
   // @@protoc_insertion_point(destructor:essmodule.ESSControl)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ESSControl::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete controlvalue_;
   if (this != internal_default_instance()) delete check_;
   if (this != internal_default_instance()) delete esscontrolfscc_;
 }
 
-void ESSControl::ArenaDtor(void* object) {
-  ESSControl* _this = reinterpret_cast< ESSControl* >(object);
-  (void)_this;
-}
-void ESSControl::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSControl::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const ESSControl& ESSControl::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ESSControl_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void ESSControl::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && controlvalue_ != nullptr) {
     delete controlvalue_;
   }
   controlvalue_ = nullptr;
-  if (GetArena() == nullptr && check_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && check_ != nullptr) {
     delete check_;
   }
   check_ = nullptr;
-  if (GetArena() == nullptr && esscontrolfscc_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && esscontrolfscc_ != nullptr) {
     delete esscontrolfscc_;
   }
   esscontrolfscc_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* ESSControl::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ESSControl::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ESSControl*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_controlvalue(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlValue::_InternalParse;
+        object = msg->mutable_controlvalue();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.CheckConditions check = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .essmodule.EssControlFSCC essControlFSCC = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_esscontrolfscc(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::CheckConditions::_InternalParse;
+        object = msg->mutable_check();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .essmodule.EssControlFSCC essControlFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::EssControlFSCC::_InternalParse;
+        object = msg->mutable_esscontrolfscc();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ESSControl::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.ESSControl)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_controlvalue()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSControl::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.CheckConditions check = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_check()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .essmodule.EssControlFSCC essControlFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_esscontrolfscc()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.ESSControl)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.ESSControl)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ESSControl::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.ESSControl)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlvalue()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlvalue(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::controlvalue(this), output);
   }
 
   // .commonmodule.CheckConditions check = 2;
   if (this->has_check()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::check(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::check(this), output);
   }
 
-  // .essmodule.EssControlFSCC essControlFSCC = 3;
+  // .essmodule.EssControlFSCC essControlFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_esscontrolfscc()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::esscontrolfscc(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::esscontrolfscc(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.ESSControl)
+}
+
+::google::protobuf::uint8* ESSControl::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSControl)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
+  if (this->has_controlvalue()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::controlvalue(this), target);
+  }
+
+  // .commonmodule.CheckConditions check = 2;
+  if (this->has_check()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::check(this), target);
+  }
+
+  // .essmodule.EssControlFSCC essControlFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_esscontrolfscc()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::esscontrolfscc(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSControl)
   return target;
@@ -10423,49 +15223,50 @@ size_t ESSControl::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSControl)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlvalue()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *controlvalue_);
   }
 
   // .commonmodule.CheckConditions check = 2;
   if (this->has_check()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *check_);
   }
 
-  // .essmodule.EssControlFSCC essControlFSCC = 3;
+  // .essmodule.EssControlFSCC essControlFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_esscontrolfscc()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *esscontrolfscc_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void ESSControl::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSControl::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSControl)
   GOOGLE_DCHECK_NE(&from, this);
   const ESSControl* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSControl>(
+      ::google::protobuf::DynamicCastToGenerated<ESSControl>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSControl)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSControl)
     MergeFrom(*source);
@@ -10475,22 +15276,22 @@ void ESSControl::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void ESSControl::MergeFrom(const ESSControl& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSControl)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_controlvalue()) {
-    _internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(from._internal_controlvalue());
+    mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(from.controlvalue());
   }
   if (from.has_check()) {
-    _internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(from._internal_check());
+    mutable_check()->::commonmodule::CheckConditions::MergeFrom(from.check());
   }
   if (from.has_esscontrolfscc()) {
-    _internal_mutable_esscontrolfscc()->::essmodule::EssControlFSCC::MergeFrom(from._internal_esscontrolfscc());
+    mutable_esscontrolfscc()->::essmodule::EssControlFSCC::MergeFrom(from.esscontrolfscc());
   }
 }
 
-void ESSControl::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSControl::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSControl)
   if (&from == this) return;
   Clear();
@@ -10508,216 +15309,405 @@ bool ESSControl::IsInitialized() const {
   return true;
 }
 
+void ESSControl::Swap(ESSControl* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void ESSControl::InternalSwap(ESSControl* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSControl, esscontrolfscc_)
-      + sizeof(ESSControl::esscontrolfscc_)
-      - PROTOBUF_FIELD_OFFSET(ESSControl, controlvalue_)>(
-          reinterpret_cast<char*>(&controlvalue_),
-          reinterpret_cast<char*>(&other->controlvalue_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(controlvalue_, other->controlvalue_);
+  swap(check_, other->check_);
+  swap(esscontrolfscc_, other->esscontrolfscc_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ESSControl::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata ESSControl::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class ESSControlProfile::_Internal {
+void ESSControlProfile::InitAsDefaultInstance() {
+  ::essmodule::_ESSControlProfile_default_instance_._instance.get_mutable()->controlmessageinfo_ = const_cast< ::commonmodule::ControlMessageInfo*>(
+      ::commonmodule::ControlMessageInfo::internal_default_instance());
+  ::essmodule::_ESSControlProfile_default_instance_._instance.get_mutable()->ess_ = const_cast< ::commonmodule::ESS*>(
+      ::commonmodule::ESS::internal_default_instance());
+  ::essmodule::_ESSControlProfile_default_instance_._instance.get_mutable()->esscontrol_ = const_cast< ::essmodule::ESSControl*>(
+      ::essmodule::ESSControl::internal_default_instance());
+  ::essmodule::_ESSControlProfile_default_instance_._instance.get_mutable()->ied_ = const_cast< ::commonmodule::IED*>(
+      ::commonmodule::IED::internal_default_instance());
+}
+class ESSControlProfile::HasBitSetters {
  public:
   static const ::commonmodule::ControlMessageInfo& controlmessageinfo(const ESSControlProfile* msg);
   static const ::commonmodule::ESS& ess(const ESSControlProfile* msg);
   static const ::essmodule::ESSControl& esscontrol(const ESSControlProfile* msg);
+  static const ::commonmodule::IED& ied(const ESSControlProfile* msg);
 };
 
 const ::commonmodule::ControlMessageInfo&
-ESSControlProfile::_Internal::controlmessageinfo(const ESSControlProfile* msg) {
+ESSControlProfile::HasBitSetters::controlmessageinfo(const ESSControlProfile* msg) {
   return *msg->controlmessageinfo_;
 }
 const ::commonmodule::ESS&
-ESSControlProfile::_Internal::ess(const ESSControlProfile* msg) {
+ESSControlProfile::HasBitSetters::ess(const ESSControlProfile* msg) {
   return *msg->ess_;
 }
 const ::essmodule::ESSControl&
-ESSControlProfile::_Internal::esscontrol(const ESSControlProfile* msg) {
+ESSControlProfile::HasBitSetters::esscontrol(const ESSControlProfile* msg) {
   return *msg->esscontrol_;
 }
+const ::commonmodule::IED&
+ESSControlProfile::HasBitSetters::ied(const ESSControlProfile* msg) {
+  return *msg->ied_;
+}
 void ESSControlProfile::clear_controlmessageinfo() {
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && controlmessageinfo_ != nullptr) {
     delete controlmessageinfo_;
   }
   controlmessageinfo_ = nullptr;
 }
 void ESSControlProfile::clear_ess() {
-  if (GetArena() == nullptr && ess_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && ess_ != nullptr) {
     delete ess_;
   }
   ess_ = nullptr;
 }
-ESSControlProfile::ESSControlProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+void ESSControlProfile::clear_ied() {
+  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
+    delete ied_;
+  }
+  ied_ = nullptr;
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ESSControlProfile::kControlMessageInfoFieldNumber;
+const int ESSControlProfile::kEssFieldNumber;
+const int ESSControlProfile::kEssControlFieldNumber;
+const int ESSControlProfile::kIedFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ESSControlProfile::ESSControlProfile()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSControlProfile)
+  // @@protoc_insertion_point(constructor:essmodule.ESSControlProfile)
 }
 ESSControlProfile::ESSControlProfile(const ESSControlProfile& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_controlmessageinfo()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_controlmessageinfo()) {
     controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
   } else {
     controlmessageinfo_ = nullptr;
   }
-  if (from._internal_has_ess()) {
+  if (from.has_ess()) {
     ess_ = new ::commonmodule::ESS(*from.ess_);
   } else {
     ess_ = nullptr;
   }
-  if (from._internal_has_esscontrol()) {
+  if (from.has_esscontrol()) {
     esscontrol_ = new ::essmodule::ESSControl(*from.esscontrol_);
   } else {
     esscontrol_ = nullptr;
+  }
+  if (from.has_ied()) {
+    ied_ = new ::commonmodule::IED(*from.ied_);
+  } else {
+    ied_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:essmodule.ESSControlProfile)
 }
 
 void ESSControlProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&esscontrol_) -
-    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(esscontrol_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ESSControlProfile_essmodule_2fessmodule_2eproto.base);
+  ::memset(&controlmessageinfo_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&ied_) -
+      reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(ied_));
 }
 
 ESSControlProfile::~ESSControlProfile() {
   // @@protoc_insertion_point(destructor:essmodule.ESSControlProfile)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void ESSControlProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete controlmessageinfo_;
   if (this != internal_default_instance()) delete ess_;
   if (this != internal_default_instance()) delete esscontrol_;
+  if (this != internal_default_instance()) delete ied_;
 }
 
-void ESSControlProfile::ArenaDtor(void* object) {
-  ESSControlProfile* _this = reinterpret_cast< ESSControlProfile* >(object);
-  (void)_this;
-}
-void ESSControlProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSControlProfile::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const ESSControlProfile& ESSControlProfile::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ESSControlProfile_essmodule_2fessmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void ESSControlProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && controlmessageinfo_ != nullptr) {
     delete controlmessageinfo_;
   }
   controlmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && ess_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && ess_ != nullptr) {
     delete ess_;
   }
   ess_ = nullptr;
-  if (GetArena() == nullptr && esscontrol_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && esscontrol_ != nullptr) {
     delete esscontrol_;
   }
   esscontrol_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
+    delete ied_;
+  }
+  ied_ = nullptr;
+  _internal_metadata_.Clear();
 }
 
-const char* ESSControlProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ESSControlProfile::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ESSControlProfile*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlMessageInfo::_InternalParse;
+        object = msg->mutable_controlmessageinfo();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_ess(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ESS::_InternalParse;
+        object = msg->mutable_ess();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .essmodule.ESSControl essControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_esscontrol(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::essmodule::ESSControl::_InternalParse;
+        object = msg->mutable_esscontrol();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::IED::_InternalParse;
+        object = msg->mutable_ied();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ESSControlProfile::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:essmodule.ESSControlProfile)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_controlmessageinfo()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSControlProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_ess()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .essmodule.ESSControl essControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_esscontrol()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_ied()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:essmodule.ESSControlProfile)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:essmodule.ESSControlProfile)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ESSControlProfile::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:essmodule.ESSControlProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlmessageinfo()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlmessageinfo(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::controlmessageinfo(this), output);
   }
 
   // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_ess()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::ess(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::ess(this), output);
   }
 
   // .essmodule.ESSControl essControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_esscontrol()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::esscontrol(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::esscontrol(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::ied(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:essmodule.ESSControlProfile)
+}
+
+::google::protobuf::uint8* ESSControlProfile::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSControlProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->has_controlmessageinfo()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::controlmessageinfo(this), target);
+  }
+
+  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ess()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::ess(this), target);
+  }
+
+  // .essmodule.ESSControl essControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_esscontrol()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::esscontrol(this), target);
+  }
+
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::ied(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSControlProfile)
   return target;
@@ -10727,49 +15717,57 @@ size_t ESSControlProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSControlProfile)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlmessageinfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *controlmessageinfo_);
   }
 
   // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_ess()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *ess_);
   }
 
   // .essmodule.ESSControl essControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_esscontrol()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *esscontrol_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *ied_);
   }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void ESSControlProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSControlProfile::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSControlProfile)
   GOOGLE_DCHECK_NE(&from, this);
   const ESSControlProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSControlProfile>(
+      ::google::protobuf::DynamicCastToGenerated<ESSControlProfile>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSControlProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSControlProfile)
     MergeFrom(*source);
@@ -10779,22 +15777,25 @@ void ESSControlProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) 
 void ESSControlProfile::MergeFrom(const ESSControlProfile& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSControlProfile)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_controlmessageinfo()) {
-    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
+    mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from.controlmessageinfo());
   }
   if (from.has_ess()) {
-    _internal_mutable_ess()->::commonmodule::ESS::MergeFrom(from._internal_ess());
+    mutable_ess()->::commonmodule::ESS::MergeFrom(from.ess());
   }
   if (from.has_esscontrol()) {
-    _internal_mutable_esscontrol()->::essmodule::ESSControl::MergeFrom(from._internal_esscontrol());
+    mutable_esscontrol()->::essmodule::ESSControl::MergeFrom(from.esscontrol());
+  }
+  if (from.has_ied()) {
+    mutable_ied()->::commonmodule::IED::MergeFrom(from.ied());
   }
 }
 
-void ESSControlProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void ESSControlProfile::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSControlProfile)
   if (&from == this) return;
   Clear();
@@ -10812,107 +15813,112 @@ bool ESSControlProfile::IsInitialized() const {
   return true;
 }
 
+void ESSControlProfile::Swap(ESSControlProfile* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void ESSControlProfile::InternalSwap(ESSControlProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSControlProfile, esscontrol_)
-      + sizeof(ESSControlProfile::esscontrol_)
-      - PROTOBUF_FIELD_OFFSET(ESSControlProfile, controlmessageinfo_)>(
-          reinterpret_cast<char*>(&controlmessageinfo_),
-          reinterpret_cast<char*>(&other->controlmessageinfo_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(controlmessageinfo_, other->controlmessageinfo_);
+  swap(ess_, other->ess_);
+  swap(esscontrol_, other->esscontrol_);
+  swap(ied_, other->ied_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata ESSControlProfile::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata ESSControlProfile::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_essmodule_2fessmodule_2eproto);
+  return ::file_level_metadata_essmodule_2fessmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace essmodule
-PROTOBUF_NAMESPACE_OPEN
+namespace google {
+namespace protobuf {
 template<> PROTOBUF_NOINLINE ::essmodule::EssEventZBAT* Arena::CreateMaybeMessage< ::essmodule::EssEventZBAT >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::EssEventZBAT >(arena);
+  return Arena::CreateInternal< ::essmodule::EssEventZBAT >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::FrequencyRegulation* Arena::CreateMaybeMessage< ::essmodule::FrequencyRegulation >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::FrequencyRegulation >(arena);
+  return Arena::CreateInternal< ::essmodule::FrequencyRegulation >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::PeakShaving* Arena::CreateMaybeMessage< ::essmodule::PeakShaving >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::PeakShaving >(arena);
+  return Arena::CreateInternal< ::essmodule::PeakShaving >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::SocLimit* Arena::CreateMaybeMessage< ::essmodule::SocLimit >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::SocLimit >(arena);
+  return Arena::CreateInternal< ::essmodule::SocLimit >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::SOCManagement* Arena::CreateMaybeMessage< ::essmodule::SOCManagement >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::SOCManagement >(arena);
+  return Arena::CreateInternal< ::essmodule::SOCManagement >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::VoltageRegulation* Arena::CreateMaybeMessage< ::essmodule::VoltageRegulation >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::VoltageRegulation >(arena);
+  return Arena::CreateInternal< ::essmodule::VoltageRegulation >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::VoltageDroop* Arena::CreateMaybeMessage< ::essmodule::VoltageDroop >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::VoltageDroop >(arena);
+  return Arena::CreateInternal< ::essmodule::VoltageDroop >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::VoltagePI* Arena::CreateMaybeMessage< ::essmodule::VoltagePI >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::VoltagePI >(arena);
+  return Arena::CreateInternal< ::essmodule::VoltagePI >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::CapacityFirming* Arena::CreateMaybeMessage< ::essmodule::CapacityFirming >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::CapacityFirming >(arena);
+  return Arena::CreateInternal< ::essmodule::CapacityFirming >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::ESSFunction* Arena::CreateMaybeMessage< ::essmodule::ESSFunction >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSFunction >(arena);
+  return Arena::CreateInternal< ::essmodule::ESSFunction >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::ESSPointStatus* Arena::CreateMaybeMessage< ::essmodule::ESSPointStatus >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSPointStatus >(arena);
+  return Arena::CreateInternal< ::essmodule::ESSPointStatus >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::ESSEventAndStatusZGEN* Arena::CreateMaybeMessage< ::essmodule::ESSEventAndStatusZGEN >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSEventAndStatusZGEN >(arena);
+  return Arena::CreateInternal< ::essmodule::ESSEventAndStatusZGEN >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::ESSEventZGEN* Arena::CreateMaybeMessage< ::essmodule::ESSEventZGEN >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSEventZGEN >(arena);
+  return Arena::CreateInternal< ::essmodule::ESSEventZGEN >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::ESSEvent* Arena::CreateMaybeMessage< ::essmodule::ESSEvent >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSEvent >(arena);
+  return Arena::CreateInternal< ::essmodule::ESSEvent >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::ESSEventProfile* Arena::CreateMaybeMessage< ::essmodule::ESSEventProfile >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSEventProfile >(arena);
+  return Arena::CreateInternal< ::essmodule::ESSEventProfile >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::ESSReading* Arena::CreateMaybeMessage< ::essmodule::ESSReading >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSReading >(arena);
+  return Arena::CreateInternal< ::essmodule::ESSReading >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::ESSReadingProfile* Arena::CreateMaybeMessage< ::essmodule::ESSReadingProfile >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSReadingProfile >(arena);
+  return Arena::CreateInternal< ::essmodule::ESSReadingProfile >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::EssStatusZBAT* Arena::CreateMaybeMessage< ::essmodule::EssStatusZBAT >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::EssStatusZBAT >(arena);
+  return Arena::CreateInternal< ::essmodule::EssStatusZBAT >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::ESSStatusZGEN* Arena::CreateMaybeMessage< ::essmodule::ESSStatusZGEN >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSStatusZGEN >(arena);
+  return Arena::CreateInternal< ::essmodule::ESSStatusZGEN >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::ESSStatus* Arena::CreateMaybeMessage< ::essmodule::ESSStatus >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSStatus >(arena);
+  return Arena::CreateInternal< ::essmodule::ESSStatus >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::ESSStatusProfile* Arena::CreateMaybeMessage< ::essmodule::ESSStatusProfile >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSStatusProfile >(arena);
+  return Arena::CreateInternal< ::essmodule::ESSStatusProfile >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::ESSPoint* Arena::CreateMaybeMessage< ::essmodule::ESSPoint >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSPoint >(arena);
+  return Arena::CreateInternal< ::essmodule::ESSPoint >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::ESSCSG* Arena::CreateMaybeMessage< ::essmodule::ESSCSG >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSCSG >(arena);
+  return Arena::CreateInternal< ::essmodule::ESSCSG >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::ESSControlScheduleFSCH* Arena::CreateMaybeMessage< ::essmodule::ESSControlScheduleFSCH >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSControlScheduleFSCH >(arena);
+  return Arena::CreateInternal< ::essmodule::ESSControlScheduleFSCH >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::EssControlFSCC* Arena::CreateMaybeMessage< ::essmodule::EssControlFSCC >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::EssControlFSCC >(arena);
+  return Arena::CreateInternal< ::essmodule::EssControlFSCC >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::ESSControl* Arena::CreateMaybeMessage< ::essmodule::ESSControl >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSControl >(arena);
+  return Arena::CreateInternal< ::essmodule::ESSControl >(arena);
 }
 template<> PROTOBUF_NOINLINE ::essmodule::ESSControlProfile* Arena::CreateMaybeMessage< ::essmodule::ESSControlProfile >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSControlProfile >(arena);
+  return Arena::CreateInternal< ::essmodule::ESSControlProfile >(arena);
 }
-PROTOBUF_NAMESPACE_CLOSE
+}  // namespace protobuf
+}  // namespace google
 
 // @@protoc_insertion_point(global_scope)
 #include <google/protobuf/port_undef.inc>

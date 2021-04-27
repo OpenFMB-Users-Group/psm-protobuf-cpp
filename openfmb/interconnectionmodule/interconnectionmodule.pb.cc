@@ -5,9 +5,10 @@
 
 #include <algorithm>
 
+#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite.h>
+#include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
@@ -15,118 +16,180 @@
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
-PROTOBUF_PRAGMA_INIT_SEG
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_ControlDPC_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ApplicationSystem_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_CheckConditions_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ControlMessageInfo_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_RampRate_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_Timestamp_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_ControlFSCC_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_ControlValue_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_google_2fprotobuf_2fwrappers_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_FloatValue_google_2fprotobuf_2fwrappers_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_interconnectionmodule_2finterconnectionmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_InterconnectionCSG_interconnectionmodule_2finterconnectionmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_interconnectionmodule_2finterconnectionmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_InterconnectionControlScheduleFSCH_interconnectionmodule_2finterconnectionmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_interconnectionmodule_2finterconnectionmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_InterconnectionScheduleFSCC_interconnectionmodule_2finterconnectionmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_interconnectionmodule_2finterconnectionmodule_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_InterconnectionSchedule_interconnectionmodule_2finterconnectionmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_interconnectionmodule_2finterconnectionmodule_2eproto ::google::protobuf::internal::SCCInfo<4> scc_info_InterconnectionPoint_interconnectionmodule_2finterconnectionmodule_2eproto;
 namespace interconnectionmodule {
-constexpr InterconnectionPoint::InterconnectionPoint(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : blackstartenabled_(nullptr)
-  , frequencysetpointenabled_(nullptr)
-  , island_(nullptr)
-  , pcthzdroop_(nullptr)
-  , pctvdroop_(nullptr)
-  , ramprates_(nullptr)
-  , reactivepwrsetpointenabled_(nullptr)
-  , realpwrsetpointenabled_(nullptr)
-  , voltagesetpointenabled_(nullptr)
-  , starttime_(nullptr){}
-struct InterconnectionPointDefaultTypeInternal {
-  constexpr InterconnectionPointDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~InterconnectionPointDefaultTypeInternal() {}
-  union {
-    InterconnectionPoint _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT InterconnectionPointDefaultTypeInternal _InterconnectionPoint_default_instance_;
-constexpr InterconnectionCSG::InterconnectionCSG(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : crvpts_(){}
-struct InterconnectionCSGDefaultTypeInternal {
-  constexpr InterconnectionCSGDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~InterconnectionCSGDefaultTypeInternal() {}
-  union {
-    InterconnectionCSG _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT InterconnectionCSGDefaultTypeInternal _InterconnectionCSG_default_instance_;
-constexpr InterconnectionControlScheduleFSCH::InterconnectionControlScheduleFSCH(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : valdcsg_(nullptr){}
-struct InterconnectionControlScheduleFSCHDefaultTypeInternal {
-  constexpr InterconnectionControlScheduleFSCHDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~InterconnectionControlScheduleFSCHDefaultTypeInternal() {}
-  union {
-    InterconnectionControlScheduleFSCH _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT InterconnectionControlScheduleFSCHDefaultTypeInternal _InterconnectionControlScheduleFSCH_default_instance_;
-constexpr InterconnectionScheduleFSCC::InterconnectionScheduleFSCC(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : interconnectioncontrolschedulefsch_()
-  , controlfscc_(nullptr){}
-struct InterconnectionScheduleFSCCDefaultTypeInternal {
-  constexpr InterconnectionScheduleFSCCDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~InterconnectionScheduleFSCCDefaultTypeInternal() {}
-  union {
-    InterconnectionScheduleFSCC _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT InterconnectionScheduleFSCCDefaultTypeInternal _InterconnectionScheduleFSCC_default_instance_;
-constexpr InterconnectionSchedule::InterconnectionSchedule(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : identifiedobject_(nullptr)
-  , check_(nullptr)
-  , interconnectionschedulefscc_(nullptr){}
-struct InterconnectionScheduleDefaultTypeInternal {
-  constexpr InterconnectionScheduleDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~InterconnectionScheduleDefaultTypeInternal() {}
-  union {
-    InterconnectionSchedule _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT InterconnectionScheduleDefaultTypeInternal _InterconnectionSchedule_default_instance_;
-constexpr PlannedInterconnectionScheduleProfile::PlannedInterconnectionScheduleProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlmessageinfo_(nullptr)
-  , requestercircuitsegmentservice_(nullptr)
-  , interconnectionschedule_(nullptr)
-  , tiepoint_(nullptr)
-  , respondercircuitsegmentservice_(nullptr){}
-struct PlannedInterconnectionScheduleProfileDefaultTypeInternal {
-  constexpr PlannedInterconnectionScheduleProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~PlannedInterconnectionScheduleProfileDefaultTypeInternal() {}
-  union {
-    PlannedInterconnectionScheduleProfile _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PlannedInterconnectionScheduleProfileDefaultTypeInternal _PlannedInterconnectionScheduleProfile_default_instance_;
-constexpr RequestedInterconnectionScheduleProfile::RequestedInterconnectionScheduleProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlmessageinfo_(nullptr)
-  , requestercircuitsegmentservice_(nullptr)
-  , interconnectionschedule_(nullptr)
-  , tiepoint_(nullptr)
-  , respondercircuitsegmentservice_(nullptr){}
-struct RequestedInterconnectionScheduleProfileDefaultTypeInternal {
-  constexpr RequestedInterconnectionScheduleProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~RequestedInterconnectionScheduleProfileDefaultTypeInternal() {}
-  union {
-    RequestedInterconnectionScheduleProfile _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RequestedInterconnectionScheduleProfileDefaultTypeInternal _RequestedInterconnectionScheduleProfile_default_instance_;
+class InterconnectionPointDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<InterconnectionPoint> _instance;
+} _InterconnectionPoint_default_instance_;
+class InterconnectionCSGDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<InterconnectionCSG> _instance;
+} _InterconnectionCSG_default_instance_;
+class InterconnectionControlScheduleFSCHDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<InterconnectionControlScheduleFSCH> _instance;
+} _InterconnectionControlScheduleFSCH_default_instance_;
+class InterconnectionScheduleFSCCDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<InterconnectionScheduleFSCC> _instance;
+} _InterconnectionScheduleFSCC_default_instance_;
+class InterconnectionScheduleDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<InterconnectionSchedule> _instance;
+} _InterconnectionSchedule_default_instance_;
+class PlannedInterconnectionScheduleProfileDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<PlannedInterconnectionScheduleProfile> _instance;
+} _PlannedInterconnectionScheduleProfile_default_instance_;
+class RequestedInterconnectionScheduleProfileDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<RequestedInterconnectionScheduleProfile> _instance;
+} _RequestedInterconnectionScheduleProfile_default_instance_;
 }  // namespace interconnectionmodule
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto[7];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_interconnectionmodule_2finterconnectionmodule_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_interconnectionmodule_2finterconnectionmodule_2eproto = nullptr;
+static void InitDefaultsInterconnectionPoint_interconnectionmodule_2finterconnectionmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_interconnectionmodule_2finterconnectionmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  {
+    void* ptr = &::interconnectionmodule::_InterconnectionPoint_default_instance_;
+    new (ptr) ::interconnectionmodule::InterconnectionPoint();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::interconnectionmodule::InterconnectionPoint::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<4> scc_info_InterconnectionPoint_interconnectionmodule_2finterconnectionmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsInterconnectionPoint_interconnectionmodule_2finterconnectionmodule_2eproto}, {
+      &scc_info_ControlDPC_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_FloatValue_google_2fprotobuf_2fwrappers_2eproto.base,
+      &scc_info_RampRate_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_Timestamp_commonmodule_2fcommonmodule_2eproto.base,}};
+
+static void InitDefaultsInterconnectionCSG_interconnectionmodule_2finterconnectionmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::interconnectionmodule::_InterconnectionCSG_default_instance_;
+    new (ptr) ::interconnectionmodule::InterconnectionCSG();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::interconnectionmodule::InterconnectionCSG::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_InterconnectionCSG_interconnectionmodule_2finterconnectionmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsInterconnectionCSG_interconnectionmodule_2finterconnectionmodule_2eproto}, {
+      &scc_info_InterconnectionPoint_interconnectionmodule_2finterconnectionmodule_2eproto.base,}};
+
+static void InitDefaultsInterconnectionControlScheduleFSCH_interconnectionmodule_2finterconnectionmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::interconnectionmodule::_InterconnectionControlScheduleFSCH_default_instance_;
+    new (ptr) ::interconnectionmodule::InterconnectionControlScheduleFSCH();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::interconnectionmodule::InterconnectionControlScheduleFSCH::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_InterconnectionControlScheduleFSCH_interconnectionmodule_2finterconnectionmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsInterconnectionControlScheduleFSCH_interconnectionmodule_2finterconnectionmodule_2eproto}, {
+      &scc_info_InterconnectionCSG_interconnectionmodule_2finterconnectionmodule_2eproto.base,}};
+
+static void InitDefaultsInterconnectionScheduleFSCC_interconnectionmodule_2finterconnectionmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::interconnectionmodule::_InterconnectionScheduleFSCC_default_instance_;
+    new (ptr) ::interconnectionmodule::InterconnectionScheduleFSCC();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::interconnectionmodule::InterconnectionScheduleFSCC::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<2> scc_info_InterconnectionScheduleFSCC_interconnectionmodule_2finterconnectionmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsInterconnectionScheduleFSCC_interconnectionmodule_2finterconnectionmodule_2eproto}, {
+      &scc_info_ControlFSCC_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_InterconnectionControlScheduleFSCH_interconnectionmodule_2finterconnectionmodule_2eproto.base,}};
+
+static void InitDefaultsInterconnectionSchedule_interconnectionmodule_2finterconnectionmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::interconnectionmodule::_InterconnectionSchedule_default_instance_;
+    new (ptr) ::interconnectionmodule::InterconnectionSchedule();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::interconnectionmodule::InterconnectionSchedule::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<3> scc_info_InterconnectionSchedule_interconnectionmodule_2finterconnectionmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsInterconnectionSchedule_interconnectionmodule_2finterconnectionmodule_2eproto}, {
+      &scc_info_ControlValue_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_CheckConditions_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_InterconnectionScheduleFSCC_interconnectionmodule_2finterconnectionmodule_2eproto.base,}};
+
+static void InitDefaultsPlannedInterconnectionScheduleProfile_interconnectionmodule_2finterconnectionmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::interconnectionmodule::_PlannedInterconnectionScheduleProfile_default_instance_;
+    new (ptr) ::interconnectionmodule::PlannedInterconnectionScheduleProfile();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::interconnectionmodule::PlannedInterconnectionScheduleProfile::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<3> scc_info_PlannedInterconnectionScheduleProfile_interconnectionmodule_2finterconnectionmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsPlannedInterconnectionScheduleProfile_interconnectionmodule_2finterconnectionmodule_2eproto}, {
+      &scc_info_ControlMessageInfo_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ApplicationSystem_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_InterconnectionSchedule_interconnectionmodule_2finterconnectionmodule_2eproto.base,}};
+
+static void InitDefaultsRequestedInterconnectionScheduleProfile_interconnectionmodule_2finterconnectionmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::interconnectionmodule::_RequestedInterconnectionScheduleProfile_default_instance_;
+    new (ptr) ::interconnectionmodule::RequestedInterconnectionScheduleProfile();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::interconnectionmodule::RequestedInterconnectionScheduleProfile::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<3> scc_info_RequestedInterconnectionScheduleProfile_interconnectionmodule_2finterconnectionmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsRequestedInterconnectionScheduleProfile_interconnectionmodule_2finterconnectionmodule_2eproto}, {
+      &scc_info_ControlMessageInfo_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ApplicationSystem_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_InterconnectionSchedule_interconnectionmodule_2finterconnectionmodule_2eproto.base,}};
+
+void InitDefaults_interconnectionmodule_2finterconnectionmodule_2eproto() {
+  ::google::protobuf::internal::InitSCC(&scc_info_InterconnectionPoint_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_InterconnectionCSG_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_InterconnectionControlScheduleFSCH_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_InterconnectionScheduleFSCC_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_InterconnectionSchedule_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_PlannedInterconnectionScheduleProfile_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_RequestedInterconnectionScheduleProfile_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+}
+
+::google::protobuf::Metadata file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto[7];
+constexpr ::google::protobuf::EnumDescriptor const** file_level_enum_descriptors_interconnectionmodule_2finterconnectionmodule_2eproto = nullptr;
+constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_interconnectionmodule_2finterconnectionmodule_2eproto = nullptr;
+
+const ::google::protobuf::uint32 TableStruct_interconnectionmodule_2finterconnectionmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -166,7 +229,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_interconnectionmodule_2finterc
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionSchedule, identifiedobject_),
+  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionSchedule, controlvalue_),
   PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionSchedule, check_),
   PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionSchedule, interconnectionschedulefscc_),
   ~0u,  // no _has_bits_
@@ -175,59 +238,61 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_interconnectionmodule_2finterc
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::interconnectionmodule::PlannedInterconnectionScheduleProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::PlannedInterconnectionScheduleProfile, requestercircuitsegmentservice_),
+  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::PlannedInterconnectionScheduleProfile, applicationsystem_),
   PROTOBUF_FIELD_OFFSET(::interconnectionmodule::PlannedInterconnectionScheduleProfile, interconnectionschedule_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::PlannedInterconnectionScheduleProfile, tiepoint_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::PlannedInterconnectionScheduleProfile, respondercircuitsegmentservice_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::interconnectionmodule::RequestedInterconnectionScheduleProfile, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::interconnectionmodule::RequestedInterconnectionScheduleProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::RequestedInterconnectionScheduleProfile, requestercircuitsegmentservice_),
+  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::RequestedInterconnectionScheduleProfile, applicationsystem_),
   PROTOBUF_FIELD_OFFSET(::interconnectionmodule::RequestedInterconnectionScheduleProfile, interconnectionschedule_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::RequestedInterconnectionScheduleProfile, tiepoint_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::RequestedInterconnectionScheduleProfile, respondercircuitsegmentservice_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::interconnectionmodule::InterconnectionPoint)},
   { 15, -1, sizeof(::interconnectionmodule::InterconnectionCSG)},
   { 21, -1, sizeof(::interconnectionmodule::InterconnectionControlScheduleFSCH)},
   { 27, -1, sizeof(::interconnectionmodule::InterconnectionScheduleFSCC)},
   { 34, -1, sizeof(::interconnectionmodule::InterconnectionSchedule)},
   { 42, -1, sizeof(::interconnectionmodule::PlannedInterconnectionScheduleProfile)},
-  { 52, -1, sizeof(::interconnectionmodule::RequestedInterconnectionScheduleProfile)},
+  { 50, -1, sizeof(::interconnectionmodule::RequestedInterconnectionScheduleProfile)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::interconnectionmodule::_InterconnectionPoint_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::interconnectionmodule::_InterconnectionCSG_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::interconnectionmodule::_InterconnectionControlScheduleFSCH_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::interconnectionmodule::_InterconnectionScheduleFSCC_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::interconnectionmodule::_InterconnectionSchedule_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::interconnectionmodule::_PlannedInterconnectionScheduleProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::interconnectionmodule::_RequestedInterconnectionScheduleProfile_default_instance_),
+static ::google::protobuf::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::google::protobuf::Message*>(&::interconnectionmodule::_InterconnectionPoint_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::interconnectionmodule::_InterconnectionCSG_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::interconnectionmodule::_InterconnectionControlScheduleFSCH_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::interconnectionmodule::_InterconnectionScheduleFSCC_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::interconnectionmodule::_InterconnectionSchedule_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::interconnectionmodule::_PlannedInterconnectionScheduleProfile_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::interconnectionmodule::_RequestedInterconnectionScheduleProfile_default_instance_),
 };
 
-const char descriptor_table_protodef_interconnectionmodule_2finterconnectionmodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_interconnectionmodule_2finterconnectionmodule_2eproto = {
+  {}, AddDescriptors_interconnectionmodule_2finterconnectionmodule_2eproto, "interconnectionmodule/interconnectionmodule.proto", schemas,
+  file_default_instances, TableStruct_interconnectionmodule_2finterconnectionmodule_2eproto::offsets,
+  file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto, 7, file_level_enum_descriptors_interconnectionmodule_2finterconnectionmodule_2eproto, file_level_service_descriptors_interconnectionmodule_2finterconnectionmodule_2eproto,
+};
+
+const char descriptor_table_protodef_interconnectionmodule_2finterconnectionmodule_2eproto[] =
   "\n1interconnectionmodule/interconnectionm"
   "odule.proto\022\025interconnectionmodule\032\tuml."
   "proto\032\036google/protobuf/wrappers.proto\032\037c"
   "ommonmodule/commonmodule.proto\"\245\004\n\024Inter"
   "connectionPoint\0223\n\021blackStartEnabled\030\001 \001"
-  "(\0132\030.commonmodule.ControlSPC\022:\n\030frequenc"
+  "(\0132\030.commonmodule.ControlDPC\022:\n\030frequenc"
   "ySetPointEnabled\030\002 \001(\0132\030.commonmodule.Co"
-  "ntrolSPC\022(\n\006island\030\003 \001(\0132\030.commonmodule."
-  "ControlSPC\022/\n\npctHzDroop\030\004 \001(\0132\033.google."
+  "ntrolDPC\022(\n\006island\030\003 \001(\0132\030.commonmodule."
+  "ControlDPC\022/\n\npctHzDroop\030\004 \001(\0132\033.google."
   "protobuf.FloatValue\022.\n\tpctVDroop\030\005 \001(\0132\033"
   ".google.protobuf.FloatValue\022)\n\trampRates"
   "\030\006 \001(\0132\026.commonmodule.RampRate\022<\n\032reacti"
   "vePwrSetPointEnabled\030\007 \001(\0132\030.commonmodul"
-  "e.ControlSPC\0228\n\026realPwrSetPointEnabled\030\010"
-  " \001(\0132\030.commonmodule.ControlSPC\0228\n\026voltag"
+  "e.ControlDPC\0228\n\026realPwrSetPointEnabled\030\010"
+  " \001(\0132\030.commonmodule.ControlDPC\0228\n\026voltag"
   "eSetPointEnabled\030\t \001(\0132\030.commonmodule.Co"
-  "ntrolSPC\0224\n\tstartTime\030\n \001(\0132\027.commonmodu"
+  "ntrolDPC\0224\n\tstartTime\030\n \001(\0132\027.commonmodu"
   "le.TimestampB\010\210\265\030\001\220\265\030\001\"[\n\022Interconnectio"
   "nCSG\022E\n\006crvPts\030\001 \003(\0132+.interconnectionmo"
   "dule.InterconnectionPointB\010\210\265\030\001\220\265\030\001\"j\n\"I"
@@ -238,233 +303,258 @@ const char descriptor_table_protodef_interconnectionmodule_2finterconnectionmodu
   "ommonmodule.ControlFSCCB\004\200\265\030\001\022k\n\"interco"
   "nnectionControlScheduleFSCH\030\002 \003(\01329.inte"
   "rconnectionmodule.InterconnectionControl"
-  "ScheduleFSCHB\004\220\265\030\000\"\352\001\n\027InterconnectionSc"
-  "hedule\022>\n\020identifiedObject\030\001 \001(\0132\036.commo"
-  "nmodule.IdentifiedObjectB\004\200\265\030\001\022,\n\005check\030"
-  "\002 \001(\0132\035.commonmodule.CheckConditions\022a\n\033"
-  "interconnectionScheduleFSCC\030\003 \001(\01322.inte"
-  "rconnectionmodule.InterconnectionSchedul"
-  "eFSCCB\010\210\265\030\001\220\265\030\001\"\261\003\n%PlannedInterconnecti"
-  "onScheduleProfile\022B\n\022controlMessageInfo\030"
-  "\001 \001(\0132 .commonmodule.ControlMessageInfoB"
-  "\004\200\265\030\001\022Q\n\036requesterCircuitSegmentService\030"
-  "\002 \001(\0132\037.commonmodule.ApplicationSystemB\010"
-  "\210\265\030\001\220\265\030\001\022Y\n\027interconnectionSchedule\030\003 \001("
-  "\0132..interconnectionmodule.Interconnectio"
-  "nScheduleB\010\210\265\030\001\220\265\030\001\022=\n\010tiePoint\030\004 \001(\0132!."
-  "commonmodule.ConductingEquipmentB\010\210\265\030\001\220\265"
-  "\030\001\022Q\n\036responderCircuitSegmentService\030\005 \001"
-  "(\0132\037.commonmodule.ApplicationSystemB\010\210\265\030"
-  "\001\220\265\030\001:\004\300\363\030\001\"\263\003\n\'RequestedInterconnection"
-  "ScheduleProfile\022B\n\022controlMessageInfo\030\001 "
-  "\001(\0132 .commonmodule.ControlMessageInfoB\004\200"
-  "\265\030\001\022Q\n\036requesterCircuitSegmentService\030\002 "
-  "\001(\0132\037.commonmodule.ApplicationSystemB\010\210\265"
-  "\030\001\220\265\030\001\022Y\n\027interconnectionSchedule\030\003 \001(\0132"
-  "..interconnectionmodule.InterconnectionS"
-  "cheduleB\010\210\265\030\001\220\265\030\001\022=\n\010tiePoint\030\004 \001(\0132!.co"
-  "mmonmodule.ConductingEquipmentB\010\210\265\030\001\220\265\030\001"
-  "\022Q\n\036responderCircuitSegmentService\030\005 \001(\013"
-  "2\037.commonmodule.ApplicationSystemB\010\210\265\030\001\220"
-  "\265\030\001:\004\300\363\030\001B\237\001\n\035openfmb.interconnectionmod"
-  "uleP\001Z\\gitlab.com/openfmb/psm/ops/protob"
-  "uf/go-openfmb-ops-protobuf/v2/openfmb/in"
-  "terconnectionmodule\252\002\035openfmb.interconne"
-  "ctionmoduleb\006proto3"
+  "ScheduleFSCHB\004\220\265\030\000\"\342\001\n\027InterconnectionSc"
+  "hedule\0226\n\014controlValue\030\001 \001(\0132\032.commonmod"
+  "ule.ControlValueB\004\200\265\030\001\022,\n\005check\030\002 \001(\0132\035."
+  "commonmodule.CheckConditions\022a\n\033intercon"
+  "nectionScheduleFSCC\030\003 \001(\01322.interconnect"
+  "ionmodule.InterconnectionScheduleFSCCB\010\210"
+  "\265\030\001\220\265\030\001\"\222\002\n%PlannedInterconnectionSchedu"
+  "leProfile\022B\n\022controlMessageInfo\030\001 \001(\0132 ."
+  "commonmodule.ControlMessageInfoB\004\200\265\030\001\022D\n"
+  "\021applicationSystem\030\002 \001(\0132\037.commonmodule."
+  "ApplicationSystemB\010\210\265\030\001\220\265\030\001\022Y\n\027interconn"
+  "ectionSchedule\030\003 \001(\0132..interconnectionmo"
+  "dule.InterconnectionScheduleB\010\210\265\030\001\220\265\030\001:\004"
+  "\300\363\030\001\"\224\002\n\'RequestedInterconnectionSchedul"
+  "eProfile\022B\n\022controlMessageInfo\030\001 \001(\0132 .c"
+  "ommonmodule.ControlMessageInfoB\004\200\265\030\001\022D\n\021"
+  "applicationSystem\030\002 \001(\0132\037.commonmodule.A"
+  "pplicationSystemB\010\210\265\030\001\220\265\030\001\022Y\n\027interconne"
+  "ctionSchedule\030\003 \001(\0132..interconnectionmod"
+  "ule.InterconnectionScheduleB\010\210\265\030\001\220\265\030\001:\004\300"
+  "\363\030\001B\234\001\n\035openfmb.interconnectionmoduleP\001Z"
+  "Ygitlab.com/openfmb/psm/ops/protobuf/go-"
+  "openfmb-ops-protobuf/openfmb/interconnec"
+  "tionmodule\252\002\035openfmb.interconnectionmodu"
+  "leb\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_deps[3] = {
-  &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
-  &::descriptor_table_google_2fprotobuf_2fwrappers_2eproto,
-  &::descriptor_table_uml_2eproto,
+::google::protobuf::internal::DescriptorTable descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto = {
+  false, InitDefaults_interconnectionmodule_2finterconnectionmodule_2eproto, 
+  descriptor_table_protodef_interconnectionmodule_2finterconnectionmodule_2eproto,
+  "interconnectionmodule/interconnectionmodule.proto", &assign_descriptors_table_interconnectionmodule_2finterconnectionmodule_2eproto, 2050,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto = {
-  false, false, 2379, descriptor_table_protodef_interconnectionmodule_2finterconnectionmodule_2eproto, "interconnectionmodule/interconnectionmodule.proto", 
-  &descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_once, descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_deps, 3, 7,
-  schemas, file_default_instances, TableStruct_interconnectionmodule_2finterconnectionmodule_2eproto::offsets,
-  file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto, file_level_enum_descriptors_interconnectionmodule_2finterconnectionmodule_2eproto, file_level_service_descriptors_interconnectionmodule_2finterconnectionmodule_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
-descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_metadata_getter(int index) {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto);
-  return descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto.file_level_metadata[index];
+
+void AddDescriptors_interconnectionmodule_2finterconnectionmodule_2eproto() {
+  static constexpr ::google::protobuf::internal::InitFunc deps[3] =
+  {
+    ::AddDescriptors_uml_2eproto,
+    ::AddDescriptors_google_2fprotobuf_2fwrappers_2eproto,
+    ::AddDescriptors_commonmodule_2fcommonmodule_2eproto,
+  };
+ ::google::protobuf::internal::AddDescriptors(&descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto, deps, 3);
 }
 
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_interconnectionmodule_2finterconnectionmodule_2eproto(&descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto);
+static bool dynamic_init_dummy_interconnectionmodule_2finterconnectionmodule_2eproto = []() { AddDescriptors_interconnectionmodule_2finterconnectionmodule_2eproto(); return true; }();
 namespace interconnectionmodule {
 
 // ===================================================================
 
-class InterconnectionPoint::_Internal {
+void InterconnectionPoint::InitAsDefaultInstance() {
+  ::interconnectionmodule::_InterconnectionPoint_default_instance_._instance.get_mutable()->blackstartenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::interconnectionmodule::_InterconnectionPoint_default_instance_._instance.get_mutable()->frequencysetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::interconnectionmodule::_InterconnectionPoint_default_instance_._instance.get_mutable()->island_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::interconnectionmodule::_InterconnectionPoint_default_instance_._instance.get_mutable()->pcthzdroop_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::interconnectionmodule::_InterconnectionPoint_default_instance_._instance.get_mutable()->pctvdroop_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::interconnectionmodule::_InterconnectionPoint_default_instance_._instance.get_mutable()->ramprates_ = const_cast< ::commonmodule::RampRate*>(
+      ::commonmodule::RampRate::internal_default_instance());
+  ::interconnectionmodule::_InterconnectionPoint_default_instance_._instance.get_mutable()->reactivepwrsetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::interconnectionmodule::_InterconnectionPoint_default_instance_._instance.get_mutable()->realpwrsetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::interconnectionmodule::_InterconnectionPoint_default_instance_._instance.get_mutable()->voltagesetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::interconnectionmodule::_InterconnectionPoint_default_instance_._instance.get_mutable()->starttime_ = const_cast< ::commonmodule::Timestamp*>(
+      ::commonmodule::Timestamp::internal_default_instance());
+}
+class InterconnectionPoint::HasBitSetters {
  public:
-  static const ::commonmodule::ControlSPC& blackstartenabled(const InterconnectionPoint* msg);
-  static const ::commonmodule::ControlSPC& frequencysetpointenabled(const InterconnectionPoint* msg);
-  static const ::commonmodule::ControlSPC& island(const InterconnectionPoint* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pcthzdroop(const InterconnectionPoint* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pctvdroop(const InterconnectionPoint* msg);
+  static const ::commonmodule::ControlDPC& blackstartenabled(const InterconnectionPoint* msg);
+  static const ::commonmodule::ControlDPC& frequencysetpointenabled(const InterconnectionPoint* msg);
+  static const ::commonmodule::ControlDPC& island(const InterconnectionPoint* msg);
+  static const ::google::protobuf::FloatValue& pcthzdroop(const InterconnectionPoint* msg);
+  static const ::google::protobuf::FloatValue& pctvdroop(const InterconnectionPoint* msg);
   static const ::commonmodule::RampRate& ramprates(const InterconnectionPoint* msg);
-  static const ::commonmodule::ControlSPC& reactivepwrsetpointenabled(const InterconnectionPoint* msg);
-  static const ::commonmodule::ControlSPC& realpwrsetpointenabled(const InterconnectionPoint* msg);
-  static const ::commonmodule::ControlSPC& voltagesetpointenabled(const InterconnectionPoint* msg);
+  static const ::commonmodule::ControlDPC& reactivepwrsetpointenabled(const InterconnectionPoint* msg);
+  static const ::commonmodule::ControlDPC& realpwrsetpointenabled(const InterconnectionPoint* msg);
+  static const ::commonmodule::ControlDPC& voltagesetpointenabled(const InterconnectionPoint* msg);
   static const ::commonmodule::Timestamp& starttime(const InterconnectionPoint* msg);
 };
 
-const ::commonmodule::ControlSPC&
-InterconnectionPoint::_Internal::blackstartenabled(const InterconnectionPoint* msg) {
+const ::commonmodule::ControlDPC&
+InterconnectionPoint::HasBitSetters::blackstartenabled(const InterconnectionPoint* msg) {
   return *msg->blackstartenabled_;
 }
-const ::commonmodule::ControlSPC&
-InterconnectionPoint::_Internal::frequencysetpointenabled(const InterconnectionPoint* msg) {
+const ::commonmodule::ControlDPC&
+InterconnectionPoint::HasBitSetters::frequencysetpointenabled(const InterconnectionPoint* msg) {
   return *msg->frequencysetpointenabled_;
 }
-const ::commonmodule::ControlSPC&
-InterconnectionPoint::_Internal::island(const InterconnectionPoint* msg) {
+const ::commonmodule::ControlDPC&
+InterconnectionPoint::HasBitSetters::island(const InterconnectionPoint* msg) {
   return *msg->island_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-InterconnectionPoint::_Internal::pcthzdroop(const InterconnectionPoint* msg) {
+const ::google::protobuf::FloatValue&
+InterconnectionPoint::HasBitSetters::pcthzdroop(const InterconnectionPoint* msg) {
   return *msg->pcthzdroop_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-InterconnectionPoint::_Internal::pctvdroop(const InterconnectionPoint* msg) {
+const ::google::protobuf::FloatValue&
+InterconnectionPoint::HasBitSetters::pctvdroop(const InterconnectionPoint* msg) {
   return *msg->pctvdroop_;
 }
 const ::commonmodule::RampRate&
-InterconnectionPoint::_Internal::ramprates(const InterconnectionPoint* msg) {
+InterconnectionPoint::HasBitSetters::ramprates(const InterconnectionPoint* msg) {
   return *msg->ramprates_;
 }
-const ::commonmodule::ControlSPC&
-InterconnectionPoint::_Internal::reactivepwrsetpointenabled(const InterconnectionPoint* msg) {
+const ::commonmodule::ControlDPC&
+InterconnectionPoint::HasBitSetters::reactivepwrsetpointenabled(const InterconnectionPoint* msg) {
   return *msg->reactivepwrsetpointenabled_;
 }
-const ::commonmodule::ControlSPC&
-InterconnectionPoint::_Internal::realpwrsetpointenabled(const InterconnectionPoint* msg) {
+const ::commonmodule::ControlDPC&
+InterconnectionPoint::HasBitSetters::realpwrsetpointenabled(const InterconnectionPoint* msg) {
   return *msg->realpwrsetpointenabled_;
 }
-const ::commonmodule::ControlSPC&
-InterconnectionPoint::_Internal::voltagesetpointenabled(const InterconnectionPoint* msg) {
+const ::commonmodule::ControlDPC&
+InterconnectionPoint::HasBitSetters::voltagesetpointenabled(const InterconnectionPoint* msg) {
   return *msg->voltagesetpointenabled_;
 }
 const ::commonmodule::Timestamp&
-InterconnectionPoint::_Internal::starttime(const InterconnectionPoint* msg) {
+InterconnectionPoint::HasBitSetters::starttime(const InterconnectionPoint* msg) {
   return *msg->starttime_;
 }
 void InterconnectionPoint::clear_blackstartenabled() {
-  if (GetArena() == nullptr && blackstartenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && blackstartenabled_ != nullptr) {
     delete blackstartenabled_;
   }
   blackstartenabled_ = nullptr;
 }
 void InterconnectionPoint::clear_frequencysetpointenabled() {
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && frequencysetpointenabled_ != nullptr) {
     delete frequencysetpointenabled_;
   }
   frequencysetpointenabled_ = nullptr;
 }
 void InterconnectionPoint::clear_island() {
-  if (GetArena() == nullptr && island_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && island_ != nullptr) {
     delete island_;
   }
   island_ = nullptr;
 }
 void InterconnectionPoint::clear_pcthzdroop() {
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pcthzdroop_ != nullptr) {
     delete pcthzdroop_;
   }
   pcthzdroop_ = nullptr;
 }
 void InterconnectionPoint::clear_pctvdroop() {
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pctvdroop_ != nullptr) {
     delete pctvdroop_;
   }
   pctvdroop_ = nullptr;
 }
 void InterconnectionPoint::clear_ramprates() {
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && ramprates_ != nullptr) {
     delete ramprates_;
   }
   ramprates_ = nullptr;
 }
 void InterconnectionPoint::clear_reactivepwrsetpointenabled() {
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
     delete reactivepwrsetpointenabled_;
   }
   reactivepwrsetpointenabled_ = nullptr;
 }
 void InterconnectionPoint::clear_realpwrsetpointenabled() {
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && realpwrsetpointenabled_ != nullptr) {
     delete realpwrsetpointenabled_;
   }
   realpwrsetpointenabled_ = nullptr;
 }
 void InterconnectionPoint::clear_voltagesetpointenabled() {
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagesetpointenabled_ != nullptr) {
     delete voltagesetpointenabled_;
   }
   voltagesetpointenabled_ = nullptr;
 }
 void InterconnectionPoint::clear_starttime() {
-  if (GetArena() == nullptr && starttime_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && starttime_ != nullptr) {
     delete starttime_;
   }
   starttime_ = nullptr;
 }
-InterconnectionPoint::InterconnectionPoint(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int InterconnectionPoint::kBlackStartEnabledFieldNumber;
+const int InterconnectionPoint::kFrequencySetPointEnabledFieldNumber;
+const int InterconnectionPoint::kIslandFieldNumber;
+const int InterconnectionPoint::kPctHzDroopFieldNumber;
+const int InterconnectionPoint::kPctVDroopFieldNumber;
+const int InterconnectionPoint::kRampRatesFieldNumber;
+const int InterconnectionPoint::kReactivePwrSetPointEnabledFieldNumber;
+const int InterconnectionPoint::kRealPwrSetPointEnabledFieldNumber;
+const int InterconnectionPoint::kVoltageSetPointEnabledFieldNumber;
+const int InterconnectionPoint::kStartTimeFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+InterconnectionPoint::InterconnectionPoint()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:interconnectionmodule.InterconnectionPoint)
+  // @@protoc_insertion_point(constructor:interconnectionmodule.InterconnectionPoint)
 }
 InterconnectionPoint::InterconnectionPoint(const InterconnectionPoint& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_blackstartenabled()) {
-    blackstartenabled_ = new ::commonmodule::ControlSPC(*from.blackstartenabled_);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_blackstartenabled()) {
+    blackstartenabled_ = new ::commonmodule::ControlDPC(*from.blackstartenabled_);
   } else {
     blackstartenabled_ = nullptr;
   }
-  if (from._internal_has_frequencysetpointenabled()) {
-    frequencysetpointenabled_ = new ::commonmodule::ControlSPC(*from.frequencysetpointenabled_);
+  if (from.has_frequencysetpointenabled()) {
+    frequencysetpointenabled_ = new ::commonmodule::ControlDPC(*from.frequencysetpointenabled_);
   } else {
     frequencysetpointenabled_ = nullptr;
   }
-  if (from._internal_has_island()) {
-    island_ = new ::commonmodule::ControlSPC(*from.island_);
+  if (from.has_island()) {
+    island_ = new ::commonmodule::ControlDPC(*from.island_);
   } else {
     island_ = nullptr;
   }
-  if (from._internal_has_pcthzdroop()) {
-    pcthzdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pcthzdroop_);
+  if (from.has_pcthzdroop()) {
+    pcthzdroop_ = new ::google::protobuf::FloatValue(*from.pcthzdroop_);
   } else {
     pcthzdroop_ = nullptr;
   }
-  if (from._internal_has_pctvdroop()) {
-    pctvdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pctvdroop_);
+  if (from.has_pctvdroop()) {
+    pctvdroop_ = new ::google::protobuf::FloatValue(*from.pctvdroop_);
   } else {
     pctvdroop_ = nullptr;
   }
-  if (from._internal_has_ramprates()) {
+  if (from.has_ramprates()) {
     ramprates_ = new ::commonmodule::RampRate(*from.ramprates_);
   } else {
     ramprates_ = nullptr;
   }
-  if (from._internal_has_reactivepwrsetpointenabled()) {
-    reactivepwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from.reactivepwrsetpointenabled_);
+  if (from.has_reactivepwrsetpointenabled()) {
+    reactivepwrsetpointenabled_ = new ::commonmodule::ControlDPC(*from.reactivepwrsetpointenabled_);
   } else {
     reactivepwrsetpointenabled_ = nullptr;
   }
-  if (from._internal_has_realpwrsetpointenabled()) {
-    realpwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from.realpwrsetpointenabled_);
+  if (from.has_realpwrsetpointenabled()) {
+    realpwrsetpointenabled_ = new ::commonmodule::ControlDPC(*from.realpwrsetpointenabled_);
   } else {
     realpwrsetpointenabled_ = nullptr;
   }
-  if (from._internal_has_voltagesetpointenabled()) {
-    voltagesetpointenabled_ = new ::commonmodule::ControlSPC(*from.voltagesetpointenabled_);
+  if (from.has_voltagesetpointenabled()) {
+    voltagesetpointenabled_ = new ::commonmodule::ControlDPC(*from.voltagesetpointenabled_);
   } else {
     voltagesetpointenabled_ = nullptr;
   }
-  if (from._internal_has_starttime()) {
+  if (from.has_starttime()) {
     starttime_ = new ::commonmodule::Timestamp(*from.starttime_);
   } else {
     starttime_ = nullptr;
@@ -473,20 +563,19 @@ InterconnectionPoint::InterconnectionPoint(const InterconnectionPoint& from)
 }
 
 void InterconnectionPoint::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&blackstartenabled_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&starttime_) -
-    reinterpret_cast<char*>(&blackstartenabled_)) + sizeof(starttime_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_InterconnectionPoint_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+  ::memset(&blackstartenabled_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&starttime_) -
+      reinterpret_cast<char*>(&blackstartenabled_)) + sizeof(starttime_));
 }
 
 InterconnectionPoint::~InterconnectionPoint() {
   // @@protoc_insertion_point(destructor:interconnectionmodule.InterconnectionPoint)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void InterconnectionPoint::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete blackstartenabled_;
   if (this != internal_default_instance()) delete frequencysetpointenabled_;
   if (this != internal_default_instance()) delete island_;
@@ -499,253 +588,520 @@ void InterconnectionPoint::SharedDtor() {
   if (this != internal_default_instance()) delete starttime_;
 }
 
-void InterconnectionPoint::ArenaDtor(void* object) {
-  InterconnectionPoint* _this = reinterpret_cast< InterconnectionPoint* >(object);
-  (void)_this;
-}
-void InterconnectionPoint::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void InterconnectionPoint::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const InterconnectionPoint& InterconnectionPoint::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_InterconnectionPoint_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void InterconnectionPoint::Clear() {
 // @@protoc_insertion_point(message_clear_start:interconnectionmodule.InterconnectionPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && blackstartenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && blackstartenabled_ != nullptr) {
     delete blackstartenabled_;
   }
   blackstartenabled_ = nullptr;
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && frequencysetpointenabled_ != nullptr) {
     delete frequencysetpointenabled_;
   }
   frequencysetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && island_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && island_ != nullptr) {
     delete island_;
   }
   island_ = nullptr;
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pcthzdroop_ != nullptr) {
     delete pcthzdroop_;
   }
   pcthzdroop_ = nullptr;
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pctvdroop_ != nullptr) {
     delete pctvdroop_;
   }
   pctvdroop_ = nullptr;
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && ramprates_ != nullptr) {
     delete ramprates_;
   }
   ramprates_ = nullptr;
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
     delete reactivepwrsetpointenabled_;
   }
   reactivepwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && realpwrsetpointenabled_ != nullptr) {
     delete realpwrsetpointenabled_;
   }
   realpwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagesetpointenabled_ != nullptr) {
     delete voltagesetpointenabled_;
   }
   voltagesetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && starttime_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && starttime_ != nullptr) {
     delete starttime_;
   }
   starttime_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* InterconnectionPoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* InterconnectionPoint::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<InterconnectionPoint*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
-      // .commonmodule.ControlSPC blackStartEnabled = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_blackstartenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC frequencySetPointEnabled = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_frequencysetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC island = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_island(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      // .commonmodule.ControlDPC blackStartEnabled = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_blackstartenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_frequencysetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC island = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_island();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue pctHzDroop = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_pcthzdroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_pcthzdroop();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue pctVDroop = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_pctvdroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_pctvdroop();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.RampRate rampRates = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(_internal_mutable_ramprates(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ctx->ParseMessage(_internal_mutable_reactivepwrsetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC realPwrSetPointEnabled = 8;
-      case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          ptr = ctx->ParseMessage(_internal_mutable_realpwrsetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC voltageSetPointEnabled = 9;
-      case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
-          ptr = ctx->ParseMessage(_internal_mutable_voltagesetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::RampRate::_InternalParse;
+        object = msg->mutable_ramprates();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 7;
+      case 7: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_reactivepwrsetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC realPwrSetPointEnabled = 8;
+      case 8: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 66) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_realpwrsetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC voltageSetPointEnabled = 9;
+      case 9: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 74) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_voltagesetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.Timestamp startTime = 10 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
-          ptr = ctx->ParseMessage(_internal_mutable_starttime(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 10: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 82) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::Timestamp::_InternalParse;
+        object = msg->mutable_starttime();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool InterconnectionPoint::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:interconnectionmodule.InterconnectionPoint)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ControlDPC blackStartEnabled = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_blackstartenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* InterconnectionPoint::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.InterconnectionPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_frequencysetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC island = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_island()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue pctHzDroop = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_pcthzdroop()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue pctVDroop = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_pctvdroop()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.RampRate rampRates = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_ramprates()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (58 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_reactivepwrsetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC realPwrSetPointEnabled = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (66 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_realpwrsetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC voltageSetPointEnabled = 9;
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (74 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_voltagesetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.Timestamp startTime = 10 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 10: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (82 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_starttime()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:interconnectionmodule.InterconnectionPoint)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:interconnectionmodule.InterconnectionPoint)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void InterconnectionPoint::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:interconnectionmodule.InterconnectionPoint)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .commonmodule.ControlSPC blackStartEnabled = 1;
+  // .commonmodule.ControlDPC blackStartEnabled = 1;
   if (this->has_blackstartenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::blackstartenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::blackstartenabled(this), output);
   }
 
-  // .commonmodule.ControlSPC frequencySetPointEnabled = 2;
+  // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
   if (this->has_frequencysetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::frequencysetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::frequencysetpointenabled(this), output);
   }
 
-  // .commonmodule.ControlSPC island = 3;
+  // .commonmodule.ControlDPC island = 3;
   if (this->has_island()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::island(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::island(this), output);
   }
 
   // .google.protobuf.FloatValue pctHzDroop = 4;
   if (this->has_pcthzdroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::pcthzdroop(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::pcthzdroop(this), output);
   }
 
   // .google.protobuf.FloatValue pctVDroop = 5;
   if (this->has_pctvdroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::pctvdroop(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, HasBitSetters::pctvdroop(this), output);
   }
 
   // .commonmodule.RampRate rampRates = 6;
   if (this->has_ramprates()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::ramprates(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, HasBitSetters::ramprates(this), output);
   }
 
-  // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 7;
+  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 7;
   if (this->has_reactivepwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::reactivepwrsetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      7, HasBitSetters::reactivepwrsetpointenabled(this), output);
   }
 
-  // .commonmodule.ControlSPC realPwrSetPointEnabled = 8;
+  // .commonmodule.ControlDPC realPwrSetPointEnabled = 8;
   if (this->has_realpwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::realpwrsetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      8, HasBitSetters::realpwrsetpointenabled(this), output);
   }
 
-  // .commonmodule.ControlSPC voltageSetPointEnabled = 9;
+  // .commonmodule.ControlDPC voltageSetPointEnabled = 9;
   if (this->has_voltagesetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        9, _Internal::voltagesetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      9, HasBitSetters::voltagesetpointenabled(this), output);
   }
 
   // .commonmodule.Timestamp startTime = 10 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_starttime()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        10, _Internal::starttime(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      10, HasBitSetters::starttime(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:interconnectionmodule.InterconnectionPoint)
+}
+
+::google::protobuf::uint8* InterconnectionPoint::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.InterconnectionPoint)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlDPC blackStartEnabled = 1;
+  if (this->has_blackstartenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::blackstartenabled(this), target);
+  }
+
+  // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
+  if (this->has_frequencysetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::frequencysetpointenabled(this), target);
+  }
+
+  // .commonmodule.ControlDPC island = 3;
+  if (this->has_island()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::island(this), target);
+  }
+
+  // .google.protobuf.FloatValue pctHzDroop = 4;
+  if (this->has_pcthzdroop()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::pcthzdroop(this), target);
+  }
+
+  // .google.protobuf.FloatValue pctVDroop = 5;
+  if (this->has_pctvdroop()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, HasBitSetters::pctvdroop(this), target);
+  }
+
+  // .commonmodule.RampRate rampRates = 6;
+  if (this->has_ramprates()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        6, HasBitSetters::ramprates(this), target);
+  }
+
+  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 7;
+  if (this->has_reactivepwrsetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        7, HasBitSetters::reactivepwrsetpointenabled(this), target);
+  }
+
+  // .commonmodule.ControlDPC realPwrSetPointEnabled = 8;
+  if (this->has_realpwrsetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        8, HasBitSetters::realpwrsetpointenabled(this), target);
+  }
+
+  // .commonmodule.ControlDPC voltageSetPointEnabled = 9;
+  if (this->has_voltagesetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        9, HasBitSetters::voltagesetpointenabled(this), target);
+  }
+
+  // .commonmodule.Timestamp startTime = 10 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_starttime()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        10, HasBitSetters::starttime(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:interconnectionmodule.InterconnectionPoint)
   return target;
@@ -755,98 +1111,99 @@ size_t InterconnectionPoint::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:interconnectionmodule.InterconnectionPoint)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .commonmodule.ControlSPC blackStartEnabled = 1;
+  // .commonmodule.ControlDPC blackStartEnabled = 1;
   if (this->has_blackstartenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *blackstartenabled_);
   }
 
-  // .commonmodule.ControlSPC frequencySetPointEnabled = 2;
+  // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
   if (this->has_frequencysetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *frequencysetpointenabled_);
   }
 
-  // .commonmodule.ControlSPC island = 3;
+  // .commonmodule.ControlDPC island = 3;
   if (this->has_island()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *island_);
   }
 
   // .google.protobuf.FloatValue pctHzDroop = 4;
   if (this->has_pcthzdroop()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *pcthzdroop_);
   }
 
   // .google.protobuf.FloatValue pctVDroop = 5;
   if (this->has_pctvdroop()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *pctvdroop_);
   }
 
   // .commonmodule.RampRate rampRates = 6;
   if (this->has_ramprates()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *ramprates_);
   }
 
-  // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 7;
+  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 7;
   if (this->has_reactivepwrsetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *reactivepwrsetpointenabled_);
   }
 
-  // .commonmodule.ControlSPC realPwrSetPointEnabled = 8;
+  // .commonmodule.ControlDPC realPwrSetPointEnabled = 8;
   if (this->has_realpwrsetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *realpwrsetpointenabled_);
   }
 
-  // .commonmodule.ControlSPC voltageSetPointEnabled = 9;
+  // .commonmodule.ControlDPC voltageSetPointEnabled = 9;
   if (this->has_voltagesetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *voltagesetpointenabled_);
   }
 
   // .commonmodule.Timestamp startTime = 10 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_starttime()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *starttime_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void InterconnectionPoint::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void InterconnectionPoint::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:interconnectionmodule.InterconnectionPoint)
   GOOGLE_DCHECK_NE(&from, this);
   const InterconnectionPoint* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<InterconnectionPoint>(
+      ::google::protobuf::DynamicCastToGenerated<InterconnectionPoint>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:interconnectionmodule.InterconnectionPoint)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:interconnectionmodule.InterconnectionPoint)
     MergeFrom(*source);
@@ -856,43 +1213,43 @@ void InterconnectionPoint::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& fro
 void InterconnectionPoint::MergeFrom(const InterconnectionPoint& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.InterconnectionPoint)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_blackstartenabled()) {
-    _internal_mutable_blackstartenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_blackstartenabled());
+    mutable_blackstartenabled()->::commonmodule::ControlDPC::MergeFrom(from.blackstartenabled());
   }
   if (from.has_frequencysetpointenabled()) {
-    _internal_mutable_frequencysetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_frequencysetpointenabled());
+    mutable_frequencysetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.frequencysetpointenabled());
   }
   if (from.has_island()) {
-    _internal_mutable_island()->::commonmodule::ControlSPC::MergeFrom(from._internal_island());
+    mutable_island()->::commonmodule::ControlDPC::MergeFrom(from.island());
   }
   if (from.has_pcthzdroop()) {
-    _internal_mutable_pcthzdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pcthzdroop());
+    mutable_pcthzdroop()->::google::protobuf::FloatValue::MergeFrom(from.pcthzdroop());
   }
   if (from.has_pctvdroop()) {
-    _internal_mutable_pctvdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pctvdroop());
+    mutable_pctvdroop()->::google::protobuf::FloatValue::MergeFrom(from.pctvdroop());
   }
   if (from.has_ramprates()) {
-    _internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from._internal_ramprates());
+    mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from.ramprates());
   }
   if (from.has_reactivepwrsetpointenabled()) {
-    _internal_mutable_reactivepwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_reactivepwrsetpointenabled());
+    mutable_reactivepwrsetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.reactivepwrsetpointenabled());
   }
   if (from.has_realpwrsetpointenabled()) {
-    _internal_mutable_realpwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_realpwrsetpointenabled());
+    mutable_realpwrsetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.realpwrsetpointenabled());
   }
   if (from.has_voltagesetpointenabled()) {
-    _internal_mutable_voltagesetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_voltagesetpointenabled());
+    mutable_voltagesetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.voltagesetpointenabled());
   }
   if (from.has_starttime()) {
-    _internal_mutable_starttime()->::commonmodule::Timestamp::MergeFrom(from._internal_starttime());
+    mutable_starttime()->::commonmodule::Timestamp::MergeFrom(from.starttime());
   }
 }
 
-void InterconnectionPoint::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void InterconnectionPoint::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:interconnectionmodule.InterconnectionPoint)
   if (&from == this) return;
   Clear();
@@ -910,133 +1267,218 @@ bool InterconnectionPoint::IsInitialized() const {
   return true;
 }
 
+void InterconnectionPoint::Swap(InterconnectionPoint* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void InterconnectionPoint::InternalSwap(InterconnectionPoint* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(InterconnectionPoint, starttime_)
-      + sizeof(InterconnectionPoint::starttime_)
-      - PROTOBUF_FIELD_OFFSET(InterconnectionPoint, blackstartenabled_)>(
-          reinterpret_cast<char*>(&blackstartenabled_),
-          reinterpret_cast<char*>(&other->blackstartenabled_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(blackstartenabled_, other->blackstartenabled_);
+  swap(frequencysetpointenabled_, other->frequencysetpointenabled_);
+  swap(island_, other->island_);
+  swap(pcthzdroop_, other->pcthzdroop_);
+  swap(pctvdroop_, other->pctvdroop_);
+  swap(ramprates_, other->ramprates_);
+  swap(reactivepwrsetpointenabled_, other->reactivepwrsetpointenabled_);
+  swap(realpwrsetpointenabled_, other->realpwrsetpointenabled_);
+  swap(voltagesetpointenabled_, other->voltagesetpointenabled_);
+  swap(starttime_, other->starttime_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata InterconnectionPoint::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata InterconnectionPoint::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_interconnectionmodule_2finterconnectionmodule_2eproto);
+  return ::file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class InterconnectionCSG::_Internal {
+void InterconnectionCSG::InitAsDefaultInstance() {
+}
+class InterconnectionCSG::HasBitSetters {
  public:
 };
 
-InterconnectionCSG::InterconnectionCSG(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  crvpts_(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int InterconnectionCSG::kCrvPtsFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+InterconnectionCSG::InterconnectionCSG()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:interconnectionmodule.InterconnectionCSG)
+  // @@protoc_insertion_point(constructor:interconnectionmodule.InterconnectionCSG)
 }
 InterconnectionCSG::InterconnectionCSG(const InterconnectionCSG& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr),
       crvpts_(from.crvpts_) {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:interconnectionmodule.InterconnectionCSG)
 }
 
 void InterconnectionCSG::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_InterconnectionCSG_interconnectionmodule_2finterconnectionmodule_2eproto.base);
 }
 
 InterconnectionCSG::~InterconnectionCSG() {
   // @@protoc_insertion_point(destructor:interconnectionmodule.InterconnectionCSG)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void InterconnectionCSG::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
 }
 
-void InterconnectionCSG::ArenaDtor(void* object) {
-  InterconnectionCSG* _this = reinterpret_cast< InterconnectionCSG* >(object);
-  (void)_this;
-}
-void InterconnectionCSG::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void InterconnectionCSG::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const InterconnectionCSG& InterconnectionCSG::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_InterconnectionCSG_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void InterconnectionCSG::Clear() {
 // @@protoc_insertion_point(message_clear_start:interconnectionmodule.InterconnectionCSG)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   crvpts_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* InterconnectionCSG::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* InterconnectionCSG::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<InterconnectionCSG*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // repeated .interconnectionmodule.InterconnectionPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_crvpts(), ptr);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::interconnectionmodule::InterconnectionPoint::_InternalParse;
+          object = msg->add_crvpts();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 10 && (ptr += 1));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool InterconnectionCSG::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:interconnectionmodule.InterconnectionCSG)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .interconnectionmodule.InterconnectionPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_crvpts()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* InterconnectionCSG::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.InterconnectionCSG)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:interconnectionmodule.InterconnectionCSG)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:interconnectionmodule.InterconnectionCSG)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void InterconnectionCSG::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:interconnectionmodule.InterconnectionCSG)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .interconnectionmodule.InterconnectionPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_crvpts_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_crvpts(i), target, stream);
+      n = static_cast<unsigned int>(this->crvpts_size()); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1,
+      this->crvpts(static_cast<int>(i)),
+      output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:interconnectionmodule.InterconnectionCSG)
+}
+
+::google::protobuf::uint8* InterconnectionCSG::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.InterconnectionCSG)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .interconnectionmodule.InterconnectionPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->crvpts_size()); i < n; i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, this->crvpts(static_cast<int>(i)), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:interconnectionmodule.InterconnectionCSG)
   return target;
@@ -1046,35 +1488,40 @@ size_t InterconnectionCSG::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:interconnectionmodule.InterconnectionCSG)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .interconnectionmodule.InterconnectionPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  total_size += 1UL * this->_internal_crvpts_size();
-  for (const auto& msg : this->crvpts_) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  {
+    unsigned int count = static_cast<unsigned int>(this->crvpts_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          this->crvpts(static_cast<int>(i)));
+    }
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void InterconnectionCSG::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void InterconnectionCSG::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:interconnectionmodule.InterconnectionCSG)
   GOOGLE_DCHECK_NE(&from, this);
   const InterconnectionCSG* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<InterconnectionCSG>(
+      ::google::protobuf::DynamicCastToGenerated<InterconnectionCSG>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:interconnectionmodule.InterconnectionCSG)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:interconnectionmodule.InterconnectionCSG)
     MergeFrom(*source);
@@ -1084,14 +1531,14 @@ void InterconnectionCSG::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from)
 void InterconnectionCSG::MergeFrom(const InterconnectionCSG& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.InterconnectionCSG)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   crvpts_.MergeFrom(from.crvpts_);
 }
 
-void InterconnectionCSG::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void InterconnectionCSG::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:interconnectionmodule.InterconnectionCSG)
   if (&from == this) return;
   Clear();
@@ -1109,38 +1556,51 @@ bool InterconnectionCSG::IsInitialized() const {
   return true;
 }
 
+void InterconnectionCSG::Swap(InterconnectionCSG* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void InterconnectionCSG::InternalSwap(InterconnectionCSG* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  crvpts_.InternalSwap(&other->crvpts_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  CastToBase(&crvpts_)->InternalSwap(CastToBase(&other->crvpts_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata InterconnectionCSG::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata InterconnectionCSG::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_interconnectionmodule_2finterconnectionmodule_2eproto);
+  return ::file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class InterconnectionControlScheduleFSCH::_Internal {
+void InterconnectionControlScheduleFSCH::InitAsDefaultInstance() {
+  ::interconnectionmodule::_InterconnectionControlScheduleFSCH_default_instance_._instance.get_mutable()->valdcsg_ = const_cast< ::interconnectionmodule::InterconnectionCSG*>(
+      ::interconnectionmodule::InterconnectionCSG::internal_default_instance());
+}
+class InterconnectionControlScheduleFSCH::HasBitSetters {
  public:
   static const ::interconnectionmodule::InterconnectionCSG& valdcsg(const InterconnectionControlScheduleFSCH* msg);
 };
 
 const ::interconnectionmodule::InterconnectionCSG&
-InterconnectionControlScheduleFSCH::_Internal::valdcsg(const InterconnectionControlScheduleFSCH* msg) {
+InterconnectionControlScheduleFSCH::HasBitSetters::valdcsg(const InterconnectionControlScheduleFSCH* msg) {
   return *msg->valdcsg_;
 }
-InterconnectionControlScheduleFSCH::InterconnectionControlScheduleFSCH(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int InterconnectionControlScheduleFSCH::kValDCSGFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+InterconnectionControlScheduleFSCH::InterconnectionControlScheduleFSCH()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:interconnectionmodule.InterconnectionControlScheduleFSCH)
+  // @@protoc_insertion_point(constructor:interconnectionmodule.InterconnectionControlScheduleFSCH)
 }
 InterconnectionControlScheduleFSCH::InterconnectionControlScheduleFSCH(const InterconnectionControlScheduleFSCH& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_valdcsg()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_valdcsg()) {
     valdcsg_ = new ::interconnectionmodule::InterconnectionCSG(*from.valdcsg_);
   } else {
     valdcsg_ = nullptr;
@@ -1149,96 +1609,165 @@ InterconnectionControlScheduleFSCH::InterconnectionControlScheduleFSCH(const Int
 }
 
 void InterconnectionControlScheduleFSCH::SharedCtor() {
-valdcsg_ = nullptr;
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_InterconnectionControlScheduleFSCH_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+  valdcsg_ = nullptr;
 }
 
 InterconnectionControlScheduleFSCH::~InterconnectionControlScheduleFSCH() {
   // @@protoc_insertion_point(destructor:interconnectionmodule.InterconnectionControlScheduleFSCH)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void InterconnectionControlScheduleFSCH::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete valdcsg_;
 }
 
-void InterconnectionControlScheduleFSCH::ArenaDtor(void* object) {
-  InterconnectionControlScheduleFSCH* _this = reinterpret_cast< InterconnectionControlScheduleFSCH* >(object);
-  (void)_this;
-}
-void InterconnectionControlScheduleFSCH::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void InterconnectionControlScheduleFSCH::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const InterconnectionControlScheduleFSCH& InterconnectionControlScheduleFSCH::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_InterconnectionControlScheduleFSCH_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void InterconnectionControlScheduleFSCH::Clear() {
 // @@protoc_insertion_point(message_clear_start:interconnectionmodule.InterconnectionControlScheduleFSCH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && valdcsg_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && valdcsg_ != nullptr) {
     delete valdcsg_;
   }
   valdcsg_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* InterconnectionControlScheduleFSCH::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* InterconnectionControlScheduleFSCH::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<InterconnectionControlScheduleFSCH*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .interconnectionmodule.InterconnectionCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_valdcsg(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::interconnectionmodule::InterconnectionCSG::_InternalParse;
+        object = msg->mutable_valdcsg();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool InterconnectionControlScheduleFSCH::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:interconnectionmodule.InterconnectionControlScheduleFSCH)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .interconnectionmodule.InterconnectionCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_valdcsg()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* InterconnectionControlScheduleFSCH::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.InterconnectionControlScheduleFSCH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:interconnectionmodule.InterconnectionControlScheduleFSCH)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:interconnectionmodule.InterconnectionControlScheduleFSCH)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void InterconnectionControlScheduleFSCH::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:interconnectionmodule.InterconnectionControlScheduleFSCH)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .interconnectionmodule.InterconnectionCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_valdcsg()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::valdcsg(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::valdcsg(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:interconnectionmodule.InterconnectionControlScheduleFSCH)
+}
+
+::google::protobuf::uint8* InterconnectionControlScheduleFSCH::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.InterconnectionControlScheduleFSCH)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .interconnectionmodule.InterconnectionCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_valdcsg()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::valdcsg(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:interconnectionmodule.InterconnectionControlScheduleFSCH)
   return target;
@@ -1248,35 +1777,36 @@ size_t InterconnectionControlScheduleFSCH::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:interconnectionmodule.InterconnectionControlScheduleFSCH)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .interconnectionmodule.InterconnectionCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_valdcsg()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *valdcsg_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void InterconnectionControlScheduleFSCH::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void InterconnectionControlScheduleFSCH::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:interconnectionmodule.InterconnectionControlScheduleFSCH)
   GOOGLE_DCHECK_NE(&from, this);
   const InterconnectionControlScheduleFSCH* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<InterconnectionControlScheduleFSCH>(
+      ::google::protobuf::DynamicCastToGenerated<InterconnectionControlScheduleFSCH>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:interconnectionmodule.InterconnectionControlScheduleFSCH)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:interconnectionmodule.InterconnectionControlScheduleFSCH)
     MergeFrom(*source);
@@ -1286,16 +1816,16 @@ void InterconnectionControlScheduleFSCH::MergeFrom(const ::PROTOBUF_NAMESPACE_ID
 void InterconnectionControlScheduleFSCH::MergeFrom(const InterconnectionControlScheduleFSCH& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.InterconnectionControlScheduleFSCH)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_valdcsg()) {
-    _internal_mutable_valdcsg()->::interconnectionmodule::InterconnectionCSG::MergeFrom(from._internal_valdcsg());
+    mutable_valdcsg()->::interconnectionmodule::InterconnectionCSG::MergeFrom(from.valdcsg());
   }
 }
 
-void InterconnectionControlScheduleFSCH::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void InterconnectionControlScheduleFSCH::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:interconnectionmodule.InterconnectionControlScheduleFSCH)
   if (&from == this) return;
   Clear();
@@ -1313,46 +1843,59 @@ bool InterconnectionControlScheduleFSCH::IsInitialized() const {
   return true;
 }
 
+void InterconnectionControlScheduleFSCH::Swap(InterconnectionControlScheduleFSCH* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void InterconnectionControlScheduleFSCH::InternalSwap(InterconnectionControlScheduleFSCH* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(valdcsg_, other->valdcsg_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata InterconnectionControlScheduleFSCH::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata InterconnectionControlScheduleFSCH::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_interconnectionmodule_2finterconnectionmodule_2eproto);
+  return ::file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class InterconnectionScheduleFSCC::_Internal {
+void InterconnectionScheduleFSCC::InitAsDefaultInstance() {
+  ::interconnectionmodule::_InterconnectionScheduleFSCC_default_instance_._instance.get_mutable()->controlfscc_ = const_cast< ::commonmodule::ControlFSCC*>(
+      ::commonmodule::ControlFSCC::internal_default_instance());
+}
+class InterconnectionScheduleFSCC::HasBitSetters {
  public:
   static const ::commonmodule::ControlFSCC& controlfscc(const InterconnectionScheduleFSCC* msg);
 };
 
 const ::commonmodule::ControlFSCC&
-InterconnectionScheduleFSCC::_Internal::controlfscc(const InterconnectionScheduleFSCC* msg) {
+InterconnectionScheduleFSCC::HasBitSetters::controlfscc(const InterconnectionScheduleFSCC* msg) {
   return *msg->controlfscc_;
 }
 void InterconnectionScheduleFSCC::clear_controlfscc() {
-  if (GetArena() == nullptr && controlfscc_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && controlfscc_ != nullptr) {
     delete controlfscc_;
   }
   controlfscc_ = nullptr;
 }
-InterconnectionScheduleFSCC::InterconnectionScheduleFSCC(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  interconnectioncontrolschedulefsch_(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int InterconnectionScheduleFSCC::kControlFSCCFieldNumber;
+const int InterconnectionScheduleFSCC::kInterconnectionControlScheduleFSCHFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+InterconnectionScheduleFSCC::InterconnectionScheduleFSCC()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:interconnectionmodule.InterconnectionScheduleFSCC)
+  // @@protoc_insertion_point(constructor:interconnectionmodule.InterconnectionScheduleFSCC)
 }
 InterconnectionScheduleFSCC::InterconnectionScheduleFSCC(const InterconnectionScheduleFSCC& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr),
       interconnectioncontrolschedulefsch_(from.interconnectioncontrolschedulefsch_) {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_controlfscc()) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_controlfscc()) {
     controlfscc_ = new ::commonmodule::ControlFSCC(*from.controlfscc_);
   } else {
     controlfscc_ = nullptr;
@@ -1361,117 +1904,210 @@ InterconnectionScheduleFSCC::InterconnectionScheduleFSCC(const InterconnectionSc
 }
 
 void InterconnectionScheduleFSCC::SharedCtor() {
-controlfscc_ = nullptr;
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_InterconnectionScheduleFSCC_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+  controlfscc_ = nullptr;
 }
 
 InterconnectionScheduleFSCC::~InterconnectionScheduleFSCC() {
   // @@protoc_insertion_point(destructor:interconnectionmodule.InterconnectionScheduleFSCC)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void InterconnectionScheduleFSCC::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete controlfscc_;
 }
 
-void InterconnectionScheduleFSCC::ArenaDtor(void* object) {
-  InterconnectionScheduleFSCC* _this = reinterpret_cast< InterconnectionScheduleFSCC* >(object);
-  (void)_this;
-}
-void InterconnectionScheduleFSCC::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void InterconnectionScheduleFSCC::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const InterconnectionScheduleFSCC& InterconnectionScheduleFSCC::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_InterconnectionScheduleFSCC_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void InterconnectionScheduleFSCC::Clear() {
 // @@protoc_insertion_point(message_clear_start:interconnectionmodule.InterconnectionScheduleFSCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   interconnectioncontrolschedulefsch_.Clear();
-  if (GetArena() == nullptr && controlfscc_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && controlfscc_ != nullptr) {
     delete controlfscc_;
   }
   controlfscc_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* InterconnectionScheduleFSCC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* InterconnectionScheduleFSCC::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<InterconnectionScheduleFSCC*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_controlfscc(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlFSCC::_InternalParse;
+        object = msg->mutable_controlfscc();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // repeated .interconnectionmodule.InterconnectionControlScheduleFSCH interconnectionControlScheduleFSCH = 2 [(.uml.option_multiplicity_min) = 0];
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_interconnectioncontrolschedulefsch(), ptr);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::interconnectionmodule::InterconnectionControlScheduleFSCH::_InternalParse;
+          object = msg->add_interconnectioncontrolschedulefsch();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 18 && (ptr += 1));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool InterconnectionScheduleFSCC::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:interconnectionmodule.InterconnectionScheduleFSCC)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_controlfscc()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* InterconnectionScheduleFSCC::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.InterconnectionScheduleFSCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // repeated .interconnectionmodule.InterconnectionControlScheduleFSCH interconnectionControlScheduleFSCH = 2 [(.uml.option_multiplicity_min) = 0];
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_interconnectioncontrolschedulefsch()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:interconnectionmodule.InterconnectionScheduleFSCC)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:interconnectionmodule.InterconnectionScheduleFSCC)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void InterconnectionScheduleFSCC::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:interconnectionmodule.InterconnectionScheduleFSCC)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlfscc()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlfscc(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::controlfscc(this), output);
   }
 
   // repeated .interconnectionmodule.InterconnectionControlScheduleFSCH interconnectionControlScheduleFSCH = 2 [(.uml.option_multiplicity_min) = 0];
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_interconnectioncontrolschedulefsch_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, this->_internal_interconnectioncontrolschedulefsch(i), target, stream);
+      n = static_cast<unsigned int>(this->interconnectioncontrolschedulefsch_size()); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2,
+      this->interconnectioncontrolschedulefsch(static_cast<int>(i)),
+      output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:interconnectionmodule.InterconnectionScheduleFSCC)
+}
+
+::google::protobuf::uint8* InterconnectionScheduleFSCC::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.InterconnectionScheduleFSCC)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
+  if (this->has_controlfscc()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::controlfscc(this), target);
+  }
+
+  // repeated .interconnectionmodule.InterconnectionControlScheduleFSCH interconnectionControlScheduleFSCH = 2 [(.uml.option_multiplicity_min) = 0];
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->interconnectioncontrolschedulefsch_size()); i < n; i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, this->interconnectioncontrolschedulefsch(static_cast<int>(i)), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:interconnectionmodule.InterconnectionScheduleFSCC)
   return target;
@@ -1481,42 +2117,47 @@ size_t InterconnectionScheduleFSCC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:interconnectionmodule.InterconnectionScheduleFSCC)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .interconnectionmodule.InterconnectionControlScheduleFSCH interconnectionControlScheduleFSCH = 2 [(.uml.option_multiplicity_min) = 0];
-  total_size += 1UL * this->_internal_interconnectioncontrolschedulefsch_size();
-  for (const auto& msg : this->interconnectioncontrolschedulefsch_) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  {
+    unsigned int count = static_cast<unsigned int>(this->interconnectioncontrolschedulefsch_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          this->interconnectioncontrolschedulefsch(static_cast<int>(i)));
+    }
   }
 
   // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlfscc()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *controlfscc_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void InterconnectionScheduleFSCC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void InterconnectionScheduleFSCC::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:interconnectionmodule.InterconnectionScheduleFSCC)
   GOOGLE_DCHECK_NE(&from, this);
   const InterconnectionScheduleFSCC* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<InterconnectionScheduleFSCC>(
+      ::google::protobuf::DynamicCastToGenerated<InterconnectionScheduleFSCC>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:interconnectionmodule.InterconnectionScheduleFSCC)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:interconnectionmodule.InterconnectionScheduleFSCC)
     MergeFrom(*source);
@@ -1526,17 +2167,17 @@ void InterconnectionScheduleFSCC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Messa
 void InterconnectionScheduleFSCC::MergeFrom(const InterconnectionScheduleFSCC& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.InterconnectionScheduleFSCC)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   interconnectioncontrolschedulefsch_.MergeFrom(from.interconnectioncontrolschedulefsch_);
   if (from.has_controlfscc()) {
-    _internal_mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(from._internal_controlfscc());
+    mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(from.controlfscc());
   }
 }
 
-void InterconnectionScheduleFSCC::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void InterconnectionScheduleFSCC::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:interconnectionmodule.InterconnectionScheduleFSCC)
   if (&from == this) return;
   Clear();
@@ -1554,71 +2195,90 @@ bool InterconnectionScheduleFSCC::IsInitialized() const {
   return true;
 }
 
+void InterconnectionScheduleFSCC::Swap(InterconnectionScheduleFSCC* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void InterconnectionScheduleFSCC::InternalSwap(InterconnectionScheduleFSCC* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  interconnectioncontrolschedulefsch_.InternalSwap(&other->interconnectioncontrolschedulefsch_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  CastToBase(&interconnectioncontrolschedulefsch_)->InternalSwap(CastToBase(&other->interconnectioncontrolschedulefsch_));
   swap(controlfscc_, other->controlfscc_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata InterconnectionScheduleFSCC::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata InterconnectionScheduleFSCC::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_interconnectionmodule_2finterconnectionmodule_2eproto);
+  return ::file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class InterconnectionSchedule::_Internal {
+void InterconnectionSchedule::InitAsDefaultInstance() {
+  ::interconnectionmodule::_InterconnectionSchedule_default_instance_._instance.get_mutable()->controlvalue_ = const_cast< ::commonmodule::ControlValue*>(
+      ::commonmodule::ControlValue::internal_default_instance());
+  ::interconnectionmodule::_InterconnectionSchedule_default_instance_._instance.get_mutable()->check_ = const_cast< ::commonmodule::CheckConditions*>(
+      ::commonmodule::CheckConditions::internal_default_instance());
+  ::interconnectionmodule::_InterconnectionSchedule_default_instance_._instance.get_mutable()->interconnectionschedulefscc_ = const_cast< ::interconnectionmodule::InterconnectionScheduleFSCC*>(
+      ::interconnectionmodule::InterconnectionScheduleFSCC::internal_default_instance());
+}
+class InterconnectionSchedule::HasBitSetters {
  public:
-  static const ::commonmodule::IdentifiedObject& identifiedobject(const InterconnectionSchedule* msg);
+  static const ::commonmodule::ControlValue& controlvalue(const InterconnectionSchedule* msg);
   static const ::commonmodule::CheckConditions& check(const InterconnectionSchedule* msg);
   static const ::interconnectionmodule::InterconnectionScheduleFSCC& interconnectionschedulefscc(const InterconnectionSchedule* msg);
 };
 
-const ::commonmodule::IdentifiedObject&
-InterconnectionSchedule::_Internal::identifiedobject(const InterconnectionSchedule* msg) {
-  return *msg->identifiedobject_;
+const ::commonmodule::ControlValue&
+InterconnectionSchedule::HasBitSetters::controlvalue(const InterconnectionSchedule* msg) {
+  return *msg->controlvalue_;
 }
 const ::commonmodule::CheckConditions&
-InterconnectionSchedule::_Internal::check(const InterconnectionSchedule* msg) {
+InterconnectionSchedule::HasBitSetters::check(const InterconnectionSchedule* msg) {
   return *msg->check_;
 }
 const ::interconnectionmodule::InterconnectionScheduleFSCC&
-InterconnectionSchedule::_Internal::interconnectionschedulefscc(const InterconnectionSchedule* msg) {
+InterconnectionSchedule::HasBitSetters::interconnectionschedulefscc(const InterconnectionSchedule* msg) {
   return *msg->interconnectionschedulefscc_;
 }
-void InterconnectionSchedule::clear_identifiedobject() {
-  if (GetArena() == nullptr && identifiedobject_ != nullptr) {
-    delete identifiedobject_;
+void InterconnectionSchedule::clear_controlvalue() {
+  if (GetArenaNoVirtual() == nullptr && controlvalue_ != nullptr) {
+    delete controlvalue_;
   }
-  identifiedobject_ = nullptr;
+  controlvalue_ = nullptr;
 }
 void InterconnectionSchedule::clear_check() {
-  if (GetArena() == nullptr && check_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && check_ != nullptr) {
     delete check_;
   }
   check_ = nullptr;
 }
-InterconnectionSchedule::InterconnectionSchedule(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int InterconnectionSchedule::kControlValueFieldNumber;
+const int InterconnectionSchedule::kCheckFieldNumber;
+const int InterconnectionSchedule::kInterconnectionScheduleFSCCFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+InterconnectionSchedule::InterconnectionSchedule()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:interconnectionmodule.InterconnectionSchedule)
+  // @@protoc_insertion_point(constructor:interconnectionmodule.InterconnectionSchedule)
 }
 InterconnectionSchedule::InterconnectionSchedule(const InterconnectionSchedule& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_identifiedobject()) {
-    identifiedobject_ = new ::commonmodule::IdentifiedObject(*from.identifiedobject_);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_controlvalue()) {
+    controlvalue_ = new ::commonmodule::ControlValue(*from.controlvalue_);
   } else {
-    identifiedobject_ = nullptr;
+    controlvalue_ = nullptr;
   }
-  if (from._internal_has_check()) {
+  if (from.has_check()) {
     check_ = new ::commonmodule::CheckConditions(*from.check_);
   } else {
     check_ = nullptr;
   }
-  if (from._internal_has_interconnectionschedulefscc()) {
+  if (from.has_interconnectionschedulefscc()) {
     interconnectionschedulefscc_ = new ::interconnectionmodule::InterconnectionScheduleFSCC(*from.interconnectionschedulefscc_);
   } else {
     interconnectionschedulefscc_ = nullptr;
@@ -1627,139 +2287,251 @@ InterconnectionSchedule::InterconnectionSchedule(const InterconnectionSchedule& 
 }
 
 void InterconnectionSchedule::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&identifiedobject_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&interconnectionschedulefscc_) -
-    reinterpret_cast<char*>(&identifiedobject_)) + sizeof(interconnectionschedulefscc_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_InterconnectionSchedule_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+  ::memset(&controlvalue_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&interconnectionschedulefscc_) -
+      reinterpret_cast<char*>(&controlvalue_)) + sizeof(interconnectionschedulefscc_));
 }
 
 InterconnectionSchedule::~InterconnectionSchedule() {
   // @@protoc_insertion_point(destructor:interconnectionmodule.InterconnectionSchedule)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void InterconnectionSchedule::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete identifiedobject_;
+  if (this != internal_default_instance()) delete controlvalue_;
   if (this != internal_default_instance()) delete check_;
   if (this != internal_default_instance()) delete interconnectionschedulefscc_;
 }
 
-void InterconnectionSchedule::ArenaDtor(void* object) {
-  InterconnectionSchedule* _this = reinterpret_cast< InterconnectionSchedule* >(object);
-  (void)_this;
-}
-void InterconnectionSchedule::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void InterconnectionSchedule::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const InterconnectionSchedule& InterconnectionSchedule::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_InterconnectionSchedule_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void InterconnectionSchedule::Clear() {
 // @@protoc_insertion_point(message_clear_start:interconnectionmodule.InterconnectionSchedule)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && identifiedobject_ != nullptr) {
-    delete identifiedobject_;
+  if (GetArenaNoVirtual() == nullptr && controlvalue_ != nullptr) {
+    delete controlvalue_;
   }
-  identifiedobject_ = nullptr;
-  if (GetArena() == nullptr && check_ != nullptr) {
+  controlvalue_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && check_ != nullptr) {
     delete check_;
   }
   check_ = nullptr;
-  if (GetArena() == nullptr && interconnectionschedulefscc_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && interconnectionschedulefscc_ != nullptr) {
     delete interconnectionschedulefscc_;
   }
   interconnectionschedulefscc_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* InterconnectionSchedule::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* InterconnectionSchedule::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<InterconnectionSchedule*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
-      // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_identifiedobject(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlValue::_InternalParse;
+        object = msg->mutable_controlvalue();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.CheckConditions check = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::CheckConditions::_InternalParse;
+        object = msg->mutable_check();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .interconnectionmodule.InterconnectionScheduleFSCC interconnectionScheduleFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_interconnectionschedulefscc(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::interconnectionmodule::InterconnectionScheduleFSCC::_InternalParse;
+        object = msg->mutable_interconnectionschedulefscc();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool InterconnectionSchedule::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:interconnectionmodule.InterconnectionSchedule)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_controlvalue()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* InterconnectionSchedule::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.InterconnectionSchedule)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.CheckConditions check = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_check()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .interconnectionmodule.InterconnectionScheduleFSCC interconnectionScheduleFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_interconnectionschedulefscc()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:interconnectionmodule.InterconnectionSchedule)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:interconnectionmodule.InterconnectionSchedule)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void InterconnectionSchedule::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:interconnectionmodule.InterconnectionSchedule)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
-  if (this->has_identifiedobject()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::identifiedobject(this), target, stream);
+  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
+  if (this->has_controlvalue()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::controlvalue(this), output);
   }
 
   // .commonmodule.CheckConditions check = 2;
   if (this->has_check()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::check(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::check(this), output);
   }
 
   // .interconnectionmodule.InterconnectionScheduleFSCC interconnectionScheduleFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_interconnectionschedulefscc()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::interconnectionschedulefscc(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::interconnectionschedulefscc(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:interconnectionmodule.InterconnectionSchedule)
+}
+
+::google::protobuf::uint8* InterconnectionSchedule::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.InterconnectionSchedule)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
+  if (this->has_controlvalue()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::controlvalue(this), target);
+  }
+
+  // .commonmodule.CheckConditions check = 2;
+  if (this->has_check()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::check(this), target);
+  }
+
+  // .interconnectionmodule.InterconnectionScheduleFSCC interconnectionScheduleFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_interconnectionschedulefscc()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::interconnectionschedulefscc(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:interconnectionmodule.InterconnectionSchedule)
   return target;
@@ -1769,49 +2541,50 @@ size_t InterconnectionSchedule::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:interconnectionmodule.InterconnectionSchedule)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
-  if (this->has_identifiedobject()) {
+  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
+  if (this->has_controlvalue()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *identifiedobject_);
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *controlvalue_);
   }
 
   // .commonmodule.CheckConditions check = 2;
   if (this->has_check()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *check_);
   }
 
   // .interconnectionmodule.InterconnectionScheduleFSCC interconnectionScheduleFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_interconnectionschedulefscc()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *interconnectionschedulefscc_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void InterconnectionSchedule::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void InterconnectionSchedule::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:interconnectionmodule.InterconnectionSchedule)
   GOOGLE_DCHECK_NE(&from, this);
   const InterconnectionSchedule* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<InterconnectionSchedule>(
+      ::google::protobuf::DynamicCastToGenerated<InterconnectionSchedule>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:interconnectionmodule.InterconnectionSchedule)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:interconnectionmodule.InterconnectionSchedule)
     MergeFrom(*source);
@@ -1821,22 +2594,22 @@ void InterconnectionSchedule::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& 
 void InterconnectionSchedule::MergeFrom(const InterconnectionSchedule& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.InterconnectionSchedule)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_identifiedobject()) {
-    _internal_mutable_identifiedobject()->::commonmodule::IdentifiedObject::MergeFrom(from._internal_identifiedobject());
+  if (from.has_controlvalue()) {
+    mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(from.controlvalue());
   }
   if (from.has_check()) {
-    _internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(from._internal_check());
+    mutable_check()->::commonmodule::CheckConditions::MergeFrom(from.check());
   }
   if (from.has_interconnectionschedulefscc()) {
-    _internal_mutable_interconnectionschedulefscc()->::interconnectionmodule::InterconnectionScheduleFSCC::MergeFrom(from._internal_interconnectionschedulefscc());
+    mutable_interconnectionschedulefscc()->::interconnectionmodule::InterconnectionScheduleFSCC::MergeFrom(from.interconnectionschedulefscc());
   }
 }
 
-void InterconnectionSchedule::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void InterconnectionSchedule::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:interconnectionmodule.InterconnectionSchedule)
   if (&from == this) return;
   Clear();
@@ -1854,288 +2627,344 @@ bool InterconnectionSchedule::IsInitialized() const {
   return true;
 }
 
+void InterconnectionSchedule::Swap(InterconnectionSchedule* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void InterconnectionSchedule::InternalSwap(InterconnectionSchedule* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(InterconnectionSchedule, interconnectionschedulefscc_)
-      + sizeof(InterconnectionSchedule::interconnectionschedulefscc_)
-      - PROTOBUF_FIELD_OFFSET(InterconnectionSchedule, identifiedobject_)>(
-          reinterpret_cast<char*>(&identifiedobject_),
-          reinterpret_cast<char*>(&other->identifiedobject_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(controlvalue_, other->controlvalue_);
+  swap(check_, other->check_);
+  swap(interconnectionschedulefscc_, other->interconnectionschedulefscc_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata InterconnectionSchedule::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata InterconnectionSchedule::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_interconnectionmodule_2finterconnectionmodule_2eproto);
+  return ::file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class PlannedInterconnectionScheduleProfile::_Internal {
+void PlannedInterconnectionScheduleProfile::InitAsDefaultInstance() {
+  ::interconnectionmodule::_PlannedInterconnectionScheduleProfile_default_instance_._instance.get_mutable()->controlmessageinfo_ = const_cast< ::commonmodule::ControlMessageInfo*>(
+      ::commonmodule::ControlMessageInfo::internal_default_instance());
+  ::interconnectionmodule::_PlannedInterconnectionScheduleProfile_default_instance_._instance.get_mutable()->applicationsystem_ = const_cast< ::commonmodule::ApplicationSystem*>(
+      ::commonmodule::ApplicationSystem::internal_default_instance());
+  ::interconnectionmodule::_PlannedInterconnectionScheduleProfile_default_instance_._instance.get_mutable()->interconnectionschedule_ = const_cast< ::interconnectionmodule::InterconnectionSchedule*>(
+      ::interconnectionmodule::InterconnectionSchedule::internal_default_instance());
+}
+class PlannedInterconnectionScheduleProfile::HasBitSetters {
  public:
   static const ::commonmodule::ControlMessageInfo& controlmessageinfo(const PlannedInterconnectionScheduleProfile* msg);
-  static const ::commonmodule::ApplicationSystem& requestercircuitsegmentservice(const PlannedInterconnectionScheduleProfile* msg);
+  static const ::commonmodule::ApplicationSystem& applicationsystem(const PlannedInterconnectionScheduleProfile* msg);
   static const ::interconnectionmodule::InterconnectionSchedule& interconnectionschedule(const PlannedInterconnectionScheduleProfile* msg);
-  static const ::commonmodule::ConductingEquipment& tiepoint(const PlannedInterconnectionScheduleProfile* msg);
-  static const ::commonmodule::ApplicationSystem& respondercircuitsegmentservice(const PlannedInterconnectionScheduleProfile* msg);
 };
 
 const ::commonmodule::ControlMessageInfo&
-PlannedInterconnectionScheduleProfile::_Internal::controlmessageinfo(const PlannedInterconnectionScheduleProfile* msg) {
+PlannedInterconnectionScheduleProfile::HasBitSetters::controlmessageinfo(const PlannedInterconnectionScheduleProfile* msg) {
   return *msg->controlmessageinfo_;
 }
 const ::commonmodule::ApplicationSystem&
-PlannedInterconnectionScheduleProfile::_Internal::requestercircuitsegmentservice(const PlannedInterconnectionScheduleProfile* msg) {
-  return *msg->requestercircuitsegmentservice_;
+PlannedInterconnectionScheduleProfile::HasBitSetters::applicationsystem(const PlannedInterconnectionScheduleProfile* msg) {
+  return *msg->applicationsystem_;
 }
 const ::interconnectionmodule::InterconnectionSchedule&
-PlannedInterconnectionScheduleProfile::_Internal::interconnectionschedule(const PlannedInterconnectionScheduleProfile* msg) {
+PlannedInterconnectionScheduleProfile::HasBitSetters::interconnectionschedule(const PlannedInterconnectionScheduleProfile* msg) {
   return *msg->interconnectionschedule_;
 }
-const ::commonmodule::ConductingEquipment&
-PlannedInterconnectionScheduleProfile::_Internal::tiepoint(const PlannedInterconnectionScheduleProfile* msg) {
-  return *msg->tiepoint_;
-}
-const ::commonmodule::ApplicationSystem&
-PlannedInterconnectionScheduleProfile::_Internal::respondercircuitsegmentservice(const PlannedInterconnectionScheduleProfile* msg) {
-  return *msg->respondercircuitsegmentservice_;
-}
 void PlannedInterconnectionScheduleProfile::clear_controlmessageinfo() {
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && controlmessageinfo_ != nullptr) {
     delete controlmessageinfo_;
   }
   controlmessageinfo_ = nullptr;
 }
-void PlannedInterconnectionScheduleProfile::clear_requestercircuitsegmentservice() {
-  if (GetArena() == nullptr && requestercircuitsegmentservice_ != nullptr) {
-    delete requestercircuitsegmentservice_;
+void PlannedInterconnectionScheduleProfile::clear_applicationsystem() {
+  if (GetArenaNoVirtual() == nullptr && applicationsystem_ != nullptr) {
+    delete applicationsystem_;
   }
-  requestercircuitsegmentservice_ = nullptr;
+  applicationsystem_ = nullptr;
 }
-void PlannedInterconnectionScheduleProfile::clear_tiepoint() {
-  if (GetArena() == nullptr && tiepoint_ != nullptr) {
-    delete tiepoint_;
-  }
-  tiepoint_ = nullptr;
-}
-void PlannedInterconnectionScheduleProfile::clear_respondercircuitsegmentservice() {
-  if (GetArena() == nullptr && respondercircuitsegmentservice_ != nullptr) {
-    delete respondercircuitsegmentservice_;
-  }
-  respondercircuitsegmentservice_ = nullptr;
-}
-PlannedInterconnectionScheduleProfile::PlannedInterconnectionScheduleProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int PlannedInterconnectionScheduleProfile::kControlMessageInfoFieldNumber;
+const int PlannedInterconnectionScheduleProfile::kApplicationSystemFieldNumber;
+const int PlannedInterconnectionScheduleProfile::kInterconnectionScheduleFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+PlannedInterconnectionScheduleProfile::PlannedInterconnectionScheduleProfile()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:interconnectionmodule.PlannedInterconnectionScheduleProfile)
+  // @@protoc_insertion_point(constructor:interconnectionmodule.PlannedInterconnectionScheduleProfile)
 }
 PlannedInterconnectionScheduleProfile::PlannedInterconnectionScheduleProfile(const PlannedInterconnectionScheduleProfile& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_controlmessageinfo()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_controlmessageinfo()) {
     controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
   } else {
     controlmessageinfo_ = nullptr;
   }
-  if (from._internal_has_requestercircuitsegmentservice()) {
-    requestercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from.requestercircuitsegmentservice_);
+  if (from.has_applicationsystem()) {
+    applicationsystem_ = new ::commonmodule::ApplicationSystem(*from.applicationsystem_);
   } else {
-    requestercircuitsegmentservice_ = nullptr;
+    applicationsystem_ = nullptr;
   }
-  if (from._internal_has_interconnectionschedule()) {
+  if (from.has_interconnectionschedule()) {
     interconnectionschedule_ = new ::interconnectionmodule::InterconnectionSchedule(*from.interconnectionschedule_);
   } else {
     interconnectionschedule_ = nullptr;
-  }
-  if (from._internal_has_tiepoint()) {
-    tiepoint_ = new ::commonmodule::ConductingEquipment(*from.tiepoint_);
-  } else {
-    tiepoint_ = nullptr;
-  }
-  if (from._internal_has_respondercircuitsegmentservice()) {
-    respondercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from.respondercircuitsegmentservice_);
-  } else {
-    respondercircuitsegmentservice_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:interconnectionmodule.PlannedInterconnectionScheduleProfile)
 }
 
 void PlannedInterconnectionScheduleProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&respondercircuitsegmentservice_) -
-    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(respondercircuitsegmentservice_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_PlannedInterconnectionScheduleProfile_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+  ::memset(&controlmessageinfo_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&interconnectionschedule_) -
+      reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(interconnectionschedule_));
 }
 
 PlannedInterconnectionScheduleProfile::~PlannedInterconnectionScheduleProfile() {
   // @@protoc_insertion_point(destructor:interconnectionmodule.PlannedInterconnectionScheduleProfile)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void PlannedInterconnectionScheduleProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete requestercircuitsegmentservice_;
+  if (this != internal_default_instance()) delete applicationsystem_;
   if (this != internal_default_instance()) delete interconnectionschedule_;
-  if (this != internal_default_instance()) delete tiepoint_;
-  if (this != internal_default_instance()) delete respondercircuitsegmentservice_;
 }
 
-void PlannedInterconnectionScheduleProfile::ArenaDtor(void* object) {
-  PlannedInterconnectionScheduleProfile* _this = reinterpret_cast< PlannedInterconnectionScheduleProfile* >(object);
-  (void)_this;
-}
-void PlannedInterconnectionScheduleProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void PlannedInterconnectionScheduleProfile::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const PlannedInterconnectionScheduleProfile& PlannedInterconnectionScheduleProfile::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_PlannedInterconnectionScheduleProfile_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void PlannedInterconnectionScheduleProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:interconnectionmodule.PlannedInterconnectionScheduleProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && controlmessageinfo_ != nullptr) {
     delete controlmessageinfo_;
   }
   controlmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && requestercircuitsegmentservice_ != nullptr) {
-    delete requestercircuitsegmentservice_;
+  if (GetArenaNoVirtual() == nullptr && applicationsystem_ != nullptr) {
+    delete applicationsystem_;
   }
-  requestercircuitsegmentservice_ = nullptr;
-  if (GetArena() == nullptr && interconnectionschedule_ != nullptr) {
+  applicationsystem_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && interconnectionschedule_ != nullptr) {
     delete interconnectionschedule_;
   }
   interconnectionschedule_ = nullptr;
-  if (GetArena() == nullptr && tiepoint_ != nullptr) {
-    delete tiepoint_;
-  }
-  tiepoint_ = nullptr;
-  if (GetArena() == nullptr && respondercircuitsegmentservice_ != nullptr) {
-    delete respondercircuitsegmentservice_;
-  }
-  respondercircuitsegmentservice_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* PlannedInterconnectionScheduleProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* PlannedInterconnectionScheduleProfile::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<PlannedInterconnectionScheduleProfile*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ApplicationSystem requesterCircuitSegmentService = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_requestercircuitsegmentservice(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlMessageInfo::_InternalParse;
+        object = msg->mutable_controlmessageinfo();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ApplicationSystem applicationSystem = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ApplicationSystem::_InternalParse;
+        object = msg->mutable_applicationsystem();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .interconnectionmodule.InterconnectionSchedule interconnectionSchedule = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_interconnectionschedule(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ConductingEquipment tiePoint = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_tiepoint(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ApplicationSystem responderCircuitSegmentService = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_respondercircuitsegmentservice(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::interconnectionmodule::InterconnectionSchedule::_InternalParse;
+        object = msg->mutable_interconnectionschedule();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool PlannedInterconnectionScheduleProfile::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:interconnectionmodule.PlannedInterconnectionScheduleProfile)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_controlmessageinfo()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* PlannedInterconnectionScheduleProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.PlannedInterconnectionScheduleProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.ApplicationSystem applicationSystem = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_applicationsystem()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .interconnectionmodule.InterconnectionSchedule interconnectionSchedule = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_interconnectionschedule()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:interconnectionmodule.PlannedInterconnectionScheduleProfile)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:interconnectionmodule.PlannedInterconnectionScheduleProfile)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void PlannedInterconnectionScheduleProfile::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:interconnectionmodule.PlannedInterconnectionScheduleProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlmessageinfo()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlmessageinfo(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::controlmessageinfo(this), output);
   }
 
-  // .commonmodule.ApplicationSystem requesterCircuitSegmentService = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_requestercircuitsegmentservice()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::requestercircuitsegmentservice(this), target, stream);
+  // .commonmodule.ApplicationSystem applicationSystem = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_applicationsystem()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::applicationsystem(this), output);
   }
 
   // .interconnectionmodule.InterconnectionSchedule interconnectionSchedule = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_interconnectionschedule()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::interconnectionschedule(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::interconnectionschedule(this), output);
   }
 
-  // .commonmodule.ConductingEquipment tiePoint = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_tiepoint()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::tiepoint(this), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:interconnectionmodule.PlannedInterconnectionScheduleProfile)
+}
+
+::google::protobuf::uint8* PlannedInterconnectionScheduleProfile::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.PlannedInterconnectionScheduleProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->has_controlmessageinfo()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::controlmessageinfo(this), target);
   }
 
-  // .commonmodule.ApplicationSystem responderCircuitSegmentService = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_respondercircuitsegmentservice()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::respondercircuitsegmentservice(this), target, stream);
+  // .commonmodule.ApplicationSystem applicationSystem = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_applicationsystem()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::applicationsystem(this), target);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  // .interconnectionmodule.InterconnectionSchedule interconnectionSchedule = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_interconnectionschedule()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::interconnectionschedule(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:interconnectionmodule.PlannedInterconnectionScheduleProfile)
   return target;
@@ -2145,63 +2974,50 @@ size_t PlannedInterconnectionScheduleProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:interconnectionmodule.PlannedInterconnectionScheduleProfile)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlmessageinfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *controlmessageinfo_);
   }
 
-  // .commonmodule.ApplicationSystem requesterCircuitSegmentService = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_requestercircuitsegmentservice()) {
+  // .commonmodule.ApplicationSystem applicationSystem = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_applicationsystem()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *requestercircuitsegmentservice_);
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *applicationsystem_);
   }
 
   // .interconnectionmodule.InterconnectionSchedule interconnectionSchedule = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_interconnectionschedule()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *interconnectionschedule_);
   }
 
-  // .commonmodule.ConductingEquipment tiePoint = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_tiepoint()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *tiepoint_);
-  }
-
-  // .commonmodule.ApplicationSystem responderCircuitSegmentService = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_respondercircuitsegmentservice()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *respondercircuitsegmentservice_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void PlannedInterconnectionScheduleProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void PlannedInterconnectionScheduleProfile::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:interconnectionmodule.PlannedInterconnectionScheduleProfile)
   GOOGLE_DCHECK_NE(&from, this);
   const PlannedInterconnectionScheduleProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PlannedInterconnectionScheduleProfile>(
+      ::google::protobuf::DynamicCastToGenerated<PlannedInterconnectionScheduleProfile>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:interconnectionmodule.PlannedInterconnectionScheduleProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:interconnectionmodule.PlannedInterconnectionScheduleProfile)
     MergeFrom(*source);
@@ -2211,28 +3027,22 @@ void PlannedInterconnectionScheduleProfile::MergeFrom(const ::PROTOBUF_NAMESPACE
 void PlannedInterconnectionScheduleProfile::MergeFrom(const PlannedInterconnectionScheduleProfile& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.PlannedInterconnectionScheduleProfile)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_controlmessageinfo()) {
-    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
+    mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from.controlmessageinfo());
   }
-  if (from.has_requestercircuitsegmentservice()) {
-    _internal_mutable_requestercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(from._internal_requestercircuitsegmentservice());
+  if (from.has_applicationsystem()) {
+    mutable_applicationsystem()->::commonmodule::ApplicationSystem::MergeFrom(from.applicationsystem());
   }
   if (from.has_interconnectionschedule()) {
-    _internal_mutable_interconnectionschedule()->::interconnectionmodule::InterconnectionSchedule::MergeFrom(from._internal_interconnectionschedule());
-  }
-  if (from.has_tiepoint()) {
-    _internal_mutable_tiepoint()->::commonmodule::ConductingEquipment::MergeFrom(from._internal_tiepoint());
-  }
-  if (from.has_respondercircuitsegmentservice()) {
-    _internal_mutable_respondercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(from._internal_respondercircuitsegmentservice());
+    mutable_interconnectionschedule()->::interconnectionmodule::InterconnectionSchedule::MergeFrom(from.interconnectionschedule());
   }
 }
 
-void PlannedInterconnectionScheduleProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void PlannedInterconnectionScheduleProfile::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:interconnectionmodule.PlannedInterconnectionScheduleProfile)
   if (&from == this) return;
   Clear();
@@ -2250,288 +3060,344 @@ bool PlannedInterconnectionScheduleProfile::IsInitialized() const {
   return true;
 }
 
+void PlannedInterconnectionScheduleProfile::Swap(PlannedInterconnectionScheduleProfile* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void PlannedInterconnectionScheduleProfile::InternalSwap(PlannedInterconnectionScheduleProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(PlannedInterconnectionScheduleProfile, respondercircuitsegmentservice_)
-      + sizeof(PlannedInterconnectionScheduleProfile::respondercircuitsegmentservice_)
-      - PROTOBUF_FIELD_OFFSET(PlannedInterconnectionScheduleProfile, controlmessageinfo_)>(
-          reinterpret_cast<char*>(&controlmessageinfo_),
-          reinterpret_cast<char*>(&other->controlmessageinfo_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(controlmessageinfo_, other->controlmessageinfo_);
+  swap(applicationsystem_, other->applicationsystem_);
+  swap(interconnectionschedule_, other->interconnectionschedule_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata PlannedInterconnectionScheduleProfile::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata PlannedInterconnectionScheduleProfile::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_interconnectionmodule_2finterconnectionmodule_2eproto);
+  return ::file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class RequestedInterconnectionScheduleProfile::_Internal {
+void RequestedInterconnectionScheduleProfile::InitAsDefaultInstance() {
+  ::interconnectionmodule::_RequestedInterconnectionScheduleProfile_default_instance_._instance.get_mutable()->controlmessageinfo_ = const_cast< ::commonmodule::ControlMessageInfo*>(
+      ::commonmodule::ControlMessageInfo::internal_default_instance());
+  ::interconnectionmodule::_RequestedInterconnectionScheduleProfile_default_instance_._instance.get_mutable()->applicationsystem_ = const_cast< ::commonmodule::ApplicationSystem*>(
+      ::commonmodule::ApplicationSystem::internal_default_instance());
+  ::interconnectionmodule::_RequestedInterconnectionScheduleProfile_default_instance_._instance.get_mutable()->interconnectionschedule_ = const_cast< ::interconnectionmodule::InterconnectionSchedule*>(
+      ::interconnectionmodule::InterconnectionSchedule::internal_default_instance());
+}
+class RequestedInterconnectionScheduleProfile::HasBitSetters {
  public:
   static const ::commonmodule::ControlMessageInfo& controlmessageinfo(const RequestedInterconnectionScheduleProfile* msg);
-  static const ::commonmodule::ApplicationSystem& requestercircuitsegmentservice(const RequestedInterconnectionScheduleProfile* msg);
+  static const ::commonmodule::ApplicationSystem& applicationsystem(const RequestedInterconnectionScheduleProfile* msg);
   static const ::interconnectionmodule::InterconnectionSchedule& interconnectionschedule(const RequestedInterconnectionScheduleProfile* msg);
-  static const ::commonmodule::ConductingEquipment& tiepoint(const RequestedInterconnectionScheduleProfile* msg);
-  static const ::commonmodule::ApplicationSystem& respondercircuitsegmentservice(const RequestedInterconnectionScheduleProfile* msg);
 };
 
 const ::commonmodule::ControlMessageInfo&
-RequestedInterconnectionScheduleProfile::_Internal::controlmessageinfo(const RequestedInterconnectionScheduleProfile* msg) {
+RequestedInterconnectionScheduleProfile::HasBitSetters::controlmessageinfo(const RequestedInterconnectionScheduleProfile* msg) {
   return *msg->controlmessageinfo_;
 }
 const ::commonmodule::ApplicationSystem&
-RequestedInterconnectionScheduleProfile::_Internal::requestercircuitsegmentservice(const RequestedInterconnectionScheduleProfile* msg) {
-  return *msg->requestercircuitsegmentservice_;
+RequestedInterconnectionScheduleProfile::HasBitSetters::applicationsystem(const RequestedInterconnectionScheduleProfile* msg) {
+  return *msg->applicationsystem_;
 }
 const ::interconnectionmodule::InterconnectionSchedule&
-RequestedInterconnectionScheduleProfile::_Internal::interconnectionschedule(const RequestedInterconnectionScheduleProfile* msg) {
+RequestedInterconnectionScheduleProfile::HasBitSetters::interconnectionschedule(const RequestedInterconnectionScheduleProfile* msg) {
   return *msg->interconnectionschedule_;
 }
-const ::commonmodule::ConductingEquipment&
-RequestedInterconnectionScheduleProfile::_Internal::tiepoint(const RequestedInterconnectionScheduleProfile* msg) {
-  return *msg->tiepoint_;
-}
-const ::commonmodule::ApplicationSystem&
-RequestedInterconnectionScheduleProfile::_Internal::respondercircuitsegmentservice(const RequestedInterconnectionScheduleProfile* msg) {
-  return *msg->respondercircuitsegmentservice_;
-}
 void RequestedInterconnectionScheduleProfile::clear_controlmessageinfo() {
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && controlmessageinfo_ != nullptr) {
     delete controlmessageinfo_;
   }
   controlmessageinfo_ = nullptr;
 }
-void RequestedInterconnectionScheduleProfile::clear_requestercircuitsegmentservice() {
-  if (GetArena() == nullptr && requestercircuitsegmentservice_ != nullptr) {
-    delete requestercircuitsegmentservice_;
+void RequestedInterconnectionScheduleProfile::clear_applicationsystem() {
+  if (GetArenaNoVirtual() == nullptr && applicationsystem_ != nullptr) {
+    delete applicationsystem_;
   }
-  requestercircuitsegmentservice_ = nullptr;
+  applicationsystem_ = nullptr;
 }
-void RequestedInterconnectionScheduleProfile::clear_tiepoint() {
-  if (GetArena() == nullptr && tiepoint_ != nullptr) {
-    delete tiepoint_;
-  }
-  tiepoint_ = nullptr;
-}
-void RequestedInterconnectionScheduleProfile::clear_respondercircuitsegmentservice() {
-  if (GetArena() == nullptr && respondercircuitsegmentservice_ != nullptr) {
-    delete respondercircuitsegmentservice_;
-  }
-  respondercircuitsegmentservice_ = nullptr;
-}
-RequestedInterconnectionScheduleProfile::RequestedInterconnectionScheduleProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int RequestedInterconnectionScheduleProfile::kControlMessageInfoFieldNumber;
+const int RequestedInterconnectionScheduleProfile::kApplicationSystemFieldNumber;
+const int RequestedInterconnectionScheduleProfile::kInterconnectionScheduleFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+RequestedInterconnectionScheduleProfile::RequestedInterconnectionScheduleProfile()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:interconnectionmodule.RequestedInterconnectionScheduleProfile)
+  // @@protoc_insertion_point(constructor:interconnectionmodule.RequestedInterconnectionScheduleProfile)
 }
 RequestedInterconnectionScheduleProfile::RequestedInterconnectionScheduleProfile(const RequestedInterconnectionScheduleProfile& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_controlmessageinfo()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_controlmessageinfo()) {
     controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
   } else {
     controlmessageinfo_ = nullptr;
   }
-  if (from._internal_has_requestercircuitsegmentservice()) {
-    requestercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from.requestercircuitsegmentservice_);
+  if (from.has_applicationsystem()) {
+    applicationsystem_ = new ::commonmodule::ApplicationSystem(*from.applicationsystem_);
   } else {
-    requestercircuitsegmentservice_ = nullptr;
+    applicationsystem_ = nullptr;
   }
-  if (from._internal_has_interconnectionschedule()) {
+  if (from.has_interconnectionschedule()) {
     interconnectionschedule_ = new ::interconnectionmodule::InterconnectionSchedule(*from.interconnectionschedule_);
   } else {
     interconnectionschedule_ = nullptr;
-  }
-  if (from._internal_has_tiepoint()) {
-    tiepoint_ = new ::commonmodule::ConductingEquipment(*from.tiepoint_);
-  } else {
-    tiepoint_ = nullptr;
-  }
-  if (from._internal_has_respondercircuitsegmentservice()) {
-    respondercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from.respondercircuitsegmentservice_);
-  } else {
-    respondercircuitsegmentservice_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:interconnectionmodule.RequestedInterconnectionScheduleProfile)
 }
 
 void RequestedInterconnectionScheduleProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&respondercircuitsegmentservice_) -
-    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(respondercircuitsegmentservice_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_RequestedInterconnectionScheduleProfile_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+  ::memset(&controlmessageinfo_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&interconnectionschedule_) -
+      reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(interconnectionschedule_));
 }
 
 RequestedInterconnectionScheduleProfile::~RequestedInterconnectionScheduleProfile() {
   // @@protoc_insertion_point(destructor:interconnectionmodule.RequestedInterconnectionScheduleProfile)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void RequestedInterconnectionScheduleProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete requestercircuitsegmentservice_;
+  if (this != internal_default_instance()) delete applicationsystem_;
   if (this != internal_default_instance()) delete interconnectionschedule_;
-  if (this != internal_default_instance()) delete tiepoint_;
-  if (this != internal_default_instance()) delete respondercircuitsegmentservice_;
 }
 
-void RequestedInterconnectionScheduleProfile::ArenaDtor(void* object) {
-  RequestedInterconnectionScheduleProfile* _this = reinterpret_cast< RequestedInterconnectionScheduleProfile* >(object);
-  (void)_this;
-}
-void RequestedInterconnectionScheduleProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void RequestedInterconnectionScheduleProfile::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const RequestedInterconnectionScheduleProfile& RequestedInterconnectionScheduleProfile::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_RequestedInterconnectionScheduleProfile_interconnectionmodule_2finterconnectionmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void RequestedInterconnectionScheduleProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:interconnectionmodule.RequestedInterconnectionScheduleProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && controlmessageinfo_ != nullptr) {
     delete controlmessageinfo_;
   }
   controlmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && requestercircuitsegmentservice_ != nullptr) {
-    delete requestercircuitsegmentservice_;
+  if (GetArenaNoVirtual() == nullptr && applicationsystem_ != nullptr) {
+    delete applicationsystem_;
   }
-  requestercircuitsegmentservice_ = nullptr;
-  if (GetArena() == nullptr && interconnectionschedule_ != nullptr) {
+  applicationsystem_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && interconnectionschedule_ != nullptr) {
     delete interconnectionschedule_;
   }
   interconnectionschedule_ = nullptr;
-  if (GetArena() == nullptr && tiepoint_ != nullptr) {
-    delete tiepoint_;
-  }
-  tiepoint_ = nullptr;
-  if (GetArena() == nullptr && respondercircuitsegmentservice_ != nullptr) {
-    delete respondercircuitsegmentservice_;
-  }
-  respondercircuitsegmentservice_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* RequestedInterconnectionScheduleProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* RequestedInterconnectionScheduleProfile::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<RequestedInterconnectionScheduleProfile*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ApplicationSystem requesterCircuitSegmentService = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_requestercircuitsegmentservice(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlMessageInfo::_InternalParse;
+        object = msg->mutable_controlmessageinfo();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ApplicationSystem applicationSystem = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ApplicationSystem::_InternalParse;
+        object = msg->mutable_applicationsystem();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .interconnectionmodule.InterconnectionSchedule interconnectionSchedule = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_interconnectionschedule(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ConductingEquipment tiePoint = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_tiepoint(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ApplicationSystem responderCircuitSegmentService = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_respondercircuitsegmentservice(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::interconnectionmodule::InterconnectionSchedule::_InternalParse;
+        object = msg->mutable_interconnectionschedule();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool RequestedInterconnectionScheduleProfile::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:interconnectionmodule.RequestedInterconnectionScheduleProfile)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_controlmessageinfo()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RequestedInterconnectionScheduleProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.RequestedInterconnectionScheduleProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.ApplicationSystem applicationSystem = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_applicationsystem()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .interconnectionmodule.InterconnectionSchedule interconnectionSchedule = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_interconnectionschedule()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:interconnectionmodule.RequestedInterconnectionScheduleProfile)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:interconnectionmodule.RequestedInterconnectionScheduleProfile)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void RequestedInterconnectionScheduleProfile::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:interconnectionmodule.RequestedInterconnectionScheduleProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlmessageinfo()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlmessageinfo(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::controlmessageinfo(this), output);
   }
 
-  // .commonmodule.ApplicationSystem requesterCircuitSegmentService = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_requestercircuitsegmentservice()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::requestercircuitsegmentservice(this), target, stream);
+  // .commonmodule.ApplicationSystem applicationSystem = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_applicationsystem()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::applicationsystem(this), output);
   }
 
   // .interconnectionmodule.InterconnectionSchedule interconnectionSchedule = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_interconnectionschedule()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::interconnectionschedule(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::interconnectionschedule(this), output);
   }
 
-  // .commonmodule.ConductingEquipment tiePoint = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_tiepoint()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::tiepoint(this), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:interconnectionmodule.RequestedInterconnectionScheduleProfile)
+}
+
+::google::protobuf::uint8* RequestedInterconnectionScheduleProfile::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.RequestedInterconnectionScheduleProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->has_controlmessageinfo()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::controlmessageinfo(this), target);
   }
 
-  // .commonmodule.ApplicationSystem responderCircuitSegmentService = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_respondercircuitsegmentservice()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::respondercircuitsegmentservice(this), target, stream);
+  // .commonmodule.ApplicationSystem applicationSystem = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_applicationsystem()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::applicationsystem(this), target);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  // .interconnectionmodule.InterconnectionSchedule interconnectionSchedule = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_interconnectionschedule()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::interconnectionschedule(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:interconnectionmodule.RequestedInterconnectionScheduleProfile)
   return target;
@@ -2541,63 +3407,50 @@ size_t RequestedInterconnectionScheduleProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:interconnectionmodule.RequestedInterconnectionScheduleProfile)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlmessageinfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *controlmessageinfo_);
   }
 
-  // .commonmodule.ApplicationSystem requesterCircuitSegmentService = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_requestercircuitsegmentservice()) {
+  // .commonmodule.ApplicationSystem applicationSystem = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_applicationsystem()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *requestercircuitsegmentservice_);
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *applicationsystem_);
   }
 
   // .interconnectionmodule.InterconnectionSchedule interconnectionSchedule = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_interconnectionschedule()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *interconnectionschedule_);
   }
 
-  // .commonmodule.ConductingEquipment tiePoint = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_tiepoint()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *tiepoint_);
-  }
-
-  // .commonmodule.ApplicationSystem responderCircuitSegmentService = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_respondercircuitsegmentservice()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *respondercircuitsegmentservice_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void RequestedInterconnectionScheduleProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void RequestedInterconnectionScheduleProfile::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:interconnectionmodule.RequestedInterconnectionScheduleProfile)
   GOOGLE_DCHECK_NE(&from, this);
   const RequestedInterconnectionScheduleProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RequestedInterconnectionScheduleProfile>(
+      ::google::protobuf::DynamicCastToGenerated<RequestedInterconnectionScheduleProfile>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:interconnectionmodule.RequestedInterconnectionScheduleProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:interconnectionmodule.RequestedInterconnectionScheduleProfile)
     MergeFrom(*source);
@@ -2607,28 +3460,22 @@ void RequestedInterconnectionScheduleProfile::MergeFrom(const ::PROTOBUF_NAMESPA
 void RequestedInterconnectionScheduleProfile::MergeFrom(const RequestedInterconnectionScheduleProfile& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.RequestedInterconnectionScheduleProfile)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_controlmessageinfo()) {
-    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
+    mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from.controlmessageinfo());
   }
-  if (from.has_requestercircuitsegmentservice()) {
-    _internal_mutable_requestercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(from._internal_requestercircuitsegmentservice());
+  if (from.has_applicationsystem()) {
+    mutable_applicationsystem()->::commonmodule::ApplicationSystem::MergeFrom(from.applicationsystem());
   }
   if (from.has_interconnectionschedule()) {
-    _internal_mutable_interconnectionschedule()->::interconnectionmodule::InterconnectionSchedule::MergeFrom(from._internal_interconnectionschedule());
-  }
-  if (from.has_tiepoint()) {
-    _internal_mutable_tiepoint()->::commonmodule::ConductingEquipment::MergeFrom(from._internal_tiepoint());
-  }
-  if (from.has_respondercircuitsegmentservice()) {
-    _internal_mutable_respondercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(from._internal_respondercircuitsegmentservice());
+    mutable_interconnectionschedule()->::interconnectionmodule::InterconnectionSchedule::MergeFrom(from.interconnectionschedule());
   }
 }
 
-void RequestedInterconnectionScheduleProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void RequestedInterconnectionScheduleProfile::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:interconnectionmodule.RequestedInterconnectionScheduleProfile)
   if (&from == this) return;
   Clear();
@@ -2646,47 +3493,51 @@ bool RequestedInterconnectionScheduleProfile::IsInitialized() const {
   return true;
 }
 
+void RequestedInterconnectionScheduleProfile::Swap(RequestedInterconnectionScheduleProfile* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void RequestedInterconnectionScheduleProfile::InternalSwap(RequestedInterconnectionScheduleProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RequestedInterconnectionScheduleProfile, respondercircuitsegmentservice_)
-      + sizeof(RequestedInterconnectionScheduleProfile::respondercircuitsegmentservice_)
-      - PROTOBUF_FIELD_OFFSET(RequestedInterconnectionScheduleProfile, controlmessageinfo_)>(
-          reinterpret_cast<char*>(&controlmessageinfo_),
-          reinterpret_cast<char*>(&other->controlmessageinfo_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(controlmessageinfo_, other->controlmessageinfo_);
+  swap(applicationsystem_, other->applicationsystem_);
+  swap(interconnectionschedule_, other->interconnectionschedule_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata RequestedInterconnectionScheduleProfile::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata RequestedInterconnectionScheduleProfile::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_interconnectionmodule_2finterconnectionmodule_2eproto);
+  return ::file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace interconnectionmodule
-PROTOBUF_NAMESPACE_OPEN
+namespace google {
+namespace protobuf {
 template<> PROTOBUF_NOINLINE ::interconnectionmodule::InterconnectionPoint* Arena::CreateMaybeMessage< ::interconnectionmodule::InterconnectionPoint >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::interconnectionmodule::InterconnectionPoint >(arena);
+  return Arena::CreateInternal< ::interconnectionmodule::InterconnectionPoint >(arena);
 }
 template<> PROTOBUF_NOINLINE ::interconnectionmodule::InterconnectionCSG* Arena::CreateMaybeMessage< ::interconnectionmodule::InterconnectionCSG >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::interconnectionmodule::InterconnectionCSG >(arena);
+  return Arena::CreateInternal< ::interconnectionmodule::InterconnectionCSG >(arena);
 }
 template<> PROTOBUF_NOINLINE ::interconnectionmodule::InterconnectionControlScheduleFSCH* Arena::CreateMaybeMessage< ::interconnectionmodule::InterconnectionControlScheduleFSCH >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::interconnectionmodule::InterconnectionControlScheduleFSCH >(arena);
+  return Arena::CreateInternal< ::interconnectionmodule::InterconnectionControlScheduleFSCH >(arena);
 }
 template<> PROTOBUF_NOINLINE ::interconnectionmodule::InterconnectionScheduleFSCC* Arena::CreateMaybeMessage< ::interconnectionmodule::InterconnectionScheduleFSCC >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::interconnectionmodule::InterconnectionScheduleFSCC >(arena);
+  return Arena::CreateInternal< ::interconnectionmodule::InterconnectionScheduleFSCC >(arena);
 }
 template<> PROTOBUF_NOINLINE ::interconnectionmodule::InterconnectionSchedule* Arena::CreateMaybeMessage< ::interconnectionmodule::InterconnectionSchedule >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::interconnectionmodule::InterconnectionSchedule >(arena);
+  return Arena::CreateInternal< ::interconnectionmodule::InterconnectionSchedule >(arena);
 }
 template<> PROTOBUF_NOINLINE ::interconnectionmodule::PlannedInterconnectionScheduleProfile* Arena::CreateMaybeMessage< ::interconnectionmodule::PlannedInterconnectionScheduleProfile >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::interconnectionmodule::PlannedInterconnectionScheduleProfile >(arena);
+  return Arena::CreateInternal< ::interconnectionmodule::PlannedInterconnectionScheduleProfile >(arena);
 }
 template<> PROTOBUF_NOINLINE ::interconnectionmodule::RequestedInterconnectionScheduleProfile* Arena::CreateMaybeMessage< ::interconnectionmodule::RequestedInterconnectionScheduleProfile >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::interconnectionmodule::RequestedInterconnectionScheduleProfile >(arena);
+  return Arena::CreateInternal< ::interconnectionmodule::RequestedInterconnectionScheduleProfile >(arena);
 }
-PROTOBUF_NAMESPACE_CLOSE
+}  // namespace protobuf
+}  // namespace google
 
 // @@protoc_insertion_point(global_scope)
 #include <google/protobuf/port_undef.inc>

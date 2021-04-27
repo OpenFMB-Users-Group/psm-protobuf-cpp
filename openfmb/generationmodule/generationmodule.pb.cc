@@ -5,9 +5,10 @@
 
 #include <algorithm>
 
+#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite.h>
+#include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
@@ -15,335 +16,424 @@
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
-PROTOBUF_PRAGMA_INIT_SEG
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_ControlDPC_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_ControlTimestamp_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Optional_StateKind_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_CheckConditions_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ConductingEquipmentTerminalReading_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ConductingEquipment_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ControlMessageInfo_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_EventMessageInfo_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_EventValue_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_IED_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_PhaseMMTN_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_RampRate_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ReadingMessageInfo_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_StatusMessageInfo_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_StatusValue_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_ControlFSCC_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_ControlValue_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_ENS_DynamicTestKind_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_ReadingMMTR_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_StatusSPS_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_ActivePower_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_LogicalNodeForEventAndStatus_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<6> scc_info_ReadingMMXU_commonmodule_2fcommonmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_generationmodule_2fgenerationmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_GenerationCSG_generationmodule_2fgenerationmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_generationmodule_2fgenerationmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_GenerationControlScheduleFSCH_generationmodule_2fgenerationmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_generationmodule_2fgenerationmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_GenerationEventZGEN_generationmodule_2fgenerationmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_generationmodule_2fgenerationmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_GenerationStatusZGEN_generationmodule_2fgenerationmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_generationmodule_2fgenerationmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_GeneratingUnit_generationmodule_2fgenerationmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_generationmodule_2fgenerationmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_GenerationControlFSCC_generationmodule_2fgenerationmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_generationmodule_2fgenerationmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_GenerationEvent_generationmodule_2fgenerationmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_generationmodule_2fgenerationmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_GenerationStatus_generationmodule_2fgenerationmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_generationmodule_2fgenerationmodule_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_GenerationControl_generationmodule_2fgenerationmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_generationmodule_2fgenerationmodule_2eproto ::google::protobuf::internal::SCCInfo<4> scc_info_GenerationEventAndStatusZGEN_generationmodule_2fgenerationmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_generationmodule_2fgenerationmodule_2eproto ::google::protobuf::internal::SCCInfo<4> scc_info_GenerationPointStatus_generationmodule_2fgenerationmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_generationmodule_2fgenerationmodule_2eproto ::google::protobuf::internal::SCCInfo<4> scc_info_GenerationReading_generationmodule_2fgenerationmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_generationmodule_2fgenerationmodule_2eproto ::google::protobuf::internal::SCCInfo<5> scc_info_GenerationPoint_generationmodule_2fgenerationmodule_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_google_2fprotobuf_2fwrappers_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_FloatValue_google_2fprotobuf_2fwrappers_2eproto;
 namespace generationmodule {
-constexpr GenerationPoint::GenerationPoint(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : blackstartenabled_(nullptr)
-  , frequencysetpointenabled_(nullptr)
-  , pcthzdroop_(nullptr)
-  , pctvdroop_(nullptr)
-  , ramprates_(nullptr)
-  , reactivepwrsetpointenabled_(nullptr)
-  , realpwrsetpointenabled_(nullptr)
-  , reset_(nullptr)
-  , state_(nullptr)
-  , syncbacktogrid_(nullptr)
-  , transtoislndongridlossenabled_(nullptr)
-  , voltagesetpointenabled_(nullptr)
-  , starttime_(nullptr){}
-struct GenerationPointDefaultTypeInternal {
-  constexpr GenerationPointDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GenerationPointDefaultTypeInternal() {}
-  union {
-    GenerationPoint _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerationPointDefaultTypeInternal _GenerationPoint_default_instance_;
-constexpr GenerationCSG::GenerationCSG(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : crvpts_(){}
-struct GenerationCSGDefaultTypeInternal {
-  constexpr GenerationCSGDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GenerationCSGDefaultTypeInternal() {}
-  union {
-    GenerationCSG _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerationCSGDefaultTypeInternal _GenerationCSG_default_instance_;
-constexpr GenerationControlScheduleFSCH::GenerationControlScheduleFSCH(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : valdcsg_(nullptr){}
-struct GenerationControlScheduleFSCHDefaultTypeInternal {
-  constexpr GenerationControlScheduleFSCHDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GenerationControlScheduleFSCHDefaultTypeInternal() {}
-  union {
-    GenerationControlScheduleFSCH _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerationControlScheduleFSCHDefaultTypeInternal _GenerationControlScheduleFSCH_default_instance_;
-constexpr GenerationControlFSCC::GenerationControlFSCC(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlfscc_(nullptr)
-  , generationcontrolschedulefsch_(nullptr){}
-struct GenerationControlFSCCDefaultTypeInternal {
-  constexpr GenerationControlFSCCDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GenerationControlFSCCDefaultTypeInternal() {}
-  union {
-    GenerationControlFSCC _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerationControlFSCCDefaultTypeInternal _GenerationControlFSCC_default_instance_;
-constexpr GenerationControl::GenerationControl(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlvalue_(nullptr)
-  , check_(nullptr)
-  , generationcontrolfscc_(nullptr){}
-struct GenerationControlDefaultTypeInternal {
-  constexpr GenerationControlDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GenerationControlDefaultTypeInternal() {}
-  union {
-    GenerationControl _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerationControlDefaultTypeInternal _GenerationControl_default_instance_;
-constexpr GeneratingUnit::GeneratingUnit(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : conductingequipment_(nullptr)
-  , maxoperatingp_(nullptr){}
-struct GeneratingUnitDefaultTypeInternal {
-  constexpr GeneratingUnitDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GeneratingUnitDefaultTypeInternal() {}
-  union {
-    GeneratingUnit _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GeneratingUnitDefaultTypeInternal _GeneratingUnit_default_instance_;
-constexpr GenerationControlProfile::GenerationControlProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlmessageinfo_(nullptr)
-  , generatingunit_(nullptr)
-  , generationcontrol_(nullptr){}
-struct GenerationControlProfileDefaultTypeInternal {
-  constexpr GenerationControlProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GenerationControlProfileDefaultTypeInternal() {}
-  union {
-    GenerationControlProfile _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerationControlProfileDefaultTypeInternal _GenerationControlProfile_default_instance_;
-constexpr DroopParameter::DroopParameter(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : slope_(nullptr)
-  , unloadedoffset_(nullptr){}
-struct DroopParameterDefaultTypeInternal {
-  constexpr DroopParameterDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~DroopParameterDefaultTypeInternal() {}
-  union {
-    DroopParameter _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT DroopParameterDefaultTypeInternal _DroopParameter_default_instance_;
-constexpr RealPowerControl::RealPowerControl(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : droopsetpoint_(nullptr)
-  , isochronoussetpoint_(nullptr)
-  , realpowercontrolmode_(nullptr)
-  , realpowersetpoint_(nullptr){}
-struct RealPowerControlDefaultTypeInternal {
-  constexpr RealPowerControlDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~RealPowerControlDefaultTypeInternal() {}
-  union {
-    RealPowerControl _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RealPowerControlDefaultTypeInternal _RealPowerControl_default_instance_;
-constexpr ReactivePowerControl::ReactivePowerControl(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : droopsetpoint_(nullptr)
-  , powerfactorsetpoint_(nullptr)
-  , reactivepowercontrolmode_(nullptr)
-  , reactivepowersetpoint_(nullptr)
-  , voltagesetpoint_(nullptr){}
-struct ReactivePowerControlDefaultTypeInternal {
-  constexpr ReactivePowerControlDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ReactivePowerControlDefaultTypeInternal() {}
-  union {
-    ReactivePowerControl _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ReactivePowerControlDefaultTypeInternal _ReactivePowerControl_default_instance_;
-constexpr GenerationDiscreteControl::GenerationDiscreteControl(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlvalue_(nullptr)
-  , check_(nullptr)
-  , reactivepowercontrol_(nullptr)
-  , realpowercontrol_(nullptr){}
-struct GenerationDiscreteControlDefaultTypeInternal {
-  constexpr GenerationDiscreteControlDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GenerationDiscreteControlDefaultTypeInternal() {}
-  union {
-    GenerationDiscreteControl _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerationDiscreteControlDefaultTypeInternal _GenerationDiscreteControl_default_instance_;
-constexpr GenerationDiscreteControlProfile::GenerationDiscreteControlProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlmessageinfo_(nullptr)
-  , generatingunit_(nullptr)
-  , generationdiscretecontrol_(nullptr){}
-struct GenerationDiscreteControlProfileDefaultTypeInternal {
-  constexpr GenerationDiscreteControlProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GenerationDiscreteControlProfileDefaultTypeInternal() {}
-  union {
-    GenerationDiscreteControlProfile _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerationDiscreteControlProfileDefaultTypeInternal _GenerationDiscreteControlProfile_default_instance_;
-constexpr GenerationReading::GenerationReading(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : conductingequipmentterminalreading_(nullptr)
-  , phasemmtn_(nullptr)
-  , readingmmtr_(nullptr)
-  , readingmmxu_(nullptr){}
-struct GenerationReadingDefaultTypeInternal {
-  constexpr GenerationReadingDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GenerationReadingDefaultTypeInternal() {}
-  union {
-    GenerationReading _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerationReadingDefaultTypeInternal _GenerationReading_default_instance_;
-constexpr GenerationReadingProfile::GenerationReadingProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : readingmessageinfo_(nullptr)
-  , generatingunit_(nullptr)
-  , generationreading_(nullptr){}
-struct GenerationReadingProfileDefaultTypeInternal {
-  constexpr GenerationReadingProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GenerationReadingProfileDefaultTypeInternal() {}
-  union {
-    GenerationReadingProfile _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerationReadingProfileDefaultTypeInternal _GenerationReadingProfile_default_instance_;
-constexpr GenerationPointStatus::GenerationPointStatus(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : blackstartenabled_(nullptr)
-  , frequencysetpointenabled_(nullptr)
-  , pcthzdroop_(nullptr)
-  , pctvdroop_(nullptr)
-  , ramprates_(nullptr)
-  , reactivepwrsetpointenabled_(nullptr)
-  , realpwrsetpointenabled_(nullptr)
-  , state_(nullptr)
-  , syncbacktogrid_(nullptr)
-  , transtoislndongridlossenabled_(nullptr)
-  , voltagesetpointenabled_(nullptr){}
-struct GenerationPointStatusDefaultTypeInternal {
-  constexpr GenerationPointStatusDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GenerationPointStatusDefaultTypeInternal() {}
-  union {
-    GenerationPointStatus _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerationPointStatusDefaultTypeInternal _GenerationPointStatus_default_instance_;
-constexpr GenerationEventAndStatusZGEN::GenerationEventAndStatusZGEN(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnodeforeventandstatus_(nullptr)
-  , auxpwrst_(nullptr)
-  , dynamictest_(nullptr)
-  , emgstop_(nullptr)
-  , gnsynst_(nullptr)
-  , pointstatus_(nullptr){}
-struct GenerationEventAndStatusZGENDefaultTypeInternal {
-  constexpr GenerationEventAndStatusZGENDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GenerationEventAndStatusZGENDefaultTypeInternal() {}
-  union {
-    GenerationEventAndStatusZGEN _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerationEventAndStatusZGENDefaultTypeInternal _GenerationEventAndStatusZGEN_default_instance_;
-constexpr GenerationEventZGEN::GenerationEventZGEN(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : generationeventandstatuszgen_(nullptr){}
-struct GenerationEventZGENDefaultTypeInternal {
-  constexpr GenerationEventZGENDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GenerationEventZGENDefaultTypeInternal() {}
-  union {
-    GenerationEventZGEN _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerationEventZGENDefaultTypeInternal _GenerationEventZGEN_default_instance_;
-constexpr GenerationEvent::GenerationEvent(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : eventvalue_(nullptr)
-  , generationeventzgen_(nullptr){}
-struct GenerationEventDefaultTypeInternal {
-  constexpr GenerationEventDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GenerationEventDefaultTypeInternal() {}
-  union {
-    GenerationEvent _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerationEventDefaultTypeInternal _GenerationEvent_default_instance_;
-constexpr GenerationEventProfile::GenerationEventProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : eventmessageinfo_(nullptr)
-  , generatingunit_(nullptr)
-  , generationevent_(nullptr){}
-struct GenerationEventProfileDefaultTypeInternal {
-  constexpr GenerationEventProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GenerationEventProfileDefaultTypeInternal() {}
-  union {
-    GenerationEventProfile _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerationEventProfileDefaultTypeInternal _GenerationEventProfile_default_instance_;
-constexpr GenerationStatusZGEN::GenerationStatusZGEN(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : generationeventandstatuszgen_(nullptr){}
-struct GenerationStatusZGENDefaultTypeInternal {
-  constexpr GenerationStatusZGENDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GenerationStatusZGENDefaultTypeInternal() {}
-  union {
-    GenerationStatusZGEN _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerationStatusZGENDefaultTypeInternal _GenerationStatusZGEN_default_instance_;
-constexpr GenerationStatus::GenerationStatus(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : statusvalue_(nullptr)
-  , generationstatuszgen_(nullptr){}
-struct GenerationStatusDefaultTypeInternal {
-  constexpr GenerationStatusDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GenerationStatusDefaultTypeInternal() {}
-  union {
-    GenerationStatus _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerationStatusDefaultTypeInternal _GenerationStatus_default_instance_;
-constexpr GenerationStatusProfile::GenerationStatusProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : statusmessageinfo_(nullptr)
-  , generatingunit_(nullptr)
-  , generationstatus_(nullptr){}
-struct GenerationStatusProfileDefaultTypeInternal {
-  constexpr GenerationStatusProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GenerationStatusProfileDefaultTypeInternal() {}
-  union {
-    GenerationStatusProfile _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GenerationStatusProfileDefaultTypeInternal _GenerationStatusProfile_default_instance_;
+class GenerationPointDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<GenerationPoint> _instance;
+} _GenerationPoint_default_instance_;
+class GenerationCSGDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<GenerationCSG> _instance;
+} _GenerationCSG_default_instance_;
+class GenerationControlScheduleFSCHDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<GenerationControlScheduleFSCH> _instance;
+} _GenerationControlScheduleFSCH_default_instance_;
+class GenerationControlFSCCDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<GenerationControlFSCC> _instance;
+} _GenerationControlFSCC_default_instance_;
+class GenerationControlDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<GenerationControl> _instance;
+} _GenerationControl_default_instance_;
+class GeneratingUnitDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<GeneratingUnit> _instance;
+} _GeneratingUnit_default_instance_;
+class GenerationControlProfileDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<GenerationControlProfile> _instance;
+} _GenerationControlProfile_default_instance_;
+class GenerationReadingDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<GenerationReading> _instance;
+} _GenerationReading_default_instance_;
+class GenerationReadingProfileDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<GenerationReadingProfile> _instance;
+} _GenerationReadingProfile_default_instance_;
+class GenerationPointStatusDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<GenerationPointStatus> _instance;
+} _GenerationPointStatus_default_instance_;
+class GenerationEventAndStatusZGENDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<GenerationEventAndStatusZGEN> _instance;
+} _GenerationEventAndStatusZGEN_default_instance_;
+class GenerationEventZGENDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<GenerationEventZGEN> _instance;
+} _GenerationEventZGEN_default_instance_;
+class GenerationEventDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<GenerationEvent> _instance;
+} _GenerationEvent_default_instance_;
+class GenerationEventProfileDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<GenerationEventProfile> _instance;
+} _GenerationEventProfile_default_instance_;
+class GenerationStatusZGENDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<GenerationStatusZGEN> _instance;
+} _GenerationStatusZGEN_default_instance_;
+class GenerationStatusDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<GenerationStatus> _instance;
+} _GenerationStatus_default_instance_;
+class GenerationStatusProfileDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<GenerationStatusProfile> _instance;
+} _GenerationStatusProfile_default_instance_;
 }  // namespace generationmodule
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_generationmodule_2fgenerationmodule_2eproto[22];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_generationmodule_2fgenerationmodule_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_generationmodule_2fgenerationmodule_2eproto = nullptr;
+static void InitDefaultsGenerationPoint_generationmodule_2fgenerationmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_generationmodule_2fgenerationmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  {
+    void* ptr = &::generationmodule::_GenerationPoint_default_instance_;
+    new (ptr) ::generationmodule::GenerationPoint();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::generationmodule::GenerationPoint::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<5> scc_info_GenerationPoint_generationmodule_2fgenerationmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 5, InitDefaultsGenerationPoint_generationmodule_2fgenerationmodule_2eproto}, {
+      &scc_info_ControlDPC_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_FloatValue_google_2fprotobuf_2fwrappers_2eproto.base,
+      &scc_info_RampRate_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_Optional_StateKind_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ControlTimestamp_commonmodule_2fcommonmodule_2eproto.base,}};
+
+static void InitDefaultsGenerationCSG_generationmodule_2fgenerationmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::generationmodule::_GenerationCSG_default_instance_;
+    new (ptr) ::generationmodule::GenerationCSG();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::generationmodule::GenerationCSG::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_GenerationCSG_generationmodule_2fgenerationmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsGenerationCSG_generationmodule_2fgenerationmodule_2eproto}, {
+      &scc_info_GenerationPoint_generationmodule_2fgenerationmodule_2eproto.base,}};
+
+static void InitDefaultsGenerationControlScheduleFSCH_generationmodule_2fgenerationmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::generationmodule::_GenerationControlScheduleFSCH_default_instance_;
+    new (ptr) ::generationmodule::GenerationControlScheduleFSCH();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::generationmodule::GenerationControlScheduleFSCH::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_GenerationControlScheduleFSCH_generationmodule_2fgenerationmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsGenerationControlScheduleFSCH_generationmodule_2fgenerationmodule_2eproto}, {
+      &scc_info_GenerationCSG_generationmodule_2fgenerationmodule_2eproto.base,}};
+
+static void InitDefaultsGenerationControlFSCC_generationmodule_2fgenerationmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::generationmodule::_GenerationControlFSCC_default_instance_;
+    new (ptr) ::generationmodule::GenerationControlFSCC();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::generationmodule::GenerationControlFSCC::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<2> scc_info_GenerationControlFSCC_generationmodule_2fgenerationmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsGenerationControlFSCC_generationmodule_2fgenerationmodule_2eproto}, {
+      &scc_info_ControlFSCC_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_GenerationControlScheduleFSCH_generationmodule_2fgenerationmodule_2eproto.base,}};
+
+static void InitDefaultsGenerationControl_generationmodule_2fgenerationmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::generationmodule::_GenerationControl_default_instance_;
+    new (ptr) ::generationmodule::GenerationControl();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::generationmodule::GenerationControl::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<3> scc_info_GenerationControl_generationmodule_2fgenerationmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsGenerationControl_generationmodule_2fgenerationmodule_2eproto}, {
+      &scc_info_ControlValue_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_CheckConditions_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_GenerationControlFSCC_generationmodule_2fgenerationmodule_2eproto.base,}};
+
+static void InitDefaultsGeneratingUnit_generationmodule_2fgenerationmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::generationmodule::_GeneratingUnit_default_instance_;
+    new (ptr) ::generationmodule::GeneratingUnit();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::generationmodule::GeneratingUnit::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<2> scc_info_GeneratingUnit_generationmodule_2fgenerationmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsGeneratingUnit_generationmodule_2fgenerationmodule_2eproto}, {
+      &scc_info_ConductingEquipment_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ActivePower_commonmodule_2fcommonmodule_2eproto.base,}};
+
+static void InitDefaultsGenerationControlProfile_generationmodule_2fgenerationmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::generationmodule::_GenerationControlProfile_default_instance_;
+    new (ptr) ::generationmodule::GenerationControlProfile();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::generationmodule::GenerationControlProfile::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<4> scc_info_GenerationControlProfile_generationmodule_2fgenerationmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsGenerationControlProfile_generationmodule_2fgenerationmodule_2eproto}, {
+      &scc_info_ControlMessageInfo_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_GeneratingUnit_generationmodule_2fgenerationmodule_2eproto.base,
+      &scc_info_GenerationControl_generationmodule_2fgenerationmodule_2eproto.base,
+      &scc_info_IED_commonmodule_2fcommonmodule_2eproto.base,}};
+
+static void InitDefaultsGenerationReading_generationmodule_2fgenerationmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::generationmodule::_GenerationReading_default_instance_;
+    new (ptr) ::generationmodule::GenerationReading();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::generationmodule::GenerationReading::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<4> scc_info_GenerationReading_generationmodule_2fgenerationmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsGenerationReading_generationmodule_2fgenerationmodule_2eproto}, {
+      &scc_info_ConductingEquipmentTerminalReading_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_PhaseMMTN_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ReadingMMTR_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ReadingMMXU_commonmodule_2fcommonmodule_2eproto.base,}};
+
+static void InitDefaultsGenerationReadingProfile_generationmodule_2fgenerationmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::generationmodule::_GenerationReadingProfile_default_instance_;
+    new (ptr) ::generationmodule::GenerationReadingProfile();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::generationmodule::GenerationReadingProfile::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<4> scc_info_GenerationReadingProfile_generationmodule_2fgenerationmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsGenerationReadingProfile_generationmodule_2fgenerationmodule_2eproto}, {
+      &scc_info_ReadingMessageInfo_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_GeneratingUnit_generationmodule_2fgenerationmodule_2eproto.base,
+      &scc_info_GenerationReading_generationmodule_2fgenerationmodule_2eproto.base,
+      &scc_info_IED_commonmodule_2fcommonmodule_2eproto.base,}};
+
+static void InitDefaultsGenerationPointStatus_generationmodule_2fgenerationmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::generationmodule::_GenerationPointStatus_default_instance_;
+    new (ptr) ::generationmodule::GenerationPointStatus();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::generationmodule::GenerationPointStatus::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<4> scc_info_GenerationPointStatus_generationmodule_2fgenerationmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsGenerationPointStatus_generationmodule_2fgenerationmodule_2eproto}, {
+      &scc_info_ControlDPC_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_FloatValue_google_2fprotobuf_2fwrappers_2eproto.base,
+      &scc_info_RampRate_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_Optional_StateKind_commonmodule_2fcommonmodule_2eproto.base,}};
+
+static void InitDefaultsGenerationEventAndStatusZGEN_generationmodule_2fgenerationmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::generationmodule::_GenerationEventAndStatusZGEN_default_instance_;
+    new (ptr) ::generationmodule::GenerationEventAndStatusZGEN();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::generationmodule::GenerationEventAndStatusZGEN::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<4> scc_info_GenerationEventAndStatusZGEN_generationmodule_2fgenerationmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsGenerationEventAndStatusZGEN_generationmodule_2fgenerationmodule_2eproto}, {
+      &scc_info_LogicalNodeForEventAndStatus_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_StatusSPS_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_ENS_DynamicTestKind_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_GenerationPointStatus_generationmodule_2fgenerationmodule_2eproto.base,}};
+
+static void InitDefaultsGenerationEventZGEN_generationmodule_2fgenerationmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::generationmodule::_GenerationEventZGEN_default_instance_;
+    new (ptr) ::generationmodule::GenerationEventZGEN();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::generationmodule::GenerationEventZGEN::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_GenerationEventZGEN_generationmodule_2fgenerationmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsGenerationEventZGEN_generationmodule_2fgenerationmodule_2eproto}, {
+      &scc_info_GenerationEventAndStatusZGEN_generationmodule_2fgenerationmodule_2eproto.base,}};
+
+static void InitDefaultsGenerationEvent_generationmodule_2fgenerationmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::generationmodule::_GenerationEvent_default_instance_;
+    new (ptr) ::generationmodule::GenerationEvent();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::generationmodule::GenerationEvent::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<2> scc_info_GenerationEvent_generationmodule_2fgenerationmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsGenerationEvent_generationmodule_2fgenerationmodule_2eproto}, {
+      &scc_info_EventValue_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_GenerationEventZGEN_generationmodule_2fgenerationmodule_2eproto.base,}};
+
+static void InitDefaultsGenerationEventProfile_generationmodule_2fgenerationmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::generationmodule::_GenerationEventProfile_default_instance_;
+    new (ptr) ::generationmodule::GenerationEventProfile();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::generationmodule::GenerationEventProfile::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<4> scc_info_GenerationEventProfile_generationmodule_2fgenerationmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsGenerationEventProfile_generationmodule_2fgenerationmodule_2eproto}, {
+      &scc_info_EventMessageInfo_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_GeneratingUnit_generationmodule_2fgenerationmodule_2eproto.base,
+      &scc_info_GenerationEvent_generationmodule_2fgenerationmodule_2eproto.base,
+      &scc_info_IED_commonmodule_2fcommonmodule_2eproto.base,}};
+
+static void InitDefaultsGenerationStatusZGEN_generationmodule_2fgenerationmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::generationmodule::_GenerationStatusZGEN_default_instance_;
+    new (ptr) ::generationmodule::GenerationStatusZGEN();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::generationmodule::GenerationStatusZGEN::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_GenerationStatusZGEN_generationmodule_2fgenerationmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsGenerationStatusZGEN_generationmodule_2fgenerationmodule_2eproto}, {
+      &scc_info_GenerationEventAndStatusZGEN_generationmodule_2fgenerationmodule_2eproto.base,}};
+
+static void InitDefaultsGenerationStatus_generationmodule_2fgenerationmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::generationmodule::_GenerationStatus_default_instance_;
+    new (ptr) ::generationmodule::GenerationStatus();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::generationmodule::GenerationStatus::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<2> scc_info_GenerationStatus_generationmodule_2fgenerationmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsGenerationStatus_generationmodule_2fgenerationmodule_2eproto}, {
+      &scc_info_StatusValue_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_GenerationStatusZGEN_generationmodule_2fgenerationmodule_2eproto.base,}};
+
+static void InitDefaultsGenerationStatusProfile_generationmodule_2fgenerationmodule_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::generationmodule::_GenerationStatusProfile_default_instance_;
+    new (ptr) ::generationmodule::GenerationStatusProfile();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::generationmodule::GenerationStatusProfile::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<4> scc_info_GenerationStatusProfile_generationmodule_2fgenerationmodule_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsGenerationStatusProfile_generationmodule_2fgenerationmodule_2eproto}, {
+      &scc_info_StatusMessageInfo_commonmodule_2fcommonmodule_2eproto.base,
+      &scc_info_GeneratingUnit_generationmodule_2fgenerationmodule_2eproto.base,
+      &scc_info_GenerationStatus_generationmodule_2fgenerationmodule_2eproto.base,
+      &scc_info_IED_commonmodule_2fcommonmodule_2eproto.base,}};
+
+void InitDefaults_generationmodule_2fgenerationmodule_2eproto() {
+  ::google::protobuf::internal::InitSCC(&scc_info_GenerationPoint_generationmodule_2fgenerationmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GenerationCSG_generationmodule_2fgenerationmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GenerationControlScheduleFSCH_generationmodule_2fgenerationmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GenerationControlFSCC_generationmodule_2fgenerationmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GenerationControl_generationmodule_2fgenerationmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GeneratingUnit_generationmodule_2fgenerationmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GenerationControlProfile_generationmodule_2fgenerationmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GenerationReading_generationmodule_2fgenerationmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GenerationReadingProfile_generationmodule_2fgenerationmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GenerationPointStatus_generationmodule_2fgenerationmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GenerationEventAndStatusZGEN_generationmodule_2fgenerationmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GenerationEventZGEN_generationmodule_2fgenerationmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GenerationEvent_generationmodule_2fgenerationmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GenerationEventProfile_generationmodule_2fgenerationmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GenerationStatusZGEN_generationmodule_2fgenerationmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GenerationStatus_generationmodule_2fgenerationmodule_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_GenerationStatusProfile_generationmodule_2fgenerationmodule_2eproto.base);
+}
+
+::google::protobuf::Metadata file_level_metadata_generationmodule_2fgenerationmodule_2eproto[17];
+constexpr ::google::protobuf::EnumDescriptor const** file_level_enum_descriptors_generationmodule_2fgenerationmodule_2eproto = nullptr;
+constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_generationmodule_2fgenerationmodule_2eproto = nullptr;
+
+const ::google::protobuf::uint32 TableStruct_generationmodule_2fgenerationmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationPoint, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -404,49 +494,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_generationmodule_2fgenerationm
   PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationControlProfile, controlmessageinfo_),
   PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationControlProfile, generatingunit_),
   PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationControlProfile, generationcontrol_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::generationmodule::DroopParameter, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::generationmodule::DroopParameter, slope_),
-  PROTOBUF_FIELD_OFFSET(::generationmodule::DroopParameter, unloadedoffset_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::generationmodule::RealPowerControl, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::generationmodule::RealPowerControl, droopsetpoint_),
-  PROTOBUF_FIELD_OFFSET(::generationmodule::RealPowerControl, isochronoussetpoint_),
-  PROTOBUF_FIELD_OFFSET(::generationmodule::RealPowerControl, realpowercontrolmode_),
-  PROTOBUF_FIELD_OFFSET(::generationmodule::RealPowerControl, realpowersetpoint_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::generationmodule::ReactivePowerControl, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::generationmodule::ReactivePowerControl, droopsetpoint_),
-  PROTOBUF_FIELD_OFFSET(::generationmodule::ReactivePowerControl, powerfactorsetpoint_),
-  PROTOBUF_FIELD_OFFSET(::generationmodule::ReactivePowerControl, reactivepowercontrolmode_),
-  PROTOBUF_FIELD_OFFSET(::generationmodule::ReactivePowerControl, reactivepowersetpoint_),
-  PROTOBUF_FIELD_OFFSET(::generationmodule::ReactivePowerControl, voltagesetpoint_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationDiscreteControl, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationDiscreteControl, controlvalue_),
-  PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationDiscreteControl, check_),
-  PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationDiscreteControl, reactivepowercontrol_),
-  PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationDiscreteControl, realpowercontrol_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationDiscreteControlProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationDiscreteControlProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationDiscreteControlProfile, generatingunit_),
-  PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationDiscreteControlProfile, generationdiscretecontrol_),
+  PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationControlProfile, ied_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationReading, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -464,6 +512,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_generationmodule_2fgenerationm
   PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationReadingProfile, readingmessageinfo_),
   PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationReadingProfile, generatingunit_),
   PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationReadingProfile, generationreading_),
+  PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationReadingProfile, ied_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationPointStatus, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -512,6 +561,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_generationmodule_2fgenerationm
   PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationEventProfile, eventmessageinfo_),
   PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationEventProfile, generatingunit_),
   PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationEventProfile, generationevent_),
+  PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationEventProfile, ied_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationStatusZGEN, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -533,8 +583,9 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_generationmodule_2fgenerationm
   PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationStatusProfile, statusmessageinfo_),
   PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationStatusProfile, generatingunit_),
   PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationStatusProfile, generationstatus_),
+  PROTOBUF_FIELD_OFFSET(::generationmodule::GenerationStatusProfile, ied_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::generationmodule::GenerationPoint)},
   { 18, -1, sizeof(::generationmodule::GenerationCSG)},
   { 24, -1, sizeof(::generationmodule::GenerationControlScheduleFSCH)},
@@ -542,69 +593,65 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 37, -1, sizeof(::generationmodule::GenerationControl)},
   { 45, -1, sizeof(::generationmodule::GeneratingUnit)},
   { 52, -1, sizeof(::generationmodule::GenerationControlProfile)},
-  { 60, -1, sizeof(::generationmodule::DroopParameter)},
-  { 67, -1, sizeof(::generationmodule::RealPowerControl)},
-  { 76, -1, sizeof(::generationmodule::ReactivePowerControl)},
-  { 86, -1, sizeof(::generationmodule::GenerationDiscreteControl)},
-  { 95, -1, sizeof(::generationmodule::GenerationDiscreteControlProfile)},
-  { 103, -1, sizeof(::generationmodule::GenerationReading)},
-  { 112, -1, sizeof(::generationmodule::GenerationReadingProfile)},
-  { 120, -1, sizeof(::generationmodule::GenerationPointStatus)},
-  { 136, -1, sizeof(::generationmodule::GenerationEventAndStatusZGEN)},
-  { 147, -1, sizeof(::generationmodule::GenerationEventZGEN)},
-  { 153, -1, sizeof(::generationmodule::GenerationEvent)},
-  { 160, -1, sizeof(::generationmodule::GenerationEventProfile)},
-  { 168, -1, sizeof(::generationmodule::GenerationStatusZGEN)},
-  { 174, -1, sizeof(::generationmodule::GenerationStatus)},
-  { 181, -1, sizeof(::generationmodule::GenerationStatusProfile)},
+  { 61, -1, sizeof(::generationmodule::GenerationReading)},
+  { 70, -1, sizeof(::generationmodule::GenerationReadingProfile)},
+  { 79, -1, sizeof(::generationmodule::GenerationPointStatus)},
+  { 95, -1, sizeof(::generationmodule::GenerationEventAndStatusZGEN)},
+  { 106, -1, sizeof(::generationmodule::GenerationEventZGEN)},
+  { 112, -1, sizeof(::generationmodule::GenerationEvent)},
+  { 119, -1, sizeof(::generationmodule::GenerationEventProfile)},
+  { 128, -1, sizeof(::generationmodule::GenerationStatusZGEN)},
+  { 134, -1, sizeof(::generationmodule::GenerationStatus)},
+  { 141, -1, sizeof(::generationmodule::GenerationStatusProfile)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_GenerationPoint_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_GenerationCSG_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_GenerationControlScheduleFSCH_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_GenerationControlFSCC_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_GenerationControl_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_GeneratingUnit_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_GenerationControlProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_DroopParameter_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_RealPowerControl_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_ReactivePowerControl_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_GenerationDiscreteControl_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_GenerationDiscreteControlProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_GenerationReading_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_GenerationReadingProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_GenerationPointStatus_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_GenerationEventAndStatusZGEN_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_GenerationEventZGEN_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_GenerationEvent_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_GenerationEventProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_GenerationStatusZGEN_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_GenerationStatus_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::generationmodule::_GenerationStatusProfile_default_instance_),
+static ::google::protobuf::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::google::protobuf::Message*>(&::generationmodule::_GenerationPoint_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::generationmodule::_GenerationCSG_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::generationmodule::_GenerationControlScheduleFSCH_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::generationmodule::_GenerationControlFSCC_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::generationmodule::_GenerationControl_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::generationmodule::_GeneratingUnit_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::generationmodule::_GenerationControlProfile_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::generationmodule::_GenerationReading_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::generationmodule::_GenerationReadingProfile_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::generationmodule::_GenerationPointStatus_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::generationmodule::_GenerationEventAndStatusZGEN_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::generationmodule::_GenerationEventZGEN_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::generationmodule::_GenerationEvent_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::generationmodule::_GenerationEventProfile_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::generationmodule::_GenerationStatusZGEN_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::generationmodule::_GenerationStatus_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::generationmodule::_GenerationStatusProfile_default_instance_),
 };
 
-const char descriptor_table_protodef_generationmodule_2fgenerationmodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_generationmodule_2fgenerationmodule_2eproto = {
+  {}, AddDescriptors_generationmodule_2fgenerationmodule_2eproto, "generationmodule/generationmodule.proto", schemas,
+  file_default_instances, TableStruct_generationmodule_2fgenerationmodule_2eproto::offsets,
+  file_level_metadata_generationmodule_2fgenerationmodule_2eproto, 17, file_level_enum_descriptors_generationmodule_2fgenerationmodule_2eproto, file_level_service_descriptors_generationmodule_2fgenerationmodule_2eproto,
+};
+
+const char descriptor_table_protodef_generationmodule_2fgenerationmodule_2eproto[] =
   "\n\'generationmodule/generationmodule.prot"
   "o\022\020generationmodule\032\tuml.proto\032\036google/p"
   "rotobuf/wrappers.proto\032\037commonmodule/com"
   "monmodule.proto\"\312\005\n\017GenerationPoint\0223\n\021b"
   "lackStartEnabled\030\001 \001(\0132\030.commonmodule.Co"
-  "ntrolSPC\022:\n\030frequencySetPointEnabled\030\002 \001"
-  "(\0132\030.commonmodule.ControlSPC\022/\n\npctHzDro"
+  "ntrolDPC\022:\n\030frequencySetPointEnabled\030\002 \001"
+  "(\0132\030.commonmodule.ControlDPC\022/\n\npctHzDro"
   "op\030\003 \001(\0132\033.google.protobuf.FloatValue\022.\n"
   "\tpctVDroop\030\004 \001(\0132\033.google.protobuf.Float"
   "Value\022)\n\trampRates\030\005 \001(\0132\026.commonmodule."
   "RampRate\022<\n\032reactivePwrSetPointEnabled\030\006"
-  " \001(\0132\030.commonmodule.ControlSPC\0228\n\026realPw"
+  " \001(\0132\030.commonmodule.ControlDPC\0228\n\026realPw"
   "rSetPointEnabled\030\007 \001(\0132\030.commonmodule.Co"
-  "ntrolSPC\022\'\n\005reset\030\010 \001(\0132\030.commonmodule.C"
-  "ontrolSPC\022/\n\005state\030\t \001(\0132 .commonmodule."
+  "ntrolDPC\022\'\n\005reset\030\010 \001(\0132\030.commonmodule.C"
+  "ontrolDPC\022/\n\005state\030\t \001(\0132 .commonmodule."
   "Optional_StateKind\0220\n\016syncBackToGrid\030\n \001"
-  "(\0132\030.commonmodule.ControlSPC\022\?\n\035transToI"
+  "(\0132\030.commonmodule.ControlDPC\022\?\n\035transToI"
   "slndOnGridLossEnabled\030\013 \001(\0132\030.commonmodu"
-  "le.ControlSPC\0228\n\026voltageSetPointEnabled\030"
-  "\014 \001(\0132\030.commonmodule.ControlSPC\022;\n\tstart"
+  "le.ControlDPC\0228\n\026voltageSetPointEnabled\030"
+  "\014 \001(\0132\030.commonmodule.ControlDPC\022;\n\tstart"
   "Time\030\r \001(\0132\036.commonmodule.ControlTimesta"
   "mpB\010\210\265\030\001\220\265\030\001\"L\n\rGenerationCSG\022;\n\006crvPts\030"
   "\001 \003(\0132!.generationmodule.GenerationPoint"
@@ -614,361 +661,377 @@ const char descriptor_table_protodef_generationmodule_2fgenerationmodule_2eproto
   "ntrolFSCC\0224\n\013controlFSCC\030\001 \001(\0132\031.commonm"
   "odule.ControlFSCCB\004\200\265\030\001\022V\n\035GenerationCon"
   "trolScheduleFSCH\030\002 \001(\0132/.generationmodul"
-  "e.GenerationControlScheduleFSCH\"\301\001\n\021Gene"
+  "e.GenerationControlScheduleFSCH\"\313\001\n\021Gene"
   "rationControl\0226\n\014controlValue\030\001 \001(\0132\032.co"
   "mmonmodule.ControlValueB\004\200\265\030\001\022,\n\005check\030\002"
-  " \001(\0132\035.commonmodule.CheckConditions\022F\n\025g"
+  " \001(\0132\035.commonmodule.CheckConditions\022P\n\025g"
   "enerationControlFSCC\030\003 \001(\0132\'.generationm"
-  "odule.GenerationControlFSCC\"\210\001\n\016Generati"
-  "ngUnit\022D\n\023conductingEquipment\030\001 \001(\0132!.co"
-  "mmonmodule.ConductingEquipmentB\004\200\265\030\001\0220\n\r"
-  "maxOperatingP\030\002 \001(\0132\031.commonmodule.Activ"
-  "ePower\"\362\001\n\030GenerationControlProfile\022B\n\022c"
-  "ontrolMessageInfo\030\001 \001(\0132 .commonmodule.C"
-  "ontrolMessageInfoB\004\200\265\030\001\022B\n\016generatingUni"
-  "t\030\002 \001(\0132 .generationmodule.GeneratingUni"
-  "tB\010\210\265\030\001\220\265\030\001\022H\n\021generationControl\030\003 \001(\0132#"
-  ".generationmodule.GenerationControlB\010\210\265\030"
-  "\001\220\265\030\001:\004\300\363\030\001\"q\n\016DroopParameter\022*\n\005slope\030\001"
-  " \001(\0132\033.google.protobuf.FloatValue\0223\n\016unl"
-  "oadedOffset\030\002 \001(\0132\033.google.protobuf.Floa"
-  "tValue\"\210\002\n\020RealPowerControl\0227\n\rdroopSetp"
-  "oint\030\001 \001(\0132 .generationmodule.DroopParam"
-  "eter\0228\n\023isochronousSetpoint\030\002 \001(\0132\033.goog"
-  "le.protobuf.FloatValue\022I\n\024realPowerContr"
-  "olMode\030\003 \001(\0132+.commonmodule.Optional_Rea"
-  "lPowerControlKind\0226\n\021realPowerSetpoint\030\004"
-  " \001(\0132\033.google.protobuf.FloatValue\"\316\002\n\024Re"
-  "activePowerControl\0227\n\rdroopSetpoint\030\001 \001("
-  "\0132 .generationmodule.DroopParameter\0228\n\023p"
-  "owerFactorSetpoint\030\002 \001(\0132\033.google.protob"
-  "uf.FloatValue\022Q\n\030reactivePowerControlMod"
-  "e\030\003 \001(\0132/.commonmodule.Optional_Reactive"
-  "PowerControlKind\022:\n\025reactivePowerSetpoin"
-  "t\030\004 \001(\0132\033.google.protobuf.FloatValue\0224\n\017"
-  "voltageSetpoint\030\005 \001(\0132\033.google.protobuf."
-  "FloatValue\"\205\002\n\031GenerationDiscreteControl"
-  "\0226\n\014controlValue\030\001 \001(\0132\032.commonmodule.Co"
-  "ntrolValueB\004\200\265\030\001\022,\n\005check\030\002 \001(\0132\035.common"
-  "module.CheckConditions\022D\n\024ReactivePowerC"
-  "ontrol\030\003 \001(\0132&.generationmodule.Reactive"
-  "PowerControl\022<\n\020RealPowerControl\030\004 \001(\0132\""
-  ".generationmodule.RealPowerControl\"\212\002\n G"
-  "enerationDiscreteControlProfile\022B\n\022contr"
-  "olMessageInfo\030\001 \001(\0132 .commonmodule.Contr"
-  "olMessageInfoB\004\200\265\030\001\022B\n\016generatingUnit\030\002 "
-  "\001(\0132 .generationmodule.GeneratingUnitB\010\210"
-  "\265\030\001\220\265\030\001\022X\n\031generationDiscreteControl\030\003 \001"
-  "(\0132+.generationmodule.GenerationDiscrete"
-  "ControlB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\203\002\n\021GenerationRe"
+  "odule.GenerationControlFSCCB\010\210\265\030\001\220\265\030\001\"\210\001"
+  "\n\016GeneratingUnit\022D\n\023conductingEquipment\030"
+  "\001 \001(\0132!.commonmodule.ConductingEquipment"
+  "B\004\200\265\030\001\0220\n\rmaxOperatingP\030\002 \001(\0132\031.commonmo"
+  "dule.ActivePower\"\234\002\n\030GenerationControlPr"
+  "ofile\022B\n\022controlMessageInfo\030\001 \001(\0132 .comm"
+  "onmodule.ControlMessageInfoB\004\200\265\030\001\022B\n\016gen"
+  "eratingUnit\030\002 \001(\0132 .generationmodule.Gen"
+  "eratingUnitB\010\210\265\030\001\220\265\030\001\022H\n\021generationContr"
+  "ol\030\003 \001(\0132#.generationmodule.GenerationCo"
+  "ntrolB\010\210\265\030\001\220\265\030\001\022(\n\003ied\030\004 \001(\0132\021.commonmod"
+  "ule.IEDB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\203\002\n\021GenerationRe"
   "ading\022b\n\"conductingEquipmentTerminalRead"
   "ing\030\001 \001(\01320.commonmodule.ConductingEquip"
   "mentTerminalReadingB\004\200\265\030\001\022*\n\tphaseMMTN\030\002"
   " \001(\0132\027.commonmodule.PhaseMMTN\022.\n\013reading"
   "MMTR\030\003 \001(\0132\031.commonmodule.ReadingMMTR\022.\n"
   "\013readingMMXU\030\004 \001(\0132\031.commonmodule.Readin"
-  "gMMXU\"\362\001\n\030GenerationReadingProfile\022B\n\022re"
+  "gMMXU\"\234\002\n\030GenerationReadingProfile\022B\n\022re"
   "adingMessageInfo\030\001 \001(\0132 .commonmodule.Re"
   "adingMessageInfoB\004\200\265\030\001\022B\n\016generatingUnit"
   "\030\002 \001(\0132 .generationmodule.GeneratingUnit"
   "B\010\210\265\030\001\220\265\030\001\022H\n\021generationReading\030\003 \001(\0132#."
   "generationmodule.GenerationReadingB\010\210\265\030\001"
-  "\220\265\030\001:\004\300\363\030\001\"\343\004\n\025GenerationPointStatus\0222\n\021"
-  "blackStartEnabled\030\001 \001(\0132\027.commonmodule.S"
-  "tatusSPS\0229\n\030frequencySetPointEnabled\030\002 \001"
-  "(\0132\027.commonmodule.StatusSPS\022/\n\npctHzDroo"
-  "p\030\003 \001(\0132\033.google.protobuf.FloatValue\022.\n\t"
-  "pctVDroop\030\004 \001(\0132\033.google.protobuf.FloatV"
-  "alue\022)\n\trampRates\030\005 \001(\0132\026.commonmodule.R"
-  "ampRate\022;\n\032reactivePwrSetPointEnabled\030\006 "
-  "\001(\0132\027.commonmodule.StatusSPS\0227\n\026realPwrS"
-  "etPointEnabled\030\007 \001(\0132\027.commonmodule.Stat"
-  "usSPS\022/\n\005state\030\010 \001(\0132 .commonmodule.Opti"
-  "onal_StateKind\022/\n\016syncBackToGrid\030\t \001(\0132\027"
-  ".commonmodule.StatusSPS\022>\n\035transToIslndO"
-  "nGridLossEnabled\030\n \001(\0132\027.commonmodule.St"
-  "atusSPS\0227\n\026voltageSetPointEnabled\030\013 \001(\0132"
-  "\027.commonmodule.StatusSPS\"\353\002\n\034GenerationE"
-  "ventAndStatusZGEN\022V\n\034logicalNodeForEvent"
-  "AndStatus\030\001 \001(\0132*.commonmodule.LogicalNo"
-  "deForEventAndStatusB\004\200\265\030\001\022)\n\010AuxPwrSt\030\002 "
-  "\001(\0132\027.commonmodule.StatusSPS\0226\n\013DynamicT"
-  "est\030\003 \001(\0132!.commonmodule.ENS_DynamicTest"
-  "Kind\022(\n\007EmgStop\030\004 \001(\0132\027.commonmodule.Sta"
-  "tusSPS\022(\n\007GnSynSt\030\005 \001(\0132\027.commonmodule.S"
-  "tatusSPS\022<\n\013PointStatus\030\006 \001(\0132\'.generati"
-  "onmodule.GenerationPointStatus\"q\n\023Genera"
-  "tionEventZGEN\022Z\n\034generationEventAndStatu"
-  "sZGEN\030\001 \001(\0132..generationmodule.Generatio"
-  "nEventAndStatusZGENB\004\200\265\030\001\"\211\001\n\017Generation"
-  "Event\0222\n\neventValue\030\001 \001(\0132\030.commonmodule"
-  ".EventValueB\004\200\265\030\001\022B\n\023generationEventZGEN"
-  "\030\002 \001(\0132%.generationmodule.GenerationEven"
-  "tZGEN\"\350\001\n\026GenerationEventProfile\022>\n\020even"
-  "tMessageInfo\030\001 \001(\0132\036.commonmodule.EventM"
-  "essageInfoB\004\200\265\030\001\022B\n\016generatingUnit\030\002 \001(\013"
-  "2 .generationmodule.GeneratingUnitB\010\210\265\030\001"
-  "\220\265\030\001\022D\n\017generationEvent\030\003 \001(\0132!.generati"
-  "onmodule.GenerationEventB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001"
-  "\"r\n\024GenerationStatusZGEN\022Z\n\034generationEv"
-  "entAndStatusZGEN\030\001 \001(\0132..generationmodul"
-  "e.GenerationEventAndStatusZGENB\004\200\265\030\001\"\216\001\n"
-  "\020GenerationStatus\0224\n\013statusValue\030\001 \001(\0132\031"
-  ".commonmodule.StatusValueB\004\200\265\030\001\022D\n\024gener"
-  "ationStatusZGEN\030\002 \001(\0132&.generationmodule"
-  ".GenerationStatusZGEN\"\355\001\n\027GenerationStat"
-  "usProfile\022@\n\021statusMessageInfo\030\001 \001(\0132\037.c"
-  "ommonmodule.StatusMessageInfoB\004\200\265\030\001\022B\n\016g"
+  "\220\265\030\001\022(\n\003ied\030\004 \001(\0132\021.commonmodule.IEDB\010\210\265"
+  "\030\001\220\265\030\001:\004\300\363\030\001\"\352\004\n\025GenerationPointStatus\0223"
+  "\n\021blackStartEnabled\030\001 \001(\0132\030.commonmodule"
+  ".ControlDPC\022:\n\030frequencySetPointEnabled\030"
+  "\002 \001(\0132\030.commonmodule.ControlDPC\022/\n\npctHz"
+  "Droop\030\003 \001(\0132\033.google.protobuf.FloatValue"
+  "\022.\n\tpctVDroop\030\004 \001(\0132\033.google.protobuf.Fl"
+  "oatValue\022)\n\trampRates\030\005 \001(\0132\026.commonmodu"
+  "le.RampRate\022<\n\032reactivePwrSetPointEnable"
+  "d\030\006 \001(\0132\030.commonmodule.ControlDPC\0228\n\026rea"
+  "lPwrSetPointEnabled\030\007 \001(\0132\030.commonmodule"
+  ".ControlDPC\022/\n\005state\030\010 \001(\0132 .commonmodul"
+  "e.Optional_StateKind\0220\n\016syncBackToGrid\030\t"
+  " \001(\0132\030.commonmodule.ControlDPC\022\?\n\035transT"
+  "oIslndOnGridLossEnabled\030\n \001(\0132\030.commonmo"
+  "dule.ControlDPC\0228\n\026voltageSetPointEnable"
+  "d\030\013 \001(\0132\030.commonmodule.ControlDPC\"\353\002\n\034Ge"
+  "nerationEventAndStatusZGEN\022V\n\034logicalNod"
+  "eForEventAndStatus\030\001 \001(\0132*.commonmodule."
+  "LogicalNodeForEventAndStatusB\004\200\265\030\001\022)\n\010Au"
+  "xPwrSt\030\002 \001(\0132\027.commonmodule.StatusSPS\0226\n"
+  "\013DynamicTest\030\003 \001(\0132!.commonmodule.ENS_Dy"
+  "namicTestKind\022(\n\007EmgStop\030\004 \001(\0132\027.commonm"
+  "odule.StatusSPS\022(\n\007GnSynSt\030\005 \001(\0132\027.commo"
+  "nmodule.StatusSPS\022<\n\013PointStatus\030\006 \001(\0132\'"
+  ".generationmodule.GenerationPointStatus\""
+  "q\n\023GenerationEventZGEN\022Z\n\034generationEven"
+  "tAndStatusZGEN\030\001 \001(\0132..generationmodule."
+  "GenerationEventAndStatusZGENB\004\200\265\030\001\"\223\001\n\017G"
+  "enerationEvent\0222\n\neventValue\030\001 \001(\0132\030.com"
+  "monmodule.EventValueB\004\200\265\030\001\022L\n\023generation"
+  "EventZGEN\030\002 \001(\0132%.generationmodule.Gener"
+  "ationEventZGENB\010\210\265\030\001\220\265\030\001\"\222\002\n\026GenerationE"
+  "ventProfile\022>\n\020eventMessageInfo\030\001 \001(\0132\036."
+  "commonmodule.EventMessageInfoB\004\200\265\030\001\022B\n\016g"
   "eneratingUnit\030\002 \001(\0132 .generationmodule.G"
-  "eneratingUnitB\010\210\265\030\001\220\265\030\001\022F\n\020generationSta"
-  "tus\030\003 \001(\0132\".generationmodule.GenerationS"
-  "tatusB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001B\220\001\n\030openfmb.genera"
-  "tionmoduleP\001ZWgitlab.com/openfmb/psm/ops"
-  "/protobuf/go-openfmb-ops-protobuf/v2/ope"
-  "nfmb/generationmodule\252\002\030openfmb.generati"
-  "onmoduleb\006proto3"
+  "eneratingUnitB\010\210\265\030\001\220\265\030\001\022D\n\017generationEve"
+  "nt\030\003 \001(\0132!.generationmodule.GenerationEv"
+  "entB\010\210\265\030\001\220\265\030\001\022(\n\003ied\030\004 \001(\0132\021.commonmodul"
+  "e.IEDB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"r\n\024GenerationStatu"
+  "sZGEN\022Z\n\034generationEventAndStatusZGEN\030\001 "
+  "\001(\0132..generationmodule.GenerationEventAn"
+  "dStatusZGENB\004\200\265\030\001\"\230\001\n\020GenerationStatus\0224"
+  "\n\013statusValue\030\001 \001(\0132\031.commonmodule.Statu"
+  "sValueB\004\200\265\030\001\022N\n\024generationStatusZGEN\030\002 \001"
+  "(\0132&.generationmodule.GenerationStatusZG"
+  "ENB\010\210\265\030\001\220\265\030\001\"\227\002\n\027GenerationStatusProfile"
+  "\022@\n\021statusMessageInfo\030\001 \001(\0132\037.commonmodu"
+  "le.StatusMessageInfoB\004\200\265\030\001\022B\n\016generating"
+  "Unit\030\002 \001(\0132 .generationmodule.Generating"
+  "UnitB\010\210\265\030\001\220\265\030\001\022F\n\020generationStatus\030\003 \001(\013"
+  "2\".generationmodule.GenerationStatusB\010\210\265"
+  "\030\001\220\265\030\001\022(\n\003ied\030\004 \001(\0132\021.commonmodule.IEDB\010"
+  "\210\265\030\001\220\265\030\001:\004\300\363\030\001B\215\001\n\030openfmb.generationmod"
+  "uleP\001ZTgitlab.com/openfmb/psm/ops/protob"
+  "uf/go-openfmb-ops-protobuf/openfmb/gener"
+  "ationmodule\252\002\030openfmb.generationmoduleb\006"
+  "proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_generationmodule_2fgenerationmodule_2eproto_deps[3] = {
-  &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
-  &::descriptor_table_google_2fprotobuf_2fwrappers_2eproto,
-  &::descriptor_table_uml_2eproto,
+::google::protobuf::internal::DescriptorTable descriptor_table_generationmodule_2fgenerationmodule_2eproto = {
+  false, InitDefaults_generationmodule_2fgenerationmodule_2eproto, 
+  descriptor_table_protodef_generationmodule_2fgenerationmodule_2eproto,
+  "generationmodule/generationmodule.proto", &assign_descriptors_table_generationmodule_2fgenerationmodule_2eproto, 4606,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_generationmodule_2fgenerationmodule_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_generationmodule_2fgenerationmodule_2eproto = {
-  false, false, 5656, descriptor_table_protodef_generationmodule_2fgenerationmodule_2eproto, "generationmodule/generationmodule.proto", 
-  &descriptor_table_generationmodule_2fgenerationmodule_2eproto_once, descriptor_table_generationmodule_2fgenerationmodule_2eproto_deps, 3, 22,
-  schemas, file_default_instances, TableStruct_generationmodule_2fgenerationmodule_2eproto::offsets,
-  file_level_metadata_generationmodule_2fgenerationmodule_2eproto, file_level_enum_descriptors_generationmodule_2fgenerationmodule_2eproto, file_level_service_descriptors_generationmodule_2fgenerationmodule_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
-descriptor_table_generationmodule_2fgenerationmodule_2eproto_metadata_getter(int index) {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_generationmodule_2fgenerationmodule_2eproto);
-  return descriptor_table_generationmodule_2fgenerationmodule_2eproto.file_level_metadata[index];
+
+void AddDescriptors_generationmodule_2fgenerationmodule_2eproto() {
+  static constexpr ::google::protobuf::internal::InitFunc deps[3] =
+  {
+    ::AddDescriptors_uml_2eproto,
+    ::AddDescriptors_google_2fprotobuf_2fwrappers_2eproto,
+    ::AddDescriptors_commonmodule_2fcommonmodule_2eproto,
+  };
+ ::google::protobuf::internal::AddDescriptors(&descriptor_table_generationmodule_2fgenerationmodule_2eproto, deps, 3);
 }
 
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_generationmodule_2fgenerationmodule_2eproto(&descriptor_table_generationmodule_2fgenerationmodule_2eproto);
+static bool dynamic_init_dummy_generationmodule_2fgenerationmodule_2eproto = []() { AddDescriptors_generationmodule_2fgenerationmodule_2eproto(); return true; }();
 namespace generationmodule {
 
 // ===================================================================
 
-class GenerationPoint::_Internal {
+void GenerationPoint::InitAsDefaultInstance() {
+  ::generationmodule::_GenerationPoint_default_instance_._instance.get_mutable()->blackstartenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::generationmodule::_GenerationPoint_default_instance_._instance.get_mutable()->frequencysetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::generationmodule::_GenerationPoint_default_instance_._instance.get_mutable()->pcthzdroop_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::generationmodule::_GenerationPoint_default_instance_._instance.get_mutable()->pctvdroop_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::generationmodule::_GenerationPoint_default_instance_._instance.get_mutable()->ramprates_ = const_cast< ::commonmodule::RampRate*>(
+      ::commonmodule::RampRate::internal_default_instance());
+  ::generationmodule::_GenerationPoint_default_instance_._instance.get_mutable()->reactivepwrsetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::generationmodule::_GenerationPoint_default_instance_._instance.get_mutable()->realpwrsetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::generationmodule::_GenerationPoint_default_instance_._instance.get_mutable()->reset_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::generationmodule::_GenerationPoint_default_instance_._instance.get_mutable()->state_ = const_cast< ::commonmodule::Optional_StateKind*>(
+      ::commonmodule::Optional_StateKind::internal_default_instance());
+  ::generationmodule::_GenerationPoint_default_instance_._instance.get_mutable()->syncbacktogrid_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::generationmodule::_GenerationPoint_default_instance_._instance.get_mutable()->transtoislndongridlossenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::generationmodule::_GenerationPoint_default_instance_._instance.get_mutable()->voltagesetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::generationmodule::_GenerationPoint_default_instance_._instance.get_mutable()->starttime_ = const_cast< ::commonmodule::ControlTimestamp*>(
+      ::commonmodule::ControlTimestamp::internal_default_instance());
+}
+class GenerationPoint::HasBitSetters {
  public:
-  static const ::commonmodule::ControlSPC& blackstartenabled(const GenerationPoint* msg);
-  static const ::commonmodule::ControlSPC& frequencysetpointenabled(const GenerationPoint* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pcthzdroop(const GenerationPoint* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pctvdroop(const GenerationPoint* msg);
+  static const ::commonmodule::ControlDPC& blackstartenabled(const GenerationPoint* msg);
+  static const ::commonmodule::ControlDPC& frequencysetpointenabled(const GenerationPoint* msg);
+  static const ::google::protobuf::FloatValue& pcthzdroop(const GenerationPoint* msg);
+  static const ::google::protobuf::FloatValue& pctvdroop(const GenerationPoint* msg);
   static const ::commonmodule::RampRate& ramprates(const GenerationPoint* msg);
-  static const ::commonmodule::ControlSPC& reactivepwrsetpointenabled(const GenerationPoint* msg);
-  static const ::commonmodule::ControlSPC& realpwrsetpointenabled(const GenerationPoint* msg);
-  static const ::commonmodule::ControlSPC& reset(const GenerationPoint* msg);
+  static const ::commonmodule::ControlDPC& reactivepwrsetpointenabled(const GenerationPoint* msg);
+  static const ::commonmodule::ControlDPC& realpwrsetpointenabled(const GenerationPoint* msg);
+  static const ::commonmodule::ControlDPC& reset(const GenerationPoint* msg);
   static const ::commonmodule::Optional_StateKind& state(const GenerationPoint* msg);
-  static const ::commonmodule::ControlSPC& syncbacktogrid(const GenerationPoint* msg);
-  static const ::commonmodule::ControlSPC& transtoislndongridlossenabled(const GenerationPoint* msg);
-  static const ::commonmodule::ControlSPC& voltagesetpointenabled(const GenerationPoint* msg);
+  static const ::commonmodule::ControlDPC& syncbacktogrid(const GenerationPoint* msg);
+  static const ::commonmodule::ControlDPC& transtoislndongridlossenabled(const GenerationPoint* msg);
+  static const ::commonmodule::ControlDPC& voltagesetpointenabled(const GenerationPoint* msg);
   static const ::commonmodule::ControlTimestamp& starttime(const GenerationPoint* msg);
 };
 
-const ::commonmodule::ControlSPC&
-GenerationPoint::_Internal::blackstartenabled(const GenerationPoint* msg) {
+const ::commonmodule::ControlDPC&
+GenerationPoint::HasBitSetters::blackstartenabled(const GenerationPoint* msg) {
   return *msg->blackstartenabled_;
 }
-const ::commonmodule::ControlSPC&
-GenerationPoint::_Internal::frequencysetpointenabled(const GenerationPoint* msg) {
+const ::commonmodule::ControlDPC&
+GenerationPoint::HasBitSetters::frequencysetpointenabled(const GenerationPoint* msg) {
   return *msg->frequencysetpointenabled_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-GenerationPoint::_Internal::pcthzdroop(const GenerationPoint* msg) {
+const ::google::protobuf::FloatValue&
+GenerationPoint::HasBitSetters::pcthzdroop(const GenerationPoint* msg) {
   return *msg->pcthzdroop_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-GenerationPoint::_Internal::pctvdroop(const GenerationPoint* msg) {
+const ::google::protobuf::FloatValue&
+GenerationPoint::HasBitSetters::pctvdroop(const GenerationPoint* msg) {
   return *msg->pctvdroop_;
 }
 const ::commonmodule::RampRate&
-GenerationPoint::_Internal::ramprates(const GenerationPoint* msg) {
+GenerationPoint::HasBitSetters::ramprates(const GenerationPoint* msg) {
   return *msg->ramprates_;
 }
-const ::commonmodule::ControlSPC&
-GenerationPoint::_Internal::reactivepwrsetpointenabled(const GenerationPoint* msg) {
+const ::commonmodule::ControlDPC&
+GenerationPoint::HasBitSetters::reactivepwrsetpointenabled(const GenerationPoint* msg) {
   return *msg->reactivepwrsetpointenabled_;
 }
-const ::commonmodule::ControlSPC&
-GenerationPoint::_Internal::realpwrsetpointenabled(const GenerationPoint* msg) {
+const ::commonmodule::ControlDPC&
+GenerationPoint::HasBitSetters::realpwrsetpointenabled(const GenerationPoint* msg) {
   return *msg->realpwrsetpointenabled_;
 }
-const ::commonmodule::ControlSPC&
-GenerationPoint::_Internal::reset(const GenerationPoint* msg) {
+const ::commonmodule::ControlDPC&
+GenerationPoint::HasBitSetters::reset(const GenerationPoint* msg) {
   return *msg->reset_;
 }
 const ::commonmodule::Optional_StateKind&
-GenerationPoint::_Internal::state(const GenerationPoint* msg) {
+GenerationPoint::HasBitSetters::state(const GenerationPoint* msg) {
   return *msg->state_;
 }
-const ::commonmodule::ControlSPC&
-GenerationPoint::_Internal::syncbacktogrid(const GenerationPoint* msg) {
+const ::commonmodule::ControlDPC&
+GenerationPoint::HasBitSetters::syncbacktogrid(const GenerationPoint* msg) {
   return *msg->syncbacktogrid_;
 }
-const ::commonmodule::ControlSPC&
-GenerationPoint::_Internal::transtoislndongridlossenabled(const GenerationPoint* msg) {
+const ::commonmodule::ControlDPC&
+GenerationPoint::HasBitSetters::transtoislndongridlossenabled(const GenerationPoint* msg) {
   return *msg->transtoislndongridlossenabled_;
 }
-const ::commonmodule::ControlSPC&
-GenerationPoint::_Internal::voltagesetpointenabled(const GenerationPoint* msg) {
+const ::commonmodule::ControlDPC&
+GenerationPoint::HasBitSetters::voltagesetpointenabled(const GenerationPoint* msg) {
   return *msg->voltagesetpointenabled_;
 }
 const ::commonmodule::ControlTimestamp&
-GenerationPoint::_Internal::starttime(const GenerationPoint* msg) {
+GenerationPoint::HasBitSetters::starttime(const GenerationPoint* msg) {
   return *msg->starttime_;
 }
 void GenerationPoint::clear_blackstartenabled() {
-  if (GetArena() == nullptr && blackstartenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && blackstartenabled_ != nullptr) {
     delete blackstartenabled_;
   }
   blackstartenabled_ = nullptr;
 }
 void GenerationPoint::clear_frequencysetpointenabled() {
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && frequencysetpointenabled_ != nullptr) {
     delete frequencysetpointenabled_;
   }
   frequencysetpointenabled_ = nullptr;
 }
 void GenerationPoint::clear_pcthzdroop() {
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pcthzdroop_ != nullptr) {
     delete pcthzdroop_;
   }
   pcthzdroop_ = nullptr;
 }
 void GenerationPoint::clear_pctvdroop() {
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pctvdroop_ != nullptr) {
     delete pctvdroop_;
   }
   pctvdroop_ = nullptr;
 }
 void GenerationPoint::clear_ramprates() {
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && ramprates_ != nullptr) {
     delete ramprates_;
   }
   ramprates_ = nullptr;
 }
 void GenerationPoint::clear_reactivepwrsetpointenabled() {
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
     delete reactivepwrsetpointenabled_;
   }
   reactivepwrsetpointenabled_ = nullptr;
 }
 void GenerationPoint::clear_realpwrsetpointenabled() {
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && realpwrsetpointenabled_ != nullptr) {
     delete realpwrsetpointenabled_;
   }
   realpwrsetpointenabled_ = nullptr;
 }
 void GenerationPoint::clear_reset() {
-  if (GetArena() == nullptr && reset_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && reset_ != nullptr) {
     delete reset_;
   }
   reset_ = nullptr;
 }
 void GenerationPoint::clear_state() {
-  if (GetArena() == nullptr && state_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && state_ != nullptr) {
     delete state_;
   }
   state_ = nullptr;
 }
 void GenerationPoint::clear_syncbacktogrid() {
-  if (GetArena() == nullptr && syncbacktogrid_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && syncbacktogrid_ != nullptr) {
     delete syncbacktogrid_;
   }
   syncbacktogrid_ = nullptr;
 }
 void GenerationPoint::clear_transtoislndongridlossenabled() {
-  if (GetArena() == nullptr && transtoislndongridlossenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && transtoislndongridlossenabled_ != nullptr) {
     delete transtoislndongridlossenabled_;
   }
   transtoislndongridlossenabled_ = nullptr;
 }
 void GenerationPoint::clear_voltagesetpointenabled() {
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagesetpointenabled_ != nullptr) {
     delete voltagesetpointenabled_;
   }
   voltagesetpointenabled_ = nullptr;
 }
 void GenerationPoint::clear_starttime() {
-  if (GetArena() == nullptr && starttime_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && starttime_ != nullptr) {
     delete starttime_;
   }
   starttime_ = nullptr;
 }
-GenerationPoint::GenerationPoint(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int GenerationPoint::kBlackStartEnabledFieldNumber;
+const int GenerationPoint::kFrequencySetPointEnabledFieldNumber;
+const int GenerationPoint::kPctHzDroopFieldNumber;
+const int GenerationPoint::kPctVDroopFieldNumber;
+const int GenerationPoint::kRampRatesFieldNumber;
+const int GenerationPoint::kReactivePwrSetPointEnabledFieldNumber;
+const int GenerationPoint::kRealPwrSetPointEnabledFieldNumber;
+const int GenerationPoint::kResetFieldNumber;
+const int GenerationPoint::kStateFieldNumber;
+const int GenerationPoint::kSyncBackToGridFieldNumber;
+const int GenerationPoint::kTransToIslndOnGridLossEnabledFieldNumber;
+const int GenerationPoint::kVoltageSetPointEnabledFieldNumber;
+const int GenerationPoint::kStartTimeFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+GenerationPoint::GenerationPoint()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.GenerationPoint)
+  // @@protoc_insertion_point(constructor:generationmodule.GenerationPoint)
 }
 GenerationPoint::GenerationPoint(const GenerationPoint& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_blackstartenabled()) {
-    blackstartenabled_ = new ::commonmodule::ControlSPC(*from.blackstartenabled_);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_blackstartenabled()) {
+    blackstartenabled_ = new ::commonmodule::ControlDPC(*from.blackstartenabled_);
   } else {
     blackstartenabled_ = nullptr;
   }
-  if (from._internal_has_frequencysetpointenabled()) {
-    frequencysetpointenabled_ = new ::commonmodule::ControlSPC(*from.frequencysetpointenabled_);
+  if (from.has_frequencysetpointenabled()) {
+    frequencysetpointenabled_ = new ::commonmodule::ControlDPC(*from.frequencysetpointenabled_);
   } else {
     frequencysetpointenabled_ = nullptr;
   }
-  if (from._internal_has_pcthzdroop()) {
-    pcthzdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pcthzdroop_);
+  if (from.has_pcthzdroop()) {
+    pcthzdroop_ = new ::google::protobuf::FloatValue(*from.pcthzdroop_);
   } else {
     pcthzdroop_ = nullptr;
   }
-  if (from._internal_has_pctvdroop()) {
-    pctvdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pctvdroop_);
+  if (from.has_pctvdroop()) {
+    pctvdroop_ = new ::google::protobuf::FloatValue(*from.pctvdroop_);
   } else {
     pctvdroop_ = nullptr;
   }
-  if (from._internal_has_ramprates()) {
+  if (from.has_ramprates()) {
     ramprates_ = new ::commonmodule::RampRate(*from.ramprates_);
   } else {
     ramprates_ = nullptr;
   }
-  if (from._internal_has_reactivepwrsetpointenabled()) {
-    reactivepwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from.reactivepwrsetpointenabled_);
+  if (from.has_reactivepwrsetpointenabled()) {
+    reactivepwrsetpointenabled_ = new ::commonmodule::ControlDPC(*from.reactivepwrsetpointenabled_);
   } else {
     reactivepwrsetpointenabled_ = nullptr;
   }
-  if (from._internal_has_realpwrsetpointenabled()) {
-    realpwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from.realpwrsetpointenabled_);
+  if (from.has_realpwrsetpointenabled()) {
+    realpwrsetpointenabled_ = new ::commonmodule::ControlDPC(*from.realpwrsetpointenabled_);
   } else {
     realpwrsetpointenabled_ = nullptr;
   }
-  if (from._internal_has_reset()) {
-    reset_ = new ::commonmodule::ControlSPC(*from.reset_);
+  if (from.has_reset()) {
+    reset_ = new ::commonmodule::ControlDPC(*from.reset_);
   } else {
     reset_ = nullptr;
   }
-  if (from._internal_has_state()) {
+  if (from.has_state()) {
     state_ = new ::commonmodule::Optional_StateKind(*from.state_);
   } else {
     state_ = nullptr;
   }
-  if (from._internal_has_syncbacktogrid()) {
-    syncbacktogrid_ = new ::commonmodule::ControlSPC(*from.syncbacktogrid_);
+  if (from.has_syncbacktogrid()) {
+    syncbacktogrid_ = new ::commonmodule::ControlDPC(*from.syncbacktogrid_);
   } else {
     syncbacktogrid_ = nullptr;
   }
-  if (from._internal_has_transtoislndongridlossenabled()) {
-    transtoislndongridlossenabled_ = new ::commonmodule::ControlSPC(*from.transtoislndongridlossenabled_);
+  if (from.has_transtoislndongridlossenabled()) {
+    transtoislndongridlossenabled_ = new ::commonmodule::ControlDPC(*from.transtoislndongridlossenabled_);
   } else {
     transtoislndongridlossenabled_ = nullptr;
   }
-  if (from._internal_has_voltagesetpointenabled()) {
-    voltagesetpointenabled_ = new ::commonmodule::ControlSPC(*from.voltagesetpointenabled_);
+  if (from.has_voltagesetpointenabled()) {
+    voltagesetpointenabled_ = new ::commonmodule::ControlDPC(*from.voltagesetpointenabled_);
   } else {
     voltagesetpointenabled_ = nullptr;
   }
-  if (from._internal_has_starttime()) {
+  if (from.has_starttime()) {
     starttime_ = new ::commonmodule::ControlTimestamp(*from.starttime_);
   } else {
     starttime_ = nullptr;
@@ -977,20 +1040,19 @@ GenerationPoint::GenerationPoint(const GenerationPoint& from)
 }
 
 void GenerationPoint::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&blackstartenabled_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&starttime_) -
-    reinterpret_cast<char*>(&blackstartenabled_)) + sizeof(starttime_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GenerationPoint_generationmodule_2fgenerationmodule_2eproto.base);
+  ::memset(&blackstartenabled_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&starttime_) -
+      reinterpret_cast<char*>(&blackstartenabled_)) + sizeof(starttime_));
 }
 
 GenerationPoint::~GenerationPoint() {
   // @@protoc_insertion_point(destructor:generationmodule.GenerationPoint)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void GenerationPoint::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete blackstartenabled_;
   if (this != internal_default_instance()) delete frequencysetpointenabled_;
   if (this != internal_default_instance()) delete pcthzdroop_;
@@ -1006,310 +1068,643 @@ void GenerationPoint::SharedDtor() {
   if (this != internal_default_instance()) delete starttime_;
 }
 
-void GenerationPoint::ArenaDtor(void* object) {
-  GenerationPoint* _this = reinterpret_cast< GenerationPoint* >(object);
-  (void)_this;
-}
-void GenerationPoint::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void GenerationPoint::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GenerationPoint& GenerationPoint::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_GenerationPoint_generationmodule_2fgenerationmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GenerationPoint::Clear() {
 // @@protoc_insertion_point(message_clear_start:generationmodule.GenerationPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && blackstartenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && blackstartenabled_ != nullptr) {
     delete blackstartenabled_;
   }
   blackstartenabled_ = nullptr;
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && frequencysetpointenabled_ != nullptr) {
     delete frequencysetpointenabled_;
   }
   frequencysetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pcthzdroop_ != nullptr) {
     delete pcthzdroop_;
   }
   pcthzdroop_ = nullptr;
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pctvdroop_ != nullptr) {
     delete pctvdroop_;
   }
   pctvdroop_ = nullptr;
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && ramprates_ != nullptr) {
     delete ramprates_;
   }
   ramprates_ = nullptr;
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
     delete reactivepwrsetpointenabled_;
   }
   reactivepwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && realpwrsetpointenabled_ != nullptr) {
     delete realpwrsetpointenabled_;
   }
   realpwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && reset_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && reset_ != nullptr) {
     delete reset_;
   }
   reset_ = nullptr;
-  if (GetArena() == nullptr && state_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && state_ != nullptr) {
     delete state_;
   }
   state_ = nullptr;
-  if (GetArena() == nullptr && syncbacktogrid_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && syncbacktogrid_ != nullptr) {
     delete syncbacktogrid_;
   }
   syncbacktogrid_ = nullptr;
-  if (GetArena() == nullptr && transtoislndongridlossenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && transtoislndongridlossenabled_ != nullptr) {
     delete transtoislndongridlossenabled_;
   }
   transtoislndongridlossenabled_ = nullptr;
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagesetpointenabled_ != nullptr) {
     delete voltagesetpointenabled_;
   }
   voltagesetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && starttime_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && starttime_ != nullptr) {
     delete starttime_;
   }
   starttime_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* GenerationPoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GenerationPoint::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GenerationPoint*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
-      // .commonmodule.ControlSPC blackStartEnabled = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_blackstartenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC frequencySetPointEnabled = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_frequencysetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      // .commonmodule.ControlDPC blackStartEnabled = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_blackstartenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_frequencysetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue pctHzDroop = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_pcthzdroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_pcthzdroop();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue pctVDroop = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_pctvdroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_pctvdroop();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.RampRate rampRates = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_ramprates(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(_internal_mutable_reactivepwrsetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC realPwrSetPointEnabled = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ctx->ParseMessage(_internal_mutable_realpwrsetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC reset = 8;
-      case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          ptr = ctx->ParseMessage(_internal_mutable_reset(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::RampRate::_InternalParse;
+        object = msg->mutable_ramprates();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_reactivepwrsetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
+      case 7: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_realpwrsetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC reset = 8;
+      case 8: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 66) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_reset();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.Optional_StateKind state = 9;
-      case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
-          ptr = ctx->ParseMessage(_internal_mutable_state(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC syncBackToGrid = 10;
-      case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
-          ptr = ctx->ParseMessage(_internal_mutable_syncbacktogrid(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC transToIslndOnGridLossEnabled = 11;
-      case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
-          ptr = ctx->ParseMessage(_internal_mutable_transtoislndongridlossenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC voltageSetPointEnabled = 12;
-      case 12:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
-          ptr = ctx->ParseMessage(_internal_mutable_voltagesetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 9: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 74) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::Optional_StateKind::_InternalParse;
+        object = msg->mutable_state();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC syncBackToGrid = 10;
+      case 10: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 82) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_syncbacktogrid();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 11;
+      case 11: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 90) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_transtoislndongridlossenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC voltageSetPointEnabled = 12;
+      case 12: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 98) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_voltagesetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.ControlTimestamp startTime = 13 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 13:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
-          ptr = ctx->ParseMessage(_internal_mutable_starttime(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 13: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 106) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlTimestamp::_InternalParse;
+        object = msg->mutable_starttime();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GenerationPoint::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:generationmodule.GenerationPoint)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ControlDPC blackStartEnabled = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_blackstartenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GenerationPoint::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_frequencysetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue pctHzDroop = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_pcthzdroop()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue pctVDroop = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_pctvdroop()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.RampRate rampRates = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_ramprates()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_reactivepwrsetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (58 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_realpwrsetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC reset = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (66 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_reset()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.Optional_StateKind state = 9;
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (74 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_state()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC syncBackToGrid = 10;
+      case 10: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (82 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_syncbacktogrid()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 11;
+      case 11: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (90 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_transtoislndongridlossenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC voltageSetPointEnabled = 12;
+      case 12: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (98 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_voltagesetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlTimestamp startTime = 13 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 13: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (106 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_starttime()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:generationmodule.GenerationPoint)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:generationmodule.GenerationPoint)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GenerationPoint::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:generationmodule.GenerationPoint)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .commonmodule.ControlSPC blackStartEnabled = 1;
+  // .commonmodule.ControlDPC blackStartEnabled = 1;
   if (this->has_blackstartenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::blackstartenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::blackstartenabled(this), output);
   }
 
-  // .commonmodule.ControlSPC frequencySetPointEnabled = 2;
+  // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
   if (this->has_frequencysetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::frequencysetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::frequencysetpointenabled(this), output);
   }
 
   // .google.protobuf.FloatValue pctHzDroop = 3;
   if (this->has_pcthzdroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::pcthzdroop(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::pcthzdroop(this), output);
   }
 
   // .google.protobuf.FloatValue pctVDroop = 4;
   if (this->has_pctvdroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::pctvdroop(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::pctvdroop(this), output);
   }
 
   // .commonmodule.RampRate rampRates = 5;
   if (this->has_ramprates()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::ramprates(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, HasBitSetters::ramprates(this), output);
   }
 
-  // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 6;
+  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
   if (this->has_reactivepwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::reactivepwrsetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, HasBitSetters::reactivepwrsetpointenabled(this), output);
   }
 
-  // .commonmodule.ControlSPC realPwrSetPointEnabled = 7;
+  // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
   if (this->has_realpwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::realpwrsetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      7, HasBitSetters::realpwrsetpointenabled(this), output);
   }
 
-  // .commonmodule.ControlSPC reset = 8;
+  // .commonmodule.ControlDPC reset = 8;
   if (this->has_reset()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::reset(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      8, HasBitSetters::reset(this), output);
   }
 
   // .commonmodule.Optional_StateKind state = 9;
   if (this->has_state()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        9, _Internal::state(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      9, HasBitSetters::state(this), output);
   }
 
-  // .commonmodule.ControlSPC syncBackToGrid = 10;
+  // .commonmodule.ControlDPC syncBackToGrid = 10;
   if (this->has_syncbacktogrid()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        10, _Internal::syncbacktogrid(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      10, HasBitSetters::syncbacktogrid(this), output);
   }
 
-  // .commonmodule.ControlSPC transToIslndOnGridLossEnabled = 11;
+  // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 11;
   if (this->has_transtoislndongridlossenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        11, _Internal::transtoislndongridlossenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      11, HasBitSetters::transtoislndongridlossenabled(this), output);
   }
 
-  // .commonmodule.ControlSPC voltageSetPointEnabled = 12;
+  // .commonmodule.ControlDPC voltageSetPointEnabled = 12;
   if (this->has_voltagesetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        12, _Internal::voltagesetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      12, HasBitSetters::voltagesetpointenabled(this), output);
   }
 
   // .commonmodule.ControlTimestamp startTime = 13 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_starttime()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        13, _Internal::starttime(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      13, HasBitSetters::starttime(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:generationmodule.GenerationPoint)
+}
+
+::google::protobuf::uint8* GenerationPoint::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationPoint)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlDPC blackStartEnabled = 1;
+  if (this->has_blackstartenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::blackstartenabled(this), target);
+  }
+
+  // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
+  if (this->has_frequencysetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::frequencysetpointenabled(this), target);
+  }
+
+  // .google.protobuf.FloatValue pctHzDroop = 3;
+  if (this->has_pcthzdroop()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::pcthzdroop(this), target);
+  }
+
+  // .google.protobuf.FloatValue pctVDroop = 4;
+  if (this->has_pctvdroop()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::pctvdroop(this), target);
+  }
+
+  // .commonmodule.RampRate rampRates = 5;
+  if (this->has_ramprates()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, HasBitSetters::ramprates(this), target);
+  }
+
+  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
+  if (this->has_reactivepwrsetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        6, HasBitSetters::reactivepwrsetpointenabled(this), target);
+  }
+
+  // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
+  if (this->has_realpwrsetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        7, HasBitSetters::realpwrsetpointenabled(this), target);
+  }
+
+  // .commonmodule.ControlDPC reset = 8;
+  if (this->has_reset()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        8, HasBitSetters::reset(this), target);
+  }
+
+  // .commonmodule.Optional_StateKind state = 9;
+  if (this->has_state()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        9, HasBitSetters::state(this), target);
+  }
+
+  // .commonmodule.ControlDPC syncBackToGrid = 10;
+  if (this->has_syncbacktogrid()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        10, HasBitSetters::syncbacktogrid(this), target);
+  }
+
+  // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 11;
+  if (this->has_transtoislndongridlossenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        11, HasBitSetters::transtoislndongridlossenabled(this), target);
+  }
+
+  // .commonmodule.ControlDPC voltageSetPointEnabled = 12;
+  if (this->has_voltagesetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        12, HasBitSetters::voltagesetpointenabled(this), target);
+  }
+
+  // .commonmodule.ControlTimestamp startTime = 13 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_starttime()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        13, HasBitSetters::starttime(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:generationmodule.GenerationPoint)
   return target;
@@ -1319,119 +1714,120 @@ size_t GenerationPoint::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:generationmodule.GenerationPoint)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .commonmodule.ControlSPC blackStartEnabled = 1;
+  // .commonmodule.ControlDPC blackStartEnabled = 1;
   if (this->has_blackstartenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *blackstartenabled_);
   }
 
-  // .commonmodule.ControlSPC frequencySetPointEnabled = 2;
+  // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
   if (this->has_frequencysetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *frequencysetpointenabled_);
   }
 
   // .google.protobuf.FloatValue pctHzDroop = 3;
   if (this->has_pcthzdroop()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *pcthzdroop_);
   }
 
   // .google.protobuf.FloatValue pctVDroop = 4;
   if (this->has_pctvdroop()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *pctvdroop_);
   }
 
   // .commonmodule.RampRate rampRates = 5;
   if (this->has_ramprates()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *ramprates_);
   }
 
-  // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 6;
+  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
   if (this->has_reactivepwrsetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *reactivepwrsetpointenabled_);
   }
 
-  // .commonmodule.ControlSPC realPwrSetPointEnabled = 7;
+  // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
   if (this->has_realpwrsetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *realpwrsetpointenabled_);
   }
 
-  // .commonmodule.ControlSPC reset = 8;
+  // .commonmodule.ControlDPC reset = 8;
   if (this->has_reset()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *reset_);
   }
 
   // .commonmodule.Optional_StateKind state = 9;
   if (this->has_state()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *state_);
   }
 
-  // .commonmodule.ControlSPC syncBackToGrid = 10;
+  // .commonmodule.ControlDPC syncBackToGrid = 10;
   if (this->has_syncbacktogrid()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *syncbacktogrid_);
   }
 
-  // .commonmodule.ControlSPC transToIslndOnGridLossEnabled = 11;
+  // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 11;
   if (this->has_transtoislndongridlossenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *transtoislndongridlossenabled_);
   }
 
-  // .commonmodule.ControlSPC voltageSetPointEnabled = 12;
+  // .commonmodule.ControlDPC voltageSetPointEnabled = 12;
   if (this->has_voltagesetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *voltagesetpointenabled_);
   }
 
   // .commonmodule.ControlTimestamp startTime = 13 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_starttime()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *starttime_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void GenerationPoint::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationPoint::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:generationmodule.GenerationPoint)
   GOOGLE_DCHECK_NE(&from, this);
   const GenerationPoint* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GenerationPoint>(
+      ::google::protobuf::DynamicCastToGenerated<GenerationPoint>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.GenerationPoint)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.GenerationPoint)
     MergeFrom(*source);
@@ -1441,52 +1837,52 @@ void GenerationPoint::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void GenerationPoint::MergeFrom(const GenerationPoint& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.GenerationPoint)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_blackstartenabled()) {
-    _internal_mutable_blackstartenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_blackstartenabled());
+    mutable_blackstartenabled()->::commonmodule::ControlDPC::MergeFrom(from.blackstartenabled());
   }
   if (from.has_frequencysetpointenabled()) {
-    _internal_mutable_frequencysetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_frequencysetpointenabled());
+    mutable_frequencysetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.frequencysetpointenabled());
   }
   if (from.has_pcthzdroop()) {
-    _internal_mutable_pcthzdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pcthzdroop());
+    mutable_pcthzdroop()->::google::protobuf::FloatValue::MergeFrom(from.pcthzdroop());
   }
   if (from.has_pctvdroop()) {
-    _internal_mutable_pctvdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pctvdroop());
+    mutable_pctvdroop()->::google::protobuf::FloatValue::MergeFrom(from.pctvdroop());
   }
   if (from.has_ramprates()) {
-    _internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from._internal_ramprates());
+    mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from.ramprates());
   }
   if (from.has_reactivepwrsetpointenabled()) {
-    _internal_mutable_reactivepwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_reactivepwrsetpointenabled());
+    mutable_reactivepwrsetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.reactivepwrsetpointenabled());
   }
   if (from.has_realpwrsetpointenabled()) {
-    _internal_mutable_realpwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_realpwrsetpointenabled());
+    mutable_realpwrsetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.realpwrsetpointenabled());
   }
   if (from.has_reset()) {
-    _internal_mutable_reset()->::commonmodule::ControlSPC::MergeFrom(from._internal_reset());
+    mutable_reset()->::commonmodule::ControlDPC::MergeFrom(from.reset());
   }
   if (from.has_state()) {
-    _internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from._internal_state());
+    mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from.state());
   }
   if (from.has_syncbacktogrid()) {
-    _internal_mutable_syncbacktogrid()->::commonmodule::ControlSPC::MergeFrom(from._internal_syncbacktogrid());
+    mutable_syncbacktogrid()->::commonmodule::ControlDPC::MergeFrom(from.syncbacktogrid());
   }
   if (from.has_transtoislndongridlossenabled()) {
-    _internal_mutable_transtoislndongridlossenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_transtoislndongridlossenabled());
+    mutable_transtoislndongridlossenabled()->::commonmodule::ControlDPC::MergeFrom(from.transtoislndongridlossenabled());
   }
   if (from.has_voltagesetpointenabled()) {
-    _internal_mutable_voltagesetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_voltagesetpointenabled());
+    mutable_voltagesetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.voltagesetpointenabled());
   }
   if (from.has_starttime()) {
-    _internal_mutable_starttime()->::commonmodule::ControlTimestamp::MergeFrom(from._internal_starttime());
+    mutable_starttime()->::commonmodule::ControlTimestamp::MergeFrom(from.starttime());
   }
 }
 
-void GenerationPoint::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationPoint::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:generationmodule.GenerationPoint)
   if (&from == this) return;
   Clear();
@@ -1504,133 +1900,221 @@ bool GenerationPoint::IsInitialized() const {
   return true;
 }
 
+void GenerationPoint::Swap(GenerationPoint* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void GenerationPoint::InternalSwap(GenerationPoint* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GenerationPoint, starttime_)
-      + sizeof(GenerationPoint::starttime_)
-      - PROTOBUF_FIELD_OFFSET(GenerationPoint, blackstartenabled_)>(
-          reinterpret_cast<char*>(&blackstartenabled_),
-          reinterpret_cast<char*>(&other->blackstartenabled_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(blackstartenabled_, other->blackstartenabled_);
+  swap(frequencysetpointenabled_, other->frequencysetpointenabled_);
+  swap(pcthzdroop_, other->pcthzdroop_);
+  swap(pctvdroop_, other->pctvdroop_);
+  swap(ramprates_, other->ramprates_);
+  swap(reactivepwrsetpointenabled_, other->reactivepwrsetpointenabled_);
+  swap(realpwrsetpointenabled_, other->realpwrsetpointenabled_);
+  swap(reset_, other->reset_);
+  swap(state_, other->state_);
+  swap(syncbacktogrid_, other->syncbacktogrid_);
+  swap(transtoislndongridlossenabled_, other->transtoislndongridlossenabled_);
+  swap(voltagesetpointenabled_, other->voltagesetpointenabled_);
+  swap(starttime_, other->starttime_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GenerationPoint::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata GenerationPoint::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_generationmodule_2fgenerationmodule_2eproto);
+  return ::file_level_metadata_generationmodule_2fgenerationmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class GenerationCSG::_Internal {
+void GenerationCSG::InitAsDefaultInstance() {
+}
+class GenerationCSG::HasBitSetters {
  public:
 };
 
-GenerationCSG::GenerationCSG(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  crvpts_(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int GenerationCSG::kCrvPtsFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+GenerationCSG::GenerationCSG()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.GenerationCSG)
+  // @@protoc_insertion_point(constructor:generationmodule.GenerationCSG)
 }
 GenerationCSG::GenerationCSG(const GenerationCSG& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr),
       crvpts_(from.crvpts_) {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:generationmodule.GenerationCSG)
 }
 
 void GenerationCSG::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GenerationCSG_generationmodule_2fgenerationmodule_2eproto.base);
 }
 
 GenerationCSG::~GenerationCSG() {
   // @@protoc_insertion_point(destructor:generationmodule.GenerationCSG)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void GenerationCSG::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
 }
 
-void GenerationCSG::ArenaDtor(void* object) {
-  GenerationCSG* _this = reinterpret_cast< GenerationCSG* >(object);
-  (void)_this;
-}
-void GenerationCSG::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void GenerationCSG::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GenerationCSG& GenerationCSG::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_GenerationCSG_generationmodule_2fgenerationmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GenerationCSG::Clear() {
 // @@protoc_insertion_point(message_clear_start:generationmodule.GenerationCSG)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   crvpts_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* GenerationCSG::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GenerationCSG::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GenerationCSG*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // repeated .generationmodule.GenerationPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_crvpts(), ptr);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::generationmodule::GenerationPoint::_InternalParse;
+          object = msg->add_crvpts();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 10 && (ptr += 1));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GenerationCSG::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:generationmodule.GenerationCSG)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .generationmodule.GenerationPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_crvpts()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GenerationCSG::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationCSG)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:generationmodule.GenerationCSG)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:generationmodule.GenerationCSG)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GenerationCSG::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:generationmodule.GenerationCSG)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .generationmodule.GenerationPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_crvpts_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_crvpts(i), target, stream);
+      n = static_cast<unsigned int>(this->crvpts_size()); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1,
+      this->crvpts(static_cast<int>(i)),
+      output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:generationmodule.GenerationCSG)
+}
+
+::google::protobuf::uint8* GenerationCSG::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationCSG)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .generationmodule.GenerationPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->crvpts_size()); i < n; i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, this->crvpts(static_cast<int>(i)), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:generationmodule.GenerationCSG)
   return target;
@@ -1640,35 +2124,40 @@ size_t GenerationCSG::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:generationmodule.GenerationCSG)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .generationmodule.GenerationPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  total_size += 1UL * this->_internal_crvpts_size();
-  for (const auto& msg : this->crvpts_) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  {
+    unsigned int count = static_cast<unsigned int>(this->crvpts_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          this->crvpts(static_cast<int>(i)));
+    }
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void GenerationCSG::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationCSG::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:generationmodule.GenerationCSG)
   GOOGLE_DCHECK_NE(&from, this);
   const GenerationCSG* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GenerationCSG>(
+      ::google::protobuf::DynamicCastToGenerated<GenerationCSG>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.GenerationCSG)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.GenerationCSG)
     MergeFrom(*source);
@@ -1678,14 +2167,14 @@ void GenerationCSG::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void GenerationCSG::MergeFrom(const GenerationCSG& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.GenerationCSG)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   crvpts_.MergeFrom(from.crvpts_);
 }
 
-void GenerationCSG::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationCSG::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:generationmodule.GenerationCSG)
   if (&from == this) return;
   Clear();
@@ -1703,38 +2192,51 @@ bool GenerationCSG::IsInitialized() const {
   return true;
 }
 
+void GenerationCSG::Swap(GenerationCSG* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void GenerationCSG::InternalSwap(GenerationCSG* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  crvpts_.InternalSwap(&other->crvpts_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  CastToBase(&crvpts_)->InternalSwap(CastToBase(&other->crvpts_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GenerationCSG::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata GenerationCSG::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_generationmodule_2fgenerationmodule_2eproto);
+  return ::file_level_metadata_generationmodule_2fgenerationmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class GenerationControlScheduleFSCH::_Internal {
+void GenerationControlScheduleFSCH::InitAsDefaultInstance() {
+  ::generationmodule::_GenerationControlScheduleFSCH_default_instance_._instance.get_mutable()->valdcsg_ = const_cast< ::generationmodule::GenerationCSG*>(
+      ::generationmodule::GenerationCSG::internal_default_instance());
+}
+class GenerationControlScheduleFSCH::HasBitSetters {
  public:
   static const ::generationmodule::GenerationCSG& valdcsg(const GenerationControlScheduleFSCH* msg);
 };
 
 const ::generationmodule::GenerationCSG&
-GenerationControlScheduleFSCH::_Internal::valdcsg(const GenerationControlScheduleFSCH* msg) {
+GenerationControlScheduleFSCH::HasBitSetters::valdcsg(const GenerationControlScheduleFSCH* msg) {
   return *msg->valdcsg_;
 }
-GenerationControlScheduleFSCH::GenerationControlScheduleFSCH(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int GenerationControlScheduleFSCH::kValDCSGFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+GenerationControlScheduleFSCH::GenerationControlScheduleFSCH()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.GenerationControlScheduleFSCH)
+  // @@protoc_insertion_point(constructor:generationmodule.GenerationControlScheduleFSCH)
 }
 GenerationControlScheduleFSCH::GenerationControlScheduleFSCH(const GenerationControlScheduleFSCH& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_valdcsg()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_valdcsg()) {
     valdcsg_ = new ::generationmodule::GenerationCSG(*from.valdcsg_);
   } else {
     valdcsg_ = nullptr;
@@ -1743,96 +2245,165 @@ GenerationControlScheduleFSCH::GenerationControlScheduleFSCH(const GenerationCon
 }
 
 void GenerationControlScheduleFSCH::SharedCtor() {
-valdcsg_ = nullptr;
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GenerationControlScheduleFSCH_generationmodule_2fgenerationmodule_2eproto.base);
+  valdcsg_ = nullptr;
 }
 
 GenerationControlScheduleFSCH::~GenerationControlScheduleFSCH() {
   // @@protoc_insertion_point(destructor:generationmodule.GenerationControlScheduleFSCH)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void GenerationControlScheduleFSCH::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete valdcsg_;
 }
 
-void GenerationControlScheduleFSCH::ArenaDtor(void* object) {
-  GenerationControlScheduleFSCH* _this = reinterpret_cast< GenerationControlScheduleFSCH* >(object);
-  (void)_this;
-}
-void GenerationControlScheduleFSCH::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void GenerationControlScheduleFSCH::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GenerationControlScheduleFSCH& GenerationControlScheduleFSCH::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_GenerationControlScheduleFSCH_generationmodule_2fgenerationmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GenerationControlScheduleFSCH::Clear() {
 // @@protoc_insertion_point(message_clear_start:generationmodule.GenerationControlScheduleFSCH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && valdcsg_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && valdcsg_ != nullptr) {
     delete valdcsg_;
   }
   valdcsg_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* GenerationControlScheduleFSCH::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GenerationControlScheduleFSCH::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GenerationControlScheduleFSCH*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .generationmodule.GenerationCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_valdcsg(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::generationmodule::GenerationCSG::_InternalParse;
+        object = msg->mutable_valdcsg();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GenerationControlScheduleFSCH::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:generationmodule.GenerationControlScheduleFSCH)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .generationmodule.GenerationCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_valdcsg()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GenerationControlScheduleFSCH::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationControlScheduleFSCH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:generationmodule.GenerationControlScheduleFSCH)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:generationmodule.GenerationControlScheduleFSCH)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GenerationControlScheduleFSCH::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:generationmodule.GenerationControlScheduleFSCH)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .generationmodule.GenerationCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_valdcsg()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::valdcsg(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::valdcsg(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:generationmodule.GenerationControlScheduleFSCH)
+}
+
+::google::protobuf::uint8* GenerationControlScheduleFSCH::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationControlScheduleFSCH)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .generationmodule.GenerationCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_valdcsg()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::valdcsg(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:generationmodule.GenerationControlScheduleFSCH)
   return target;
@@ -1842,35 +2413,36 @@ size_t GenerationControlScheduleFSCH::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:generationmodule.GenerationControlScheduleFSCH)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .generationmodule.GenerationCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_valdcsg()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *valdcsg_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void GenerationControlScheduleFSCH::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationControlScheduleFSCH::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:generationmodule.GenerationControlScheduleFSCH)
   GOOGLE_DCHECK_NE(&from, this);
   const GenerationControlScheduleFSCH* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GenerationControlScheduleFSCH>(
+      ::google::protobuf::DynamicCastToGenerated<GenerationControlScheduleFSCH>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.GenerationControlScheduleFSCH)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.GenerationControlScheduleFSCH)
     MergeFrom(*source);
@@ -1880,16 +2452,16 @@ void GenerationControlScheduleFSCH::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Mes
 void GenerationControlScheduleFSCH::MergeFrom(const GenerationControlScheduleFSCH& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.GenerationControlScheduleFSCH)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_valdcsg()) {
-    _internal_mutable_valdcsg()->::generationmodule::GenerationCSG::MergeFrom(from._internal_valdcsg());
+    mutable_valdcsg()->::generationmodule::GenerationCSG::MergeFrom(from.valdcsg());
   }
 }
 
-void GenerationControlScheduleFSCH::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationControlScheduleFSCH::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:generationmodule.GenerationControlScheduleFSCH)
   if (&from == this) return;
   Clear();
@@ -1907,54 +2479,70 @@ bool GenerationControlScheduleFSCH::IsInitialized() const {
   return true;
 }
 
+void GenerationControlScheduleFSCH::Swap(GenerationControlScheduleFSCH* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void GenerationControlScheduleFSCH::InternalSwap(GenerationControlScheduleFSCH* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(valdcsg_, other->valdcsg_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GenerationControlScheduleFSCH::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata GenerationControlScheduleFSCH::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_generationmodule_2fgenerationmodule_2eproto);
+  return ::file_level_metadata_generationmodule_2fgenerationmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class GenerationControlFSCC::_Internal {
+void GenerationControlFSCC::InitAsDefaultInstance() {
+  ::generationmodule::_GenerationControlFSCC_default_instance_._instance.get_mutable()->controlfscc_ = const_cast< ::commonmodule::ControlFSCC*>(
+      ::commonmodule::ControlFSCC::internal_default_instance());
+  ::generationmodule::_GenerationControlFSCC_default_instance_._instance.get_mutable()->generationcontrolschedulefsch_ = const_cast< ::generationmodule::GenerationControlScheduleFSCH*>(
+      ::generationmodule::GenerationControlScheduleFSCH::internal_default_instance());
+}
+class GenerationControlFSCC::HasBitSetters {
  public:
   static const ::commonmodule::ControlFSCC& controlfscc(const GenerationControlFSCC* msg);
   static const ::generationmodule::GenerationControlScheduleFSCH& generationcontrolschedulefsch(const GenerationControlFSCC* msg);
 };
 
 const ::commonmodule::ControlFSCC&
-GenerationControlFSCC::_Internal::controlfscc(const GenerationControlFSCC* msg) {
+GenerationControlFSCC::HasBitSetters::controlfscc(const GenerationControlFSCC* msg) {
   return *msg->controlfscc_;
 }
 const ::generationmodule::GenerationControlScheduleFSCH&
-GenerationControlFSCC::_Internal::generationcontrolschedulefsch(const GenerationControlFSCC* msg) {
+GenerationControlFSCC::HasBitSetters::generationcontrolschedulefsch(const GenerationControlFSCC* msg) {
   return *msg->generationcontrolschedulefsch_;
 }
 void GenerationControlFSCC::clear_controlfscc() {
-  if (GetArena() == nullptr && controlfscc_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && controlfscc_ != nullptr) {
     delete controlfscc_;
   }
   controlfscc_ = nullptr;
 }
-GenerationControlFSCC::GenerationControlFSCC(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int GenerationControlFSCC::kControlFSCCFieldNumber;
+const int GenerationControlFSCC::kGenerationControlScheduleFSCHFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+GenerationControlFSCC::GenerationControlFSCC()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.GenerationControlFSCC)
+  // @@protoc_insertion_point(constructor:generationmodule.GenerationControlFSCC)
 }
 GenerationControlFSCC::GenerationControlFSCC(const GenerationControlFSCC& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_controlfscc()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_controlfscc()) {
     controlfscc_ = new ::commonmodule::ControlFSCC(*from.controlfscc_);
   } else {
     controlfscc_ = nullptr;
   }
-  if (from._internal_has_generationcontrolschedulefsch()) {
+  if (from.has_generationcontrolschedulefsch()) {
     generationcontrolschedulefsch_ = new ::generationmodule::GenerationControlScheduleFSCH(*from.generationcontrolschedulefsch_);
   } else {
     generationcontrolschedulefsch_ = nullptr;
@@ -1963,119 +2551,209 @@ GenerationControlFSCC::GenerationControlFSCC(const GenerationControlFSCC& from)
 }
 
 void GenerationControlFSCC::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlfscc_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&generationcontrolschedulefsch_) -
-    reinterpret_cast<char*>(&controlfscc_)) + sizeof(generationcontrolschedulefsch_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GenerationControlFSCC_generationmodule_2fgenerationmodule_2eproto.base);
+  ::memset(&controlfscc_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&generationcontrolschedulefsch_) -
+      reinterpret_cast<char*>(&controlfscc_)) + sizeof(generationcontrolschedulefsch_));
 }
 
 GenerationControlFSCC::~GenerationControlFSCC() {
   // @@protoc_insertion_point(destructor:generationmodule.GenerationControlFSCC)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void GenerationControlFSCC::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete controlfscc_;
   if (this != internal_default_instance()) delete generationcontrolschedulefsch_;
 }
 
-void GenerationControlFSCC::ArenaDtor(void* object) {
-  GenerationControlFSCC* _this = reinterpret_cast< GenerationControlFSCC* >(object);
-  (void)_this;
-}
-void GenerationControlFSCC::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void GenerationControlFSCC::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GenerationControlFSCC& GenerationControlFSCC::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_GenerationControlFSCC_generationmodule_2fgenerationmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GenerationControlFSCC::Clear() {
 // @@protoc_insertion_point(message_clear_start:generationmodule.GenerationControlFSCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlfscc_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && controlfscc_ != nullptr) {
     delete controlfscc_;
   }
   controlfscc_ = nullptr;
-  if (GetArena() == nullptr && generationcontrolschedulefsch_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && generationcontrolschedulefsch_ != nullptr) {
     delete generationcontrolschedulefsch_;
   }
   generationcontrolschedulefsch_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* GenerationControlFSCC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GenerationControlFSCC::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GenerationControlFSCC*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_controlfscc(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlFSCC::_InternalParse;
+        object = msg->mutable_controlfscc();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .generationmodule.GenerationControlScheduleFSCH GenerationControlScheduleFSCH = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_generationcontrolschedulefsch(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::generationmodule::GenerationControlScheduleFSCH::_InternalParse;
+        object = msg->mutable_generationcontrolschedulefsch();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GenerationControlFSCC::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:generationmodule.GenerationControlFSCC)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_controlfscc()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GenerationControlFSCC::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationControlFSCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .generationmodule.GenerationControlScheduleFSCH GenerationControlScheduleFSCH = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_generationcontrolschedulefsch()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:generationmodule.GenerationControlFSCC)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:generationmodule.GenerationControlFSCC)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GenerationControlFSCC::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:generationmodule.GenerationControlFSCC)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlfscc()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlfscc(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::controlfscc(this), output);
   }
 
   // .generationmodule.GenerationControlScheduleFSCH GenerationControlScheduleFSCH = 2;
   if (this->has_generationcontrolschedulefsch()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::generationcontrolschedulefsch(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::generationcontrolschedulefsch(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:generationmodule.GenerationControlFSCC)
+}
+
+::google::protobuf::uint8* GenerationControlFSCC::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationControlFSCC)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
+  if (this->has_controlfscc()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::controlfscc(this), target);
+  }
+
+  // .generationmodule.GenerationControlScheduleFSCH GenerationControlScheduleFSCH = 2;
+  if (this->has_generationcontrolschedulefsch()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::generationcontrolschedulefsch(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:generationmodule.GenerationControlFSCC)
   return target;
@@ -2085,42 +2763,43 @@ size_t GenerationControlFSCC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:generationmodule.GenerationControlFSCC)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlfscc()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *controlfscc_);
   }
 
   // .generationmodule.GenerationControlScheduleFSCH GenerationControlScheduleFSCH = 2;
   if (this->has_generationcontrolschedulefsch()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *generationcontrolschedulefsch_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void GenerationControlFSCC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationControlFSCC::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:generationmodule.GenerationControlFSCC)
   GOOGLE_DCHECK_NE(&from, this);
   const GenerationControlFSCC* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GenerationControlFSCC>(
+      ::google::protobuf::DynamicCastToGenerated<GenerationControlFSCC>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.GenerationControlFSCC)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.GenerationControlFSCC)
     MergeFrom(*source);
@@ -2130,19 +2809,19 @@ void GenerationControlFSCC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& fr
 void GenerationControlFSCC::MergeFrom(const GenerationControlFSCC& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.GenerationControlFSCC)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_controlfscc()) {
-    _internal_mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(from._internal_controlfscc());
+    mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(from.controlfscc());
   }
   if (from.has_generationcontrolschedulefsch()) {
-    _internal_mutable_generationcontrolschedulefsch()->::generationmodule::GenerationControlScheduleFSCH::MergeFrom(from._internal_generationcontrolschedulefsch());
+    mutable_generationcontrolschedulefsch()->::generationmodule::GenerationControlScheduleFSCH::MergeFrom(from.generationcontrolschedulefsch());
   }
 }
 
-void GenerationControlFSCC::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationControlFSCC::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:generationmodule.GenerationControlFSCC)
   if (&from == this) return;
   Clear();
@@ -2160,25 +2839,34 @@ bool GenerationControlFSCC::IsInitialized() const {
   return true;
 }
 
+void GenerationControlFSCC::Swap(GenerationControlFSCC* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void GenerationControlFSCC::InternalSwap(GenerationControlFSCC* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GenerationControlFSCC, generationcontrolschedulefsch_)
-      + sizeof(GenerationControlFSCC::generationcontrolschedulefsch_)
-      - PROTOBUF_FIELD_OFFSET(GenerationControlFSCC, controlfscc_)>(
-          reinterpret_cast<char*>(&controlfscc_),
-          reinterpret_cast<char*>(&other->controlfscc_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(controlfscc_, other->controlfscc_);
+  swap(generationcontrolschedulefsch_, other->generationcontrolschedulefsch_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GenerationControlFSCC::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata GenerationControlFSCC::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_generationmodule_2fgenerationmodule_2eproto);
+  return ::file_level_metadata_generationmodule_2fgenerationmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class GenerationControl::_Internal {
+void GenerationControl::InitAsDefaultInstance() {
+  ::generationmodule::_GenerationControl_default_instance_._instance.get_mutable()->controlvalue_ = const_cast< ::commonmodule::ControlValue*>(
+      ::commonmodule::ControlValue::internal_default_instance());
+  ::generationmodule::_GenerationControl_default_instance_._instance.get_mutable()->check_ = const_cast< ::commonmodule::CheckConditions*>(
+      ::commonmodule::CheckConditions::internal_default_instance());
+  ::generationmodule::_GenerationControl_default_instance_._instance.get_mutable()->generationcontrolfscc_ = const_cast< ::generationmodule::GenerationControlFSCC*>(
+      ::generationmodule::GenerationControlFSCC::internal_default_instance());
+}
+class GenerationControl::HasBitSetters {
  public:
   static const ::commonmodule::ControlValue& controlvalue(const GenerationControl* msg);
   static const ::commonmodule::CheckConditions& check(const GenerationControl* msg);
@@ -2186,49 +2874,55 @@ class GenerationControl::_Internal {
 };
 
 const ::commonmodule::ControlValue&
-GenerationControl::_Internal::controlvalue(const GenerationControl* msg) {
+GenerationControl::HasBitSetters::controlvalue(const GenerationControl* msg) {
   return *msg->controlvalue_;
 }
 const ::commonmodule::CheckConditions&
-GenerationControl::_Internal::check(const GenerationControl* msg) {
+GenerationControl::HasBitSetters::check(const GenerationControl* msg) {
   return *msg->check_;
 }
 const ::generationmodule::GenerationControlFSCC&
-GenerationControl::_Internal::generationcontrolfscc(const GenerationControl* msg) {
+GenerationControl::HasBitSetters::generationcontrolfscc(const GenerationControl* msg) {
   return *msg->generationcontrolfscc_;
 }
 void GenerationControl::clear_controlvalue() {
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && controlvalue_ != nullptr) {
     delete controlvalue_;
   }
   controlvalue_ = nullptr;
 }
 void GenerationControl::clear_check() {
-  if (GetArena() == nullptr && check_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && check_ != nullptr) {
     delete check_;
   }
   check_ = nullptr;
 }
-GenerationControl::GenerationControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int GenerationControl::kControlValueFieldNumber;
+const int GenerationControl::kCheckFieldNumber;
+const int GenerationControl::kGenerationControlFSCCFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+GenerationControl::GenerationControl()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.GenerationControl)
+  // @@protoc_insertion_point(constructor:generationmodule.GenerationControl)
 }
 GenerationControl::GenerationControl(const GenerationControl& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_controlvalue()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_controlvalue()) {
     controlvalue_ = new ::commonmodule::ControlValue(*from.controlvalue_);
   } else {
     controlvalue_ = nullptr;
   }
-  if (from._internal_has_check()) {
+  if (from.has_check()) {
     check_ = new ::commonmodule::CheckConditions(*from.check_);
   } else {
     check_ = nullptr;
   }
-  if (from._internal_has_generationcontrolfscc()) {
+  if (from.has_generationcontrolfscc()) {
     generationcontrolfscc_ = new ::generationmodule::GenerationControlFSCC(*from.generationcontrolfscc_);
   } else {
     generationcontrolfscc_ = nullptr;
@@ -2237,139 +2931,251 @@ GenerationControl::GenerationControl(const GenerationControl& from)
 }
 
 void GenerationControl::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&generationcontrolfscc_) -
-    reinterpret_cast<char*>(&controlvalue_)) + sizeof(generationcontrolfscc_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GenerationControl_generationmodule_2fgenerationmodule_2eproto.base);
+  ::memset(&controlvalue_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&generationcontrolfscc_) -
+      reinterpret_cast<char*>(&controlvalue_)) + sizeof(generationcontrolfscc_));
 }
 
 GenerationControl::~GenerationControl() {
   // @@protoc_insertion_point(destructor:generationmodule.GenerationControl)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void GenerationControl::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete controlvalue_;
   if (this != internal_default_instance()) delete check_;
   if (this != internal_default_instance()) delete generationcontrolfscc_;
 }
 
-void GenerationControl::ArenaDtor(void* object) {
-  GenerationControl* _this = reinterpret_cast< GenerationControl* >(object);
-  (void)_this;
-}
-void GenerationControl::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void GenerationControl::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GenerationControl& GenerationControl::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_GenerationControl_generationmodule_2fgenerationmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GenerationControl::Clear() {
 // @@protoc_insertion_point(message_clear_start:generationmodule.GenerationControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && controlvalue_ != nullptr) {
     delete controlvalue_;
   }
   controlvalue_ = nullptr;
-  if (GetArena() == nullptr && check_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && check_ != nullptr) {
     delete check_;
   }
   check_ = nullptr;
-  if (GetArena() == nullptr && generationcontrolfscc_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && generationcontrolfscc_ != nullptr) {
     delete generationcontrolfscc_;
   }
   generationcontrolfscc_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* GenerationControl::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GenerationControl::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GenerationControl*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_controlvalue(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlValue::_InternalParse;
+        object = msg->mutable_controlvalue();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.CheckConditions check = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .generationmodule.GenerationControlFSCC generationControlFSCC = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_generationcontrolfscc(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::CheckConditions::_InternalParse;
+        object = msg->mutable_check();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .generationmodule.GenerationControlFSCC generationControlFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::generationmodule::GenerationControlFSCC::_InternalParse;
+        object = msg->mutable_generationcontrolfscc();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GenerationControl::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:generationmodule.GenerationControl)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_controlvalue()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GenerationControl::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.CheckConditions check = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_check()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .generationmodule.GenerationControlFSCC generationControlFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_generationcontrolfscc()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:generationmodule.GenerationControl)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:generationmodule.GenerationControl)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GenerationControl::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:generationmodule.GenerationControl)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlvalue()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlvalue(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::controlvalue(this), output);
   }
 
   // .commonmodule.CheckConditions check = 2;
   if (this->has_check()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::check(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::check(this), output);
   }
 
-  // .generationmodule.GenerationControlFSCC generationControlFSCC = 3;
+  // .generationmodule.GenerationControlFSCC generationControlFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generationcontrolfscc()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::generationcontrolfscc(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::generationcontrolfscc(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:generationmodule.GenerationControl)
+}
+
+::google::protobuf::uint8* GenerationControl::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationControl)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
+  if (this->has_controlvalue()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::controlvalue(this), target);
+  }
+
+  // .commonmodule.CheckConditions check = 2;
+  if (this->has_check()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::check(this), target);
+  }
+
+  // .generationmodule.GenerationControlFSCC generationControlFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_generationcontrolfscc()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::generationcontrolfscc(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:generationmodule.GenerationControl)
   return target;
@@ -2379,49 +3185,50 @@ size_t GenerationControl::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:generationmodule.GenerationControl)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlvalue()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *controlvalue_);
   }
 
   // .commonmodule.CheckConditions check = 2;
   if (this->has_check()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *check_);
   }
 
-  // .generationmodule.GenerationControlFSCC generationControlFSCC = 3;
+  // .generationmodule.GenerationControlFSCC generationControlFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generationcontrolfscc()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *generationcontrolfscc_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void GenerationControl::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationControl::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:generationmodule.GenerationControl)
   GOOGLE_DCHECK_NE(&from, this);
   const GenerationControl* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GenerationControl>(
+      ::google::protobuf::DynamicCastToGenerated<GenerationControl>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.GenerationControl)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.GenerationControl)
     MergeFrom(*source);
@@ -2431,22 +3238,22 @@ void GenerationControl::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) 
 void GenerationControl::MergeFrom(const GenerationControl& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.GenerationControl)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_controlvalue()) {
-    _internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(from._internal_controlvalue());
+    mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(from.controlvalue());
   }
   if (from.has_check()) {
-    _internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(from._internal_check());
+    mutable_check()->::commonmodule::CheckConditions::MergeFrom(from.check());
   }
   if (from.has_generationcontrolfscc()) {
-    _internal_mutable_generationcontrolfscc()->::generationmodule::GenerationControlFSCC::MergeFrom(from._internal_generationcontrolfscc());
+    mutable_generationcontrolfscc()->::generationmodule::GenerationControlFSCC::MergeFrom(from.generationcontrolfscc());
   }
 }
 
-void GenerationControl::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationControl::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:generationmodule.GenerationControl)
   if (&from == this) return;
   Clear();
@@ -2464,65 +3271,78 @@ bool GenerationControl::IsInitialized() const {
   return true;
 }
 
+void GenerationControl::Swap(GenerationControl* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void GenerationControl::InternalSwap(GenerationControl* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GenerationControl, generationcontrolfscc_)
-      + sizeof(GenerationControl::generationcontrolfscc_)
-      - PROTOBUF_FIELD_OFFSET(GenerationControl, controlvalue_)>(
-          reinterpret_cast<char*>(&controlvalue_),
-          reinterpret_cast<char*>(&other->controlvalue_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(controlvalue_, other->controlvalue_);
+  swap(check_, other->check_);
+  swap(generationcontrolfscc_, other->generationcontrolfscc_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GenerationControl::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata GenerationControl::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_generationmodule_2fgenerationmodule_2eproto);
+  return ::file_level_metadata_generationmodule_2fgenerationmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class GeneratingUnit::_Internal {
+void GeneratingUnit::InitAsDefaultInstance() {
+  ::generationmodule::_GeneratingUnit_default_instance_._instance.get_mutable()->conductingequipment_ = const_cast< ::commonmodule::ConductingEquipment*>(
+      ::commonmodule::ConductingEquipment::internal_default_instance());
+  ::generationmodule::_GeneratingUnit_default_instance_._instance.get_mutable()->maxoperatingp_ = const_cast< ::commonmodule::ActivePower*>(
+      ::commonmodule::ActivePower::internal_default_instance());
+}
+class GeneratingUnit::HasBitSetters {
  public:
   static const ::commonmodule::ConductingEquipment& conductingequipment(const GeneratingUnit* msg);
   static const ::commonmodule::ActivePower& maxoperatingp(const GeneratingUnit* msg);
 };
 
 const ::commonmodule::ConductingEquipment&
-GeneratingUnit::_Internal::conductingequipment(const GeneratingUnit* msg) {
+GeneratingUnit::HasBitSetters::conductingequipment(const GeneratingUnit* msg) {
   return *msg->conductingequipment_;
 }
 const ::commonmodule::ActivePower&
-GeneratingUnit::_Internal::maxoperatingp(const GeneratingUnit* msg) {
+GeneratingUnit::HasBitSetters::maxoperatingp(const GeneratingUnit* msg) {
   return *msg->maxoperatingp_;
 }
 void GeneratingUnit::clear_conductingequipment() {
-  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && conductingequipment_ != nullptr) {
     delete conductingequipment_;
   }
   conductingequipment_ = nullptr;
 }
 void GeneratingUnit::clear_maxoperatingp() {
-  if (GetArena() == nullptr && maxoperatingp_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && maxoperatingp_ != nullptr) {
     delete maxoperatingp_;
   }
   maxoperatingp_ = nullptr;
 }
-GeneratingUnit::GeneratingUnit(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int GeneratingUnit::kConductingEquipmentFieldNumber;
+const int GeneratingUnit::kMaxOperatingPFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+GeneratingUnit::GeneratingUnit()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.GeneratingUnit)
+  // @@protoc_insertion_point(constructor:generationmodule.GeneratingUnit)
 }
 GeneratingUnit::GeneratingUnit(const GeneratingUnit& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_conductingequipment()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_conductingequipment()) {
     conductingequipment_ = new ::commonmodule::ConductingEquipment(*from.conductingequipment_);
   } else {
     conductingequipment_ = nullptr;
   }
-  if (from._internal_has_maxoperatingp()) {
+  if (from.has_maxoperatingp()) {
     maxoperatingp_ = new ::commonmodule::ActivePower(*from.maxoperatingp_);
   } else {
     maxoperatingp_ = nullptr;
@@ -2531,119 +3351,209 @@ GeneratingUnit::GeneratingUnit(const GeneratingUnit& from)
 }
 
 void GeneratingUnit::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&conductingequipment_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&maxoperatingp_) -
-    reinterpret_cast<char*>(&conductingequipment_)) + sizeof(maxoperatingp_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GeneratingUnit_generationmodule_2fgenerationmodule_2eproto.base);
+  ::memset(&conductingequipment_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&maxoperatingp_) -
+      reinterpret_cast<char*>(&conductingequipment_)) + sizeof(maxoperatingp_));
 }
 
 GeneratingUnit::~GeneratingUnit() {
   // @@protoc_insertion_point(destructor:generationmodule.GeneratingUnit)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void GeneratingUnit::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete conductingequipment_;
   if (this != internal_default_instance()) delete maxoperatingp_;
 }
 
-void GeneratingUnit::ArenaDtor(void* object) {
-  GeneratingUnit* _this = reinterpret_cast< GeneratingUnit* >(object);
-  (void)_this;
-}
-void GeneratingUnit::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void GeneratingUnit::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GeneratingUnit& GeneratingUnit::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_GeneratingUnit_generationmodule_2fgenerationmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GeneratingUnit::Clear() {
 // @@protoc_insertion_point(message_clear_start:generationmodule.GeneratingUnit)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && conductingequipment_ != nullptr) {
     delete conductingequipment_;
   }
   conductingequipment_ = nullptr;
-  if (GetArena() == nullptr && maxoperatingp_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && maxoperatingp_ != nullptr) {
     delete maxoperatingp_;
   }
   maxoperatingp_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* GeneratingUnit::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GeneratingUnit::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GeneratingUnit*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_conductingequipment(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ConductingEquipment::_InternalParse;
+        object = msg->mutable_conductingequipment();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.ActivePower maxOperatingP = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_maxoperatingp(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ActivePower::_InternalParse;
+        object = msg->mutable_maxoperatingp();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GeneratingUnit::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:generationmodule.GeneratingUnit)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_conductingequipment()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GeneratingUnit::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GeneratingUnit)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.ActivePower maxOperatingP = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_maxoperatingp()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:generationmodule.GeneratingUnit)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:generationmodule.GeneratingUnit)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GeneratingUnit::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:generationmodule.GeneratingUnit)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
   if (this->has_conductingequipment()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::conductingequipment(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::conductingequipment(this), output);
   }
 
   // .commonmodule.ActivePower maxOperatingP = 2;
   if (this->has_maxoperatingp()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::maxoperatingp(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::maxoperatingp(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:generationmodule.GeneratingUnit)
+}
+
+::google::protobuf::uint8* GeneratingUnit::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GeneratingUnit)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
+  if (this->has_conductingequipment()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::conductingequipment(this), target);
+  }
+
+  // .commonmodule.ActivePower maxOperatingP = 2;
+  if (this->has_maxoperatingp()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::maxoperatingp(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:generationmodule.GeneratingUnit)
   return target;
@@ -2653,42 +3563,43 @@ size_t GeneratingUnit::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:generationmodule.GeneratingUnit)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
   if (this->has_conductingequipment()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *conductingequipment_);
   }
 
   // .commonmodule.ActivePower maxOperatingP = 2;
   if (this->has_maxoperatingp()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *maxoperatingp_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void GeneratingUnit::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GeneratingUnit::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:generationmodule.GeneratingUnit)
   GOOGLE_DCHECK_NE(&from, this);
   const GeneratingUnit* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GeneratingUnit>(
+      ::google::protobuf::DynamicCastToGenerated<GeneratingUnit>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.GeneratingUnit)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.GeneratingUnit)
     MergeFrom(*source);
@@ -2698,19 +3609,19 @@ void GeneratingUnit::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void GeneratingUnit::MergeFrom(const GeneratingUnit& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.GeneratingUnit)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_conductingequipment()) {
-    _internal_mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(from._internal_conductingequipment());
+    mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(from.conductingequipment());
   }
   if (from.has_maxoperatingp()) {
-    _internal_mutable_maxoperatingp()->::commonmodule::ActivePower::MergeFrom(from._internal_maxoperatingp());
+    mutable_maxoperatingp()->::commonmodule::ActivePower::MergeFrom(from.maxoperatingp());
   }
 }
 
-void GeneratingUnit::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GeneratingUnit::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:generationmodule.GeneratingUnit)
   if (&from == this) return;
   Clear();
@@ -2728,210 +3639,398 @@ bool GeneratingUnit::IsInitialized() const {
   return true;
 }
 
+void GeneratingUnit::Swap(GeneratingUnit* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void GeneratingUnit::InternalSwap(GeneratingUnit* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GeneratingUnit, maxoperatingp_)
-      + sizeof(GeneratingUnit::maxoperatingp_)
-      - PROTOBUF_FIELD_OFFSET(GeneratingUnit, conductingequipment_)>(
-          reinterpret_cast<char*>(&conductingequipment_),
-          reinterpret_cast<char*>(&other->conductingequipment_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(conductingequipment_, other->conductingequipment_);
+  swap(maxoperatingp_, other->maxoperatingp_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GeneratingUnit::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata GeneratingUnit::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_generationmodule_2fgenerationmodule_2eproto);
+  return ::file_level_metadata_generationmodule_2fgenerationmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class GenerationControlProfile::_Internal {
+void GenerationControlProfile::InitAsDefaultInstance() {
+  ::generationmodule::_GenerationControlProfile_default_instance_._instance.get_mutable()->controlmessageinfo_ = const_cast< ::commonmodule::ControlMessageInfo*>(
+      ::commonmodule::ControlMessageInfo::internal_default_instance());
+  ::generationmodule::_GenerationControlProfile_default_instance_._instance.get_mutable()->generatingunit_ = const_cast< ::generationmodule::GeneratingUnit*>(
+      ::generationmodule::GeneratingUnit::internal_default_instance());
+  ::generationmodule::_GenerationControlProfile_default_instance_._instance.get_mutable()->generationcontrol_ = const_cast< ::generationmodule::GenerationControl*>(
+      ::generationmodule::GenerationControl::internal_default_instance());
+  ::generationmodule::_GenerationControlProfile_default_instance_._instance.get_mutable()->ied_ = const_cast< ::commonmodule::IED*>(
+      ::commonmodule::IED::internal_default_instance());
+}
+class GenerationControlProfile::HasBitSetters {
  public:
   static const ::commonmodule::ControlMessageInfo& controlmessageinfo(const GenerationControlProfile* msg);
   static const ::generationmodule::GeneratingUnit& generatingunit(const GenerationControlProfile* msg);
   static const ::generationmodule::GenerationControl& generationcontrol(const GenerationControlProfile* msg);
+  static const ::commonmodule::IED& ied(const GenerationControlProfile* msg);
 };
 
 const ::commonmodule::ControlMessageInfo&
-GenerationControlProfile::_Internal::controlmessageinfo(const GenerationControlProfile* msg) {
+GenerationControlProfile::HasBitSetters::controlmessageinfo(const GenerationControlProfile* msg) {
   return *msg->controlmessageinfo_;
 }
 const ::generationmodule::GeneratingUnit&
-GenerationControlProfile::_Internal::generatingunit(const GenerationControlProfile* msg) {
+GenerationControlProfile::HasBitSetters::generatingunit(const GenerationControlProfile* msg) {
   return *msg->generatingunit_;
 }
 const ::generationmodule::GenerationControl&
-GenerationControlProfile::_Internal::generationcontrol(const GenerationControlProfile* msg) {
+GenerationControlProfile::HasBitSetters::generationcontrol(const GenerationControlProfile* msg) {
   return *msg->generationcontrol_;
 }
+const ::commonmodule::IED&
+GenerationControlProfile::HasBitSetters::ied(const GenerationControlProfile* msg) {
+  return *msg->ied_;
+}
 void GenerationControlProfile::clear_controlmessageinfo() {
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && controlmessageinfo_ != nullptr) {
     delete controlmessageinfo_;
   }
   controlmessageinfo_ = nullptr;
 }
-GenerationControlProfile::GenerationControlProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+void GenerationControlProfile::clear_ied() {
+  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
+    delete ied_;
+  }
+  ied_ = nullptr;
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int GenerationControlProfile::kControlMessageInfoFieldNumber;
+const int GenerationControlProfile::kGeneratingUnitFieldNumber;
+const int GenerationControlProfile::kGenerationControlFieldNumber;
+const int GenerationControlProfile::kIedFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+GenerationControlProfile::GenerationControlProfile()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.GenerationControlProfile)
+  // @@protoc_insertion_point(constructor:generationmodule.GenerationControlProfile)
 }
 GenerationControlProfile::GenerationControlProfile(const GenerationControlProfile& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_controlmessageinfo()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_controlmessageinfo()) {
     controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
   } else {
     controlmessageinfo_ = nullptr;
   }
-  if (from._internal_has_generatingunit()) {
+  if (from.has_generatingunit()) {
     generatingunit_ = new ::generationmodule::GeneratingUnit(*from.generatingunit_);
   } else {
     generatingunit_ = nullptr;
   }
-  if (from._internal_has_generationcontrol()) {
+  if (from.has_generationcontrol()) {
     generationcontrol_ = new ::generationmodule::GenerationControl(*from.generationcontrol_);
   } else {
     generationcontrol_ = nullptr;
+  }
+  if (from.has_ied()) {
+    ied_ = new ::commonmodule::IED(*from.ied_);
+  } else {
+    ied_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:generationmodule.GenerationControlProfile)
 }
 
 void GenerationControlProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&generationcontrol_) -
-    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(generationcontrol_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GenerationControlProfile_generationmodule_2fgenerationmodule_2eproto.base);
+  ::memset(&controlmessageinfo_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&ied_) -
+      reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(ied_));
 }
 
 GenerationControlProfile::~GenerationControlProfile() {
   // @@protoc_insertion_point(destructor:generationmodule.GenerationControlProfile)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void GenerationControlProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete controlmessageinfo_;
   if (this != internal_default_instance()) delete generatingunit_;
   if (this != internal_default_instance()) delete generationcontrol_;
+  if (this != internal_default_instance()) delete ied_;
 }
 
-void GenerationControlProfile::ArenaDtor(void* object) {
-  GenerationControlProfile* _this = reinterpret_cast< GenerationControlProfile* >(object);
-  (void)_this;
-}
-void GenerationControlProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void GenerationControlProfile::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GenerationControlProfile& GenerationControlProfile::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_GenerationControlProfile_generationmodule_2fgenerationmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GenerationControlProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:generationmodule.GenerationControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && controlmessageinfo_ != nullptr) {
     delete controlmessageinfo_;
   }
   controlmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && generatingunit_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && generatingunit_ != nullptr) {
     delete generatingunit_;
   }
   generatingunit_ = nullptr;
-  if (GetArena() == nullptr && generationcontrol_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && generationcontrol_ != nullptr) {
     delete generationcontrol_;
   }
   generationcontrol_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
+    delete ied_;
+  }
+  ied_ = nullptr;
+  _internal_metadata_.Clear();
 }
 
-const char* GenerationControlProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GenerationControlProfile::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GenerationControlProfile*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlMessageInfo::_InternalParse;
+        object = msg->mutable_controlmessageinfo();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_generatingunit(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::generationmodule::GeneratingUnit::_InternalParse;
+        object = msg->mutable_generatingunit();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .generationmodule.GenerationControl generationControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_generationcontrol(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::generationmodule::GenerationControl::_InternalParse;
+        object = msg->mutable_generationcontrol();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::IED::_InternalParse;
+        object = msg->mutable_ied();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GenerationControlProfile::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:generationmodule.GenerationControlProfile)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_controlmessageinfo()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GenerationControlProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_generatingunit()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .generationmodule.GenerationControl generationControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_generationcontrol()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_ied()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:generationmodule.GenerationControlProfile)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:generationmodule.GenerationControlProfile)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GenerationControlProfile::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:generationmodule.GenerationControlProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlmessageinfo()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlmessageinfo(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::controlmessageinfo(this), output);
   }
 
   // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generatingunit()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::generatingunit(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::generatingunit(this), output);
   }
 
   // .generationmodule.GenerationControl generationControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generationcontrol()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::generationcontrol(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::generationcontrol(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::ied(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:generationmodule.GenerationControlProfile)
+}
+
+::google::protobuf::uint8* GenerationControlProfile::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationControlProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->has_controlmessageinfo()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::controlmessageinfo(this), target);
+  }
+
+  // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_generatingunit()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::generatingunit(this), target);
+  }
+
+  // .generationmodule.GenerationControl generationControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_generationcontrol()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::generationcontrol(this), target);
+  }
+
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::ied(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:generationmodule.GenerationControlProfile)
   return target;
@@ -2941,49 +4040,57 @@ size_t GenerationControlProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:generationmodule.GenerationControlProfile)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlmessageinfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *controlmessageinfo_);
   }
 
   // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generatingunit()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *generatingunit_);
   }
 
   // .generationmodule.GenerationControl generationControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generationcontrol()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *generationcontrol_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *ied_);
   }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void GenerationControlProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationControlProfile::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:generationmodule.GenerationControlProfile)
   GOOGLE_DCHECK_NE(&from, this);
   const GenerationControlProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GenerationControlProfile>(
+      ::google::protobuf::DynamicCastToGenerated<GenerationControlProfile>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.GenerationControlProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.GenerationControlProfile)
     MergeFrom(*source);
@@ -2993,22 +4100,25 @@ void GenerationControlProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message&
 void GenerationControlProfile::MergeFrom(const GenerationControlProfile& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.GenerationControlProfile)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_controlmessageinfo()) {
-    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
+    mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from.controlmessageinfo());
   }
   if (from.has_generatingunit()) {
-    _internal_mutable_generatingunit()->::generationmodule::GeneratingUnit::MergeFrom(from._internal_generatingunit());
+    mutable_generatingunit()->::generationmodule::GeneratingUnit::MergeFrom(from.generatingunit());
   }
   if (from.has_generationcontrol()) {
-    _internal_mutable_generationcontrol()->::generationmodule::GenerationControl::MergeFrom(from._internal_generationcontrol());
+    mutable_generationcontrol()->::generationmodule::GenerationControl::MergeFrom(from.generationcontrol());
+  }
+  if (from.has_ied()) {
+    mutable_ied()->::commonmodule::IED::MergeFrom(from.ied());
   }
 }
 
-void GenerationControlProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationControlProfile::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:generationmodule.GenerationControlProfile)
   if (&from == this) return;
   Clear();
@@ -3026,1677 +4136,38 @@ bool GenerationControlProfile::IsInitialized() const {
   return true;
 }
 
+void GenerationControlProfile::Swap(GenerationControlProfile* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void GenerationControlProfile::InternalSwap(GenerationControlProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GenerationControlProfile, generationcontrol_)
-      + sizeof(GenerationControlProfile::generationcontrol_)
-      - PROTOBUF_FIELD_OFFSET(GenerationControlProfile, controlmessageinfo_)>(
-          reinterpret_cast<char*>(&controlmessageinfo_),
-          reinterpret_cast<char*>(&other->controlmessageinfo_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(controlmessageinfo_, other->controlmessageinfo_);
+  swap(generatingunit_, other->generatingunit_);
+  swap(generationcontrol_, other->generationcontrol_);
+  swap(ied_, other->ied_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GenerationControlProfile::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-class DroopParameter::_Internal {
- public:
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& slope(const DroopParameter* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& unloadedoffset(const DroopParameter* msg);
-};
-
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-DroopParameter::_Internal::slope(const DroopParameter* msg) {
-  return *msg->slope_;
-}
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-DroopParameter::_Internal::unloadedoffset(const DroopParameter* msg) {
-  return *msg->unloadedoffset_;
-}
-void DroopParameter::clear_slope() {
-  if (GetArena() == nullptr && slope_ != nullptr) {
-    delete slope_;
-  }
-  slope_ = nullptr;
-}
-void DroopParameter::clear_unloadedoffset() {
-  if (GetArena() == nullptr && unloadedoffset_ != nullptr) {
-    delete unloadedoffset_;
-  }
-  unloadedoffset_ = nullptr;
-}
-DroopParameter::DroopParameter(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.DroopParameter)
-}
-DroopParameter::DroopParameter(const DroopParameter& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_slope()) {
-    slope_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.slope_);
-  } else {
-    slope_ = nullptr;
-  }
-  if (from._internal_has_unloadedoffset()) {
-    unloadedoffset_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.unloadedoffset_);
-  } else {
-    unloadedoffset_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:generationmodule.DroopParameter)
-}
-
-void DroopParameter::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&slope_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&unloadedoffset_) -
-    reinterpret_cast<char*>(&slope_)) + sizeof(unloadedoffset_));
-}
-
-DroopParameter::~DroopParameter() {
-  // @@protoc_insertion_point(destructor:generationmodule.DroopParameter)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void DroopParameter::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete slope_;
-  if (this != internal_default_instance()) delete unloadedoffset_;
-}
-
-void DroopParameter::ArenaDtor(void* object) {
-  DroopParameter* _this = reinterpret_cast< DroopParameter* >(object);
-  (void)_this;
-}
-void DroopParameter::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void DroopParameter::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void DroopParameter::Clear() {
-// @@protoc_insertion_point(message_clear_start:generationmodule.DroopParameter)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && slope_ != nullptr) {
-    delete slope_;
-  }
-  slope_ = nullptr;
-  if (GetArena() == nullptr && unloadedoffset_ != nullptr) {
-    delete unloadedoffset_;
-  }
-  unloadedoffset_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* DroopParameter::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .google.protobuf.FloatValue slope = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_slope(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .google.protobuf.FloatValue unloadedOffset = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_unloadedoffset(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* DroopParameter::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.DroopParameter)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .google.protobuf.FloatValue slope = 1;
-  if (this->has_slope()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::slope(this), target, stream);
-  }
-
-  // .google.protobuf.FloatValue unloadedOffset = 2;
-  if (this->has_unloadedoffset()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::unloadedoffset(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:generationmodule.DroopParameter)
-  return target;
-}
-
-size_t DroopParameter::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:generationmodule.DroopParameter)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .google.protobuf.FloatValue slope = 1;
-  if (this->has_slope()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *slope_);
-  }
-
-  // .google.protobuf.FloatValue unloadedOffset = 2;
-  if (this->has_unloadedoffset()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *unloadedoffset_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void DroopParameter::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:generationmodule.DroopParameter)
-  GOOGLE_DCHECK_NE(&from, this);
-  const DroopParameter* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<DroopParameter>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.DroopParameter)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.DroopParameter)
-    MergeFrom(*source);
-  }
-}
-
-void DroopParameter::MergeFrom(const DroopParameter& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.DroopParameter)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_slope()) {
-    _internal_mutable_slope()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_slope());
-  }
-  if (from.has_unloadedoffset()) {
-    _internal_mutable_unloadedoffset()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_unloadedoffset());
-  }
-}
-
-void DroopParameter::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:generationmodule.DroopParameter)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void DroopParameter::CopyFrom(const DroopParameter& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:generationmodule.DroopParameter)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool DroopParameter::IsInitialized() const {
-  return true;
-}
-
-void DroopParameter::InternalSwap(DroopParameter* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(DroopParameter, unloadedoffset_)
-      + sizeof(DroopParameter::unloadedoffset_)
-      - PROTOBUF_FIELD_OFFSET(DroopParameter, slope_)>(
-          reinterpret_cast<char*>(&slope_),
-          reinterpret_cast<char*>(&other->slope_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata DroopParameter::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata GenerationControlProfile::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_generationmodule_2fgenerationmodule_2eproto);
+  return ::file_level_metadata_generationmodule_2fgenerationmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class RealPowerControl::_Internal {
- public:
-  static const ::generationmodule::DroopParameter& droopsetpoint(const RealPowerControl* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& isochronoussetpoint(const RealPowerControl* msg);
-  static const ::commonmodule::Optional_RealPowerControlKind& realpowercontrolmode(const RealPowerControl* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& realpowersetpoint(const RealPowerControl* msg);
-};
-
-const ::generationmodule::DroopParameter&
-RealPowerControl::_Internal::droopsetpoint(const RealPowerControl* msg) {
-  return *msg->droopsetpoint_;
-}
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-RealPowerControl::_Internal::isochronoussetpoint(const RealPowerControl* msg) {
-  return *msg->isochronoussetpoint_;
-}
-const ::commonmodule::Optional_RealPowerControlKind&
-RealPowerControl::_Internal::realpowercontrolmode(const RealPowerControl* msg) {
-  return *msg->realpowercontrolmode_;
-}
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-RealPowerControl::_Internal::realpowersetpoint(const RealPowerControl* msg) {
-  return *msg->realpowersetpoint_;
-}
-void RealPowerControl::clear_isochronoussetpoint() {
-  if (GetArena() == nullptr && isochronoussetpoint_ != nullptr) {
-    delete isochronoussetpoint_;
-  }
-  isochronoussetpoint_ = nullptr;
-}
-void RealPowerControl::clear_realpowercontrolmode() {
-  if (GetArena() == nullptr && realpowercontrolmode_ != nullptr) {
-    delete realpowercontrolmode_;
-  }
-  realpowercontrolmode_ = nullptr;
-}
-void RealPowerControl::clear_realpowersetpoint() {
-  if (GetArena() == nullptr && realpowersetpoint_ != nullptr) {
-    delete realpowersetpoint_;
-  }
-  realpowersetpoint_ = nullptr;
-}
-RealPowerControl::RealPowerControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.RealPowerControl)
-}
-RealPowerControl::RealPowerControl(const RealPowerControl& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_droopsetpoint()) {
-    droopsetpoint_ = new ::generationmodule::DroopParameter(*from.droopsetpoint_);
-  } else {
-    droopsetpoint_ = nullptr;
-  }
-  if (from._internal_has_isochronoussetpoint()) {
-    isochronoussetpoint_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.isochronoussetpoint_);
-  } else {
-    isochronoussetpoint_ = nullptr;
-  }
-  if (from._internal_has_realpowercontrolmode()) {
-    realpowercontrolmode_ = new ::commonmodule::Optional_RealPowerControlKind(*from.realpowercontrolmode_);
-  } else {
-    realpowercontrolmode_ = nullptr;
-  }
-  if (from._internal_has_realpowersetpoint()) {
-    realpowersetpoint_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.realpowersetpoint_);
-  } else {
-    realpowersetpoint_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:generationmodule.RealPowerControl)
-}
-
-void RealPowerControl::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&droopsetpoint_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&realpowersetpoint_) -
-    reinterpret_cast<char*>(&droopsetpoint_)) + sizeof(realpowersetpoint_));
-}
-
-RealPowerControl::~RealPowerControl() {
-  // @@protoc_insertion_point(destructor:generationmodule.RealPowerControl)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void RealPowerControl::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete droopsetpoint_;
-  if (this != internal_default_instance()) delete isochronoussetpoint_;
-  if (this != internal_default_instance()) delete realpowercontrolmode_;
-  if (this != internal_default_instance()) delete realpowersetpoint_;
-}
-
-void RealPowerControl::ArenaDtor(void* object) {
-  RealPowerControl* _this = reinterpret_cast< RealPowerControl* >(object);
-  (void)_this;
-}
-void RealPowerControl::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void RealPowerControl::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void RealPowerControl::Clear() {
-// @@protoc_insertion_point(message_clear_start:generationmodule.RealPowerControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && droopsetpoint_ != nullptr) {
-    delete droopsetpoint_;
-  }
-  droopsetpoint_ = nullptr;
-  if (GetArena() == nullptr && isochronoussetpoint_ != nullptr) {
-    delete isochronoussetpoint_;
-  }
-  isochronoussetpoint_ = nullptr;
-  if (GetArena() == nullptr && realpowercontrolmode_ != nullptr) {
-    delete realpowercontrolmode_;
-  }
-  realpowercontrolmode_ = nullptr;
-  if (GetArena() == nullptr && realpowersetpoint_ != nullptr) {
-    delete realpowersetpoint_;
-  }
-  realpowersetpoint_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* RealPowerControl::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .generationmodule.DroopParameter droopSetpoint = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_droopsetpoint(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .google.protobuf.FloatValue isochronousSetpoint = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_isochronoussetpoint(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.Optional_RealPowerControlKind realPowerControlMode = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_realpowercontrolmode(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .google.protobuf.FloatValue realPowerSetpoint = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_realpowersetpoint(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* RealPowerControl::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.RealPowerControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .generationmodule.DroopParameter droopSetpoint = 1;
-  if (this->has_droopsetpoint()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::droopsetpoint(this), target, stream);
-  }
-
-  // .google.protobuf.FloatValue isochronousSetpoint = 2;
-  if (this->has_isochronoussetpoint()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::isochronoussetpoint(this), target, stream);
-  }
-
-  // .commonmodule.Optional_RealPowerControlKind realPowerControlMode = 3;
-  if (this->has_realpowercontrolmode()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::realpowercontrolmode(this), target, stream);
-  }
-
-  // .google.protobuf.FloatValue realPowerSetpoint = 4;
-  if (this->has_realpowersetpoint()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::realpowersetpoint(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:generationmodule.RealPowerControl)
-  return target;
-}
-
-size_t RealPowerControl::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:generationmodule.RealPowerControl)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .generationmodule.DroopParameter droopSetpoint = 1;
-  if (this->has_droopsetpoint()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *droopsetpoint_);
-  }
-
-  // .google.protobuf.FloatValue isochronousSetpoint = 2;
-  if (this->has_isochronoussetpoint()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *isochronoussetpoint_);
-  }
-
-  // .commonmodule.Optional_RealPowerControlKind realPowerControlMode = 3;
-  if (this->has_realpowercontrolmode()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *realpowercontrolmode_);
-  }
-
-  // .google.protobuf.FloatValue realPowerSetpoint = 4;
-  if (this->has_realpowersetpoint()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *realpowersetpoint_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void RealPowerControl::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:generationmodule.RealPowerControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RealPowerControl* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RealPowerControl>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.RealPowerControl)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.RealPowerControl)
-    MergeFrom(*source);
-  }
-}
-
-void RealPowerControl::MergeFrom(const RealPowerControl& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.RealPowerControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_droopsetpoint()) {
-    _internal_mutable_droopsetpoint()->::generationmodule::DroopParameter::MergeFrom(from._internal_droopsetpoint());
-  }
-  if (from.has_isochronoussetpoint()) {
-    _internal_mutable_isochronoussetpoint()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_isochronoussetpoint());
-  }
-  if (from.has_realpowercontrolmode()) {
-    _internal_mutable_realpowercontrolmode()->::commonmodule::Optional_RealPowerControlKind::MergeFrom(from._internal_realpowercontrolmode());
-  }
-  if (from.has_realpowersetpoint()) {
-    _internal_mutable_realpowersetpoint()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_realpowersetpoint());
-  }
-}
-
-void RealPowerControl::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:generationmodule.RealPowerControl)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void RealPowerControl::CopyFrom(const RealPowerControl& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:generationmodule.RealPowerControl)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool RealPowerControl::IsInitialized() const {
-  return true;
-}
-
-void RealPowerControl::InternalSwap(RealPowerControl* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RealPowerControl, realpowersetpoint_)
-      + sizeof(RealPowerControl::realpowersetpoint_)
-      - PROTOBUF_FIELD_OFFSET(RealPowerControl, droopsetpoint_)>(
-          reinterpret_cast<char*>(&droopsetpoint_),
-          reinterpret_cast<char*>(&other->droopsetpoint_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata RealPowerControl::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-class ReactivePowerControl::_Internal {
- public:
-  static const ::generationmodule::DroopParameter& droopsetpoint(const ReactivePowerControl* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& powerfactorsetpoint(const ReactivePowerControl* msg);
-  static const ::commonmodule::Optional_ReactivePowerControlKind& reactivepowercontrolmode(const ReactivePowerControl* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& reactivepowersetpoint(const ReactivePowerControl* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& voltagesetpoint(const ReactivePowerControl* msg);
-};
-
-const ::generationmodule::DroopParameter&
-ReactivePowerControl::_Internal::droopsetpoint(const ReactivePowerControl* msg) {
-  return *msg->droopsetpoint_;
-}
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-ReactivePowerControl::_Internal::powerfactorsetpoint(const ReactivePowerControl* msg) {
-  return *msg->powerfactorsetpoint_;
-}
-const ::commonmodule::Optional_ReactivePowerControlKind&
-ReactivePowerControl::_Internal::reactivepowercontrolmode(const ReactivePowerControl* msg) {
-  return *msg->reactivepowercontrolmode_;
-}
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-ReactivePowerControl::_Internal::reactivepowersetpoint(const ReactivePowerControl* msg) {
-  return *msg->reactivepowersetpoint_;
-}
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-ReactivePowerControl::_Internal::voltagesetpoint(const ReactivePowerControl* msg) {
-  return *msg->voltagesetpoint_;
-}
-void ReactivePowerControl::clear_powerfactorsetpoint() {
-  if (GetArena() == nullptr && powerfactorsetpoint_ != nullptr) {
-    delete powerfactorsetpoint_;
-  }
-  powerfactorsetpoint_ = nullptr;
-}
-void ReactivePowerControl::clear_reactivepowercontrolmode() {
-  if (GetArena() == nullptr && reactivepowercontrolmode_ != nullptr) {
-    delete reactivepowercontrolmode_;
-  }
-  reactivepowercontrolmode_ = nullptr;
-}
-void ReactivePowerControl::clear_reactivepowersetpoint() {
-  if (GetArena() == nullptr && reactivepowersetpoint_ != nullptr) {
-    delete reactivepowersetpoint_;
-  }
-  reactivepowersetpoint_ = nullptr;
-}
-void ReactivePowerControl::clear_voltagesetpoint() {
-  if (GetArena() == nullptr && voltagesetpoint_ != nullptr) {
-    delete voltagesetpoint_;
-  }
-  voltagesetpoint_ = nullptr;
-}
-ReactivePowerControl::ReactivePowerControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.ReactivePowerControl)
-}
-ReactivePowerControl::ReactivePowerControl(const ReactivePowerControl& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_droopsetpoint()) {
-    droopsetpoint_ = new ::generationmodule::DroopParameter(*from.droopsetpoint_);
-  } else {
-    droopsetpoint_ = nullptr;
-  }
-  if (from._internal_has_powerfactorsetpoint()) {
-    powerfactorsetpoint_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.powerfactorsetpoint_);
-  } else {
-    powerfactorsetpoint_ = nullptr;
-  }
-  if (from._internal_has_reactivepowercontrolmode()) {
-    reactivepowercontrolmode_ = new ::commonmodule::Optional_ReactivePowerControlKind(*from.reactivepowercontrolmode_);
-  } else {
-    reactivepowercontrolmode_ = nullptr;
-  }
-  if (from._internal_has_reactivepowersetpoint()) {
-    reactivepowersetpoint_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.reactivepowersetpoint_);
-  } else {
-    reactivepowersetpoint_ = nullptr;
-  }
-  if (from._internal_has_voltagesetpoint()) {
-    voltagesetpoint_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.voltagesetpoint_);
-  } else {
-    voltagesetpoint_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:generationmodule.ReactivePowerControl)
-}
-
-void ReactivePowerControl::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&droopsetpoint_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&voltagesetpoint_) -
-    reinterpret_cast<char*>(&droopsetpoint_)) + sizeof(voltagesetpoint_));
-}
-
-ReactivePowerControl::~ReactivePowerControl() {
-  // @@protoc_insertion_point(destructor:generationmodule.ReactivePowerControl)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void ReactivePowerControl::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete droopsetpoint_;
-  if (this != internal_default_instance()) delete powerfactorsetpoint_;
-  if (this != internal_default_instance()) delete reactivepowercontrolmode_;
-  if (this != internal_default_instance()) delete reactivepowersetpoint_;
-  if (this != internal_default_instance()) delete voltagesetpoint_;
-}
-
-void ReactivePowerControl::ArenaDtor(void* object) {
-  ReactivePowerControl* _this = reinterpret_cast< ReactivePowerControl* >(object);
-  (void)_this;
-}
-void ReactivePowerControl::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void ReactivePowerControl::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void ReactivePowerControl::Clear() {
-// @@protoc_insertion_point(message_clear_start:generationmodule.ReactivePowerControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && droopsetpoint_ != nullptr) {
-    delete droopsetpoint_;
-  }
-  droopsetpoint_ = nullptr;
-  if (GetArena() == nullptr && powerfactorsetpoint_ != nullptr) {
-    delete powerfactorsetpoint_;
-  }
-  powerfactorsetpoint_ = nullptr;
-  if (GetArena() == nullptr && reactivepowercontrolmode_ != nullptr) {
-    delete reactivepowercontrolmode_;
-  }
-  reactivepowercontrolmode_ = nullptr;
-  if (GetArena() == nullptr && reactivepowersetpoint_ != nullptr) {
-    delete reactivepowersetpoint_;
-  }
-  reactivepowersetpoint_ = nullptr;
-  if (GetArena() == nullptr && voltagesetpoint_ != nullptr) {
-    delete voltagesetpoint_;
-  }
-  voltagesetpoint_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* ReactivePowerControl::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .generationmodule.DroopParameter droopSetpoint = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_droopsetpoint(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .google.protobuf.FloatValue powerFactorSetpoint = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_powerfactorsetpoint(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.Optional_ReactivePowerControlKind reactivePowerControlMode = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_reactivepowercontrolmode(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .google.protobuf.FloatValue reactivePowerSetpoint = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_reactivepowersetpoint(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .google.protobuf.FloatValue voltageSetpoint = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_voltagesetpoint(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ReactivePowerControl::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.ReactivePowerControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .generationmodule.DroopParameter droopSetpoint = 1;
-  if (this->has_droopsetpoint()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::droopsetpoint(this), target, stream);
-  }
-
-  // .google.protobuf.FloatValue powerFactorSetpoint = 2;
-  if (this->has_powerfactorsetpoint()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::powerfactorsetpoint(this), target, stream);
-  }
-
-  // .commonmodule.Optional_ReactivePowerControlKind reactivePowerControlMode = 3;
-  if (this->has_reactivepowercontrolmode()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::reactivepowercontrolmode(this), target, stream);
-  }
-
-  // .google.protobuf.FloatValue reactivePowerSetpoint = 4;
-  if (this->has_reactivepowersetpoint()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::reactivepowersetpoint(this), target, stream);
-  }
-
-  // .google.protobuf.FloatValue voltageSetpoint = 5;
-  if (this->has_voltagesetpoint()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::voltagesetpoint(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:generationmodule.ReactivePowerControl)
-  return target;
-}
-
-size_t ReactivePowerControl::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:generationmodule.ReactivePowerControl)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .generationmodule.DroopParameter droopSetpoint = 1;
-  if (this->has_droopsetpoint()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *droopsetpoint_);
-  }
-
-  // .google.protobuf.FloatValue powerFactorSetpoint = 2;
-  if (this->has_powerfactorsetpoint()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *powerfactorsetpoint_);
-  }
-
-  // .commonmodule.Optional_ReactivePowerControlKind reactivePowerControlMode = 3;
-  if (this->has_reactivepowercontrolmode()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *reactivepowercontrolmode_);
-  }
-
-  // .google.protobuf.FloatValue reactivePowerSetpoint = 4;
-  if (this->has_reactivepowersetpoint()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *reactivepowersetpoint_);
-  }
-
-  // .google.protobuf.FloatValue voltageSetpoint = 5;
-  if (this->has_voltagesetpoint()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *voltagesetpoint_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void ReactivePowerControl::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:generationmodule.ReactivePowerControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ReactivePowerControl* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ReactivePowerControl>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.ReactivePowerControl)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.ReactivePowerControl)
-    MergeFrom(*source);
-  }
-}
-
-void ReactivePowerControl::MergeFrom(const ReactivePowerControl& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.ReactivePowerControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_droopsetpoint()) {
-    _internal_mutable_droopsetpoint()->::generationmodule::DroopParameter::MergeFrom(from._internal_droopsetpoint());
-  }
-  if (from.has_powerfactorsetpoint()) {
-    _internal_mutable_powerfactorsetpoint()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_powerfactorsetpoint());
-  }
-  if (from.has_reactivepowercontrolmode()) {
-    _internal_mutable_reactivepowercontrolmode()->::commonmodule::Optional_ReactivePowerControlKind::MergeFrom(from._internal_reactivepowercontrolmode());
-  }
-  if (from.has_reactivepowersetpoint()) {
-    _internal_mutable_reactivepowersetpoint()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_reactivepowersetpoint());
-  }
-  if (from.has_voltagesetpoint()) {
-    _internal_mutable_voltagesetpoint()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_voltagesetpoint());
-  }
-}
-
-void ReactivePowerControl::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:generationmodule.ReactivePowerControl)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void ReactivePowerControl::CopyFrom(const ReactivePowerControl& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:generationmodule.ReactivePowerControl)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ReactivePowerControl::IsInitialized() const {
-  return true;
-}
-
-void ReactivePowerControl::InternalSwap(ReactivePowerControl* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ReactivePowerControl, voltagesetpoint_)
-      + sizeof(ReactivePowerControl::voltagesetpoint_)
-      - PROTOBUF_FIELD_OFFSET(ReactivePowerControl, droopsetpoint_)>(
-          reinterpret_cast<char*>(&droopsetpoint_),
-          reinterpret_cast<char*>(&other->droopsetpoint_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata ReactivePowerControl::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-class GenerationDiscreteControl::_Internal {
- public:
-  static const ::commonmodule::ControlValue& controlvalue(const GenerationDiscreteControl* msg);
-  static const ::commonmodule::CheckConditions& check(const GenerationDiscreteControl* msg);
-  static const ::generationmodule::ReactivePowerControl& reactivepowercontrol(const GenerationDiscreteControl* msg);
-  static const ::generationmodule::RealPowerControl& realpowercontrol(const GenerationDiscreteControl* msg);
-};
-
-const ::commonmodule::ControlValue&
-GenerationDiscreteControl::_Internal::controlvalue(const GenerationDiscreteControl* msg) {
-  return *msg->controlvalue_;
-}
-const ::commonmodule::CheckConditions&
-GenerationDiscreteControl::_Internal::check(const GenerationDiscreteControl* msg) {
-  return *msg->check_;
-}
-const ::generationmodule::ReactivePowerControl&
-GenerationDiscreteControl::_Internal::reactivepowercontrol(const GenerationDiscreteControl* msg) {
-  return *msg->reactivepowercontrol_;
-}
-const ::generationmodule::RealPowerControl&
-GenerationDiscreteControl::_Internal::realpowercontrol(const GenerationDiscreteControl* msg) {
-  return *msg->realpowercontrol_;
-}
-void GenerationDiscreteControl::clear_controlvalue() {
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
-  }
-  controlvalue_ = nullptr;
-}
-void GenerationDiscreteControl::clear_check() {
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
-  }
-  check_ = nullptr;
-}
-GenerationDiscreteControl::GenerationDiscreteControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.GenerationDiscreteControl)
-}
-GenerationDiscreteControl::GenerationDiscreteControl(const GenerationDiscreteControl& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_controlvalue()) {
-    controlvalue_ = new ::commonmodule::ControlValue(*from.controlvalue_);
-  } else {
-    controlvalue_ = nullptr;
-  }
-  if (from._internal_has_check()) {
-    check_ = new ::commonmodule::CheckConditions(*from.check_);
-  } else {
-    check_ = nullptr;
-  }
-  if (from._internal_has_reactivepowercontrol()) {
-    reactivepowercontrol_ = new ::generationmodule::ReactivePowerControl(*from.reactivepowercontrol_);
-  } else {
-    reactivepowercontrol_ = nullptr;
-  }
-  if (from._internal_has_realpowercontrol()) {
-    realpowercontrol_ = new ::generationmodule::RealPowerControl(*from.realpowercontrol_);
-  } else {
-    realpowercontrol_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:generationmodule.GenerationDiscreteControl)
-}
-
-void GenerationDiscreteControl::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&realpowercontrol_) -
-    reinterpret_cast<char*>(&controlvalue_)) + sizeof(realpowercontrol_));
-}
-
-GenerationDiscreteControl::~GenerationDiscreteControl() {
-  // @@protoc_insertion_point(destructor:generationmodule.GenerationDiscreteControl)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void GenerationDiscreteControl::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlvalue_;
-  if (this != internal_default_instance()) delete check_;
-  if (this != internal_default_instance()) delete reactivepowercontrol_;
-  if (this != internal_default_instance()) delete realpowercontrol_;
-}
-
-void GenerationDiscreteControl::ArenaDtor(void* object) {
-  GenerationDiscreteControl* _this = reinterpret_cast< GenerationDiscreteControl* >(object);
-  (void)_this;
-}
-void GenerationDiscreteControl::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void GenerationDiscreteControl::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void GenerationDiscreteControl::Clear() {
-// @@protoc_insertion_point(message_clear_start:generationmodule.GenerationDiscreteControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
-  }
-  controlvalue_ = nullptr;
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
-  }
-  check_ = nullptr;
-  if (GetArena() == nullptr && reactivepowercontrol_ != nullptr) {
-    delete reactivepowercontrol_;
-  }
-  reactivepowercontrol_ = nullptr;
-  if (GetArena() == nullptr && realpowercontrol_ != nullptr) {
-    delete realpowercontrol_;
-  }
-  realpowercontrol_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* GenerationDiscreteControl::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_controlvalue(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.CheckConditions check = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .generationmodule.ReactivePowerControl ReactivePowerControl = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_reactivepowercontrol(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .generationmodule.RealPowerControl RealPowerControl = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_realpowercontrol(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* GenerationDiscreteControl::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationDiscreteControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlvalue(this), target, stream);
-  }
-
-  // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::check(this), target, stream);
-  }
-
-  // .generationmodule.ReactivePowerControl ReactivePowerControl = 3;
-  if (this->has_reactivepowercontrol()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::reactivepowercontrol(this), target, stream);
-  }
-
-  // .generationmodule.RealPowerControl RealPowerControl = 4;
-  if (this->has_realpowercontrol()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::realpowercontrol(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:generationmodule.GenerationDiscreteControl)
-  return target;
-}
-
-size_t GenerationDiscreteControl::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:generationmodule.GenerationDiscreteControl)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlvalue_);
-  }
-
-  // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *check_);
-  }
-
-  // .generationmodule.ReactivePowerControl ReactivePowerControl = 3;
-  if (this->has_reactivepowercontrol()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *reactivepowercontrol_);
-  }
-
-  // .generationmodule.RealPowerControl RealPowerControl = 4;
-  if (this->has_realpowercontrol()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *realpowercontrol_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void GenerationDiscreteControl::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:generationmodule.GenerationDiscreteControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  const GenerationDiscreteControl* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GenerationDiscreteControl>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.GenerationDiscreteControl)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.GenerationDiscreteControl)
-    MergeFrom(*source);
-  }
-}
-
-void GenerationDiscreteControl::MergeFrom(const GenerationDiscreteControl& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.GenerationDiscreteControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_controlvalue()) {
-    _internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(from._internal_controlvalue());
-  }
-  if (from.has_check()) {
-    _internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(from._internal_check());
-  }
-  if (from.has_reactivepowercontrol()) {
-    _internal_mutable_reactivepowercontrol()->::generationmodule::ReactivePowerControl::MergeFrom(from._internal_reactivepowercontrol());
-  }
-  if (from.has_realpowercontrol()) {
-    _internal_mutable_realpowercontrol()->::generationmodule::RealPowerControl::MergeFrom(from._internal_realpowercontrol());
-  }
-}
-
-void GenerationDiscreteControl::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:generationmodule.GenerationDiscreteControl)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void GenerationDiscreteControl::CopyFrom(const GenerationDiscreteControl& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:generationmodule.GenerationDiscreteControl)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool GenerationDiscreteControl::IsInitialized() const {
-  return true;
-}
-
-void GenerationDiscreteControl::InternalSwap(GenerationDiscreteControl* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GenerationDiscreteControl, realpowercontrol_)
-      + sizeof(GenerationDiscreteControl::realpowercontrol_)
-      - PROTOBUF_FIELD_OFFSET(GenerationDiscreteControl, controlvalue_)>(
-          reinterpret_cast<char*>(&controlvalue_),
-          reinterpret_cast<char*>(&other->controlvalue_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata GenerationDiscreteControl::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-class GenerationDiscreteControlProfile::_Internal {
- public:
-  static const ::commonmodule::ControlMessageInfo& controlmessageinfo(const GenerationDiscreteControlProfile* msg);
-  static const ::generationmodule::GeneratingUnit& generatingunit(const GenerationDiscreteControlProfile* msg);
-  static const ::generationmodule::GenerationDiscreteControl& generationdiscretecontrol(const GenerationDiscreteControlProfile* msg);
-};
-
-const ::commonmodule::ControlMessageInfo&
-GenerationDiscreteControlProfile::_Internal::controlmessageinfo(const GenerationDiscreteControlProfile* msg) {
-  return *msg->controlmessageinfo_;
-}
-const ::generationmodule::GeneratingUnit&
-GenerationDiscreteControlProfile::_Internal::generatingunit(const GenerationDiscreteControlProfile* msg) {
-  return *msg->generatingunit_;
-}
-const ::generationmodule::GenerationDiscreteControl&
-GenerationDiscreteControlProfile::_Internal::generationdiscretecontrol(const GenerationDiscreteControlProfile* msg) {
-  return *msg->generationdiscretecontrol_;
-}
-void GenerationDiscreteControlProfile::clear_controlmessageinfo() {
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
-  }
-  controlmessageinfo_ = nullptr;
-}
-GenerationDiscreteControlProfile::GenerationDiscreteControlProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.GenerationDiscreteControlProfile)
-}
-GenerationDiscreteControlProfile::GenerationDiscreteControlProfile(const GenerationDiscreteControlProfile& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_controlmessageinfo()) {
-    controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
-  } else {
-    controlmessageinfo_ = nullptr;
-  }
-  if (from._internal_has_generatingunit()) {
-    generatingunit_ = new ::generationmodule::GeneratingUnit(*from.generatingunit_);
-  } else {
-    generatingunit_ = nullptr;
-  }
-  if (from._internal_has_generationdiscretecontrol()) {
-    generationdiscretecontrol_ = new ::generationmodule::GenerationDiscreteControl(*from.generationdiscretecontrol_);
-  } else {
-    generationdiscretecontrol_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:generationmodule.GenerationDiscreteControlProfile)
-}
-
-void GenerationDiscreteControlProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&generationdiscretecontrol_) -
-    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(generationdiscretecontrol_));
-}
-
-GenerationDiscreteControlProfile::~GenerationDiscreteControlProfile() {
-  // @@protoc_insertion_point(destructor:generationmodule.GenerationDiscreteControlProfile)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void GenerationDiscreteControlProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete generatingunit_;
-  if (this != internal_default_instance()) delete generationdiscretecontrol_;
-}
-
-void GenerationDiscreteControlProfile::ArenaDtor(void* object) {
-  GenerationDiscreteControlProfile* _this = reinterpret_cast< GenerationDiscreteControlProfile* >(object);
-  (void)_this;
-}
-void GenerationDiscreteControlProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void GenerationDiscreteControlProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void GenerationDiscreteControlProfile::Clear() {
-// @@protoc_insertion_point(message_clear_start:generationmodule.GenerationDiscreteControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
-  }
-  controlmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && generatingunit_ != nullptr) {
-    delete generatingunit_;
-  }
-  generatingunit_ = nullptr;
-  if (GetArena() == nullptr && generationdiscretecontrol_ != nullptr) {
-    delete generationdiscretecontrol_;
-  }
-  generationdiscretecontrol_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* GenerationDiscreteControlProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_generatingunit(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .generationmodule.GenerationDiscreteControl generationDiscreteControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_generationdiscretecontrol(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* GenerationDiscreteControlProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationDiscreteControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlmessageinfo(this), target, stream);
-  }
-
-  // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_generatingunit()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::generatingunit(this), target, stream);
-  }
-
-  // .generationmodule.GenerationDiscreteControl generationDiscreteControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_generationdiscretecontrol()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::generationdiscretecontrol(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:generationmodule.GenerationDiscreteControlProfile)
-  return target;
-}
-
-size_t GenerationDiscreteControlProfile::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:generationmodule.GenerationDiscreteControlProfile)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlmessageinfo_);
-  }
-
-  // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_generatingunit()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *generatingunit_);
-  }
-
-  // .generationmodule.GenerationDiscreteControl generationDiscreteControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_generationdiscretecontrol()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *generationdiscretecontrol_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void GenerationDiscreteControlProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:generationmodule.GenerationDiscreteControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const GenerationDiscreteControlProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GenerationDiscreteControlProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.GenerationDiscreteControlProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.GenerationDiscreteControlProfile)
-    MergeFrom(*source);
-  }
-}
-
-void GenerationDiscreteControlProfile::MergeFrom(const GenerationDiscreteControlProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.GenerationDiscreteControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_controlmessageinfo()) {
-    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
-  }
-  if (from.has_generatingunit()) {
-    _internal_mutable_generatingunit()->::generationmodule::GeneratingUnit::MergeFrom(from._internal_generatingunit());
-  }
-  if (from.has_generationdiscretecontrol()) {
-    _internal_mutable_generationdiscretecontrol()->::generationmodule::GenerationDiscreteControl::MergeFrom(from._internal_generationdiscretecontrol());
-  }
-}
-
-void GenerationDiscreteControlProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:generationmodule.GenerationDiscreteControlProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void GenerationDiscreteControlProfile::CopyFrom(const GenerationDiscreteControlProfile& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:generationmodule.GenerationDiscreteControlProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool GenerationDiscreteControlProfile::IsInitialized() const {
-  return true;
-}
-
-void GenerationDiscreteControlProfile::InternalSwap(GenerationDiscreteControlProfile* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GenerationDiscreteControlProfile, generationdiscretecontrol_)
-      + sizeof(GenerationDiscreteControlProfile::generationdiscretecontrol_)
-      - PROTOBUF_FIELD_OFFSET(GenerationDiscreteControlProfile, controlmessageinfo_)>(
-          reinterpret_cast<char*>(&controlmessageinfo_),
-          reinterpret_cast<char*>(&other->controlmessageinfo_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata GenerationDiscreteControlProfile::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-class GenerationReading::_Internal {
+void GenerationReading::InitAsDefaultInstance() {
+  ::generationmodule::_GenerationReading_default_instance_._instance.get_mutable()->conductingequipmentterminalreading_ = const_cast< ::commonmodule::ConductingEquipmentTerminalReading*>(
+      ::commonmodule::ConductingEquipmentTerminalReading::internal_default_instance());
+  ::generationmodule::_GenerationReading_default_instance_._instance.get_mutable()->phasemmtn_ = const_cast< ::commonmodule::PhaseMMTN*>(
+      ::commonmodule::PhaseMMTN::internal_default_instance());
+  ::generationmodule::_GenerationReading_default_instance_._instance.get_mutable()->readingmmtr_ = const_cast< ::commonmodule::ReadingMMTR*>(
+      ::commonmodule::ReadingMMTR::internal_default_instance());
+  ::generationmodule::_GenerationReading_default_instance_._instance.get_mutable()->readingmmxu_ = const_cast< ::commonmodule::ReadingMMXU*>(
+      ::commonmodule::ReadingMMXU::internal_default_instance());
+}
+class GenerationReading::HasBitSetters {
  public:
   static const ::commonmodule::ConductingEquipmentTerminalReading& conductingequipmentterminalreading(const GenerationReading* msg);
   static const ::commonmodule::PhaseMMTN& phasemmtn(const GenerationReading* msg);
@@ -4705,70 +4176,77 @@ class GenerationReading::_Internal {
 };
 
 const ::commonmodule::ConductingEquipmentTerminalReading&
-GenerationReading::_Internal::conductingequipmentterminalreading(const GenerationReading* msg) {
+GenerationReading::HasBitSetters::conductingequipmentterminalreading(const GenerationReading* msg) {
   return *msg->conductingequipmentterminalreading_;
 }
 const ::commonmodule::PhaseMMTN&
-GenerationReading::_Internal::phasemmtn(const GenerationReading* msg) {
+GenerationReading::HasBitSetters::phasemmtn(const GenerationReading* msg) {
   return *msg->phasemmtn_;
 }
 const ::commonmodule::ReadingMMTR&
-GenerationReading::_Internal::readingmmtr(const GenerationReading* msg) {
+GenerationReading::HasBitSetters::readingmmtr(const GenerationReading* msg) {
   return *msg->readingmmtr_;
 }
 const ::commonmodule::ReadingMMXU&
-GenerationReading::_Internal::readingmmxu(const GenerationReading* msg) {
+GenerationReading::HasBitSetters::readingmmxu(const GenerationReading* msg) {
   return *msg->readingmmxu_;
 }
 void GenerationReading::clear_conductingequipmentterminalreading() {
-  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && conductingequipmentterminalreading_ != nullptr) {
     delete conductingequipmentterminalreading_;
   }
   conductingequipmentterminalreading_ = nullptr;
 }
 void GenerationReading::clear_phasemmtn() {
-  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && phasemmtn_ != nullptr) {
     delete phasemmtn_;
   }
   phasemmtn_ = nullptr;
 }
 void GenerationReading::clear_readingmmtr() {
-  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && readingmmtr_ != nullptr) {
     delete readingmmtr_;
   }
   readingmmtr_ = nullptr;
 }
 void GenerationReading::clear_readingmmxu() {
-  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && readingmmxu_ != nullptr) {
     delete readingmmxu_;
   }
   readingmmxu_ = nullptr;
 }
-GenerationReading::GenerationReading(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int GenerationReading::kConductingEquipmentTerminalReadingFieldNumber;
+const int GenerationReading::kPhaseMMTNFieldNumber;
+const int GenerationReading::kReadingMMTRFieldNumber;
+const int GenerationReading::kReadingMMXUFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+GenerationReading::GenerationReading()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.GenerationReading)
+  // @@protoc_insertion_point(constructor:generationmodule.GenerationReading)
 }
 GenerationReading::GenerationReading(const GenerationReading& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_conductingequipmentterminalreading()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_conductingequipmentterminalreading()) {
     conductingequipmentterminalreading_ = new ::commonmodule::ConductingEquipmentTerminalReading(*from.conductingequipmentterminalreading_);
   } else {
     conductingequipmentterminalreading_ = nullptr;
   }
-  if (from._internal_has_phasemmtn()) {
+  if (from.has_phasemmtn()) {
     phasemmtn_ = new ::commonmodule::PhaseMMTN(*from.phasemmtn_);
   } else {
     phasemmtn_ = nullptr;
   }
-  if (from._internal_has_readingmmtr()) {
+  if (from.has_readingmmtr()) {
     readingmmtr_ = new ::commonmodule::ReadingMMTR(*from.readingmmtr_);
   } else {
     readingmmtr_ = nullptr;
   }
-  if (from._internal_has_readingmmxu()) {
+  if (from.has_readingmmxu()) {
     readingmmxu_ = new ::commonmodule::ReadingMMXU(*from.readingmmxu_);
   } else {
     readingmmxu_ = nullptr;
@@ -4777,159 +4255,293 @@ GenerationReading::GenerationReading(const GenerationReading& from)
 }
 
 void GenerationReading::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&conductingequipmentterminalreading_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&readingmmxu_) -
-    reinterpret_cast<char*>(&conductingequipmentterminalreading_)) + sizeof(readingmmxu_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GenerationReading_generationmodule_2fgenerationmodule_2eproto.base);
+  ::memset(&conductingequipmentterminalreading_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&readingmmxu_) -
+      reinterpret_cast<char*>(&conductingequipmentterminalreading_)) + sizeof(readingmmxu_));
 }
 
 GenerationReading::~GenerationReading() {
   // @@protoc_insertion_point(destructor:generationmodule.GenerationReading)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void GenerationReading::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete conductingequipmentterminalreading_;
   if (this != internal_default_instance()) delete phasemmtn_;
   if (this != internal_default_instance()) delete readingmmtr_;
   if (this != internal_default_instance()) delete readingmmxu_;
 }
 
-void GenerationReading::ArenaDtor(void* object) {
-  GenerationReading* _this = reinterpret_cast< GenerationReading* >(object);
-  (void)_this;
-}
-void GenerationReading::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void GenerationReading::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GenerationReading& GenerationReading::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_GenerationReading_generationmodule_2fgenerationmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GenerationReading::Clear() {
 // @@protoc_insertion_point(message_clear_start:generationmodule.GenerationReading)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && conductingequipmentterminalreading_ != nullptr) {
     delete conductingequipmentterminalreading_;
   }
   conductingequipmentterminalreading_ = nullptr;
-  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && phasemmtn_ != nullptr) {
     delete phasemmtn_;
   }
   phasemmtn_ = nullptr;
-  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && readingmmtr_ != nullptr) {
     delete readingmmtr_;
   }
   readingmmtr_ = nullptr;
-  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && readingmmxu_ != nullptr) {
     delete readingmmxu_;
   }
   readingmmxu_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* GenerationReading::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GenerationReading::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GenerationReading*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_conductingequipmentterminalreading(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ConductingEquipmentTerminalReading::_InternalParse;
+        object = msg->mutable_conductingequipmentterminalreading();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.PhaseMMTN phaseMMTN = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_phasemmtn(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::PhaseMMTN::_InternalParse;
+        object = msg->mutable_phasemmtn();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.ReadingMMTR readingMMTR = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_readingmmtr(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ReadingMMTR::_InternalParse;
+        object = msg->mutable_readingmmtr();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.ReadingMMXU readingMMXU = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_readingmmxu(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ReadingMMXU::_InternalParse;
+        object = msg->mutable_readingmmxu();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GenerationReading::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:generationmodule.GenerationReading)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_conductingequipmentterminalreading()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GenerationReading::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationReading)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.PhaseMMTN phaseMMTN = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_phasemmtn()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ReadingMMTR readingMMTR = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_readingmmtr()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ReadingMMXU readingMMXU = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_readingmmxu()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:generationmodule.GenerationReading)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:generationmodule.GenerationReading)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GenerationReading::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:generationmodule.GenerationReading)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
   if (this->has_conductingequipmentterminalreading()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::conductingequipmentterminalreading(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::conductingequipmentterminalreading(this), output);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 2;
   if (this->has_phasemmtn()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::phasemmtn(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::phasemmtn(this), output);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 3;
   if (this->has_readingmmtr()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::readingmmtr(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::readingmmtr(this), output);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 4;
   if (this->has_readingmmxu()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::readingmmxu(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::readingmmxu(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:generationmodule.GenerationReading)
+}
+
+::google::protobuf::uint8* GenerationReading::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationReading)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
+  if (this->has_conductingequipmentterminalreading()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::conductingequipmentterminalreading(this), target);
+  }
+
+  // .commonmodule.PhaseMMTN phaseMMTN = 2;
+  if (this->has_phasemmtn()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::phasemmtn(this), target);
+  }
+
+  // .commonmodule.ReadingMMTR readingMMTR = 3;
+  if (this->has_readingmmtr()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::readingmmtr(this), target);
+  }
+
+  // .commonmodule.ReadingMMXU readingMMXU = 4;
+  if (this->has_readingmmxu()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::readingmmxu(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:generationmodule.GenerationReading)
   return target;
@@ -4939,56 +4551,57 @@ size_t GenerationReading::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:generationmodule.GenerationReading)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
   if (this->has_conductingequipmentterminalreading()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *conductingequipmentterminalreading_);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 2;
   if (this->has_phasemmtn()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *phasemmtn_);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 3;
   if (this->has_readingmmtr()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *readingmmtr_);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 4;
   if (this->has_readingmmxu()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *readingmmxu_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void GenerationReading::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationReading::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:generationmodule.GenerationReading)
   GOOGLE_DCHECK_NE(&from, this);
   const GenerationReading* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GenerationReading>(
+      ::google::protobuf::DynamicCastToGenerated<GenerationReading>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.GenerationReading)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.GenerationReading)
     MergeFrom(*source);
@@ -4998,25 +4611,25 @@ void GenerationReading::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) 
 void GenerationReading::MergeFrom(const GenerationReading& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.GenerationReading)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_conductingequipmentterminalreading()) {
-    _internal_mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(from._internal_conductingequipmentterminalreading());
+    mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(from.conductingequipmentterminalreading());
   }
   if (from.has_phasemmtn()) {
-    _internal_mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(from._internal_phasemmtn());
+    mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(from.phasemmtn());
   }
   if (from.has_readingmmtr()) {
-    _internal_mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(from._internal_readingmmtr());
+    mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(from.readingmmtr());
   }
   if (from.has_readingmmxu()) {
-    _internal_mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from._internal_readingmmxu());
+    mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from.readingmmxu());
   }
 }
 
-void GenerationReading::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationReading::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:generationmodule.GenerationReading)
   if (&from == this) return;
   Clear();
@@ -5034,210 +4647,400 @@ bool GenerationReading::IsInitialized() const {
   return true;
 }
 
+void GenerationReading::Swap(GenerationReading* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void GenerationReading::InternalSwap(GenerationReading* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GenerationReading, readingmmxu_)
-      + sizeof(GenerationReading::readingmmxu_)
-      - PROTOBUF_FIELD_OFFSET(GenerationReading, conductingequipmentterminalreading_)>(
-          reinterpret_cast<char*>(&conductingequipmentterminalreading_),
-          reinterpret_cast<char*>(&other->conductingequipmentterminalreading_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(conductingequipmentterminalreading_, other->conductingequipmentterminalreading_);
+  swap(phasemmtn_, other->phasemmtn_);
+  swap(readingmmtr_, other->readingmmtr_);
+  swap(readingmmxu_, other->readingmmxu_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GenerationReading::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata GenerationReading::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_generationmodule_2fgenerationmodule_2eproto);
+  return ::file_level_metadata_generationmodule_2fgenerationmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class GenerationReadingProfile::_Internal {
+void GenerationReadingProfile::InitAsDefaultInstance() {
+  ::generationmodule::_GenerationReadingProfile_default_instance_._instance.get_mutable()->readingmessageinfo_ = const_cast< ::commonmodule::ReadingMessageInfo*>(
+      ::commonmodule::ReadingMessageInfo::internal_default_instance());
+  ::generationmodule::_GenerationReadingProfile_default_instance_._instance.get_mutable()->generatingunit_ = const_cast< ::generationmodule::GeneratingUnit*>(
+      ::generationmodule::GeneratingUnit::internal_default_instance());
+  ::generationmodule::_GenerationReadingProfile_default_instance_._instance.get_mutable()->generationreading_ = const_cast< ::generationmodule::GenerationReading*>(
+      ::generationmodule::GenerationReading::internal_default_instance());
+  ::generationmodule::_GenerationReadingProfile_default_instance_._instance.get_mutable()->ied_ = const_cast< ::commonmodule::IED*>(
+      ::commonmodule::IED::internal_default_instance());
+}
+class GenerationReadingProfile::HasBitSetters {
  public:
   static const ::commonmodule::ReadingMessageInfo& readingmessageinfo(const GenerationReadingProfile* msg);
   static const ::generationmodule::GeneratingUnit& generatingunit(const GenerationReadingProfile* msg);
   static const ::generationmodule::GenerationReading& generationreading(const GenerationReadingProfile* msg);
+  static const ::commonmodule::IED& ied(const GenerationReadingProfile* msg);
 };
 
 const ::commonmodule::ReadingMessageInfo&
-GenerationReadingProfile::_Internal::readingmessageinfo(const GenerationReadingProfile* msg) {
+GenerationReadingProfile::HasBitSetters::readingmessageinfo(const GenerationReadingProfile* msg) {
   return *msg->readingmessageinfo_;
 }
 const ::generationmodule::GeneratingUnit&
-GenerationReadingProfile::_Internal::generatingunit(const GenerationReadingProfile* msg) {
+GenerationReadingProfile::HasBitSetters::generatingunit(const GenerationReadingProfile* msg) {
   return *msg->generatingunit_;
 }
 const ::generationmodule::GenerationReading&
-GenerationReadingProfile::_Internal::generationreading(const GenerationReadingProfile* msg) {
+GenerationReadingProfile::HasBitSetters::generationreading(const GenerationReadingProfile* msg) {
   return *msg->generationreading_;
 }
+const ::commonmodule::IED&
+GenerationReadingProfile::HasBitSetters::ied(const GenerationReadingProfile* msg) {
+  return *msg->ied_;
+}
 void GenerationReadingProfile::clear_readingmessageinfo() {
-  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && readingmessageinfo_ != nullptr) {
     delete readingmessageinfo_;
   }
   readingmessageinfo_ = nullptr;
 }
-GenerationReadingProfile::GenerationReadingProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+void GenerationReadingProfile::clear_ied() {
+  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
+    delete ied_;
+  }
+  ied_ = nullptr;
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int GenerationReadingProfile::kReadingMessageInfoFieldNumber;
+const int GenerationReadingProfile::kGeneratingUnitFieldNumber;
+const int GenerationReadingProfile::kGenerationReadingFieldNumber;
+const int GenerationReadingProfile::kIedFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+GenerationReadingProfile::GenerationReadingProfile()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.GenerationReadingProfile)
+  // @@protoc_insertion_point(constructor:generationmodule.GenerationReadingProfile)
 }
 GenerationReadingProfile::GenerationReadingProfile(const GenerationReadingProfile& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_readingmessageinfo()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_readingmessageinfo()) {
     readingmessageinfo_ = new ::commonmodule::ReadingMessageInfo(*from.readingmessageinfo_);
   } else {
     readingmessageinfo_ = nullptr;
   }
-  if (from._internal_has_generatingunit()) {
+  if (from.has_generatingunit()) {
     generatingunit_ = new ::generationmodule::GeneratingUnit(*from.generatingunit_);
   } else {
     generatingunit_ = nullptr;
   }
-  if (from._internal_has_generationreading()) {
+  if (from.has_generationreading()) {
     generationreading_ = new ::generationmodule::GenerationReading(*from.generationreading_);
   } else {
     generationreading_ = nullptr;
+  }
+  if (from.has_ied()) {
+    ied_ = new ::commonmodule::IED(*from.ied_);
+  } else {
+    ied_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:generationmodule.GenerationReadingProfile)
 }
 
 void GenerationReadingProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&readingmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&generationreading_) -
-    reinterpret_cast<char*>(&readingmessageinfo_)) + sizeof(generationreading_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GenerationReadingProfile_generationmodule_2fgenerationmodule_2eproto.base);
+  ::memset(&readingmessageinfo_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&ied_) -
+      reinterpret_cast<char*>(&readingmessageinfo_)) + sizeof(ied_));
 }
 
 GenerationReadingProfile::~GenerationReadingProfile() {
   // @@protoc_insertion_point(destructor:generationmodule.GenerationReadingProfile)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void GenerationReadingProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete readingmessageinfo_;
   if (this != internal_default_instance()) delete generatingunit_;
   if (this != internal_default_instance()) delete generationreading_;
+  if (this != internal_default_instance()) delete ied_;
 }
 
-void GenerationReadingProfile::ArenaDtor(void* object) {
-  GenerationReadingProfile* _this = reinterpret_cast< GenerationReadingProfile* >(object);
-  (void)_this;
-}
-void GenerationReadingProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void GenerationReadingProfile::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GenerationReadingProfile& GenerationReadingProfile::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_GenerationReadingProfile_generationmodule_2fgenerationmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GenerationReadingProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:generationmodule.GenerationReadingProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && readingmessageinfo_ != nullptr) {
     delete readingmessageinfo_;
   }
   readingmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && generatingunit_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && generatingunit_ != nullptr) {
     delete generatingunit_;
   }
   generatingunit_ = nullptr;
-  if (GetArena() == nullptr && generationreading_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && generationreading_ != nullptr) {
     delete generationreading_;
   }
   generationreading_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
+    delete ied_;
+  }
+  ied_ = nullptr;
+  _internal_metadata_.Clear();
 }
 
-const char* GenerationReadingProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GenerationReadingProfile::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GenerationReadingProfile*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_readingmessageinfo(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ReadingMessageInfo::_InternalParse;
+        object = msg->mutable_readingmessageinfo();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_generatingunit(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::generationmodule::GeneratingUnit::_InternalParse;
+        object = msg->mutable_generatingunit();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .generationmodule.GenerationReading generationReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_generationreading(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::generationmodule::GenerationReading::_InternalParse;
+        object = msg->mutable_generationreading();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::IED::_InternalParse;
+        object = msg->mutable_ied();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GenerationReadingProfile::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:generationmodule.GenerationReadingProfile)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_readingmessageinfo()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GenerationReadingProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationReadingProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_generatingunit()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .generationmodule.GenerationReading generationReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_generationreading()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_ied()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:generationmodule.GenerationReadingProfile)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:generationmodule.GenerationReadingProfile)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GenerationReadingProfile::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:generationmodule.GenerationReadingProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_readingmessageinfo()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::readingmessageinfo(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::readingmessageinfo(this), output);
   }
 
   // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generatingunit()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::generatingunit(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::generatingunit(this), output);
   }
 
   // .generationmodule.GenerationReading generationReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generationreading()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::generationreading(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::generationreading(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::ied(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:generationmodule.GenerationReadingProfile)
+}
+
+::google::protobuf::uint8* GenerationReadingProfile::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationReadingProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->has_readingmessageinfo()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::readingmessageinfo(this), target);
+  }
+
+  // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_generatingunit()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::generatingunit(this), target);
+  }
+
+  // .generationmodule.GenerationReading generationReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_generationreading()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::generationreading(this), target);
+  }
+
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::ied(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:generationmodule.GenerationReadingProfile)
   return target;
@@ -5247,49 +5050,57 @@ size_t GenerationReadingProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:generationmodule.GenerationReadingProfile)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_readingmessageinfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *readingmessageinfo_);
   }
 
   // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generatingunit()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *generatingunit_);
   }
 
   // .generationmodule.GenerationReading generationReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generationreading()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *generationreading_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *ied_);
   }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void GenerationReadingProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationReadingProfile::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:generationmodule.GenerationReadingProfile)
   GOOGLE_DCHECK_NE(&from, this);
   const GenerationReadingProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GenerationReadingProfile>(
+      ::google::protobuf::DynamicCastToGenerated<GenerationReadingProfile>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.GenerationReadingProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.GenerationReadingProfile)
     MergeFrom(*source);
@@ -5299,22 +5110,25 @@ void GenerationReadingProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message&
 void GenerationReadingProfile::MergeFrom(const GenerationReadingProfile& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.GenerationReadingProfile)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_readingmessageinfo()) {
-    _internal_mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(from._internal_readingmessageinfo());
+    mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(from.readingmessageinfo());
   }
   if (from.has_generatingunit()) {
-    _internal_mutable_generatingunit()->::generationmodule::GeneratingUnit::MergeFrom(from._internal_generatingunit());
+    mutable_generatingunit()->::generationmodule::GeneratingUnit::MergeFrom(from.generatingunit());
   }
   if (from.has_generationreading()) {
-    _internal_mutable_generationreading()->::generationmodule::GenerationReading::MergeFrom(from._internal_generationreading());
+    mutable_generationreading()->::generationmodule::GenerationReading::MergeFrom(from.generationreading());
+  }
+  if (from.has_ied()) {
+    mutable_ied()->::commonmodule::IED::MergeFrom(from.ied());
   }
 }
 
-void GenerationReadingProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationReadingProfile::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:generationmodule.GenerationReadingProfile)
   if (&from == this) return;
   Clear();
@@ -5332,210 +5146,251 @@ bool GenerationReadingProfile::IsInitialized() const {
   return true;
 }
 
+void GenerationReadingProfile::Swap(GenerationReadingProfile* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void GenerationReadingProfile::InternalSwap(GenerationReadingProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GenerationReadingProfile, generationreading_)
-      + sizeof(GenerationReadingProfile::generationreading_)
-      - PROTOBUF_FIELD_OFFSET(GenerationReadingProfile, readingmessageinfo_)>(
-          reinterpret_cast<char*>(&readingmessageinfo_),
-          reinterpret_cast<char*>(&other->readingmessageinfo_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(readingmessageinfo_, other->readingmessageinfo_);
+  swap(generatingunit_, other->generatingunit_);
+  swap(generationreading_, other->generationreading_);
+  swap(ied_, other->ied_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GenerationReadingProfile::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata GenerationReadingProfile::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_generationmodule_2fgenerationmodule_2eproto);
+  return ::file_level_metadata_generationmodule_2fgenerationmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class GenerationPointStatus::_Internal {
+void GenerationPointStatus::InitAsDefaultInstance() {
+  ::generationmodule::_GenerationPointStatus_default_instance_._instance.get_mutable()->blackstartenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::generationmodule::_GenerationPointStatus_default_instance_._instance.get_mutable()->frequencysetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::generationmodule::_GenerationPointStatus_default_instance_._instance.get_mutable()->pcthzdroop_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::generationmodule::_GenerationPointStatus_default_instance_._instance.get_mutable()->pctvdroop_ = const_cast< ::google::protobuf::FloatValue*>(
+      ::google::protobuf::FloatValue::internal_default_instance());
+  ::generationmodule::_GenerationPointStatus_default_instance_._instance.get_mutable()->ramprates_ = const_cast< ::commonmodule::RampRate*>(
+      ::commonmodule::RampRate::internal_default_instance());
+  ::generationmodule::_GenerationPointStatus_default_instance_._instance.get_mutable()->reactivepwrsetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::generationmodule::_GenerationPointStatus_default_instance_._instance.get_mutable()->realpwrsetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::generationmodule::_GenerationPointStatus_default_instance_._instance.get_mutable()->state_ = const_cast< ::commonmodule::Optional_StateKind*>(
+      ::commonmodule::Optional_StateKind::internal_default_instance());
+  ::generationmodule::_GenerationPointStatus_default_instance_._instance.get_mutable()->syncbacktogrid_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::generationmodule::_GenerationPointStatus_default_instance_._instance.get_mutable()->transtoislndongridlossenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+  ::generationmodule::_GenerationPointStatus_default_instance_._instance.get_mutable()->voltagesetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
+      ::commonmodule::ControlDPC::internal_default_instance());
+}
+class GenerationPointStatus::HasBitSetters {
  public:
-  static const ::commonmodule::StatusSPS& blackstartenabled(const GenerationPointStatus* msg);
-  static const ::commonmodule::StatusSPS& frequencysetpointenabled(const GenerationPointStatus* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pcthzdroop(const GenerationPointStatus* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pctvdroop(const GenerationPointStatus* msg);
+  static const ::commonmodule::ControlDPC& blackstartenabled(const GenerationPointStatus* msg);
+  static const ::commonmodule::ControlDPC& frequencysetpointenabled(const GenerationPointStatus* msg);
+  static const ::google::protobuf::FloatValue& pcthzdroop(const GenerationPointStatus* msg);
+  static const ::google::protobuf::FloatValue& pctvdroop(const GenerationPointStatus* msg);
   static const ::commonmodule::RampRate& ramprates(const GenerationPointStatus* msg);
-  static const ::commonmodule::StatusSPS& reactivepwrsetpointenabled(const GenerationPointStatus* msg);
-  static const ::commonmodule::StatusSPS& realpwrsetpointenabled(const GenerationPointStatus* msg);
+  static const ::commonmodule::ControlDPC& reactivepwrsetpointenabled(const GenerationPointStatus* msg);
+  static const ::commonmodule::ControlDPC& realpwrsetpointenabled(const GenerationPointStatus* msg);
   static const ::commonmodule::Optional_StateKind& state(const GenerationPointStatus* msg);
-  static const ::commonmodule::StatusSPS& syncbacktogrid(const GenerationPointStatus* msg);
-  static const ::commonmodule::StatusSPS& transtoislndongridlossenabled(const GenerationPointStatus* msg);
-  static const ::commonmodule::StatusSPS& voltagesetpointenabled(const GenerationPointStatus* msg);
+  static const ::commonmodule::ControlDPC& syncbacktogrid(const GenerationPointStatus* msg);
+  static const ::commonmodule::ControlDPC& transtoislndongridlossenabled(const GenerationPointStatus* msg);
+  static const ::commonmodule::ControlDPC& voltagesetpointenabled(const GenerationPointStatus* msg);
 };
 
-const ::commonmodule::StatusSPS&
-GenerationPointStatus::_Internal::blackstartenabled(const GenerationPointStatus* msg) {
+const ::commonmodule::ControlDPC&
+GenerationPointStatus::HasBitSetters::blackstartenabled(const GenerationPointStatus* msg) {
   return *msg->blackstartenabled_;
 }
-const ::commonmodule::StatusSPS&
-GenerationPointStatus::_Internal::frequencysetpointenabled(const GenerationPointStatus* msg) {
+const ::commonmodule::ControlDPC&
+GenerationPointStatus::HasBitSetters::frequencysetpointenabled(const GenerationPointStatus* msg) {
   return *msg->frequencysetpointenabled_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-GenerationPointStatus::_Internal::pcthzdroop(const GenerationPointStatus* msg) {
+const ::google::protobuf::FloatValue&
+GenerationPointStatus::HasBitSetters::pcthzdroop(const GenerationPointStatus* msg) {
   return *msg->pcthzdroop_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-GenerationPointStatus::_Internal::pctvdroop(const GenerationPointStatus* msg) {
+const ::google::protobuf::FloatValue&
+GenerationPointStatus::HasBitSetters::pctvdroop(const GenerationPointStatus* msg) {
   return *msg->pctvdroop_;
 }
 const ::commonmodule::RampRate&
-GenerationPointStatus::_Internal::ramprates(const GenerationPointStatus* msg) {
+GenerationPointStatus::HasBitSetters::ramprates(const GenerationPointStatus* msg) {
   return *msg->ramprates_;
 }
-const ::commonmodule::StatusSPS&
-GenerationPointStatus::_Internal::reactivepwrsetpointenabled(const GenerationPointStatus* msg) {
+const ::commonmodule::ControlDPC&
+GenerationPointStatus::HasBitSetters::reactivepwrsetpointenabled(const GenerationPointStatus* msg) {
   return *msg->reactivepwrsetpointenabled_;
 }
-const ::commonmodule::StatusSPS&
-GenerationPointStatus::_Internal::realpwrsetpointenabled(const GenerationPointStatus* msg) {
+const ::commonmodule::ControlDPC&
+GenerationPointStatus::HasBitSetters::realpwrsetpointenabled(const GenerationPointStatus* msg) {
   return *msg->realpwrsetpointenabled_;
 }
 const ::commonmodule::Optional_StateKind&
-GenerationPointStatus::_Internal::state(const GenerationPointStatus* msg) {
+GenerationPointStatus::HasBitSetters::state(const GenerationPointStatus* msg) {
   return *msg->state_;
 }
-const ::commonmodule::StatusSPS&
-GenerationPointStatus::_Internal::syncbacktogrid(const GenerationPointStatus* msg) {
+const ::commonmodule::ControlDPC&
+GenerationPointStatus::HasBitSetters::syncbacktogrid(const GenerationPointStatus* msg) {
   return *msg->syncbacktogrid_;
 }
-const ::commonmodule::StatusSPS&
-GenerationPointStatus::_Internal::transtoislndongridlossenabled(const GenerationPointStatus* msg) {
+const ::commonmodule::ControlDPC&
+GenerationPointStatus::HasBitSetters::transtoislndongridlossenabled(const GenerationPointStatus* msg) {
   return *msg->transtoislndongridlossenabled_;
 }
-const ::commonmodule::StatusSPS&
-GenerationPointStatus::_Internal::voltagesetpointenabled(const GenerationPointStatus* msg) {
+const ::commonmodule::ControlDPC&
+GenerationPointStatus::HasBitSetters::voltagesetpointenabled(const GenerationPointStatus* msg) {
   return *msg->voltagesetpointenabled_;
 }
 void GenerationPointStatus::clear_blackstartenabled() {
-  if (GetArena() == nullptr && blackstartenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && blackstartenabled_ != nullptr) {
     delete blackstartenabled_;
   }
   blackstartenabled_ = nullptr;
 }
 void GenerationPointStatus::clear_frequencysetpointenabled() {
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && frequencysetpointenabled_ != nullptr) {
     delete frequencysetpointenabled_;
   }
   frequencysetpointenabled_ = nullptr;
 }
 void GenerationPointStatus::clear_pcthzdroop() {
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pcthzdroop_ != nullptr) {
     delete pcthzdroop_;
   }
   pcthzdroop_ = nullptr;
 }
 void GenerationPointStatus::clear_pctvdroop() {
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pctvdroop_ != nullptr) {
     delete pctvdroop_;
   }
   pctvdroop_ = nullptr;
 }
 void GenerationPointStatus::clear_ramprates() {
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && ramprates_ != nullptr) {
     delete ramprates_;
   }
   ramprates_ = nullptr;
 }
 void GenerationPointStatus::clear_reactivepwrsetpointenabled() {
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
     delete reactivepwrsetpointenabled_;
   }
   reactivepwrsetpointenabled_ = nullptr;
 }
 void GenerationPointStatus::clear_realpwrsetpointenabled() {
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && realpwrsetpointenabled_ != nullptr) {
     delete realpwrsetpointenabled_;
   }
   realpwrsetpointenabled_ = nullptr;
 }
 void GenerationPointStatus::clear_state() {
-  if (GetArena() == nullptr && state_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && state_ != nullptr) {
     delete state_;
   }
   state_ = nullptr;
 }
 void GenerationPointStatus::clear_syncbacktogrid() {
-  if (GetArena() == nullptr && syncbacktogrid_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && syncbacktogrid_ != nullptr) {
     delete syncbacktogrid_;
   }
   syncbacktogrid_ = nullptr;
 }
 void GenerationPointStatus::clear_transtoislndongridlossenabled() {
-  if (GetArena() == nullptr && transtoislndongridlossenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && transtoislndongridlossenabled_ != nullptr) {
     delete transtoislndongridlossenabled_;
   }
   transtoislndongridlossenabled_ = nullptr;
 }
 void GenerationPointStatus::clear_voltagesetpointenabled() {
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagesetpointenabled_ != nullptr) {
     delete voltagesetpointenabled_;
   }
   voltagesetpointenabled_ = nullptr;
 }
-GenerationPointStatus::GenerationPointStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int GenerationPointStatus::kBlackStartEnabledFieldNumber;
+const int GenerationPointStatus::kFrequencySetPointEnabledFieldNumber;
+const int GenerationPointStatus::kPctHzDroopFieldNumber;
+const int GenerationPointStatus::kPctVDroopFieldNumber;
+const int GenerationPointStatus::kRampRatesFieldNumber;
+const int GenerationPointStatus::kReactivePwrSetPointEnabledFieldNumber;
+const int GenerationPointStatus::kRealPwrSetPointEnabledFieldNumber;
+const int GenerationPointStatus::kStateFieldNumber;
+const int GenerationPointStatus::kSyncBackToGridFieldNumber;
+const int GenerationPointStatus::kTransToIslndOnGridLossEnabledFieldNumber;
+const int GenerationPointStatus::kVoltageSetPointEnabledFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+GenerationPointStatus::GenerationPointStatus()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.GenerationPointStatus)
+  // @@protoc_insertion_point(constructor:generationmodule.GenerationPointStatus)
 }
 GenerationPointStatus::GenerationPointStatus(const GenerationPointStatus& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_blackstartenabled()) {
-    blackstartenabled_ = new ::commonmodule::StatusSPS(*from.blackstartenabled_);
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_blackstartenabled()) {
+    blackstartenabled_ = new ::commonmodule::ControlDPC(*from.blackstartenabled_);
   } else {
     blackstartenabled_ = nullptr;
   }
-  if (from._internal_has_frequencysetpointenabled()) {
-    frequencysetpointenabled_ = new ::commonmodule::StatusSPS(*from.frequencysetpointenabled_);
+  if (from.has_frequencysetpointenabled()) {
+    frequencysetpointenabled_ = new ::commonmodule::ControlDPC(*from.frequencysetpointenabled_);
   } else {
     frequencysetpointenabled_ = nullptr;
   }
-  if (from._internal_has_pcthzdroop()) {
-    pcthzdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pcthzdroop_);
+  if (from.has_pcthzdroop()) {
+    pcthzdroop_ = new ::google::protobuf::FloatValue(*from.pcthzdroop_);
   } else {
     pcthzdroop_ = nullptr;
   }
-  if (from._internal_has_pctvdroop()) {
-    pctvdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pctvdroop_);
+  if (from.has_pctvdroop()) {
+    pctvdroop_ = new ::google::protobuf::FloatValue(*from.pctvdroop_);
   } else {
     pctvdroop_ = nullptr;
   }
-  if (from._internal_has_ramprates()) {
+  if (from.has_ramprates()) {
     ramprates_ = new ::commonmodule::RampRate(*from.ramprates_);
   } else {
     ramprates_ = nullptr;
   }
-  if (from._internal_has_reactivepwrsetpointenabled()) {
-    reactivepwrsetpointenabled_ = new ::commonmodule::StatusSPS(*from.reactivepwrsetpointenabled_);
+  if (from.has_reactivepwrsetpointenabled()) {
+    reactivepwrsetpointenabled_ = new ::commonmodule::ControlDPC(*from.reactivepwrsetpointenabled_);
   } else {
     reactivepwrsetpointenabled_ = nullptr;
   }
-  if (from._internal_has_realpwrsetpointenabled()) {
-    realpwrsetpointenabled_ = new ::commonmodule::StatusSPS(*from.realpwrsetpointenabled_);
+  if (from.has_realpwrsetpointenabled()) {
+    realpwrsetpointenabled_ = new ::commonmodule::ControlDPC(*from.realpwrsetpointenabled_);
   } else {
     realpwrsetpointenabled_ = nullptr;
   }
-  if (from._internal_has_state()) {
+  if (from.has_state()) {
     state_ = new ::commonmodule::Optional_StateKind(*from.state_);
   } else {
     state_ = nullptr;
   }
-  if (from._internal_has_syncbacktogrid()) {
-    syncbacktogrid_ = new ::commonmodule::StatusSPS(*from.syncbacktogrid_);
+  if (from.has_syncbacktogrid()) {
+    syncbacktogrid_ = new ::commonmodule::ControlDPC(*from.syncbacktogrid_);
   } else {
     syncbacktogrid_ = nullptr;
   }
-  if (from._internal_has_transtoislndongridlossenabled()) {
-    transtoislndongridlossenabled_ = new ::commonmodule::StatusSPS(*from.transtoislndongridlossenabled_);
+  if (from.has_transtoislndongridlossenabled()) {
+    transtoislndongridlossenabled_ = new ::commonmodule::ControlDPC(*from.transtoislndongridlossenabled_);
   } else {
     transtoislndongridlossenabled_ = nullptr;
   }
-  if (from._internal_has_voltagesetpointenabled()) {
-    voltagesetpointenabled_ = new ::commonmodule::StatusSPS(*from.voltagesetpointenabled_);
+  if (from.has_voltagesetpointenabled()) {
+    voltagesetpointenabled_ = new ::commonmodule::ControlDPC(*from.voltagesetpointenabled_);
   } else {
     voltagesetpointenabled_ = nullptr;
   }
@@ -5543,20 +5398,19 @@ GenerationPointStatus::GenerationPointStatus(const GenerationPointStatus& from)
 }
 
 void GenerationPointStatus::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&blackstartenabled_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&voltagesetpointenabled_) -
-    reinterpret_cast<char*>(&blackstartenabled_)) + sizeof(voltagesetpointenabled_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GenerationPointStatus_generationmodule_2fgenerationmodule_2eproto.base);
+  ::memset(&blackstartenabled_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&voltagesetpointenabled_) -
+      reinterpret_cast<char*>(&blackstartenabled_)) + sizeof(voltagesetpointenabled_));
 }
 
 GenerationPointStatus::~GenerationPointStatus() {
   // @@protoc_insertion_point(destructor:generationmodule.GenerationPointStatus)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void GenerationPointStatus::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete blackstartenabled_;
   if (this != internal_default_instance()) delete frequencysetpointenabled_;
   if (this != internal_default_instance()) delete pcthzdroop_;
@@ -5570,272 +5424,561 @@ void GenerationPointStatus::SharedDtor() {
   if (this != internal_default_instance()) delete voltagesetpointenabled_;
 }
 
-void GenerationPointStatus::ArenaDtor(void* object) {
-  GenerationPointStatus* _this = reinterpret_cast< GenerationPointStatus* >(object);
-  (void)_this;
-}
-void GenerationPointStatus::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void GenerationPointStatus::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GenerationPointStatus& GenerationPointStatus::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_GenerationPointStatus_generationmodule_2fgenerationmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GenerationPointStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:generationmodule.GenerationPointStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && blackstartenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && blackstartenabled_ != nullptr) {
     delete blackstartenabled_;
   }
   blackstartenabled_ = nullptr;
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && frequencysetpointenabled_ != nullptr) {
     delete frequencysetpointenabled_;
   }
   frequencysetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pcthzdroop_ != nullptr) {
     delete pcthzdroop_;
   }
   pcthzdroop_ = nullptr;
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pctvdroop_ != nullptr) {
     delete pctvdroop_;
   }
   pctvdroop_ = nullptr;
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && ramprates_ != nullptr) {
     delete ramprates_;
   }
   ramprates_ = nullptr;
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
     delete reactivepwrsetpointenabled_;
   }
   reactivepwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && realpwrsetpointenabled_ != nullptr) {
     delete realpwrsetpointenabled_;
   }
   realpwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && state_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && state_ != nullptr) {
     delete state_;
   }
   state_ = nullptr;
-  if (GetArena() == nullptr && syncbacktogrid_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && syncbacktogrid_ != nullptr) {
     delete syncbacktogrid_;
   }
   syncbacktogrid_ = nullptr;
-  if (GetArena() == nullptr && transtoislndongridlossenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && transtoislndongridlossenabled_ != nullptr) {
     delete transtoislndongridlossenabled_;
   }
   transtoislndongridlossenabled_ = nullptr;
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && voltagesetpointenabled_ != nullptr) {
     delete voltagesetpointenabled_;
   }
   voltagesetpointenabled_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* GenerationPointStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GenerationPointStatus::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GenerationPointStatus*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
-      // .commonmodule.StatusSPS blackStartEnabled = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_blackstartenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS frequencySetPointEnabled = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_frequencysetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      // .commonmodule.ControlDPC blackStartEnabled = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_blackstartenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_frequencysetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue pctHzDroop = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_pcthzdroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_pcthzdroop();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .google.protobuf.FloatValue pctVDroop = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_pctvdroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
+        object = msg->mutable_pctvdroop();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.RampRate rampRates = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_ramprates(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(_internal_mutable_reactivepwrsetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS realPwrSetPointEnabled = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ctx->ParseMessage(_internal_mutable_realpwrsetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::RampRate::_InternalParse;
+        object = msg->mutable_ramprates();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_reactivepwrsetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
+      case 7: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_realpwrsetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.Optional_StateKind state = 8;
-      case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          ptr = ctx->ParseMessage(_internal_mutable_state(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS syncBackToGrid = 9;
-      case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
-          ptr = ctx->ParseMessage(_internal_mutable_syncbacktogrid(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS transToIslndOnGridLossEnabled = 10;
-      case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
-          ptr = ctx->ParseMessage(_internal_mutable_transtoislndongridlossenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS voltageSetPointEnabled = 11;
-      case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
-          ptr = ctx->ParseMessage(_internal_mutable_voltagesetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 8: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 66) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::Optional_StateKind::_InternalParse;
+        object = msg->mutable_state();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC syncBackToGrid = 9;
+      case 9: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 74) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_syncbacktogrid();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 10;
+      case 10: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 82) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_transtoislndongridlossenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.ControlDPC voltageSetPointEnabled = 11;
+      case 11: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 90) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
+        object = msg->mutable_voltagesetpointenabled();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GenerationPointStatus::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:generationmodule.GenerationPointStatus)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.ControlDPC blackStartEnabled = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_blackstartenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GenerationPointStatus::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationPointStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_frequencysetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue pctHzDroop = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_pcthzdroop()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .google.protobuf.FloatValue pctVDroop = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_pctvdroop()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.RampRate rampRates = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_ramprates()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_reactivepwrsetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (58 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_realpwrsetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.Optional_StateKind state = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (66 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_state()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC syncBackToGrid = 9;
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (74 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_syncbacktogrid()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 10;
+      case 10: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (82 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_transtoislndongridlossenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ControlDPC voltageSetPointEnabled = 11;
+      case 11: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (90 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_voltagesetpointenabled()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:generationmodule.GenerationPointStatus)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:generationmodule.GenerationPointStatus)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GenerationPointStatus::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:generationmodule.GenerationPointStatus)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .commonmodule.StatusSPS blackStartEnabled = 1;
+  // .commonmodule.ControlDPC blackStartEnabled = 1;
   if (this->has_blackstartenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::blackstartenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::blackstartenabled(this), output);
   }
 
-  // .commonmodule.StatusSPS frequencySetPointEnabled = 2;
+  // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
   if (this->has_frequencysetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::frequencysetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::frequencysetpointenabled(this), output);
   }
 
   // .google.protobuf.FloatValue pctHzDroop = 3;
   if (this->has_pcthzdroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::pcthzdroop(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::pcthzdroop(this), output);
   }
 
   // .google.protobuf.FloatValue pctVDroop = 4;
   if (this->has_pctvdroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::pctvdroop(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::pctvdroop(this), output);
   }
 
   // .commonmodule.RampRate rampRates = 5;
   if (this->has_ramprates()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::ramprates(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, HasBitSetters::ramprates(this), output);
   }
 
-  // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 6;
+  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
   if (this->has_reactivepwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::reactivepwrsetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, HasBitSetters::reactivepwrsetpointenabled(this), output);
   }
 
-  // .commonmodule.StatusSPS realPwrSetPointEnabled = 7;
+  // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
   if (this->has_realpwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::realpwrsetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      7, HasBitSetters::realpwrsetpointenabled(this), output);
   }
 
   // .commonmodule.Optional_StateKind state = 8;
   if (this->has_state()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::state(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      8, HasBitSetters::state(this), output);
   }
 
-  // .commonmodule.StatusSPS syncBackToGrid = 9;
+  // .commonmodule.ControlDPC syncBackToGrid = 9;
   if (this->has_syncbacktogrid()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        9, _Internal::syncbacktogrid(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      9, HasBitSetters::syncbacktogrid(this), output);
   }
 
-  // .commonmodule.StatusSPS transToIslndOnGridLossEnabled = 10;
+  // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 10;
   if (this->has_transtoislndongridlossenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        10, _Internal::transtoislndongridlossenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      10, HasBitSetters::transtoislndongridlossenabled(this), output);
   }
 
-  // .commonmodule.StatusSPS voltageSetPointEnabled = 11;
+  // .commonmodule.ControlDPC voltageSetPointEnabled = 11;
   if (this->has_voltagesetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        11, _Internal::voltagesetpointenabled(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      11, HasBitSetters::voltagesetpointenabled(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:generationmodule.GenerationPointStatus)
+}
+
+::google::protobuf::uint8* GenerationPointStatus::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationPointStatus)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlDPC blackStartEnabled = 1;
+  if (this->has_blackstartenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::blackstartenabled(this), target);
+  }
+
+  // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
+  if (this->has_frequencysetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::frequencysetpointenabled(this), target);
+  }
+
+  // .google.protobuf.FloatValue pctHzDroop = 3;
+  if (this->has_pcthzdroop()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::pcthzdroop(this), target);
+  }
+
+  // .google.protobuf.FloatValue pctVDroop = 4;
+  if (this->has_pctvdroop()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::pctvdroop(this), target);
+  }
+
+  // .commonmodule.RampRate rampRates = 5;
+  if (this->has_ramprates()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, HasBitSetters::ramprates(this), target);
+  }
+
+  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
+  if (this->has_reactivepwrsetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        6, HasBitSetters::reactivepwrsetpointenabled(this), target);
+  }
+
+  // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
+  if (this->has_realpwrsetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        7, HasBitSetters::realpwrsetpointenabled(this), target);
+  }
+
+  // .commonmodule.Optional_StateKind state = 8;
+  if (this->has_state()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        8, HasBitSetters::state(this), target);
+  }
+
+  // .commonmodule.ControlDPC syncBackToGrid = 9;
+  if (this->has_syncbacktogrid()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        9, HasBitSetters::syncbacktogrid(this), target);
+  }
+
+  // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 10;
+  if (this->has_transtoislndongridlossenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        10, HasBitSetters::transtoislndongridlossenabled(this), target);
+  }
+
+  // .commonmodule.ControlDPC voltageSetPointEnabled = 11;
+  if (this->has_voltagesetpointenabled()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        11, HasBitSetters::voltagesetpointenabled(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:generationmodule.GenerationPointStatus)
   return target;
@@ -5845,105 +5988,106 @@ size_t GenerationPointStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:generationmodule.GenerationPointStatus)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .commonmodule.StatusSPS blackStartEnabled = 1;
+  // .commonmodule.ControlDPC blackStartEnabled = 1;
   if (this->has_blackstartenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *blackstartenabled_);
   }
 
-  // .commonmodule.StatusSPS frequencySetPointEnabled = 2;
+  // .commonmodule.ControlDPC frequencySetPointEnabled = 2;
   if (this->has_frequencysetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *frequencysetpointenabled_);
   }
 
   // .google.protobuf.FloatValue pctHzDroop = 3;
   if (this->has_pcthzdroop()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *pcthzdroop_);
   }
 
   // .google.protobuf.FloatValue pctVDroop = 4;
   if (this->has_pctvdroop()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *pctvdroop_);
   }
 
   // .commonmodule.RampRate rampRates = 5;
   if (this->has_ramprates()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *ramprates_);
   }
 
-  // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 6;
+  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
   if (this->has_reactivepwrsetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *reactivepwrsetpointenabled_);
   }
 
-  // .commonmodule.StatusSPS realPwrSetPointEnabled = 7;
+  // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
   if (this->has_realpwrsetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *realpwrsetpointenabled_);
   }
 
   // .commonmodule.Optional_StateKind state = 8;
   if (this->has_state()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *state_);
   }
 
-  // .commonmodule.StatusSPS syncBackToGrid = 9;
+  // .commonmodule.ControlDPC syncBackToGrid = 9;
   if (this->has_syncbacktogrid()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *syncbacktogrid_);
   }
 
-  // .commonmodule.StatusSPS transToIslndOnGridLossEnabled = 10;
+  // .commonmodule.ControlDPC transToIslndOnGridLossEnabled = 10;
   if (this->has_transtoislndongridlossenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *transtoislndongridlossenabled_);
   }
 
-  // .commonmodule.StatusSPS voltageSetPointEnabled = 11;
+  // .commonmodule.ControlDPC voltageSetPointEnabled = 11;
   if (this->has_voltagesetpointenabled()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *voltagesetpointenabled_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void GenerationPointStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationPointStatus::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:generationmodule.GenerationPointStatus)
   GOOGLE_DCHECK_NE(&from, this);
   const GenerationPointStatus* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GenerationPointStatus>(
+      ::google::protobuf::DynamicCastToGenerated<GenerationPointStatus>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.GenerationPointStatus)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.GenerationPointStatus)
     MergeFrom(*source);
@@ -5953,46 +6097,46 @@ void GenerationPointStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& fr
 void GenerationPointStatus::MergeFrom(const GenerationPointStatus& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.GenerationPointStatus)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_blackstartenabled()) {
-    _internal_mutable_blackstartenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_blackstartenabled());
+    mutable_blackstartenabled()->::commonmodule::ControlDPC::MergeFrom(from.blackstartenabled());
   }
   if (from.has_frequencysetpointenabled()) {
-    _internal_mutable_frequencysetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_frequencysetpointenabled());
+    mutable_frequencysetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.frequencysetpointenabled());
   }
   if (from.has_pcthzdroop()) {
-    _internal_mutable_pcthzdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pcthzdroop());
+    mutable_pcthzdroop()->::google::protobuf::FloatValue::MergeFrom(from.pcthzdroop());
   }
   if (from.has_pctvdroop()) {
-    _internal_mutable_pctvdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pctvdroop());
+    mutable_pctvdroop()->::google::protobuf::FloatValue::MergeFrom(from.pctvdroop());
   }
   if (from.has_ramprates()) {
-    _internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from._internal_ramprates());
+    mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from.ramprates());
   }
   if (from.has_reactivepwrsetpointenabled()) {
-    _internal_mutable_reactivepwrsetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_reactivepwrsetpointenabled());
+    mutable_reactivepwrsetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.reactivepwrsetpointenabled());
   }
   if (from.has_realpwrsetpointenabled()) {
-    _internal_mutable_realpwrsetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_realpwrsetpointenabled());
+    mutable_realpwrsetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.realpwrsetpointenabled());
   }
   if (from.has_state()) {
-    _internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from._internal_state());
+    mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from.state());
   }
   if (from.has_syncbacktogrid()) {
-    _internal_mutable_syncbacktogrid()->::commonmodule::StatusSPS::MergeFrom(from._internal_syncbacktogrid());
+    mutable_syncbacktogrid()->::commonmodule::ControlDPC::MergeFrom(from.syncbacktogrid());
   }
   if (from.has_transtoislndongridlossenabled()) {
-    _internal_mutable_transtoislndongridlossenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_transtoislndongridlossenabled());
+    mutable_transtoislndongridlossenabled()->::commonmodule::ControlDPC::MergeFrom(from.transtoislndongridlossenabled());
   }
   if (from.has_voltagesetpointenabled()) {
-    _internal_mutable_voltagesetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_voltagesetpointenabled());
+    mutable_voltagesetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.voltagesetpointenabled());
   }
 }
 
-void GenerationPointStatus::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationPointStatus::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:generationmodule.GenerationPointStatus)
   if (&from == this) return;
   Clear();
@@ -6010,25 +6154,49 @@ bool GenerationPointStatus::IsInitialized() const {
   return true;
 }
 
+void GenerationPointStatus::Swap(GenerationPointStatus* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void GenerationPointStatus::InternalSwap(GenerationPointStatus* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GenerationPointStatus, voltagesetpointenabled_)
-      + sizeof(GenerationPointStatus::voltagesetpointenabled_)
-      - PROTOBUF_FIELD_OFFSET(GenerationPointStatus, blackstartenabled_)>(
-          reinterpret_cast<char*>(&blackstartenabled_),
-          reinterpret_cast<char*>(&other->blackstartenabled_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(blackstartenabled_, other->blackstartenabled_);
+  swap(frequencysetpointenabled_, other->frequencysetpointenabled_);
+  swap(pcthzdroop_, other->pcthzdroop_);
+  swap(pctvdroop_, other->pctvdroop_);
+  swap(ramprates_, other->ramprates_);
+  swap(reactivepwrsetpointenabled_, other->reactivepwrsetpointenabled_);
+  swap(realpwrsetpointenabled_, other->realpwrsetpointenabled_);
+  swap(state_, other->state_);
+  swap(syncbacktogrid_, other->syncbacktogrid_);
+  swap(transtoislndongridlossenabled_, other->transtoislndongridlossenabled_);
+  swap(voltagesetpointenabled_, other->voltagesetpointenabled_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GenerationPointStatus::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata GenerationPointStatus::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_generationmodule_2fgenerationmodule_2eproto);
+  return ::file_level_metadata_generationmodule_2fgenerationmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class GenerationEventAndStatusZGEN::_Internal {
+void GenerationEventAndStatusZGEN::InitAsDefaultInstance() {
+  ::generationmodule::_GenerationEventAndStatusZGEN_default_instance_._instance.get_mutable()->logicalnodeforeventandstatus_ = const_cast< ::commonmodule::LogicalNodeForEventAndStatus*>(
+      ::commonmodule::LogicalNodeForEventAndStatus::internal_default_instance());
+  ::generationmodule::_GenerationEventAndStatusZGEN_default_instance_._instance.get_mutable()->auxpwrst_ = const_cast< ::commonmodule::StatusSPS*>(
+      ::commonmodule::StatusSPS::internal_default_instance());
+  ::generationmodule::_GenerationEventAndStatusZGEN_default_instance_._instance.get_mutable()->dynamictest_ = const_cast< ::commonmodule::ENS_DynamicTestKind*>(
+      ::commonmodule::ENS_DynamicTestKind::internal_default_instance());
+  ::generationmodule::_GenerationEventAndStatusZGEN_default_instance_._instance.get_mutable()->emgstop_ = const_cast< ::commonmodule::StatusSPS*>(
+      ::commonmodule::StatusSPS::internal_default_instance());
+  ::generationmodule::_GenerationEventAndStatusZGEN_default_instance_._instance.get_mutable()->gnsynst_ = const_cast< ::commonmodule::StatusSPS*>(
+      ::commonmodule::StatusSPS::internal_default_instance());
+  ::generationmodule::_GenerationEventAndStatusZGEN_default_instance_._instance.get_mutable()->pointstatus_ = const_cast< ::generationmodule::GenerationPointStatus*>(
+      ::generationmodule::GenerationPointStatus::internal_default_instance());
+}
+class GenerationEventAndStatusZGEN::HasBitSetters {
  public:
   static const ::commonmodule::LogicalNodeForEventAndStatus& logicalnodeforeventandstatus(const GenerationEventAndStatusZGEN* msg);
   static const ::commonmodule::StatusSPS& auxpwrst(const GenerationEventAndStatusZGEN* msg);
@@ -6039,94 +6207,103 @@ class GenerationEventAndStatusZGEN::_Internal {
 };
 
 const ::commonmodule::LogicalNodeForEventAndStatus&
-GenerationEventAndStatusZGEN::_Internal::logicalnodeforeventandstatus(const GenerationEventAndStatusZGEN* msg) {
+GenerationEventAndStatusZGEN::HasBitSetters::logicalnodeforeventandstatus(const GenerationEventAndStatusZGEN* msg) {
   return *msg->logicalnodeforeventandstatus_;
 }
 const ::commonmodule::StatusSPS&
-GenerationEventAndStatusZGEN::_Internal::auxpwrst(const GenerationEventAndStatusZGEN* msg) {
+GenerationEventAndStatusZGEN::HasBitSetters::auxpwrst(const GenerationEventAndStatusZGEN* msg) {
   return *msg->auxpwrst_;
 }
 const ::commonmodule::ENS_DynamicTestKind&
-GenerationEventAndStatusZGEN::_Internal::dynamictest(const GenerationEventAndStatusZGEN* msg) {
+GenerationEventAndStatusZGEN::HasBitSetters::dynamictest(const GenerationEventAndStatusZGEN* msg) {
   return *msg->dynamictest_;
 }
 const ::commonmodule::StatusSPS&
-GenerationEventAndStatusZGEN::_Internal::emgstop(const GenerationEventAndStatusZGEN* msg) {
+GenerationEventAndStatusZGEN::HasBitSetters::emgstop(const GenerationEventAndStatusZGEN* msg) {
   return *msg->emgstop_;
 }
 const ::commonmodule::StatusSPS&
-GenerationEventAndStatusZGEN::_Internal::gnsynst(const GenerationEventAndStatusZGEN* msg) {
+GenerationEventAndStatusZGEN::HasBitSetters::gnsynst(const GenerationEventAndStatusZGEN* msg) {
   return *msg->gnsynst_;
 }
 const ::generationmodule::GenerationPointStatus&
-GenerationEventAndStatusZGEN::_Internal::pointstatus(const GenerationEventAndStatusZGEN* msg) {
+GenerationEventAndStatusZGEN::HasBitSetters::pointstatus(const GenerationEventAndStatusZGEN* msg) {
   return *msg->pointstatus_;
 }
 void GenerationEventAndStatusZGEN::clear_logicalnodeforeventandstatus() {
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
     delete logicalnodeforeventandstatus_;
   }
   logicalnodeforeventandstatus_ = nullptr;
 }
 void GenerationEventAndStatusZGEN::clear_auxpwrst() {
-  if (GetArena() == nullptr && auxpwrst_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && auxpwrst_ != nullptr) {
     delete auxpwrst_;
   }
   auxpwrst_ = nullptr;
 }
 void GenerationEventAndStatusZGEN::clear_dynamictest() {
-  if (GetArena() == nullptr && dynamictest_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && dynamictest_ != nullptr) {
     delete dynamictest_;
   }
   dynamictest_ = nullptr;
 }
 void GenerationEventAndStatusZGEN::clear_emgstop() {
-  if (GetArena() == nullptr && emgstop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && emgstop_ != nullptr) {
     delete emgstop_;
   }
   emgstop_ = nullptr;
 }
 void GenerationEventAndStatusZGEN::clear_gnsynst() {
-  if (GetArena() == nullptr && gnsynst_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && gnsynst_ != nullptr) {
     delete gnsynst_;
   }
   gnsynst_ = nullptr;
 }
-GenerationEventAndStatusZGEN::GenerationEventAndStatusZGEN(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int GenerationEventAndStatusZGEN::kLogicalNodeForEventAndStatusFieldNumber;
+const int GenerationEventAndStatusZGEN::kAuxPwrStFieldNumber;
+const int GenerationEventAndStatusZGEN::kDynamicTestFieldNumber;
+const int GenerationEventAndStatusZGEN::kEmgStopFieldNumber;
+const int GenerationEventAndStatusZGEN::kGnSynStFieldNumber;
+const int GenerationEventAndStatusZGEN::kPointStatusFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+GenerationEventAndStatusZGEN::GenerationEventAndStatusZGEN()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.GenerationEventAndStatusZGEN)
+  // @@protoc_insertion_point(constructor:generationmodule.GenerationEventAndStatusZGEN)
 }
 GenerationEventAndStatusZGEN::GenerationEventAndStatusZGEN(const GenerationEventAndStatusZGEN& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_logicalnodeforeventandstatus()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_logicalnodeforeventandstatus()) {
     logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from.logicalnodeforeventandstatus_);
   } else {
     logicalnodeforeventandstatus_ = nullptr;
   }
-  if (from._internal_has_auxpwrst()) {
+  if (from.has_auxpwrst()) {
     auxpwrst_ = new ::commonmodule::StatusSPS(*from.auxpwrst_);
   } else {
     auxpwrst_ = nullptr;
   }
-  if (from._internal_has_dynamictest()) {
+  if (from.has_dynamictest()) {
     dynamictest_ = new ::commonmodule::ENS_DynamicTestKind(*from.dynamictest_);
   } else {
     dynamictest_ = nullptr;
   }
-  if (from._internal_has_emgstop()) {
+  if (from.has_emgstop()) {
     emgstop_ = new ::commonmodule::StatusSPS(*from.emgstop_);
   } else {
     emgstop_ = nullptr;
   }
-  if (from._internal_has_gnsynst()) {
+  if (from.has_gnsynst()) {
     gnsynst_ = new ::commonmodule::StatusSPS(*from.gnsynst_);
   } else {
     gnsynst_ = nullptr;
   }
-  if (from._internal_has_pointstatus()) {
+  if (from.has_pointstatus()) {
     pointstatus_ = new ::generationmodule::GenerationPointStatus(*from.pointstatus_);
   } else {
     pointstatus_ = nullptr;
@@ -6135,20 +6312,19 @@ GenerationEventAndStatusZGEN::GenerationEventAndStatusZGEN(const GenerationEvent
 }
 
 void GenerationEventAndStatusZGEN::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&pointstatus_) -
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(pointstatus_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GenerationEventAndStatusZGEN_generationmodule_2fgenerationmodule_2eproto.base);
+  ::memset(&logicalnodeforeventandstatus_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&pointstatus_) -
+      reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(pointstatus_));
 }
 
 GenerationEventAndStatusZGEN::~GenerationEventAndStatusZGEN() {
   // @@protoc_insertion_point(destructor:generationmodule.GenerationEventAndStatusZGEN)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void GenerationEventAndStatusZGEN::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete logicalnodeforeventandstatus_;
   if (this != internal_default_instance()) delete auxpwrst_;
   if (this != internal_default_instance()) delete dynamictest_;
@@ -6157,177 +6333,356 @@ void GenerationEventAndStatusZGEN::SharedDtor() {
   if (this != internal_default_instance()) delete pointstatus_;
 }
 
-void GenerationEventAndStatusZGEN::ArenaDtor(void* object) {
-  GenerationEventAndStatusZGEN* _this = reinterpret_cast< GenerationEventAndStatusZGEN* >(object);
-  (void)_this;
-}
-void GenerationEventAndStatusZGEN::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void GenerationEventAndStatusZGEN::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GenerationEventAndStatusZGEN& GenerationEventAndStatusZGEN::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_GenerationEventAndStatusZGEN_generationmodule_2fgenerationmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GenerationEventAndStatusZGEN::Clear() {
 // @@protoc_insertion_point(message_clear_start:generationmodule.GenerationEventAndStatusZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
     delete logicalnodeforeventandstatus_;
   }
   logicalnodeforeventandstatus_ = nullptr;
-  if (GetArena() == nullptr && auxpwrst_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && auxpwrst_ != nullptr) {
     delete auxpwrst_;
   }
   auxpwrst_ = nullptr;
-  if (GetArena() == nullptr && dynamictest_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && dynamictest_ != nullptr) {
     delete dynamictest_;
   }
   dynamictest_ = nullptr;
-  if (GetArena() == nullptr && emgstop_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && emgstop_ != nullptr) {
     delete emgstop_;
   }
   emgstop_ = nullptr;
-  if (GetArena() == nullptr && gnsynst_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && gnsynst_ != nullptr) {
     delete gnsynst_;
   }
   gnsynst_ = nullptr;
-  if (GetArena() == nullptr && pointstatus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && pointstatus_ != nullptr) {
     delete pointstatus_;
   }
   pointstatus_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* GenerationEventAndStatusZGEN::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GenerationEventAndStatusZGEN::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GenerationEventAndStatusZGEN*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforeventandstatus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::LogicalNodeForEventAndStatus::_InternalParse;
+        object = msg->mutable_logicalnodeforeventandstatus();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.StatusSPS AuxPwrSt = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_auxpwrst(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::StatusSPS::_InternalParse;
+        object = msg->mutable_auxpwrst();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_dynamictest(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::ENS_DynamicTestKind::_InternalParse;
+        object = msg->mutable_dynamictest();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.StatusSPS EmgStop = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_emgstop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::StatusSPS::_InternalParse;
+        object = msg->mutable_emgstop();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .commonmodule.StatusSPS GnSynSt = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_gnsynst(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::StatusSPS::_InternalParse;
+        object = msg->mutable_gnsynst();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .generationmodule.GenerationPointStatus PointStatus = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(_internal_mutable_pointstatus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::generationmodule::GenerationPointStatus::_InternalParse;
+        object = msg->mutable_pointstatus();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GenerationEventAndStatusZGEN::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:generationmodule.GenerationEventAndStatusZGEN)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_logicalnodeforeventandstatus()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GenerationEventAndStatusZGEN::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationEventAndStatusZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .commonmodule.StatusSPS AuxPwrSt = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_auxpwrst()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_dynamictest()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.StatusSPS EmgStop = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_emgstop()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.StatusSPS GnSynSt = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_gnsynst()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .generationmodule.GenerationPointStatus PointStatus = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_pointstatus()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:generationmodule.GenerationEventAndStatusZGEN)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:generationmodule.GenerationEventAndStatusZGEN)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GenerationEventAndStatusZGEN::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:generationmodule.GenerationEventAndStatusZGEN)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
   if (this->has_logicalnodeforeventandstatus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnodeforeventandstatus(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::logicalnodeforeventandstatus(this), output);
   }
 
   // .commonmodule.StatusSPS AuxPwrSt = 2;
   if (this->has_auxpwrst()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::auxpwrst(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::auxpwrst(this), output);
   }
 
   // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
   if (this->has_dynamictest()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::dynamictest(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::dynamictest(this), output);
   }
 
   // .commonmodule.StatusSPS EmgStop = 4;
   if (this->has_emgstop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::emgstop(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::emgstop(this), output);
   }
 
   // .commonmodule.StatusSPS GnSynSt = 5;
   if (this->has_gnsynst()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::gnsynst(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      5, HasBitSetters::gnsynst(this), output);
   }
 
   // .generationmodule.GenerationPointStatus PointStatus = 6;
   if (this->has_pointstatus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::pointstatus(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, HasBitSetters::pointstatus(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:generationmodule.GenerationEventAndStatusZGEN)
+}
+
+::google::protobuf::uint8* GenerationEventAndStatusZGEN::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationEventAndStatusZGEN)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
+  if (this->has_logicalnodeforeventandstatus()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::logicalnodeforeventandstatus(this), target);
+  }
+
+  // .commonmodule.StatusSPS AuxPwrSt = 2;
+  if (this->has_auxpwrst()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::auxpwrst(this), target);
+  }
+
+  // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
+  if (this->has_dynamictest()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::dynamictest(this), target);
+  }
+
+  // .commonmodule.StatusSPS EmgStop = 4;
+  if (this->has_emgstop()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::emgstop(this), target);
+  }
+
+  // .commonmodule.StatusSPS GnSynSt = 5;
+  if (this->has_gnsynst()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        5, HasBitSetters::gnsynst(this), target);
+  }
+
+  // .generationmodule.GenerationPointStatus PointStatus = 6;
+  if (this->has_pointstatus()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        6, HasBitSetters::pointstatus(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:generationmodule.GenerationEventAndStatusZGEN)
   return target;
@@ -6337,70 +6692,71 @@ size_t GenerationEventAndStatusZGEN::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:generationmodule.GenerationEventAndStatusZGEN)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
   if (this->has_logicalnodeforeventandstatus()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *logicalnodeforeventandstatus_);
   }
 
   // .commonmodule.StatusSPS AuxPwrSt = 2;
   if (this->has_auxpwrst()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *auxpwrst_);
   }
 
   // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
   if (this->has_dynamictest()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *dynamictest_);
   }
 
   // .commonmodule.StatusSPS EmgStop = 4;
   if (this->has_emgstop()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *emgstop_);
   }
 
   // .commonmodule.StatusSPS GnSynSt = 5;
   if (this->has_gnsynst()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *gnsynst_);
   }
 
   // .generationmodule.GenerationPointStatus PointStatus = 6;
   if (this->has_pointstatus()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *pointstatus_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void GenerationEventAndStatusZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationEventAndStatusZGEN::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:generationmodule.GenerationEventAndStatusZGEN)
   GOOGLE_DCHECK_NE(&from, this);
   const GenerationEventAndStatusZGEN* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GenerationEventAndStatusZGEN>(
+      ::google::protobuf::DynamicCastToGenerated<GenerationEventAndStatusZGEN>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.GenerationEventAndStatusZGEN)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.GenerationEventAndStatusZGEN)
     MergeFrom(*source);
@@ -6410,31 +6766,31 @@ void GenerationEventAndStatusZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Mess
 void GenerationEventAndStatusZGEN::MergeFrom(const GenerationEventAndStatusZGEN& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.GenerationEventAndStatusZGEN)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_logicalnodeforeventandstatus()) {
-    _internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from._internal_logicalnodeforeventandstatus());
+    mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from.logicalnodeforeventandstatus());
   }
   if (from.has_auxpwrst()) {
-    _internal_mutable_auxpwrst()->::commonmodule::StatusSPS::MergeFrom(from._internal_auxpwrst());
+    mutable_auxpwrst()->::commonmodule::StatusSPS::MergeFrom(from.auxpwrst());
   }
   if (from.has_dynamictest()) {
-    _internal_mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(from._internal_dynamictest());
+    mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(from.dynamictest());
   }
   if (from.has_emgstop()) {
-    _internal_mutable_emgstop()->::commonmodule::StatusSPS::MergeFrom(from._internal_emgstop());
+    mutable_emgstop()->::commonmodule::StatusSPS::MergeFrom(from.emgstop());
   }
   if (from.has_gnsynst()) {
-    _internal_mutable_gnsynst()->::commonmodule::StatusSPS::MergeFrom(from._internal_gnsynst());
+    mutable_gnsynst()->::commonmodule::StatusSPS::MergeFrom(from.gnsynst());
   }
   if (from.has_pointstatus()) {
-    _internal_mutable_pointstatus()->::generationmodule::GenerationPointStatus::MergeFrom(from._internal_pointstatus());
+    mutable_pointstatus()->::generationmodule::GenerationPointStatus::MergeFrom(from.pointstatus());
   }
 }
 
-void GenerationEventAndStatusZGEN::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationEventAndStatusZGEN::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:generationmodule.GenerationEventAndStatusZGEN)
   if (&from == this) return;
   Clear();
@@ -6452,43 +6808,56 @@ bool GenerationEventAndStatusZGEN::IsInitialized() const {
   return true;
 }
 
+void GenerationEventAndStatusZGEN::Swap(GenerationEventAndStatusZGEN* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void GenerationEventAndStatusZGEN::InternalSwap(GenerationEventAndStatusZGEN* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GenerationEventAndStatusZGEN, pointstatus_)
-      + sizeof(GenerationEventAndStatusZGEN::pointstatus_)
-      - PROTOBUF_FIELD_OFFSET(GenerationEventAndStatusZGEN, logicalnodeforeventandstatus_)>(
-          reinterpret_cast<char*>(&logicalnodeforeventandstatus_),
-          reinterpret_cast<char*>(&other->logicalnodeforeventandstatus_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(logicalnodeforeventandstatus_, other->logicalnodeforeventandstatus_);
+  swap(auxpwrst_, other->auxpwrst_);
+  swap(dynamictest_, other->dynamictest_);
+  swap(emgstop_, other->emgstop_);
+  swap(gnsynst_, other->gnsynst_);
+  swap(pointstatus_, other->pointstatus_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GenerationEventAndStatusZGEN::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata GenerationEventAndStatusZGEN::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_generationmodule_2fgenerationmodule_2eproto);
+  return ::file_level_metadata_generationmodule_2fgenerationmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class GenerationEventZGEN::_Internal {
+void GenerationEventZGEN::InitAsDefaultInstance() {
+  ::generationmodule::_GenerationEventZGEN_default_instance_._instance.get_mutable()->generationeventandstatuszgen_ = const_cast< ::generationmodule::GenerationEventAndStatusZGEN*>(
+      ::generationmodule::GenerationEventAndStatusZGEN::internal_default_instance());
+}
+class GenerationEventZGEN::HasBitSetters {
  public:
   static const ::generationmodule::GenerationEventAndStatusZGEN& generationeventandstatuszgen(const GenerationEventZGEN* msg);
 };
 
 const ::generationmodule::GenerationEventAndStatusZGEN&
-GenerationEventZGEN::_Internal::generationeventandstatuszgen(const GenerationEventZGEN* msg) {
+GenerationEventZGEN::HasBitSetters::generationeventandstatuszgen(const GenerationEventZGEN* msg) {
   return *msg->generationeventandstatuszgen_;
 }
-GenerationEventZGEN::GenerationEventZGEN(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int GenerationEventZGEN::kGenerationEventAndStatusZGENFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+GenerationEventZGEN::GenerationEventZGEN()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.GenerationEventZGEN)
+  // @@protoc_insertion_point(constructor:generationmodule.GenerationEventZGEN)
 }
 GenerationEventZGEN::GenerationEventZGEN(const GenerationEventZGEN& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_generationeventandstatuszgen()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_generationeventandstatuszgen()) {
     generationeventandstatuszgen_ = new ::generationmodule::GenerationEventAndStatusZGEN(*from.generationeventandstatuszgen_);
   } else {
     generationeventandstatuszgen_ = nullptr;
@@ -6497,96 +6866,165 @@ GenerationEventZGEN::GenerationEventZGEN(const GenerationEventZGEN& from)
 }
 
 void GenerationEventZGEN::SharedCtor() {
-generationeventandstatuszgen_ = nullptr;
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GenerationEventZGEN_generationmodule_2fgenerationmodule_2eproto.base);
+  generationeventandstatuszgen_ = nullptr;
 }
 
 GenerationEventZGEN::~GenerationEventZGEN() {
   // @@protoc_insertion_point(destructor:generationmodule.GenerationEventZGEN)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void GenerationEventZGEN::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete generationeventandstatuszgen_;
 }
 
-void GenerationEventZGEN::ArenaDtor(void* object) {
-  GenerationEventZGEN* _this = reinterpret_cast< GenerationEventZGEN* >(object);
-  (void)_this;
-}
-void GenerationEventZGEN::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void GenerationEventZGEN::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GenerationEventZGEN& GenerationEventZGEN::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_GenerationEventZGEN_generationmodule_2fgenerationmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GenerationEventZGEN::Clear() {
 // @@protoc_insertion_point(message_clear_start:generationmodule.GenerationEventZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && generationeventandstatuszgen_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && generationeventandstatuszgen_ != nullptr) {
     delete generationeventandstatuszgen_;
   }
   generationeventandstatuszgen_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* GenerationEventZGEN::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GenerationEventZGEN::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GenerationEventZGEN*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .generationmodule.GenerationEventAndStatusZGEN generationEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_generationeventandstatuszgen(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::generationmodule::GenerationEventAndStatusZGEN::_InternalParse;
+        object = msg->mutable_generationeventandstatuszgen();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GenerationEventZGEN::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:generationmodule.GenerationEventZGEN)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .generationmodule.GenerationEventAndStatusZGEN generationEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_generationeventandstatuszgen()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GenerationEventZGEN::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationEventZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:generationmodule.GenerationEventZGEN)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:generationmodule.GenerationEventZGEN)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GenerationEventZGEN::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:generationmodule.GenerationEventZGEN)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .generationmodule.GenerationEventAndStatusZGEN generationEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
   if (this->has_generationeventandstatuszgen()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::generationeventandstatuszgen(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::generationeventandstatuszgen(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:generationmodule.GenerationEventZGEN)
+}
+
+::google::protobuf::uint8* GenerationEventZGEN::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationEventZGEN)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .generationmodule.GenerationEventAndStatusZGEN generationEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
+  if (this->has_generationeventandstatuszgen()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::generationeventandstatuszgen(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:generationmodule.GenerationEventZGEN)
   return target;
@@ -6596,35 +7034,36 @@ size_t GenerationEventZGEN::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:generationmodule.GenerationEventZGEN)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .generationmodule.GenerationEventAndStatusZGEN generationEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
   if (this->has_generationeventandstatuszgen()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *generationeventandstatuszgen_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void GenerationEventZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationEventZGEN::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:generationmodule.GenerationEventZGEN)
   GOOGLE_DCHECK_NE(&from, this);
   const GenerationEventZGEN* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GenerationEventZGEN>(
+      ::google::protobuf::DynamicCastToGenerated<GenerationEventZGEN>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.GenerationEventZGEN)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.GenerationEventZGEN)
     MergeFrom(*source);
@@ -6634,16 +7073,16 @@ void GenerationEventZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from
 void GenerationEventZGEN::MergeFrom(const GenerationEventZGEN& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.GenerationEventZGEN)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_generationeventandstatuszgen()) {
-    _internal_mutable_generationeventandstatuszgen()->::generationmodule::GenerationEventAndStatusZGEN::MergeFrom(from._internal_generationeventandstatuszgen());
+    mutable_generationeventandstatuszgen()->::generationmodule::GenerationEventAndStatusZGEN::MergeFrom(from.generationeventandstatuszgen());
   }
 }
 
-void GenerationEventZGEN::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationEventZGEN::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:generationmodule.GenerationEventZGEN)
   if (&from == this) return;
   Clear();
@@ -6661,54 +7100,70 @@ bool GenerationEventZGEN::IsInitialized() const {
   return true;
 }
 
+void GenerationEventZGEN::Swap(GenerationEventZGEN* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void GenerationEventZGEN::InternalSwap(GenerationEventZGEN* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(generationeventandstatuszgen_, other->generationeventandstatuszgen_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GenerationEventZGEN::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata GenerationEventZGEN::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_generationmodule_2fgenerationmodule_2eproto);
+  return ::file_level_metadata_generationmodule_2fgenerationmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class GenerationEvent::_Internal {
+void GenerationEvent::InitAsDefaultInstance() {
+  ::generationmodule::_GenerationEvent_default_instance_._instance.get_mutable()->eventvalue_ = const_cast< ::commonmodule::EventValue*>(
+      ::commonmodule::EventValue::internal_default_instance());
+  ::generationmodule::_GenerationEvent_default_instance_._instance.get_mutable()->generationeventzgen_ = const_cast< ::generationmodule::GenerationEventZGEN*>(
+      ::generationmodule::GenerationEventZGEN::internal_default_instance());
+}
+class GenerationEvent::HasBitSetters {
  public:
   static const ::commonmodule::EventValue& eventvalue(const GenerationEvent* msg);
   static const ::generationmodule::GenerationEventZGEN& generationeventzgen(const GenerationEvent* msg);
 };
 
 const ::commonmodule::EventValue&
-GenerationEvent::_Internal::eventvalue(const GenerationEvent* msg) {
+GenerationEvent::HasBitSetters::eventvalue(const GenerationEvent* msg) {
   return *msg->eventvalue_;
 }
 const ::generationmodule::GenerationEventZGEN&
-GenerationEvent::_Internal::generationeventzgen(const GenerationEvent* msg) {
+GenerationEvent::HasBitSetters::generationeventzgen(const GenerationEvent* msg) {
   return *msg->generationeventzgen_;
 }
 void GenerationEvent::clear_eventvalue() {
-  if (GetArena() == nullptr && eventvalue_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && eventvalue_ != nullptr) {
     delete eventvalue_;
   }
   eventvalue_ = nullptr;
 }
-GenerationEvent::GenerationEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int GenerationEvent::kEventValueFieldNumber;
+const int GenerationEvent::kGenerationEventZGENFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+GenerationEvent::GenerationEvent()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.GenerationEvent)
+  // @@protoc_insertion_point(constructor:generationmodule.GenerationEvent)
 }
 GenerationEvent::GenerationEvent(const GenerationEvent& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_eventvalue()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_eventvalue()) {
     eventvalue_ = new ::commonmodule::EventValue(*from.eventvalue_);
   } else {
     eventvalue_ = nullptr;
   }
-  if (from._internal_has_generationeventzgen()) {
+  if (from.has_generationeventzgen()) {
     generationeventzgen_ = new ::generationmodule::GenerationEventZGEN(*from.generationeventzgen_);
   } else {
     generationeventzgen_ = nullptr;
@@ -6717,119 +7172,209 @@ GenerationEvent::GenerationEvent(const GenerationEvent& from)
 }
 
 void GenerationEvent::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&eventvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&generationeventzgen_) -
-    reinterpret_cast<char*>(&eventvalue_)) + sizeof(generationeventzgen_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GenerationEvent_generationmodule_2fgenerationmodule_2eproto.base);
+  ::memset(&eventvalue_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&generationeventzgen_) -
+      reinterpret_cast<char*>(&eventvalue_)) + sizeof(generationeventzgen_));
 }
 
 GenerationEvent::~GenerationEvent() {
   // @@protoc_insertion_point(destructor:generationmodule.GenerationEvent)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void GenerationEvent::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete eventvalue_;
   if (this != internal_default_instance()) delete generationeventzgen_;
 }
 
-void GenerationEvent::ArenaDtor(void* object) {
-  GenerationEvent* _this = reinterpret_cast< GenerationEvent* >(object);
-  (void)_this;
-}
-void GenerationEvent::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void GenerationEvent::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GenerationEvent& GenerationEvent::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_GenerationEvent_generationmodule_2fgenerationmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GenerationEvent::Clear() {
 // @@protoc_insertion_point(message_clear_start:generationmodule.GenerationEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && eventvalue_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && eventvalue_ != nullptr) {
     delete eventvalue_;
   }
   eventvalue_ = nullptr;
-  if (GetArena() == nullptr && generationeventzgen_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && generationeventzgen_ != nullptr) {
     delete generationeventzgen_;
   }
   generationeventzgen_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* GenerationEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GenerationEvent::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GenerationEvent*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_eventvalue(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .generationmodule.GenerationEventZGEN generationEventZGEN = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_generationeventzgen(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::EventValue::_InternalParse;
+        object = msg->mutable_eventvalue();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .generationmodule.GenerationEventZGEN generationEventZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::generationmodule::GenerationEventZGEN::_InternalParse;
+        object = msg->mutable_generationeventzgen();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GenerationEvent::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:generationmodule.GenerationEvent)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_eventvalue()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GenerationEvent::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .generationmodule.GenerationEventZGEN generationEventZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_generationeventzgen()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:generationmodule.GenerationEvent)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:generationmodule.GenerationEvent)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GenerationEvent::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:generationmodule.GenerationEvent)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_eventvalue()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::eventvalue(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::eventvalue(this), output);
   }
 
-  // .generationmodule.GenerationEventZGEN generationEventZGEN = 2;
+  // .generationmodule.GenerationEventZGEN generationEventZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generationeventzgen()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::generationeventzgen(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::generationeventzgen(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:generationmodule.GenerationEvent)
+}
+
+::google::protobuf::uint8* GenerationEvent::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationEvent)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
+  if (this->has_eventvalue()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::eventvalue(this), target);
+  }
+
+  // .generationmodule.GenerationEventZGEN generationEventZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_generationeventzgen()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::generationeventzgen(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:generationmodule.GenerationEvent)
   return target;
@@ -6839,42 +7384,43 @@ size_t GenerationEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:generationmodule.GenerationEvent)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_eventvalue()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *eventvalue_);
   }
 
-  // .generationmodule.GenerationEventZGEN generationEventZGEN = 2;
+  // .generationmodule.GenerationEventZGEN generationEventZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generationeventzgen()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *generationeventzgen_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void GenerationEvent::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationEvent::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:generationmodule.GenerationEvent)
   GOOGLE_DCHECK_NE(&from, this);
   const GenerationEvent* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GenerationEvent>(
+      ::google::protobuf::DynamicCastToGenerated<GenerationEvent>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.GenerationEvent)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.GenerationEvent)
     MergeFrom(*source);
@@ -6884,19 +7430,19 @@ void GenerationEvent::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void GenerationEvent::MergeFrom(const GenerationEvent& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.GenerationEvent)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_eventvalue()) {
-    _internal_mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(from._internal_eventvalue());
+    mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(from.eventvalue());
   }
   if (from.has_generationeventzgen()) {
-    _internal_mutable_generationeventzgen()->::generationmodule::GenerationEventZGEN::MergeFrom(from._internal_generationeventzgen());
+    mutable_generationeventzgen()->::generationmodule::GenerationEventZGEN::MergeFrom(from.generationeventzgen());
   }
 }
 
-void GenerationEvent::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationEvent::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:generationmodule.GenerationEvent)
   if (&from == this) return;
   Clear();
@@ -6914,210 +7460,398 @@ bool GenerationEvent::IsInitialized() const {
   return true;
 }
 
+void GenerationEvent::Swap(GenerationEvent* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void GenerationEvent::InternalSwap(GenerationEvent* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GenerationEvent, generationeventzgen_)
-      + sizeof(GenerationEvent::generationeventzgen_)
-      - PROTOBUF_FIELD_OFFSET(GenerationEvent, eventvalue_)>(
-          reinterpret_cast<char*>(&eventvalue_),
-          reinterpret_cast<char*>(&other->eventvalue_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(eventvalue_, other->eventvalue_);
+  swap(generationeventzgen_, other->generationeventzgen_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GenerationEvent::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata GenerationEvent::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_generationmodule_2fgenerationmodule_2eproto);
+  return ::file_level_metadata_generationmodule_2fgenerationmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class GenerationEventProfile::_Internal {
+void GenerationEventProfile::InitAsDefaultInstance() {
+  ::generationmodule::_GenerationEventProfile_default_instance_._instance.get_mutable()->eventmessageinfo_ = const_cast< ::commonmodule::EventMessageInfo*>(
+      ::commonmodule::EventMessageInfo::internal_default_instance());
+  ::generationmodule::_GenerationEventProfile_default_instance_._instance.get_mutable()->generatingunit_ = const_cast< ::generationmodule::GeneratingUnit*>(
+      ::generationmodule::GeneratingUnit::internal_default_instance());
+  ::generationmodule::_GenerationEventProfile_default_instance_._instance.get_mutable()->generationevent_ = const_cast< ::generationmodule::GenerationEvent*>(
+      ::generationmodule::GenerationEvent::internal_default_instance());
+  ::generationmodule::_GenerationEventProfile_default_instance_._instance.get_mutable()->ied_ = const_cast< ::commonmodule::IED*>(
+      ::commonmodule::IED::internal_default_instance());
+}
+class GenerationEventProfile::HasBitSetters {
  public:
   static const ::commonmodule::EventMessageInfo& eventmessageinfo(const GenerationEventProfile* msg);
   static const ::generationmodule::GeneratingUnit& generatingunit(const GenerationEventProfile* msg);
   static const ::generationmodule::GenerationEvent& generationevent(const GenerationEventProfile* msg);
+  static const ::commonmodule::IED& ied(const GenerationEventProfile* msg);
 };
 
 const ::commonmodule::EventMessageInfo&
-GenerationEventProfile::_Internal::eventmessageinfo(const GenerationEventProfile* msg) {
+GenerationEventProfile::HasBitSetters::eventmessageinfo(const GenerationEventProfile* msg) {
   return *msg->eventmessageinfo_;
 }
 const ::generationmodule::GeneratingUnit&
-GenerationEventProfile::_Internal::generatingunit(const GenerationEventProfile* msg) {
+GenerationEventProfile::HasBitSetters::generatingunit(const GenerationEventProfile* msg) {
   return *msg->generatingunit_;
 }
 const ::generationmodule::GenerationEvent&
-GenerationEventProfile::_Internal::generationevent(const GenerationEventProfile* msg) {
+GenerationEventProfile::HasBitSetters::generationevent(const GenerationEventProfile* msg) {
   return *msg->generationevent_;
 }
+const ::commonmodule::IED&
+GenerationEventProfile::HasBitSetters::ied(const GenerationEventProfile* msg) {
+  return *msg->ied_;
+}
 void GenerationEventProfile::clear_eventmessageinfo() {
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && eventmessageinfo_ != nullptr) {
     delete eventmessageinfo_;
   }
   eventmessageinfo_ = nullptr;
 }
-GenerationEventProfile::GenerationEventProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+void GenerationEventProfile::clear_ied() {
+  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
+    delete ied_;
+  }
+  ied_ = nullptr;
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int GenerationEventProfile::kEventMessageInfoFieldNumber;
+const int GenerationEventProfile::kGeneratingUnitFieldNumber;
+const int GenerationEventProfile::kGenerationEventFieldNumber;
+const int GenerationEventProfile::kIedFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+GenerationEventProfile::GenerationEventProfile()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.GenerationEventProfile)
+  // @@protoc_insertion_point(constructor:generationmodule.GenerationEventProfile)
 }
 GenerationEventProfile::GenerationEventProfile(const GenerationEventProfile& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_eventmessageinfo()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_eventmessageinfo()) {
     eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from.eventmessageinfo_);
   } else {
     eventmessageinfo_ = nullptr;
   }
-  if (from._internal_has_generatingunit()) {
+  if (from.has_generatingunit()) {
     generatingunit_ = new ::generationmodule::GeneratingUnit(*from.generatingunit_);
   } else {
     generatingunit_ = nullptr;
   }
-  if (from._internal_has_generationevent()) {
+  if (from.has_generationevent()) {
     generationevent_ = new ::generationmodule::GenerationEvent(*from.generationevent_);
   } else {
     generationevent_ = nullptr;
+  }
+  if (from.has_ied()) {
+    ied_ = new ::commonmodule::IED(*from.ied_);
+  } else {
+    ied_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:generationmodule.GenerationEventProfile)
 }
 
 void GenerationEventProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&eventmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&generationevent_) -
-    reinterpret_cast<char*>(&eventmessageinfo_)) + sizeof(generationevent_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GenerationEventProfile_generationmodule_2fgenerationmodule_2eproto.base);
+  ::memset(&eventmessageinfo_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&ied_) -
+      reinterpret_cast<char*>(&eventmessageinfo_)) + sizeof(ied_));
 }
 
 GenerationEventProfile::~GenerationEventProfile() {
   // @@protoc_insertion_point(destructor:generationmodule.GenerationEventProfile)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void GenerationEventProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete eventmessageinfo_;
   if (this != internal_default_instance()) delete generatingunit_;
   if (this != internal_default_instance()) delete generationevent_;
+  if (this != internal_default_instance()) delete ied_;
 }
 
-void GenerationEventProfile::ArenaDtor(void* object) {
-  GenerationEventProfile* _this = reinterpret_cast< GenerationEventProfile* >(object);
-  (void)_this;
-}
-void GenerationEventProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void GenerationEventProfile::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GenerationEventProfile& GenerationEventProfile::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_GenerationEventProfile_generationmodule_2fgenerationmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GenerationEventProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:generationmodule.GenerationEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && eventmessageinfo_ != nullptr) {
     delete eventmessageinfo_;
   }
   eventmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && generatingunit_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && generatingunit_ != nullptr) {
     delete generatingunit_;
   }
   generatingunit_ = nullptr;
-  if (GetArena() == nullptr && generationevent_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && generationevent_ != nullptr) {
     delete generationevent_;
   }
   generationevent_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
+    delete ied_;
+  }
+  ied_ = nullptr;
+  _internal_metadata_.Clear();
 }
 
-const char* GenerationEventProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GenerationEventProfile::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GenerationEventProfile*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_eventmessageinfo(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::EventMessageInfo::_InternalParse;
+        object = msg->mutable_eventmessageinfo();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_generatingunit(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::generationmodule::GeneratingUnit::_InternalParse;
+        object = msg->mutable_generatingunit();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .generationmodule.GenerationEvent generationEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_generationevent(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::generationmodule::GenerationEvent::_InternalParse;
+        object = msg->mutable_generationevent();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::IED::_InternalParse;
+        object = msg->mutable_ied();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GenerationEventProfile::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:generationmodule.GenerationEventProfile)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_eventmessageinfo()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GenerationEventProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_generatingunit()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .generationmodule.GenerationEvent generationEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_generationevent()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_ied()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:generationmodule.GenerationEventProfile)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:generationmodule.GenerationEventProfile)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GenerationEventProfile::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:generationmodule.GenerationEventProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_eventmessageinfo()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::eventmessageinfo(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::eventmessageinfo(this), output);
   }
 
   // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generatingunit()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::generatingunit(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::generatingunit(this), output);
   }
 
   // .generationmodule.GenerationEvent generationEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generationevent()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::generationevent(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::generationevent(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::ied(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:generationmodule.GenerationEventProfile)
+}
+
+::google::protobuf::uint8* GenerationEventProfile::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationEventProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->has_eventmessageinfo()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::eventmessageinfo(this), target);
+  }
+
+  // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_generatingunit()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::generatingunit(this), target);
+  }
+
+  // .generationmodule.GenerationEvent generationEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_generationevent()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::generationevent(this), target);
+  }
+
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::ied(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:generationmodule.GenerationEventProfile)
   return target;
@@ -7127,49 +7861,57 @@ size_t GenerationEventProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:generationmodule.GenerationEventProfile)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_eventmessageinfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *eventmessageinfo_);
   }
 
   // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generatingunit()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *generatingunit_);
   }
 
   // .generationmodule.GenerationEvent generationEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generationevent()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *generationevent_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *ied_);
   }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void GenerationEventProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationEventProfile::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:generationmodule.GenerationEventProfile)
   GOOGLE_DCHECK_NE(&from, this);
   const GenerationEventProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GenerationEventProfile>(
+      ::google::protobuf::DynamicCastToGenerated<GenerationEventProfile>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.GenerationEventProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.GenerationEventProfile)
     MergeFrom(*source);
@@ -7179,22 +7921,25 @@ void GenerationEventProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& f
 void GenerationEventProfile::MergeFrom(const GenerationEventProfile& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.GenerationEventProfile)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_eventmessageinfo()) {
-    _internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(from._internal_eventmessageinfo());
+    mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(from.eventmessageinfo());
   }
   if (from.has_generatingunit()) {
-    _internal_mutable_generatingunit()->::generationmodule::GeneratingUnit::MergeFrom(from._internal_generatingunit());
+    mutable_generatingunit()->::generationmodule::GeneratingUnit::MergeFrom(from.generatingunit());
   }
   if (from.has_generationevent()) {
-    _internal_mutable_generationevent()->::generationmodule::GenerationEvent::MergeFrom(from._internal_generationevent());
+    mutable_generationevent()->::generationmodule::GenerationEvent::MergeFrom(from.generationevent());
+  }
+  if (from.has_ied()) {
+    mutable_ied()->::commonmodule::IED::MergeFrom(from.ied());
   }
 }
 
-void GenerationEventProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationEventProfile::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:generationmodule.GenerationEventProfile)
   if (&from == this) return;
   Clear();
@@ -7212,43 +7957,54 @@ bool GenerationEventProfile::IsInitialized() const {
   return true;
 }
 
+void GenerationEventProfile::Swap(GenerationEventProfile* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void GenerationEventProfile::InternalSwap(GenerationEventProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GenerationEventProfile, generationevent_)
-      + sizeof(GenerationEventProfile::generationevent_)
-      - PROTOBUF_FIELD_OFFSET(GenerationEventProfile, eventmessageinfo_)>(
-          reinterpret_cast<char*>(&eventmessageinfo_),
-          reinterpret_cast<char*>(&other->eventmessageinfo_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(eventmessageinfo_, other->eventmessageinfo_);
+  swap(generatingunit_, other->generatingunit_);
+  swap(generationevent_, other->generationevent_);
+  swap(ied_, other->ied_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GenerationEventProfile::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata GenerationEventProfile::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_generationmodule_2fgenerationmodule_2eproto);
+  return ::file_level_metadata_generationmodule_2fgenerationmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class GenerationStatusZGEN::_Internal {
+void GenerationStatusZGEN::InitAsDefaultInstance() {
+  ::generationmodule::_GenerationStatusZGEN_default_instance_._instance.get_mutable()->generationeventandstatuszgen_ = const_cast< ::generationmodule::GenerationEventAndStatusZGEN*>(
+      ::generationmodule::GenerationEventAndStatusZGEN::internal_default_instance());
+}
+class GenerationStatusZGEN::HasBitSetters {
  public:
   static const ::generationmodule::GenerationEventAndStatusZGEN& generationeventandstatuszgen(const GenerationStatusZGEN* msg);
 };
 
 const ::generationmodule::GenerationEventAndStatusZGEN&
-GenerationStatusZGEN::_Internal::generationeventandstatuszgen(const GenerationStatusZGEN* msg) {
+GenerationStatusZGEN::HasBitSetters::generationeventandstatuszgen(const GenerationStatusZGEN* msg) {
   return *msg->generationeventandstatuszgen_;
 }
-GenerationStatusZGEN::GenerationStatusZGEN(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int GenerationStatusZGEN::kGenerationEventAndStatusZGENFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+GenerationStatusZGEN::GenerationStatusZGEN()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.GenerationStatusZGEN)
+  // @@protoc_insertion_point(constructor:generationmodule.GenerationStatusZGEN)
 }
 GenerationStatusZGEN::GenerationStatusZGEN(const GenerationStatusZGEN& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_generationeventandstatuszgen()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_generationeventandstatuszgen()) {
     generationeventandstatuszgen_ = new ::generationmodule::GenerationEventAndStatusZGEN(*from.generationeventandstatuszgen_);
   } else {
     generationeventandstatuszgen_ = nullptr;
@@ -7257,96 +8013,165 @@ GenerationStatusZGEN::GenerationStatusZGEN(const GenerationStatusZGEN& from)
 }
 
 void GenerationStatusZGEN::SharedCtor() {
-generationeventandstatuszgen_ = nullptr;
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GenerationStatusZGEN_generationmodule_2fgenerationmodule_2eproto.base);
+  generationeventandstatuszgen_ = nullptr;
 }
 
 GenerationStatusZGEN::~GenerationStatusZGEN() {
   // @@protoc_insertion_point(destructor:generationmodule.GenerationStatusZGEN)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void GenerationStatusZGEN::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete generationeventandstatuszgen_;
 }
 
-void GenerationStatusZGEN::ArenaDtor(void* object) {
-  GenerationStatusZGEN* _this = reinterpret_cast< GenerationStatusZGEN* >(object);
-  (void)_this;
-}
-void GenerationStatusZGEN::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void GenerationStatusZGEN::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GenerationStatusZGEN& GenerationStatusZGEN::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_GenerationStatusZGEN_generationmodule_2fgenerationmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GenerationStatusZGEN::Clear() {
 // @@protoc_insertion_point(message_clear_start:generationmodule.GenerationStatusZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && generationeventandstatuszgen_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && generationeventandstatuszgen_ != nullptr) {
     delete generationeventandstatuszgen_;
   }
   generationeventandstatuszgen_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* GenerationStatusZGEN::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GenerationStatusZGEN::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GenerationStatusZGEN*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .generationmodule.GenerationEventAndStatusZGEN generationEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_generationeventandstatuszgen(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::generationmodule::GenerationEventAndStatusZGEN::_InternalParse;
+        object = msg->mutable_generationeventandstatuszgen();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GenerationStatusZGEN::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:generationmodule.GenerationStatusZGEN)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .generationmodule.GenerationEventAndStatusZGEN generationEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_generationeventandstatuszgen()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GenerationStatusZGEN::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationStatusZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:generationmodule.GenerationStatusZGEN)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:generationmodule.GenerationStatusZGEN)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GenerationStatusZGEN::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:generationmodule.GenerationStatusZGEN)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .generationmodule.GenerationEventAndStatusZGEN generationEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
   if (this->has_generationeventandstatuszgen()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::generationeventandstatuszgen(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::generationeventandstatuszgen(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:generationmodule.GenerationStatusZGEN)
+}
+
+::google::protobuf::uint8* GenerationStatusZGEN::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationStatusZGEN)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .generationmodule.GenerationEventAndStatusZGEN generationEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
+  if (this->has_generationeventandstatuszgen()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::generationeventandstatuszgen(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:generationmodule.GenerationStatusZGEN)
   return target;
@@ -7356,35 +8181,36 @@ size_t GenerationStatusZGEN::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:generationmodule.GenerationStatusZGEN)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .generationmodule.GenerationEventAndStatusZGEN generationEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
   if (this->has_generationeventandstatuszgen()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *generationeventandstatuszgen_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void GenerationStatusZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationStatusZGEN::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:generationmodule.GenerationStatusZGEN)
   GOOGLE_DCHECK_NE(&from, this);
   const GenerationStatusZGEN* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GenerationStatusZGEN>(
+      ::google::protobuf::DynamicCastToGenerated<GenerationStatusZGEN>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.GenerationStatusZGEN)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.GenerationStatusZGEN)
     MergeFrom(*source);
@@ -7394,16 +8220,16 @@ void GenerationStatusZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& fro
 void GenerationStatusZGEN::MergeFrom(const GenerationStatusZGEN& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.GenerationStatusZGEN)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_generationeventandstatuszgen()) {
-    _internal_mutable_generationeventandstatuszgen()->::generationmodule::GenerationEventAndStatusZGEN::MergeFrom(from._internal_generationeventandstatuszgen());
+    mutable_generationeventandstatuszgen()->::generationmodule::GenerationEventAndStatusZGEN::MergeFrom(from.generationeventandstatuszgen());
   }
 }
 
-void GenerationStatusZGEN::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationStatusZGEN::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:generationmodule.GenerationStatusZGEN)
   if (&from == this) return;
   Clear();
@@ -7421,54 +8247,70 @@ bool GenerationStatusZGEN::IsInitialized() const {
   return true;
 }
 
+void GenerationStatusZGEN::Swap(GenerationStatusZGEN* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void GenerationStatusZGEN::InternalSwap(GenerationStatusZGEN* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(generationeventandstatuszgen_, other->generationeventandstatuszgen_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GenerationStatusZGEN::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata GenerationStatusZGEN::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_generationmodule_2fgenerationmodule_2eproto);
+  return ::file_level_metadata_generationmodule_2fgenerationmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class GenerationStatus::_Internal {
+void GenerationStatus::InitAsDefaultInstance() {
+  ::generationmodule::_GenerationStatus_default_instance_._instance.get_mutable()->statusvalue_ = const_cast< ::commonmodule::StatusValue*>(
+      ::commonmodule::StatusValue::internal_default_instance());
+  ::generationmodule::_GenerationStatus_default_instance_._instance.get_mutable()->generationstatuszgen_ = const_cast< ::generationmodule::GenerationStatusZGEN*>(
+      ::generationmodule::GenerationStatusZGEN::internal_default_instance());
+}
+class GenerationStatus::HasBitSetters {
  public:
   static const ::commonmodule::StatusValue& statusvalue(const GenerationStatus* msg);
   static const ::generationmodule::GenerationStatusZGEN& generationstatuszgen(const GenerationStatus* msg);
 };
 
 const ::commonmodule::StatusValue&
-GenerationStatus::_Internal::statusvalue(const GenerationStatus* msg) {
+GenerationStatus::HasBitSetters::statusvalue(const GenerationStatus* msg) {
   return *msg->statusvalue_;
 }
 const ::generationmodule::GenerationStatusZGEN&
-GenerationStatus::_Internal::generationstatuszgen(const GenerationStatus* msg) {
+GenerationStatus::HasBitSetters::generationstatuszgen(const GenerationStatus* msg) {
   return *msg->generationstatuszgen_;
 }
 void GenerationStatus::clear_statusvalue() {
-  if (GetArena() == nullptr && statusvalue_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && statusvalue_ != nullptr) {
     delete statusvalue_;
   }
   statusvalue_ = nullptr;
 }
-GenerationStatus::GenerationStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int GenerationStatus::kStatusValueFieldNumber;
+const int GenerationStatus::kGenerationStatusZGENFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+GenerationStatus::GenerationStatus()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.GenerationStatus)
+  // @@protoc_insertion_point(constructor:generationmodule.GenerationStatus)
 }
 GenerationStatus::GenerationStatus(const GenerationStatus& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_statusvalue()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_statusvalue()) {
     statusvalue_ = new ::commonmodule::StatusValue(*from.statusvalue_);
   } else {
     statusvalue_ = nullptr;
   }
-  if (from._internal_has_generationstatuszgen()) {
+  if (from.has_generationstatuszgen()) {
     generationstatuszgen_ = new ::generationmodule::GenerationStatusZGEN(*from.generationstatuszgen_);
   } else {
     generationstatuszgen_ = nullptr;
@@ -7477,119 +8319,209 @@ GenerationStatus::GenerationStatus(const GenerationStatus& from)
 }
 
 void GenerationStatus::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&statusvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&generationstatuszgen_) -
-    reinterpret_cast<char*>(&statusvalue_)) + sizeof(generationstatuszgen_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GenerationStatus_generationmodule_2fgenerationmodule_2eproto.base);
+  ::memset(&statusvalue_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&generationstatuszgen_) -
+      reinterpret_cast<char*>(&statusvalue_)) + sizeof(generationstatuszgen_));
 }
 
 GenerationStatus::~GenerationStatus() {
   // @@protoc_insertion_point(destructor:generationmodule.GenerationStatus)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void GenerationStatus::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete statusvalue_;
   if (this != internal_default_instance()) delete generationstatuszgen_;
 }
 
-void GenerationStatus::ArenaDtor(void* object) {
-  GenerationStatus* _this = reinterpret_cast< GenerationStatus* >(object);
-  (void)_this;
-}
-void GenerationStatus::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void GenerationStatus::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GenerationStatus& GenerationStatus::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_GenerationStatus_generationmodule_2fgenerationmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GenerationStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:generationmodule.GenerationStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && statusvalue_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && statusvalue_ != nullptr) {
     delete statusvalue_;
   }
   statusvalue_ = nullptr;
-  if (GetArena() == nullptr && generationstatuszgen_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && generationstatuszgen_ != nullptr) {
     delete generationstatuszgen_;
   }
   generationstatuszgen_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  _internal_metadata_.Clear();
 }
 
-const char* GenerationStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GenerationStatus::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GenerationStatus*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_statusvalue(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .generationmodule.GenerationStatusZGEN generationStatusZGEN = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_generationstatuszgen(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::StatusValue::_InternalParse;
+        object = msg->mutable_statusvalue();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .generationmodule.GenerationStatusZGEN generationStatusZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::generationmodule::GenerationStatusZGEN::_InternalParse;
+        object = msg->mutable_generationstatuszgen();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GenerationStatus::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:generationmodule.GenerationStatus)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_statusvalue()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GenerationStatus::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .generationmodule.GenerationStatusZGEN generationStatusZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_generationstatuszgen()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:generationmodule.GenerationStatus)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:generationmodule.GenerationStatus)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GenerationStatus::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:generationmodule.GenerationStatus)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_statusvalue()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::statusvalue(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::statusvalue(this), output);
   }
 
-  // .generationmodule.GenerationStatusZGEN generationStatusZGEN = 2;
+  // .generationmodule.GenerationStatusZGEN generationStatusZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generationstatuszgen()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::generationstatuszgen(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::generationstatuszgen(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:generationmodule.GenerationStatus)
+}
+
+::google::protobuf::uint8* GenerationStatus::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationStatus)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
+  if (this->has_statusvalue()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::statusvalue(this), target);
+  }
+
+  // .generationmodule.GenerationStatusZGEN generationStatusZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_generationstatuszgen()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::generationstatuszgen(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:generationmodule.GenerationStatus)
   return target;
@@ -7599,42 +8531,43 @@ size_t GenerationStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:generationmodule.GenerationStatus)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_statusvalue()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *statusvalue_);
   }
 
-  // .generationmodule.GenerationStatusZGEN generationStatusZGEN = 2;
+  // .generationmodule.GenerationStatusZGEN generationStatusZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generationstatuszgen()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *generationstatuszgen_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void GenerationStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationStatus::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:generationmodule.GenerationStatus)
   GOOGLE_DCHECK_NE(&from, this);
   const GenerationStatus* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GenerationStatus>(
+      ::google::protobuf::DynamicCastToGenerated<GenerationStatus>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.GenerationStatus)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.GenerationStatus)
     MergeFrom(*source);
@@ -7644,19 +8577,19 @@ void GenerationStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 void GenerationStatus::MergeFrom(const GenerationStatus& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.GenerationStatus)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_statusvalue()) {
-    _internal_mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(from._internal_statusvalue());
+    mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(from.statusvalue());
   }
   if (from.has_generationstatuszgen()) {
-    _internal_mutable_generationstatuszgen()->::generationmodule::GenerationStatusZGEN::MergeFrom(from._internal_generationstatuszgen());
+    mutable_generationstatuszgen()->::generationmodule::GenerationStatusZGEN::MergeFrom(from.generationstatuszgen());
   }
 }
 
-void GenerationStatus::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationStatus::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:generationmodule.GenerationStatus)
   if (&from == this) return;
   Clear();
@@ -7674,210 +8607,398 @@ bool GenerationStatus::IsInitialized() const {
   return true;
 }
 
+void GenerationStatus::Swap(GenerationStatus* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void GenerationStatus::InternalSwap(GenerationStatus* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GenerationStatus, generationstatuszgen_)
-      + sizeof(GenerationStatus::generationstatuszgen_)
-      - PROTOBUF_FIELD_OFFSET(GenerationStatus, statusvalue_)>(
-          reinterpret_cast<char*>(&statusvalue_),
-          reinterpret_cast<char*>(&other->statusvalue_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(statusvalue_, other->statusvalue_);
+  swap(generationstatuszgen_, other->generationstatuszgen_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GenerationStatus::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata GenerationStatus::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_generationmodule_2fgenerationmodule_2eproto);
+  return ::file_level_metadata_generationmodule_2fgenerationmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // ===================================================================
 
-class GenerationStatusProfile::_Internal {
+void GenerationStatusProfile::InitAsDefaultInstance() {
+  ::generationmodule::_GenerationStatusProfile_default_instance_._instance.get_mutable()->statusmessageinfo_ = const_cast< ::commonmodule::StatusMessageInfo*>(
+      ::commonmodule::StatusMessageInfo::internal_default_instance());
+  ::generationmodule::_GenerationStatusProfile_default_instance_._instance.get_mutable()->generatingunit_ = const_cast< ::generationmodule::GeneratingUnit*>(
+      ::generationmodule::GeneratingUnit::internal_default_instance());
+  ::generationmodule::_GenerationStatusProfile_default_instance_._instance.get_mutable()->generationstatus_ = const_cast< ::generationmodule::GenerationStatus*>(
+      ::generationmodule::GenerationStatus::internal_default_instance());
+  ::generationmodule::_GenerationStatusProfile_default_instance_._instance.get_mutable()->ied_ = const_cast< ::commonmodule::IED*>(
+      ::commonmodule::IED::internal_default_instance());
+}
+class GenerationStatusProfile::HasBitSetters {
  public:
   static const ::commonmodule::StatusMessageInfo& statusmessageinfo(const GenerationStatusProfile* msg);
   static const ::generationmodule::GeneratingUnit& generatingunit(const GenerationStatusProfile* msg);
   static const ::generationmodule::GenerationStatus& generationstatus(const GenerationStatusProfile* msg);
+  static const ::commonmodule::IED& ied(const GenerationStatusProfile* msg);
 };
 
 const ::commonmodule::StatusMessageInfo&
-GenerationStatusProfile::_Internal::statusmessageinfo(const GenerationStatusProfile* msg) {
+GenerationStatusProfile::HasBitSetters::statusmessageinfo(const GenerationStatusProfile* msg) {
   return *msg->statusmessageinfo_;
 }
 const ::generationmodule::GeneratingUnit&
-GenerationStatusProfile::_Internal::generatingunit(const GenerationStatusProfile* msg) {
+GenerationStatusProfile::HasBitSetters::generatingunit(const GenerationStatusProfile* msg) {
   return *msg->generatingunit_;
 }
 const ::generationmodule::GenerationStatus&
-GenerationStatusProfile::_Internal::generationstatus(const GenerationStatusProfile* msg) {
+GenerationStatusProfile::HasBitSetters::generationstatus(const GenerationStatusProfile* msg) {
   return *msg->generationstatus_;
 }
+const ::commonmodule::IED&
+GenerationStatusProfile::HasBitSetters::ied(const GenerationStatusProfile* msg) {
+  return *msg->ied_;
+}
 void GenerationStatusProfile::clear_statusmessageinfo() {
-  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && statusmessageinfo_ != nullptr) {
     delete statusmessageinfo_;
   }
   statusmessageinfo_ = nullptr;
 }
-GenerationStatusProfile::GenerationStatusProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+void GenerationStatusProfile::clear_ied() {
+  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
+    delete ied_;
+  }
+  ied_ = nullptr;
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int GenerationStatusProfile::kStatusMessageInfoFieldNumber;
+const int GenerationStatusProfile::kGeneratingUnitFieldNumber;
+const int GenerationStatusProfile::kGenerationStatusFieldNumber;
+const int GenerationStatusProfile::kIedFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+GenerationStatusProfile::GenerationStatusProfile()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:generationmodule.GenerationStatusProfile)
+  // @@protoc_insertion_point(constructor:generationmodule.GenerationStatusProfile)
 }
 GenerationStatusProfile::GenerationStatusProfile(const GenerationStatusProfile& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_statusmessageinfo()) {
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_statusmessageinfo()) {
     statusmessageinfo_ = new ::commonmodule::StatusMessageInfo(*from.statusmessageinfo_);
   } else {
     statusmessageinfo_ = nullptr;
   }
-  if (from._internal_has_generatingunit()) {
+  if (from.has_generatingunit()) {
     generatingunit_ = new ::generationmodule::GeneratingUnit(*from.generatingunit_);
   } else {
     generatingunit_ = nullptr;
   }
-  if (from._internal_has_generationstatus()) {
+  if (from.has_generationstatus()) {
     generationstatus_ = new ::generationmodule::GenerationStatus(*from.generationstatus_);
   } else {
     generationstatus_ = nullptr;
+  }
+  if (from.has_ied()) {
+    ied_ = new ::commonmodule::IED(*from.ied_);
+  } else {
+    ied_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:generationmodule.GenerationStatusProfile)
 }
 
 void GenerationStatusProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&statusmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&generationstatus_) -
-    reinterpret_cast<char*>(&statusmessageinfo_)) + sizeof(generationstatus_));
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_GenerationStatusProfile_generationmodule_2fgenerationmodule_2eproto.base);
+  ::memset(&statusmessageinfo_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&ied_) -
+      reinterpret_cast<char*>(&statusmessageinfo_)) + sizeof(ied_));
 }
 
 GenerationStatusProfile::~GenerationStatusProfile() {
   // @@protoc_insertion_point(destructor:generationmodule.GenerationStatusProfile)
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void GenerationStatusProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete statusmessageinfo_;
   if (this != internal_default_instance()) delete generatingunit_;
   if (this != internal_default_instance()) delete generationstatus_;
+  if (this != internal_default_instance()) delete ied_;
 }
 
-void GenerationStatusProfile::ArenaDtor(void* object) {
-  GenerationStatusProfile* _this = reinterpret_cast< GenerationStatusProfile* >(object);
-  (void)_this;
-}
-void GenerationStatusProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void GenerationStatusProfile::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
+const GenerationStatusProfile& GenerationStatusProfile::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_GenerationStatusProfile_generationmodule_2fgenerationmodule_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void GenerationStatusProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:generationmodule.GenerationStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && statusmessageinfo_ != nullptr) {
     delete statusmessageinfo_;
   }
   statusmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && generatingunit_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && generatingunit_ != nullptr) {
     delete generatingunit_;
   }
   generatingunit_ = nullptr;
-  if (GetArena() == nullptr && generationstatus_ != nullptr) {
+  if (GetArenaNoVirtual() == nullptr && generationstatus_ != nullptr) {
     delete generationstatus_;
   }
   generationstatus_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
+    delete ied_;
+  }
+  ied_ = nullptr;
+  _internal_metadata_.Clear();
 }
 
-const char* GenerationStatusProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* GenerationStatusProfile::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<GenerationStatusProfile*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
       // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_statusmessageinfo(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::StatusMessageInfo::_InternalParse;
+        object = msg->mutable_statusmessageinfo();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_generatingunit(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::generationmodule::GeneratingUnit::_InternalParse;
+        object = msg->mutable_generatingunit();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       // .generationmodule.GenerationStatus generationStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_generationstatus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::generationmodule::GenerationStatus::_InternalParse;
+        object = msg->mutable_generationstatus();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::commonmodule::IED::_InternalParse;
+        object = msg->mutable_ied();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+          ctx->EndGroup(tag);
+          return ptr;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
       }
     }  // switch
   }  // while
-success:
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
 }
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool GenerationStatusProfile::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:generationmodule.GenerationStatusProfile)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_statusmessageinfo()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GenerationStatusProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+      // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_generatingunit()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .generationmodule.GenerationStatus generationStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_generationstatus()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_ied()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:generationmodule.GenerationStatusProfile)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:generationmodule.GenerationStatusProfile)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void GenerationStatusProfile::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:generationmodule.GenerationStatusProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_statusmessageinfo()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::statusmessageinfo(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::statusmessageinfo(this), output);
   }
 
   // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generatingunit()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::generatingunit(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::generatingunit(this), output);
   }
 
   // .generationmodule.GenerationStatus generationStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generationstatus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::generationstatus(this), target, stream);
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, HasBitSetters::generationstatus(this), output);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::ied(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:generationmodule.GenerationStatusProfile)
+}
+
+::google::protobuf::uint8* GenerationStatusProfile::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:generationmodule.GenerationStatusProfile)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->has_statusmessageinfo()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::statusmessageinfo(this), target);
+  }
+
+  // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_generatingunit()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::generatingunit(this), target);
+  }
+
+  // .generationmodule.GenerationStatus generationStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_generationstatus()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        3, HasBitSetters::generationstatus(this), target);
+  }
+
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::ied(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:generationmodule.GenerationStatusProfile)
   return target;
@@ -7887,49 +9008,57 @@ size_t GenerationStatusProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:generationmodule.GenerationStatusProfile)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_statusmessageinfo()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *statusmessageinfo_);
   }
 
   // .generationmodule.GeneratingUnit generatingUnit = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generatingunit()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *generatingunit_);
   }
 
   // .generationmodule.GenerationStatus generationStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_generationstatus()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
         *generationstatus_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
+  // .commonmodule.IED ied = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->has_ied()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *ied_);
   }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void GenerationStatusProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationStatusProfile::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:generationmodule.GenerationStatusProfile)
   GOOGLE_DCHECK_NE(&from, this);
   const GenerationStatusProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GenerationStatusProfile>(
+      ::google::protobuf::DynamicCastToGenerated<GenerationStatusProfile>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:generationmodule.GenerationStatusProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:generationmodule.GenerationStatusProfile)
     MergeFrom(*source);
@@ -7939,22 +9068,25 @@ void GenerationStatusProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& 
 void GenerationStatusProfile::MergeFrom(const GenerationStatusProfile& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:generationmodule.GenerationStatusProfile)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_statusmessageinfo()) {
-    _internal_mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(from._internal_statusmessageinfo());
+    mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(from.statusmessageinfo());
   }
   if (from.has_generatingunit()) {
-    _internal_mutable_generatingunit()->::generationmodule::GeneratingUnit::MergeFrom(from._internal_generatingunit());
+    mutable_generatingunit()->::generationmodule::GeneratingUnit::MergeFrom(from.generatingunit());
   }
   if (from.has_generationstatus()) {
-    _internal_mutable_generationstatus()->::generationmodule::GenerationStatus::MergeFrom(from._internal_generationstatus());
+    mutable_generationstatus()->::generationmodule::GenerationStatus::MergeFrom(from.generationstatus());
+  }
+  if (from.has_ied()) {
+    mutable_ied()->::commonmodule::IED::MergeFrom(from.ied());
   }
 }
 
-void GenerationStatusProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+void GenerationStatusProfile::CopyFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:generationmodule.GenerationStatusProfile)
   if (&from == this) return;
   Clear();
@@ -7972,92 +9104,82 @@ bool GenerationStatusProfile::IsInitialized() const {
   return true;
 }
 
+void GenerationStatusProfile::Swap(GenerationStatusProfile* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
 void GenerationStatusProfile::InternalSwap(GenerationStatusProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GenerationStatusProfile, generationstatus_)
-      + sizeof(GenerationStatusProfile::generationstatus_)
-      - PROTOBUF_FIELD_OFFSET(GenerationStatusProfile, statusmessageinfo_)>(
-          reinterpret_cast<char*>(&statusmessageinfo_),
-          reinterpret_cast<char*>(&other->statusmessageinfo_));
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(statusmessageinfo_, other->statusmessageinfo_);
+  swap(generatingunit_, other->generatingunit_);
+  swap(generationstatus_, other->generationstatus_);
+  swap(ied_, other->ied_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GenerationStatusProfile::GetMetadata() const {
-  return GetMetadataStatic();
+::google::protobuf::Metadata GenerationStatusProfile::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_generationmodule_2fgenerationmodule_2eproto);
+  return ::file_level_metadata_generationmodule_2fgenerationmodule_2eproto[kIndexInFileMessages];
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace generationmodule
-PROTOBUF_NAMESPACE_OPEN
+namespace google {
+namespace protobuf {
 template<> PROTOBUF_NOINLINE ::generationmodule::GenerationPoint* Arena::CreateMaybeMessage< ::generationmodule::GenerationPoint >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::GenerationPoint >(arena);
+  return Arena::CreateInternal< ::generationmodule::GenerationPoint >(arena);
 }
 template<> PROTOBUF_NOINLINE ::generationmodule::GenerationCSG* Arena::CreateMaybeMessage< ::generationmodule::GenerationCSG >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::GenerationCSG >(arena);
+  return Arena::CreateInternal< ::generationmodule::GenerationCSG >(arena);
 }
 template<> PROTOBUF_NOINLINE ::generationmodule::GenerationControlScheduleFSCH* Arena::CreateMaybeMessage< ::generationmodule::GenerationControlScheduleFSCH >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::GenerationControlScheduleFSCH >(arena);
+  return Arena::CreateInternal< ::generationmodule::GenerationControlScheduleFSCH >(arena);
 }
 template<> PROTOBUF_NOINLINE ::generationmodule::GenerationControlFSCC* Arena::CreateMaybeMessage< ::generationmodule::GenerationControlFSCC >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::GenerationControlFSCC >(arena);
+  return Arena::CreateInternal< ::generationmodule::GenerationControlFSCC >(arena);
 }
 template<> PROTOBUF_NOINLINE ::generationmodule::GenerationControl* Arena::CreateMaybeMessage< ::generationmodule::GenerationControl >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::GenerationControl >(arena);
+  return Arena::CreateInternal< ::generationmodule::GenerationControl >(arena);
 }
 template<> PROTOBUF_NOINLINE ::generationmodule::GeneratingUnit* Arena::CreateMaybeMessage< ::generationmodule::GeneratingUnit >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::GeneratingUnit >(arena);
+  return Arena::CreateInternal< ::generationmodule::GeneratingUnit >(arena);
 }
 template<> PROTOBUF_NOINLINE ::generationmodule::GenerationControlProfile* Arena::CreateMaybeMessage< ::generationmodule::GenerationControlProfile >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::GenerationControlProfile >(arena);
-}
-template<> PROTOBUF_NOINLINE ::generationmodule::DroopParameter* Arena::CreateMaybeMessage< ::generationmodule::DroopParameter >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::DroopParameter >(arena);
-}
-template<> PROTOBUF_NOINLINE ::generationmodule::RealPowerControl* Arena::CreateMaybeMessage< ::generationmodule::RealPowerControl >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::RealPowerControl >(arena);
-}
-template<> PROTOBUF_NOINLINE ::generationmodule::ReactivePowerControl* Arena::CreateMaybeMessage< ::generationmodule::ReactivePowerControl >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::ReactivePowerControl >(arena);
-}
-template<> PROTOBUF_NOINLINE ::generationmodule::GenerationDiscreteControl* Arena::CreateMaybeMessage< ::generationmodule::GenerationDiscreteControl >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::GenerationDiscreteControl >(arena);
-}
-template<> PROTOBUF_NOINLINE ::generationmodule::GenerationDiscreteControlProfile* Arena::CreateMaybeMessage< ::generationmodule::GenerationDiscreteControlProfile >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::GenerationDiscreteControlProfile >(arena);
+  return Arena::CreateInternal< ::generationmodule::GenerationControlProfile >(arena);
 }
 template<> PROTOBUF_NOINLINE ::generationmodule::GenerationReading* Arena::CreateMaybeMessage< ::generationmodule::GenerationReading >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::GenerationReading >(arena);
+  return Arena::CreateInternal< ::generationmodule::GenerationReading >(arena);
 }
 template<> PROTOBUF_NOINLINE ::generationmodule::GenerationReadingProfile* Arena::CreateMaybeMessage< ::generationmodule::GenerationReadingProfile >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::GenerationReadingProfile >(arena);
+  return Arena::CreateInternal< ::generationmodule::GenerationReadingProfile >(arena);
 }
 template<> PROTOBUF_NOINLINE ::generationmodule::GenerationPointStatus* Arena::CreateMaybeMessage< ::generationmodule::GenerationPointStatus >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::GenerationPointStatus >(arena);
+  return Arena::CreateInternal< ::generationmodule::GenerationPointStatus >(arena);
 }
 template<> PROTOBUF_NOINLINE ::generationmodule::GenerationEventAndStatusZGEN* Arena::CreateMaybeMessage< ::generationmodule::GenerationEventAndStatusZGEN >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::GenerationEventAndStatusZGEN >(arena);
+  return Arena::CreateInternal< ::generationmodule::GenerationEventAndStatusZGEN >(arena);
 }
 template<> PROTOBUF_NOINLINE ::generationmodule::GenerationEventZGEN* Arena::CreateMaybeMessage< ::generationmodule::GenerationEventZGEN >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::GenerationEventZGEN >(arena);
+  return Arena::CreateInternal< ::generationmodule::GenerationEventZGEN >(arena);
 }
 template<> PROTOBUF_NOINLINE ::generationmodule::GenerationEvent* Arena::CreateMaybeMessage< ::generationmodule::GenerationEvent >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::GenerationEvent >(arena);
+  return Arena::CreateInternal< ::generationmodule::GenerationEvent >(arena);
 }
 template<> PROTOBUF_NOINLINE ::generationmodule::GenerationEventProfile* Arena::CreateMaybeMessage< ::generationmodule::GenerationEventProfile >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::GenerationEventProfile >(arena);
+  return Arena::CreateInternal< ::generationmodule::GenerationEventProfile >(arena);
 }
 template<> PROTOBUF_NOINLINE ::generationmodule::GenerationStatusZGEN* Arena::CreateMaybeMessage< ::generationmodule::GenerationStatusZGEN >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::GenerationStatusZGEN >(arena);
+  return Arena::CreateInternal< ::generationmodule::GenerationStatusZGEN >(arena);
 }
 template<> PROTOBUF_NOINLINE ::generationmodule::GenerationStatus* Arena::CreateMaybeMessage< ::generationmodule::GenerationStatus >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::GenerationStatus >(arena);
+  return Arena::CreateInternal< ::generationmodule::GenerationStatus >(arena);
 }
 template<> PROTOBUF_NOINLINE ::generationmodule::GenerationStatusProfile* Arena::CreateMaybeMessage< ::generationmodule::GenerationStatusProfile >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::generationmodule::GenerationStatusProfile >(arena);
+  return Arena::CreateInternal< ::generationmodule::GenerationStatusProfile >(arena);
 }
-PROTOBUF_NAMESPACE_CLOSE
+}  // namespace protobuf
+}  // namespace google
 
 // @@protoc_insertion_point(global_scope)
 #include <google/protobuf/port_undef.inc>
