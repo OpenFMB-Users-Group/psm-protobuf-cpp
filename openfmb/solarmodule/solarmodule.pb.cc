@@ -5,10 +5,9 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
@@ -16,427 +15,258 @@
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_ControlDPC_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_ControlTimestamp_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Optional_StateKind_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_CheckConditions_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ConductingEquipmentTerminalReading_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ConductingEquipment_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ControlMessageInfo_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ENG_GridConnectModeKind_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_EventMessageInfo_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_EventValue_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_IED_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_PhaseMMTN_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_RampRate_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ReadingMessageInfo_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_StatusMessageInfo_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_StatusValue_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_ControlFSCC_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_ControlValue_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_ENS_DynamicTestKind_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_ReadingMMTR_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_StatusSPS_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_LogicalNodeForEventAndStatus_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commonmodule_2fcommonmodule_2eproto ::google::protobuf::internal::SCCInfo<6> scc_info_ReadingMMXU_commonmodule_2fcommonmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_google_2fprotobuf_2fwrappers_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_FloatValue_google_2fprotobuf_2fwrappers_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_solarmodule_2fsolarmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_SolarCSG_solarmodule_2fsolarmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_solarmodule_2fsolarmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_SolarControlScheduleFSCH_solarmodule_2fsolarmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_solarmodule_2fsolarmodule_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_SolarInverter_solarmodule_2fsolarmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_solarmodule_2fsolarmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_SolarControlFSCC_solarmodule_2fsolarmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_solarmodule_2fsolarmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_SolarEventZGEN_solarmodule_2fsolarmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_solarmodule_2fsolarmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_SolarEvent_solarmodule_2fsolarmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_solarmodule_2fsolarmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_SolarStatusZGEN_solarmodule_2fsolarmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_solarmodule_2fsolarmodule_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_SolarStatus_solarmodule_2fsolarmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_solarmodule_2fsolarmodule_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_SolarControl_solarmodule_2fsolarmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_solarmodule_2fsolarmodule_2eproto ::google::protobuf::internal::SCCInfo<4> scc_info_SolarEventAndStatusZGEN_solarmodule_2fsolarmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_solarmodule_2fsolarmodule_2eproto ::google::protobuf::internal::SCCInfo<4> scc_info_SolarReading_solarmodule_2fsolarmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_solarmodule_2fsolarmodule_2eproto ::google::protobuf::internal::SCCInfo<5> scc_info_SolarPointStatus_solarmodule_2fsolarmodule_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_solarmodule_2fsolarmodule_2eproto ::google::protobuf::internal::SCCInfo<6> scc_info_SolarPoint_solarmodule_2fsolarmodule_2eproto;
+PROTOBUF_PRAGMA_INIT_SEG
 namespace solarmodule {
-class SolarPointDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SolarPoint> _instance;
-} _SolarPoint_default_instance_;
-class SolarCSGDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SolarCSG> _instance;
-} _SolarCSG_default_instance_;
-class SolarControlScheduleFSCHDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SolarControlScheduleFSCH> _instance;
-} _SolarControlScheduleFSCH_default_instance_;
-class SolarControlFSCCDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SolarControlFSCC> _instance;
-} _SolarControlFSCC_default_instance_;
-class SolarControlDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SolarControl> _instance;
-} _SolarControl_default_instance_;
-class SolarInverterDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SolarInverter> _instance;
-} _SolarInverter_default_instance_;
-class SolarControlProfileDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SolarControlProfile> _instance;
-} _SolarControlProfile_default_instance_;
-class SolarPointStatusDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SolarPointStatus> _instance;
-} _SolarPointStatus_default_instance_;
-class SolarEventAndStatusZGENDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SolarEventAndStatusZGEN> _instance;
-} _SolarEventAndStatusZGEN_default_instance_;
-class SolarEventZGENDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SolarEventZGEN> _instance;
-} _SolarEventZGEN_default_instance_;
-class SolarEventDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SolarEvent> _instance;
-} _SolarEvent_default_instance_;
-class SolarEventProfileDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SolarEventProfile> _instance;
-} _SolarEventProfile_default_instance_;
-class SolarReadingDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SolarReading> _instance;
-} _SolarReading_default_instance_;
-class SolarReadingProfileDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SolarReadingProfile> _instance;
-} _SolarReadingProfile_default_instance_;
-class SolarStatusZGENDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SolarStatusZGEN> _instance;
-} _SolarStatusZGEN_default_instance_;
-class SolarStatusDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SolarStatus> _instance;
-} _SolarStatus_default_instance_;
-class SolarStatusProfileDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SolarStatusProfile> _instance;
-} _SolarStatusProfile_default_instance_;
+constexpr SolarPoint::SolarPoint(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : frequencysetpointenabled_(nullptr)
+  , mode_(nullptr)
+  , pcthzdroop_(nullptr)
+  , pctvdroop_(nullptr)
+  , ramprates_(nullptr)
+  , reactivepwrsetpointenabled_(nullptr)
+  , realpwrsetpointenabled_(nullptr)
+  , reset_(nullptr)
+  , state_(nullptr)
+  , voltagesetpointenabled_(nullptr)
+  , starttime_(nullptr){}
+struct SolarPointDefaultTypeInternal {
+  constexpr SolarPointDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SolarPointDefaultTypeInternal() {}
+  union {
+    SolarPoint _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarPointDefaultTypeInternal _SolarPoint_default_instance_;
+constexpr SolarCSG::SolarCSG(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : crvpts_(){}
+struct SolarCSGDefaultTypeInternal {
+  constexpr SolarCSGDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SolarCSGDefaultTypeInternal() {}
+  union {
+    SolarCSG _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarCSGDefaultTypeInternal _SolarCSG_default_instance_;
+constexpr SolarControlScheduleFSCH::SolarControlScheduleFSCH(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : valdcsg_(nullptr){}
+struct SolarControlScheduleFSCHDefaultTypeInternal {
+  constexpr SolarControlScheduleFSCHDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SolarControlScheduleFSCHDefaultTypeInternal() {}
+  union {
+    SolarControlScheduleFSCH _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarControlScheduleFSCHDefaultTypeInternal _SolarControlScheduleFSCH_default_instance_;
+constexpr SolarControlFSCC::SolarControlFSCC(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : controlfscc_(nullptr)
+  , solarcontrolschedulefsch_(nullptr){}
+struct SolarControlFSCCDefaultTypeInternal {
+  constexpr SolarControlFSCCDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SolarControlFSCCDefaultTypeInternal() {}
+  union {
+    SolarControlFSCC _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarControlFSCCDefaultTypeInternal _SolarControlFSCC_default_instance_;
+constexpr SolarControl::SolarControl(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : controlvalue_(nullptr)
+  , check_(nullptr)
+  , solarcontrolfscc_(nullptr){}
+struct SolarControlDefaultTypeInternal {
+  constexpr SolarControlDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SolarControlDefaultTypeInternal() {}
+  union {
+    SolarControl _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarControlDefaultTypeInternal _SolarControl_default_instance_;
+constexpr SolarInverter::SolarInverter(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : conductingequipment_(nullptr){}
+struct SolarInverterDefaultTypeInternal {
+  constexpr SolarInverterDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SolarInverterDefaultTypeInternal() {}
+  union {
+    SolarInverter _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarInverterDefaultTypeInternal _SolarInverter_default_instance_;
+constexpr SolarControlProfile::SolarControlProfile(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : controlmessageinfo_(nullptr)
+  , solarcontrol_(nullptr)
+  , solarinverter_(nullptr){}
+struct SolarControlProfileDefaultTypeInternal {
+  constexpr SolarControlProfileDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SolarControlProfileDefaultTypeInternal() {}
+  union {
+    SolarControlProfile _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarControlProfileDefaultTypeInternal _SolarControlProfile_default_instance_;
+constexpr SolarPointStatus::SolarPointStatus(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : frequencysetpointenabled_(nullptr)
+  , mode_(nullptr)
+  , pcthzdroop_(nullptr)
+  , pctvdroop_(nullptr)
+  , ramprates_(nullptr)
+  , reactivepwrsetpointenabled_(nullptr)
+  , realpwrsetpointenabled_(nullptr)
+  , state_(nullptr)
+  , voltagesetpointenabled_(nullptr){}
+struct SolarPointStatusDefaultTypeInternal {
+  constexpr SolarPointStatusDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SolarPointStatusDefaultTypeInternal() {}
+  union {
+    SolarPointStatus _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarPointStatusDefaultTypeInternal _SolarPointStatus_default_instance_;
+constexpr SolarEventAndStatusZGEN::SolarEventAndStatusZGEN(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : logicalnodeforeventandstatus_(nullptr)
+  , auxpwrst_(nullptr)
+  , dynamictest_(nullptr)
+  , emgstop_(nullptr)
+  , pointstatus_(nullptr){}
+struct SolarEventAndStatusZGENDefaultTypeInternal {
+  constexpr SolarEventAndStatusZGENDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SolarEventAndStatusZGENDefaultTypeInternal() {}
+  union {
+    SolarEventAndStatusZGEN _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarEventAndStatusZGENDefaultTypeInternal _SolarEventAndStatusZGEN_default_instance_;
+constexpr SolarEventZGEN::SolarEventZGEN(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : solareventandstatuszgen_(nullptr)
+  , grimod_(nullptr){}
+struct SolarEventZGENDefaultTypeInternal {
+  constexpr SolarEventZGENDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SolarEventZGENDefaultTypeInternal() {}
+  union {
+    SolarEventZGEN _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarEventZGENDefaultTypeInternal _SolarEventZGEN_default_instance_;
+constexpr SolarEvent::SolarEvent(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : eventvalue_(nullptr)
+  , solareventzgen_(nullptr){}
+struct SolarEventDefaultTypeInternal {
+  constexpr SolarEventDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SolarEventDefaultTypeInternal() {}
+  union {
+    SolarEvent _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarEventDefaultTypeInternal _SolarEvent_default_instance_;
+constexpr SolarEventProfile::SolarEventProfile(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : eventmessageinfo_(nullptr)
+  , solarevent_(nullptr)
+  , solarinverter_(nullptr){}
+struct SolarEventProfileDefaultTypeInternal {
+  constexpr SolarEventProfileDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SolarEventProfileDefaultTypeInternal() {}
+  union {
+    SolarEventProfile _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarEventProfileDefaultTypeInternal _SolarEventProfile_default_instance_;
+constexpr SolarReading::SolarReading(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : conductingequipmentterminalreading_(nullptr)
+  , phasemmtn_(nullptr)
+  , readingmmtr_(nullptr)
+  , readingmmxu_(nullptr){}
+struct SolarReadingDefaultTypeInternal {
+  constexpr SolarReadingDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SolarReadingDefaultTypeInternal() {}
+  union {
+    SolarReading _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarReadingDefaultTypeInternal _SolarReading_default_instance_;
+constexpr SolarReadingProfile::SolarReadingProfile(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : readingmessageinfo_(nullptr)
+  , solarinverter_(nullptr)
+  , solarreading_(nullptr){}
+struct SolarReadingProfileDefaultTypeInternal {
+  constexpr SolarReadingProfileDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SolarReadingProfileDefaultTypeInternal() {}
+  union {
+    SolarReadingProfile _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarReadingProfileDefaultTypeInternal _SolarReadingProfile_default_instance_;
+constexpr SolarStatusZGEN::SolarStatusZGEN(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : solareventandstatuszgen_(nullptr)
+  , grimod_(nullptr){}
+struct SolarStatusZGENDefaultTypeInternal {
+  constexpr SolarStatusZGENDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SolarStatusZGENDefaultTypeInternal() {}
+  union {
+    SolarStatusZGEN _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarStatusZGENDefaultTypeInternal _SolarStatusZGEN_default_instance_;
+constexpr SolarStatus::SolarStatus(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : statusvalue_(nullptr)
+  , solarstatuszgen_(nullptr){}
+struct SolarStatusDefaultTypeInternal {
+  constexpr SolarStatusDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SolarStatusDefaultTypeInternal() {}
+  union {
+    SolarStatus _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarStatusDefaultTypeInternal _SolarStatus_default_instance_;
+constexpr SolarStatusProfile::SolarStatusProfile(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : statusmessageinfo_(nullptr)
+  , solarinverter_(nullptr)
+  , solarstatus_(nullptr){}
+struct SolarStatusProfileDefaultTypeInternal {
+  constexpr SolarStatusProfileDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SolarStatusProfileDefaultTypeInternal() {}
+  union {
+    SolarStatusProfile _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarStatusProfileDefaultTypeInternal _SolarStatusProfile_default_instance_;
 }  // namespace solarmodule
-static void InitDefaultsSolarPoint_solarmodule_2fsolarmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_solarmodule_2fsolarmodule_2eproto[17];
+static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_solarmodule_2fsolarmodule_2eproto = nullptr;
+static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_solarmodule_2fsolarmodule_2eproto = nullptr;
 
-  {
-    void* ptr = &::solarmodule::_SolarPoint_default_instance_;
-    new (ptr) ::solarmodule::SolarPoint();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::solarmodule::SolarPoint::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<6> scc_info_SolarPoint_solarmodule_2fsolarmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 6, InitDefaultsSolarPoint_solarmodule_2fsolarmodule_2eproto}, {
-      &scc_info_ControlDPC_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_ENG_GridConnectModeKind_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_FloatValue_google_2fprotobuf_2fwrappers_2eproto.base,
-      &scc_info_RampRate_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_Optional_StateKind_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_ControlTimestamp_commonmodule_2fcommonmodule_2eproto.base,}};
-
-static void InitDefaultsSolarCSG_solarmodule_2fsolarmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::solarmodule::_SolarCSG_default_instance_;
-    new (ptr) ::solarmodule::SolarCSG();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::solarmodule::SolarCSG::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<1> scc_info_SolarCSG_solarmodule_2fsolarmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsSolarCSG_solarmodule_2fsolarmodule_2eproto}, {
-      &scc_info_SolarPoint_solarmodule_2fsolarmodule_2eproto.base,}};
-
-static void InitDefaultsSolarControlScheduleFSCH_solarmodule_2fsolarmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::solarmodule::_SolarControlScheduleFSCH_default_instance_;
-    new (ptr) ::solarmodule::SolarControlScheduleFSCH();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::solarmodule::SolarControlScheduleFSCH::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<1> scc_info_SolarControlScheduleFSCH_solarmodule_2fsolarmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsSolarControlScheduleFSCH_solarmodule_2fsolarmodule_2eproto}, {
-      &scc_info_SolarCSG_solarmodule_2fsolarmodule_2eproto.base,}};
-
-static void InitDefaultsSolarControlFSCC_solarmodule_2fsolarmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::solarmodule::_SolarControlFSCC_default_instance_;
-    new (ptr) ::solarmodule::SolarControlFSCC();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::solarmodule::SolarControlFSCC::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<2> scc_info_SolarControlFSCC_solarmodule_2fsolarmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsSolarControlFSCC_solarmodule_2fsolarmodule_2eproto}, {
-      &scc_info_ControlFSCC_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_SolarControlScheduleFSCH_solarmodule_2fsolarmodule_2eproto.base,}};
-
-static void InitDefaultsSolarControl_solarmodule_2fsolarmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::solarmodule::_SolarControl_default_instance_;
-    new (ptr) ::solarmodule::SolarControl();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::solarmodule::SolarControl::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<3> scc_info_SolarControl_solarmodule_2fsolarmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsSolarControl_solarmodule_2fsolarmodule_2eproto}, {
-      &scc_info_ControlValue_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_CheckConditions_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_SolarControlFSCC_solarmodule_2fsolarmodule_2eproto.base,}};
-
-static void InitDefaultsSolarInverter_solarmodule_2fsolarmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::solarmodule::_SolarInverter_default_instance_;
-    new (ptr) ::solarmodule::SolarInverter();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::solarmodule::SolarInverter::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<1> scc_info_SolarInverter_solarmodule_2fsolarmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsSolarInverter_solarmodule_2fsolarmodule_2eproto}, {
-      &scc_info_ConductingEquipment_commonmodule_2fcommonmodule_2eproto.base,}};
-
-static void InitDefaultsSolarControlProfile_solarmodule_2fsolarmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::solarmodule::_SolarControlProfile_default_instance_;
-    new (ptr) ::solarmodule::SolarControlProfile();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::solarmodule::SolarControlProfile::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<4> scc_info_SolarControlProfile_solarmodule_2fsolarmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsSolarControlProfile_solarmodule_2fsolarmodule_2eproto}, {
-      &scc_info_ControlMessageInfo_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_IED_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_SolarControl_solarmodule_2fsolarmodule_2eproto.base,
-      &scc_info_SolarInverter_solarmodule_2fsolarmodule_2eproto.base,}};
-
-static void InitDefaultsSolarPointStatus_solarmodule_2fsolarmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::solarmodule::_SolarPointStatus_default_instance_;
-    new (ptr) ::solarmodule::SolarPointStatus();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::solarmodule::SolarPointStatus::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<5> scc_info_SolarPointStatus_solarmodule_2fsolarmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 5, InitDefaultsSolarPointStatus_solarmodule_2fsolarmodule_2eproto}, {
-      &scc_info_ControlDPC_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_ENG_GridConnectModeKind_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_FloatValue_google_2fprotobuf_2fwrappers_2eproto.base,
-      &scc_info_RampRate_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_Optional_StateKind_commonmodule_2fcommonmodule_2eproto.base,}};
-
-static void InitDefaultsSolarEventAndStatusZGEN_solarmodule_2fsolarmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::solarmodule::_SolarEventAndStatusZGEN_default_instance_;
-    new (ptr) ::solarmodule::SolarEventAndStatusZGEN();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::solarmodule::SolarEventAndStatusZGEN::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<4> scc_info_SolarEventAndStatusZGEN_solarmodule_2fsolarmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsSolarEventAndStatusZGEN_solarmodule_2fsolarmodule_2eproto}, {
-      &scc_info_LogicalNodeForEventAndStatus_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_StatusSPS_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_ENS_DynamicTestKind_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_SolarPointStatus_solarmodule_2fsolarmodule_2eproto.base,}};
-
-static void InitDefaultsSolarEventZGEN_solarmodule_2fsolarmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::solarmodule::_SolarEventZGEN_default_instance_;
-    new (ptr) ::solarmodule::SolarEventZGEN();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::solarmodule::SolarEventZGEN::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<2> scc_info_SolarEventZGEN_solarmodule_2fsolarmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsSolarEventZGEN_solarmodule_2fsolarmodule_2eproto}, {
-      &scc_info_SolarEventAndStatusZGEN_solarmodule_2fsolarmodule_2eproto.base,
-      &scc_info_ENG_GridConnectModeKind_commonmodule_2fcommonmodule_2eproto.base,}};
-
-static void InitDefaultsSolarEvent_solarmodule_2fsolarmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::solarmodule::_SolarEvent_default_instance_;
-    new (ptr) ::solarmodule::SolarEvent();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::solarmodule::SolarEvent::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<2> scc_info_SolarEvent_solarmodule_2fsolarmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsSolarEvent_solarmodule_2fsolarmodule_2eproto}, {
-      &scc_info_EventValue_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_SolarEventZGEN_solarmodule_2fsolarmodule_2eproto.base,}};
-
-static void InitDefaultsSolarEventProfile_solarmodule_2fsolarmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::solarmodule::_SolarEventProfile_default_instance_;
-    new (ptr) ::solarmodule::SolarEventProfile();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::solarmodule::SolarEventProfile::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<4> scc_info_SolarEventProfile_solarmodule_2fsolarmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsSolarEventProfile_solarmodule_2fsolarmodule_2eproto}, {
-      &scc_info_EventMessageInfo_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_IED_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_SolarEvent_solarmodule_2fsolarmodule_2eproto.base,
-      &scc_info_SolarInverter_solarmodule_2fsolarmodule_2eproto.base,}};
-
-static void InitDefaultsSolarReading_solarmodule_2fsolarmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::solarmodule::_SolarReading_default_instance_;
-    new (ptr) ::solarmodule::SolarReading();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::solarmodule::SolarReading::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<4> scc_info_SolarReading_solarmodule_2fsolarmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsSolarReading_solarmodule_2fsolarmodule_2eproto}, {
-      &scc_info_ConductingEquipmentTerminalReading_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_PhaseMMTN_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_ReadingMMTR_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_ReadingMMXU_commonmodule_2fcommonmodule_2eproto.base,}};
-
-static void InitDefaultsSolarReadingProfile_solarmodule_2fsolarmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::solarmodule::_SolarReadingProfile_default_instance_;
-    new (ptr) ::solarmodule::SolarReadingProfile();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::solarmodule::SolarReadingProfile::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<4> scc_info_SolarReadingProfile_solarmodule_2fsolarmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsSolarReadingProfile_solarmodule_2fsolarmodule_2eproto}, {
-      &scc_info_ReadingMessageInfo_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_IED_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_SolarInverter_solarmodule_2fsolarmodule_2eproto.base,
-      &scc_info_SolarReading_solarmodule_2fsolarmodule_2eproto.base,}};
-
-static void InitDefaultsSolarStatusZGEN_solarmodule_2fsolarmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::solarmodule::_SolarStatusZGEN_default_instance_;
-    new (ptr) ::solarmodule::SolarStatusZGEN();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::solarmodule::SolarStatusZGEN::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<2> scc_info_SolarStatusZGEN_solarmodule_2fsolarmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsSolarStatusZGEN_solarmodule_2fsolarmodule_2eproto}, {
-      &scc_info_SolarEventAndStatusZGEN_solarmodule_2fsolarmodule_2eproto.base,
-      &scc_info_ENG_GridConnectModeKind_commonmodule_2fcommonmodule_2eproto.base,}};
-
-static void InitDefaultsSolarStatus_solarmodule_2fsolarmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::solarmodule::_SolarStatus_default_instance_;
-    new (ptr) ::solarmodule::SolarStatus();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::solarmodule::SolarStatus::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<2> scc_info_SolarStatus_solarmodule_2fsolarmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsSolarStatus_solarmodule_2fsolarmodule_2eproto}, {
-      &scc_info_StatusValue_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_SolarStatusZGEN_solarmodule_2fsolarmodule_2eproto.base,}};
-
-static void InitDefaultsSolarStatusProfile_solarmodule_2fsolarmodule_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::solarmodule::_SolarStatusProfile_default_instance_;
-    new (ptr) ::solarmodule::SolarStatusProfile();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::solarmodule::SolarStatusProfile::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<4> scc_info_SolarStatusProfile_solarmodule_2fsolarmodule_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsSolarStatusProfile_solarmodule_2fsolarmodule_2eproto}, {
-      &scc_info_StatusMessageInfo_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_IED_commonmodule_2fcommonmodule_2eproto.base,
-      &scc_info_SolarInverter_solarmodule_2fsolarmodule_2eproto.base,
-      &scc_info_SolarStatus_solarmodule_2fsolarmodule_2eproto.base,}};
-
-void InitDefaults_solarmodule_2fsolarmodule_2eproto() {
-  ::google::protobuf::internal::InitSCC(&scc_info_SolarPoint_solarmodule_2fsolarmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SolarCSG_solarmodule_2fsolarmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SolarControlScheduleFSCH_solarmodule_2fsolarmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SolarControlFSCC_solarmodule_2fsolarmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SolarControl_solarmodule_2fsolarmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SolarInverter_solarmodule_2fsolarmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SolarControlProfile_solarmodule_2fsolarmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SolarPointStatus_solarmodule_2fsolarmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SolarEventAndStatusZGEN_solarmodule_2fsolarmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SolarEventZGEN_solarmodule_2fsolarmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SolarEvent_solarmodule_2fsolarmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SolarEventProfile_solarmodule_2fsolarmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SolarReading_solarmodule_2fsolarmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SolarReadingProfile_solarmodule_2fsolarmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SolarStatusZGEN_solarmodule_2fsolarmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SolarStatus_solarmodule_2fsolarmodule_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SolarStatusProfile_solarmodule_2fsolarmodule_2eproto.base);
-}
-
-::google::protobuf::Metadata file_level_metadata_solarmodule_2fsolarmodule_2eproto[17];
-constexpr ::google::protobuf::EnumDescriptor const** file_level_enum_descriptors_solarmodule_2fsolarmodule_2eproto = nullptr;
-constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_solarmodule_2fsolarmodule_2eproto = nullptr;
-
-const ::google::protobuf::uint32 TableStruct_solarmodule_2fsolarmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_solarmodule_2fsolarmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -492,7 +322,6 @@ const ::google::protobuf::uint32 TableStruct_solarmodule_2fsolarmodule_2eproto::
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlProfile, ied_),
   PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlProfile, solarcontrol_),
   PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlProfile, solarinverter_),
   ~0u,  // no _has_bits_
@@ -539,7 +368,6 @@ const ::google::protobuf::uint32 TableStruct_solarmodule_2fsolarmodule_2eproto::
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventProfile, eventmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventProfile, ied_),
   PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventProfile, solarevent_),
   PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventProfile, solarinverter_),
   ~0u,  // no _has_bits_
@@ -557,7 +385,6 @@ const ::google::protobuf::uint32 TableStruct_solarmodule_2fsolarmodule_2eproto::
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReadingProfile, readingmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReadingProfile, ied_),
   PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReadingProfile, solarinverter_),
   PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReadingProfile, solarreading_),
   ~0u,  // no _has_bits_
@@ -580,11 +407,10 @@ const ::google::protobuf::uint32 TableStruct_solarmodule_2fsolarmodule_2eproto::
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatusProfile, statusmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatusProfile, ied_),
   PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatusProfile, solarinverter_),
   PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatusProfile, solarstatus_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::solarmodule::SolarPoint)},
   { 16, -1, sizeof(::solarmodule::SolarCSG)},
   { 22, -1, sizeof(::solarmodule::SolarControlScheduleFSCH)},
@@ -592,62 +418,56 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SE
   { 35, -1, sizeof(::solarmodule::SolarControl)},
   { 43, -1, sizeof(::solarmodule::SolarInverter)},
   { 49, -1, sizeof(::solarmodule::SolarControlProfile)},
-  { 58, -1, sizeof(::solarmodule::SolarPointStatus)},
-  { 72, -1, sizeof(::solarmodule::SolarEventAndStatusZGEN)},
-  { 82, -1, sizeof(::solarmodule::SolarEventZGEN)},
-  { 89, -1, sizeof(::solarmodule::SolarEvent)},
-  { 96, -1, sizeof(::solarmodule::SolarEventProfile)},
-  { 105, -1, sizeof(::solarmodule::SolarReading)},
-  { 114, -1, sizeof(::solarmodule::SolarReadingProfile)},
-  { 123, -1, sizeof(::solarmodule::SolarStatusZGEN)},
-  { 130, -1, sizeof(::solarmodule::SolarStatus)},
-  { 137, -1, sizeof(::solarmodule::SolarStatusProfile)},
+  { 57, -1, sizeof(::solarmodule::SolarPointStatus)},
+  { 71, -1, sizeof(::solarmodule::SolarEventAndStatusZGEN)},
+  { 81, -1, sizeof(::solarmodule::SolarEventZGEN)},
+  { 88, -1, sizeof(::solarmodule::SolarEvent)},
+  { 95, -1, sizeof(::solarmodule::SolarEventProfile)},
+  { 103, -1, sizeof(::solarmodule::SolarReading)},
+  { 112, -1, sizeof(::solarmodule::SolarReadingProfile)},
+  { 120, -1, sizeof(::solarmodule::SolarStatusZGEN)},
+  { 127, -1, sizeof(::solarmodule::SolarStatus)},
+  { 134, -1, sizeof(::solarmodule::SolarStatusProfile)},
 };
 
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::solarmodule::_SolarPoint_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::solarmodule::_SolarCSG_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::solarmodule::_SolarControlScheduleFSCH_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::solarmodule::_SolarControlFSCC_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::solarmodule::_SolarControl_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::solarmodule::_SolarInverter_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::solarmodule::_SolarControlProfile_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::solarmodule::_SolarPointStatus_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::solarmodule::_SolarEventAndStatusZGEN_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::solarmodule::_SolarEventZGEN_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::solarmodule::_SolarEvent_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::solarmodule::_SolarEventProfile_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::solarmodule::_SolarReading_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::solarmodule::_SolarReadingProfile_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::solarmodule::_SolarStatusZGEN_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::solarmodule::_SolarStatus_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::solarmodule::_SolarStatusProfile_default_instance_),
+static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarPoint_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarCSG_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarControlScheduleFSCH_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarControlFSCC_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarControl_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarInverter_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarControlProfile_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarPointStatus_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarEventAndStatusZGEN_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarEventZGEN_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarEvent_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarEventProfile_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarReading_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarReadingProfile_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarStatusZGEN_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarStatus_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarStatusProfile_default_instance_),
 };
 
-::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_solarmodule_2fsolarmodule_2eproto = {
-  {}, AddDescriptors_solarmodule_2fsolarmodule_2eproto, "solarmodule/solarmodule.proto", schemas,
-  file_default_instances, TableStruct_solarmodule_2fsolarmodule_2eproto::offsets,
-  file_level_metadata_solarmodule_2fsolarmodule_2eproto, 17, file_level_enum_descriptors_solarmodule_2fsolarmodule_2eproto, file_level_service_descriptors_solarmodule_2fsolarmodule_2eproto,
-};
-
-const char descriptor_table_protodef_solarmodule_2fsolarmodule_2eproto[] =
+const char descriptor_table_protodef_solarmodule_2fsolarmodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\035solarmodule/solarmodule.proto\022\013solarmo"
   "dule\032\tuml.proto\032\036google/protobuf/wrapper"
   "s.proto\032\037commonmodule/commonmodule.proto"
   "\"\322\004\n\nSolarPoint\022:\n\030frequencySetPointEnab"
-  "led\030\001 \001(\0132\030.commonmodule.ControlDPC\0223\n\004m"
+  "led\030\001 \001(\0132\030.commonmodule.ControlSPC\0223\n\004m"
   "ode\030\002 \001(\0132%.commonmodule.ENG_GridConnect"
   "ModeKind\022/\n\npctHzDroop\030\003 \001(\0132\033.google.pr"
   "otobuf.FloatValue\022.\n\tpctVDroop\030\004 \001(\0132\033.g"
   "oogle.protobuf.FloatValue\022)\n\trampRates\030\005"
   " \001(\0132\026.commonmodule.RampRate\022<\n\032reactive"
   "PwrSetPointEnabled\030\006 \001(\0132\030.commonmodule."
-  "ControlDPC\0228\n\026realPwrSetPointEnabled\030\007 \001"
-  "(\0132\030.commonmodule.ControlDPC\022\'\n\005reset\030\010 "
-  "\001(\0132\030.commonmodule.ControlDPC\022/\n\005state\030\t"
+  "ControlSPC\0228\n\026realPwrSetPointEnabled\030\007 \001"
+  "(\0132\030.commonmodule.ControlSPC\022\'\n\005reset\030\010 "
+  "\001(\0132\030.commonmodule.ControlSPC\022/\n\005state\030\t"
   " \001(\0132 .commonmodule.Optional_StateKind\0228"
   "\n\026voltageSetPointEnabled\030\n \001(\0132\030.commonm"
-  "odule.ControlDPC\022;\n\tstartTime\030\013 \001(\0132\036.co"
+  "odule.ControlSPC\022;\n\tstartTime\030\013 \001(\0132\036.co"
   "mmonmodule.ControlTimestampB\010\210\265\030\001\220\265\030\001\"=\n"
   "\010SolarCSG\0221\n\006crvPts\030\001 \003(\0132\027.solarmodule."
   "SolarPointB\010\210\265\030\001\220\265\030\001\"L\n\030SolarControlSche"
@@ -662,323 +482,282 @@ const char descriptor_table_protodef_solarmodule_2fsolarmodule_2eproto[] =
   "tions\0227\n\020solarControlFSCC\030\003 \001(\0132\035.solarm"
   "odule.SolarControlFSCC\"U\n\rSolarInverter\022"
   "D\n\023conductingEquipment\030\001 \001(\0132!.commonmod"
-  "ule.ConductingEquipmentB\004\200\265\030\001\"\201\002\n\023SolarC"
+  "ule.ConductingEquipmentB\004\200\265\030\001\"\327\001\n\023SolarC"
   "ontrolProfile\022B\n\022controlMessageInfo\030\001 \001("
   "\0132 .commonmodule.ControlMessageInfoB\004\200\265\030"
-  "\001\022(\n\003ied\030\002 \001(\0132\021.commonmodule.IEDB\010\210\265\030\001\220"
-  "\265\030\001\0229\n\014solarControl\030\003 \001(\0132\031.solarmodule."
-  "SolarControlB\010\210\265\030\001\220\265\030\001\022;\n\rsolarInverter\030"
-  "\004 \001(\0132\032.solarmodule.SolarInverterB\010\210\265\030\001\220"
-  "\265\030\001:\004\300\363\030\001\"\362\003\n\020SolarPointStatus\022:\n\030freque"
-  "ncySetPointEnabled\030\001 \001(\0132\030.commonmodule."
-  "ControlDPC\0223\n\004mode\030\002 \001(\0132%.commonmodule."
-  "ENG_GridConnectModeKind\022/\n\npctHzDroop\030\003 "
-  "\001(\0132\033.google.protobuf.FloatValue\022.\n\tpctV"
-  "Droop\030\004 \001(\0132\033.google.protobuf.FloatValue"
-  "\022)\n\trampRates\030\005 \001(\0132\026.commonmodule.RampR"
-  "ate\022<\n\032reactivePwrSetPointEnabled\030\006 \001(\0132"
-  "\030.commonmodule.ControlDPC\0228\n\026realPwrSetP"
-  "ointEnabled\030\007 \001(\0132\030.commonmodule.Control"
-  "DPC\022/\n\005state\030\010 \001(\0132 .commonmodule.Option"
-  "al_StateKind\0228\n\026voltageSetPointEnabled\030\t"
-  " \001(\0132\030.commonmodule.ControlDPC\"\262\002\n\027Solar"
-  "EventAndStatusZGEN\022V\n\034logicalNodeForEven"
-  "tAndStatus\030\001 \001(\0132*.commonmodule.LogicalN"
-  "odeForEventAndStatusB\004\200\265\030\001\022)\n\010AuxPwrSt\030\002"
-  " \001(\0132\027.commonmodule.StatusSPS\0226\n\013Dynamic"
-  "Test\030\003 \001(\0132!.commonmodule.ENS_DynamicTes"
-  "tKind\022(\n\007EmgStop\030\004 \001(\0132\027.commonmodule.St"
-  "atusSPS\0222\n\013PointStatus\030\005 \001(\0132\035.solarmodu"
-  "le.SolarPointStatus\"\224\001\n\016SolarEventZGEN\022K"
-  "\n\027solarEventAndStatusZGEN\030\001 \001(\0132$.solarm"
-  "odule.SolarEventAndStatusZGENB\004\200\265\030\001\0225\n\006G"
-  "riMod\030\002 \001(\0132%.commonmodule.ENG_GridConne"
-  "ctModeKind\"\177\n\nSolarEvent\0222\n\neventValue\030\001"
-  " \001(\0132\030.commonmodule.EventValueB\004\200\265\030\001\022=\n\016"
-  "solarEventZGEN\030\002 \001(\0132\033.solarmodule.Solar"
-  "EventZGENB\010\210\265\030\001\220\265\030\001\"\367\001\n\021SolarEventProfil"
-  "e\022>\n\020eventMessageInfo\030\001 \001(\0132\036.commonmodu"
-  "le.EventMessageInfoB\004\200\265\030\001\022(\n\003ied\030\002 \001(\0132\021"
-  ".commonmodule.IEDB\010\210\265\030\001\220\265\030\001\0225\n\nsolarEven"
-  "t\030\003 \001(\0132\027.solarmodule.SolarEventB\010\210\265\030\001\220\265"
-  "\030\001\022;\n\rsolarInverter\030\004 \001(\0132\032.solarmodule."
-  "SolarInverterB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\376\001\n\014SolarR"
-  "eading\022b\n\"conductingEquipmentTerminalRea"
-  "ding\030\001 \001(\01320.commonmodule.ConductingEqui"
-  "pmentTerminalReadingB\004\200\265\030\001\022*\n\tphaseMMTN\030"
-  "\002 \001(\0132\027.commonmodule.PhaseMMTN\022.\n\013readin"
-  "gMMTR\030\003 \001(\0132\031.commonmodule.ReadingMMTR\022."
-  "\n\013readingMMXU\030\004 \001(\0132\031.commonmodule.Readi"
-  "ngMMXU\"\201\002\n\023SolarReadingProfile\022B\n\022readin"
-  "gMessageInfo\030\001 \001(\0132 .commonmodule.Readin"
-  "gMessageInfoB\004\200\265\030\001\022(\n\003ied\030\002 \001(\0132\021.common"
-  "module.IEDB\010\210\265\030\001\220\265\030\001\022;\n\rsolarInverter\030\003 "
+  "\001\0229\n\014solarControl\030\002 \001(\0132\031.solarmodule.So"
+  "larControlB\010\210\265\030\001\220\265\030\001\022;\n\rsolarInverter\030\003 "
   "\001(\0132\032.solarmodule.SolarInverterB\010\210\265\030\001\220\265\030"
-  "\001\0229\n\014solarReading\030\004 \001(\0132\031.solarmodule.So"
-  "larReadingB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\225\001\n\017SolarStat"
-  "usZGEN\022K\n\027solarEventAndStatusZGEN\030\001 \001(\0132"
-  "$.solarmodule.SolarEventAndStatusZGENB\004\200"
-  "\265\030\001\0225\n\006GriMod\030\002 \001(\0132%.commonmodule.ENG_G"
-  "ridConnectModeKind\"\204\001\n\013SolarStatus\0224\n\013st"
-  "atusValue\030\001 \001(\0132\031.commonmodule.StatusVal"
-  "ueB\004\200\265\030\001\022\?\n\017solarStatusZGEN\030\002 \001(\0132\034.sola"
-  "rmodule.SolarStatusZGENB\010\210\265\030\001\220\265\030\001\"\374\001\n\022So"
-  "larStatusProfile\022@\n\021statusMessageInfo\030\001 "
-  "\001(\0132\037.commonmodule.StatusMessageInfoB\004\200\265"
-  "\030\001\022(\n\003ied\030\002 \001(\0132\021.commonmodule.IEDB\010\210\265\030\001"
-  "\220\265\030\001\022;\n\rsolarInverter\030\003 \001(\0132\032.solarmodul"
-  "e.SolarInverterB\010\210\265\030\001\220\265\030\001\0227\n\013solarStatus"
-  "\030\004 \001(\0132\030.solarmodule.SolarStatusB\010\210\265\030\001\220\265"
-  "\030\001:\004\300\363\030\001B~\n\023openfmb.solarmoduleP\001ZOgitla"
-  "b.com/openfmb/psm/ops/protobuf/go-openfm"
-  "b-ops-protobuf/openfmb/solarmodule\252\002\023ope"
-  "nfmb.solarmoduleb\006proto3"
+  "\001:\004\300\363\030\001\"\356\003\n\020SolarPointStatus\0229\n\030frequenc"
+  "ySetPointEnabled\030\001 \001(\0132\027.commonmodule.St"
+  "atusSPS\0223\n\004mode\030\002 \001(\0132%.commonmodule.ENG"
+  "_GridConnectModeKind\022/\n\npctHzDroop\030\003 \001(\013"
+  "2\033.google.protobuf.FloatValue\022.\n\tpctVDro"
+  "op\030\004 \001(\0132\033.google.protobuf.FloatValue\022)\n"
+  "\trampRates\030\005 \001(\0132\026.commonmodule.RampRate"
+  "\022;\n\032reactivePwrSetPointEnabled\030\006 \001(\0132\027.c"
+  "ommonmodule.StatusSPS\0227\n\026realPwrSetPoint"
+  "Enabled\030\007 \001(\0132\027.commonmodule.StatusSPS\022/"
+  "\n\005state\030\010 \001(\0132 .commonmodule.Optional_St"
+  "ateKind\0227\n\026voltageSetPointEnabled\030\t \001(\0132"
+  "\027.commonmodule.StatusSPS\"\262\002\n\027SolarEventA"
+  "ndStatusZGEN\022V\n\034logicalNodeForEventAndSt"
+  "atus\030\001 \001(\0132*.commonmodule.LogicalNodeFor"
+  "EventAndStatusB\004\200\265\030\001\022)\n\010AuxPwrSt\030\002 \001(\0132\027"
+  ".commonmodule.StatusSPS\0226\n\013DynamicTest\030\003"
+  " \001(\0132!.commonmodule.ENS_DynamicTestKind\022"
+  "(\n\007EmgStop\030\004 \001(\0132\027.commonmodule.StatusSP"
+  "S\0222\n\013PointStatus\030\005 \001(\0132\035.solarmodule.Sol"
+  "arPointStatus\"\224\001\n\016SolarEventZGEN\022K\n\027sola"
+  "rEventAndStatusZGEN\030\001 \001(\0132$.solarmodule."
+  "SolarEventAndStatusZGENB\004\200\265\030\001\0225\n\006GriMod\030"
+  "\002 \001(\0132%.commonmodule.ENG_GridConnectMode"
+  "Kind\"u\n\nSolarEvent\0222\n\neventValue\030\001 \001(\0132\030"
+  ".commonmodule.EventValueB\004\200\265\030\001\0223\n\016solarE"
+  "ventZGEN\030\002 \001(\0132\033.solarmodule.SolarEventZ"
+  "GEN\"\315\001\n\021SolarEventProfile\022>\n\020eventMessag"
+  "eInfo\030\001 \001(\0132\036.commonmodule.EventMessageI"
+  "nfoB\004\200\265\030\001\0225\n\nsolarEvent\030\002 \001(\0132\027.solarmod"
+  "ule.SolarEventB\010\210\265\030\001\220\265\030\001\022;\n\rsolarInverte"
+  "r\030\003 \001(\0132\032.solarmodule.SolarInverterB\010\210\265\030"
+  "\001\220\265\030\001:\004\300\363\030\001\"\376\001\n\014SolarReading\022b\n\"conducti"
+  "ngEquipmentTerminalReading\030\001 \001(\01320.commo"
+  "nmodule.ConductingEquipmentTerminalReadi"
+  "ngB\004\200\265\030\001\022*\n\tphaseMMTN\030\002 \001(\0132\027.commonmodu"
+  "le.PhaseMMTN\022.\n\013readingMMTR\030\003 \001(\0132\031.comm"
+  "onmodule.ReadingMMTR\022.\n\013readingMMXU\030\004 \001("
+  "\0132\031.commonmodule.ReadingMMXU\"\327\001\n\023SolarRe"
+  "adingProfile\022B\n\022readingMessageInfo\030\001 \001(\013"
+  "2 .commonmodule.ReadingMessageInfoB\004\200\265\030\001"
+  "\022;\n\rsolarInverter\030\002 \001(\0132\032.solarmodule.So"
+  "larInverterB\010\210\265\030\001\220\265\030\001\0229\n\014solarReading\030\003 "
+  "\001(\0132\031.solarmodule.SolarReadingB\010\210\265\030\001\220\265\030\001"
+  ":\004\300\363\030\001\"\225\001\n\017SolarStatusZGEN\022K\n\027solarEvent"
+  "AndStatusZGEN\030\001 \001(\0132$.solarmodule.SolarE"
+  "ventAndStatusZGENB\004\200\265\030\001\0225\n\006GriMod\030\002 \001(\0132"
+  "%.commonmodule.ENG_GridConnectModeKind\"z"
+  "\n\013SolarStatus\0224\n\013statusValue\030\001 \001(\0132\031.com"
+  "monmodule.StatusValueB\004\200\265\030\001\0225\n\017solarStat"
+  "usZGEN\030\002 \001(\0132\034.solarmodule.SolarStatusZG"
+  "EN\"\322\001\n\022SolarStatusProfile\022@\n\021statusMessa"
+  "geInfo\030\001 \001(\0132\037.commonmodule.StatusMessag"
+  "eInfoB\004\200\265\030\001\022;\n\rsolarInverter\030\002 \001(\0132\032.sol"
+  "armodule.SolarInverterB\010\210\265\030\001\220\265\030\001\0227\n\013sola"
+  "rStatus\030\003 \001(\0132\030.solarmodule.SolarStatusB"
+  "\010\210\265\030\001\220\265\030\001:\004\300\363\030\001B\201\001\n\023openfmb.solarmoduleP"
+  "\001ZRgitlab.com/openfmb/psm/ops/protobuf/g"
+  "o-openfmb-ops-protobuf/v2/openfmb/solarm"
+  "odule\252\002\023openfmb.solarmoduleb\006proto3"
   ;
-::google::protobuf::internal::DescriptorTable descriptor_table_solarmodule_2fsolarmodule_2eproto = {
-  false, InitDefaults_solarmodule_2fsolarmodule_2eproto, 
-  descriptor_table_protodef_solarmodule_2fsolarmodule_2eproto,
-  "solarmodule/solarmodule.proto", &assign_descriptors_table_solarmodule_2fsolarmodule_2eproto, 4064,
+static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_solarmodule_2fsolarmodule_2eproto_deps[3] = {
+  &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
+  &::descriptor_table_google_2fprotobuf_2fwrappers_2eproto,
+  &::descriptor_table_uml_2eproto,
 };
-
-void AddDescriptors_solarmodule_2fsolarmodule_2eproto() {
-  static constexpr ::google::protobuf::internal::InitFunc deps[3] =
-  {
-    ::AddDescriptors_uml_2eproto,
-    ::AddDescriptors_google_2fprotobuf_2fwrappers_2eproto,
-    ::AddDescriptors_commonmodule_2fcommonmodule_2eproto,
-  };
- ::google::protobuf::internal::AddDescriptors(&descriptor_table_solarmodule_2fsolarmodule_2eproto, deps, 3);
+static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_solarmodule_2fsolarmodule_2eproto_once;
+const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_solarmodule_2fsolarmodule_2eproto = {
+  false, false, 3875, descriptor_table_protodef_solarmodule_2fsolarmodule_2eproto, "solarmodule/solarmodule.proto", 
+  &descriptor_table_solarmodule_2fsolarmodule_2eproto_once, descriptor_table_solarmodule_2fsolarmodule_2eproto_deps, 3, 17,
+  schemas, file_default_instances, TableStruct_solarmodule_2fsolarmodule_2eproto::offsets,
+  file_level_metadata_solarmodule_2fsolarmodule_2eproto, file_level_enum_descriptors_solarmodule_2fsolarmodule_2eproto, file_level_service_descriptors_solarmodule_2fsolarmodule_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
+descriptor_table_solarmodule_2fsolarmodule_2eproto_metadata_getter(int index) {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_solarmodule_2fsolarmodule_2eproto);
+  return descriptor_table_solarmodule_2fsolarmodule_2eproto.file_level_metadata[index];
 }
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_solarmodule_2fsolarmodule_2eproto = []() { AddDescriptors_solarmodule_2fsolarmodule_2eproto(); return true; }();
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_solarmodule_2fsolarmodule_2eproto(&descriptor_table_solarmodule_2fsolarmodule_2eproto);
 namespace solarmodule {
 
 // ===================================================================
 
-void SolarPoint::InitAsDefaultInstance() {
-  ::solarmodule::_SolarPoint_default_instance_._instance.get_mutable()->frequencysetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
-      ::commonmodule::ControlDPC::internal_default_instance());
-  ::solarmodule::_SolarPoint_default_instance_._instance.get_mutable()->mode_ = const_cast< ::commonmodule::ENG_GridConnectModeKind*>(
-      ::commonmodule::ENG_GridConnectModeKind::internal_default_instance());
-  ::solarmodule::_SolarPoint_default_instance_._instance.get_mutable()->pcthzdroop_ = const_cast< ::google::protobuf::FloatValue*>(
-      ::google::protobuf::FloatValue::internal_default_instance());
-  ::solarmodule::_SolarPoint_default_instance_._instance.get_mutable()->pctvdroop_ = const_cast< ::google::protobuf::FloatValue*>(
-      ::google::protobuf::FloatValue::internal_default_instance());
-  ::solarmodule::_SolarPoint_default_instance_._instance.get_mutable()->ramprates_ = const_cast< ::commonmodule::RampRate*>(
-      ::commonmodule::RampRate::internal_default_instance());
-  ::solarmodule::_SolarPoint_default_instance_._instance.get_mutable()->reactivepwrsetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
-      ::commonmodule::ControlDPC::internal_default_instance());
-  ::solarmodule::_SolarPoint_default_instance_._instance.get_mutable()->realpwrsetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
-      ::commonmodule::ControlDPC::internal_default_instance());
-  ::solarmodule::_SolarPoint_default_instance_._instance.get_mutable()->reset_ = const_cast< ::commonmodule::ControlDPC*>(
-      ::commonmodule::ControlDPC::internal_default_instance());
-  ::solarmodule::_SolarPoint_default_instance_._instance.get_mutable()->state_ = const_cast< ::commonmodule::Optional_StateKind*>(
-      ::commonmodule::Optional_StateKind::internal_default_instance());
-  ::solarmodule::_SolarPoint_default_instance_._instance.get_mutable()->voltagesetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
-      ::commonmodule::ControlDPC::internal_default_instance());
-  ::solarmodule::_SolarPoint_default_instance_._instance.get_mutable()->starttime_ = const_cast< ::commonmodule::ControlTimestamp*>(
-      ::commonmodule::ControlTimestamp::internal_default_instance());
-}
-class SolarPoint::HasBitSetters {
+class SolarPoint::_Internal {
  public:
-  static const ::commonmodule::ControlDPC& frequencysetpointenabled(const SolarPoint* msg);
+  static const ::commonmodule::ControlSPC& frequencysetpointenabled(const SolarPoint* msg);
   static const ::commonmodule::ENG_GridConnectModeKind& mode(const SolarPoint* msg);
-  static const ::google::protobuf::FloatValue& pcthzdroop(const SolarPoint* msg);
-  static const ::google::protobuf::FloatValue& pctvdroop(const SolarPoint* msg);
+  static const PROTOBUF_NAMESPACE_ID::FloatValue& pcthzdroop(const SolarPoint* msg);
+  static const PROTOBUF_NAMESPACE_ID::FloatValue& pctvdroop(const SolarPoint* msg);
   static const ::commonmodule::RampRate& ramprates(const SolarPoint* msg);
-  static const ::commonmodule::ControlDPC& reactivepwrsetpointenabled(const SolarPoint* msg);
-  static const ::commonmodule::ControlDPC& realpwrsetpointenabled(const SolarPoint* msg);
-  static const ::commonmodule::ControlDPC& reset(const SolarPoint* msg);
+  static const ::commonmodule::ControlSPC& reactivepwrsetpointenabled(const SolarPoint* msg);
+  static const ::commonmodule::ControlSPC& realpwrsetpointenabled(const SolarPoint* msg);
+  static const ::commonmodule::ControlSPC& reset(const SolarPoint* msg);
   static const ::commonmodule::Optional_StateKind& state(const SolarPoint* msg);
-  static const ::commonmodule::ControlDPC& voltagesetpointenabled(const SolarPoint* msg);
+  static const ::commonmodule::ControlSPC& voltagesetpointenabled(const SolarPoint* msg);
   static const ::commonmodule::ControlTimestamp& starttime(const SolarPoint* msg);
 };
 
-const ::commonmodule::ControlDPC&
-SolarPoint::HasBitSetters::frequencysetpointenabled(const SolarPoint* msg) {
+const ::commonmodule::ControlSPC&
+SolarPoint::_Internal::frequencysetpointenabled(const SolarPoint* msg) {
   return *msg->frequencysetpointenabled_;
 }
 const ::commonmodule::ENG_GridConnectModeKind&
-SolarPoint::HasBitSetters::mode(const SolarPoint* msg) {
+SolarPoint::_Internal::mode(const SolarPoint* msg) {
   return *msg->mode_;
 }
-const ::google::protobuf::FloatValue&
-SolarPoint::HasBitSetters::pcthzdroop(const SolarPoint* msg) {
+const PROTOBUF_NAMESPACE_ID::FloatValue&
+SolarPoint::_Internal::pcthzdroop(const SolarPoint* msg) {
   return *msg->pcthzdroop_;
 }
-const ::google::protobuf::FloatValue&
-SolarPoint::HasBitSetters::pctvdroop(const SolarPoint* msg) {
+const PROTOBUF_NAMESPACE_ID::FloatValue&
+SolarPoint::_Internal::pctvdroop(const SolarPoint* msg) {
   return *msg->pctvdroop_;
 }
 const ::commonmodule::RampRate&
-SolarPoint::HasBitSetters::ramprates(const SolarPoint* msg) {
+SolarPoint::_Internal::ramprates(const SolarPoint* msg) {
   return *msg->ramprates_;
 }
-const ::commonmodule::ControlDPC&
-SolarPoint::HasBitSetters::reactivepwrsetpointenabled(const SolarPoint* msg) {
+const ::commonmodule::ControlSPC&
+SolarPoint::_Internal::reactivepwrsetpointenabled(const SolarPoint* msg) {
   return *msg->reactivepwrsetpointenabled_;
 }
-const ::commonmodule::ControlDPC&
-SolarPoint::HasBitSetters::realpwrsetpointenabled(const SolarPoint* msg) {
+const ::commonmodule::ControlSPC&
+SolarPoint::_Internal::realpwrsetpointenabled(const SolarPoint* msg) {
   return *msg->realpwrsetpointenabled_;
 }
-const ::commonmodule::ControlDPC&
-SolarPoint::HasBitSetters::reset(const SolarPoint* msg) {
+const ::commonmodule::ControlSPC&
+SolarPoint::_Internal::reset(const SolarPoint* msg) {
   return *msg->reset_;
 }
 const ::commonmodule::Optional_StateKind&
-SolarPoint::HasBitSetters::state(const SolarPoint* msg) {
+SolarPoint::_Internal::state(const SolarPoint* msg) {
   return *msg->state_;
 }
-const ::commonmodule::ControlDPC&
-SolarPoint::HasBitSetters::voltagesetpointenabled(const SolarPoint* msg) {
+const ::commonmodule::ControlSPC&
+SolarPoint::_Internal::voltagesetpointenabled(const SolarPoint* msg) {
   return *msg->voltagesetpointenabled_;
 }
 const ::commonmodule::ControlTimestamp&
-SolarPoint::HasBitSetters::starttime(const SolarPoint* msg) {
+SolarPoint::_Internal::starttime(const SolarPoint* msg) {
   return *msg->starttime_;
 }
 void SolarPoint::clear_frequencysetpointenabled() {
-  if (GetArenaNoVirtual() == nullptr && frequencysetpointenabled_ != nullptr) {
+  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
     delete frequencysetpointenabled_;
   }
   frequencysetpointenabled_ = nullptr;
 }
 void SolarPoint::clear_mode() {
-  if (GetArenaNoVirtual() == nullptr && mode_ != nullptr) {
+  if (GetArena() == nullptr && mode_ != nullptr) {
     delete mode_;
   }
   mode_ = nullptr;
 }
 void SolarPoint::clear_pcthzdroop() {
-  if (GetArenaNoVirtual() == nullptr && pcthzdroop_ != nullptr) {
+  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
     delete pcthzdroop_;
   }
   pcthzdroop_ = nullptr;
 }
 void SolarPoint::clear_pctvdroop() {
-  if (GetArenaNoVirtual() == nullptr && pctvdroop_ != nullptr) {
+  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
     delete pctvdroop_;
   }
   pctvdroop_ = nullptr;
 }
 void SolarPoint::clear_ramprates() {
-  if (GetArenaNoVirtual() == nullptr && ramprates_ != nullptr) {
+  if (GetArena() == nullptr && ramprates_ != nullptr) {
     delete ramprates_;
   }
   ramprates_ = nullptr;
 }
 void SolarPoint::clear_reactivepwrsetpointenabled() {
-  if (GetArenaNoVirtual() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
+  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
     delete reactivepwrsetpointenabled_;
   }
   reactivepwrsetpointenabled_ = nullptr;
 }
 void SolarPoint::clear_realpwrsetpointenabled() {
-  if (GetArenaNoVirtual() == nullptr && realpwrsetpointenabled_ != nullptr) {
+  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
     delete realpwrsetpointenabled_;
   }
   realpwrsetpointenabled_ = nullptr;
 }
 void SolarPoint::clear_reset() {
-  if (GetArenaNoVirtual() == nullptr && reset_ != nullptr) {
+  if (GetArena() == nullptr && reset_ != nullptr) {
     delete reset_;
   }
   reset_ = nullptr;
 }
 void SolarPoint::clear_state() {
-  if (GetArenaNoVirtual() == nullptr && state_ != nullptr) {
+  if (GetArena() == nullptr && state_ != nullptr) {
     delete state_;
   }
   state_ = nullptr;
 }
 void SolarPoint::clear_voltagesetpointenabled() {
-  if (GetArenaNoVirtual() == nullptr && voltagesetpointenabled_ != nullptr) {
+  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
     delete voltagesetpointenabled_;
   }
   voltagesetpointenabled_ = nullptr;
 }
 void SolarPoint::clear_starttime() {
-  if (GetArenaNoVirtual() == nullptr && starttime_ != nullptr) {
+  if (GetArena() == nullptr && starttime_ != nullptr) {
     delete starttime_;
   }
   starttime_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SolarPoint::kFrequencySetPointEnabledFieldNumber;
-const int SolarPoint::kModeFieldNumber;
-const int SolarPoint::kPctHzDroopFieldNumber;
-const int SolarPoint::kPctVDroopFieldNumber;
-const int SolarPoint::kRampRatesFieldNumber;
-const int SolarPoint::kReactivePwrSetPointEnabledFieldNumber;
-const int SolarPoint::kRealPwrSetPointEnabledFieldNumber;
-const int SolarPoint::kResetFieldNumber;
-const int SolarPoint::kStateFieldNumber;
-const int SolarPoint::kVoltageSetPointEnabledFieldNumber;
-const int SolarPoint::kStartTimeFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SolarPoint::SolarPoint()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SolarPoint::SolarPoint(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:solarmodule.SolarPoint)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarPoint)
 }
 SolarPoint::SolarPoint(const SolarPoint& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_frequencysetpointenabled()) {
-    frequencysetpointenabled_ = new ::commonmodule::ControlDPC(*from.frequencysetpointenabled_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_frequencysetpointenabled()) {
+    frequencysetpointenabled_ = new ::commonmodule::ControlSPC(*from.frequencysetpointenabled_);
   } else {
     frequencysetpointenabled_ = nullptr;
   }
-  if (from.has_mode()) {
+  if (from._internal_has_mode()) {
     mode_ = new ::commonmodule::ENG_GridConnectModeKind(*from.mode_);
   } else {
     mode_ = nullptr;
   }
-  if (from.has_pcthzdroop()) {
-    pcthzdroop_ = new ::google::protobuf::FloatValue(*from.pcthzdroop_);
+  if (from._internal_has_pcthzdroop()) {
+    pcthzdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pcthzdroop_);
   } else {
     pcthzdroop_ = nullptr;
   }
-  if (from.has_pctvdroop()) {
-    pctvdroop_ = new ::google::protobuf::FloatValue(*from.pctvdroop_);
+  if (from._internal_has_pctvdroop()) {
+    pctvdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pctvdroop_);
   } else {
     pctvdroop_ = nullptr;
   }
-  if (from.has_ramprates()) {
+  if (from._internal_has_ramprates()) {
     ramprates_ = new ::commonmodule::RampRate(*from.ramprates_);
   } else {
     ramprates_ = nullptr;
   }
-  if (from.has_reactivepwrsetpointenabled()) {
-    reactivepwrsetpointenabled_ = new ::commonmodule::ControlDPC(*from.reactivepwrsetpointenabled_);
+  if (from._internal_has_reactivepwrsetpointenabled()) {
+    reactivepwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from.reactivepwrsetpointenabled_);
   } else {
     reactivepwrsetpointenabled_ = nullptr;
   }
-  if (from.has_realpwrsetpointenabled()) {
-    realpwrsetpointenabled_ = new ::commonmodule::ControlDPC(*from.realpwrsetpointenabled_);
+  if (from._internal_has_realpwrsetpointenabled()) {
+    realpwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from.realpwrsetpointenabled_);
   } else {
     realpwrsetpointenabled_ = nullptr;
   }
-  if (from.has_reset()) {
-    reset_ = new ::commonmodule::ControlDPC(*from.reset_);
+  if (from._internal_has_reset()) {
+    reset_ = new ::commonmodule::ControlSPC(*from.reset_);
   } else {
     reset_ = nullptr;
   }
-  if (from.has_state()) {
+  if (from._internal_has_state()) {
     state_ = new ::commonmodule::Optional_StateKind(*from.state_);
   } else {
     state_ = nullptr;
   }
-  if (from.has_voltagesetpointenabled()) {
-    voltagesetpointenabled_ = new ::commonmodule::ControlDPC(*from.voltagesetpointenabled_);
+  if (from._internal_has_voltagesetpointenabled()) {
+    voltagesetpointenabled_ = new ::commonmodule::ControlSPC(*from.voltagesetpointenabled_);
   } else {
     voltagesetpointenabled_ = nullptr;
   }
-  if (from.has_starttime()) {
+  if (from._internal_has_starttime()) {
     starttime_ = new ::commonmodule::ControlTimestamp(*from.starttime_);
   } else {
     starttime_ = nullptr;
@@ -987,19 +766,20 @@ SolarPoint::SolarPoint(const SolarPoint& from)
 }
 
 void SolarPoint::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SolarPoint_solarmodule_2fsolarmodule_2eproto.base);
-  ::memset(&frequencysetpointenabled_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&starttime_) -
-      reinterpret_cast<char*>(&frequencysetpointenabled_)) + sizeof(starttime_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&frequencysetpointenabled_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&starttime_) -
+    reinterpret_cast<char*>(&frequencysetpointenabled_)) + sizeof(starttime_));
 }
 
 SolarPoint::~SolarPoint() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarPoint)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SolarPoint::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete frequencysetpointenabled_;
   if (this != internal_default_instance()) delete mode_;
   if (this != internal_default_instance()) delete pcthzdroop_;
@@ -1013,561 +793,272 @@ void SolarPoint::SharedDtor() {
   if (this != internal_default_instance()) delete starttime_;
 }
 
+void SolarPoint::ArenaDtor(void* object) {
+  SolarPoint* _this = reinterpret_cast< SolarPoint* >(object);
+  (void)_this;
+}
+void SolarPoint::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SolarPoint::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SolarPoint& SolarPoint::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SolarPoint_solarmodule_2fsolarmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SolarPoint::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarPoint)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && frequencysetpointenabled_ != nullptr) {
+  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
     delete frequencysetpointenabled_;
   }
   frequencysetpointenabled_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && mode_ != nullptr) {
+  if (GetArena() == nullptr && mode_ != nullptr) {
     delete mode_;
   }
   mode_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && pcthzdroop_ != nullptr) {
+  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
     delete pcthzdroop_;
   }
   pcthzdroop_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && pctvdroop_ != nullptr) {
+  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
     delete pctvdroop_;
   }
   pctvdroop_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && ramprates_ != nullptr) {
+  if (GetArena() == nullptr && ramprates_ != nullptr) {
     delete ramprates_;
   }
   ramprates_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
+  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
     delete reactivepwrsetpointenabled_;
   }
   reactivepwrsetpointenabled_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && realpwrsetpointenabled_ != nullptr) {
+  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
     delete realpwrsetpointenabled_;
   }
   realpwrsetpointenabled_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && reset_ != nullptr) {
+  if (GetArena() == nullptr && reset_ != nullptr) {
     delete reset_;
   }
   reset_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && state_ != nullptr) {
+  if (GetArena() == nullptr && state_ != nullptr) {
     delete state_;
   }
   state_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && voltagesetpointenabled_ != nullptr) {
+  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
     delete voltagesetpointenabled_;
   }
   voltagesetpointenabled_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && starttime_ != nullptr) {
+  if (GetArena() == nullptr && starttime_ != nullptr) {
     delete starttime_;
   }
   starttime_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SolarPoint::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SolarPoint*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SolarPoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
-      // .commonmodule.ControlDPC frequencySetPointEnabled = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
-        object = msg->mutable_frequencysetpointenabled();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      // .commonmodule.ControlSPC frequencySetPointEnabled = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_frequencysetpointenabled(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.ENG_GridConnectModeKind mode = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ENG_GridConnectModeKind::_InternalParse;
-        object = msg->mutable_mode();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_mode(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .google.protobuf.FloatValue pctHzDroop = 3;
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
-        object = msg->mutable_pcthzdroop();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pcthzdroop(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .google.protobuf.FloatValue pctVDroop = 4;
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
-        object = msg->mutable_pctvdroop();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pctvdroop(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.RampRate rampRates = 5;
-      case 5: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::RampRate::_InternalParse;
-        object = msg->mutable_ramprates();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
-      case 6: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
-        object = msg->mutable_reactivepwrsetpointenabled();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
-      case 7: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
-        object = msg->mutable_realpwrsetpointenabled();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.ControlDPC reset = 8;
-      case 8: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 66) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
-        object = msg->mutable_reset();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_ramprates(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_reactivepwrsetpointenabled(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .commonmodule.ControlSPC realPwrSetPointEnabled = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          ptr = ctx->ParseMessage(_internal_mutable_realpwrsetpointenabled(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .commonmodule.ControlSPC reset = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+          ptr = ctx->ParseMessage(_internal_mutable_reset(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.Optional_StateKind state = 9;
-      case 9: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 74) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::Optional_StateKind::_InternalParse;
-        object = msg->mutable_state();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.ControlDPC voltageSetPointEnabled = 10;
-      case 10: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 82) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
-        object = msg->mutable_voltagesetpointenabled();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+          ptr = ctx->ParseMessage(_internal_mutable_state(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .commonmodule.ControlSPC voltageSetPointEnabled = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
+          ptr = ctx->ParseMessage(_internal_mutable_voltagesetpointenabled(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.ControlTimestamp startTime = 11 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 11: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 90) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ControlTimestamp::_InternalParse;
-        object = msg->mutable_starttime();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
+          ptr = ctx->ParseMessage(_internal_mutable_starttime(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SolarPoint::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:solarmodule.SolarPoint)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.ControlDPC frequencySetPointEnabled = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_frequencysetpointenabled()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ENG_GridConnectModeKind mode = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_mode()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .google.protobuf.FloatValue pctHzDroop = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_pcthzdroop()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .google.protobuf.FloatValue pctVDroop = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_pctvdroop()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.RampRate rampRates = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_ramprates()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_reactivepwrsetpointenabled()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_realpwrsetpointenabled()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ControlDPC reset = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (66 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_reset()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.Optional_StateKind state = 9;
-      case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (74 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_state()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ControlDPC voltageSetPointEnabled = 10;
-      case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (82 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_voltagesetpointenabled()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ControlTimestamp startTime = 11 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 11: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (90 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_starttime()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:solarmodule.SolarPoint)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:solarmodule.SolarPoint)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SolarPoint::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:solarmodule.SolarPoint)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlDPC frequencySetPointEnabled = 1;
-  if (this->has_frequencysetpointenabled()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::frequencysetpointenabled(this), output);
-  }
-
-  // .commonmodule.ENG_GridConnectModeKind mode = 2;
-  if (this->has_mode()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::mode(this), output);
-  }
-
-  // .google.protobuf.FloatValue pctHzDroop = 3;
-  if (this->has_pcthzdroop()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::pcthzdroop(this), output);
-  }
-
-  // .google.protobuf.FloatValue pctVDroop = 4;
-  if (this->has_pctvdroop()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, HasBitSetters::pctvdroop(this), output);
-  }
-
-  // .commonmodule.RampRate rampRates = 5;
-  if (this->has_ramprates()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, HasBitSetters::ramprates(this), output);
-  }
-
-  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
-  if (this->has_reactivepwrsetpointenabled()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, HasBitSetters::reactivepwrsetpointenabled(this), output);
-  }
-
-  // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
-  if (this->has_realpwrsetpointenabled()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7, HasBitSetters::realpwrsetpointenabled(this), output);
-  }
-
-  // .commonmodule.ControlDPC reset = 8;
-  if (this->has_reset()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      8, HasBitSetters::reset(this), output);
-  }
-
-  // .commonmodule.Optional_StateKind state = 9;
-  if (this->has_state()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      9, HasBitSetters::state(this), output);
-  }
-
-  // .commonmodule.ControlDPC voltageSetPointEnabled = 10;
-  if (this->has_voltagesetpointenabled()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      10, HasBitSetters::voltagesetpointenabled(this), output);
-  }
-
-  // .commonmodule.ControlTimestamp startTime = 11 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_starttime()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      11, HasBitSetters::starttime(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:solarmodule.SolarPoint)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SolarPoint::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SolarPoint::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarPoint)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .commonmodule.ControlDPC frequencySetPointEnabled = 1;
+  // .commonmodule.ControlSPC frequencySetPointEnabled = 1;
   if (this->has_frequencysetpointenabled()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::frequencysetpointenabled(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::frequencysetpointenabled(this), target, stream);
   }
 
   // .commonmodule.ENG_GridConnectModeKind mode = 2;
   if (this->has_mode()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::mode(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::mode(this), target, stream);
   }
 
   // .google.protobuf.FloatValue pctHzDroop = 3;
   if (this->has_pcthzdroop()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::pcthzdroop(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::pcthzdroop(this), target, stream);
   }
 
   // .google.protobuf.FloatValue pctVDroop = 4;
   if (this->has_pctvdroop()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, HasBitSetters::pctvdroop(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        4, _Internal::pctvdroop(this), target, stream);
   }
 
   // .commonmodule.RampRate rampRates = 5;
   if (this->has_ramprates()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, HasBitSetters::ramprates(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        5, _Internal::ramprates(this), target, stream);
   }
 
-  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
+  // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 6;
   if (this->has_reactivepwrsetpointenabled()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, HasBitSetters::reactivepwrsetpointenabled(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        6, _Internal::reactivepwrsetpointenabled(this), target, stream);
   }
 
-  // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
+  // .commonmodule.ControlSPC realPwrSetPointEnabled = 7;
   if (this->has_realpwrsetpointenabled()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        7, HasBitSetters::realpwrsetpointenabled(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        7, _Internal::realpwrsetpointenabled(this), target, stream);
   }
 
-  // .commonmodule.ControlDPC reset = 8;
+  // .commonmodule.ControlSPC reset = 8;
   if (this->has_reset()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        8, HasBitSetters::reset(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        8, _Internal::reset(this), target, stream);
   }
 
   // .commonmodule.Optional_StateKind state = 9;
   if (this->has_state()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        9, HasBitSetters::state(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        9, _Internal::state(this), target, stream);
   }
 
-  // .commonmodule.ControlDPC voltageSetPointEnabled = 10;
+  // .commonmodule.ControlSPC voltageSetPointEnabled = 10;
   if (this->has_voltagesetpointenabled()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        10, HasBitSetters::voltagesetpointenabled(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        10, _Internal::voltagesetpointenabled(this), target, stream);
   }
 
   // .commonmodule.ControlTimestamp startTime = 11 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_starttime()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        11, HasBitSetters::starttime(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        11, _Internal::starttime(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarPoint)
   return target;
@@ -1577,106 +1068,105 @@ size_t SolarPoint::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarPoint)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .commonmodule.ControlDPC frequencySetPointEnabled = 1;
+  // .commonmodule.ControlSPC frequencySetPointEnabled = 1;
   if (this->has_frequencysetpointenabled()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *frequencysetpointenabled_);
   }
 
   // .commonmodule.ENG_GridConnectModeKind mode = 2;
   if (this->has_mode()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *mode_);
   }
 
   // .google.protobuf.FloatValue pctHzDroop = 3;
   if (this->has_pcthzdroop()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *pcthzdroop_);
   }
 
   // .google.protobuf.FloatValue pctVDroop = 4;
   if (this->has_pctvdroop()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *pctvdroop_);
   }
 
   // .commonmodule.RampRate rampRates = 5;
   if (this->has_ramprates()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *ramprates_);
   }
 
-  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
+  // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 6;
   if (this->has_reactivepwrsetpointenabled()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *reactivepwrsetpointenabled_);
   }
 
-  // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
+  // .commonmodule.ControlSPC realPwrSetPointEnabled = 7;
   if (this->has_realpwrsetpointenabled()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *realpwrsetpointenabled_);
   }
 
-  // .commonmodule.ControlDPC reset = 8;
+  // .commonmodule.ControlSPC reset = 8;
   if (this->has_reset()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *reset_);
   }
 
   // .commonmodule.Optional_StateKind state = 9;
   if (this->has_state()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *state_);
   }
 
-  // .commonmodule.ControlDPC voltageSetPointEnabled = 10;
+  // .commonmodule.ControlSPC voltageSetPointEnabled = 10;
   if (this->has_voltagesetpointenabled()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *voltagesetpointenabled_);
   }
 
   // .commonmodule.ControlTimestamp startTime = 11 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_starttime()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *starttime_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SolarPoint::MergeFrom(const ::google::protobuf::Message& from) {
+void SolarPoint::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarPoint)
   GOOGLE_DCHECK_NE(&from, this);
   const SolarPoint* source =
-      ::google::protobuf::DynamicCastToGenerated<SolarPoint>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarPoint>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarPoint)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarPoint)
     MergeFrom(*source);
@@ -1686,46 +1176,46 @@ void SolarPoint::MergeFrom(const ::google::protobuf::Message& from) {
 void SolarPoint::MergeFrom(const SolarPoint& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarPoint)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_frequencysetpointenabled()) {
-    mutable_frequencysetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.frequencysetpointenabled());
+    _internal_mutable_frequencysetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_frequencysetpointenabled());
   }
   if (from.has_mode()) {
-    mutable_mode()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from.mode());
+    _internal_mutable_mode()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from._internal_mode());
   }
   if (from.has_pcthzdroop()) {
-    mutable_pcthzdroop()->::google::protobuf::FloatValue::MergeFrom(from.pcthzdroop());
+    _internal_mutable_pcthzdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pcthzdroop());
   }
   if (from.has_pctvdroop()) {
-    mutable_pctvdroop()->::google::protobuf::FloatValue::MergeFrom(from.pctvdroop());
+    _internal_mutable_pctvdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pctvdroop());
   }
   if (from.has_ramprates()) {
-    mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from.ramprates());
+    _internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from._internal_ramprates());
   }
   if (from.has_reactivepwrsetpointenabled()) {
-    mutable_reactivepwrsetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.reactivepwrsetpointenabled());
+    _internal_mutable_reactivepwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_reactivepwrsetpointenabled());
   }
   if (from.has_realpwrsetpointenabled()) {
-    mutable_realpwrsetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.realpwrsetpointenabled());
+    _internal_mutable_realpwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_realpwrsetpointenabled());
   }
   if (from.has_reset()) {
-    mutable_reset()->::commonmodule::ControlDPC::MergeFrom(from.reset());
+    _internal_mutable_reset()->::commonmodule::ControlSPC::MergeFrom(from._internal_reset());
   }
   if (from.has_state()) {
-    mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from.state());
+    _internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from._internal_state());
   }
   if (from.has_voltagesetpointenabled()) {
-    mutable_voltagesetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.voltagesetpointenabled());
+    _internal_mutable_voltagesetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_voltagesetpointenabled());
   }
   if (from.has_starttime()) {
-    mutable_starttime()->::commonmodule::ControlTimestamp::MergeFrom(from.starttime());
+    _internal_mutable_starttime()->::commonmodule::ControlTimestamp::MergeFrom(from._internal_starttime());
   }
 }
 
-void SolarPoint::CopyFrom(const ::google::protobuf::Message& from) {
+void SolarPoint::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarPoint)
   if (&from == this) return;
   Clear();
@@ -1743,219 +1233,133 @@ bool SolarPoint::IsInitialized() const {
   return true;
 }
 
-void SolarPoint::Swap(SolarPoint* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SolarPoint::InternalSwap(SolarPoint* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(frequencysetpointenabled_, other->frequencysetpointenabled_);
-  swap(mode_, other->mode_);
-  swap(pcthzdroop_, other->pcthzdroop_);
-  swap(pctvdroop_, other->pctvdroop_);
-  swap(ramprates_, other->ramprates_);
-  swap(reactivepwrsetpointenabled_, other->reactivepwrsetpointenabled_);
-  swap(realpwrsetpointenabled_, other->realpwrsetpointenabled_);
-  swap(reset_, other->reset_);
-  swap(state_, other->state_);
-  swap(voltagesetpointenabled_, other->voltagesetpointenabled_);
-  swap(starttime_, other->starttime_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarPoint, starttime_)
+      + sizeof(SolarPoint::starttime_)
+      - PROTOBUF_FIELD_OFFSET(SolarPoint, frequencysetpointenabled_)>(
+          reinterpret_cast<char*>(&frequencysetpointenabled_),
+          reinterpret_cast<char*>(&other->frequencysetpointenabled_));
 }
 
-::google::protobuf::Metadata SolarPoint::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_solarmodule_2fsolarmodule_2eproto);
-  return ::file_level_metadata_solarmodule_2fsolarmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SolarPoint::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SolarCSG::InitAsDefaultInstance() {
-}
-class SolarCSG::HasBitSetters {
+class SolarCSG::_Internal {
  public:
 };
 
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SolarCSG::kCrvPtsFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SolarCSG::SolarCSG()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SolarCSG::SolarCSG(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  crvpts_(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:solarmodule.SolarCSG)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarCSG)
 }
 SolarCSG::SolarCSG(const SolarCSG& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr),
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
       crvpts_(from.crvpts_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:solarmodule.SolarCSG)
 }
 
 void SolarCSG::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SolarCSG_solarmodule_2fsolarmodule_2eproto.base);
 }
 
 SolarCSG::~SolarCSG() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarCSG)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SolarCSG::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
 }
 
+void SolarCSG::ArenaDtor(void* object) {
+  SolarCSG* _this = reinterpret_cast< SolarCSG* >(object);
+  (void)_this;
+}
+void SolarCSG::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SolarCSG::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SolarCSG& SolarCSG::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SolarCSG_solarmodule_2fsolarmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SolarCSG::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarCSG)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   crvpts_.Clear();
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SolarCSG::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SolarCSG*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SolarCSG::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // repeated .solarmodule.SolarPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        do {
-          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-          parser_till_end = ::solarmodule::SolarPoint::_InternalParse;
-          object = msg->add_crvpts();
-          if (size > end - ptr) goto len_delim_till_end;
-          ptr += size;
-          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-              {parser_till_end, object}, ptr - size, ptr));
-          if (ptr >= end) break;
-        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 10 && (ptr += 1));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_crvpts(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SolarCSG::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:solarmodule.SolarCSG)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .solarmodule.SolarPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_crvpts()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:solarmodule.SolarCSG)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:solarmodule.SolarCSG)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SolarCSG::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:solarmodule.SolarCSG)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated .solarmodule.SolarPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->crvpts_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1,
-      this->crvpts(static_cast<int>(i)),
-      output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:solarmodule.SolarCSG)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SolarCSG::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SolarCSG::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarCSG)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .solarmodule.SolarPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->crvpts_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->crvpts(static_cast<int>(i)), target);
+      n = static_cast<unsigned int>(this->_internal_crvpts_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, this->_internal_crvpts(i), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarCSG)
   return target;
@@ -1965,40 +1369,35 @@ size_t SolarCSG::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarCSG)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .solarmodule.SolarPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  {
-    unsigned int count = static_cast<unsigned int>(this->crvpts_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->crvpts(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_crvpts_size();
+  for (const auto& msg : this->crvpts_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SolarCSG::MergeFrom(const ::google::protobuf::Message& from) {
+void SolarCSG::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarCSG)
   GOOGLE_DCHECK_NE(&from, this);
   const SolarCSG* source =
-      ::google::protobuf::DynamicCastToGenerated<SolarCSG>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarCSG>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarCSG)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarCSG)
     MergeFrom(*source);
@@ -2008,14 +1407,14 @@ void SolarCSG::MergeFrom(const ::google::protobuf::Message& from) {
 void SolarCSG::MergeFrom(const SolarCSG& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarCSG)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   crvpts_.MergeFrom(from.crvpts_);
 }
 
-void SolarCSG::CopyFrom(const ::google::protobuf::Message& from) {
+void SolarCSG::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarCSG)
   if (&from == this) return;
   Clear();
@@ -2033,51 +1432,38 @@ bool SolarCSG::IsInitialized() const {
   return true;
 }
 
-void SolarCSG::Swap(SolarCSG* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SolarCSG::InternalSwap(SolarCSG* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&crvpts_)->InternalSwap(CastToBase(&other->crvpts_));
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  crvpts_.InternalSwap(&other->crvpts_);
 }
 
-::google::protobuf::Metadata SolarCSG::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_solarmodule_2fsolarmodule_2eproto);
-  return ::file_level_metadata_solarmodule_2fsolarmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SolarCSG::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SolarControlScheduleFSCH::InitAsDefaultInstance() {
-  ::solarmodule::_SolarControlScheduleFSCH_default_instance_._instance.get_mutable()->valdcsg_ = const_cast< ::solarmodule::SolarCSG*>(
-      ::solarmodule::SolarCSG::internal_default_instance());
-}
-class SolarControlScheduleFSCH::HasBitSetters {
+class SolarControlScheduleFSCH::_Internal {
  public:
   static const ::solarmodule::SolarCSG& valdcsg(const SolarControlScheduleFSCH* msg);
 };
 
 const ::solarmodule::SolarCSG&
-SolarControlScheduleFSCH::HasBitSetters::valdcsg(const SolarControlScheduleFSCH* msg) {
+SolarControlScheduleFSCH::_Internal::valdcsg(const SolarControlScheduleFSCH* msg) {
   return *msg->valdcsg_;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SolarControlScheduleFSCH::kValDCSGFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SolarControlScheduleFSCH::SolarControlScheduleFSCH()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SolarControlScheduleFSCH::SolarControlScheduleFSCH(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:solarmodule.SolarControlScheduleFSCH)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarControlScheduleFSCH)
 }
 SolarControlScheduleFSCH::SolarControlScheduleFSCH(const SolarControlScheduleFSCH& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_valdcsg()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_valdcsg()) {
     valdcsg_ = new ::solarmodule::SolarCSG(*from.valdcsg_);
   } else {
     valdcsg_ = nullptr;
@@ -2086,165 +1472,96 @@ SolarControlScheduleFSCH::SolarControlScheduleFSCH(const SolarControlScheduleFSC
 }
 
 void SolarControlScheduleFSCH::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SolarControlScheduleFSCH_solarmodule_2fsolarmodule_2eproto.base);
-  valdcsg_ = nullptr;
+valdcsg_ = nullptr;
 }
 
 SolarControlScheduleFSCH::~SolarControlScheduleFSCH() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarControlScheduleFSCH)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SolarControlScheduleFSCH::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete valdcsg_;
 }
 
+void SolarControlScheduleFSCH::ArenaDtor(void* object) {
+  SolarControlScheduleFSCH* _this = reinterpret_cast< SolarControlScheduleFSCH* >(object);
+  (void)_this;
+}
+void SolarControlScheduleFSCH::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SolarControlScheduleFSCH::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SolarControlScheduleFSCH& SolarControlScheduleFSCH::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SolarControlScheduleFSCH_solarmodule_2fsolarmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SolarControlScheduleFSCH::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarControlScheduleFSCH)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && valdcsg_ != nullptr) {
+  if (GetArena() == nullptr && valdcsg_ != nullptr) {
     delete valdcsg_;
   }
   valdcsg_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SolarControlScheduleFSCH::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SolarControlScheduleFSCH*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SolarControlScheduleFSCH::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .solarmodule.SolarCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::solarmodule::SolarCSG::_InternalParse;
-        object = msg->mutable_valdcsg();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_valdcsg(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SolarControlScheduleFSCH::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:solarmodule.SolarControlScheduleFSCH)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .solarmodule.SolarCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_valdcsg()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:solarmodule.SolarControlScheduleFSCH)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:solarmodule.SolarControlScheduleFSCH)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SolarControlScheduleFSCH::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:solarmodule.SolarControlScheduleFSCH)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .solarmodule.SolarCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_valdcsg()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::valdcsg(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:solarmodule.SolarControlScheduleFSCH)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SolarControlScheduleFSCH::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SolarControlScheduleFSCH::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarControlScheduleFSCH)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .solarmodule.SolarCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_valdcsg()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::valdcsg(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::valdcsg(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarControlScheduleFSCH)
   return target;
@@ -2254,36 +1571,35 @@ size_t SolarControlScheduleFSCH::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarControlScheduleFSCH)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .solarmodule.SolarCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_valdcsg()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *valdcsg_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SolarControlScheduleFSCH::MergeFrom(const ::google::protobuf::Message& from) {
+void SolarControlScheduleFSCH::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarControlScheduleFSCH)
   GOOGLE_DCHECK_NE(&from, this);
   const SolarControlScheduleFSCH* source =
-      ::google::protobuf::DynamicCastToGenerated<SolarControlScheduleFSCH>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarControlScheduleFSCH>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarControlScheduleFSCH)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarControlScheduleFSCH)
     MergeFrom(*source);
@@ -2293,16 +1609,16 @@ void SolarControlScheduleFSCH::MergeFrom(const ::google::protobuf::Message& from
 void SolarControlScheduleFSCH::MergeFrom(const SolarControlScheduleFSCH& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarControlScheduleFSCH)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_valdcsg()) {
-    mutable_valdcsg()->::solarmodule::SolarCSG::MergeFrom(from.valdcsg());
+    _internal_mutable_valdcsg()->::solarmodule::SolarCSG::MergeFrom(from._internal_valdcsg());
   }
 }
 
-void SolarControlScheduleFSCH::CopyFrom(const ::google::protobuf::Message& from) {
+void SolarControlScheduleFSCH::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarControlScheduleFSCH)
   if (&from == this) return;
   Clear();
@@ -2320,70 +1636,54 @@ bool SolarControlScheduleFSCH::IsInitialized() const {
   return true;
 }
 
-void SolarControlScheduleFSCH::Swap(SolarControlScheduleFSCH* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SolarControlScheduleFSCH::InternalSwap(SolarControlScheduleFSCH* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   swap(valdcsg_, other->valdcsg_);
 }
 
-::google::protobuf::Metadata SolarControlScheduleFSCH::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_solarmodule_2fsolarmodule_2eproto);
-  return ::file_level_metadata_solarmodule_2fsolarmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SolarControlScheduleFSCH::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SolarControlFSCC::InitAsDefaultInstance() {
-  ::solarmodule::_SolarControlFSCC_default_instance_._instance.get_mutable()->controlfscc_ = const_cast< ::commonmodule::ControlFSCC*>(
-      ::commonmodule::ControlFSCC::internal_default_instance());
-  ::solarmodule::_SolarControlFSCC_default_instance_._instance.get_mutable()->solarcontrolschedulefsch_ = const_cast< ::solarmodule::SolarControlScheduleFSCH*>(
-      ::solarmodule::SolarControlScheduleFSCH::internal_default_instance());
-}
-class SolarControlFSCC::HasBitSetters {
+class SolarControlFSCC::_Internal {
  public:
   static const ::commonmodule::ControlFSCC& controlfscc(const SolarControlFSCC* msg);
   static const ::solarmodule::SolarControlScheduleFSCH& solarcontrolschedulefsch(const SolarControlFSCC* msg);
 };
 
 const ::commonmodule::ControlFSCC&
-SolarControlFSCC::HasBitSetters::controlfscc(const SolarControlFSCC* msg) {
+SolarControlFSCC::_Internal::controlfscc(const SolarControlFSCC* msg) {
   return *msg->controlfscc_;
 }
 const ::solarmodule::SolarControlScheduleFSCH&
-SolarControlFSCC::HasBitSetters::solarcontrolschedulefsch(const SolarControlFSCC* msg) {
+SolarControlFSCC::_Internal::solarcontrolschedulefsch(const SolarControlFSCC* msg) {
   return *msg->solarcontrolschedulefsch_;
 }
 void SolarControlFSCC::clear_controlfscc() {
-  if (GetArenaNoVirtual() == nullptr && controlfscc_ != nullptr) {
+  if (GetArena() == nullptr && controlfscc_ != nullptr) {
     delete controlfscc_;
   }
   controlfscc_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SolarControlFSCC::kControlFSCCFieldNumber;
-const int SolarControlFSCC::kSolarControlScheduleFSCHFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SolarControlFSCC::SolarControlFSCC()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SolarControlFSCC::SolarControlFSCC(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:solarmodule.SolarControlFSCC)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarControlFSCC)
 }
 SolarControlFSCC::SolarControlFSCC(const SolarControlFSCC& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_controlfscc()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_controlfscc()) {
     controlfscc_ = new ::commonmodule::ControlFSCC(*from.controlfscc_);
   } else {
     controlfscc_ = nullptr;
   }
-  if (from.has_solarcontrolschedulefsch()) {
+  if (from._internal_has_solarcontrolschedulefsch()) {
     solarcontrolschedulefsch_ = new ::solarmodule::SolarControlScheduleFSCH(*from.solarcontrolschedulefsch_);
   } else {
     solarcontrolschedulefsch_ = nullptr;
@@ -2392,209 +1692,119 @@ SolarControlFSCC::SolarControlFSCC(const SolarControlFSCC& from)
 }
 
 void SolarControlFSCC::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SolarControlFSCC_solarmodule_2fsolarmodule_2eproto.base);
-  ::memset(&controlfscc_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&solarcontrolschedulefsch_) -
-      reinterpret_cast<char*>(&controlfscc_)) + sizeof(solarcontrolschedulefsch_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&controlfscc_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&solarcontrolschedulefsch_) -
+    reinterpret_cast<char*>(&controlfscc_)) + sizeof(solarcontrolschedulefsch_));
 }
 
 SolarControlFSCC::~SolarControlFSCC() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarControlFSCC)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SolarControlFSCC::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete controlfscc_;
   if (this != internal_default_instance()) delete solarcontrolschedulefsch_;
 }
 
+void SolarControlFSCC::ArenaDtor(void* object) {
+  SolarControlFSCC* _this = reinterpret_cast< SolarControlFSCC* >(object);
+  (void)_this;
+}
+void SolarControlFSCC::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SolarControlFSCC::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SolarControlFSCC& SolarControlFSCC::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SolarControlFSCC_solarmodule_2fsolarmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SolarControlFSCC::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarControlFSCC)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && controlfscc_ != nullptr) {
+  if (GetArena() == nullptr && controlfscc_ != nullptr) {
     delete controlfscc_;
   }
   controlfscc_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && solarcontrolschedulefsch_ != nullptr) {
+  if (GetArena() == nullptr && solarcontrolschedulefsch_ != nullptr) {
     delete solarcontrolschedulefsch_;
   }
   solarcontrolschedulefsch_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SolarControlFSCC::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SolarControlFSCC*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SolarControlFSCC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ControlFSCC::_InternalParse;
-        object = msg->mutable_controlfscc();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_controlfscc(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .solarmodule.SolarControlScheduleFSCH SolarControlScheduleFSCH = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::solarmodule::SolarControlScheduleFSCH::_InternalParse;
-        object = msg->mutable_solarcontrolschedulefsch();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarcontrolschedulefsch(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SolarControlFSCC::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:solarmodule.SolarControlFSCC)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_controlfscc()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .solarmodule.SolarControlScheduleFSCH SolarControlScheduleFSCH = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_solarcontrolschedulefsch()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:solarmodule.SolarControlFSCC)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:solarmodule.SolarControlFSCC)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SolarControlFSCC::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:solarmodule.SolarControlFSCC)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlfscc()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::controlfscc(this), output);
-  }
-
-  // .solarmodule.SolarControlScheduleFSCH SolarControlScheduleFSCH = 2;
-  if (this->has_solarcontrolschedulefsch()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::solarcontrolschedulefsch(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:solarmodule.SolarControlFSCC)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SolarControlFSCC::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SolarControlFSCC::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarControlFSCC)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlfscc()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::controlfscc(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::controlfscc(this), target, stream);
   }
 
   // .solarmodule.SolarControlScheduleFSCH SolarControlScheduleFSCH = 2;
   if (this->has_solarcontrolschedulefsch()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::solarcontrolschedulefsch(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::solarcontrolschedulefsch(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarControlFSCC)
   return target;
@@ -2604,43 +1814,42 @@ size_t SolarControlFSCC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarControlFSCC)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlfscc()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *controlfscc_);
   }
 
   // .solarmodule.SolarControlScheduleFSCH SolarControlScheduleFSCH = 2;
   if (this->has_solarcontrolschedulefsch()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *solarcontrolschedulefsch_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SolarControlFSCC::MergeFrom(const ::google::protobuf::Message& from) {
+void SolarControlFSCC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarControlFSCC)
   GOOGLE_DCHECK_NE(&from, this);
   const SolarControlFSCC* source =
-      ::google::protobuf::DynamicCastToGenerated<SolarControlFSCC>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarControlFSCC>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarControlFSCC)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarControlFSCC)
     MergeFrom(*source);
@@ -2650,19 +1859,19 @@ void SolarControlFSCC::MergeFrom(const ::google::protobuf::Message& from) {
 void SolarControlFSCC::MergeFrom(const SolarControlFSCC& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarControlFSCC)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_controlfscc()) {
-    mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(from.controlfscc());
+    _internal_mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(from._internal_controlfscc());
   }
   if (from.has_solarcontrolschedulefsch()) {
-    mutable_solarcontrolschedulefsch()->::solarmodule::SolarControlScheduleFSCH::MergeFrom(from.solarcontrolschedulefsch());
+    _internal_mutable_solarcontrolschedulefsch()->::solarmodule::SolarControlScheduleFSCH::MergeFrom(from._internal_solarcontrolschedulefsch());
   }
 }
 
-void SolarControlFSCC::CopyFrom(const ::google::protobuf::Message& from) {
+void SolarControlFSCC::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarControlFSCC)
   if (&from == this) return;
   Clear();
@@ -2680,34 +1889,25 @@ bool SolarControlFSCC::IsInitialized() const {
   return true;
 }
 
-void SolarControlFSCC::Swap(SolarControlFSCC* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SolarControlFSCC::InternalSwap(SolarControlFSCC* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(controlfscc_, other->controlfscc_);
-  swap(solarcontrolschedulefsch_, other->solarcontrolschedulefsch_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarControlFSCC, solarcontrolschedulefsch_)
+      + sizeof(SolarControlFSCC::solarcontrolschedulefsch_)
+      - PROTOBUF_FIELD_OFFSET(SolarControlFSCC, controlfscc_)>(
+          reinterpret_cast<char*>(&controlfscc_),
+          reinterpret_cast<char*>(&other->controlfscc_));
 }
 
-::google::protobuf::Metadata SolarControlFSCC::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_solarmodule_2fsolarmodule_2eproto);
-  return ::file_level_metadata_solarmodule_2fsolarmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SolarControlFSCC::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SolarControl::InitAsDefaultInstance() {
-  ::solarmodule::_SolarControl_default_instance_._instance.get_mutable()->controlvalue_ = const_cast< ::commonmodule::ControlValue*>(
-      ::commonmodule::ControlValue::internal_default_instance());
-  ::solarmodule::_SolarControl_default_instance_._instance.get_mutable()->check_ = const_cast< ::commonmodule::CheckConditions*>(
-      ::commonmodule::CheckConditions::internal_default_instance());
-  ::solarmodule::_SolarControl_default_instance_._instance.get_mutable()->solarcontrolfscc_ = const_cast< ::solarmodule::SolarControlFSCC*>(
-      ::solarmodule::SolarControlFSCC::internal_default_instance());
-}
-class SolarControl::HasBitSetters {
+class SolarControl::_Internal {
  public:
   static const ::commonmodule::ControlValue& controlvalue(const SolarControl* msg);
   static const ::commonmodule::CheckConditions& check(const SolarControl* msg);
@@ -2715,55 +1915,49 @@ class SolarControl::HasBitSetters {
 };
 
 const ::commonmodule::ControlValue&
-SolarControl::HasBitSetters::controlvalue(const SolarControl* msg) {
+SolarControl::_Internal::controlvalue(const SolarControl* msg) {
   return *msg->controlvalue_;
 }
 const ::commonmodule::CheckConditions&
-SolarControl::HasBitSetters::check(const SolarControl* msg) {
+SolarControl::_Internal::check(const SolarControl* msg) {
   return *msg->check_;
 }
 const ::solarmodule::SolarControlFSCC&
-SolarControl::HasBitSetters::solarcontrolfscc(const SolarControl* msg) {
+SolarControl::_Internal::solarcontrolfscc(const SolarControl* msg) {
   return *msg->solarcontrolfscc_;
 }
 void SolarControl::clear_controlvalue() {
-  if (GetArenaNoVirtual() == nullptr && controlvalue_ != nullptr) {
+  if (GetArena() == nullptr && controlvalue_ != nullptr) {
     delete controlvalue_;
   }
   controlvalue_ = nullptr;
 }
 void SolarControl::clear_check() {
-  if (GetArenaNoVirtual() == nullptr && check_ != nullptr) {
+  if (GetArena() == nullptr && check_ != nullptr) {
     delete check_;
   }
   check_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SolarControl::kControlValueFieldNumber;
-const int SolarControl::kCheckFieldNumber;
-const int SolarControl::kSolarControlFSCCFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SolarControl::SolarControl()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SolarControl::SolarControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:solarmodule.SolarControl)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarControl)
 }
 SolarControl::SolarControl(const SolarControl& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_controlvalue()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_controlvalue()) {
     controlvalue_ = new ::commonmodule::ControlValue(*from.controlvalue_);
   } else {
     controlvalue_ = nullptr;
   }
-  if (from.has_check()) {
+  if (from._internal_has_check()) {
     check_ = new ::commonmodule::CheckConditions(*from.check_);
   } else {
     check_ = nullptr;
   }
-  if (from.has_solarcontrolfscc()) {
+  if (from._internal_has_solarcontrolfscc()) {
     solarcontrolfscc_ = new ::solarmodule::SolarControlFSCC(*from.solarcontrolfscc_);
   } else {
     solarcontrolfscc_ = nullptr;
@@ -2772,251 +1966,139 @@ SolarControl::SolarControl(const SolarControl& from)
 }
 
 void SolarControl::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SolarControl_solarmodule_2fsolarmodule_2eproto.base);
-  ::memset(&controlvalue_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&solarcontrolfscc_) -
-      reinterpret_cast<char*>(&controlvalue_)) + sizeof(solarcontrolfscc_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&controlvalue_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&solarcontrolfscc_) -
+    reinterpret_cast<char*>(&controlvalue_)) + sizeof(solarcontrolfscc_));
 }
 
 SolarControl::~SolarControl() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarControl)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SolarControl::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete controlvalue_;
   if (this != internal_default_instance()) delete check_;
   if (this != internal_default_instance()) delete solarcontrolfscc_;
 }
 
+void SolarControl::ArenaDtor(void* object) {
+  SolarControl* _this = reinterpret_cast< SolarControl* >(object);
+  (void)_this;
+}
+void SolarControl::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SolarControl::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SolarControl& SolarControl::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SolarControl_solarmodule_2fsolarmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SolarControl::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarControl)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && controlvalue_ != nullptr) {
+  if (GetArena() == nullptr && controlvalue_ != nullptr) {
     delete controlvalue_;
   }
   controlvalue_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && check_ != nullptr) {
+  if (GetArena() == nullptr && check_ != nullptr) {
     delete check_;
   }
   check_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && solarcontrolfscc_ != nullptr) {
+  if (GetArena() == nullptr && solarcontrolfscc_ != nullptr) {
     delete solarcontrolfscc_;
   }
   solarcontrolfscc_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SolarControl::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SolarControl*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SolarControl::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ControlValue::_InternalParse;
-        object = msg->mutable_controlvalue();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_controlvalue(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.CheckConditions check = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::CheckConditions::_InternalParse;
-        object = msg->mutable_check();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .solarmodule.SolarControlFSCC solarControlFSCC = 3;
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::solarmodule::SolarControlFSCC::_InternalParse;
-        object = msg->mutable_solarcontrolfscc();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarcontrolfscc(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SolarControl::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:solarmodule.SolarControl)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_controlvalue()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.CheckConditions check = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_check()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .solarmodule.SolarControlFSCC solarControlFSCC = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_solarcontrolfscc()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:solarmodule.SolarControl)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:solarmodule.SolarControl)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SolarControl::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:solarmodule.SolarControl)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::controlvalue(this), output);
-  }
-
-  // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::check(this), output);
-  }
-
-  // .solarmodule.SolarControlFSCC solarControlFSCC = 3;
-  if (this->has_solarcontrolfscc()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::solarcontrolfscc(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:solarmodule.SolarControl)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SolarControl::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SolarControl::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarControl)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlvalue()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::controlvalue(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::controlvalue(this), target, stream);
   }
 
   // .commonmodule.CheckConditions check = 2;
   if (this->has_check()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::check(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::check(this), target, stream);
   }
 
   // .solarmodule.SolarControlFSCC solarControlFSCC = 3;
   if (this->has_solarcontrolfscc()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::solarcontrolfscc(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::solarcontrolfscc(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarControl)
   return target;
@@ -3026,50 +2108,49 @@ size_t SolarControl::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarControl)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlvalue()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *controlvalue_);
   }
 
   // .commonmodule.CheckConditions check = 2;
   if (this->has_check()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *check_);
   }
 
   // .solarmodule.SolarControlFSCC solarControlFSCC = 3;
   if (this->has_solarcontrolfscc()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *solarcontrolfscc_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SolarControl::MergeFrom(const ::google::protobuf::Message& from) {
+void SolarControl::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarControl)
   GOOGLE_DCHECK_NE(&from, this);
   const SolarControl* source =
-      ::google::protobuf::DynamicCastToGenerated<SolarControl>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarControl>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarControl)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarControl)
     MergeFrom(*source);
@@ -3079,22 +2160,22 @@ void SolarControl::MergeFrom(const ::google::protobuf::Message& from) {
 void SolarControl::MergeFrom(const SolarControl& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarControl)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_controlvalue()) {
-    mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(from.controlvalue());
+    _internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(from._internal_controlvalue());
   }
   if (from.has_check()) {
-    mutable_check()->::commonmodule::CheckConditions::MergeFrom(from.check());
+    _internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(from._internal_check());
   }
   if (from.has_solarcontrolfscc()) {
-    mutable_solarcontrolfscc()->::solarmodule::SolarControlFSCC::MergeFrom(from.solarcontrolfscc());
+    _internal_mutable_solarcontrolfscc()->::solarmodule::SolarControlFSCC::MergeFrom(from._internal_solarcontrolfscc());
   }
 }
 
-void SolarControl::CopyFrom(const ::google::protobuf::Message& from) {
+void SolarControl::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarControl)
   if (&from == this) return;
   Clear();
@@ -3112,59 +2193,49 @@ bool SolarControl::IsInitialized() const {
   return true;
 }
 
-void SolarControl::Swap(SolarControl* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SolarControl::InternalSwap(SolarControl* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(controlvalue_, other->controlvalue_);
-  swap(check_, other->check_);
-  swap(solarcontrolfscc_, other->solarcontrolfscc_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarControl, solarcontrolfscc_)
+      + sizeof(SolarControl::solarcontrolfscc_)
+      - PROTOBUF_FIELD_OFFSET(SolarControl, controlvalue_)>(
+          reinterpret_cast<char*>(&controlvalue_),
+          reinterpret_cast<char*>(&other->controlvalue_));
 }
 
-::google::protobuf::Metadata SolarControl::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_solarmodule_2fsolarmodule_2eproto);
-  return ::file_level_metadata_solarmodule_2fsolarmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SolarControl::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SolarInverter::InitAsDefaultInstance() {
-  ::solarmodule::_SolarInverter_default_instance_._instance.get_mutable()->conductingequipment_ = const_cast< ::commonmodule::ConductingEquipment*>(
-      ::commonmodule::ConductingEquipment::internal_default_instance());
-}
-class SolarInverter::HasBitSetters {
+class SolarInverter::_Internal {
  public:
   static const ::commonmodule::ConductingEquipment& conductingequipment(const SolarInverter* msg);
 };
 
 const ::commonmodule::ConductingEquipment&
-SolarInverter::HasBitSetters::conductingequipment(const SolarInverter* msg) {
+SolarInverter::_Internal::conductingequipment(const SolarInverter* msg) {
   return *msg->conductingequipment_;
 }
 void SolarInverter::clear_conductingequipment() {
-  if (GetArenaNoVirtual() == nullptr && conductingequipment_ != nullptr) {
+  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
     delete conductingequipment_;
   }
   conductingequipment_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SolarInverter::kConductingEquipmentFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SolarInverter::SolarInverter()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SolarInverter::SolarInverter(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:solarmodule.SolarInverter)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarInverter)
 }
 SolarInverter::SolarInverter(const SolarInverter& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_conductingequipment()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_conductingequipment()) {
     conductingequipment_ = new ::commonmodule::ConductingEquipment(*from.conductingequipment_);
   } else {
     conductingequipment_ = nullptr;
@@ -3173,165 +2244,96 @@ SolarInverter::SolarInverter(const SolarInverter& from)
 }
 
 void SolarInverter::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SolarInverter_solarmodule_2fsolarmodule_2eproto.base);
-  conductingequipment_ = nullptr;
+conductingequipment_ = nullptr;
 }
 
 SolarInverter::~SolarInverter() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarInverter)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SolarInverter::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete conductingequipment_;
 }
 
+void SolarInverter::ArenaDtor(void* object) {
+  SolarInverter* _this = reinterpret_cast< SolarInverter* >(object);
+  (void)_this;
+}
+void SolarInverter::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SolarInverter::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SolarInverter& SolarInverter::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SolarInverter_solarmodule_2fsolarmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SolarInverter::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarInverter)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && conductingequipment_ != nullptr) {
+  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
     delete conductingequipment_;
   }
   conductingequipment_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SolarInverter::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SolarInverter*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SolarInverter::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ConductingEquipment::_InternalParse;
-        object = msg->mutable_conductingequipment();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_conductingequipment(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SolarInverter::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:solarmodule.SolarInverter)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_conductingequipment()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:solarmodule.SolarInverter)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:solarmodule.SolarInverter)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SolarInverter::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:solarmodule.SolarInverter)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipment()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::conductingequipment(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:solarmodule.SolarInverter)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SolarInverter::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SolarInverter::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarInverter)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
   if (this->has_conductingequipment()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::conductingequipment(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::conductingequipment(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarInverter)
   return target;
@@ -3341,36 +2343,35 @@ size_t SolarInverter::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarInverter)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
   if (this->has_conductingequipment()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *conductingequipment_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SolarInverter::MergeFrom(const ::google::protobuf::Message& from) {
+void SolarInverter::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarInverter)
   GOOGLE_DCHECK_NE(&from, this);
   const SolarInverter* source =
-      ::google::protobuf::DynamicCastToGenerated<SolarInverter>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarInverter>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarInverter)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarInverter)
     MergeFrom(*source);
@@ -3380,16 +2381,16 @@ void SolarInverter::MergeFrom(const ::google::protobuf::Message& from) {
 void SolarInverter::MergeFrom(const SolarInverter& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarInverter)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_conductingequipment()) {
-    mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(from.conductingequipment());
+    _internal_mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(from._internal_conductingequipment());
   }
 }
 
-void SolarInverter::CopyFrom(const ::google::protobuf::Message& from) {
+void SolarInverter::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarInverter)
   if (&from == this) return;
   Clear();
@@ -3407,102 +2408,64 @@ bool SolarInverter::IsInitialized() const {
   return true;
 }
 
-void SolarInverter::Swap(SolarInverter* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SolarInverter::InternalSwap(SolarInverter* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   swap(conductingequipment_, other->conductingequipment_);
 }
 
-::google::protobuf::Metadata SolarInverter::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_solarmodule_2fsolarmodule_2eproto);
-  return ::file_level_metadata_solarmodule_2fsolarmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SolarInverter::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SolarControlProfile::InitAsDefaultInstance() {
-  ::solarmodule::_SolarControlProfile_default_instance_._instance.get_mutable()->controlmessageinfo_ = const_cast< ::commonmodule::ControlMessageInfo*>(
-      ::commonmodule::ControlMessageInfo::internal_default_instance());
-  ::solarmodule::_SolarControlProfile_default_instance_._instance.get_mutable()->ied_ = const_cast< ::commonmodule::IED*>(
-      ::commonmodule::IED::internal_default_instance());
-  ::solarmodule::_SolarControlProfile_default_instance_._instance.get_mutable()->solarcontrol_ = const_cast< ::solarmodule::SolarControl*>(
-      ::solarmodule::SolarControl::internal_default_instance());
-  ::solarmodule::_SolarControlProfile_default_instance_._instance.get_mutable()->solarinverter_ = const_cast< ::solarmodule::SolarInverter*>(
-      ::solarmodule::SolarInverter::internal_default_instance());
-}
-class SolarControlProfile::HasBitSetters {
+class SolarControlProfile::_Internal {
  public:
   static const ::commonmodule::ControlMessageInfo& controlmessageinfo(const SolarControlProfile* msg);
-  static const ::commonmodule::IED& ied(const SolarControlProfile* msg);
   static const ::solarmodule::SolarControl& solarcontrol(const SolarControlProfile* msg);
   static const ::solarmodule::SolarInverter& solarinverter(const SolarControlProfile* msg);
 };
 
 const ::commonmodule::ControlMessageInfo&
-SolarControlProfile::HasBitSetters::controlmessageinfo(const SolarControlProfile* msg) {
+SolarControlProfile::_Internal::controlmessageinfo(const SolarControlProfile* msg) {
   return *msg->controlmessageinfo_;
 }
-const ::commonmodule::IED&
-SolarControlProfile::HasBitSetters::ied(const SolarControlProfile* msg) {
-  return *msg->ied_;
-}
 const ::solarmodule::SolarControl&
-SolarControlProfile::HasBitSetters::solarcontrol(const SolarControlProfile* msg) {
+SolarControlProfile::_Internal::solarcontrol(const SolarControlProfile* msg) {
   return *msg->solarcontrol_;
 }
 const ::solarmodule::SolarInverter&
-SolarControlProfile::HasBitSetters::solarinverter(const SolarControlProfile* msg) {
+SolarControlProfile::_Internal::solarinverter(const SolarControlProfile* msg) {
   return *msg->solarinverter_;
 }
 void SolarControlProfile::clear_controlmessageinfo() {
-  if (GetArenaNoVirtual() == nullptr && controlmessageinfo_ != nullptr) {
+  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
     delete controlmessageinfo_;
   }
   controlmessageinfo_ = nullptr;
 }
-void SolarControlProfile::clear_ied() {
-  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
-    delete ied_;
-  }
-  ied_ = nullptr;
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SolarControlProfile::kControlMessageInfoFieldNumber;
-const int SolarControlProfile::kIedFieldNumber;
-const int SolarControlProfile::kSolarControlFieldNumber;
-const int SolarControlProfile::kSolarInverterFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SolarControlProfile::SolarControlProfile()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SolarControlProfile::SolarControlProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:solarmodule.SolarControlProfile)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarControlProfile)
 }
 SolarControlProfile::SolarControlProfile(const SolarControlProfile& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_controlmessageinfo()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_controlmessageinfo()) {
     controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
   } else {
     controlmessageinfo_ = nullptr;
   }
-  if (from.has_ied()) {
-    ied_ = new ::commonmodule::IED(*from.ied_);
-  } else {
-    ied_ = nullptr;
-  }
-  if (from.has_solarcontrol()) {
+  if (from._internal_has_solarcontrol()) {
     solarcontrol_ = new ::solarmodule::SolarControl(*from.solarcontrol_);
   } else {
     solarcontrol_ = nullptr;
   }
-  if (from.has_solarinverter()) {
+  if (from._internal_has_solarinverter()) {
     solarinverter_ = new ::solarmodule::SolarInverter(*from.solarinverter_);
   } else {
     solarinverter_ = nullptr;
@@ -3511,293 +2474,139 @@ SolarControlProfile::SolarControlProfile(const SolarControlProfile& from)
 }
 
 void SolarControlProfile::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SolarControlProfile_solarmodule_2fsolarmodule_2eproto.base);
-  ::memset(&controlmessageinfo_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&solarinverter_) -
-      reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(solarinverter_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&solarinverter_) -
+    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(solarinverter_));
 }
 
 SolarControlProfile::~SolarControlProfile() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarControlProfile)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SolarControlProfile::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete ied_;
   if (this != internal_default_instance()) delete solarcontrol_;
   if (this != internal_default_instance()) delete solarinverter_;
 }
 
+void SolarControlProfile::ArenaDtor(void* object) {
+  SolarControlProfile* _this = reinterpret_cast< SolarControlProfile* >(object);
+  (void)_this;
+}
+void SolarControlProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SolarControlProfile::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SolarControlProfile& SolarControlProfile::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SolarControlProfile_solarmodule_2fsolarmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SolarControlProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarControlProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && controlmessageinfo_ != nullptr) {
+  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
     delete controlmessageinfo_;
   }
   controlmessageinfo_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
-    delete ied_;
-  }
-  ied_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && solarcontrol_ != nullptr) {
+  if (GetArena() == nullptr && solarcontrol_ != nullptr) {
     delete solarcontrol_;
   }
   solarcontrol_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && solarinverter_ != nullptr) {
+  if (GetArena() == nullptr && solarinverter_ != nullptr) {
     delete solarinverter_;
   }
   solarinverter_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SolarControlProfile::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SolarControlProfile*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SolarControlProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ControlMessageInfo::_InternalParse;
-        object = msg->mutable_controlmessageinfo();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::IED::_InternalParse;
-        object = msg->mutable_ied();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .solarmodule.SolarControl solarControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::solarmodule::SolarControl::_InternalParse;
-        object = msg->mutable_solarcontrol();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .solarmodule.SolarInverter solarInverter = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::solarmodule::SolarInverter::_InternalParse;
-        object = msg->mutable_solarinverter();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .solarmodule.SolarControl solarControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarcontrol(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarinverter(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SolarControlProfile::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:solarmodule.SolarControlProfile)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_controlmessageinfo()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_ied()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .solarmodule.SolarControl solarControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_solarcontrol()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .solarmodule.SolarInverter solarInverter = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_solarinverter()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:solarmodule.SolarControlProfile)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:solarmodule.SolarControlProfile)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SolarControlProfile::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:solarmodule.SolarControlProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::controlmessageinfo(this), output);
-  }
-
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::ied(this), output);
-  }
-
-  // .solarmodule.SolarControl solarControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarcontrol()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::solarcontrol(this), output);
-  }
-
-  // .solarmodule.SolarInverter solarInverter = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarinverter()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, HasBitSetters::solarinverter(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:solarmodule.SolarControlProfile)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SolarControlProfile::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SolarControlProfile::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarControlProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlmessageinfo()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::controlmessageinfo(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::controlmessageinfo(this), target, stream);
   }
 
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::ied(this), target);
-  }
-
-  // .solarmodule.SolarControl solarControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarControl solarControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_solarcontrol()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::solarcontrol(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::solarcontrol(this), target, stream);
   }
 
-  // .solarmodule.SolarInverter solarInverter = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_solarinverter()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, HasBitSetters::solarinverter(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::solarinverter(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarControlProfile)
   return target;
@@ -3807,57 +2616,49 @@ size_t SolarControlProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarControlProfile)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_controlmessageinfo()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *controlmessageinfo_);
   }
 
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *ied_);
-  }
-
-  // .solarmodule.SolarControl solarControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarControl solarControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_solarcontrol()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *solarcontrol_);
   }
 
-  // .solarmodule.SolarInverter solarInverter = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_solarinverter()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *solarinverter_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SolarControlProfile::MergeFrom(const ::google::protobuf::Message& from) {
+void SolarControlProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarControlProfile)
   GOOGLE_DCHECK_NE(&from, this);
   const SolarControlProfile* source =
-      ::google::protobuf::DynamicCastToGenerated<SolarControlProfile>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarControlProfile>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarControlProfile)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarControlProfile)
     MergeFrom(*source);
@@ -3867,25 +2668,22 @@ void SolarControlProfile::MergeFrom(const ::google::protobuf::Message& from) {
 void SolarControlProfile::MergeFrom(const SolarControlProfile& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarControlProfile)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_controlmessageinfo()) {
-    mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from.controlmessageinfo());
-  }
-  if (from.has_ied()) {
-    mutable_ied()->::commonmodule::IED::MergeFrom(from.ied());
+    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
   }
   if (from.has_solarcontrol()) {
-    mutable_solarcontrol()->::solarmodule::SolarControl::MergeFrom(from.solarcontrol());
+    _internal_mutable_solarcontrol()->::solarmodule::SolarControl::MergeFrom(from._internal_solarcontrol());
   }
   if (from.has_solarinverter()) {
-    mutable_solarinverter()->::solarmodule::SolarInverter::MergeFrom(from.solarinverter());
+    _internal_mutable_solarinverter()->::solarmodule::SolarInverter::MergeFrom(from._internal_solarinverter());
   }
 }
 
-void SolarControlProfile::CopyFrom(const ::google::protobuf::Message& from) {
+void SolarControlProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarControlProfile)
   if (&from == this) return;
   Clear();
@@ -3903,213 +2701,178 @@ bool SolarControlProfile::IsInitialized() const {
   return true;
 }
 
-void SolarControlProfile::Swap(SolarControlProfile* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SolarControlProfile::InternalSwap(SolarControlProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(controlmessageinfo_, other->controlmessageinfo_);
-  swap(ied_, other->ied_);
-  swap(solarcontrol_, other->solarcontrol_);
-  swap(solarinverter_, other->solarinverter_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarControlProfile, solarinverter_)
+      + sizeof(SolarControlProfile::solarinverter_)
+      - PROTOBUF_FIELD_OFFSET(SolarControlProfile, controlmessageinfo_)>(
+          reinterpret_cast<char*>(&controlmessageinfo_),
+          reinterpret_cast<char*>(&other->controlmessageinfo_));
 }
 
-::google::protobuf::Metadata SolarControlProfile::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_solarmodule_2fsolarmodule_2eproto);
-  return ::file_level_metadata_solarmodule_2fsolarmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SolarControlProfile::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SolarPointStatus::InitAsDefaultInstance() {
-  ::solarmodule::_SolarPointStatus_default_instance_._instance.get_mutable()->frequencysetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
-      ::commonmodule::ControlDPC::internal_default_instance());
-  ::solarmodule::_SolarPointStatus_default_instance_._instance.get_mutable()->mode_ = const_cast< ::commonmodule::ENG_GridConnectModeKind*>(
-      ::commonmodule::ENG_GridConnectModeKind::internal_default_instance());
-  ::solarmodule::_SolarPointStatus_default_instance_._instance.get_mutable()->pcthzdroop_ = const_cast< ::google::protobuf::FloatValue*>(
-      ::google::protobuf::FloatValue::internal_default_instance());
-  ::solarmodule::_SolarPointStatus_default_instance_._instance.get_mutable()->pctvdroop_ = const_cast< ::google::protobuf::FloatValue*>(
-      ::google::protobuf::FloatValue::internal_default_instance());
-  ::solarmodule::_SolarPointStatus_default_instance_._instance.get_mutable()->ramprates_ = const_cast< ::commonmodule::RampRate*>(
-      ::commonmodule::RampRate::internal_default_instance());
-  ::solarmodule::_SolarPointStatus_default_instance_._instance.get_mutable()->reactivepwrsetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
-      ::commonmodule::ControlDPC::internal_default_instance());
-  ::solarmodule::_SolarPointStatus_default_instance_._instance.get_mutable()->realpwrsetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
-      ::commonmodule::ControlDPC::internal_default_instance());
-  ::solarmodule::_SolarPointStatus_default_instance_._instance.get_mutable()->state_ = const_cast< ::commonmodule::Optional_StateKind*>(
-      ::commonmodule::Optional_StateKind::internal_default_instance());
-  ::solarmodule::_SolarPointStatus_default_instance_._instance.get_mutable()->voltagesetpointenabled_ = const_cast< ::commonmodule::ControlDPC*>(
-      ::commonmodule::ControlDPC::internal_default_instance());
-}
-class SolarPointStatus::HasBitSetters {
+class SolarPointStatus::_Internal {
  public:
-  static const ::commonmodule::ControlDPC& frequencysetpointenabled(const SolarPointStatus* msg);
+  static const ::commonmodule::StatusSPS& frequencysetpointenabled(const SolarPointStatus* msg);
   static const ::commonmodule::ENG_GridConnectModeKind& mode(const SolarPointStatus* msg);
-  static const ::google::protobuf::FloatValue& pcthzdroop(const SolarPointStatus* msg);
-  static const ::google::protobuf::FloatValue& pctvdroop(const SolarPointStatus* msg);
+  static const PROTOBUF_NAMESPACE_ID::FloatValue& pcthzdroop(const SolarPointStatus* msg);
+  static const PROTOBUF_NAMESPACE_ID::FloatValue& pctvdroop(const SolarPointStatus* msg);
   static const ::commonmodule::RampRate& ramprates(const SolarPointStatus* msg);
-  static const ::commonmodule::ControlDPC& reactivepwrsetpointenabled(const SolarPointStatus* msg);
-  static const ::commonmodule::ControlDPC& realpwrsetpointenabled(const SolarPointStatus* msg);
+  static const ::commonmodule::StatusSPS& reactivepwrsetpointenabled(const SolarPointStatus* msg);
+  static const ::commonmodule::StatusSPS& realpwrsetpointenabled(const SolarPointStatus* msg);
   static const ::commonmodule::Optional_StateKind& state(const SolarPointStatus* msg);
-  static const ::commonmodule::ControlDPC& voltagesetpointenabled(const SolarPointStatus* msg);
+  static const ::commonmodule::StatusSPS& voltagesetpointenabled(const SolarPointStatus* msg);
 };
 
-const ::commonmodule::ControlDPC&
-SolarPointStatus::HasBitSetters::frequencysetpointenabled(const SolarPointStatus* msg) {
+const ::commonmodule::StatusSPS&
+SolarPointStatus::_Internal::frequencysetpointenabled(const SolarPointStatus* msg) {
   return *msg->frequencysetpointenabled_;
 }
 const ::commonmodule::ENG_GridConnectModeKind&
-SolarPointStatus::HasBitSetters::mode(const SolarPointStatus* msg) {
+SolarPointStatus::_Internal::mode(const SolarPointStatus* msg) {
   return *msg->mode_;
 }
-const ::google::protobuf::FloatValue&
-SolarPointStatus::HasBitSetters::pcthzdroop(const SolarPointStatus* msg) {
+const PROTOBUF_NAMESPACE_ID::FloatValue&
+SolarPointStatus::_Internal::pcthzdroop(const SolarPointStatus* msg) {
   return *msg->pcthzdroop_;
 }
-const ::google::protobuf::FloatValue&
-SolarPointStatus::HasBitSetters::pctvdroop(const SolarPointStatus* msg) {
+const PROTOBUF_NAMESPACE_ID::FloatValue&
+SolarPointStatus::_Internal::pctvdroop(const SolarPointStatus* msg) {
   return *msg->pctvdroop_;
 }
 const ::commonmodule::RampRate&
-SolarPointStatus::HasBitSetters::ramprates(const SolarPointStatus* msg) {
+SolarPointStatus::_Internal::ramprates(const SolarPointStatus* msg) {
   return *msg->ramprates_;
 }
-const ::commonmodule::ControlDPC&
-SolarPointStatus::HasBitSetters::reactivepwrsetpointenabled(const SolarPointStatus* msg) {
+const ::commonmodule::StatusSPS&
+SolarPointStatus::_Internal::reactivepwrsetpointenabled(const SolarPointStatus* msg) {
   return *msg->reactivepwrsetpointenabled_;
 }
-const ::commonmodule::ControlDPC&
-SolarPointStatus::HasBitSetters::realpwrsetpointenabled(const SolarPointStatus* msg) {
+const ::commonmodule::StatusSPS&
+SolarPointStatus::_Internal::realpwrsetpointenabled(const SolarPointStatus* msg) {
   return *msg->realpwrsetpointenabled_;
 }
 const ::commonmodule::Optional_StateKind&
-SolarPointStatus::HasBitSetters::state(const SolarPointStatus* msg) {
+SolarPointStatus::_Internal::state(const SolarPointStatus* msg) {
   return *msg->state_;
 }
-const ::commonmodule::ControlDPC&
-SolarPointStatus::HasBitSetters::voltagesetpointenabled(const SolarPointStatus* msg) {
+const ::commonmodule::StatusSPS&
+SolarPointStatus::_Internal::voltagesetpointenabled(const SolarPointStatus* msg) {
   return *msg->voltagesetpointenabled_;
 }
 void SolarPointStatus::clear_frequencysetpointenabled() {
-  if (GetArenaNoVirtual() == nullptr && frequencysetpointenabled_ != nullptr) {
+  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
     delete frequencysetpointenabled_;
   }
   frequencysetpointenabled_ = nullptr;
 }
 void SolarPointStatus::clear_mode() {
-  if (GetArenaNoVirtual() == nullptr && mode_ != nullptr) {
+  if (GetArena() == nullptr && mode_ != nullptr) {
     delete mode_;
   }
   mode_ = nullptr;
 }
 void SolarPointStatus::clear_pcthzdroop() {
-  if (GetArenaNoVirtual() == nullptr && pcthzdroop_ != nullptr) {
+  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
     delete pcthzdroop_;
   }
   pcthzdroop_ = nullptr;
 }
 void SolarPointStatus::clear_pctvdroop() {
-  if (GetArenaNoVirtual() == nullptr && pctvdroop_ != nullptr) {
+  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
     delete pctvdroop_;
   }
   pctvdroop_ = nullptr;
 }
 void SolarPointStatus::clear_ramprates() {
-  if (GetArenaNoVirtual() == nullptr && ramprates_ != nullptr) {
+  if (GetArena() == nullptr && ramprates_ != nullptr) {
     delete ramprates_;
   }
   ramprates_ = nullptr;
 }
 void SolarPointStatus::clear_reactivepwrsetpointenabled() {
-  if (GetArenaNoVirtual() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
+  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
     delete reactivepwrsetpointenabled_;
   }
   reactivepwrsetpointenabled_ = nullptr;
 }
 void SolarPointStatus::clear_realpwrsetpointenabled() {
-  if (GetArenaNoVirtual() == nullptr && realpwrsetpointenabled_ != nullptr) {
+  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
     delete realpwrsetpointenabled_;
   }
   realpwrsetpointenabled_ = nullptr;
 }
 void SolarPointStatus::clear_state() {
-  if (GetArenaNoVirtual() == nullptr && state_ != nullptr) {
+  if (GetArena() == nullptr && state_ != nullptr) {
     delete state_;
   }
   state_ = nullptr;
 }
 void SolarPointStatus::clear_voltagesetpointenabled() {
-  if (GetArenaNoVirtual() == nullptr && voltagesetpointenabled_ != nullptr) {
+  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
     delete voltagesetpointenabled_;
   }
   voltagesetpointenabled_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SolarPointStatus::kFrequencySetPointEnabledFieldNumber;
-const int SolarPointStatus::kModeFieldNumber;
-const int SolarPointStatus::kPctHzDroopFieldNumber;
-const int SolarPointStatus::kPctVDroopFieldNumber;
-const int SolarPointStatus::kRampRatesFieldNumber;
-const int SolarPointStatus::kReactivePwrSetPointEnabledFieldNumber;
-const int SolarPointStatus::kRealPwrSetPointEnabledFieldNumber;
-const int SolarPointStatus::kStateFieldNumber;
-const int SolarPointStatus::kVoltageSetPointEnabledFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SolarPointStatus::SolarPointStatus()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SolarPointStatus::SolarPointStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:solarmodule.SolarPointStatus)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarPointStatus)
 }
 SolarPointStatus::SolarPointStatus(const SolarPointStatus& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_frequencysetpointenabled()) {
-    frequencysetpointenabled_ = new ::commonmodule::ControlDPC(*from.frequencysetpointenabled_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_frequencysetpointenabled()) {
+    frequencysetpointenabled_ = new ::commonmodule::StatusSPS(*from.frequencysetpointenabled_);
   } else {
     frequencysetpointenabled_ = nullptr;
   }
-  if (from.has_mode()) {
+  if (from._internal_has_mode()) {
     mode_ = new ::commonmodule::ENG_GridConnectModeKind(*from.mode_);
   } else {
     mode_ = nullptr;
   }
-  if (from.has_pcthzdroop()) {
-    pcthzdroop_ = new ::google::protobuf::FloatValue(*from.pcthzdroop_);
+  if (from._internal_has_pcthzdroop()) {
+    pcthzdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pcthzdroop_);
   } else {
     pcthzdroop_ = nullptr;
   }
-  if (from.has_pctvdroop()) {
-    pctvdroop_ = new ::google::protobuf::FloatValue(*from.pctvdroop_);
+  if (from._internal_has_pctvdroop()) {
+    pctvdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pctvdroop_);
   } else {
     pctvdroop_ = nullptr;
   }
-  if (from.has_ramprates()) {
+  if (from._internal_has_ramprates()) {
     ramprates_ = new ::commonmodule::RampRate(*from.ramprates_);
   } else {
     ramprates_ = nullptr;
   }
-  if (from.has_reactivepwrsetpointenabled()) {
-    reactivepwrsetpointenabled_ = new ::commonmodule::ControlDPC(*from.reactivepwrsetpointenabled_);
+  if (from._internal_has_reactivepwrsetpointenabled()) {
+    reactivepwrsetpointenabled_ = new ::commonmodule::StatusSPS(*from.reactivepwrsetpointenabled_);
   } else {
     reactivepwrsetpointenabled_ = nullptr;
   }
-  if (from.has_realpwrsetpointenabled()) {
-    realpwrsetpointenabled_ = new ::commonmodule::ControlDPC(*from.realpwrsetpointenabled_);
+  if (from._internal_has_realpwrsetpointenabled()) {
+    realpwrsetpointenabled_ = new ::commonmodule::StatusSPS(*from.realpwrsetpointenabled_);
   } else {
     realpwrsetpointenabled_ = nullptr;
   }
-  if (from.has_state()) {
+  if (from._internal_has_state()) {
     state_ = new ::commonmodule::Optional_StateKind(*from.state_);
   } else {
     state_ = nullptr;
   }
-  if (from.has_voltagesetpointenabled()) {
-    voltagesetpointenabled_ = new ::commonmodule::ControlDPC(*from.voltagesetpointenabled_);
+  if (from._internal_has_voltagesetpointenabled()) {
+    voltagesetpointenabled_ = new ::commonmodule::StatusSPS(*from.voltagesetpointenabled_);
   } else {
     voltagesetpointenabled_ = nullptr;
   }
@@ -4117,19 +2880,20 @@ SolarPointStatus::SolarPointStatus(const SolarPointStatus& from)
 }
 
 void SolarPointStatus::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SolarPointStatus_solarmodule_2fsolarmodule_2eproto.base);
-  ::memset(&frequencysetpointenabled_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&voltagesetpointenabled_) -
-      reinterpret_cast<char*>(&frequencysetpointenabled_)) + sizeof(voltagesetpointenabled_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&frequencysetpointenabled_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&voltagesetpointenabled_) -
+    reinterpret_cast<char*>(&frequencysetpointenabled_)) + sizeof(voltagesetpointenabled_));
 }
 
 SolarPointStatus::~SolarPointStatus() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarPointStatus)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SolarPointStatus::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete frequencysetpointenabled_;
   if (this != internal_default_instance()) delete mode_;
   if (this != internal_default_instance()) delete pcthzdroop_;
@@ -4141,479 +2905,234 @@ void SolarPointStatus::SharedDtor() {
   if (this != internal_default_instance()) delete voltagesetpointenabled_;
 }
 
+void SolarPointStatus::ArenaDtor(void* object) {
+  SolarPointStatus* _this = reinterpret_cast< SolarPointStatus* >(object);
+  (void)_this;
+}
+void SolarPointStatus::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SolarPointStatus::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SolarPointStatus& SolarPointStatus::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SolarPointStatus_solarmodule_2fsolarmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SolarPointStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarPointStatus)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && frequencysetpointenabled_ != nullptr) {
+  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
     delete frequencysetpointenabled_;
   }
   frequencysetpointenabled_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && mode_ != nullptr) {
+  if (GetArena() == nullptr && mode_ != nullptr) {
     delete mode_;
   }
   mode_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && pcthzdroop_ != nullptr) {
+  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
     delete pcthzdroop_;
   }
   pcthzdroop_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && pctvdroop_ != nullptr) {
+  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
     delete pctvdroop_;
   }
   pctvdroop_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && ramprates_ != nullptr) {
+  if (GetArena() == nullptr && ramprates_ != nullptr) {
     delete ramprates_;
   }
   ramprates_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
+  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
     delete reactivepwrsetpointenabled_;
   }
   reactivepwrsetpointenabled_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && realpwrsetpointenabled_ != nullptr) {
+  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
     delete realpwrsetpointenabled_;
   }
   realpwrsetpointenabled_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && state_ != nullptr) {
+  if (GetArena() == nullptr && state_ != nullptr) {
     delete state_;
   }
   state_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && voltagesetpointenabled_ != nullptr) {
+  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
     delete voltagesetpointenabled_;
   }
   voltagesetpointenabled_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SolarPointStatus::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SolarPointStatus*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SolarPointStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
-      // .commonmodule.ControlDPC frequencySetPointEnabled = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
-        object = msg->mutable_frequencysetpointenabled();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      // .commonmodule.StatusSPS frequencySetPointEnabled = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_frequencysetpointenabled(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.ENG_GridConnectModeKind mode = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ENG_GridConnectModeKind::_InternalParse;
-        object = msg->mutable_mode();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_mode(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .google.protobuf.FloatValue pctHzDroop = 3;
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
-        object = msg->mutable_pcthzdroop();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pcthzdroop(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .google.protobuf.FloatValue pctVDroop = 4;
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::google::protobuf::FloatValue::_InternalParse;
-        object = msg->mutable_pctvdroop();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pctvdroop(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.RampRate rampRates = 5;
-      case 5: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::RampRate::_InternalParse;
-        object = msg->mutable_ramprates();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
-      case 6: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
-        object = msg->mutable_reactivepwrsetpointenabled();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
-      case 7: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
-        object = msg->mutable_realpwrsetpointenabled();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_ramprates(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_reactivepwrsetpointenabled(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .commonmodule.StatusSPS realPwrSetPointEnabled = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          ptr = ctx->ParseMessage(_internal_mutable_realpwrsetpointenabled(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.Optional_StateKind state = 8;
-      case 8: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 66) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::Optional_StateKind::_InternalParse;
-        object = msg->mutable_state();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.ControlDPC voltageSetPointEnabled = 9;
-      case 9: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 74) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ControlDPC::_InternalParse;
-        object = msg->mutable_voltagesetpointenabled();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+          ptr = ctx->ParseMessage(_internal_mutable_state(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .commonmodule.StatusSPS voltageSetPointEnabled = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+          ptr = ctx->ParseMessage(_internal_mutable_voltagesetpointenabled(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SolarPointStatus::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:solarmodule.SolarPointStatus)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.ControlDPC frequencySetPointEnabled = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_frequencysetpointenabled()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ENG_GridConnectModeKind mode = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_mode()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .google.protobuf.FloatValue pctHzDroop = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_pcthzdroop()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .google.protobuf.FloatValue pctVDroop = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_pctvdroop()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.RampRate rampRates = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_ramprates()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_reactivepwrsetpointenabled()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_realpwrsetpointenabled()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.Optional_StateKind state = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (66 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_state()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ControlDPC voltageSetPointEnabled = 9;
-      case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (74 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_voltagesetpointenabled()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:solarmodule.SolarPointStatus)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:solarmodule.SolarPointStatus)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SolarPointStatus::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:solarmodule.SolarPointStatus)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlDPC frequencySetPointEnabled = 1;
-  if (this->has_frequencysetpointenabled()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::frequencysetpointenabled(this), output);
-  }
-
-  // .commonmodule.ENG_GridConnectModeKind mode = 2;
-  if (this->has_mode()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::mode(this), output);
-  }
-
-  // .google.protobuf.FloatValue pctHzDroop = 3;
-  if (this->has_pcthzdroop()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::pcthzdroop(this), output);
-  }
-
-  // .google.protobuf.FloatValue pctVDroop = 4;
-  if (this->has_pctvdroop()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, HasBitSetters::pctvdroop(this), output);
-  }
-
-  // .commonmodule.RampRate rampRates = 5;
-  if (this->has_ramprates()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, HasBitSetters::ramprates(this), output);
-  }
-
-  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
-  if (this->has_reactivepwrsetpointenabled()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, HasBitSetters::reactivepwrsetpointenabled(this), output);
-  }
-
-  // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
-  if (this->has_realpwrsetpointenabled()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7, HasBitSetters::realpwrsetpointenabled(this), output);
-  }
-
-  // .commonmodule.Optional_StateKind state = 8;
-  if (this->has_state()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      8, HasBitSetters::state(this), output);
-  }
-
-  // .commonmodule.ControlDPC voltageSetPointEnabled = 9;
-  if (this->has_voltagesetpointenabled()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      9, HasBitSetters::voltagesetpointenabled(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:solarmodule.SolarPointStatus)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SolarPointStatus::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SolarPointStatus::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarPointStatus)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .commonmodule.ControlDPC frequencySetPointEnabled = 1;
+  // .commonmodule.StatusSPS frequencySetPointEnabled = 1;
   if (this->has_frequencysetpointenabled()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::frequencysetpointenabled(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::frequencysetpointenabled(this), target, stream);
   }
 
   // .commonmodule.ENG_GridConnectModeKind mode = 2;
   if (this->has_mode()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::mode(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::mode(this), target, stream);
   }
 
   // .google.protobuf.FloatValue pctHzDroop = 3;
   if (this->has_pcthzdroop()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::pcthzdroop(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::pcthzdroop(this), target, stream);
   }
 
   // .google.protobuf.FloatValue pctVDroop = 4;
   if (this->has_pctvdroop()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, HasBitSetters::pctvdroop(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        4, _Internal::pctvdroop(this), target, stream);
   }
 
   // .commonmodule.RampRate rampRates = 5;
   if (this->has_ramprates()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, HasBitSetters::ramprates(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        5, _Internal::ramprates(this), target, stream);
   }
 
-  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
+  // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 6;
   if (this->has_reactivepwrsetpointenabled()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, HasBitSetters::reactivepwrsetpointenabled(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        6, _Internal::reactivepwrsetpointenabled(this), target, stream);
   }
 
-  // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
+  // .commonmodule.StatusSPS realPwrSetPointEnabled = 7;
   if (this->has_realpwrsetpointenabled()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        7, HasBitSetters::realpwrsetpointenabled(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        7, _Internal::realpwrsetpointenabled(this), target, stream);
   }
 
   // .commonmodule.Optional_StateKind state = 8;
   if (this->has_state()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        8, HasBitSetters::state(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        8, _Internal::state(this), target, stream);
   }
 
-  // .commonmodule.ControlDPC voltageSetPointEnabled = 9;
+  // .commonmodule.StatusSPS voltageSetPointEnabled = 9;
   if (this->has_voltagesetpointenabled()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        9, HasBitSetters::voltagesetpointenabled(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        9, _Internal::voltagesetpointenabled(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarPointStatus)
   return target;
@@ -4623,92 +3142,91 @@ size_t SolarPointStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarPointStatus)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .commonmodule.ControlDPC frequencySetPointEnabled = 1;
+  // .commonmodule.StatusSPS frequencySetPointEnabled = 1;
   if (this->has_frequencysetpointenabled()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *frequencysetpointenabled_);
   }
 
   // .commonmodule.ENG_GridConnectModeKind mode = 2;
   if (this->has_mode()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *mode_);
   }
 
   // .google.protobuf.FloatValue pctHzDroop = 3;
   if (this->has_pcthzdroop()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *pcthzdroop_);
   }
 
   // .google.protobuf.FloatValue pctVDroop = 4;
   if (this->has_pctvdroop()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *pctvdroop_);
   }
 
   // .commonmodule.RampRate rampRates = 5;
   if (this->has_ramprates()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *ramprates_);
   }
 
-  // .commonmodule.ControlDPC reactivePwrSetPointEnabled = 6;
+  // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 6;
   if (this->has_reactivepwrsetpointenabled()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *reactivepwrsetpointenabled_);
   }
 
-  // .commonmodule.ControlDPC realPwrSetPointEnabled = 7;
+  // .commonmodule.StatusSPS realPwrSetPointEnabled = 7;
   if (this->has_realpwrsetpointenabled()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *realpwrsetpointenabled_);
   }
 
   // .commonmodule.Optional_StateKind state = 8;
   if (this->has_state()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *state_);
   }
 
-  // .commonmodule.ControlDPC voltageSetPointEnabled = 9;
+  // .commonmodule.StatusSPS voltageSetPointEnabled = 9;
   if (this->has_voltagesetpointenabled()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *voltagesetpointenabled_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SolarPointStatus::MergeFrom(const ::google::protobuf::Message& from) {
+void SolarPointStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarPointStatus)
   GOOGLE_DCHECK_NE(&from, this);
   const SolarPointStatus* source =
-      ::google::protobuf::DynamicCastToGenerated<SolarPointStatus>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarPointStatus>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarPointStatus)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarPointStatus)
     MergeFrom(*source);
@@ -4718,40 +3236,40 @@ void SolarPointStatus::MergeFrom(const ::google::protobuf::Message& from) {
 void SolarPointStatus::MergeFrom(const SolarPointStatus& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarPointStatus)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_frequencysetpointenabled()) {
-    mutable_frequencysetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.frequencysetpointenabled());
+    _internal_mutable_frequencysetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_frequencysetpointenabled());
   }
   if (from.has_mode()) {
-    mutable_mode()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from.mode());
+    _internal_mutable_mode()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from._internal_mode());
   }
   if (from.has_pcthzdroop()) {
-    mutable_pcthzdroop()->::google::protobuf::FloatValue::MergeFrom(from.pcthzdroop());
+    _internal_mutable_pcthzdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pcthzdroop());
   }
   if (from.has_pctvdroop()) {
-    mutable_pctvdroop()->::google::protobuf::FloatValue::MergeFrom(from.pctvdroop());
+    _internal_mutable_pctvdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pctvdroop());
   }
   if (from.has_ramprates()) {
-    mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from.ramprates());
+    _internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from._internal_ramprates());
   }
   if (from.has_reactivepwrsetpointenabled()) {
-    mutable_reactivepwrsetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.reactivepwrsetpointenabled());
+    _internal_mutable_reactivepwrsetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_reactivepwrsetpointenabled());
   }
   if (from.has_realpwrsetpointenabled()) {
-    mutable_realpwrsetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.realpwrsetpointenabled());
+    _internal_mutable_realpwrsetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_realpwrsetpointenabled());
   }
   if (from.has_state()) {
-    mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from.state());
+    _internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from._internal_state());
   }
   if (from.has_voltagesetpointenabled()) {
-    mutable_voltagesetpointenabled()->::commonmodule::ControlDPC::MergeFrom(from.voltagesetpointenabled());
+    _internal_mutable_voltagesetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_voltagesetpointenabled());
   }
 }
 
-void SolarPointStatus::CopyFrom(const ::google::protobuf::Message& from) {
+void SolarPointStatus::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarPointStatus)
   if (&from == this) return;
   Clear();
@@ -4769,45 +3287,25 @@ bool SolarPointStatus::IsInitialized() const {
   return true;
 }
 
-void SolarPointStatus::Swap(SolarPointStatus* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SolarPointStatus::InternalSwap(SolarPointStatus* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(frequencysetpointenabled_, other->frequencysetpointenabled_);
-  swap(mode_, other->mode_);
-  swap(pcthzdroop_, other->pcthzdroop_);
-  swap(pctvdroop_, other->pctvdroop_);
-  swap(ramprates_, other->ramprates_);
-  swap(reactivepwrsetpointenabled_, other->reactivepwrsetpointenabled_);
-  swap(realpwrsetpointenabled_, other->realpwrsetpointenabled_);
-  swap(state_, other->state_);
-  swap(voltagesetpointenabled_, other->voltagesetpointenabled_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarPointStatus, voltagesetpointenabled_)
+      + sizeof(SolarPointStatus::voltagesetpointenabled_)
+      - PROTOBUF_FIELD_OFFSET(SolarPointStatus, frequencysetpointenabled_)>(
+          reinterpret_cast<char*>(&frequencysetpointenabled_),
+          reinterpret_cast<char*>(&other->frequencysetpointenabled_));
 }
 
-::google::protobuf::Metadata SolarPointStatus::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_solarmodule_2fsolarmodule_2eproto);
-  return ::file_level_metadata_solarmodule_2fsolarmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SolarPointStatus::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SolarEventAndStatusZGEN::InitAsDefaultInstance() {
-  ::solarmodule::_SolarEventAndStatusZGEN_default_instance_._instance.get_mutable()->logicalnodeforeventandstatus_ = const_cast< ::commonmodule::LogicalNodeForEventAndStatus*>(
-      ::commonmodule::LogicalNodeForEventAndStatus::internal_default_instance());
-  ::solarmodule::_SolarEventAndStatusZGEN_default_instance_._instance.get_mutable()->auxpwrst_ = const_cast< ::commonmodule::StatusSPS*>(
-      ::commonmodule::StatusSPS::internal_default_instance());
-  ::solarmodule::_SolarEventAndStatusZGEN_default_instance_._instance.get_mutable()->dynamictest_ = const_cast< ::commonmodule::ENS_DynamicTestKind*>(
-      ::commonmodule::ENS_DynamicTestKind::internal_default_instance());
-  ::solarmodule::_SolarEventAndStatusZGEN_default_instance_._instance.get_mutable()->emgstop_ = const_cast< ::commonmodule::StatusSPS*>(
-      ::commonmodule::StatusSPS::internal_default_instance());
-  ::solarmodule::_SolarEventAndStatusZGEN_default_instance_._instance.get_mutable()->pointstatus_ = const_cast< ::solarmodule::SolarPointStatus*>(
-      ::solarmodule::SolarPointStatus::internal_default_instance());
-}
-class SolarEventAndStatusZGEN::HasBitSetters {
+class SolarEventAndStatusZGEN::_Internal {
  public:
   static const ::commonmodule::LogicalNodeForEventAndStatus& logicalnodeforeventandstatus(const SolarEventAndStatusZGEN* msg);
   static const ::commonmodule::StatusSPS& auxpwrst(const SolarEventAndStatusZGEN* msg);
@@ -4817,87 +3315,79 @@ class SolarEventAndStatusZGEN::HasBitSetters {
 };
 
 const ::commonmodule::LogicalNodeForEventAndStatus&
-SolarEventAndStatusZGEN::HasBitSetters::logicalnodeforeventandstatus(const SolarEventAndStatusZGEN* msg) {
+SolarEventAndStatusZGEN::_Internal::logicalnodeforeventandstatus(const SolarEventAndStatusZGEN* msg) {
   return *msg->logicalnodeforeventandstatus_;
 }
 const ::commonmodule::StatusSPS&
-SolarEventAndStatusZGEN::HasBitSetters::auxpwrst(const SolarEventAndStatusZGEN* msg) {
+SolarEventAndStatusZGEN::_Internal::auxpwrst(const SolarEventAndStatusZGEN* msg) {
   return *msg->auxpwrst_;
 }
 const ::commonmodule::ENS_DynamicTestKind&
-SolarEventAndStatusZGEN::HasBitSetters::dynamictest(const SolarEventAndStatusZGEN* msg) {
+SolarEventAndStatusZGEN::_Internal::dynamictest(const SolarEventAndStatusZGEN* msg) {
   return *msg->dynamictest_;
 }
 const ::commonmodule::StatusSPS&
-SolarEventAndStatusZGEN::HasBitSetters::emgstop(const SolarEventAndStatusZGEN* msg) {
+SolarEventAndStatusZGEN::_Internal::emgstop(const SolarEventAndStatusZGEN* msg) {
   return *msg->emgstop_;
 }
 const ::solarmodule::SolarPointStatus&
-SolarEventAndStatusZGEN::HasBitSetters::pointstatus(const SolarEventAndStatusZGEN* msg) {
+SolarEventAndStatusZGEN::_Internal::pointstatus(const SolarEventAndStatusZGEN* msg) {
   return *msg->pointstatus_;
 }
 void SolarEventAndStatusZGEN::clear_logicalnodeforeventandstatus() {
-  if (GetArenaNoVirtual() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
+  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
     delete logicalnodeforeventandstatus_;
   }
   logicalnodeforeventandstatus_ = nullptr;
 }
 void SolarEventAndStatusZGEN::clear_auxpwrst() {
-  if (GetArenaNoVirtual() == nullptr && auxpwrst_ != nullptr) {
+  if (GetArena() == nullptr && auxpwrst_ != nullptr) {
     delete auxpwrst_;
   }
   auxpwrst_ = nullptr;
 }
 void SolarEventAndStatusZGEN::clear_dynamictest() {
-  if (GetArenaNoVirtual() == nullptr && dynamictest_ != nullptr) {
+  if (GetArena() == nullptr && dynamictest_ != nullptr) {
     delete dynamictest_;
   }
   dynamictest_ = nullptr;
 }
 void SolarEventAndStatusZGEN::clear_emgstop() {
-  if (GetArenaNoVirtual() == nullptr && emgstop_ != nullptr) {
+  if (GetArena() == nullptr && emgstop_ != nullptr) {
     delete emgstop_;
   }
   emgstop_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SolarEventAndStatusZGEN::kLogicalNodeForEventAndStatusFieldNumber;
-const int SolarEventAndStatusZGEN::kAuxPwrStFieldNumber;
-const int SolarEventAndStatusZGEN::kDynamicTestFieldNumber;
-const int SolarEventAndStatusZGEN::kEmgStopFieldNumber;
-const int SolarEventAndStatusZGEN::kPointStatusFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SolarEventAndStatusZGEN::SolarEventAndStatusZGEN()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SolarEventAndStatusZGEN::SolarEventAndStatusZGEN(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:solarmodule.SolarEventAndStatusZGEN)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarEventAndStatusZGEN)
 }
 SolarEventAndStatusZGEN::SolarEventAndStatusZGEN(const SolarEventAndStatusZGEN& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_logicalnodeforeventandstatus()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_logicalnodeforeventandstatus()) {
     logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from.logicalnodeforeventandstatus_);
   } else {
     logicalnodeforeventandstatus_ = nullptr;
   }
-  if (from.has_auxpwrst()) {
+  if (from._internal_has_auxpwrst()) {
     auxpwrst_ = new ::commonmodule::StatusSPS(*from.auxpwrst_);
   } else {
     auxpwrst_ = nullptr;
   }
-  if (from.has_dynamictest()) {
+  if (from._internal_has_dynamictest()) {
     dynamictest_ = new ::commonmodule::ENS_DynamicTestKind(*from.dynamictest_);
   } else {
     dynamictest_ = nullptr;
   }
-  if (from.has_emgstop()) {
+  if (from._internal_has_emgstop()) {
     emgstop_ = new ::commonmodule::StatusSPS(*from.emgstop_);
   } else {
     emgstop_ = nullptr;
   }
-  if (from.has_pointstatus()) {
+  if (from._internal_has_pointstatus()) {
     pointstatus_ = new ::solarmodule::SolarPointStatus(*from.pointstatus_);
   } else {
     pointstatus_ = nullptr;
@@ -4906,19 +3396,20 @@ SolarEventAndStatusZGEN::SolarEventAndStatusZGEN(const SolarEventAndStatusZGEN& 
 }
 
 void SolarEventAndStatusZGEN::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SolarEventAndStatusZGEN_solarmodule_2fsolarmodule_2eproto.base);
-  ::memset(&logicalnodeforeventandstatus_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&pointstatus_) -
-      reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(pointstatus_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&logicalnodeforeventandstatus_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&pointstatus_) -
+    reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(pointstatus_));
 }
 
 SolarEventAndStatusZGEN::~SolarEventAndStatusZGEN() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarEventAndStatusZGEN)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SolarEventAndStatusZGEN::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete logicalnodeforeventandstatus_;
   if (this != internal_default_instance()) delete auxpwrst_;
   if (this != internal_default_instance()) delete dynamictest_;
@@ -4926,315 +3417,158 @@ void SolarEventAndStatusZGEN::SharedDtor() {
   if (this != internal_default_instance()) delete pointstatus_;
 }
 
+void SolarEventAndStatusZGEN::ArenaDtor(void* object) {
+  SolarEventAndStatusZGEN* _this = reinterpret_cast< SolarEventAndStatusZGEN* >(object);
+  (void)_this;
+}
+void SolarEventAndStatusZGEN::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SolarEventAndStatusZGEN::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SolarEventAndStatusZGEN& SolarEventAndStatusZGEN::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SolarEventAndStatusZGEN_solarmodule_2fsolarmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SolarEventAndStatusZGEN::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarEventAndStatusZGEN)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
+  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
     delete logicalnodeforeventandstatus_;
   }
   logicalnodeforeventandstatus_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && auxpwrst_ != nullptr) {
+  if (GetArena() == nullptr && auxpwrst_ != nullptr) {
     delete auxpwrst_;
   }
   auxpwrst_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && dynamictest_ != nullptr) {
+  if (GetArena() == nullptr && dynamictest_ != nullptr) {
     delete dynamictest_;
   }
   dynamictest_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && emgstop_ != nullptr) {
+  if (GetArena() == nullptr && emgstop_ != nullptr) {
     delete emgstop_;
   }
   emgstop_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && pointstatus_ != nullptr) {
+  if (GetArena() == nullptr && pointstatus_ != nullptr) {
     delete pointstatus_;
   }
   pointstatus_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SolarEventAndStatusZGEN::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SolarEventAndStatusZGEN*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SolarEventAndStatusZGEN::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::LogicalNodeForEventAndStatus::_InternalParse;
-        object = msg->mutable_logicalnodeforeventandstatus();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforeventandstatus(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.StatusSPS AuxPwrSt = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::StatusSPS::_InternalParse;
-        object = msg->mutable_auxpwrst();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_auxpwrst(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ENS_DynamicTestKind::_InternalParse;
-        object = msg->mutable_dynamictest();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_dynamictest(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.StatusSPS EmgStop = 4;
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::StatusSPS::_InternalParse;
-        object = msg->mutable_emgstop();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_emgstop(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .solarmodule.SolarPointStatus PointStatus = 5;
-      case 5: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::solarmodule::SolarPointStatus::_InternalParse;
-        object = msg->mutable_pointstatus();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pointstatus(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SolarEventAndStatusZGEN::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:solarmodule.SolarEventAndStatusZGEN)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_logicalnodeforeventandstatus()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.StatusSPS AuxPwrSt = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_auxpwrst()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_dynamictest()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.StatusSPS EmgStop = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_emgstop()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .solarmodule.SolarPointStatus PointStatus = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_pointstatus()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:solarmodule.SolarEventAndStatusZGEN)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:solarmodule.SolarEventAndStatusZGEN)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SolarEventAndStatusZGEN::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:solarmodule.SolarEventAndStatusZGEN)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforeventandstatus()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::logicalnodeforeventandstatus(this), output);
-  }
-
-  // .commonmodule.StatusSPS AuxPwrSt = 2;
-  if (this->has_auxpwrst()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::auxpwrst(this), output);
-  }
-
-  // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
-  if (this->has_dynamictest()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::dynamictest(this), output);
-  }
-
-  // .commonmodule.StatusSPS EmgStop = 4;
-  if (this->has_emgstop()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, HasBitSetters::emgstop(this), output);
-  }
-
-  // .solarmodule.SolarPointStatus PointStatus = 5;
-  if (this->has_pointstatus()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, HasBitSetters::pointstatus(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:solarmodule.SolarEventAndStatusZGEN)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SolarEventAndStatusZGEN::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SolarEventAndStatusZGEN::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarEventAndStatusZGEN)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
   if (this->has_logicalnodeforeventandstatus()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::logicalnodeforeventandstatus(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::logicalnodeforeventandstatus(this), target, stream);
   }
 
   // .commonmodule.StatusSPS AuxPwrSt = 2;
   if (this->has_auxpwrst()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::auxpwrst(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::auxpwrst(this), target, stream);
   }
 
   // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
   if (this->has_dynamictest()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::dynamictest(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::dynamictest(this), target, stream);
   }
 
   // .commonmodule.StatusSPS EmgStop = 4;
   if (this->has_emgstop()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, HasBitSetters::emgstop(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        4, _Internal::emgstop(this), target, stream);
   }
 
   // .solarmodule.SolarPointStatus PointStatus = 5;
   if (this->has_pointstatus()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, HasBitSetters::pointstatus(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        5, _Internal::pointstatus(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarEventAndStatusZGEN)
   return target;
@@ -5244,64 +3578,63 @@ size_t SolarEventAndStatusZGEN::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarEventAndStatusZGEN)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
   if (this->has_logicalnodeforeventandstatus()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *logicalnodeforeventandstatus_);
   }
 
   // .commonmodule.StatusSPS AuxPwrSt = 2;
   if (this->has_auxpwrst()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *auxpwrst_);
   }
 
   // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
   if (this->has_dynamictest()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *dynamictest_);
   }
 
   // .commonmodule.StatusSPS EmgStop = 4;
   if (this->has_emgstop()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *emgstop_);
   }
 
   // .solarmodule.SolarPointStatus PointStatus = 5;
   if (this->has_pointstatus()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *pointstatus_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SolarEventAndStatusZGEN::MergeFrom(const ::google::protobuf::Message& from) {
+void SolarEventAndStatusZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarEventAndStatusZGEN)
   GOOGLE_DCHECK_NE(&from, this);
   const SolarEventAndStatusZGEN* source =
-      ::google::protobuf::DynamicCastToGenerated<SolarEventAndStatusZGEN>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarEventAndStatusZGEN>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarEventAndStatusZGEN)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarEventAndStatusZGEN)
     MergeFrom(*source);
@@ -5311,28 +3644,28 @@ void SolarEventAndStatusZGEN::MergeFrom(const ::google::protobuf::Message& from)
 void SolarEventAndStatusZGEN::MergeFrom(const SolarEventAndStatusZGEN& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarEventAndStatusZGEN)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_logicalnodeforeventandstatus()) {
-    mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from.logicalnodeforeventandstatus());
+    _internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from._internal_logicalnodeforeventandstatus());
   }
   if (from.has_auxpwrst()) {
-    mutable_auxpwrst()->::commonmodule::StatusSPS::MergeFrom(from.auxpwrst());
+    _internal_mutable_auxpwrst()->::commonmodule::StatusSPS::MergeFrom(from._internal_auxpwrst());
   }
   if (from.has_dynamictest()) {
-    mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(from.dynamictest());
+    _internal_mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(from._internal_dynamictest());
   }
   if (from.has_emgstop()) {
-    mutable_emgstop()->::commonmodule::StatusSPS::MergeFrom(from.emgstop());
+    _internal_mutable_emgstop()->::commonmodule::StatusSPS::MergeFrom(from._internal_emgstop());
   }
   if (from.has_pointstatus()) {
-    mutable_pointstatus()->::solarmodule::SolarPointStatus::MergeFrom(from.pointstatus());
+    _internal_mutable_pointstatus()->::solarmodule::SolarPointStatus::MergeFrom(from._internal_pointstatus());
   }
 }
 
-void SolarEventAndStatusZGEN::CopyFrom(const ::google::protobuf::Message& from) {
+void SolarEventAndStatusZGEN::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarEventAndStatusZGEN)
   if (&from == this) return;
   Clear();
@@ -5350,74 +3683,59 @@ bool SolarEventAndStatusZGEN::IsInitialized() const {
   return true;
 }
 
-void SolarEventAndStatusZGEN::Swap(SolarEventAndStatusZGEN* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SolarEventAndStatusZGEN::InternalSwap(SolarEventAndStatusZGEN* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(logicalnodeforeventandstatus_, other->logicalnodeforeventandstatus_);
-  swap(auxpwrst_, other->auxpwrst_);
-  swap(dynamictest_, other->dynamictest_);
-  swap(emgstop_, other->emgstop_);
-  swap(pointstatus_, other->pointstatus_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarEventAndStatusZGEN, pointstatus_)
+      + sizeof(SolarEventAndStatusZGEN::pointstatus_)
+      - PROTOBUF_FIELD_OFFSET(SolarEventAndStatusZGEN, logicalnodeforeventandstatus_)>(
+          reinterpret_cast<char*>(&logicalnodeforeventandstatus_),
+          reinterpret_cast<char*>(&other->logicalnodeforeventandstatus_));
 }
 
-::google::protobuf::Metadata SolarEventAndStatusZGEN::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_solarmodule_2fsolarmodule_2eproto);
-  return ::file_level_metadata_solarmodule_2fsolarmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SolarEventAndStatusZGEN::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SolarEventZGEN::InitAsDefaultInstance() {
-  ::solarmodule::_SolarEventZGEN_default_instance_._instance.get_mutable()->solareventandstatuszgen_ = const_cast< ::solarmodule::SolarEventAndStatusZGEN*>(
-      ::solarmodule::SolarEventAndStatusZGEN::internal_default_instance());
-  ::solarmodule::_SolarEventZGEN_default_instance_._instance.get_mutable()->grimod_ = const_cast< ::commonmodule::ENG_GridConnectModeKind*>(
-      ::commonmodule::ENG_GridConnectModeKind::internal_default_instance());
-}
-class SolarEventZGEN::HasBitSetters {
+class SolarEventZGEN::_Internal {
  public:
   static const ::solarmodule::SolarEventAndStatusZGEN& solareventandstatuszgen(const SolarEventZGEN* msg);
   static const ::commonmodule::ENG_GridConnectModeKind& grimod(const SolarEventZGEN* msg);
 };
 
 const ::solarmodule::SolarEventAndStatusZGEN&
-SolarEventZGEN::HasBitSetters::solareventandstatuszgen(const SolarEventZGEN* msg) {
+SolarEventZGEN::_Internal::solareventandstatuszgen(const SolarEventZGEN* msg) {
   return *msg->solareventandstatuszgen_;
 }
 const ::commonmodule::ENG_GridConnectModeKind&
-SolarEventZGEN::HasBitSetters::grimod(const SolarEventZGEN* msg) {
+SolarEventZGEN::_Internal::grimod(const SolarEventZGEN* msg) {
   return *msg->grimod_;
 }
 void SolarEventZGEN::clear_grimod() {
-  if (GetArenaNoVirtual() == nullptr && grimod_ != nullptr) {
+  if (GetArena() == nullptr && grimod_ != nullptr) {
     delete grimod_;
   }
   grimod_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SolarEventZGEN::kSolarEventAndStatusZGENFieldNumber;
-const int SolarEventZGEN::kGriModFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SolarEventZGEN::SolarEventZGEN()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SolarEventZGEN::SolarEventZGEN(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:solarmodule.SolarEventZGEN)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarEventZGEN)
 }
 SolarEventZGEN::SolarEventZGEN(const SolarEventZGEN& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_solareventandstatuszgen()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_solareventandstatuszgen()) {
     solareventandstatuszgen_ = new ::solarmodule::SolarEventAndStatusZGEN(*from.solareventandstatuszgen_);
   } else {
     solareventandstatuszgen_ = nullptr;
   }
-  if (from.has_grimod()) {
+  if (from._internal_has_grimod()) {
     grimod_ = new ::commonmodule::ENG_GridConnectModeKind(*from.grimod_);
   } else {
     grimod_ = nullptr;
@@ -5426,209 +3744,119 @@ SolarEventZGEN::SolarEventZGEN(const SolarEventZGEN& from)
 }
 
 void SolarEventZGEN::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SolarEventZGEN_solarmodule_2fsolarmodule_2eproto.base);
-  ::memset(&solareventandstatuszgen_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&grimod_) -
-      reinterpret_cast<char*>(&solareventandstatuszgen_)) + sizeof(grimod_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&solareventandstatuszgen_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&grimod_) -
+    reinterpret_cast<char*>(&solareventandstatuszgen_)) + sizeof(grimod_));
 }
 
 SolarEventZGEN::~SolarEventZGEN() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarEventZGEN)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SolarEventZGEN::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete solareventandstatuszgen_;
   if (this != internal_default_instance()) delete grimod_;
 }
 
+void SolarEventZGEN::ArenaDtor(void* object) {
+  SolarEventZGEN* _this = reinterpret_cast< SolarEventZGEN* >(object);
+  (void)_this;
+}
+void SolarEventZGEN::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SolarEventZGEN::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SolarEventZGEN& SolarEventZGEN::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SolarEventZGEN_solarmodule_2fsolarmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SolarEventZGEN::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarEventZGEN)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && solareventandstatuszgen_ != nullptr) {
+  if (GetArena() == nullptr && solareventandstatuszgen_ != nullptr) {
     delete solareventandstatuszgen_;
   }
   solareventandstatuszgen_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && grimod_ != nullptr) {
+  if (GetArena() == nullptr && grimod_ != nullptr) {
     delete grimod_;
   }
   grimod_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SolarEventZGEN::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SolarEventZGEN*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SolarEventZGEN::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .solarmodule.SolarEventAndStatusZGEN solarEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::solarmodule::SolarEventAndStatusZGEN::_InternalParse;
-        object = msg->mutable_solareventandstatuszgen();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solareventandstatuszgen(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.ENG_GridConnectModeKind GriMod = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ENG_GridConnectModeKind::_InternalParse;
-        object = msg->mutable_grimod();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_grimod(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SolarEventZGEN::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:solarmodule.SolarEventZGEN)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .solarmodule.SolarEventAndStatusZGEN solarEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_solareventandstatuszgen()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ENG_GridConnectModeKind GriMod = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_grimod()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:solarmodule.SolarEventZGEN)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:solarmodule.SolarEventZGEN)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SolarEventZGEN::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:solarmodule.SolarEventZGEN)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .solarmodule.SolarEventAndStatusZGEN solarEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-  if (this->has_solareventandstatuszgen()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::solareventandstatuszgen(this), output);
-  }
-
-  // .commonmodule.ENG_GridConnectModeKind GriMod = 2;
-  if (this->has_grimod()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::grimod(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:solarmodule.SolarEventZGEN)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SolarEventZGEN::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SolarEventZGEN::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarEventZGEN)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .solarmodule.SolarEventAndStatusZGEN solarEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
   if (this->has_solareventandstatuszgen()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::solareventandstatuszgen(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::solareventandstatuszgen(this), target, stream);
   }
 
   // .commonmodule.ENG_GridConnectModeKind GriMod = 2;
   if (this->has_grimod()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::grimod(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::grimod(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarEventZGEN)
   return target;
@@ -5638,43 +3866,42 @@ size_t SolarEventZGEN::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarEventZGEN)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .solarmodule.SolarEventAndStatusZGEN solarEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
   if (this->has_solareventandstatuszgen()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *solareventandstatuszgen_);
   }
 
   // .commonmodule.ENG_GridConnectModeKind GriMod = 2;
   if (this->has_grimod()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *grimod_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SolarEventZGEN::MergeFrom(const ::google::protobuf::Message& from) {
+void SolarEventZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarEventZGEN)
   GOOGLE_DCHECK_NE(&from, this);
   const SolarEventZGEN* source =
-      ::google::protobuf::DynamicCastToGenerated<SolarEventZGEN>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarEventZGEN>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarEventZGEN)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarEventZGEN)
     MergeFrom(*source);
@@ -5684,19 +3911,19 @@ void SolarEventZGEN::MergeFrom(const ::google::protobuf::Message& from) {
 void SolarEventZGEN::MergeFrom(const SolarEventZGEN& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarEventZGEN)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_solareventandstatuszgen()) {
-    mutable_solareventandstatuszgen()->::solarmodule::SolarEventAndStatusZGEN::MergeFrom(from.solareventandstatuszgen());
+    _internal_mutable_solareventandstatuszgen()->::solarmodule::SolarEventAndStatusZGEN::MergeFrom(from._internal_solareventandstatuszgen());
   }
   if (from.has_grimod()) {
-    mutable_grimod()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from.grimod());
+    _internal_mutable_grimod()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from._internal_grimod());
   }
 }
 
-void SolarEventZGEN::CopyFrom(const ::google::protobuf::Message& from) {
+void SolarEventZGEN::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarEventZGEN)
   if (&from == this) return;
   Clear();
@@ -5714,71 +3941,59 @@ bool SolarEventZGEN::IsInitialized() const {
   return true;
 }
 
-void SolarEventZGEN::Swap(SolarEventZGEN* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SolarEventZGEN::InternalSwap(SolarEventZGEN* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(solareventandstatuszgen_, other->solareventandstatuszgen_);
-  swap(grimod_, other->grimod_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarEventZGEN, grimod_)
+      + sizeof(SolarEventZGEN::grimod_)
+      - PROTOBUF_FIELD_OFFSET(SolarEventZGEN, solareventandstatuszgen_)>(
+          reinterpret_cast<char*>(&solareventandstatuszgen_),
+          reinterpret_cast<char*>(&other->solareventandstatuszgen_));
 }
 
-::google::protobuf::Metadata SolarEventZGEN::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_solarmodule_2fsolarmodule_2eproto);
-  return ::file_level_metadata_solarmodule_2fsolarmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SolarEventZGEN::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SolarEvent::InitAsDefaultInstance() {
-  ::solarmodule::_SolarEvent_default_instance_._instance.get_mutable()->eventvalue_ = const_cast< ::commonmodule::EventValue*>(
-      ::commonmodule::EventValue::internal_default_instance());
-  ::solarmodule::_SolarEvent_default_instance_._instance.get_mutable()->solareventzgen_ = const_cast< ::solarmodule::SolarEventZGEN*>(
-      ::solarmodule::SolarEventZGEN::internal_default_instance());
-}
-class SolarEvent::HasBitSetters {
+class SolarEvent::_Internal {
  public:
   static const ::commonmodule::EventValue& eventvalue(const SolarEvent* msg);
   static const ::solarmodule::SolarEventZGEN& solareventzgen(const SolarEvent* msg);
 };
 
 const ::commonmodule::EventValue&
-SolarEvent::HasBitSetters::eventvalue(const SolarEvent* msg) {
+SolarEvent::_Internal::eventvalue(const SolarEvent* msg) {
   return *msg->eventvalue_;
 }
 const ::solarmodule::SolarEventZGEN&
-SolarEvent::HasBitSetters::solareventzgen(const SolarEvent* msg) {
+SolarEvent::_Internal::solareventzgen(const SolarEvent* msg) {
   return *msg->solareventzgen_;
 }
 void SolarEvent::clear_eventvalue() {
-  if (GetArenaNoVirtual() == nullptr && eventvalue_ != nullptr) {
+  if (GetArena() == nullptr && eventvalue_ != nullptr) {
     delete eventvalue_;
   }
   eventvalue_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SolarEvent::kEventValueFieldNumber;
-const int SolarEvent::kSolarEventZGENFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SolarEvent::SolarEvent()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SolarEvent::SolarEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:solarmodule.SolarEvent)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarEvent)
 }
 SolarEvent::SolarEvent(const SolarEvent& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_eventvalue()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_eventvalue()) {
     eventvalue_ = new ::commonmodule::EventValue(*from.eventvalue_);
   } else {
     eventvalue_ = nullptr;
   }
-  if (from.has_solareventzgen()) {
+  if (from._internal_has_solareventzgen()) {
     solareventzgen_ = new ::solarmodule::SolarEventZGEN(*from.solareventzgen_);
   } else {
     solareventzgen_ = nullptr;
@@ -5787,209 +4002,119 @@ SolarEvent::SolarEvent(const SolarEvent& from)
 }
 
 void SolarEvent::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SolarEvent_solarmodule_2fsolarmodule_2eproto.base);
-  ::memset(&eventvalue_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&solareventzgen_) -
-      reinterpret_cast<char*>(&eventvalue_)) + sizeof(solareventzgen_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&eventvalue_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&solareventzgen_) -
+    reinterpret_cast<char*>(&eventvalue_)) + sizeof(solareventzgen_));
 }
 
 SolarEvent::~SolarEvent() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarEvent)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SolarEvent::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete eventvalue_;
   if (this != internal_default_instance()) delete solareventzgen_;
 }
 
+void SolarEvent::ArenaDtor(void* object) {
+  SolarEvent* _this = reinterpret_cast< SolarEvent* >(object);
+  (void)_this;
+}
+void SolarEvent::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SolarEvent::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SolarEvent& SolarEvent::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SolarEvent_solarmodule_2fsolarmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SolarEvent::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarEvent)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && eventvalue_ != nullptr) {
+  if (GetArena() == nullptr && eventvalue_ != nullptr) {
     delete eventvalue_;
   }
   eventvalue_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && solareventzgen_ != nullptr) {
+  if (GetArena() == nullptr && solareventzgen_ != nullptr) {
     delete solareventzgen_;
   }
   solareventzgen_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SolarEvent::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SolarEvent*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SolarEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::EventValue::_InternalParse;
-        object = msg->mutable_eventvalue();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .solarmodule.SolarEventZGEN solarEventZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::solarmodule::SolarEventZGEN::_InternalParse;
-        object = msg->mutable_solareventzgen();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_eventvalue(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .solarmodule.SolarEventZGEN solarEventZGEN = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solareventzgen(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SolarEvent::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:solarmodule.SolarEvent)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_eventvalue()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .solarmodule.SolarEventZGEN solarEventZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_solareventzgen()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:solarmodule.SolarEvent)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:solarmodule.SolarEvent)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SolarEvent::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:solarmodule.SolarEvent)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventvalue()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::eventvalue(this), output);
-  }
-
-  // .solarmodule.SolarEventZGEN solarEventZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solareventzgen()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::solareventzgen(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:solarmodule.SolarEvent)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SolarEvent::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SolarEvent::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarEvent)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_eventvalue()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::eventvalue(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::eventvalue(this), target, stream);
   }
 
-  // .solarmodule.SolarEventZGEN solarEventZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarEventZGEN solarEventZGEN = 2;
   if (this->has_solareventzgen()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::solareventzgen(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::solareventzgen(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarEvent)
   return target;
@@ -5999,43 +4124,42 @@ size_t SolarEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarEvent)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_eventvalue()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *eventvalue_);
   }
 
-  // .solarmodule.SolarEventZGEN solarEventZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarEventZGEN solarEventZGEN = 2;
   if (this->has_solareventzgen()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *solareventzgen_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SolarEvent::MergeFrom(const ::google::protobuf::Message& from) {
+void SolarEvent::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarEvent)
   GOOGLE_DCHECK_NE(&from, this);
   const SolarEvent* source =
-      ::google::protobuf::DynamicCastToGenerated<SolarEvent>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarEvent>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarEvent)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarEvent)
     MergeFrom(*source);
@@ -6045,19 +4169,19 @@ void SolarEvent::MergeFrom(const ::google::protobuf::Message& from) {
 void SolarEvent::MergeFrom(const SolarEvent& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarEvent)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_eventvalue()) {
-    mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(from.eventvalue());
+    _internal_mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(from._internal_eventvalue());
   }
   if (from.has_solareventzgen()) {
-    mutable_solareventzgen()->::solarmodule::SolarEventZGEN::MergeFrom(from.solareventzgen());
+    _internal_mutable_solareventzgen()->::solarmodule::SolarEventZGEN::MergeFrom(from._internal_solareventzgen());
   }
 }
 
-void SolarEvent::CopyFrom(const ::google::protobuf::Message& from) {
+void SolarEvent::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarEvent)
   if (&from == this) return;
   Clear();
@@ -6075,103 +4199,69 @@ bool SolarEvent::IsInitialized() const {
   return true;
 }
 
-void SolarEvent::Swap(SolarEvent* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SolarEvent::InternalSwap(SolarEvent* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(eventvalue_, other->eventvalue_);
-  swap(solareventzgen_, other->solareventzgen_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarEvent, solareventzgen_)
+      + sizeof(SolarEvent::solareventzgen_)
+      - PROTOBUF_FIELD_OFFSET(SolarEvent, eventvalue_)>(
+          reinterpret_cast<char*>(&eventvalue_),
+          reinterpret_cast<char*>(&other->eventvalue_));
 }
 
-::google::protobuf::Metadata SolarEvent::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_solarmodule_2fsolarmodule_2eproto);
-  return ::file_level_metadata_solarmodule_2fsolarmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SolarEvent::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SolarEventProfile::InitAsDefaultInstance() {
-  ::solarmodule::_SolarEventProfile_default_instance_._instance.get_mutable()->eventmessageinfo_ = const_cast< ::commonmodule::EventMessageInfo*>(
-      ::commonmodule::EventMessageInfo::internal_default_instance());
-  ::solarmodule::_SolarEventProfile_default_instance_._instance.get_mutable()->ied_ = const_cast< ::commonmodule::IED*>(
-      ::commonmodule::IED::internal_default_instance());
-  ::solarmodule::_SolarEventProfile_default_instance_._instance.get_mutable()->solarevent_ = const_cast< ::solarmodule::SolarEvent*>(
-      ::solarmodule::SolarEvent::internal_default_instance());
-  ::solarmodule::_SolarEventProfile_default_instance_._instance.get_mutable()->solarinverter_ = const_cast< ::solarmodule::SolarInverter*>(
-      ::solarmodule::SolarInverter::internal_default_instance());
-}
-class SolarEventProfile::HasBitSetters {
+class SolarEventProfile::_Internal {
  public:
   static const ::commonmodule::EventMessageInfo& eventmessageinfo(const SolarEventProfile* msg);
-  static const ::commonmodule::IED& ied(const SolarEventProfile* msg);
   static const ::solarmodule::SolarEvent& solarevent(const SolarEventProfile* msg);
   static const ::solarmodule::SolarInverter& solarinverter(const SolarEventProfile* msg);
 };
 
 const ::commonmodule::EventMessageInfo&
-SolarEventProfile::HasBitSetters::eventmessageinfo(const SolarEventProfile* msg) {
+SolarEventProfile::_Internal::eventmessageinfo(const SolarEventProfile* msg) {
   return *msg->eventmessageinfo_;
 }
-const ::commonmodule::IED&
-SolarEventProfile::HasBitSetters::ied(const SolarEventProfile* msg) {
-  return *msg->ied_;
-}
 const ::solarmodule::SolarEvent&
-SolarEventProfile::HasBitSetters::solarevent(const SolarEventProfile* msg) {
+SolarEventProfile::_Internal::solarevent(const SolarEventProfile* msg) {
   return *msg->solarevent_;
 }
 const ::solarmodule::SolarInverter&
-SolarEventProfile::HasBitSetters::solarinverter(const SolarEventProfile* msg) {
+SolarEventProfile::_Internal::solarinverter(const SolarEventProfile* msg) {
   return *msg->solarinverter_;
 }
 void SolarEventProfile::clear_eventmessageinfo() {
-  if (GetArenaNoVirtual() == nullptr && eventmessageinfo_ != nullptr) {
+  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
     delete eventmessageinfo_;
   }
   eventmessageinfo_ = nullptr;
 }
-void SolarEventProfile::clear_ied() {
-  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
-    delete ied_;
-  }
-  ied_ = nullptr;
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SolarEventProfile::kEventMessageInfoFieldNumber;
-const int SolarEventProfile::kIedFieldNumber;
-const int SolarEventProfile::kSolarEventFieldNumber;
-const int SolarEventProfile::kSolarInverterFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SolarEventProfile::SolarEventProfile()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SolarEventProfile::SolarEventProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:solarmodule.SolarEventProfile)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarEventProfile)
 }
 SolarEventProfile::SolarEventProfile(const SolarEventProfile& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_eventmessageinfo()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_eventmessageinfo()) {
     eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from.eventmessageinfo_);
   } else {
     eventmessageinfo_ = nullptr;
   }
-  if (from.has_ied()) {
-    ied_ = new ::commonmodule::IED(*from.ied_);
-  } else {
-    ied_ = nullptr;
-  }
-  if (from.has_solarevent()) {
+  if (from._internal_has_solarevent()) {
     solarevent_ = new ::solarmodule::SolarEvent(*from.solarevent_);
   } else {
     solarevent_ = nullptr;
   }
-  if (from.has_solarinverter()) {
+  if (from._internal_has_solarinverter()) {
     solarinverter_ = new ::solarmodule::SolarInverter(*from.solarinverter_);
   } else {
     solarinverter_ = nullptr;
@@ -6180,293 +4270,139 @@ SolarEventProfile::SolarEventProfile(const SolarEventProfile& from)
 }
 
 void SolarEventProfile::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SolarEventProfile_solarmodule_2fsolarmodule_2eproto.base);
-  ::memset(&eventmessageinfo_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&solarinverter_) -
-      reinterpret_cast<char*>(&eventmessageinfo_)) + sizeof(solarinverter_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&eventmessageinfo_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&solarinverter_) -
+    reinterpret_cast<char*>(&eventmessageinfo_)) + sizeof(solarinverter_));
 }
 
 SolarEventProfile::~SolarEventProfile() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarEventProfile)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SolarEventProfile::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete eventmessageinfo_;
-  if (this != internal_default_instance()) delete ied_;
   if (this != internal_default_instance()) delete solarevent_;
   if (this != internal_default_instance()) delete solarinverter_;
 }
 
+void SolarEventProfile::ArenaDtor(void* object) {
+  SolarEventProfile* _this = reinterpret_cast< SolarEventProfile* >(object);
+  (void)_this;
+}
+void SolarEventProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SolarEventProfile::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SolarEventProfile& SolarEventProfile::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SolarEventProfile_solarmodule_2fsolarmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SolarEventProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarEventProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && eventmessageinfo_ != nullptr) {
+  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
     delete eventmessageinfo_;
   }
   eventmessageinfo_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
-    delete ied_;
-  }
-  ied_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && solarevent_ != nullptr) {
+  if (GetArena() == nullptr && solarevent_ != nullptr) {
     delete solarevent_;
   }
   solarevent_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && solarinverter_ != nullptr) {
+  if (GetArena() == nullptr && solarinverter_ != nullptr) {
     delete solarinverter_;
   }
   solarinverter_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SolarEventProfile::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SolarEventProfile*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SolarEventProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::EventMessageInfo::_InternalParse;
-        object = msg->mutable_eventmessageinfo();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::IED::_InternalParse;
-        object = msg->mutable_ied();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .solarmodule.SolarEvent solarEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::solarmodule::SolarEvent::_InternalParse;
-        object = msg->mutable_solarevent();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .solarmodule.SolarInverter solarInverter = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::solarmodule::SolarInverter::_InternalParse;
-        object = msg->mutable_solarinverter();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_eventmessageinfo(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .solarmodule.SolarEvent solarEvent = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarevent(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarinverter(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SolarEventProfile::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:solarmodule.SolarEventProfile)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_eventmessageinfo()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_ied()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .solarmodule.SolarEvent solarEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_solarevent()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .solarmodule.SolarInverter solarInverter = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_solarinverter()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:solarmodule.SolarEventProfile)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:solarmodule.SolarEventProfile)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SolarEventProfile::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:solarmodule.SolarEventProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::eventmessageinfo(this), output);
-  }
-
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::ied(this), output);
-  }
-
-  // .solarmodule.SolarEvent solarEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarevent()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::solarevent(this), output);
-  }
-
-  // .solarmodule.SolarInverter solarInverter = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarinverter()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, HasBitSetters::solarinverter(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:solarmodule.SolarEventProfile)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SolarEventProfile::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SolarEventProfile::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarEventProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_eventmessageinfo()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::eventmessageinfo(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::eventmessageinfo(this), target, stream);
   }
 
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::ied(this), target);
-  }
-
-  // .solarmodule.SolarEvent solarEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarEvent solarEvent = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_solarevent()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::solarevent(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::solarevent(this), target, stream);
   }
 
-  // .solarmodule.SolarInverter solarInverter = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_solarinverter()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, HasBitSetters::solarinverter(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::solarinverter(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarEventProfile)
   return target;
@@ -6476,57 +4412,49 @@ size_t SolarEventProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarEventProfile)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_eventmessageinfo()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *eventmessageinfo_);
   }
 
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *ied_);
-  }
-
-  // .solarmodule.SolarEvent solarEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarEvent solarEvent = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_solarevent()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *solarevent_);
   }
 
-  // .solarmodule.SolarInverter solarInverter = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_solarinverter()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *solarinverter_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SolarEventProfile::MergeFrom(const ::google::protobuf::Message& from) {
+void SolarEventProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarEventProfile)
   GOOGLE_DCHECK_NE(&from, this);
   const SolarEventProfile* source =
-      ::google::protobuf::DynamicCastToGenerated<SolarEventProfile>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarEventProfile>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarEventProfile)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarEventProfile)
     MergeFrom(*source);
@@ -6536,25 +4464,22 @@ void SolarEventProfile::MergeFrom(const ::google::protobuf::Message& from) {
 void SolarEventProfile::MergeFrom(const SolarEventProfile& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarEventProfile)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_eventmessageinfo()) {
-    mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(from.eventmessageinfo());
-  }
-  if (from.has_ied()) {
-    mutable_ied()->::commonmodule::IED::MergeFrom(from.ied());
+    _internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(from._internal_eventmessageinfo());
   }
   if (from.has_solarevent()) {
-    mutable_solarevent()->::solarmodule::SolarEvent::MergeFrom(from.solarevent());
+    _internal_mutable_solarevent()->::solarmodule::SolarEvent::MergeFrom(from._internal_solarevent());
   }
   if (from.has_solarinverter()) {
-    mutable_solarinverter()->::solarmodule::SolarInverter::MergeFrom(from.solarinverter());
+    _internal_mutable_solarinverter()->::solarmodule::SolarInverter::MergeFrom(from._internal_solarinverter());
   }
 }
 
-void SolarEventProfile::CopyFrom(const ::google::protobuf::Message& from) {
+void SolarEventProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarEventProfile)
   if (&from == this) return;
   Clear();
@@ -6572,38 +4497,25 @@ bool SolarEventProfile::IsInitialized() const {
   return true;
 }
 
-void SolarEventProfile::Swap(SolarEventProfile* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SolarEventProfile::InternalSwap(SolarEventProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(eventmessageinfo_, other->eventmessageinfo_);
-  swap(ied_, other->ied_);
-  swap(solarevent_, other->solarevent_);
-  swap(solarinverter_, other->solarinverter_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarEventProfile, solarinverter_)
+      + sizeof(SolarEventProfile::solarinverter_)
+      - PROTOBUF_FIELD_OFFSET(SolarEventProfile, eventmessageinfo_)>(
+          reinterpret_cast<char*>(&eventmessageinfo_),
+          reinterpret_cast<char*>(&other->eventmessageinfo_));
 }
 
-::google::protobuf::Metadata SolarEventProfile::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_solarmodule_2fsolarmodule_2eproto);
-  return ::file_level_metadata_solarmodule_2fsolarmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SolarEventProfile::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SolarReading::InitAsDefaultInstance() {
-  ::solarmodule::_SolarReading_default_instance_._instance.get_mutable()->conductingequipmentterminalreading_ = const_cast< ::commonmodule::ConductingEquipmentTerminalReading*>(
-      ::commonmodule::ConductingEquipmentTerminalReading::internal_default_instance());
-  ::solarmodule::_SolarReading_default_instance_._instance.get_mutable()->phasemmtn_ = const_cast< ::commonmodule::PhaseMMTN*>(
-      ::commonmodule::PhaseMMTN::internal_default_instance());
-  ::solarmodule::_SolarReading_default_instance_._instance.get_mutable()->readingmmtr_ = const_cast< ::commonmodule::ReadingMMTR*>(
-      ::commonmodule::ReadingMMTR::internal_default_instance());
-  ::solarmodule::_SolarReading_default_instance_._instance.get_mutable()->readingmmxu_ = const_cast< ::commonmodule::ReadingMMXU*>(
-      ::commonmodule::ReadingMMXU::internal_default_instance());
-}
-class SolarReading::HasBitSetters {
+class SolarReading::_Internal {
  public:
   static const ::commonmodule::ConductingEquipmentTerminalReading& conductingequipmentterminalreading(const SolarReading* msg);
   static const ::commonmodule::PhaseMMTN& phasemmtn(const SolarReading* msg);
@@ -6612,77 +4524,70 @@ class SolarReading::HasBitSetters {
 };
 
 const ::commonmodule::ConductingEquipmentTerminalReading&
-SolarReading::HasBitSetters::conductingequipmentterminalreading(const SolarReading* msg) {
+SolarReading::_Internal::conductingequipmentterminalreading(const SolarReading* msg) {
   return *msg->conductingequipmentterminalreading_;
 }
 const ::commonmodule::PhaseMMTN&
-SolarReading::HasBitSetters::phasemmtn(const SolarReading* msg) {
+SolarReading::_Internal::phasemmtn(const SolarReading* msg) {
   return *msg->phasemmtn_;
 }
 const ::commonmodule::ReadingMMTR&
-SolarReading::HasBitSetters::readingmmtr(const SolarReading* msg) {
+SolarReading::_Internal::readingmmtr(const SolarReading* msg) {
   return *msg->readingmmtr_;
 }
 const ::commonmodule::ReadingMMXU&
-SolarReading::HasBitSetters::readingmmxu(const SolarReading* msg) {
+SolarReading::_Internal::readingmmxu(const SolarReading* msg) {
   return *msg->readingmmxu_;
 }
 void SolarReading::clear_conductingequipmentterminalreading() {
-  if (GetArenaNoVirtual() == nullptr && conductingequipmentterminalreading_ != nullptr) {
+  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
     delete conductingequipmentterminalreading_;
   }
   conductingequipmentterminalreading_ = nullptr;
 }
 void SolarReading::clear_phasemmtn() {
-  if (GetArenaNoVirtual() == nullptr && phasemmtn_ != nullptr) {
+  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
     delete phasemmtn_;
   }
   phasemmtn_ = nullptr;
 }
 void SolarReading::clear_readingmmtr() {
-  if (GetArenaNoVirtual() == nullptr && readingmmtr_ != nullptr) {
+  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
     delete readingmmtr_;
   }
   readingmmtr_ = nullptr;
 }
 void SolarReading::clear_readingmmxu() {
-  if (GetArenaNoVirtual() == nullptr && readingmmxu_ != nullptr) {
+  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
     delete readingmmxu_;
   }
   readingmmxu_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SolarReading::kConductingEquipmentTerminalReadingFieldNumber;
-const int SolarReading::kPhaseMMTNFieldNumber;
-const int SolarReading::kReadingMMTRFieldNumber;
-const int SolarReading::kReadingMMXUFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SolarReading::SolarReading()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SolarReading::SolarReading(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:solarmodule.SolarReading)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarReading)
 }
 SolarReading::SolarReading(const SolarReading& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_conductingequipmentterminalreading()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_conductingequipmentterminalreading()) {
     conductingequipmentterminalreading_ = new ::commonmodule::ConductingEquipmentTerminalReading(*from.conductingequipmentterminalreading_);
   } else {
     conductingequipmentterminalreading_ = nullptr;
   }
-  if (from.has_phasemmtn()) {
+  if (from._internal_has_phasemmtn()) {
     phasemmtn_ = new ::commonmodule::PhaseMMTN(*from.phasemmtn_);
   } else {
     phasemmtn_ = nullptr;
   }
-  if (from.has_readingmmtr()) {
+  if (from._internal_has_readingmmtr()) {
     readingmmtr_ = new ::commonmodule::ReadingMMTR(*from.readingmmtr_);
   } else {
     readingmmtr_ = nullptr;
   }
-  if (from.has_readingmmxu()) {
+  if (from._internal_has_readingmmxu()) {
     readingmmxu_ = new ::commonmodule::ReadingMMXU(*from.readingmmxu_);
   } else {
     readingmmxu_ = nullptr;
@@ -6691,293 +4596,159 @@ SolarReading::SolarReading(const SolarReading& from)
 }
 
 void SolarReading::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SolarReading_solarmodule_2fsolarmodule_2eproto.base);
-  ::memset(&conductingequipmentterminalreading_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&readingmmxu_) -
-      reinterpret_cast<char*>(&conductingequipmentterminalreading_)) + sizeof(readingmmxu_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&conductingequipmentterminalreading_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&readingmmxu_) -
+    reinterpret_cast<char*>(&conductingequipmentterminalreading_)) + sizeof(readingmmxu_));
 }
 
 SolarReading::~SolarReading() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarReading)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SolarReading::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete conductingequipmentterminalreading_;
   if (this != internal_default_instance()) delete phasemmtn_;
   if (this != internal_default_instance()) delete readingmmtr_;
   if (this != internal_default_instance()) delete readingmmxu_;
 }
 
+void SolarReading::ArenaDtor(void* object) {
+  SolarReading* _this = reinterpret_cast< SolarReading* >(object);
+  (void)_this;
+}
+void SolarReading::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SolarReading::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SolarReading& SolarReading::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SolarReading_solarmodule_2fsolarmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SolarReading::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarReading)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && conductingequipmentterminalreading_ != nullptr) {
+  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
     delete conductingequipmentterminalreading_;
   }
   conductingequipmentterminalreading_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && phasemmtn_ != nullptr) {
+  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
     delete phasemmtn_;
   }
   phasemmtn_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && readingmmtr_ != nullptr) {
+  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
     delete readingmmtr_;
   }
   readingmmtr_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && readingmmxu_ != nullptr) {
+  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
     delete readingmmxu_;
   }
   readingmmxu_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SolarReading::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SolarReading*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SolarReading::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ConductingEquipmentTerminalReading::_InternalParse;
-        object = msg->mutable_conductingequipmentterminalreading();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_conductingequipmentterminalreading(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.PhaseMMTN phaseMMTN = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::PhaseMMTN::_InternalParse;
-        object = msg->mutable_phasemmtn();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_phasemmtn(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.ReadingMMTR readingMMTR = 3;
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ReadingMMTR::_InternalParse;
-        object = msg->mutable_readingmmtr();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_readingmmtr(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.ReadingMMXU readingMMXU = 4;
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ReadingMMXU::_InternalParse;
-        object = msg->mutable_readingmmxu();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_readingmmxu(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SolarReading::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:solarmodule.SolarReading)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_conductingequipmentterminalreading()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.PhaseMMTN phaseMMTN = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_phasemmtn()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ReadingMMTR readingMMTR = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_readingmmtr()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ReadingMMXU readingMMXU = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_readingmmxu()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:solarmodule.SolarReading)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:solarmodule.SolarReading)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SolarReading::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:solarmodule.SolarReading)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipmentterminalreading()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::conductingequipmentterminalreading(this), output);
-  }
-
-  // .commonmodule.PhaseMMTN phaseMMTN = 2;
-  if (this->has_phasemmtn()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::phasemmtn(this), output);
-  }
-
-  // .commonmodule.ReadingMMTR readingMMTR = 3;
-  if (this->has_readingmmtr()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::readingmmtr(this), output);
-  }
-
-  // .commonmodule.ReadingMMXU readingMMXU = 4;
-  if (this->has_readingmmxu()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, HasBitSetters::readingmmxu(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:solarmodule.SolarReading)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SolarReading::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SolarReading::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarReading)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
   if (this->has_conductingequipmentterminalreading()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::conductingequipmentterminalreading(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::conductingequipmentterminalreading(this), target, stream);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 2;
   if (this->has_phasemmtn()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::phasemmtn(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::phasemmtn(this), target, stream);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 3;
   if (this->has_readingmmtr()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::readingmmtr(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::readingmmtr(this), target, stream);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 4;
   if (this->has_readingmmxu()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, HasBitSetters::readingmmxu(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        4, _Internal::readingmmxu(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarReading)
   return target;
@@ -6987,57 +4758,56 @@ size_t SolarReading::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarReading)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
   if (this->has_conductingequipmentterminalreading()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *conductingequipmentterminalreading_);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 2;
   if (this->has_phasemmtn()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *phasemmtn_);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 3;
   if (this->has_readingmmtr()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *readingmmtr_);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 4;
   if (this->has_readingmmxu()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *readingmmxu_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SolarReading::MergeFrom(const ::google::protobuf::Message& from) {
+void SolarReading::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarReading)
   GOOGLE_DCHECK_NE(&from, this);
   const SolarReading* source =
-      ::google::protobuf::DynamicCastToGenerated<SolarReading>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarReading>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarReading)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarReading)
     MergeFrom(*source);
@@ -7047,25 +4817,25 @@ void SolarReading::MergeFrom(const ::google::protobuf::Message& from) {
 void SolarReading::MergeFrom(const SolarReading& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarReading)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_conductingequipmentterminalreading()) {
-    mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(from.conductingequipmentterminalreading());
+    _internal_mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(from._internal_conductingequipmentterminalreading());
   }
   if (from.has_phasemmtn()) {
-    mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(from.phasemmtn());
+    _internal_mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(from._internal_phasemmtn());
   }
   if (from.has_readingmmtr()) {
-    mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(from.readingmmtr());
+    _internal_mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(from._internal_readingmmtr());
   }
   if (from.has_readingmmxu()) {
-    mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from.readingmmxu());
+    _internal_mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from._internal_readingmmxu());
   }
 }
 
-void SolarReading::CopyFrom(const ::google::protobuf::Message& from) {
+void SolarReading::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarReading)
   if (&from == this) return;
   Clear();
@@ -7083,105 +4853,69 @@ bool SolarReading::IsInitialized() const {
   return true;
 }
 
-void SolarReading::Swap(SolarReading* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SolarReading::InternalSwap(SolarReading* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(conductingequipmentterminalreading_, other->conductingequipmentterminalreading_);
-  swap(phasemmtn_, other->phasemmtn_);
-  swap(readingmmtr_, other->readingmmtr_);
-  swap(readingmmxu_, other->readingmmxu_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarReading, readingmmxu_)
+      + sizeof(SolarReading::readingmmxu_)
+      - PROTOBUF_FIELD_OFFSET(SolarReading, conductingequipmentterminalreading_)>(
+          reinterpret_cast<char*>(&conductingequipmentterminalreading_),
+          reinterpret_cast<char*>(&other->conductingequipmentterminalreading_));
 }
 
-::google::protobuf::Metadata SolarReading::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_solarmodule_2fsolarmodule_2eproto);
-  return ::file_level_metadata_solarmodule_2fsolarmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SolarReading::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SolarReadingProfile::InitAsDefaultInstance() {
-  ::solarmodule::_SolarReadingProfile_default_instance_._instance.get_mutable()->readingmessageinfo_ = const_cast< ::commonmodule::ReadingMessageInfo*>(
-      ::commonmodule::ReadingMessageInfo::internal_default_instance());
-  ::solarmodule::_SolarReadingProfile_default_instance_._instance.get_mutable()->ied_ = const_cast< ::commonmodule::IED*>(
-      ::commonmodule::IED::internal_default_instance());
-  ::solarmodule::_SolarReadingProfile_default_instance_._instance.get_mutable()->solarinverter_ = const_cast< ::solarmodule::SolarInverter*>(
-      ::solarmodule::SolarInverter::internal_default_instance());
-  ::solarmodule::_SolarReadingProfile_default_instance_._instance.get_mutable()->solarreading_ = const_cast< ::solarmodule::SolarReading*>(
-      ::solarmodule::SolarReading::internal_default_instance());
-}
-class SolarReadingProfile::HasBitSetters {
+class SolarReadingProfile::_Internal {
  public:
   static const ::commonmodule::ReadingMessageInfo& readingmessageinfo(const SolarReadingProfile* msg);
-  static const ::commonmodule::IED& ied(const SolarReadingProfile* msg);
   static const ::solarmodule::SolarInverter& solarinverter(const SolarReadingProfile* msg);
   static const ::solarmodule::SolarReading& solarreading(const SolarReadingProfile* msg);
 };
 
 const ::commonmodule::ReadingMessageInfo&
-SolarReadingProfile::HasBitSetters::readingmessageinfo(const SolarReadingProfile* msg) {
+SolarReadingProfile::_Internal::readingmessageinfo(const SolarReadingProfile* msg) {
   return *msg->readingmessageinfo_;
 }
-const ::commonmodule::IED&
-SolarReadingProfile::HasBitSetters::ied(const SolarReadingProfile* msg) {
-  return *msg->ied_;
-}
 const ::solarmodule::SolarInverter&
-SolarReadingProfile::HasBitSetters::solarinverter(const SolarReadingProfile* msg) {
+SolarReadingProfile::_Internal::solarinverter(const SolarReadingProfile* msg) {
   return *msg->solarinverter_;
 }
 const ::solarmodule::SolarReading&
-SolarReadingProfile::HasBitSetters::solarreading(const SolarReadingProfile* msg) {
+SolarReadingProfile::_Internal::solarreading(const SolarReadingProfile* msg) {
   return *msg->solarreading_;
 }
 void SolarReadingProfile::clear_readingmessageinfo() {
-  if (GetArenaNoVirtual() == nullptr && readingmessageinfo_ != nullptr) {
+  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
     delete readingmessageinfo_;
   }
   readingmessageinfo_ = nullptr;
 }
-void SolarReadingProfile::clear_ied() {
-  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
-    delete ied_;
-  }
-  ied_ = nullptr;
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SolarReadingProfile::kReadingMessageInfoFieldNumber;
-const int SolarReadingProfile::kIedFieldNumber;
-const int SolarReadingProfile::kSolarInverterFieldNumber;
-const int SolarReadingProfile::kSolarReadingFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SolarReadingProfile::SolarReadingProfile()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SolarReadingProfile::SolarReadingProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:solarmodule.SolarReadingProfile)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarReadingProfile)
 }
 SolarReadingProfile::SolarReadingProfile(const SolarReadingProfile& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_readingmessageinfo()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_readingmessageinfo()) {
     readingmessageinfo_ = new ::commonmodule::ReadingMessageInfo(*from.readingmessageinfo_);
   } else {
     readingmessageinfo_ = nullptr;
   }
-  if (from.has_ied()) {
-    ied_ = new ::commonmodule::IED(*from.ied_);
-  } else {
-    ied_ = nullptr;
-  }
-  if (from.has_solarinverter()) {
+  if (from._internal_has_solarinverter()) {
     solarinverter_ = new ::solarmodule::SolarInverter(*from.solarinverter_);
   } else {
     solarinverter_ = nullptr;
   }
-  if (from.has_solarreading()) {
+  if (from._internal_has_solarreading()) {
     solarreading_ = new ::solarmodule::SolarReading(*from.solarreading_);
   } else {
     solarreading_ = nullptr;
@@ -7190,293 +4924,139 @@ SolarReadingProfile::SolarReadingProfile(const SolarReadingProfile& from)
 }
 
 void SolarReadingProfile::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SolarReadingProfile_solarmodule_2fsolarmodule_2eproto.base);
-  ::memset(&readingmessageinfo_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&solarreading_) -
-      reinterpret_cast<char*>(&readingmessageinfo_)) + sizeof(solarreading_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&readingmessageinfo_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&solarreading_) -
+    reinterpret_cast<char*>(&readingmessageinfo_)) + sizeof(solarreading_));
 }
 
 SolarReadingProfile::~SolarReadingProfile() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarReadingProfile)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SolarReadingProfile::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete readingmessageinfo_;
-  if (this != internal_default_instance()) delete ied_;
   if (this != internal_default_instance()) delete solarinverter_;
   if (this != internal_default_instance()) delete solarreading_;
 }
 
+void SolarReadingProfile::ArenaDtor(void* object) {
+  SolarReadingProfile* _this = reinterpret_cast< SolarReadingProfile* >(object);
+  (void)_this;
+}
+void SolarReadingProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SolarReadingProfile::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SolarReadingProfile& SolarReadingProfile::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SolarReadingProfile_solarmodule_2fsolarmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SolarReadingProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarReadingProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && readingmessageinfo_ != nullptr) {
+  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
     delete readingmessageinfo_;
   }
   readingmessageinfo_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
-    delete ied_;
-  }
-  ied_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && solarinverter_ != nullptr) {
+  if (GetArena() == nullptr && solarinverter_ != nullptr) {
     delete solarinverter_;
   }
   solarinverter_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && solarreading_ != nullptr) {
+  if (GetArena() == nullptr && solarreading_ != nullptr) {
     delete solarreading_;
   }
   solarreading_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SolarReadingProfile::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SolarReadingProfile*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SolarReadingProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ReadingMessageInfo::_InternalParse;
-        object = msg->mutable_readingmessageinfo();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::IED::_InternalParse;
-        object = msg->mutable_ied();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::solarmodule::SolarInverter::_InternalParse;
-        object = msg->mutable_solarinverter();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .solarmodule.SolarReading solarReading = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::solarmodule::SolarReading::_InternalParse;
-        object = msg->mutable_solarreading();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_readingmessageinfo(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .solarmodule.SolarInverter solarInverter = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarinverter(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .solarmodule.SolarReading solarReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarreading(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SolarReadingProfile::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:solarmodule.SolarReadingProfile)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_readingmessageinfo()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_ied()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_solarinverter()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .solarmodule.SolarReading solarReading = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_solarreading()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:solarmodule.SolarReadingProfile)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:solarmodule.SolarReadingProfile)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SolarReadingProfile::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:solarmodule.SolarReadingProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_readingmessageinfo()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::readingmessageinfo(this), output);
-  }
-
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::ied(this), output);
-  }
-
-  // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarinverter()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::solarinverter(this), output);
-  }
-
-  // .solarmodule.SolarReading solarReading = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarreading()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, HasBitSetters::solarreading(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:solarmodule.SolarReadingProfile)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SolarReadingProfile::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SolarReadingProfile::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarReadingProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_readingmessageinfo()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::readingmessageinfo(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::readingmessageinfo(this), target, stream);
   }
 
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::ied(this), target);
-  }
-
-  // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarInverter solarInverter = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_solarinverter()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::solarinverter(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::solarinverter(this), target, stream);
   }
 
-  // .solarmodule.SolarReading solarReading = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarReading solarReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_solarreading()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, HasBitSetters::solarreading(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::solarreading(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarReadingProfile)
   return target;
@@ -7486,57 +5066,49 @@ size_t SolarReadingProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarReadingProfile)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_readingmessageinfo()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *readingmessageinfo_);
   }
 
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *ied_);
-  }
-
-  // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarInverter solarInverter = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_solarinverter()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *solarinverter_);
   }
 
-  // .solarmodule.SolarReading solarReading = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarReading solarReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_solarreading()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *solarreading_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SolarReadingProfile::MergeFrom(const ::google::protobuf::Message& from) {
+void SolarReadingProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarReadingProfile)
   GOOGLE_DCHECK_NE(&from, this);
   const SolarReadingProfile* source =
-      ::google::protobuf::DynamicCastToGenerated<SolarReadingProfile>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarReadingProfile>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarReadingProfile)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarReadingProfile)
     MergeFrom(*source);
@@ -7546,25 +5118,22 @@ void SolarReadingProfile::MergeFrom(const ::google::protobuf::Message& from) {
 void SolarReadingProfile::MergeFrom(const SolarReadingProfile& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarReadingProfile)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_readingmessageinfo()) {
-    mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(from.readingmessageinfo());
-  }
-  if (from.has_ied()) {
-    mutable_ied()->::commonmodule::IED::MergeFrom(from.ied());
+    _internal_mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(from._internal_readingmessageinfo());
   }
   if (from.has_solarinverter()) {
-    mutable_solarinverter()->::solarmodule::SolarInverter::MergeFrom(from.solarinverter());
+    _internal_mutable_solarinverter()->::solarmodule::SolarInverter::MergeFrom(from._internal_solarinverter());
   }
   if (from.has_solarreading()) {
-    mutable_solarreading()->::solarmodule::SolarReading::MergeFrom(from.solarreading());
+    _internal_mutable_solarreading()->::solarmodule::SolarReading::MergeFrom(from._internal_solarreading());
   }
 }
 
-void SolarReadingProfile::CopyFrom(const ::google::protobuf::Message& from) {
+void SolarReadingProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarReadingProfile)
   if (&from == this) return;
   Clear();
@@ -7582,73 +5151,59 @@ bool SolarReadingProfile::IsInitialized() const {
   return true;
 }
 
-void SolarReadingProfile::Swap(SolarReadingProfile* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SolarReadingProfile::InternalSwap(SolarReadingProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(readingmessageinfo_, other->readingmessageinfo_);
-  swap(ied_, other->ied_);
-  swap(solarinverter_, other->solarinverter_);
-  swap(solarreading_, other->solarreading_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarReadingProfile, solarreading_)
+      + sizeof(SolarReadingProfile::solarreading_)
+      - PROTOBUF_FIELD_OFFSET(SolarReadingProfile, readingmessageinfo_)>(
+          reinterpret_cast<char*>(&readingmessageinfo_),
+          reinterpret_cast<char*>(&other->readingmessageinfo_));
 }
 
-::google::protobuf::Metadata SolarReadingProfile::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_solarmodule_2fsolarmodule_2eproto);
-  return ::file_level_metadata_solarmodule_2fsolarmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SolarReadingProfile::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SolarStatusZGEN::InitAsDefaultInstance() {
-  ::solarmodule::_SolarStatusZGEN_default_instance_._instance.get_mutable()->solareventandstatuszgen_ = const_cast< ::solarmodule::SolarEventAndStatusZGEN*>(
-      ::solarmodule::SolarEventAndStatusZGEN::internal_default_instance());
-  ::solarmodule::_SolarStatusZGEN_default_instance_._instance.get_mutable()->grimod_ = const_cast< ::commonmodule::ENG_GridConnectModeKind*>(
-      ::commonmodule::ENG_GridConnectModeKind::internal_default_instance());
-}
-class SolarStatusZGEN::HasBitSetters {
+class SolarStatusZGEN::_Internal {
  public:
   static const ::solarmodule::SolarEventAndStatusZGEN& solareventandstatuszgen(const SolarStatusZGEN* msg);
   static const ::commonmodule::ENG_GridConnectModeKind& grimod(const SolarStatusZGEN* msg);
 };
 
 const ::solarmodule::SolarEventAndStatusZGEN&
-SolarStatusZGEN::HasBitSetters::solareventandstatuszgen(const SolarStatusZGEN* msg) {
+SolarStatusZGEN::_Internal::solareventandstatuszgen(const SolarStatusZGEN* msg) {
   return *msg->solareventandstatuszgen_;
 }
 const ::commonmodule::ENG_GridConnectModeKind&
-SolarStatusZGEN::HasBitSetters::grimod(const SolarStatusZGEN* msg) {
+SolarStatusZGEN::_Internal::grimod(const SolarStatusZGEN* msg) {
   return *msg->grimod_;
 }
 void SolarStatusZGEN::clear_grimod() {
-  if (GetArenaNoVirtual() == nullptr && grimod_ != nullptr) {
+  if (GetArena() == nullptr && grimod_ != nullptr) {
     delete grimod_;
   }
   grimod_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SolarStatusZGEN::kSolarEventAndStatusZGENFieldNumber;
-const int SolarStatusZGEN::kGriModFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SolarStatusZGEN::SolarStatusZGEN()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SolarStatusZGEN::SolarStatusZGEN(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:solarmodule.SolarStatusZGEN)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarStatusZGEN)
 }
 SolarStatusZGEN::SolarStatusZGEN(const SolarStatusZGEN& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_solareventandstatuszgen()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_solareventandstatuszgen()) {
     solareventandstatuszgen_ = new ::solarmodule::SolarEventAndStatusZGEN(*from.solareventandstatuszgen_);
   } else {
     solareventandstatuszgen_ = nullptr;
   }
-  if (from.has_grimod()) {
+  if (from._internal_has_grimod()) {
     grimod_ = new ::commonmodule::ENG_GridConnectModeKind(*from.grimod_);
   } else {
     grimod_ = nullptr;
@@ -7657,209 +5212,119 @@ SolarStatusZGEN::SolarStatusZGEN(const SolarStatusZGEN& from)
 }
 
 void SolarStatusZGEN::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SolarStatusZGEN_solarmodule_2fsolarmodule_2eproto.base);
-  ::memset(&solareventandstatuszgen_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&grimod_) -
-      reinterpret_cast<char*>(&solareventandstatuszgen_)) + sizeof(grimod_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&solareventandstatuszgen_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&grimod_) -
+    reinterpret_cast<char*>(&solareventandstatuszgen_)) + sizeof(grimod_));
 }
 
 SolarStatusZGEN::~SolarStatusZGEN() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarStatusZGEN)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SolarStatusZGEN::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete solareventandstatuszgen_;
   if (this != internal_default_instance()) delete grimod_;
 }
 
+void SolarStatusZGEN::ArenaDtor(void* object) {
+  SolarStatusZGEN* _this = reinterpret_cast< SolarStatusZGEN* >(object);
+  (void)_this;
+}
+void SolarStatusZGEN::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SolarStatusZGEN::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SolarStatusZGEN& SolarStatusZGEN::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SolarStatusZGEN_solarmodule_2fsolarmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SolarStatusZGEN::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarStatusZGEN)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && solareventandstatuszgen_ != nullptr) {
+  if (GetArena() == nullptr && solareventandstatuszgen_ != nullptr) {
     delete solareventandstatuszgen_;
   }
   solareventandstatuszgen_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && grimod_ != nullptr) {
+  if (GetArena() == nullptr && grimod_ != nullptr) {
     delete grimod_;
   }
   grimod_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SolarStatusZGEN::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SolarStatusZGEN*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SolarStatusZGEN::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .solarmodule.SolarEventAndStatusZGEN solarEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::solarmodule::SolarEventAndStatusZGEN::_InternalParse;
-        object = msg->mutable_solareventandstatuszgen();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solareventandstatuszgen(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .commonmodule.ENG_GridConnectModeKind GriMod = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::ENG_GridConnectModeKind::_InternalParse;
-        object = msg->mutable_grimod();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_grimod(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SolarStatusZGEN::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:solarmodule.SolarStatusZGEN)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .solarmodule.SolarEventAndStatusZGEN solarEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_solareventandstatuszgen()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.ENG_GridConnectModeKind GriMod = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_grimod()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:solarmodule.SolarStatusZGEN)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:solarmodule.SolarStatusZGEN)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SolarStatusZGEN::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:solarmodule.SolarStatusZGEN)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .solarmodule.SolarEventAndStatusZGEN solarEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-  if (this->has_solareventandstatuszgen()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::solareventandstatuszgen(this), output);
-  }
-
-  // .commonmodule.ENG_GridConnectModeKind GriMod = 2;
-  if (this->has_grimod()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::grimod(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:solarmodule.SolarStatusZGEN)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SolarStatusZGEN::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SolarStatusZGEN::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarStatusZGEN)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .solarmodule.SolarEventAndStatusZGEN solarEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
   if (this->has_solareventandstatuszgen()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::solareventandstatuszgen(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::solareventandstatuszgen(this), target, stream);
   }
 
   // .commonmodule.ENG_GridConnectModeKind GriMod = 2;
   if (this->has_grimod()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::grimod(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::grimod(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarStatusZGEN)
   return target;
@@ -7869,43 +5334,42 @@ size_t SolarStatusZGEN::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarStatusZGEN)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .solarmodule.SolarEventAndStatusZGEN solarEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
   if (this->has_solareventandstatuszgen()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *solareventandstatuszgen_);
   }
 
   // .commonmodule.ENG_GridConnectModeKind GriMod = 2;
   if (this->has_grimod()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *grimod_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SolarStatusZGEN::MergeFrom(const ::google::protobuf::Message& from) {
+void SolarStatusZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarStatusZGEN)
   GOOGLE_DCHECK_NE(&from, this);
   const SolarStatusZGEN* source =
-      ::google::protobuf::DynamicCastToGenerated<SolarStatusZGEN>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarStatusZGEN>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarStatusZGEN)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarStatusZGEN)
     MergeFrom(*source);
@@ -7915,19 +5379,19 @@ void SolarStatusZGEN::MergeFrom(const ::google::protobuf::Message& from) {
 void SolarStatusZGEN::MergeFrom(const SolarStatusZGEN& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarStatusZGEN)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_solareventandstatuszgen()) {
-    mutable_solareventandstatuszgen()->::solarmodule::SolarEventAndStatusZGEN::MergeFrom(from.solareventandstatuszgen());
+    _internal_mutable_solareventandstatuszgen()->::solarmodule::SolarEventAndStatusZGEN::MergeFrom(from._internal_solareventandstatuszgen());
   }
   if (from.has_grimod()) {
-    mutable_grimod()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from.grimod());
+    _internal_mutable_grimod()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from._internal_grimod());
   }
 }
 
-void SolarStatusZGEN::CopyFrom(const ::google::protobuf::Message& from) {
+void SolarStatusZGEN::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarStatusZGEN)
   if (&from == this) return;
   Clear();
@@ -7945,71 +5409,59 @@ bool SolarStatusZGEN::IsInitialized() const {
   return true;
 }
 
-void SolarStatusZGEN::Swap(SolarStatusZGEN* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SolarStatusZGEN::InternalSwap(SolarStatusZGEN* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(solareventandstatuszgen_, other->solareventandstatuszgen_);
-  swap(grimod_, other->grimod_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarStatusZGEN, grimod_)
+      + sizeof(SolarStatusZGEN::grimod_)
+      - PROTOBUF_FIELD_OFFSET(SolarStatusZGEN, solareventandstatuszgen_)>(
+          reinterpret_cast<char*>(&solareventandstatuszgen_),
+          reinterpret_cast<char*>(&other->solareventandstatuszgen_));
 }
 
-::google::protobuf::Metadata SolarStatusZGEN::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_solarmodule_2fsolarmodule_2eproto);
-  return ::file_level_metadata_solarmodule_2fsolarmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SolarStatusZGEN::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SolarStatus::InitAsDefaultInstance() {
-  ::solarmodule::_SolarStatus_default_instance_._instance.get_mutable()->statusvalue_ = const_cast< ::commonmodule::StatusValue*>(
-      ::commonmodule::StatusValue::internal_default_instance());
-  ::solarmodule::_SolarStatus_default_instance_._instance.get_mutable()->solarstatuszgen_ = const_cast< ::solarmodule::SolarStatusZGEN*>(
-      ::solarmodule::SolarStatusZGEN::internal_default_instance());
-}
-class SolarStatus::HasBitSetters {
+class SolarStatus::_Internal {
  public:
   static const ::commonmodule::StatusValue& statusvalue(const SolarStatus* msg);
   static const ::solarmodule::SolarStatusZGEN& solarstatuszgen(const SolarStatus* msg);
 };
 
 const ::commonmodule::StatusValue&
-SolarStatus::HasBitSetters::statusvalue(const SolarStatus* msg) {
+SolarStatus::_Internal::statusvalue(const SolarStatus* msg) {
   return *msg->statusvalue_;
 }
 const ::solarmodule::SolarStatusZGEN&
-SolarStatus::HasBitSetters::solarstatuszgen(const SolarStatus* msg) {
+SolarStatus::_Internal::solarstatuszgen(const SolarStatus* msg) {
   return *msg->solarstatuszgen_;
 }
 void SolarStatus::clear_statusvalue() {
-  if (GetArenaNoVirtual() == nullptr && statusvalue_ != nullptr) {
+  if (GetArena() == nullptr && statusvalue_ != nullptr) {
     delete statusvalue_;
   }
   statusvalue_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SolarStatus::kStatusValueFieldNumber;
-const int SolarStatus::kSolarStatusZGENFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SolarStatus::SolarStatus()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SolarStatus::SolarStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:solarmodule.SolarStatus)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarStatus)
 }
 SolarStatus::SolarStatus(const SolarStatus& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_statusvalue()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_statusvalue()) {
     statusvalue_ = new ::commonmodule::StatusValue(*from.statusvalue_);
   } else {
     statusvalue_ = nullptr;
   }
-  if (from.has_solarstatuszgen()) {
+  if (from._internal_has_solarstatuszgen()) {
     solarstatuszgen_ = new ::solarmodule::SolarStatusZGEN(*from.solarstatuszgen_);
   } else {
     solarstatuszgen_ = nullptr;
@@ -8018,209 +5470,119 @@ SolarStatus::SolarStatus(const SolarStatus& from)
 }
 
 void SolarStatus::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SolarStatus_solarmodule_2fsolarmodule_2eproto.base);
-  ::memset(&statusvalue_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&solarstatuszgen_) -
-      reinterpret_cast<char*>(&statusvalue_)) + sizeof(solarstatuszgen_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&statusvalue_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&solarstatuszgen_) -
+    reinterpret_cast<char*>(&statusvalue_)) + sizeof(solarstatuszgen_));
 }
 
 SolarStatus::~SolarStatus() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarStatus)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SolarStatus::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete statusvalue_;
   if (this != internal_default_instance()) delete solarstatuszgen_;
 }
 
+void SolarStatus::ArenaDtor(void* object) {
+  SolarStatus* _this = reinterpret_cast< SolarStatus* >(object);
+  (void)_this;
+}
+void SolarStatus::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SolarStatus::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SolarStatus& SolarStatus::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SolarStatus_solarmodule_2fsolarmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SolarStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarStatus)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && statusvalue_ != nullptr) {
+  if (GetArena() == nullptr && statusvalue_ != nullptr) {
     delete statusvalue_;
   }
   statusvalue_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && solarstatuszgen_ != nullptr) {
+  if (GetArena() == nullptr && solarstatuszgen_ != nullptr) {
     delete solarstatuszgen_;
   }
   solarstatuszgen_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SolarStatus::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SolarStatus*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SolarStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::StatusValue::_InternalParse;
-        object = msg->mutable_statusvalue();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .solarmodule.SolarStatusZGEN solarStatusZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::solarmodule::SolarStatusZGEN::_InternalParse;
-        object = msg->mutable_solarstatuszgen();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_statusvalue(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .solarmodule.SolarStatusZGEN solarStatusZGEN = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarstatuszgen(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SolarStatus::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:solarmodule.SolarStatus)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_statusvalue()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .solarmodule.SolarStatusZGEN solarStatusZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_solarstatuszgen()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:solarmodule.SolarStatus)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:solarmodule.SolarStatus)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SolarStatus::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:solarmodule.SolarStatus)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusvalue()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::statusvalue(this), output);
-  }
-
-  // .solarmodule.SolarStatusZGEN solarStatusZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarstatuszgen()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::solarstatuszgen(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:solarmodule.SolarStatus)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SolarStatus::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SolarStatus::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarStatus)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_statusvalue()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::statusvalue(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::statusvalue(this), target, stream);
   }
 
-  // .solarmodule.SolarStatusZGEN solarStatusZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarStatusZGEN solarStatusZGEN = 2;
   if (this->has_solarstatuszgen()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::solarstatuszgen(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::solarstatuszgen(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarStatus)
   return target;
@@ -8230,43 +5592,42 @@ size_t SolarStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarStatus)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
   if (this->has_statusvalue()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *statusvalue_);
   }
 
-  // .solarmodule.SolarStatusZGEN solarStatusZGEN = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarStatusZGEN solarStatusZGEN = 2;
   if (this->has_solarstatuszgen()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *solarstatuszgen_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SolarStatus::MergeFrom(const ::google::protobuf::Message& from) {
+void SolarStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarStatus)
   GOOGLE_DCHECK_NE(&from, this);
   const SolarStatus* source =
-      ::google::protobuf::DynamicCastToGenerated<SolarStatus>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarStatus>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarStatus)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarStatus)
     MergeFrom(*source);
@@ -8276,19 +5637,19 @@ void SolarStatus::MergeFrom(const ::google::protobuf::Message& from) {
 void SolarStatus::MergeFrom(const SolarStatus& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarStatus)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_statusvalue()) {
-    mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(from.statusvalue());
+    _internal_mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(from._internal_statusvalue());
   }
   if (from.has_solarstatuszgen()) {
-    mutable_solarstatuszgen()->::solarmodule::SolarStatusZGEN::MergeFrom(from.solarstatuszgen());
+    _internal_mutable_solarstatuszgen()->::solarmodule::SolarStatusZGEN::MergeFrom(from._internal_solarstatuszgen());
   }
 }
 
-void SolarStatus::CopyFrom(const ::google::protobuf::Message& from) {
+void SolarStatus::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarStatus)
   if (&from == this) return;
   Clear();
@@ -8306,103 +5667,69 @@ bool SolarStatus::IsInitialized() const {
   return true;
 }
 
-void SolarStatus::Swap(SolarStatus* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SolarStatus::InternalSwap(SolarStatus* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(statusvalue_, other->statusvalue_);
-  swap(solarstatuszgen_, other->solarstatuszgen_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarStatus, solarstatuszgen_)
+      + sizeof(SolarStatus::solarstatuszgen_)
+      - PROTOBUF_FIELD_OFFSET(SolarStatus, statusvalue_)>(
+          reinterpret_cast<char*>(&statusvalue_),
+          reinterpret_cast<char*>(&other->statusvalue_));
 }
 
-::google::protobuf::Metadata SolarStatus::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_solarmodule_2fsolarmodule_2eproto);
-  return ::file_level_metadata_solarmodule_2fsolarmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SolarStatus::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void SolarStatusProfile::InitAsDefaultInstance() {
-  ::solarmodule::_SolarStatusProfile_default_instance_._instance.get_mutable()->statusmessageinfo_ = const_cast< ::commonmodule::StatusMessageInfo*>(
-      ::commonmodule::StatusMessageInfo::internal_default_instance());
-  ::solarmodule::_SolarStatusProfile_default_instance_._instance.get_mutable()->ied_ = const_cast< ::commonmodule::IED*>(
-      ::commonmodule::IED::internal_default_instance());
-  ::solarmodule::_SolarStatusProfile_default_instance_._instance.get_mutable()->solarinverter_ = const_cast< ::solarmodule::SolarInverter*>(
-      ::solarmodule::SolarInverter::internal_default_instance());
-  ::solarmodule::_SolarStatusProfile_default_instance_._instance.get_mutable()->solarstatus_ = const_cast< ::solarmodule::SolarStatus*>(
-      ::solarmodule::SolarStatus::internal_default_instance());
-}
-class SolarStatusProfile::HasBitSetters {
+class SolarStatusProfile::_Internal {
  public:
   static const ::commonmodule::StatusMessageInfo& statusmessageinfo(const SolarStatusProfile* msg);
-  static const ::commonmodule::IED& ied(const SolarStatusProfile* msg);
   static const ::solarmodule::SolarInverter& solarinverter(const SolarStatusProfile* msg);
   static const ::solarmodule::SolarStatus& solarstatus(const SolarStatusProfile* msg);
 };
 
 const ::commonmodule::StatusMessageInfo&
-SolarStatusProfile::HasBitSetters::statusmessageinfo(const SolarStatusProfile* msg) {
+SolarStatusProfile::_Internal::statusmessageinfo(const SolarStatusProfile* msg) {
   return *msg->statusmessageinfo_;
 }
-const ::commonmodule::IED&
-SolarStatusProfile::HasBitSetters::ied(const SolarStatusProfile* msg) {
-  return *msg->ied_;
-}
 const ::solarmodule::SolarInverter&
-SolarStatusProfile::HasBitSetters::solarinverter(const SolarStatusProfile* msg) {
+SolarStatusProfile::_Internal::solarinverter(const SolarStatusProfile* msg) {
   return *msg->solarinverter_;
 }
 const ::solarmodule::SolarStatus&
-SolarStatusProfile::HasBitSetters::solarstatus(const SolarStatusProfile* msg) {
+SolarStatusProfile::_Internal::solarstatus(const SolarStatusProfile* msg) {
   return *msg->solarstatus_;
 }
 void SolarStatusProfile::clear_statusmessageinfo() {
-  if (GetArenaNoVirtual() == nullptr && statusmessageinfo_ != nullptr) {
+  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
     delete statusmessageinfo_;
   }
   statusmessageinfo_ = nullptr;
 }
-void SolarStatusProfile::clear_ied() {
-  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
-    delete ied_;
-  }
-  ied_ = nullptr;
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SolarStatusProfile::kStatusMessageInfoFieldNumber;
-const int SolarStatusProfile::kIedFieldNumber;
-const int SolarStatusProfile::kSolarInverterFieldNumber;
-const int SolarStatusProfile::kSolarStatusFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SolarStatusProfile::SolarStatusProfile()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+SolarStatusProfile::SolarStatusProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:solarmodule.SolarStatusProfile)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarStatusProfile)
 }
 SolarStatusProfile::SolarStatusProfile(const SolarStatusProfile& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_statusmessageinfo()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_statusmessageinfo()) {
     statusmessageinfo_ = new ::commonmodule::StatusMessageInfo(*from.statusmessageinfo_);
   } else {
     statusmessageinfo_ = nullptr;
   }
-  if (from.has_ied()) {
-    ied_ = new ::commonmodule::IED(*from.ied_);
-  } else {
-    ied_ = nullptr;
-  }
-  if (from.has_solarinverter()) {
+  if (from._internal_has_solarinverter()) {
     solarinverter_ = new ::solarmodule::SolarInverter(*from.solarinverter_);
   } else {
     solarinverter_ = nullptr;
   }
-  if (from.has_solarstatus()) {
+  if (from._internal_has_solarstatus()) {
     solarstatus_ = new ::solarmodule::SolarStatus(*from.solarstatus_);
   } else {
     solarstatus_ = nullptr;
@@ -8411,293 +5738,139 @@ SolarStatusProfile::SolarStatusProfile(const SolarStatusProfile& from)
 }
 
 void SolarStatusProfile::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SolarStatusProfile_solarmodule_2fsolarmodule_2eproto.base);
-  ::memset(&statusmessageinfo_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&solarstatus_) -
-      reinterpret_cast<char*>(&statusmessageinfo_)) + sizeof(solarstatus_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&statusmessageinfo_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&solarstatus_) -
+    reinterpret_cast<char*>(&statusmessageinfo_)) + sizeof(solarstatus_));
 }
 
 SolarStatusProfile::~SolarStatusProfile() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarStatusProfile)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void SolarStatusProfile::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete statusmessageinfo_;
-  if (this != internal_default_instance()) delete ied_;
   if (this != internal_default_instance()) delete solarinverter_;
   if (this != internal_default_instance()) delete solarstatus_;
 }
 
+void SolarStatusProfile::ArenaDtor(void* object) {
+  SolarStatusProfile* _this = reinterpret_cast< SolarStatusProfile* >(object);
+  (void)_this;
+}
+void SolarStatusProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void SolarStatusProfile::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SolarStatusProfile& SolarStatusProfile::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SolarStatusProfile_solarmodule_2fsolarmodule_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SolarStatusProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarStatusProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == nullptr && statusmessageinfo_ != nullptr) {
+  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
     delete statusmessageinfo_;
   }
   statusmessageinfo_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && ied_ != nullptr) {
-    delete ied_;
-  }
-  ied_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && solarinverter_ != nullptr) {
+  if (GetArena() == nullptr && solarinverter_ != nullptr) {
     delete solarinverter_;
   }
   solarinverter_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && solarstatus_ != nullptr) {
+  if (GetArena() == nullptr && solarstatus_ != nullptr) {
     delete solarstatus_;
   }
   solarstatus_ = nullptr;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SolarStatusProfile::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SolarStatusProfile*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+const char* SolarStatusProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::StatusMessageInfo::_InternalParse;
-        object = msg->mutable_statusmessageinfo();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::commonmodule::IED::_InternalParse;
-        object = msg->mutable_ied();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::solarmodule::SolarInverter::_InternalParse;
-        object = msg->mutable_solarinverter();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      // .solarmodule.SolarStatus solarStatus = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::solarmodule::SolarStatus::_InternalParse;
-        object = msg->mutable_solarstatus();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_statusmessageinfo(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .solarmodule.SolarInverter solarInverter = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarinverter(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .solarmodule.SolarStatus solarStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarstatus(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+          ctx->SetLastTag(tag);
+          goto success;
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SolarStatusProfile::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:solarmodule.SolarStatusProfile)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_statusmessageinfo()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_ied()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_solarinverter()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .solarmodule.SolarStatus solarStatus = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_solarstatus()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
 success:
-  // @@protoc_insertion_point(parse_success:solarmodule.SolarStatusProfile)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:solarmodule.SolarStatusProfile)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SolarStatusProfile::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:solarmodule.SolarStatusProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusmessageinfo()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::statusmessageinfo(this), output);
-  }
-
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::ied(this), output);
-  }
-
-  // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarinverter()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::solarinverter(this), output);
-  }
-
-  // .solarmodule.SolarStatus solarStatus = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarstatus()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, HasBitSetters::solarstatus(this), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:solarmodule.SolarStatusProfile)
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-::google::protobuf::uint8* SolarStatusProfile::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* SolarStatusProfile::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarStatusProfile)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_statusmessageinfo()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::statusmessageinfo(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::statusmessageinfo(this), target, stream);
   }
 
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::ied(this), target);
-  }
-
-  // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarInverter solarInverter = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_solarinverter()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::solarinverter(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::solarinverter(this), target, stream);
   }
 
-  // .solarmodule.SolarStatus solarStatus = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarStatus solarStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_solarstatus()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, HasBitSetters::solarstatus(this), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::solarstatus(this), target, stream);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarStatusProfile)
   return target;
@@ -8707,57 +5880,49 @@ size_t SolarStatusProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarStatusProfile)
   size_t total_size = 0;
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
   if (this->has_statusmessageinfo()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *statusmessageinfo_);
   }
 
-  // .commonmodule.IED ied = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ied()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *ied_);
-  }
-
-  // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarInverter solarInverter = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_solarinverter()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *solarinverter_);
   }
 
-  // .solarmodule.SolarStatus solarStatus = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // .solarmodule.SolarStatus solarStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   if (this->has_solarstatus()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *solarstatus_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void SolarStatusProfile::MergeFrom(const ::google::protobuf::Message& from) {
+void SolarStatusProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarStatusProfile)
   GOOGLE_DCHECK_NE(&from, this);
   const SolarStatusProfile* source =
-      ::google::protobuf::DynamicCastToGenerated<SolarStatusProfile>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarStatusProfile>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarStatusProfile)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarStatusProfile)
     MergeFrom(*source);
@@ -8767,25 +5932,22 @@ void SolarStatusProfile::MergeFrom(const ::google::protobuf::Message& from) {
 void SolarStatusProfile::MergeFrom(const SolarStatusProfile& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarStatusProfile)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_statusmessageinfo()) {
-    mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(from.statusmessageinfo());
-  }
-  if (from.has_ied()) {
-    mutable_ied()->::commonmodule::IED::MergeFrom(from.ied());
+    _internal_mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(from._internal_statusmessageinfo());
   }
   if (from.has_solarinverter()) {
-    mutable_solarinverter()->::solarmodule::SolarInverter::MergeFrom(from.solarinverter());
+    _internal_mutable_solarinverter()->::solarmodule::SolarInverter::MergeFrom(from._internal_solarinverter());
   }
   if (from.has_solarstatus()) {
-    mutable_solarstatus()->::solarmodule::SolarStatus::MergeFrom(from.solarstatus());
+    _internal_mutable_solarstatus()->::solarmodule::SolarStatus::MergeFrom(from._internal_solarstatus());
   }
 }
 
-void SolarStatusProfile::CopyFrom(const ::google::protobuf::Message& from) {
+void SolarStatusProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarStatusProfile)
   if (&from == this) return;
   Clear();
@@ -8803,82 +5965,77 @@ bool SolarStatusProfile::IsInitialized() const {
   return true;
 }
 
-void SolarStatusProfile::Swap(SolarStatusProfile* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SolarStatusProfile::InternalSwap(SolarStatusProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(statusmessageinfo_, other->statusmessageinfo_);
-  swap(ied_, other->ied_);
-  swap(solarinverter_, other->solarinverter_);
-  swap(solarstatus_, other->solarstatus_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarStatusProfile, solarstatus_)
+      + sizeof(SolarStatusProfile::solarstatus_)
+      - PROTOBUF_FIELD_OFFSET(SolarStatusProfile, statusmessageinfo_)>(
+          reinterpret_cast<char*>(&statusmessageinfo_),
+          reinterpret_cast<char*>(&other->statusmessageinfo_));
 }
 
-::google::protobuf::Metadata SolarStatusProfile::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_solarmodule_2fsolarmodule_2eproto);
-  return ::file_level_metadata_solarmodule_2fsolarmodule_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SolarStatusProfile::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace solarmodule
-namespace google {
-namespace protobuf {
+PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::solarmodule::SolarPoint* Arena::CreateMaybeMessage< ::solarmodule::SolarPoint >(Arena* arena) {
-  return Arena::CreateInternal< ::solarmodule::SolarPoint >(arena);
+  return Arena::CreateMessageInternal< ::solarmodule::SolarPoint >(arena);
 }
 template<> PROTOBUF_NOINLINE ::solarmodule::SolarCSG* Arena::CreateMaybeMessage< ::solarmodule::SolarCSG >(Arena* arena) {
-  return Arena::CreateInternal< ::solarmodule::SolarCSG >(arena);
+  return Arena::CreateMessageInternal< ::solarmodule::SolarCSG >(arena);
 }
 template<> PROTOBUF_NOINLINE ::solarmodule::SolarControlScheduleFSCH* Arena::CreateMaybeMessage< ::solarmodule::SolarControlScheduleFSCH >(Arena* arena) {
-  return Arena::CreateInternal< ::solarmodule::SolarControlScheduleFSCH >(arena);
+  return Arena::CreateMessageInternal< ::solarmodule::SolarControlScheduleFSCH >(arena);
 }
 template<> PROTOBUF_NOINLINE ::solarmodule::SolarControlFSCC* Arena::CreateMaybeMessage< ::solarmodule::SolarControlFSCC >(Arena* arena) {
-  return Arena::CreateInternal< ::solarmodule::SolarControlFSCC >(arena);
+  return Arena::CreateMessageInternal< ::solarmodule::SolarControlFSCC >(arena);
 }
 template<> PROTOBUF_NOINLINE ::solarmodule::SolarControl* Arena::CreateMaybeMessage< ::solarmodule::SolarControl >(Arena* arena) {
-  return Arena::CreateInternal< ::solarmodule::SolarControl >(arena);
+  return Arena::CreateMessageInternal< ::solarmodule::SolarControl >(arena);
 }
 template<> PROTOBUF_NOINLINE ::solarmodule::SolarInverter* Arena::CreateMaybeMessage< ::solarmodule::SolarInverter >(Arena* arena) {
-  return Arena::CreateInternal< ::solarmodule::SolarInverter >(arena);
+  return Arena::CreateMessageInternal< ::solarmodule::SolarInverter >(arena);
 }
 template<> PROTOBUF_NOINLINE ::solarmodule::SolarControlProfile* Arena::CreateMaybeMessage< ::solarmodule::SolarControlProfile >(Arena* arena) {
-  return Arena::CreateInternal< ::solarmodule::SolarControlProfile >(arena);
+  return Arena::CreateMessageInternal< ::solarmodule::SolarControlProfile >(arena);
 }
 template<> PROTOBUF_NOINLINE ::solarmodule::SolarPointStatus* Arena::CreateMaybeMessage< ::solarmodule::SolarPointStatus >(Arena* arena) {
-  return Arena::CreateInternal< ::solarmodule::SolarPointStatus >(arena);
+  return Arena::CreateMessageInternal< ::solarmodule::SolarPointStatus >(arena);
 }
 template<> PROTOBUF_NOINLINE ::solarmodule::SolarEventAndStatusZGEN* Arena::CreateMaybeMessage< ::solarmodule::SolarEventAndStatusZGEN >(Arena* arena) {
-  return Arena::CreateInternal< ::solarmodule::SolarEventAndStatusZGEN >(arena);
+  return Arena::CreateMessageInternal< ::solarmodule::SolarEventAndStatusZGEN >(arena);
 }
 template<> PROTOBUF_NOINLINE ::solarmodule::SolarEventZGEN* Arena::CreateMaybeMessage< ::solarmodule::SolarEventZGEN >(Arena* arena) {
-  return Arena::CreateInternal< ::solarmodule::SolarEventZGEN >(arena);
+  return Arena::CreateMessageInternal< ::solarmodule::SolarEventZGEN >(arena);
 }
 template<> PROTOBUF_NOINLINE ::solarmodule::SolarEvent* Arena::CreateMaybeMessage< ::solarmodule::SolarEvent >(Arena* arena) {
-  return Arena::CreateInternal< ::solarmodule::SolarEvent >(arena);
+  return Arena::CreateMessageInternal< ::solarmodule::SolarEvent >(arena);
 }
 template<> PROTOBUF_NOINLINE ::solarmodule::SolarEventProfile* Arena::CreateMaybeMessage< ::solarmodule::SolarEventProfile >(Arena* arena) {
-  return Arena::CreateInternal< ::solarmodule::SolarEventProfile >(arena);
+  return Arena::CreateMessageInternal< ::solarmodule::SolarEventProfile >(arena);
 }
 template<> PROTOBUF_NOINLINE ::solarmodule::SolarReading* Arena::CreateMaybeMessage< ::solarmodule::SolarReading >(Arena* arena) {
-  return Arena::CreateInternal< ::solarmodule::SolarReading >(arena);
+  return Arena::CreateMessageInternal< ::solarmodule::SolarReading >(arena);
 }
 template<> PROTOBUF_NOINLINE ::solarmodule::SolarReadingProfile* Arena::CreateMaybeMessage< ::solarmodule::SolarReadingProfile >(Arena* arena) {
-  return Arena::CreateInternal< ::solarmodule::SolarReadingProfile >(arena);
+  return Arena::CreateMessageInternal< ::solarmodule::SolarReadingProfile >(arena);
 }
 template<> PROTOBUF_NOINLINE ::solarmodule::SolarStatusZGEN* Arena::CreateMaybeMessage< ::solarmodule::SolarStatusZGEN >(Arena* arena) {
-  return Arena::CreateInternal< ::solarmodule::SolarStatusZGEN >(arena);
+  return Arena::CreateMessageInternal< ::solarmodule::SolarStatusZGEN >(arena);
 }
 template<> PROTOBUF_NOINLINE ::solarmodule::SolarStatus* Arena::CreateMaybeMessage< ::solarmodule::SolarStatus >(Arena* arena) {
-  return Arena::CreateInternal< ::solarmodule::SolarStatus >(arena);
+  return Arena::CreateMessageInternal< ::solarmodule::SolarStatus >(arena);
 }
 template<> PROTOBUF_NOINLINE ::solarmodule::SolarStatusProfile* Arena::CreateMaybeMessage< ::solarmodule::SolarStatusProfile >(Arena* arena) {
-  return Arena::CreateInternal< ::solarmodule::SolarStatusProfile >(arena);
+  return Arena::CreateMessageInternal< ::solarmodule::SolarStatusProfile >(arena);
 }
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
 #include <google/protobuf/port_undef.inc>
