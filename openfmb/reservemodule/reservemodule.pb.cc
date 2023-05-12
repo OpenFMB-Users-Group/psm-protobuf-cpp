@@ -4,258 +4,320 @@
 #include "reservemodule/reservemodule.pb.h"
 
 #include <algorithm>
-
-#include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include "google/protobuf/io/coded_stream.h"
+#include "google/protobuf/extension_set.h"
+#include "google/protobuf/wire_format_lite.h"
+#include "google/protobuf/descriptor.h"
+#include "google/protobuf/generated_message_reflection.h"
+#include "google/protobuf/reflection_ops.h"
+#include "google/protobuf/wire_format.h"
 // @@protoc_insertion_point(includes)
-#include <google/protobuf/port_def.inc>
 
+// Must be included last.
+#include "google/protobuf/port_def.inc"
 PROTOBUF_PRAGMA_INIT_SEG
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = ::PROTOBUF_NAMESPACE_ID::internal;
 namespace reservemodule {
-constexpr ReserveMargin::ReserveMargin(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnode_(nullptr)
-  , a_(nullptr)
-  , va_(nullptr)
-  , var_(nullptr)
-  , w_(nullptr){}
+PROTOBUF_CONSTEXPR ReserveMargin::ReserveMargin(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.logicalnode_)*/nullptr
+  , /*decltype(_impl_.a_)*/nullptr
+  , /*decltype(_impl_.va_)*/nullptr
+  , /*decltype(_impl_.var_)*/nullptr
+  , /*decltype(_impl_.w_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ReserveMarginDefaultTypeInternal {
-  constexpr ReserveMarginDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ReserveMarginDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ReserveMarginDefaultTypeInternal() {}
   union {
     ReserveMargin _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ReserveMarginDefaultTypeInternal _ReserveMargin_default_instance_;
-constexpr ReserveAvailability::ReserveAvailability(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : incrementalmargin_(nullptr)
-  , margin_(nullptr)
-  , standbymargin_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ReserveMarginDefaultTypeInternal _ReserveMargin_default_instance_;
+PROTOBUF_CONSTEXPR ReserveAvailability::ReserveAvailability(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.incrementalmargin_)*/nullptr
+  , /*decltype(_impl_.margin_)*/nullptr
+  , /*decltype(_impl_.standbymargin_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ReserveAvailabilityDefaultTypeInternal {
-  constexpr ReserveAvailabilityDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ReserveAvailabilityDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ReserveAvailabilityDefaultTypeInternal() {}
   union {
     ReserveAvailability _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ReserveAvailabilityDefaultTypeInternal _ReserveAvailability_default_instance_;
-constexpr AllocatedMargin::AllocatedMargin(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : requestid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , allocatedmargin_(nullptr)
-  , allocatedstandbymargin_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ReserveAvailabilityDefaultTypeInternal _ReserveAvailability_default_instance_;
+PROTOBUF_CONSTEXPR AllocatedMargin::AllocatedMargin(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.requestid_)*/ {
+    &::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized {}
+  }
+
+  , /*decltype(_impl_.allocatedmargin_)*/nullptr
+  , /*decltype(_impl_.allocatedstandbymargin_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct AllocatedMarginDefaultTypeInternal {
-  constexpr AllocatedMarginDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR AllocatedMarginDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~AllocatedMarginDefaultTypeInternal() {}
   union {
     AllocatedMargin _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AllocatedMarginDefaultTypeInternal _AllocatedMargin_default_instance_;
-constexpr ReserveAvailabilityProfile::ReserveAvailabilityProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlmessageinfo_(nullptr)
-  , allocatedmargin_(nullptr)
-  , requestercircuitsegmentservice_(nullptr)
-  , reserveavailability_(nullptr)
-  , respondercircuitsegmentservice_(nullptr)
-  , tiepoint_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AllocatedMarginDefaultTypeInternal _AllocatedMargin_default_instance_;
+PROTOBUF_CONSTEXPR ReserveAvailabilityProfile::ReserveAvailabilityProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlmessageinfo_)*/nullptr
+  , /*decltype(_impl_.allocatedmargin_)*/nullptr
+  , /*decltype(_impl_.requestercircuitsegmentservice_)*/nullptr
+  , /*decltype(_impl_.reserveavailability_)*/nullptr
+  , /*decltype(_impl_.respondercircuitsegmentservice_)*/nullptr
+  , /*decltype(_impl_.tiepoint_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ReserveAvailabilityProfileDefaultTypeInternal {
-  constexpr ReserveAvailabilityProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ReserveAvailabilityProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ReserveAvailabilityProfileDefaultTypeInternal() {}
   union {
     ReserveAvailabilityProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ReserveAvailabilityProfileDefaultTypeInternal _ReserveAvailabilityProfile_default_instance_;
-constexpr ReserveRequest::ReserveRequest(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : requestid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , margin_(nullptr)
-  , standbymargin_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ReserveAvailabilityProfileDefaultTypeInternal _ReserveAvailabilityProfile_default_instance_;
+PROTOBUF_CONSTEXPR ReserveRequest::ReserveRequest(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.requestid_)*/ {
+    &::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized {}
+  }
+
+  , /*decltype(_impl_.margin_)*/nullptr
+  , /*decltype(_impl_.standbymargin_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ReserveRequestDefaultTypeInternal {
-  constexpr ReserveRequestDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ReserveRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ReserveRequestDefaultTypeInternal() {}
   union {
     ReserveRequest _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ReserveRequestDefaultTypeInternal _ReserveRequest_default_instance_;
-constexpr ReserveRequestProfile::ReserveRequestProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlmessageinfo_(nullptr)
-  , requestercircuitsegmentservice_(nullptr)
-  , reserverequest_(nullptr)
-  , respondercircuitsegmentservice_(nullptr)
-  , tiepoint_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ReserveRequestDefaultTypeInternal _ReserveRequest_default_instance_;
+PROTOBUF_CONSTEXPR ReserveRequestProfile::ReserveRequestProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlmessageinfo_)*/nullptr
+  , /*decltype(_impl_.requestercircuitsegmentservice_)*/nullptr
+  , /*decltype(_impl_.reserverequest_)*/nullptr
+  , /*decltype(_impl_.respondercircuitsegmentservice_)*/nullptr
+  , /*decltype(_impl_.tiepoint_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ReserveRequestProfileDefaultTypeInternal {
-  constexpr ReserveRequestProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ReserveRequestProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ReserveRequestProfileDefaultTypeInternal() {}
   union {
     ReserveRequestProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ReserveRequestProfileDefaultTypeInternal _ReserveRequestProfile_default_instance_;
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ReserveRequestProfileDefaultTypeInternal _ReserveRequestProfile_default_instance_;
 }  // namespace reservemodule
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_reservemodule_2freservemodule_2eproto[6];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_reservemodule_2freservemodule_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_reservemodule_2freservemodule_2eproto = nullptr;
+static ::_pb::Metadata file_level_metadata_reservemodule_2freservemodule_2eproto[6];
+static constexpr const ::_pb::EnumDescriptor**
+    file_level_enum_descriptors_reservemodule_2freservemodule_2eproto = nullptr;
+static constexpr const ::_pb::ServiceDescriptor**
+    file_level_service_descriptors_reservemodule_2freservemodule_2eproto = nullptr;
+const ::uint32_t TableStruct_reservemodule_2freservemodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
+    protodesc_cold) = {
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveMargin, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveMargin, _impl_.logicalnode_),
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveMargin, _impl_.a_),
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveMargin, _impl_.va_),
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveMargin, _impl_.var_),
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveMargin, _impl_.w_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailability, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailability, _impl_.incrementalmargin_),
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailability, _impl_.margin_),
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailability, _impl_.standbymargin_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::reservemodule::AllocatedMargin, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::reservemodule::AllocatedMargin, _impl_.requestid_),
+    PROTOBUF_FIELD_OFFSET(::reservemodule::AllocatedMargin, _impl_.allocatedmargin_),
+    PROTOBUF_FIELD_OFFSET(::reservemodule::AllocatedMargin, _impl_.allocatedstandbymargin_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailabilityProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailabilityProfile, _impl_.controlmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailabilityProfile, _impl_.allocatedmargin_),
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailabilityProfile, _impl_.requestercircuitsegmentservice_),
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailabilityProfile, _impl_.reserveavailability_),
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailabilityProfile, _impl_.respondercircuitsegmentservice_),
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailabilityProfile, _impl_.tiepoint_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequest, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequest, _impl_.requestid_),
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequest, _impl_.margin_),
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequest, _impl_.standbymargin_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequestProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequestProfile, _impl_.controlmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequestProfile, _impl_.requestercircuitsegmentservice_),
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequestProfile, _impl_.reserverequest_),
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequestProfile, _impl_.respondercircuitsegmentservice_),
+    PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequestProfile, _impl_.tiepoint_),
+};
 
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_reservemodule_2freservemodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveMargin, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveMargin, logicalnode_),
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveMargin, a_),
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveMargin, va_),
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveMargin, var_),
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveMargin, w_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailability, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailability, incrementalmargin_),
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailability, margin_),
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailability, standbymargin_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::reservemodule::AllocatedMargin, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::reservemodule::AllocatedMargin, requestid_),
-  PROTOBUF_FIELD_OFFSET(::reservemodule::AllocatedMargin, allocatedmargin_),
-  PROTOBUF_FIELD_OFFSET(::reservemodule::AllocatedMargin, allocatedstandbymargin_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailabilityProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailabilityProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailabilityProfile, allocatedmargin_),
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailabilityProfile, requestercircuitsegmentservice_),
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailabilityProfile, reserveavailability_),
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailabilityProfile, respondercircuitsegmentservice_),
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveAvailabilityProfile, tiepoint_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequest, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequest, requestid_),
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequest, margin_),
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequest, standbymargin_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequestProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequestProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequestProfile, requestercircuitsegmentservice_),
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequestProfile, reserverequest_),
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequestProfile, respondercircuitsegmentservice_),
-  PROTOBUF_FIELD_OFFSET(::reservemodule::ReserveRequestProfile, tiepoint_),
-};
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::reservemodule::ReserveMargin)},
-  { 10, -1, sizeof(::reservemodule::ReserveAvailability)},
-  { 18, -1, sizeof(::reservemodule::AllocatedMargin)},
-  { 26, -1, sizeof(::reservemodule::ReserveAvailabilityProfile)},
-  { 37, -1, sizeof(::reservemodule::ReserveRequest)},
-  { 45, -1, sizeof(::reservemodule::ReserveRequestProfile)},
+static const ::_pbi::MigrationSchema
+    schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+        { 0, -1, -1, sizeof(::reservemodule::ReserveMargin)},
+        { 13, -1, -1, sizeof(::reservemodule::ReserveAvailability)},
+        { 24, -1, -1, sizeof(::reservemodule::AllocatedMargin)},
+        { 35, -1, -1, sizeof(::reservemodule::ReserveAvailabilityProfile)},
+        { 49, -1, -1, sizeof(::reservemodule::ReserveRequest)},
+        { 60, -1, -1, sizeof(::reservemodule::ReserveRequestProfile)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::reservemodule::_ReserveMargin_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::reservemodule::_ReserveAvailability_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::reservemodule::_AllocatedMargin_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::reservemodule::_ReserveAvailabilityProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::reservemodule::_ReserveRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::reservemodule::_ReserveRequestProfile_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+    &::reservemodule::_ReserveMargin_default_instance_._instance,
+    &::reservemodule::_ReserveAvailability_default_instance_._instance,
+    &::reservemodule::_AllocatedMargin_default_instance_._instance,
+    &::reservemodule::_ReserveAvailabilityProfile_default_instance_._instance,
+    &::reservemodule::_ReserveRequest_default_instance_._instance,
+    &::reservemodule::_ReserveRequestProfile_default_instance_._instance,
+};
+const char descriptor_table_protodef_reservemodule_2freservemodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+    "\n!reservemodule/reservemodule.proto\022\rres"
+    "ervemodule\032\tuml.proto\032\037commonmodule/comm"
+    "onmodule.proto\"\300\001\n\rReserveMargin\0224\n\013logi"
+    "calNode\030\001 \001(\0132\031.commonmodule.LogicalNode"
+    "B\004\200\265\030\001\022\034\n\001A\030\002 \001(\0132\021.commonmodule.PMG\022\035\n\002"
+    "VA\030\003 \001(\0132\021.commonmodule.PMG\022\036\n\003VAr\030\004 \001(\013"
+    "2\021.commonmodule.PMG\022\034\n\001W\030\005 \001(\0132\021.commonm"
+    "odule.PMG\"\261\001\n\023ReserveAvailability\0227\n\021inc"
+    "rementalMargin\030\001 \001(\0132\034.reservemodule.Res"
+    "erveMargin\022,\n\006margin\030\002 \001(\0132\034.reservemodu"
+    "le.ReserveMargin\0223\n\rstandbyMargin\030\003 \001(\0132"
+    "\034.reservemodule.ReserveMargin\"\243\001\n\017Alloca"
+    "tedMargin\022\033\n\trequestID\030\001 \001(\tB\010\210\265\030\001\220\265\030\001\0225"
+    "\n\017allocatedMargin\030\002 \001(\0132\034.reservemodule."
+    "ReserveMargin\022<\n\026allocatedStandbyMargin\030"
+    "\003 \001(\0132\034.reservemodule.ReserveMargin\"\317\003\n\032"
+    "ReserveAvailabilityProfile\022B\n\022controlMes"
+    "sageInfo\030\001 \001(\0132 .commonmodule.ControlMes"
+    "sageInfoB\004\200\265\030\001\0227\n\017allocatedMargin\030\002 \001(\0132"
+    "\036.reservemodule.AllocatedMargin\022Q\n\036reque"
+    "sterCircuitSegmentService\030\003 \001(\0132\037.common"
+    "module.ApplicationSystemB\010\210\265\030\001\220\265\030\001\022I\n\023re"
+    "serveAvailability\030\004 \001(\0132\".reservemodule."
+    "ReserveAvailabilityB\010\210\265\030\001\220\265\030\001\022Q\n\036respond"
+    "erCircuitSegmentService\030\005 \001(\0132\037.commonmo"
+    "dule.ApplicationSystemB\010\210\265\030\001\220\265\030\001\022=\n\010tieP"
+    "oint\030\006 \001(\0132!.commonmodule.ConductingEqui"
+    "pmentB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\220\001\n\016ReserveRequest"
+    "\022\033\n\trequestID\030\001 \001(\tB\010\210\265\030\001\220\265\030\001\022,\n\006margin\030"
+    "\002 \001(\0132\034.reservemodule.ReserveMargin\0223\n\rs"
+    "tandbyMargin\030\003 \001(\0132\034.reservemodule.Reser"
+    "veMargin\"\207\003\n\025ReserveRequestProfile\022B\n\022co"
+    "ntrolMessageInfo\030\001 \001(\0132 .commonmodule.Co"
+    "ntrolMessageInfoB\004\200\265\030\001\022Q\n\036requesterCircu"
+    "itSegmentService\030\002 \001(\0132\037.commonmodule.Ap"
+    "plicationSystemB\010\210\265\030\001\220\265\030\001\022\?\n\016reserveRequ"
+    "est\030\003 \001(\0132\035.reservemodule.ReserveRequest"
+    "B\010\210\265\030\001\220\265\030\001\022Q\n\036responderCircuitSegmentSer"
+    "vice\030\004 \001(\0132\037.commonmodule.ApplicationSys"
+    "temB\010\210\265\030\001\220\265\030\001\022=\n\010tiePoint\030\005 \001(\0132!.common"
+    "module.ConductingEquipmentB\010\210\265\030\001\220\265\030\001:\004\300\363"
+    "\030\001B\207\001\n\025openfmb.reservemoduleP\001ZTgitlab.c"
+    "om/openfmb/psm/ops/protobuf/go-openfmb-o"
+    "ps-protobuf/v2/openfmb/reservemodule\252\002\025o"
+    "penfmb.reservemoduleb\006proto3"
+};
+static const ::_pbi::DescriptorTable* const descriptor_table_reservemodule_2freservemodule_2eproto_deps[2] =
+    {
+        &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
+        &::descriptor_table_uml_2eproto,
+};
+static ::absl::once_flag descriptor_table_reservemodule_2freservemodule_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_reservemodule_2freservemodule_2eproto = {
+    false,
+    false,
+    1788,
+    descriptor_table_protodef_reservemodule_2freservemodule_2eproto,
+    "reservemodule/reservemodule.proto",
+    &descriptor_table_reservemodule_2freservemodule_2eproto_once,
+    descriptor_table_reservemodule_2freservemodule_2eproto_deps,
+    2,
+    6,
+    schemas,
+    file_default_instances,
+    TableStruct_reservemodule_2freservemodule_2eproto::offsets,
+    file_level_metadata_reservemodule_2freservemodule_2eproto,
+    file_level_enum_descriptors_reservemodule_2freservemodule_2eproto,
+    file_level_service_descriptors_reservemodule_2freservemodule_2eproto,
 };
 
-const char descriptor_table_protodef_reservemodule_2freservemodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n!reservemodule/reservemodule.proto\022\rres"
-  "ervemodule\032\tuml.proto\032\037commonmodule/comm"
-  "onmodule.proto\"\300\001\n\rReserveMargin\0224\n\013logi"
-  "calNode\030\001 \001(\0132\031.commonmodule.LogicalNode"
-  "B\004\200\265\030\001\022\034\n\001A\030\002 \001(\0132\021.commonmodule.PMG\022\035\n\002"
-  "VA\030\003 \001(\0132\021.commonmodule.PMG\022\036\n\003VAr\030\004 \001(\013"
-  "2\021.commonmodule.PMG\022\034\n\001W\030\005 \001(\0132\021.commonm"
-  "odule.PMG\"\261\001\n\023ReserveAvailability\0227\n\021inc"
-  "rementalMargin\030\001 \001(\0132\034.reservemodule.Res"
-  "erveMargin\022,\n\006margin\030\002 \001(\0132\034.reservemodu"
-  "le.ReserveMargin\0223\n\rstandbyMargin\030\003 \001(\0132"
-  "\034.reservemodule.ReserveMargin\"\243\001\n\017Alloca"
-  "tedMargin\022\033\n\trequestID\030\001 \001(\tB\010\210\265\030\001\220\265\030\001\0225"
-  "\n\017allocatedMargin\030\002 \001(\0132\034.reservemodule."
-  "ReserveMargin\022<\n\026allocatedStandbyMargin\030"
-  "\003 \001(\0132\034.reservemodule.ReserveMargin\"\317\003\n\032"
-  "ReserveAvailabilityProfile\022B\n\022controlMes"
-  "sageInfo\030\001 \001(\0132 .commonmodule.ControlMes"
-  "sageInfoB\004\200\265\030\001\0227\n\017allocatedMargin\030\002 \001(\0132"
-  "\036.reservemodule.AllocatedMargin\022Q\n\036reque"
-  "sterCircuitSegmentService\030\003 \001(\0132\037.common"
-  "module.ApplicationSystemB\010\210\265\030\001\220\265\030\001\022I\n\023re"
-  "serveAvailability\030\004 \001(\0132\".reservemodule."
-  "ReserveAvailabilityB\010\210\265\030\001\220\265\030\001\022Q\n\036respond"
-  "erCircuitSegmentService\030\005 \001(\0132\037.commonmo"
-  "dule.ApplicationSystemB\010\210\265\030\001\220\265\030\001\022=\n\010tieP"
-  "oint\030\006 \001(\0132!.commonmodule.ConductingEqui"
-  "pmentB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\220\001\n\016ReserveRequest"
-  "\022\033\n\trequestID\030\001 \001(\tB\010\210\265\030\001\220\265\030\001\022,\n\006margin\030"
-  "\002 \001(\0132\034.reservemodule.ReserveMargin\0223\n\rs"
-  "tandbyMargin\030\003 \001(\0132\034.reservemodule.Reser"
-  "veMargin\"\207\003\n\025ReserveRequestProfile\022B\n\022co"
-  "ntrolMessageInfo\030\001 \001(\0132 .commonmodule.Co"
-  "ntrolMessageInfoB\004\200\265\030\001\022Q\n\036requesterCircu"
-  "itSegmentService\030\002 \001(\0132\037.commonmodule.Ap"
-  "plicationSystemB\010\210\265\030\001\220\265\030\001\022\?\n\016reserveRequ"
-  "est\030\003 \001(\0132\035.reservemodule.ReserveRequest"
-  "B\010\210\265\030\001\220\265\030\001\022Q\n\036responderCircuitSegmentSer"
-  "vice\030\004 \001(\0132\037.commonmodule.ApplicationSys"
-  "temB\010\210\265\030\001\220\265\030\001\022=\n\010tiePoint\030\005 \001(\0132!.common"
-  "module.ConductingEquipmentB\010\210\265\030\001\220\265\030\001:\004\300\363"
-  "\030\001B\207\001\n\025openfmb.reservemoduleP\001ZTgitlab.c"
-  "om/openfmb/psm/ops/protobuf/go-openfmb-o"
-  "ps-protobuf/v2/openfmb/reservemodule\252\002\025o"
-  "penfmb.reservemoduleb\006proto3"
-  ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_reservemodule_2freservemodule_2eproto_deps[2] = {
-  &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
-  &::descriptor_table_uml_2eproto,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_reservemodule_2freservemodule_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_reservemodule_2freservemodule_2eproto = {
-  false, false, 1788, descriptor_table_protodef_reservemodule_2freservemodule_2eproto, "reservemodule/reservemodule.proto", 
-  &descriptor_table_reservemodule_2freservemodule_2eproto_once, descriptor_table_reservemodule_2freservemodule_2eproto_deps, 2, 6,
-  schemas, file_default_instances, TableStruct_reservemodule_2freservemodule_2eproto::offsets,
-  file_level_metadata_reservemodule_2freservemodule_2eproto, file_level_enum_descriptors_reservemodule_2freservemodule_2eproto, file_level_service_descriptors_reservemodule_2freservemodule_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
-descriptor_table_reservemodule_2freservemodule_2eproto_metadata_getter(int index) {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_reservemodule_2freservemodule_2eproto);
-  return descriptor_table_reservemodule_2freservemodule_2eproto.file_level_metadata[index];
+// This function exists to be marked as weak.
+// It can significantly speed up compilation by breaking up LLVM's SCC
+// in the .pb.cc translation units. Large translation units see a
+// reduction of more than 35% of walltime for optimized builds. Without
+// the weak attribute all the messages in the file, including all the
+// vtables and everything they use become part of the same SCC through
+// a cycle like:
+// GetMetadata -> descriptor table -> default instances ->
+//   vtables -> GetMetadata
+// By adding a weak function here we break the connection from the
+// individual vtables back into the descriptor table.
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_reservemodule_2freservemodule_2eproto_getter() {
+  return &descriptor_table_reservemodule_2freservemodule_2eproto;
 }
-
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_reservemodule_2freservemodule_2eproto(&descriptor_table_reservemodule_2freservemodule_2eproto);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
+static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_reservemodule_2freservemodule_2eproto(&descriptor_table_reservemodule_2freservemodule_2eproto);
 namespace reservemodule {
-
 // ===================================================================
 
 class ReserveMargin::_Internal {
@@ -269,366 +331,357 @@ class ReserveMargin::_Internal {
 
 const ::commonmodule::LogicalNode&
 ReserveMargin::_Internal::logicalnode(const ReserveMargin* msg) {
-  return *msg->logicalnode_;
+  return *msg->_impl_.logicalnode_;
 }
 const ::commonmodule::PMG&
 ReserveMargin::_Internal::a(const ReserveMargin* msg) {
-  return *msg->a_;
+  return *msg->_impl_.a_;
 }
 const ::commonmodule::PMG&
 ReserveMargin::_Internal::va(const ReserveMargin* msg) {
-  return *msg->va_;
+  return *msg->_impl_.va_;
 }
 const ::commonmodule::PMG&
 ReserveMargin::_Internal::var(const ReserveMargin* msg) {
-  return *msg->var_;
+  return *msg->_impl_.var_;
 }
 const ::commonmodule::PMG&
 ReserveMargin::_Internal::w(const ReserveMargin* msg) {
-  return *msg->w_;
+  return *msg->_impl_.w_;
 }
 void ReserveMargin::clear_logicalnode() {
-  if (GetArena() == nullptr && logicalnode_ != nullptr) {
-    delete logicalnode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnode_ != nullptr) {
+    delete _impl_.logicalnode_;
   }
-  logicalnode_ = nullptr;
+  _impl_.logicalnode_ = nullptr;
 }
 void ReserveMargin::clear_a() {
-  if (GetArena() == nullptr && a_ != nullptr) {
-    delete a_;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_ != nullptr) {
+    delete _impl_.a_;
   }
-  a_ = nullptr;
+  _impl_.a_ = nullptr;
 }
 void ReserveMargin::clear_va() {
-  if (GetArena() == nullptr && va_ != nullptr) {
-    delete va_;
+  if (GetArenaForAllocation() == nullptr && _impl_.va_ != nullptr) {
+    delete _impl_.va_;
   }
-  va_ = nullptr;
+  _impl_.va_ = nullptr;
 }
 void ReserveMargin::clear_var() {
-  if (GetArena() == nullptr && var_ != nullptr) {
-    delete var_;
+  if (GetArenaForAllocation() == nullptr && _impl_.var_ != nullptr) {
+    delete _impl_.var_;
   }
-  var_ = nullptr;
+  _impl_.var_ = nullptr;
 }
 void ReserveMargin::clear_w() {
-  if (GetArena() == nullptr && w_ != nullptr) {
-    delete w_;
+  if (GetArenaForAllocation() == nullptr && _impl_.w_ != nullptr) {
+    delete _impl_.w_;
   }
-  w_ = nullptr;
+  _impl_.w_ = nullptr;
 }
 ReserveMargin::ReserveMargin(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:reservemodule.ReserveMargin)
 }
 ReserveMargin::ReserveMargin(const ReserveMargin& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ReserveMargin* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnode_){nullptr}
+    , decltype(_impl_.a_){nullptr}
+    , decltype(_impl_.va_){nullptr}
+    , decltype(_impl_.var_){nullptr}
+    , decltype(_impl_.w_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_logicalnode()) {
-    logicalnode_ = new ::commonmodule::LogicalNode(*from.logicalnode_);
-  } else {
-    logicalnode_ = nullptr;
+    _this->_impl_.logicalnode_ = new ::commonmodule::LogicalNode(*from._impl_.logicalnode_);
   }
   if (from._internal_has_a()) {
-    a_ = new ::commonmodule::PMG(*from.a_);
-  } else {
-    a_ = nullptr;
+    _this->_impl_.a_ = new ::commonmodule::PMG(*from._impl_.a_);
   }
   if (from._internal_has_va()) {
-    va_ = new ::commonmodule::PMG(*from.va_);
-  } else {
-    va_ = nullptr;
+    _this->_impl_.va_ = new ::commonmodule::PMG(*from._impl_.va_);
   }
   if (from._internal_has_var()) {
-    var_ = new ::commonmodule::PMG(*from.var_);
-  } else {
-    var_ = nullptr;
+    _this->_impl_.var_ = new ::commonmodule::PMG(*from._impl_.var_);
   }
   if (from._internal_has_w()) {
-    w_ = new ::commonmodule::PMG(*from.w_);
-  } else {
-    w_ = nullptr;
+    _this->_impl_.w_ = new ::commonmodule::PMG(*from._impl_.w_);
   }
   // @@protoc_insertion_point(copy_constructor:reservemodule.ReserveMargin)
 }
 
-void ReserveMargin::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnode_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&w_) -
-    reinterpret_cast<char*>(&logicalnode_)) + sizeof(w_));
+inline void ReserveMargin::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnode_){nullptr}
+    , decltype(_impl_.a_){nullptr}
+    , decltype(_impl_.va_){nullptr}
+    , decltype(_impl_.var_){nullptr}
+    , decltype(_impl_.w_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ReserveMargin::~ReserveMargin() {
   // @@protoc_insertion_point(destructor:reservemodule.ReserveMargin)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ReserveMargin::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete logicalnode_;
-  if (this != internal_default_instance()) delete a_;
-  if (this != internal_default_instance()) delete va_;
-  if (this != internal_default_instance()) delete var_;
-  if (this != internal_default_instance()) delete w_;
+inline void ReserveMargin::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.logicalnode_;
+  if (this != internal_default_instance()) delete _impl_.a_;
+  if (this != internal_default_instance()) delete _impl_.va_;
+  if (this != internal_default_instance()) delete _impl_.var_;
+  if (this != internal_default_instance()) delete _impl_.w_;
 }
 
-void ReserveMargin::ArenaDtor(void* object) {
-  ReserveMargin* _this = reinterpret_cast< ReserveMargin* >(object);
-  (void)_this;
-}
-void ReserveMargin::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ReserveMargin::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ReserveMargin::Clear() {
 // @@protoc_insertion_point(message_clear_start:reservemodule.ReserveMargin)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && logicalnode_ != nullptr) {
-    delete logicalnode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnode_ != nullptr) {
+    delete _impl_.logicalnode_;
   }
-  logicalnode_ = nullptr;
-  if (GetArena() == nullptr && a_ != nullptr) {
-    delete a_;
+  _impl_.logicalnode_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.a_ != nullptr) {
+    delete _impl_.a_;
   }
-  a_ = nullptr;
-  if (GetArena() == nullptr && va_ != nullptr) {
-    delete va_;
+  _impl_.a_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.va_ != nullptr) {
+    delete _impl_.va_;
   }
-  va_ = nullptr;
-  if (GetArena() == nullptr && var_ != nullptr) {
-    delete var_;
+  _impl_.va_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.var_ != nullptr) {
+    delete _impl_.var_;
   }
-  var_ = nullptr;
-  if (GetArena() == nullptr && w_ != nullptr) {
-    delete w_;
+  _impl_.var_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.w_ != nullptr) {
+    delete _impl_.w_;
   }
-  w_ = nullptr;
+  _impl_.w_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ReserveMargin::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ReserveMargin::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_logicalnode(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PMG A = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_a(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PMG VA = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_va(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PMG VAr = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_var(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PMG W = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_w(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ReserveMargin::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ReserveMargin::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:reservemodule.ReserveMargin)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnode()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_logicalnode()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnode(this), target, stream);
+      InternalWriteMessage(1, _Internal::logicalnode(this),
+        _Internal::logicalnode(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PMG A = 2;
-  if (this->has_a()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_a()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::a(this), target, stream);
+      InternalWriteMessage(2, _Internal::a(this),
+        _Internal::a(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PMG VA = 3;
-  if (this->has_va()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_va()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::va(this), target, stream);
+      InternalWriteMessage(3, _Internal::va(this),
+        _Internal::va(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PMG VAr = 4;
-  if (this->has_var()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_var()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::var(this), target, stream);
+      InternalWriteMessage(4, _Internal::var(this),
+        _Internal::var(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PMG W = 5;
-  if (this->has_w()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_w()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::w(this), target, stream);
+      InternalWriteMessage(5, _Internal::w(this),
+        _Internal::w(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:reservemodule.ReserveMargin)
   return target;
 }
 
-size_t ReserveMargin::ByteSizeLong() const {
+::size_t ReserveMargin::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:reservemodule.ReserveMargin)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnode()) {
+  if (this->_internal_has_logicalnode()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *logicalnode_);
+        *_impl_.logicalnode_);
   }
 
   // .commonmodule.PMG A = 2;
-  if (this->has_a()) {
+  if (this->_internal_has_a()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *a_);
+        *_impl_.a_);
   }
 
   // .commonmodule.PMG VA = 3;
-  if (this->has_va()) {
+  if (this->_internal_has_va()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *va_);
+        *_impl_.va_);
   }
 
   // .commonmodule.PMG VAr = 4;
-  if (this->has_var()) {
+  if (this->_internal_has_var()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *var_);
+        *_impl_.var_);
   }
 
   // .commonmodule.PMG W = 5;
-  if (this->has_w()) {
+  if (this->_internal_has_w()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *w_);
+        *_impl_.w_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ReserveMargin::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:reservemodule.ReserveMargin)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ReserveMargin* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ReserveMargin>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:reservemodule.ReserveMargin)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:reservemodule.ReserveMargin)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ReserveMargin::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ReserveMargin::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReserveMargin::GetClassData() const { return &_class_data_; }
 
-void ReserveMargin::MergeFrom(const ReserveMargin& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:reservemodule.ReserveMargin)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ReserveMargin::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ReserveMargin*>(&to_msg);
+  auto& from = static_cast<const ReserveMargin&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:reservemodule.ReserveMargin)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_logicalnode()) {
-    _internal_mutable_logicalnode()->::commonmodule::LogicalNode::MergeFrom(from._internal_logicalnode());
+  if (from._internal_has_logicalnode()) {
+    _this->_internal_mutable_logicalnode()->::commonmodule::LogicalNode::MergeFrom(
+        from._internal_logicalnode());
   }
-  if (from.has_a()) {
-    _internal_mutable_a()->::commonmodule::PMG::MergeFrom(from._internal_a());
+  if (from._internal_has_a()) {
+    _this->_internal_mutable_a()->::commonmodule::PMG::MergeFrom(
+        from._internal_a());
   }
-  if (from.has_va()) {
-    _internal_mutable_va()->::commonmodule::PMG::MergeFrom(from._internal_va());
+  if (from._internal_has_va()) {
+    _this->_internal_mutable_va()->::commonmodule::PMG::MergeFrom(
+        from._internal_va());
   }
-  if (from.has_var()) {
-    _internal_mutable_var()->::commonmodule::PMG::MergeFrom(from._internal_var());
+  if (from._internal_has_var()) {
+    _this->_internal_mutable_var()->::commonmodule::PMG::MergeFrom(
+        from._internal_var());
   }
-  if (from.has_w()) {
-    _internal_mutable_w()->::commonmodule::PMG::MergeFrom(from._internal_w());
+  if (from._internal_has_w()) {
+    _this->_internal_mutable_w()->::commonmodule::PMG::MergeFrom(
+        from._internal_w());
   }
-}
-
-void ReserveMargin::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:reservemodule.ReserveMargin)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ReserveMargin::CopyFrom(const ReserveMargin& from) {
@@ -644,20 +697,20 @@ bool ReserveMargin::IsInitialized() const {
 
 void ReserveMargin::InternalSwap(ReserveMargin* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ReserveMargin, w_)
-      + sizeof(ReserveMargin::w_)
-      - PROTOBUF_FIELD_OFFSET(ReserveMargin, logicalnode_)>(
-          reinterpret_cast<char*>(&logicalnode_),
-          reinterpret_cast<char*>(&other->logicalnode_));
+      PROTOBUF_FIELD_OFFSET(ReserveMargin, _impl_.w_)
+      + sizeof(ReserveMargin::_impl_.w_)
+      - PROTOBUF_FIELD_OFFSET(ReserveMargin, _impl_.logicalnode_)>(
+          reinterpret_cast<char*>(&_impl_.logicalnode_),
+          reinterpret_cast<char*>(&other->_impl_.logicalnode_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ReserveMargin::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_reservemodule_2freservemodule_2eproto_getter, &descriptor_table_reservemodule_2freservemodule_2eproto_once,
+      file_level_metadata_reservemodule_2freservemodule_2eproto[0]);
 }
-
-
 // ===================================================================
 
 class ReserveAvailability::_Internal {
@@ -669,258 +722,245 @@ class ReserveAvailability::_Internal {
 
 const ::reservemodule::ReserveMargin&
 ReserveAvailability::_Internal::incrementalmargin(const ReserveAvailability* msg) {
-  return *msg->incrementalmargin_;
+  return *msg->_impl_.incrementalmargin_;
 }
 const ::reservemodule::ReserveMargin&
 ReserveAvailability::_Internal::margin(const ReserveAvailability* msg) {
-  return *msg->margin_;
+  return *msg->_impl_.margin_;
 }
 const ::reservemodule::ReserveMargin&
 ReserveAvailability::_Internal::standbymargin(const ReserveAvailability* msg) {
-  return *msg->standbymargin_;
+  return *msg->_impl_.standbymargin_;
 }
 ReserveAvailability::ReserveAvailability(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:reservemodule.ReserveAvailability)
 }
 ReserveAvailability::ReserveAvailability(const ReserveAvailability& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ReserveAvailability* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.incrementalmargin_){nullptr}
+    , decltype(_impl_.margin_){nullptr}
+    , decltype(_impl_.standbymargin_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_incrementalmargin()) {
-    incrementalmargin_ = new ::reservemodule::ReserveMargin(*from.incrementalmargin_);
-  } else {
-    incrementalmargin_ = nullptr;
+    _this->_impl_.incrementalmargin_ = new ::reservemodule::ReserveMargin(*from._impl_.incrementalmargin_);
   }
   if (from._internal_has_margin()) {
-    margin_ = new ::reservemodule::ReserveMargin(*from.margin_);
-  } else {
-    margin_ = nullptr;
+    _this->_impl_.margin_ = new ::reservemodule::ReserveMargin(*from._impl_.margin_);
   }
   if (from._internal_has_standbymargin()) {
-    standbymargin_ = new ::reservemodule::ReserveMargin(*from.standbymargin_);
-  } else {
-    standbymargin_ = nullptr;
+    _this->_impl_.standbymargin_ = new ::reservemodule::ReserveMargin(*from._impl_.standbymargin_);
   }
   // @@protoc_insertion_point(copy_constructor:reservemodule.ReserveAvailability)
 }
 
-void ReserveAvailability::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&incrementalmargin_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&standbymargin_) -
-    reinterpret_cast<char*>(&incrementalmargin_)) + sizeof(standbymargin_));
+inline void ReserveAvailability::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.incrementalmargin_){nullptr}
+    , decltype(_impl_.margin_){nullptr}
+    , decltype(_impl_.standbymargin_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ReserveAvailability::~ReserveAvailability() {
   // @@protoc_insertion_point(destructor:reservemodule.ReserveAvailability)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ReserveAvailability::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete incrementalmargin_;
-  if (this != internal_default_instance()) delete margin_;
-  if (this != internal_default_instance()) delete standbymargin_;
+inline void ReserveAvailability::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.incrementalmargin_;
+  if (this != internal_default_instance()) delete _impl_.margin_;
+  if (this != internal_default_instance()) delete _impl_.standbymargin_;
 }
 
-void ReserveAvailability::ArenaDtor(void* object) {
-  ReserveAvailability* _this = reinterpret_cast< ReserveAvailability* >(object);
-  (void)_this;
-}
-void ReserveAvailability::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ReserveAvailability::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ReserveAvailability::Clear() {
 // @@protoc_insertion_point(message_clear_start:reservemodule.ReserveAvailability)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && incrementalmargin_ != nullptr) {
-    delete incrementalmargin_;
+  if (GetArenaForAllocation() == nullptr && _impl_.incrementalmargin_ != nullptr) {
+    delete _impl_.incrementalmargin_;
   }
-  incrementalmargin_ = nullptr;
-  if (GetArena() == nullptr && margin_ != nullptr) {
-    delete margin_;
+  _impl_.incrementalmargin_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.margin_ != nullptr) {
+    delete _impl_.margin_;
   }
-  margin_ = nullptr;
-  if (GetArena() == nullptr && standbymargin_ != nullptr) {
-    delete standbymargin_;
+  _impl_.margin_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.standbymargin_ != nullptr) {
+    delete _impl_.standbymargin_;
   }
-  standbymargin_ = nullptr;
+  _impl_.standbymargin_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ReserveAvailability::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ReserveAvailability::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .reservemodule.ReserveMargin incrementalMargin = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_incrementalmargin(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .reservemodule.ReserveMargin margin = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_margin(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .reservemodule.ReserveMargin standbyMargin = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_standbymargin(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ReserveAvailability::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ReserveAvailability::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:reservemodule.ReserveAvailability)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .reservemodule.ReserveMargin incrementalMargin = 1;
-  if (this->has_incrementalmargin()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_incrementalmargin()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::incrementalmargin(this), target, stream);
+      InternalWriteMessage(1, _Internal::incrementalmargin(this),
+        _Internal::incrementalmargin(this).GetCachedSize(), target, stream);
   }
 
   // .reservemodule.ReserveMargin margin = 2;
-  if (this->has_margin()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_margin()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::margin(this), target, stream);
+      InternalWriteMessage(2, _Internal::margin(this),
+        _Internal::margin(this).GetCachedSize(), target, stream);
   }
 
   // .reservemodule.ReserveMargin standbyMargin = 3;
-  if (this->has_standbymargin()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_standbymargin()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::standbymargin(this), target, stream);
+      InternalWriteMessage(3, _Internal::standbymargin(this),
+        _Internal::standbymargin(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:reservemodule.ReserveAvailability)
   return target;
 }
 
-size_t ReserveAvailability::ByteSizeLong() const {
+::size_t ReserveAvailability::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:reservemodule.ReserveAvailability)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .reservemodule.ReserveMargin incrementalMargin = 1;
-  if (this->has_incrementalmargin()) {
+  if (this->_internal_has_incrementalmargin()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *incrementalmargin_);
+        *_impl_.incrementalmargin_);
   }
 
   // .reservemodule.ReserveMargin margin = 2;
-  if (this->has_margin()) {
+  if (this->_internal_has_margin()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *margin_);
+        *_impl_.margin_);
   }
 
   // .reservemodule.ReserveMargin standbyMargin = 3;
-  if (this->has_standbymargin()) {
+  if (this->_internal_has_standbymargin()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *standbymargin_);
+        *_impl_.standbymargin_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ReserveAvailability::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:reservemodule.ReserveAvailability)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ReserveAvailability* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ReserveAvailability>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:reservemodule.ReserveAvailability)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:reservemodule.ReserveAvailability)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ReserveAvailability::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ReserveAvailability::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReserveAvailability::GetClassData() const { return &_class_data_; }
 
-void ReserveAvailability::MergeFrom(const ReserveAvailability& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:reservemodule.ReserveAvailability)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ReserveAvailability::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ReserveAvailability*>(&to_msg);
+  auto& from = static_cast<const ReserveAvailability&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:reservemodule.ReserveAvailability)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_incrementalmargin()) {
-    _internal_mutable_incrementalmargin()->::reservemodule::ReserveMargin::MergeFrom(from._internal_incrementalmargin());
+  if (from._internal_has_incrementalmargin()) {
+    _this->_internal_mutable_incrementalmargin()->::reservemodule::ReserveMargin::MergeFrom(
+        from._internal_incrementalmargin());
   }
-  if (from.has_margin()) {
-    _internal_mutable_margin()->::reservemodule::ReserveMargin::MergeFrom(from._internal_margin());
+  if (from._internal_has_margin()) {
+    _this->_internal_mutable_margin()->::reservemodule::ReserveMargin::MergeFrom(
+        from._internal_margin());
   }
-  if (from.has_standbymargin()) {
-    _internal_mutable_standbymargin()->::reservemodule::ReserveMargin::MergeFrom(from._internal_standbymargin());
+  if (from._internal_has_standbymargin()) {
+    _this->_internal_mutable_standbymargin()->::reservemodule::ReserveMargin::MergeFrom(
+        from._internal_standbymargin());
   }
-}
-
-void ReserveAvailability::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:reservemodule.ReserveAvailability)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ReserveAvailability::CopyFrom(const ReserveAvailability& from) {
@@ -936,20 +976,20 @@ bool ReserveAvailability::IsInitialized() const {
 
 void ReserveAvailability::InternalSwap(ReserveAvailability* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ReserveAvailability, standbymargin_)
-      + sizeof(ReserveAvailability::standbymargin_)
-      - PROTOBUF_FIELD_OFFSET(ReserveAvailability, incrementalmargin_)>(
-          reinterpret_cast<char*>(&incrementalmargin_),
-          reinterpret_cast<char*>(&other->incrementalmargin_));
+      PROTOBUF_FIELD_OFFSET(ReserveAvailability, _impl_.standbymargin_)
+      + sizeof(ReserveAvailability::_impl_.standbymargin_)
+      - PROTOBUF_FIELD_OFFSET(ReserveAvailability, _impl_.incrementalmargin_)>(
+          reinterpret_cast<char*>(&_impl_.incrementalmargin_),
+          reinterpret_cast<char*>(&other->_impl_.incrementalmargin_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ReserveAvailability::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_reservemodule_2freservemodule_2eproto_getter, &descriptor_table_reservemodule_2freservemodule_2eproto_once,
+      file_level_metadata_reservemodule_2freservemodule_2eproto[1]);
 }
-
-
 // ===================================================================
 
 class AllocatedMargin::_Internal {
@@ -960,256 +1000,249 @@ class AllocatedMargin::_Internal {
 
 const ::reservemodule::ReserveMargin&
 AllocatedMargin::_Internal::allocatedmargin(const AllocatedMargin* msg) {
-  return *msg->allocatedmargin_;
+  return *msg->_impl_.allocatedmargin_;
 }
 const ::reservemodule::ReserveMargin&
 AllocatedMargin::_Internal::allocatedstandbymargin(const AllocatedMargin* msg) {
-  return *msg->allocatedstandbymargin_;
+  return *msg->_impl_.allocatedstandbymargin_;
 }
 AllocatedMargin::AllocatedMargin(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:reservemodule.AllocatedMargin)
 }
 AllocatedMargin::AllocatedMargin(const AllocatedMargin& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  AllocatedMargin* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.requestid_) {}
+
+    , decltype(_impl_.allocatedmargin_){nullptr}
+    , decltype(_impl_.allocatedstandbymargin_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  requestid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.requestid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.requestid_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_requestid().empty()) {
-    requestid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_requestid(), 
-      GetArena());
+    _this->_impl_.requestid_.Set(from._internal_requestid(), _this->GetArenaForAllocation());
   }
   if (from._internal_has_allocatedmargin()) {
-    allocatedmargin_ = new ::reservemodule::ReserveMargin(*from.allocatedmargin_);
-  } else {
-    allocatedmargin_ = nullptr;
+    _this->_impl_.allocatedmargin_ = new ::reservemodule::ReserveMargin(*from._impl_.allocatedmargin_);
   }
   if (from._internal_has_allocatedstandbymargin()) {
-    allocatedstandbymargin_ = new ::reservemodule::ReserveMargin(*from.allocatedstandbymargin_);
-  } else {
-    allocatedstandbymargin_ = nullptr;
+    _this->_impl_.allocatedstandbymargin_ = new ::reservemodule::ReserveMargin(*from._impl_.allocatedstandbymargin_);
   }
   // @@protoc_insertion_point(copy_constructor:reservemodule.AllocatedMargin)
 }
 
-void AllocatedMargin::SharedCtor() {
-requestid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&allocatedmargin_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&allocatedstandbymargin_) -
-    reinterpret_cast<char*>(&allocatedmargin_)) + sizeof(allocatedstandbymargin_));
+inline void AllocatedMargin::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.requestid_) {}
+
+    , decltype(_impl_.allocatedmargin_){nullptr}
+    , decltype(_impl_.allocatedstandbymargin_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.requestid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.requestid_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 AllocatedMargin::~AllocatedMargin() {
   // @@protoc_insertion_point(destructor:reservemodule.AllocatedMargin)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void AllocatedMargin::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  requestid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete allocatedmargin_;
-  if (this != internal_default_instance()) delete allocatedstandbymargin_;
+inline void AllocatedMargin::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.requestid_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.allocatedmargin_;
+  if (this != internal_default_instance()) delete _impl_.allocatedstandbymargin_;
 }
 
-void AllocatedMargin::ArenaDtor(void* object) {
-  AllocatedMargin* _this = reinterpret_cast< AllocatedMargin* >(object);
-  (void)_this;
-}
-void AllocatedMargin::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void AllocatedMargin::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void AllocatedMargin::Clear() {
 // @@protoc_insertion_point(message_clear_start:reservemodule.AllocatedMargin)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  requestid_.ClearToEmpty();
-  if (GetArena() == nullptr && allocatedmargin_ != nullptr) {
-    delete allocatedmargin_;
+  _impl_.requestid_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.allocatedmargin_ != nullptr) {
+    delete _impl_.allocatedmargin_;
   }
-  allocatedmargin_ = nullptr;
-  if (GetArena() == nullptr && allocatedstandbymargin_ != nullptr) {
-    delete allocatedstandbymargin_;
+  _impl_.allocatedmargin_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.allocatedstandbymargin_ != nullptr) {
+    delete _impl_.allocatedstandbymargin_;
   }
-  allocatedstandbymargin_ = nullptr;
+  _impl_.allocatedstandbymargin_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* AllocatedMargin::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* AllocatedMargin::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // string requestID = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_requestid();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "reservemodule.AllocatedMargin.requestID"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "reservemodule.AllocatedMargin.requestID"));
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .reservemodule.ReserveMargin allocatedMargin = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_allocatedmargin(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .reservemodule.ReserveMargin allocatedStandbyMargin = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_allocatedstandbymargin(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* AllocatedMargin::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* AllocatedMargin::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:reservemodule.AllocatedMargin)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string requestID = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->requestid().size() > 0) {
+  if (!this->_internal_requestid().empty()) {
+    const std::string& _s = this->_internal_requestid();
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_requestid().data(), static_cast<int>(this->_internal_requestid().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "reservemodule.AllocatedMargin.requestID");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_requestid(), target);
+        _s.data(), static_cast<int>(_s.length()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE, "reservemodule.AllocatedMargin.requestID");
+    target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
   // .reservemodule.ReserveMargin allocatedMargin = 2;
-  if (this->has_allocatedmargin()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_allocatedmargin()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::allocatedmargin(this), target, stream);
+      InternalWriteMessage(2, _Internal::allocatedmargin(this),
+        _Internal::allocatedmargin(this).GetCachedSize(), target, stream);
   }
 
   // .reservemodule.ReserveMargin allocatedStandbyMargin = 3;
-  if (this->has_allocatedstandbymargin()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_allocatedstandbymargin()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::allocatedstandbymargin(this), target, stream);
+      InternalWriteMessage(3, _Internal::allocatedstandbymargin(this),
+        _Internal::allocatedstandbymargin(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:reservemodule.AllocatedMargin)
   return target;
 }
 
-size_t AllocatedMargin::ByteSizeLong() const {
+::size_t AllocatedMargin::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:reservemodule.AllocatedMargin)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string requestID = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->requestid().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_requestid());
+  if (!this->_internal_requestid().empty()) {
+    total_size += 1 + ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+                                    this->_internal_requestid());
   }
 
   // .reservemodule.ReserveMargin allocatedMargin = 2;
-  if (this->has_allocatedmargin()) {
+  if (this->_internal_has_allocatedmargin()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *allocatedmargin_);
+        *_impl_.allocatedmargin_);
   }
 
   // .reservemodule.ReserveMargin allocatedStandbyMargin = 3;
-  if (this->has_allocatedstandbymargin()) {
+  if (this->_internal_has_allocatedstandbymargin()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *allocatedstandbymargin_);
+        *_impl_.allocatedstandbymargin_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void AllocatedMargin::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:reservemodule.AllocatedMargin)
-  GOOGLE_DCHECK_NE(&from, this);
-  const AllocatedMargin* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AllocatedMargin>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:reservemodule.AllocatedMargin)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:reservemodule.AllocatedMargin)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData AllocatedMargin::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    AllocatedMargin::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AllocatedMargin::GetClassData() const { return &_class_data_; }
 
-void AllocatedMargin::MergeFrom(const AllocatedMargin& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:reservemodule.AllocatedMargin)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void AllocatedMargin::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<AllocatedMargin*>(&to_msg);
+  auto& from = static_cast<const AllocatedMargin&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:reservemodule.AllocatedMargin)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.requestid().size() > 0) {
-    _internal_set_requestid(from._internal_requestid());
+  if (!from._internal_requestid().empty()) {
+    _this->_internal_set_requestid(from._internal_requestid());
   }
-  if (from.has_allocatedmargin()) {
-    _internal_mutable_allocatedmargin()->::reservemodule::ReserveMargin::MergeFrom(from._internal_allocatedmargin());
+  if (from._internal_has_allocatedmargin()) {
+    _this->_internal_mutable_allocatedmargin()->::reservemodule::ReserveMargin::MergeFrom(
+        from._internal_allocatedmargin());
   }
-  if (from.has_allocatedstandbymargin()) {
-    _internal_mutable_allocatedstandbymargin()->::reservemodule::ReserveMargin::MergeFrom(from._internal_allocatedstandbymargin());
+  if (from._internal_has_allocatedstandbymargin()) {
+    _this->_internal_mutable_allocatedstandbymargin()->::reservemodule::ReserveMargin::MergeFrom(
+        from._internal_allocatedstandbymargin());
   }
-}
-
-void AllocatedMargin::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:reservemodule.AllocatedMargin)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void AllocatedMargin::CopyFrom(const AllocatedMargin& from) {
@@ -1225,21 +1258,24 @@ bool AllocatedMargin::IsInitialized() const {
 
 void AllocatedMargin::InternalSwap(AllocatedMargin* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  requestid_.Swap(&other->requestid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.requestid_, lhs_arena,
+                                       &other->_impl_.requestid_, rhs_arena);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(AllocatedMargin, allocatedstandbymargin_)
-      + sizeof(AllocatedMargin::allocatedstandbymargin_)
-      - PROTOBUF_FIELD_OFFSET(AllocatedMargin, allocatedmargin_)>(
-          reinterpret_cast<char*>(&allocatedmargin_),
-          reinterpret_cast<char*>(&other->allocatedmargin_));
+      PROTOBUF_FIELD_OFFSET(AllocatedMargin, _impl_.allocatedstandbymargin_)
+      + sizeof(AllocatedMargin::_impl_.allocatedstandbymargin_)
+      - PROTOBUF_FIELD_OFFSET(AllocatedMargin, _impl_.allocatedmargin_)>(
+          reinterpret_cast<char*>(&_impl_.allocatedmargin_),
+          reinterpret_cast<char*>(&other->_impl_.allocatedmargin_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AllocatedMargin::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_reservemodule_2freservemodule_2eproto_getter, &descriptor_table_reservemodule_2freservemodule_2eproto_once,
+      file_level_metadata_reservemodule_2freservemodule_2eproto[2]);
 }
-
-
 // ===================================================================
 
 class ReserveAvailabilityProfile::_Internal {
@@ -1254,399 +1290,392 @@ class ReserveAvailabilityProfile::_Internal {
 
 const ::commonmodule::ControlMessageInfo&
 ReserveAvailabilityProfile::_Internal::controlmessageinfo(const ReserveAvailabilityProfile* msg) {
-  return *msg->controlmessageinfo_;
+  return *msg->_impl_.controlmessageinfo_;
 }
 const ::reservemodule::AllocatedMargin&
 ReserveAvailabilityProfile::_Internal::allocatedmargin(const ReserveAvailabilityProfile* msg) {
-  return *msg->allocatedmargin_;
+  return *msg->_impl_.allocatedmargin_;
 }
 const ::commonmodule::ApplicationSystem&
 ReserveAvailabilityProfile::_Internal::requestercircuitsegmentservice(const ReserveAvailabilityProfile* msg) {
-  return *msg->requestercircuitsegmentservice_;
+  return *msg->_impl_.requestercircuitsegmentservice_;
 }
 const ::reservemodule::ReserveAvailability&
 ReserveAvailabilityProfile::_Internal::reserveavailability(const ReserveAvailabilityProfile* msg) {
-  return *msg->reserveavailability_;
+  return *msg->_impl_.reserveavailability_;
 }
 const ::commonmodule::ApplicationSystem&
 ReserveAvailabilityProfile::_Internal::respondercircuitsegmentservice(const ReserveAvailabilityProfile* msg) {
-  return *msg->respondercircuitsegmentservice_;
+  return *msg->_impl_.respondercircuitsegmentservice_;
 }
 const ::commonmodule::ConductingEquipment&
 ReserveAvailabilityProfile::_Internal::tiepoint(const ReserveAvailabilityProfile* msg) {
-  return *msg->tiepoint_;
+  return *msg->_impl_.tiepoint_;
 }
 void ReserveAvailabilityProfile::clear_controlmessageinfo() {
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
+  _impl_.controlmessageinfo_ = nullptr;
 }
 void ReserveAvailabilityProfile::clear_requestercircuitsegmentservice() {
-  if (GetArena() == nullptr && requestercircuitsegmentservice_ != nullptr) {
-    delete requestercircuitsegmentservice_;
+  if (GetArenaForAllocation() == nullptr && _impl_.requestercircuitsegmentservice_ != nullptr) {
+    delete _impl_.requestercircuitsegmentservice_;
   }
-  requestercircuitsegmentservice_ = nullptr;
+  _impl_.requestercircuitsegmentservice_ = nullptr;
 }
 void ReserveAvailabilityProfile::clear_respondercircuitsegmentservice() {
-  if (GetArena() == nullptr && respondercircuitsegmentservice_ != nullptr) {
-    delete respondercircuitsegmentservice_;
+  if (GetArenaForAllocation() == nullptr && _impl_.respondercircuitsegmentservice_ != nullptr) {
+    delete _impl_.respondercircuitsegmentservice_;
   }
-  respondercircuitsegmentservice_ = nullptr;
+  _impl_.respondercircuitsegmentservice_ = nullptr;
 }
 void ReserveAvailabilityProfile::clear_tiepoint() {
-  if (GetArena() == nullptr && tiepoint_ != nullptr) {
-    delete tiepoint_;
+  if (GetArenaForAllocation() == nullptr && _impl_.tiepoint_ != nullptr) {
+    delete _impl_.tiepoint_;
   }
-  tiepoint_ = nullptr;
+  _impl_.tiepoint_ = nullptr;
 }
 ReserveAvailabilityProfile::ReserveAvailabilityProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:reservemodule.ReserveAvailabilityProfile)
 }
 ReserveAvailabilityProfile::ReserveAvailabilityProfile(const ReserveAvailabilityProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ReserveAvailabilityProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.allocatedmargin_){nullptr}
+    , decltype(_impl_.requestercircuitsegmentservice_){nullptr}
+    , decltype(_impl_.reserveavailability_){nullptr}
+    , decltype(_impl_.respondercircuitsegmentservice_){nullptr}
+    , decltype(_impl_.tiepoint_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlmessageinfo()) {
-    controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
-  } else {
-    controlmessageinfo_ = nullptr;
+    _this->_impl_.controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from._impl_.controlmessageinfo_);
   }
   if (from._internal_has_allocatedmargin()) {
-    allocatedmargin_ = new ::reservemodule::AllocatedMargin(*from.allocatedmargin_);
-  } else {
-    allocatedmargin_ = nullptr;
+    _this->_impl_.allocatedmargin_ = new ::reservemodule::AllocatedMargin(*from._impl_.allocatedmargin_);
   }
   if (from._internal_has_requestercircuitsegmentservice()) {
-    requestercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from.requestercircuitsegmentservice_);
-  } else {
-    requestercircuitsegmentservice_ = nullptr;
+    _this->_impl_.requestercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from._impl_.requestercircuitsegmentservice_);
   }
   if (from._internal_has_reserveavailability()) {
-    reserveavailability_ = new ::reservemodule::ReserveAvailability(*from.reserveavailability_);
-  } else {
-    reserveavailability_ = nullptr;
+    _this->_impl_.reserveavailability_ = new ::reservemodule::ReserveAvailability(*from._impl_.reserveavailability_);
   }
   if (from._internal_has_respondercircuitsegmentservice()) {
-    respondercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from.respondercircuitsegmentservice_);
-  } else {
-    respondercircuitsegmentservice_ = nullptr;
+    _this->_impl_.respondercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from._impl_.respondercircuitsegmentservice_);
   }
   if (from._internal_has_tiepoint()) {
-    tiepoint_ = new ::commonmodule::ConductingEquipment(*from.tiepoint_);
-  } else {
-    tiepoint_ = nullptr;
+    _this->_impl_.tiepoint_ = new ::commonmodule::ConductingEquipment(*from._impl_.tiepoint_);
   }
   // @@protoc_insertion_point(copy_constructor:reservemodule.ReserveAvailabilityProfile)
 }
 
-void ReserveAvailabilityProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&tiepoint_) -
-    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(tiepoint_));
+inline void ReserveAvailabilityProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.allocatedmargin_){nullptr}
+    , decltype(_impl_.requestercircuitsegmentservice_){nullptr}
+    , decltype(_impl_.reserveavailability_){nullptr}
+    , decltype(_impl_.respondercircuitsegmentservice_){nullptr}
+    , decltype(_impl_.tiepoint_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ReserveAvailabilityProfile::~ReserveAvailabilityProfile() {
   // @@protoc_insertion_point(destructor:reservemodule.ReserveAvailabilityProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ReserveAvailabilityProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete allocatedmargin_;
-  if (this != internal_default_instance()) delete requestercircuitsegmentservice_;
-  if (this != internal_default_instance()) delete reserveavailability_;
-  if (this != internal_default_instance()) delete respondercircuitsegmentservice_;
-  if (this != internal_default_instance()) delete tiepoint_;
+inline void ReserveAvailabilityProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.allocatedmargin_;
+  if (this != internal_default_instance()) delete _impl_.requestercircuitsegmentservice_;
+  if (this != internal_default_instance()) delete _impl_.reserveavailability_;
+  if (this != internal_default_instance()) delete _impl_.respondercircuitsegmentservice_;
+  if (this != internal_default_instance()) delete _impl_.tiepoint_;
 }
 
-void ReserveAvailabilityProfile::ArenaDtor(void* object) {
-  ReserveAvailabilityProfile* _this = reinterpret_cast< ReserveAvailabilityProfile* >(object);
-  (void)_this;
-}
-void ReserveAvailabilityProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ReserveAvailabilityProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ReserveAvailabilityProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:reservemodule.ReserveAvailabilityProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && allocatedmargin_ != nullptr) {
-    delete allocatedmargin_;
+  _impl_.controlmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.allocatedmargin_ != nullptr) {
+    delete _impl_.allocatedmargin_;
   }
-  allocatedmargin_ = nullptr;
-  if (GetArena() == nullptr && requestercircuitsegmentservice_ != nullptr) {
-    delete requestercircuitsegmentservice_;
+  _impl_.allocatedmargin_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.requestercircuitsegmentservice_ != nullptr) {
+    delete _impl_.requestercircuitsegmentservice_;
   }
-  requestercircuitsegmentservice_ = nullptr;
-  if (GetArena() == nullptr && reserveavailability_ != nullptr) {
-    delete reserveavailability_;
+  _impl_.requestercircuitsegmentservice_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.reserveavailability_ != nullptr) {
+    delete _impl_.reserveavailability_;
   }
-  reserveavailability_ = nullptr;
-  if (GetArena() == nullptr && respondercircuitsegmentservice_ != nullptr) {
-    delete respondercircuitsegmentservice_;
+  _impl_.reserveavailability_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.respondercircuitsegmentservice_ != nullptr) {
+    delete _impl_.respondercircuitsegmentservice_;
   }
-  respondercircuitsegmentservice_ = nullptr;
-  if (GetArena() == nullptr && tiepoint_ != nullptr) {
-    delete tiepoint_;
+  _impl_.respondercircuitsegmentservice_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.tiepoint_ != nullptr) {
+    delete _impl_.tiepoint_;
   }
-  tiepoint_ = nullptr;
+  _impl_.tiepoint_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ReserveAvailabilityProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ReserveAvailabilityProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .reservemodule.AllocatedMargin allocatedMargin = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_allocatedmargin(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ApplicationSystem requesterCircuitSegmentService = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_requestercircuitsegmentservice(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .reservemodule.ReserveAvailability reserveAvailability = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_reserveavailability(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ApplicationSystem responderCircuitSegmentService = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_respondercircuitsegmentservice(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ConductingEquipment tiePoint = 6 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_tiepoint(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ReserveAvailabilityProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ReserveAvailabilityProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:reservemodule.ReserveAvailabilityProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlmessageinfo(this),
+        _Internal::controlmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .reservemodule.AllocatedMargin allocatedMargin = 2;
-  if (this->has_allocatedmargin()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_allocatedmargin()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::allocatedmargin(this), target, stream);
+      InternalWriteMessage(2, _Internal::allocatedmargin(this),
+        _Internal::allocatedmargin(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ApplicationSystem requesterCircuitSegmentService = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_requestercircuitsegmentservice()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_requestercircuitsegmentservice()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::requestercircuitsegmentservice(this), target, stream);
+      InternalWriteMessage(3, _Internal::requestercircuitsegmentservice(this),
+        _Internal::requestercircuitsegmentservice(this).GetCachedSize(), target, stream);
   }
 
   // .reservemodule.ReserveAvailability reserveAvailability = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_reserveavailability()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_reserveavailability()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::reserveavailability(this), target, stream);
+      InternalWriteMessage(4, _Internal::reserveavailability(this),
+        _Internal::reserveavailability(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ApplicationSystem responderCircuitSegmentService = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_respondercircuitsegmentservice()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_respondercircuitsegmentservice()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::respondercircuitsegmentservice(this), target, stream);
+      InternalWriteMessage(5, _Internal::respondercircuitsegmentservice(this),
+        _Internal::respondercircuitsegmentservice(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ConductingEquipment tiePoint = 6 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_tiepoint()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_tiepoint()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::tiepoint(this), target, stream);
+      InternalWriteMessage(6, _Internal::tiepoint(this),
+        _Internal::tiepoint(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:reservemodule.ReserveAvailabilityProfile)
   return target;
 }
 
-size_t ReserveAvailabilityProfile::ByteSizeLong() const {
+::size_t ReserveAvailabilityProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:reservemodule.ReserveAvailabilityProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
+  if (this->_internal_has_controlmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlmessageinfo_);
+        *_impl_.controlmessageinfo_);
   }
 
   // .reservemodule.AllocatedMargin allocatedMargin = 2;
-  if (this->has_allocatedmargin()) {
+  if (this->_internal_has_allocatedmargin()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *allocatedmargin_);
+        *_impl_.allocatedmargin_);
   }
 
   // .commonmodule.ApplicationSystem requesterCircuitSegmentService = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_requestercircuitsegmentservice()) {
+  if (this->_internal_has_requestercircuitsegmentservice()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *requestercircuitsegmentservice_);
+        *_impl_.requestercircuitsegmentservice_);
   }
 
   // .reservemodule.ReserveAvailability reserveAvailability = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_reserveavailability()) {
+  if (this->_internal_has_reserveavailability()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *reserveavailability_);
+        *_impl_.reserveavailability_);
   }
 
   // .commonmodule.ApplicationSystem responderCircuitSegmentService = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_respondercircuitsegmentservice()) {
+  if (this->_internal_has_respondercircuitsegmentservice()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *respondercircuitsegmentservice_);
+        *_impl_.respondercircuitsegmentservice_);
   }
 
   // .commonmodule.ConductingEquipment tiePoint = 6 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_tiepoint()) {
+  if (this->_internal_has_tiepoint()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *tiepoint_);
+        *_impl_.tiepoint_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ReserveAvailabilityProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:reservemodule.ReserveAvailabilityProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ReserveAvailabilityProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ReserveAvailabilityProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:reservemodule.ReserveAvailabilityProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:reservemodule.ReserveAvailabilityProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ReserveAvailabilityProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ReserveAvailabilityProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReserveAvailabilityProfile::GetClassData() const { return &_class_data_; }
 
-void ReserveAvailabilityProfile::MergeFrom(const ReserveAvailabilityProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:reservemodule.ReserveAvailabilityProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ReserveAvailabilityProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ReserveAvailabilityProfile*>(&to_msg);
+  auto& from = static_cast<const ReserveAvailabilityProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:reservemodule.ReserveAvailabilityProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlmessageinfo()) {
-    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
+  if (from._internal_has_controlmessageinfo()) {
+    _this->_internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(
+        from._internal_controlmessageinfo());
   }
-  if (from.has_allocatedmargin()) {
-    _internal_mutable_allocatedmargin()->::reservemodule::AllocatedMargin::MergeFrom(from._internal_allocatedmargin());
+  if (from._internal_has_allocatedmargin()) {
+    _this->_internal_mutable_allocatedmargin()->::reservemodule::AllocatedMargin::MergeFrom(
+        from._internal_allocatedmargin());
   }
-  if (from.has_requestercircuitsegmentservice()) {
-    _internal_mutable_requestercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(from._internal_requestercircuitsegmentservice());
+  if (from._internal_has_requestercircuitsegmentservice()) {
+    _this->_internal_mutable_requestercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(
+        from._internal_requestercircuitsegmentservice());
   }
-  if (from.has_reserveavailability()) {
-    _internal_mutable_reserveavailability()->::reservemodule::ReserveAvailability::MergeFrom(from._internal_reserveavailability());
+  if (from._internal_has_reserveavailability()) {
+    _this->_internal_mutable_reserveavailability()->::reservemodule::ReserveAvailability::MergeFrom(
+        from._internal_reserveavailability());
   }
-  if (from.has_respondercircuitsegmentservice()) {
-    _internal_mutable_respondercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(from._internal_respondercircuitsegmentservice());
+  if (from._internal_has_respondercircuitsegmentservice()) {
+    _this->_internal_mutable_respondercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(
+        from._internal_respondercircuitsegmentservice());
   }
-  if (from.has_tiepoint()) {
-    _internal_mutable_tiepoint()->::commonmodule::ConductingEquipment::MergeFrom(from._internal_tiepoint());
+  if (from._internal_has_tiepoint()) {
+    _this->_internal_mutable_tiepoint()->::commonmodule::ConductingEquipment::MergeFrom(
+        from._internal_tiepoint());
   }
-}
-
-void ReserveAvailabilityProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:reservemodule.ReserveAvailabilityProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ReserveAvailabilityProfile::CopyFrom(const ReserveAvailabilityProfile& from) {
@@ -1662,20 +1691,20 @@ bool ReserveAvailabilityProfile::IsInitialized() const {
 
 void ReserveAvailabilityProfile::InternalSwap(ReserveAvailabilityProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ReserveAvailabilityProfile, tiepoint_)
-      + sizeof(ReserveAvailabilityProfile::tiepoint_)
-      - PROTOBUF_FIELD_OFFSET(ReserveAvailabilityProfile, controlmessageinfo_)>(
-          reinterpret_cast<char*>(&controlmessageinfo_),
-          reinterpret_cast<char*>(&other->controlmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(ReserveAvailabilityProfile, _impl_.tiepoint_)
+      + sizeof(ReserveAvailabilityProfile::_impl_.tiepoint_)
+      - PROTOBUF_FIELD_OFFSET(ReserveAvailabilityProfile, _impl_.controlmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.controlmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.controlmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ReserveAvailabilityProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_reservemodule_2freservemodule_2eproto_getter, &descriptor_table_reservemodule_2freservemodule_2eproto_once,
+      file_level_metadata_reservemodule_2freservemodule_2eproto[3]);
 }
-
-
 // ===================================================================
 
 class ReserveRequest::_Internal {
@@ -1686,256 +1715,249 @@ class ReserveRequest::_Internal {
 
 const ::reservemodule::ReserveMargin&
 ReserveRequest::_Internal::margin(const ReserveRequest* msg) {
-  return *msg->margin_;
+  return *msg->_impl_.margin_;
 }
 const ::reservemodule::ReserveMargin&
 ReserveRequest::_Internal::standbymargin(const ReserveRequest* msg) {
-  return *msg->standbymargin_;
+  return *msg->_impl_.standbymargin_;
 }
 ReserveRequest::ReserveRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:reservemodule.ReserveRequest)
 }
 ReserveRequest::ReserveRequest(const ReserveRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ReserveRequest* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.requestid_) {}
+
+    , decltype(_impl_.margin_){nullptr}
+    , decltype(_impl_.standbymargin_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  requestid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.requestid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.requestid_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_requestid().empty()) {
-    requestid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_requestid(), 
-      GetArena());
+    _this->_impl_.requestid_.Set(from._internal_requestid(), _this->GetArenaForAllocation());
   }
   if (from._internal_has_margin()) {
-    margin_ = new ::reservemodule::ReserveMargin(*from.margin_);
-  } else {
-    margin_ = nullptr;
+    _this->_impl_.margin_ = new ::reservemodule::ReserveMargin(*from._impl_.margin_);
   }
   if (from._internal_has_standbymargin()) {
-    standbymargin_ = new ::reservemodule::ReserveMargin(*from.standbymargin_);
-  } else {
-    standbymargin_ = nullptr;
+    _this->_impl_.standbymargin_ = new ::reservemodule::ReserveMargin(*from._impl_.standbymargin_);
   }
   // @@protoc_insertion_point(copy_constructor:reservemodule.ReserveRequest)
 }
 
-void ReserveRequest::SharedCtor() {
-requestid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&margin_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&standbymargin_) -
-    reinterpret_cast<char*>(&margin_)) + sizeof(standbymargin_));
+inline void ReserveRequest::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.requestid_) {}
+
+    , decltype(_impl_.margin_){nullptr}
+    , decltype(_impl_.standbymargin_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.requestid_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.requestid_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 ReserveRequest::~ReserveRequest() {
   // @@protoc_insertion_point(destructor:reservemodule.ReserveRequest)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ReserveRequest::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  requestid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete margin_;
-  if (this != internal_default_instance()) delete standbymargin_;
+inline void ReserveRequest::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.requestid_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.margin_;
+  if (this != internal_default_instance()) delete _impl_.standbymargin_;
 }
 
-void ReserveRequest::ArenaDtor(void* object) {
-  ReserveRequest* _this = reinterpret_cast< ReserveRequest* >(object);
-  (void)_this;
-}
-void ReserveRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ReserveRequest::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ReserveRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:reservemodule.ReserveRequest)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  requestid_.ClearToEmpty();
-  if (GetArena() == nullptr && margin_ != nullptr) {
-    delete margin_;
+  _impl_.requestid_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.margin_ != nullptr) {
+    delete _impl_.margin_;
   }
-  margin_ = nullptr;
-  if (GetArena() == nullptr && standbymargin_ != nullptr) {
-    delete standbymargin_;
+  _impl_.margin_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.standbymargin_ != nullptr) {
+    delete _impl_.standbymargin_;
   }
-  standbymargin_ = nullptr;
+  _impl_.standbymargin_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ReserveRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ReserveRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // string requestID = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_requestid();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "reservemodule.ReserveRequest.requestID"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "reservemodule.ReserveRequest.requestID"));
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .reservemodule.ReserveMargin margin = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_margin(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .reservemodule.ReserveMargin standbyMargin = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_standbymargin(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ReserveRequest::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ReserveRequest::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:reservemodule.ReserveRequest)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string requestID = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->requestid().size() > 0) {
+  if (!this->_internal_requestid().empty()) {
+    const std::string& _s = this->_internal_requestid();
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_requestid().data(), static_cast<int>(this->_internal_requestid().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "reservemodule.ReserveRequest.requestID");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_requestid(), target);
+        _s.data(), static_cast<int>(_s.length()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE, "reservemodule.ReserveRequest.requestID");
+    target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
   // .reservemodule.ReserveMargin margin = 2;
-  if (this->has_margin()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_margin()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::margin(this), target, stream);
+      InternalWriteMessage(2, _Internal::margin(this),
+        _Internal::margin(this).GetCachedSize(), target, stream);
   }
 
   // .reservemodule.ReserveMargin standbyMargin = 3;
-  if (this->has_standbymargin()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_standbymargin()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::standbymargin(this), target, stream);
+      InternalWriteMessage(3, _Internal::standbymargin(this),
+        _Internal::standbymargin(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:reservemodule.ReserveRequest)
   return target;
 }
 
-size_t ReserveRequest::ByteSizeLong() const {
+::size_t ReserveRequest::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:reservemodule.ReserveRequest)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string requestID = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->requestid().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_requestid());
+  if (!this->_internal_requestid().empty()) {
+    total_size += 1 + ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+                                    this->_internal_requestid());
   }
 
   // .reservemodule.ReserveMargin margin = 2;
-  if (this->has_margin()) {
+  if (this->_internal_has_margin()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *margin_);
+        *_impl_.margin_);
   }
 
   // .reservemodule.ReserveMargin standbyMargin = 3;
-  if (this->has_standbymargin()) {
+  if (this->_internal_has_standbymargin()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *standbymargin_);
+        *_impl_.standbymargin_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ReserveRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:reservemodule.ReserveRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ReserveRequest* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ReserveRequest>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:reservemodule.ReserveRequest)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:reservemodule.ReserveRequest)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ReserveRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ReserveRequest::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReserveRequest::GetClassData() const { return &_class_data_; }
 
-void ReserveRequest::MergeFrom(const ReserveRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:reservemodule.ReserveRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ReserveRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ReserveRequest*>(&to_msg);
+  auto& from = static_cast<const ReserveRequest&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:reservemodule.ReserveRequest)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.requestid().size() > 0) {
-    _internal_set_requestid(from._internal_requestid());
+  if (!from._internal_requestid().empty()) {
+    _this->_internal_set_requestid(from._internal_requestid());
   }
-  if (from.has_margin()) {
-    _internal_mutable_margin()->::reservemodule::ReserveMargin::MergeFrom(from._internal_margin());
+  if (from._internal_has_margin()) {
+    _this->_internal_mutable_margin()->::reservemodule::ReserveMargin::MergeFrom(
+        from._internal_margin());
   }
-  if (from.has_standbymargin()) {
-    _internal_mutable_standbymargin()->::reservemodule::ReserveMargin::MergeFrom(from._internal_standbymargin());
+  if (from._internal_has_standbymargin()) {
+    _this->_internal_mutable_standbymargin()->::reservemodule::ReserveMargin::MergeFrom(
+        from._internal_standbymargin());
   }
-}
-
-void ReserveRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:reservemodule.ReserveRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ReserveRequest::CopyFrom(const ReserveRequest& from) {
@@ -1951,21 +1973,24 @@ bool ReserveRequest::IsInitialized() const {
 
 void ReserveRequest::InternalSwap(ReserveRequest* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  requestid_.Swap(&other->requestid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.requestid_, lhs_arena,
+                                       &other->_impl_.requestid_, rhs_arena);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ReserveRequest, standbymargin_)
-      + sizeof(ReserveRequest::standbymargin_)
-      - PROTOBUF_FIELD_OFFSET(ReserveRequest, margin_)>(
-          reinterpret_cast<char*>(&margin_),
-          reinterpret_cast<char*>(&other->margin_));
+      PROTOBUF_FIELD_OFFSET(ReserveRequest, _impl_.standbymargin_)
+      + sizeof(ReserveRequest::_impl_.standbymargin_)
+      - PROTOBUF_FIELD_OFFSET(ReserveRequest, _impl_.margin_)>(
+          reinterpret_cast<char*>(&_impl_.margin_),
+          reinterpret_cast<char*>(&other->_impl_.margin_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ReserveRequest::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_reservemodule_2freservemodule_2eproto_getter, &descriptor_table_reservemodule_2freservemodule_2eproto_once,
+      file_level_metadata_reservemodule_2freservemodule_2eproto[4]);
 }
-
-
 // ===================================================================
 
 class ReserveRequestProfile::_Internal {
@@ -1979,360 +2004,351 @@ class ReserveRequestProfile::_Internal {
 
 const ::commonmodule::ControlMessageInfo&
 ReserveRequestProfile::_Internal::controlmessageinfo(const ReserveRequestProfile* msg) {
-  return *msg->controlmessageinfo_;
+  return *msg->_impl_.controlmessageinfo_;
 }
 const ::commonmodule::ApplicationSystem&
 ReserveRequestProfile::_Internal::requestercircuitsegmentservice(const ReserveRequestProfile* msg) {
-  return *msg->requestercircuitsegmentservice_;
+  return *msg->_impl_.requestercircuitsegmentservice_;
 }
 const ::reservemodule::ReserveRequest&
 ReserveRequestProfile::_Internal::reserverequest(const ReserveRequestProfile* msg) {
-  return *msg->reserverequest_;
+  return *msg->_impl_.reserverequest_;
 }
 const ::commonmodule::ApplicationSystem&
 ReserveRequestProfile::_Internal::respondercircuitsegmentservice(const ReserveRequestProfile* msg) {
-  return *msg->respondercircuitsegmentservice_;
+  return *msg->_impl_.respondercircuitsegmentservice_;
 }
 const ::commonmodule::ConductingEquipment&
 ReserveRequestProfile::_Internal::tiepoint(const ReserveRequestProfile* msg) {
-  return *msg->tiepoint_;
+  return *msg->_impl_.tiepoint_;
 }
 void ReserveRequestProfile::clear_controlmessageinfo() {
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
+  _impl_.controlmessageinfo_ = nullptr;
 }
 void ReserveRequestProfile::clear_requestercircuitsegmentservice() {
-  if (GetArena() == nullptr && requestercircuitsegmentservice_ != nullptr) {
-    delete requestercircuitsegmentservice_;
+  if (GetArenaForAllocation() == nullptr && _impl_.requestercircuitsegmentservice_ != nullptr) {
+    delete _impl_.requestercircuitsegmentservice_;
   }
-  requestercircuitsegmentservice_ = nullptr;
+  _impl_.requestercircuitsegmentservice_ = nullptr;
 }
 void ReserveRequestProfile::clear_respondercircuitsegmentservice() {
-  if (GetArena() == nullptr && respondercircuitsegmentservice_ != nullptr) {
-    delete respondercircuitsegmentservice_;
+  if (GetArenaForAllocation() == nullptr && _impl_.respondercircuitsegmentservice_ != nullptr) {
+    delete _impl_.respondercircuitsegmentservice_;
   }
-  respondercircuitsegmentservice_ = nullptr;
+  _impl_.respondercircuitsegmentservice_ = nullptr;
 }
 void ReserveRequestProfile::clear_tiepoint() {
-  if (GetArena() == nullptr && tiepoint_ != nullptr) {
-    delete tiepoint_;
+  if (GetArenaForAllocation() == nullptr && _impl_.tiepoint_ != nullptr) {
+    delete _impl_.tiepoint_;
   }
-  tiepoint_ = nullptr;
+  _impl_.tiepoint_ = nullptr;
 }
 ReserveRequestProfile::ReserveRequestProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:reservemodule.ReserveRequestProfile)
 }
 ReserveRequestProfile::ReserveRequestProfile(const ReserveRequestProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ReserveRequestProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.requestercircuitsegmentservice_){nullptr}
+    , decltype(_impl_.reserverequest_){nullptr}
+    , decltype(_impl_.respondercircuitsegmentservice_){nullptr}
+    , decltype(_impl_.tiepoint_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlmessageinfo()) {
-    controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
-  } else {
-    controlmessageinfo_ = nullptr;
+    _this->_impl_.controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from._impl_.controlmessageinfo_);
   }
   if (from._internal_has_requestercircuitsegmentservice()) {
-    requestercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from.requestercircuitsegmentservice_);
-  } else {
-    requestercircuitsegmentservice_ = nullptr;
+    _this->_impl_.requestercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from._impl_.requestercircuitsegmentservice_);
   }
   if (from._internal_has_reserverequest()) {
-    reserverequest_ = new ::reservemodule::ReserveRequest(*from.reserverequest_);
-  } else {
-    reserverequest_ = nullptr;
+    _this->_impl_.reserverequest_ = new ::reservemodule::ReserveRequest(*from._impl_.reserverequest_);
   }
   if (from._internal_has_respondercircuitsegmentservice()) {
-    respondercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from.respondercircuitsegmentservice_);
-  } else {
-    respondercircuitsegmentservice_ = nullptr;
+    _this->_impl_.respondercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from._impl_.respondercircuitsegmentservice_);
   }
   if (from._internal_has_tiepoint()) {
-    tiepoint_ = new ::commonmodule::ConductingEquipment(*from.tiepoint_);
-  } else {
-    tiepoint_ = nullptr;
+    _this->_impl_.tiepoint_ = new ::commonmodule::ConductingEquipment(*from._impl_.tiepoint_);
   }
   // @@protoc_insertion_point(copy_constructor:reservemodule.ReserveRequestProfile)
 }
 
-void ReserveRequestProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&tiepoint_) -
-    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(tiepoint_));
+inline void ReserveRequestProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.requestercircuitsegmentservice_){nullptr}
+    , decltype(_impl_.reserverequest_){nullptr}
+    , decltype(_impl_.respondercircuitsegmentservice_){nullptr}
+    , decltype(_impl_.tiepoint_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ReserveRequestProfile::~ReserveRequestProfile() {
   // @@protoc_insertion_point(destructor:reservemodule.ReserveRequestProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ReserveRequestProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete requestercircuitsegmentservice_;
-  if (this != internal_default_instance()) delete reserverequest_;
-  if (this != internal_default_instance()) delete respondercircuitsegmentservice_;
-  if (this != internal_default_instance()) delete tiepoint_;
+inline void ReserveRequestProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.requestercircuitsegmentservice_;
+  if (this != internal_default_instance()) delete _impl_.reserverequest_;
+  if (this != internal_default_instance()) delete _impl_.respondercircuitsegmentservice_;
+  if (this != internal_default_instance()) delete _impl_.tiepoint_;
 }
 
-void ReserveRequestProfile::ArenaDtor(void* object) {
-  ReserveRequestProfile* _this = reinterpret_cast< ReserveRequestProfile* >(object);
-  (void)_this;
-}
-void ReserveRequestProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ReserveRequestProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ReserveRequestProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:reservemodule.ReserveRequestProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && requestercircuitsegmentservice_ != nullptr) {
-    delete requestercircuitsegmentservice_;
+  _impl_.controlmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.requestercircuitsegmentservice_ != nullptr) {
+    delete _impl_.requestercircuitsegmentservice_;
   }
-  requestercircuitsegmentservice_ = nullptr;
-  if (GetArena() == nullptr && reserverequest_ != nullptr) {
-    delete reserverequest_;
+  _impl_.requestercircuitsegmentservice_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.reserverequest_ != nullptr) {
+    delete _impl_.reserverequest_;
   }
-  reserverequest_ = nullptr;
-  if (GetArena() == nullptr && respondercircuitsegmentservice_ != nullptr) {
-    delete respondercircuitsegmentservice_;
+  _impl_.reserverequest_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.respondercircuitsegmentservice_ != nullptr) {
+    delete _impl_.respondercircuitsegmentservice_;
   }
-  respondercircuitsegmentservice_ = nullptr;
-  if (GetArena() == nullptr && tiepoint_ != nullptr) {
-    delete tiepoint_;
+  _impl_.respondercircuitsegmentservice_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.tiepoint_ != nullptr) {
+    delete _impl_.tiepoint_;
   }
-  tiepoint_ = nullptr;
+  _impl_.tiepoint_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ReserveRequestProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ReserveRequestProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ApplicationSystem requesterCircuitSegmentService = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_requestercircuitsegmentservice(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .reservemodule.ReserveRequest reserveRequest = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_reserverequest(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ApplicationSystem responderCircuitSegmentService = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_respondercircuitsegmentservice(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ConductingEquipment tiePoint = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_tiepoint(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ReserveRequestProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ReserveRequestProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:reservemodule.ReserveRequestProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlmessageinfo(this),
+        _Internal::controlmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ApplicationSystem requesterCircuitSegmentService = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_requestercircuitsegmentservice()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_requestercircuitsegmentservice()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::requestercircuitsegmentservice(this), target, stream);
+      InternalWriteMessage(2, _Internal::requestercircuitsegmentservice(this),
+        _Internal::requestercircuitsegmentservice(this).GetCachedSize(), target, stream);
   }
 
   // .reservemodule.ReserveRequest reserveRequest = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_reserverequest()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_reserverequest()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::reserverequest(this), target, stream);
+      InternalWriteMessage(3, _Internal::reserverequest(this),
+        _Internal::reserverequest(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ApplicationSystem responderCircuitSegmentService = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_respondercircuitsegmentservice()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_respondercircuitsegmentservice()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::respondercircuitsegmentservice(this), target, stream);
+      InternalWriteMessage(4, _Internal::respondercircuitsegmentservice(this),
+        _Internal::respondercircuitsegmentservice(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ConductingEquipment tiePoint = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_tiepoint()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_tiepoint()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::tiepoint(this), target, stream);
+      InternalWriteMessage(5, _Internal::tiepoint(this),
+        _Internal::tiepoint(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:reservemodule.ReserveRequestProfile)
   return target;
 }
 
-size_t ReserveRequestProfile::ByteSizeLong() const {
+::size_t ReserveRequestProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:reservemodule.ReserveRequestProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
+  if (this->_internal_has_controlmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlmessageinfo_);
+        *_impl_.controlmessageinfo_);
   }
 
   // .commonmodule.ApplicationSystem requesterCircuitSegmentService = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_requestercircuitsegmentservice()) {
+  if (this->_internal_has_requestercircuitsegmentservice()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *requestercircuitsegmentservice_);
+        *_impl_.requestercircuitsegmentservice_);
   }
 
   // .reservemodule.ReserveRequest reserveRequest = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_reserverequest()) {
+  if (this->_internal_has_reserverequest()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *reserverequest_);
+        *_impl_.reserverequest_);
   }
 
   // .commonmodule.ApplicationSystem responderCircuitSegmentService = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_respondercircuitsegmentservice()) {
+  if (this->_internal_has_respondercircuitsegmentservice()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *respondercircuitsegmentservice_);
+        *_impl_.respondercircuitsegmentservice_);
   }
 
   // .commonmodule.ConductingEquipment tiePoint = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_tiepoint()) {
+  if (this->_internal_has_tiepoint()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *tiepoint_);
+        *_impl_.tiepoint_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ReserveRequestProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:reservemodule.ReserveRequestProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ReserveRequestProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ReserveRequestProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:reservemodule.ReserveRequestProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:reservemodule.ReserveRequestProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ReserveRequestProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ReserveRequestProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ReserveRequestProfile::GetClassData() const { return &_class_data_; }
 
-void ReserveRequestProfile::MergeFrom(const ReserveRequestProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:reservemodule.ReserveRequestProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ReserveRequestProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ReserveRequestProfile*>(&to_msg);
+  auto& from = static_cast<const ReserveRequestProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:reservemodule.ReserveRequestProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlmessageinfo()) {
-    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
+  if (from._internal_has_controlmessageinfo()) {
+    _this->_internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(
+        from._internal_controlmessageinfo());
   }
-  if (from.has_requestercircuitsegmentservice()) {
-    _internal_mutable_requestercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(from._internal_requestercircuitsegmentservice());
+  if (from._internal_has_requestercircuitsegmentservice()) {
+    _this->_internal_mutable_requestercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(
+        from._internal_requestercircuitsegmentservice());
   }
-  if (from.has_reserverequest()) {
-    _internal_mutable_reserverequest()->::reservemodule::ReserveRequest::MergeFrom(from._internal_reserverequest());
+  if (from._internal_has_reserverequest()) {
+    _this->_internal_mutable_reserverequest()->::reservemodule::ReserveRequest::MergeFrom(
+        from._internal_reserverequest());
   }
-  if (from.has_respondercircuitsegmentservice()) {
-    _internal_mutable_respondercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(from._internal_respondercircuitsegmentservice());
+  if (from._internal_has_respondercircuitsegmentservice()) {
+    _this->_internal_mutable_respondercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(
+        from._internal_respondercircuitsegmentservice());
   }
-  if (from.has_tiepoint()) {
-    _internal_mutable_tiepoint()->::commonmodule::ConductingEquipment::MergeFrom(from._internal_tiepoint());
+  if (from._internal_has_tiepoint()) {
+    _this->_internal_mutable_tiepoint()->::commonmodule::ConductingEquipment::MergeFrom(
+        from._internal_tiepoint());
   }
-}
-
-void ReserveRequestProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:reservemodule.ReserveRequestProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ReserveRequestProfile::CopyFrom(const ReserveRequestProfile& from) {
@@ -2348,42 +2364,47 @@ bool ReserveRequestProfile::IsInitialized() const {
 
 void ReserveRequestProfile::InternalSwap(ReserveRequestProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ReserveRequestProfile, tiepoint_)
-      + sizeof(ReserveRequestProfile::tiepoint_)
-      - PROTOBUF_FIELD_OFFSET(ReserveRequestProfile, controlmessageinfo_)>(
-          reinterpret_cast<char*>(&controlmessageinfo_),
-          reinterpret_cast<char*>(&other->controlmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(ReserveRequestProfile, _impl_.tiepoint_)
+      + sizeof(ReserveRequestProfile::_impl_.tiepoint_)
+      - PROTOBUF_FIELD_OFFSET(ReserveRequestProfile, _impl_.controlmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.controlmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.controlmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ReserveRequestProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_reservemodule_2freservemodule_2eproto_getter, &descriptor_table_reservemodule_2freservemodule_2eproto_once,
+      file_level_metadata_reservemodule_2freservemodule_2eproto[5]);
 }
-
-
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace reservemodule
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::reservemodule::ReserveMargin* Arena::CreateMaybeMessage< ::reservemodule::ReserveMargin >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::reservemodule::ReserveMargin*
+Arena::CreateMaybeMessage< ::reservemodule::ReserveMargin >(Arena* arena) {
   return Arena::CreateMessageInternal< ::reservemodule::ReserveMargin >(arena);
 }
-template<> PROTOBUF_NOINLINE ::reservemodule::ReserveAvailability* Arena::CreateMaybeMessage< ::reservemodule::ReserveAvailability >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::reservemodule::ReserveAvailability*
+Arena::CreateMaybeMessage< ::reservemodule::ReserveAvailability >(Arena* arena) {
   return Arena::CreateMessageInternal< ::reservemodule::ReserveAvailability >(arena);
 }
-template<> PROTOBUF_NOINLINE ::reservemodule::AllocatedMargin* Arena::CreateMaybeMessage< ::reservemodule::AllocatedMargin >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::reservemodule::AllocatedMargin*
+Arena::CreateMaybeMessage< ::reservemodule::AllocatedMargin >(Arena* arena) {
   return Arena::CreateMessageInternal< ::reservemodule::AllocatedMargin >(arena);
 }
-template<> PROTOBUF_NOINLINE ::reservemodule::ReserveAvailabilityProfile* Arena::CreateMaybeMessage< ::reservemodule::ReserveAvailabilityProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::reservemodule::ReserveAvailabilityProfile*
+Arena::CreateMaybeMessage< ::reservemodule::ReserveAvailabilityProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::reservemodule::ReserveAvailabilityProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::reservemodule::ReserveRequest* Arena::CreateMaybeMessage< ::reservemodule::ReserveRequest >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::reservemodule::ReserveRequest*
+Arena::CreateMaybeMessage< ::reservemodule::ReserveRequest >(Arena* arena) {
   return Arena::CreateMessageInternal< ::reservemodule::ReserveRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::reservemodule::ReserveRequestProfile* Arena::CreateMaybeMessage< ::reservemodule::ReserveRequestProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::reservemodule::ReserveRequestProfile*
+Arena::CreateMaybeMessage< ::reservemodule::ReserveRequestProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::reservemodule::ReserveRequestProfile >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
-
 // @@protoc_insertion_point(global_scope)
-#include <google/protobuf/port_undef.inc>
+#include "google/protobuf/port_undef.inc"

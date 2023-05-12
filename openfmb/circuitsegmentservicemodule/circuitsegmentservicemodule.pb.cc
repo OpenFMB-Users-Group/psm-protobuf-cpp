@@ -4,420 +4,501 @@
 #include "circuitsegmentservicemodule/circuitsegmentservicemodule.pb.h"
 
 #include <algorithm>
-
-#include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include "google/protobuf/io/coded_stream.h"
+#include "google/protobuf/extension_set.h"
+#include "google/protobuf/wire_format_lite.h"
+#include "google/protobuf/descriptor.h"
+#include "google/protobuf/generated_message_reflection.h"
+#include "google/protobuf/reflection_ops.h"
+#include "google/protobuf/wire_format.h"
 // @@protoc_insertion_point(includes)
-#include <google/protobuf/port_def.inc>
 
+// Must be included last.
+#include "google/protobuf/port_def.inc"
 PROTOBUF_PRAGMA_INIT_SEG
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = ::PROTOBUF_NAMESPACE_ID::internal;
 namespace circuitsegmentservicemodule {
-constexpr Optional_CircuitSegmentServiceModeKind::Optional_CircuitSegmentServiceModeKind(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : value_(0)
-{}
+PROTOBUF_CONSTEXPR Optional_CircuitSegmentServiceModeKind::Optional_CircuitSegmentServiceModeKind(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.value_)*/ 0
+
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct Optional_CircuitSegmentServiceModeKindDefaultTypeInternal {
-  constexpr Optional_CircuitSegmentServiceModeKindDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR Optional_CircuitSegmentServiceModeKindDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~Optional_CircuitSegmentServiceModeKindDefaultTypeInternal() {}
   union {
     Optional_CircuitSegmentServiceModeKind _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT Optional_CircuitSegmentServiceModeKindDefaultTypeInternal _Optional_CircuitSegmentServiceModeKind_default_instance_;
-constexpr ENG_CircuitSegmentServiceModeKind::ENG_CircuitSegmentServiceModeKind(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : setvalextension_(nullptr)
-  , setval_(0)
-{}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Optional_CircuitSegmentServiceModeKindDefaultTypeInternal _Optional_CircuitSegmentServiceModeKind_default_instance_;
+PROTOBUF_CONSTEXPR ENG_CircuitSegmentServiceModeKind::ENG_CircuitSegmentServiceModeKind(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.setvalextension_)*/nullptr
+  , /*decltype(_impl_.setval_)*/ 0
+
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ENG_CircuitSegmentServiceModeKindDefaultTypeInternal {
-  constexpr ENG_CircuitSegmentServiceModeKindDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ENG_CircuitSegmentServiceModeKindDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ENG_CircuitSegmentServiceModeKindDefaultTypeInternal() {}
   union {
     ENG_CircuitSegmentServiceModeKind _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ENG_CircuitSegmentServiceModeKindDefaultTypeInternal _ENG_CircuitSegmentServiceModeKind_default_instance_;
-constexpr CircuitSegmentControlDCSC::CircuitSegmentControlDCSC(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnodeforcontrol_(nullptr)
-  , circuitsegmentservicemode_(nullptr)
-  , island_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ENG_CircuitSegmentServiceModeKindDefaultTypeInternal _ENG_CircuitSegmentServiceModeKind_default_instance_;
+PROTOBUF_CONSTEXPR CircuitSegmentControlDCSC::CircuitSegmentControlDCSC(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.logicalnodeforcontrol_)*/nullptr
+  , /*decltype(_impl_.circuitsegmentservicemode_)*/nullptr
+  , /*decltype(_impl_.island_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CircuitSegmentControlDCSCDefaultTypeInternal {
-  constexpr CircuitSegmentControlDCSCDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CircuitSegmentControlDCSCDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CircuitSegmentControlDCSCDefaultTypeInternal() {}
   union {
     CircuitSegmentControlDCSC _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CircuitSegmentControlDCSCDefaultTypeInternal _CircuitSegmentControlDCSC_default_instance_;
-constexpr CircuitSegmentControl::CircuitSegmentControl(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : identifiedobject_(nullptr)
-  , check_(nullptr)
-  , circuitsegmentcontroldcsc_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CircuitSegmentControlDCSCDefaultTypeInternal _CircuitSegmentControlDCSC_default_instance_;
+PROTOBUF_CONSTEXPR CircuitSegmentControl::CircuitSegmentControl(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.identifiedobject_)*/nullptr
+  , /*decltype(_impl_.check_)*/nullptr
+  , /*decltype(_impl_.circuitsegmentcontroldcsc_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CircuitSegmentControlDefaultTypeInternal {
-  constexpr CircuitSegmentControlDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CircuitSegmentControlDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CircuitSegmentControlDefaultTypeInternal() {}
   union {
     CircuitSegmentControl _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CircuitSegmentControlDefaultTypeInternal _CircuitSegmentControl_default_instance_;
-constexpr CircuitSegmentControlProfile::CircuitSegmentControlProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlmessageinfo_(nullptr)
-  , applicationsystem_(nullptr)
-  , circuitsegmentcontrol_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CircuitSegmentControlDefaultTypeInternal _CircuitSegmentControl_default_instance_;
+PROTOBUF_CONSTEXPR CircuitSegmentControlProfile::CircuitSegmentControlProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlmessageinfo_)*/nullptr
+  , /*decltype(_impl_.applicationsystem_)*/nullptr
+  , /*decltype(_impl_.circuitsegmentcontrol_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CircuitSegmentControlProfileDefaultTypeInternal {
-  constexpr CircuitSegmentControlProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CircuitSegmentControlProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CircuitSegmentControlProfileDefaultTypeInternal() {}
   union {
     CircuitSegmentControlProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CircuitSegmentControlProfileDefaultTypeInternal _CircuitSegmentControlProfile_default_instance_;
-constexpr CircuitSegmentEventDCSC::CircuitSegmentEventDCSC(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnode_(nullptr)
-  , circuitsegmentservicemode_(nullptr)
-  , island_(nullptr)
-  , permissibleauto_(nullptr)
-  , permissiblemanual_(nullptr)
-  , permissiblenetzero_(nullptr)
-  , permissiblestart_(nullptr)
-  , permissiblestop_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CircuitSegmentControlProfileDefaultTypeInternal _CircuitSegmentControlProfile_default_instance_;
+PROTOBUF_CONSTEXPR CircuitSegmentEventDCSC::CircuitSegmentEventDCSC(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.logicalnode_)*/nullptr
+  , /*decltype(_impl_.circuitsegmentservicemode_)*/nullptr
+  , /*decltype(_impl_.island_)*/nullptr
+  , /*decltype(_impl_.permissibleauto_)*/nullptr
+  , /*decltype(_impl_.permissiblemanual_)*/nullptr
+  , /*decltype(_impl_.permissiblenetzero_)*/nullptr
+  , /*decltype(_impl_.permissiblestart_)*/nullptr
+  , /*decltype(_impl_.permissiblestop_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CircuitSegmentEventDCSCDefaultTypeInternal {
-  constexpr CircuitSegmentEventDCSCDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CircuitSegmentEventDCSCDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CircuitSegmentEventDCSCDefaultTypeInternal() {}
   union {
     CircuitSegmentEventDCSC _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CircuitSegmentEventDCSCDefaultTypeInternal _CircuitSegmentEventDCSC_default_instance_;
-constexpr CircuitSegmentEvent::CircuitSegmentEvent(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : identifiedobject_(nullptr)
-  , circuitsegmenteventdcsc_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CircuitSegmentEventDCSCDefaultTypeInternal _CircuitSegmentEventDCSC_default_instance_;
+PROTOBUF_CONSTEXPR CircuitSegmentEvent::CircuitSegmentEvent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.identifiedobject_)*/nullptr
+  , /*decltype(_impl_.circuitsegmenteventdcsc_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CircuitSegmentEventDefaultTypeInternal {
-  constexpr CircuitSegmentEventDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CircuitSegmentEventDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CircuitSegmentEventDefaultTypeInternal() {}
   union {
     CircuitSegmentEvent _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CircuitSegmentEventDefaultTypeInternal _CircuitSegmentEvent_default_instance_;
-constexpr CircuitSegmentEventProfile::CircuitSegmentEventProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : eventmessageinfo_(nullptr)
-  , applicationsystem_(nullptr)
-  , circuitsegmentevent_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CircuitSegmentEventDefaultTypeInternal _CircuitSegmentEvent_default_instance_;
+PROTOBUF_CONSTEXPR CircuitSegmentEventProfile::CircuitSegmentEventProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.eventmessageinfo_)*/nullptr
+  , /*decltype(_impl_.applicationsystem_)*/nullptr
+  , /*decltype(_impl_.circuitsegmentevent_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CircuitSegmentEventProfileDefaultTypeInternal {
-  constexpr CircuitSegmentEventProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CircuitSegmentEventProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CircuitSegmentEventProfileDefaultTypeInternal() {}
   union {
     CircuitSegmentEventProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CircuitSegmentEventProfileDefaultTypeInternal _CircuitSegmentEventProfile_default_instance_;
-constexpr CircuitSegmentStatusDCSC::CircuitSegmentStatusDCSC(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnode_(nullptr)
-  , circuitsegmentservicemode_(nullptr)
-  , island_(nullptr)
-  , permissibleauto_(nullptr)
-  , permissiblemanual_(nullptr)
-  , permissiblenetzero_(nullptr)
-  , permissiblestart_(nullptr)
-  , permissiblestop_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CircuitSegmentEventProfileDefaultTypeInternal _CircuitSegmentEventProfile_default_instance_;
+PROTOBUF_CONSTEXPR CircuitSegmentStatusDCSC::CircuitSegmentStatusDCSC(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.logicalnode_)*/nullptr
+  , /*decltype(_impl_.circuitsegmentservicemode_)*/nullptr
+  , /*decltype(_impl_.island_)*/nullptr
+  , /*decltype(_impl_.permissibleauto_)*/nullptr
+  , /*decltype(_impl_.permissiblemanual_)*/nullptr
+  , /*decltype(_impl_.permissiblenetzero_)*/nullptr
+  , /*decltype(_impl_.permissiblestart_)*/nullptr
+  , /*decltype(_impl_.permissiblestop_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CircuitSegmentStatusDCSCDefaultTypeInternal {
-  constexpr CircuitSegmentStatusDCSCDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CircuitSegmentStatusDCSCDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CircuitSegmentStatusDCSCDefaultTypeInternal() {}
   union {
     CircuitSegmentStatusDCSC _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CircuitSegmentStatusDCSCDefaultTypeInternal _CircuitSegmentStatusDCSC_default_instance_;
-constexpr CircuitSegmentStatus::CircuitSegmentStatus(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : identifiedobject_(nullptr)
-  , circuitsegmentstatusdcsc_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CircuitSegmentStatusDCSCDefaultTypeInternal _CircuitSegmentStatusDCSC_default_instance_;
+PROTOBUF_CONSTEXPR CircuitSegmentStatus::CircuitSegmentStatus(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.identifiedobject_)*/nullptr
+  , /*decltype(_impl_.circuitsegmentstatusdcsc_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CircuitSegmentStatusDefaultTypeInternal {
-  constexpr CircuitSegmentStatusDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CircuitSegmentStatusDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CircuitSegmentStatusDefaultTypeInternal() {}
   union {
     CircuitSegmentStatus _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CircuitSegmentStatusDefaultTypeInternal _CircuitSegmentStatus_default_instance_;
-constexpr CircuitSegmentStatusProfile::CircuitSegmentStatusProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : eventmessageinfo_(nullptr)
-  , applicationsystem_(nullptr)
-  , circuitsegmentstatus_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CircuitSegmentStatusDefaultTypeInternal _CircuitSegmentStatus_default_instance_;
+PROTOBUF_CONSTEXPR CircuitSegmentStatusProfile::CircuitSegmentStatusProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.statusmessageinfo_)*/nullptr
+  , /*decltype(_impl_.applicationsystem_)*/nullptr
+  , /*decltype(_impl_.circuitsegmentstatus_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CircuitSegmentStatusProfileDefaultTypeInternal {
-  constexpr CircuitSegmentStatusProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CircuitSegmentStatusProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CircuitSegmentStatusProfileDefaultTypeInternal() {}
   union {
     CircuitSegmentStatusProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CircuitSegmentStatusProfileDefaultTypeInternal _CircuitSegmentStatusProfile_default_instance_;
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CircuitSegmentStatusProfileDefaultTypeInternal _CircuitSegmentStatusProfile_default_instance_;
 }  // namespace circuitsegmentservicemodule
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto[11];
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto[1];
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto = nullptr;
+static ::_pb::Metadata file_level_metadata_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto[11];
+static const ::_pb::EnumDescriptor* file_level_enum_descriptors_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto[1];
+static constexpr const ::_pb::ServiceDescriptor**
+    file_level_service_descriptors_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto = nullptr;
+const ::uint32_t TableStruct_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
+    protodesc_cold) = {
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::Optional_CircuitSegmentServiceModeKind, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::Optional_CircuitSegmentServiceModeKind, _impl_.value_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind, _impl_.setval_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind, _impl_.setvalextension_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControlDCSC, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControlDCSC, _impl_.logicalnodeforcontrol_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControlDCSC, _impl_.circuitsegmentservicemode_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControlDCSC, _impl_.island_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControl, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControl, _impl_.identifiedobject_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControl, _impl_.check_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControl, _impl_.circuitsegmentcontroldcsc_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControlProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControlProfile, _impl_.controlmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControlProfile, _impl_.applicationsystem_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControlProfile, _impl_.circuitsegmentcontrol_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventDCSC, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventDCSC, _impl_.logicalnode_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventDCSC, _impl_.circuitsegmentservicemode_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventDCSC, _impl_.island_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventDCSC, _impl_.permissibleauto_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventDCSC, _impl_.permissiblemanual_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventDCSC, _impl_.permissiblenetzero_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventDCSC, _impl_.permissiblestart_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventDCSC, _impl_.permissiblestop_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEvent, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEvent, _impl_.identifiedobject_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEvent, _impl_.circuitsegmenteventdcsc_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventProfile, _impl_.eventmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventProfile, _impl_.applicationsystem_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventProfile, _impl_.circuitsegmentevent_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC, _impl_.logicalnode_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC, _impl_.circuitsegmentservicemode_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC, _impl_.island_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC, _impl_.permissibleauto_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC, _impl_.permissiblemanual_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC, _impl_.permissiblenetzero_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC, _impl_.permissiblestart_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC, _impl_.permissiblestop_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatus, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatus, _impl_.identifiedobject_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatus, _impl_.circuitsegmentstatusdcsc_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusProfile, _impl_.statusmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusProfile, _impl_.applicationsystem_),
+    PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusProfile, _impl_.circuitsegmentstatus_),
+};
 
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::Optional_CircuitSegmentServiceModeKind, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::Optional_CircuitSegmentServiceModeKind, value_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind, setval_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind, setvalextension_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControlDCSC, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControlDCSC, logicalnodeforcontrol_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControlDCSC, circuitsegmentservicemode_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControlDCSC, island_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControl, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControl, identifiedobject_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControl, check_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControl, circuitsegmentcontroldcsc_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControlProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControlProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControlProfile, applicationsystem_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentControlProfile, circuitsegmentcontrol_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventDCSC, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventDCSC, logicalnode_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventDCSC, circuitsegmentservicemode_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventDCSC, island_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventDCSC, permissibleauto_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventDCSC, permissiblemanual_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventDCSC, permissiblenetzero_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventDCSC, permissiblestart_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventDCSC, permissiblestop_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEvent, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEvent, identifiedobject_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEvent, circuitsegmenteventdcsc_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventProfile, eventmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventProfile, applicationsystem_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentEventProfile, circuitsegmentevent_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC, logicalnode_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC, circuitsegmentservicemode_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC, island_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC, permissibleauto_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC, permissiblemanual_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC, permissiblenetzero_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC, permissiblestart_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC, permissiblestop_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatus, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatus, identifiedobject_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatus, circuitsegmentstatusdcsc_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusProfile, eventmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusProfile, applicationsystem_),
-  PROTOBUF_FIELD_OFFSET(::circuitsegmentservicemodule::CircuitSegmentStatusProfile, circuitsegmentstatus_),
-};
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::circuitsegmentservicemodule::Optional_CircuitSegmentServiceModeKind)},
-  { 6, -1, sizeof(::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind)},
-  { 13, -1, sizeof(::circuitsegmentservicemodule::CircuitSegmentControlDCSC)},
-  { 21, -1, sizeof(::circuitsegmentservicemodule::CircuitSegmentControl)},
-  { 29, -1, sizeof(::circuitsegmentservicemodule::CircuitSegmentControlProfile)},
-  { 37, -1, sizeof(::circuitsegmentservicemodule::CircuitSegmentEventDCSC)},
-  { 50, -1, sizeof(::circuitsegmentservicemodule::CircuitSegmentEvent)},
-  { 57, -1, sizeof(::circuitsegmentservicemodule::CircuitSegmentEventProfile)},
-  { 65, -1, sizeof(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC)},
-  { 78, -1, sizeof(::circuitsegmentservicemodule::CircuitSegmentStatus)},
-  { 85, -1, sizeof(::circuitsegmentservicemodule::CircuitSegmentStatusProfile)},
+static const ::_pbi::MigrationSchema
+    schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+        { 0, -1, -1, sizeof(::circuitsegmentservicemodule::Optional_CircuitSegmentServiceModeKind)},
+        { 9, -1, -1, sizeof(::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind)},
+        { 19, -1, -1, sizeof(::circuitsegmentservicemodule::CircuitSegmentControlDCSC)},
+        { 30, -1, -1, sizeof(::circuitsegmentservicemodule::CircuitSegmentControl)},
+        { 41, -1, -1, sizeof(::circuitsegmentservicemodule::CircuitSegmentControlProfile)},
+        { 52, -1, -1, sizeof(::circuitsegmentservicemodule::CircuitSegmentEventDCSC)},
+        { 68, -1, -1, sizeof(::circuitsegmentservicemodule::CircuitSegmentEvent)},
+        { 78, -1, -1, sizeof(::circuitsegmentservicemodule::CircuitSegmentEventProfile)},
+        { 89, -1, -1, sizeof(::circuitsegmentservicemodule::CircuitSegmentStatusDCSC)},
+        { 105, -1, -1, sizeof(::circuitsegmentservicemodule::CircuitSegmentStatus)},
+        { 115, -1, -1, sizeof(::circuitsegmentservicemodule::CircuitSegmentStatusProfile)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::circuitsegmentservicemodule::_Optional_CircuitSegmentServiceModeKind_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::circuitsegmentservicemodule::_ENG_CircuitSegmentServiceModeKind_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::circuitsegmentservicemodule::_CircuitSegmentControlDCSC_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::circuitsegmentservicemodule::_CircuitSegmentControl_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::circuitsegmentservicemodule::_CircuitSegmentControlProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::circuitsegmentservicemodule::_CircuitSegmentEventDCSC_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::circuitsegmentservicemodule::_CircuitSegmentEvent_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::circuitsegmentservicemodule::_CircuitSegmentEventProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::circuitsegmentservicemodule::_CircuitSegmentStatusDCSC_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::circuitsegmentservicemodule::_CircuitSegmentStatus_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::circuitsegmentservicemodule::_CircuitSegmentStatusProfile_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+    &::circuitsegmentservicemodule::_Optional_CircuitSegmentServiceModeKind_default_instance_._instance,
+    &::circuitsegmentservicemodule::_ENG_CircuitSegmentServiceModeKind_default_instance_._instance,
+    &::circuitsegmentservicemodule::_CircuitSegmentControlDCSC_default_instance_._instance,
+    &::circuitsegmentservicemodule::_CircuitSegmentControl_default_instance_._instance,
+    &::circuitsegmentservicemodule::_CircuitSegmentControlProfile_default_instance_._instance,
+    &::circuitsegmentservicemodule::_CircuitSegmentEventDCSC_default_instance_._instance,
+    &::circuitsegmentservicemodule::_CircuitSegmentEvent_default_instance_._instance,
+    &::circuitsegmentservicemodule::_CircuitSegmentEventProfile_default_instance_._instance,
+    &::circuitsegmentservicemodule::_CircuitSegmentStatusDCSC_default_instance_._instance,
+    &::circuitsegmentservicemodule::_CircuitSegmentStatus_default_instance_._instance,
+    &::circuitsegmentservicemodule::_CircuitSegmentStatusProfile_default_instance_._instance,
+};
+const char descriptor_table_protodef_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+    "\n=circuitsegmentservicemodule/circuitseg"
+    "mentservicemodule.proto\022\033circuitsegments"
+    "ervicemodule\032\tuml.proto\032\036google/protobuf"
+    "/wrappers.proto\032\037commonmodule/commonmodu"
+    "le.proto\"s\n&Optional_CircuitSegmentServi"
+    "ceModeKind\022I\n\005value\030\001 \001(\0162:.circuitsegme"
+    "ntservicemodule.CircuitSegmentServiceMod"
+    "eKind\"\260\001\n!ENG_CircuitSegmentServiceModeK"
+    "ind\022T\n\006setVal\030\001 \001(\0162:.circuitsegmentserv"
+    "icemodule.CircuitSegmentServiceModeKindB"
+    "\010\210\265\030\001\220\265\030\001\0225\n\017setValExtension\030\002 \001(\0132\034.goo"
+    "gle.protobuf.StringValue\"\362\001\n\031CircuitSegm"
+    "entControlDCSC\022H\n\025logicalNodeForControl\030"
+    "\001 \001(\0132#.commonmodule.LogicalNodeForContr"
+    "olB\004\200\265\030\001\022a\n\031CircuitSegmentServiceMode\030\002 "
+    "\001(\0132>.circuitsegmentservicemodule.ENG_Ci"
+    "rcuitSegmentServiceModeKind\022(\n\006Island\030\003 "
+    "\001(\0132\030.commonmodule.ControlDPC\"\352\001\n\025Circui"
+    "tSegmentControl\022>\n\020identifiedObject\030\001 \001("
+    "\0132\036.commonmodule.IdentifiedObjectB\004\200\265\030\001\022"
+    ",\n\005check\030\002 \001(\0132\035.commonmodule.CheckCondi"
+    "tions\022c\n\031circuitSegmentControlDCSC\030\003 \001(\013"
+    "26.circuitsegmentservicemodule.CircuitSe"
+    "gmentControlDCSCB\010\210\265\030\001\220\265\030\001\"\213\002\n\034CircuitSe"
+    "gmentControlProfile\022B\n\022controlMessageInf"
+    "o\030\001 \001(\0132 .commonmodule.ControlMessageInf"
+    "oB\004\200\265\030\001\022D\n\021applicationSystem\030\002 \001(\0132\037.com"
+    "monmodule.ApplicationSystemB\010\210\265\030\001\220\265\030\001\022[\n"
+    "\025circuitSegmentControl\030\003 \001(\01322.circuitse"
+    "gmentservicemodule.CircuitSegmentControl"
+    "B\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\333\003\n\027CircuitSegmentEvent"
+    "DCSC\0224\n\013logicalNode\030\001 \001(\0132\031.commonmodule"
+    ".LogicalNodeB\004\200\265\030\001\022a\n\031CircuitSegmentServ"
+    "iceMode\030\002 \001(\0132>.circuitsegmentservicemod"
+    "ule.ENG_CircuitSegmentServiceModeKind\022\'\n"
+    "\006Island\030\003 \001(\0132\027.commonmodule.StatusSPS\0220"
+    "\n\017PermissibleAuto\030\004 \001(\0132\027.commonmodule.S"
+    "tatusSPS\0222\n\021PermissibleManual\030\005 \001(\0132\027.co"
+    "mmonmodule.StatusSPS\0223\n\022PermissibleNetze"
+    "ro\030\006 \001(\0132\027.commonmodule.StatusSPS\0221\n\020Per"
+    "missibleStart\030\007 \001(\0132\027.commonmodule.Statu"
+    "sSPS\0220\n\017PermissibleStop\030\010 \001(\0132\027.commonmo"
+    "dule.StatusSPS\"\266\001\n\023CircuitSegmentEvent\022>"
+    "\n\020identifiedObject\030\001 \001(\0132\036.commonmodule."
+    "IdentifiedObjectB\004\200\265\030\001\022_\n\027circuitSegment"
+    "EventDCSC\030\002 \001(\01324.circuitsegmentservicem"
+    "odule.CircuitSegmentEventDCSCB\010\210\265\030\001\220\265\030\001\""
+    "\201\002\n\032CircuitSegmentEventProfile\022>\n\020eventM"
+    "essageInfo\030\001 \001(\0132\036.commonmodule.EventMes"
+    "sageInfoB\004\200\265\030\001\022D\n\021applicationSystem\030\002 \001("
+    "\0132\037.commonmodule.ApplicationSystemB\010\210\265\030\001"
+    "\220\265\030\001\022W\n\023circuitSegmentEvent\030\003 \001(\01320.circ"
+    "uitsegmentservicemodule.CircuitSegmentEv"
+    "entB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\334\003\n\030CircuitSegmentSt"
+    "atusDCSC\0224\n\013logicalNode\030\001 \001(\0132\031.commonmo"
+    "dule.LogicalNodeB\004\200\265\030\001\022a\n\031CircuitSegment"
+    "ServiceMode\030\002 \001(\0132>.circuitsegmentservic"
+    "emodule.ENG_CircuitSegmentServiceModeKin"
+    "d\022\'\n\006Island\030\003 \001(\0132\027.commonmodule.StatusD"
+    "PS\0220\n\017PermissibleAuto\030\004 \001(\0132\027.commonmodu"
+    "le.StatusSPS\0222\n\021PermissibleManual\030\005 \001(\0132"
+    "\027.commonmodule.StatusSPS\0223\n\022PermissibleN"
+    "etzero\030\006 \001(\0132\027.commonmodule.StatusSPS\0221\n"
+    "\020PermissibleStart\030\007 \001(\0132\027.commonmodule.S"
+    "tatusSPS\0220\n\017PermissibleStop\030\010 \001(\0132\027.comm"
+    "onmodule.StatusSPS\"\271\001\n\024CircuitSegmentSta"
+    "tus\022>\n\020identifiedObject\030\001 \001(\0132\036.commonmo"
+    "dule.IdentifiedObjectB\004\200\265\030\001\022a\n\030circuitSe"
+    "gmentStatusDCSC\030\002 \001(\01325.circuitsegmentse"
+    "rvicemodule.CircuitSegmentStatusDCSCB\010\210\265"
+    "\030\001\220\265\030\001\"\206\002\n\033CircuitSegmentStatusProfile\022@"
+    "\n\021statusMessageInfo\030\001 \001(\0132\037.commonmodule"
+    ".StatusMessageInfoB\004\200\265\030\001\022D\n\021applicationS"
+    "ystem\030\002 \001(\0132\037.commonmodule.ApplicationSy"
+    "stemB\010\210\265\030\001\220\265\030\001\022Y\n\024circuitSegmentStatus\030\003"
+    " \001(\01321.circuitsegmentservicemodule.Circu"
+    "itSegmentStatusB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001*\302\002\n\035Circ"
+    "uitSegmentServiceModeKind\022+\n\'CircuitSegm"
+    "entServiceModeKind_UNDEFINED\020\000\022&\n\"Circui"
+    "tSegmentServiceModeKind_none\020\001\022&\n\"Circui"
+    "tSegmentServiceModeKind_auto\020\002\022(\n$Circui"
+    "tSegmentServiceModeKind_manual\020\003\022)\n%Circ"
+    "uitSegmentServiceModeKind_netzero\020\004\022\'\n#C"
+    "ircuitSegmentServiceModeKind_start\020\005\022&\n\""
+    "CircuitSegmentServiceModeKind_stop\020\006B\261\001\n"
+    "#openfmb.circuitsegmentservicemoduleP\001Zb"
+    "gitlab.com/openfmb/psm/ops/protobuf/go-o"
+    "penfmb-ops-protobuf/v2/openfmb/circuitse"
+    "gmentservicemodule\252\002#openfmb.circuitsegm"
+    "entservicemoduleb\006proto3"
+};
+static const ::_pbi::DescriptorTable* const descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_deps[3] =
+    {
+        &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
+        &::descriptor_table_google_2fprotobuf_2fwrappers_2eproto,
+        &::descriptor_table_uml_2eproto,
+};
+static ::absl::once_flag descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto = {
+    false,
+    false,
+    3584,
+    descriptor_table_protodef_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto,
+    "circuitsegmentservicemodule/circuitsegmentservicemodule.proto",
+    &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_once,
+    descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_deps,
+    3,
+    11,
+    schemas,
+    file_default_instances,
+    TableStruct_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto::offsets,
+    file_level_metadata_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto,
+    file_level_enum_descriptors_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto,
+    file_level_service_descriptors_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto,
 };
 
-const char descriptor_table_protodef_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n=circuitsegmentservicemodule/circuitseg"
-  "mentservicemodule.proto\022\033circuitsegments"
-  "ervicemodule\032\tuml.proto\032\036google/protobuf"
-  "/wrappers.proto\032\037commonmodule/commonmodu"
-  "le.proto\"s\n&Optional_CircuitSegmentServi"
-  "ceModeKind\022I\n\005value\030\001 \001(\0162:.circuitsegme"
-  "ntservicemodule.CircuitSegmentServiceMod"
-  "eKind\"\260\001\n!ENG_CircuitSegmentServiceModeK"
-  "ind\022T\n\006setVal\030\001 \001(\0162:.circuitsegmentserv"
-  "icemodule.CircuitSegmentServiceModeKindB"
-  "\010\210\265\030\001\220\265\030\001\0225\n\017setValExtension\030\002 \001(\0132\034.goo"
-  "gle.protobuf.StringValue\"\362\001\n\031CircuitSegm"
-  "entControlDCSC\022H\n\025logicalNodeForControl\030"
-  "\001 \001(\0132#.commonmodule.LogicalNodeForContr"
-  "olB\004\200\265\030\001\022a\n\031CircuitSegmentServiceMode\030\002 "
-  "\001(\0132>.circuitsegmentservicemodule.ENG_Ci"
-  "rcuitSegmentServiceModeKind\022(\n\006Island\030\003 "
-  "\001(\0132\030.commonmodule.ControlDPC\"\352\001\n\025Circui"
-  "tSegmentControl\022>\n\020identifiedObject\030\001 \001("
-  "\0132\036.commonmodule.IdentifiedObjectB\004\200\265\030\001\022"
-  ",\n\005check\030\002 \001(\0132\035.commonmodule.CheckCondi"
-  "tions\022c\n\031circuitSegmentControlDCSC\030\003 \001(\013"
-  "26.circuitsegmentservicemodule.CircuitSe"
-  "gmentControlDCSCB\010\210\265\030\001\220\265\030\001\"\213\002\n\034CircuitSe"
-  "gmentControlProfile\022B\n\022controlMessageInf"
-  "o\030\001 \001(\0132 .commonmodule.ControlMessageInf"
-  "oB\004\200\265\030\001\022D\n\021applicationSystem\030\002 \001(\0132\037.com"
-  "monmodule.ApplicationSystemB\010\210\265\030\001\220\265\030\001\022[\n"
-  "\025circuitSegmentControl\030\003 \001(\01322.circuitse"
-  "gmentservicemodule.CircuitSegmentControl"
-  "B\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\333\003\n\027CircuitSegmentEvent"
-  "DCSC\0224\n\013logicalNode\030\001 \001(\0132\031.commonmodule"
-  ".LogicalNodeB\004\200\265\030\001\022a\n\031CircuitSegmentServ"
-  "iceMode\030\002 \001(\0132>.circuitsegmentservicemod"
-  "ule.ENG_CircuitSegmentServiceModeKind\022\'\n"
-  "\006Island\030\003 \001(\0132\027.commonmodule.StatusSPS\0220"
-  "\n\017PermissibleAuto\030\004 \001(\0132\027.commonmodule.S"
-  "tatusSPS\0222\n\021PermissibleManual\030\005 \001(\0132\027.co"
-  "mmonmodule.StatusSPS\0223\n\022PermissibleNetze"
-  "ro\030\006 \001(\0132\027.commonmodule.StatusSPS\0221\n\020Per"
-  "missibleStart\030\007 \001(\0132\027.commonmodule.Statu"
-  "sSPS\0220\n\017PermissibleStop\030\010 \001(\0132\027.commonmo"
-  "dule.StatusSPS\"\266\001\n\023CircuitSegmentEvent\022>"
-  "\n\020identifiedObject\030\001 \001(\0132\036.commonmodule."
-  "IdentifiedObjectB\004\200\265\030\001\022_\n\027circuitSegment"
-  "EventDCSC\030\002 \001(\01324.circuitsegmentservicem"
-  "odule.CircuitSegmentEventDCSCB\010\210\265\030\001\220\265\030\001\""
-  "\201\002\n\032CircuitSegmentEventProfile\022>\n\020eventM"
-  "essageInfo\030\001 \001(\0132\036.commonmodule.EventMes"
-  "sageInfoB\004\200\265\030\001\022D\n\021applicationSystem\030\002 \001("
-  "\0132\037.commonmodule.ApplicationSystemB\010\210\265\030\001"
-  "\220\265\030\001\022W\n\023circuitSegmentEvent\030\003 \001(\01320.circ"
-  "uitsegmentservicemodule.CircuitSegmentEv"
-  "entB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\334\003\n\030CircuitSegmentSt"
-  "atusDCSC\0224\n\013logicalNode\030\001 \001(\0132\031.commonmo"
-  "dule.LogicalNodeB\004\200\265\030\001\022a\n\031CircuitSegment"
-  "ServiceMode\030\002 \001(\0132>.circuitsegmentservic"
-  "emodule.ENG_CircuitSegmentServiceModeKin"
-  "d\022\'\n\006Island\030\003 \001(\0132\027.commonmodule.StatusD"
-  "PS\0220\n\017PermissibleAuto\030\004 \001(\0132\027.commonmodu"
-  "le.StatusSPS\0222\n\021PermissibleManual\030\005 \001(\0132"
-  "\027.commonmodule.StatusSPS\0223\n\022PermissibleN"
-  "etzero\030\006 \001(\0132\027.commonmodule.StatusSPS\0221\n"
-  "\020PermissibleStart\030\007 \001(\0132\027.commonmodule.S"
-  "tatusSPS\0220\n\017PermissibleStop\030\010 \001(\0132\027.comm"
-  "onmodule.StatusSPS\"\271\001\n\024CircuitSegmentSta"
-  "tus\022>\n\020identifiedObject\030\001 \001(\0132\036.commonmo"
-  "dule.IdentifiedObjectB\004\200\265\030\001\022a\n\030circuitSe"
-  "gmentStatusDCSC\030\002 \001(\01325.circuitsegmentse"
-  "rvicemodule.CircuitSegmentStatusDCSCB\010\210\265"
-  "\030\001\220\265\030\001\"\204\002\n\033CircuitSegmentStatusProfile\022>"
-  "\n\020eventMessageInfo\030\001 \001(\0132\036.commonmodule."
-  "EventMessageInfoB\004\200\265\030\001\022D\n\021applicationSys"
-  "tem\030\002 \001(\0132\037.commonmodule.ApplicationSyst"
-  "emB\010\210\265\030\001\220\265\030\001\022Y\n\024circuitSegmentStatus\030\003 \001"
-  "(\01321.circuitsegmentservicemodule.Circuit"
-  "SegmentStatusB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001*\302\002\n\035Circui"
-  "tSegmentServiceModeKind\022+\n\'CircuitSegmen"
-  "tServiceModeKind_UNDEFINED\020\000\022&\n\"CircuitS"
-  "egmentServiceModeKind_none\020\001\022&\n\"CircuitS"
-  "egmentServiceModeKind_auto\020\002\022(\n$CircuitS"
-  "egmentServiceModeKind_manual\020\003\022)\n%Circui"
-  "tSegmentServiceModeKind_netzero\020\004\022\'\n#Cir"
-  "cuitSegmentServiceModeKind_start\020\005\022&\n\"Ci"
-  "rcuitSegmentServiceModeKind_stop\020\006B\261\001\n#o"
-  "penfmb.circuitsegmentservicemoduleP\001Zbgi"
-  "tlab.com/openfmb/psm/ops/protobuf/go-ope"
-  "nfmb-ops-protobuf/v2/openfmb/circuitsegm"
-  "entservicemodule\252\002#openfmb.circuitsegmen"
-  "tservicemoduleb\006proto3"
-  ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_deps[3] = {
-  &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
-  &::descriptor_table_google_2fprotobuf_2fwrappers_2eproto,
-  &::descriptor_table_uml_2eproto,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto = {
-  false, false, 3582, descriptor_table_protodef_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto, "circuitsegmentservicemodule/circuitsegmentservicemodule.proto", 
-  &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_once, descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_deps, 3, 11,
-  schemas, file_default_instances, TableStruct_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto::offsets,
-  file_level_metadata_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto, file_level_enum_descriptors_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto, file_level_service_descriptors_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
-descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_metadata_getter(int index) {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto);
-  return descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto.file_level_metadata[index];
+// This function exists to be marked as weak.
+// It can significantly speed up compilation by breaking up LLVM's SCC
+// in the .pb.cc translation units. Large translation units see a
+// reduction of more than 35% of walltime for optimized builds. Without
+// the weak attribute all the messages in the file, including all the
+// vtables and everything they use become part of the same SCC through
+// a cycle like:
+// GetMetadata -> descriptor table -> default instances ->
+//   vtables -> GetMetadata
+// By adding a weak function here we break the connection from the
+// individual vtables back into the descriptor table.
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_getter() {
+  return &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto;
 }
-
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto(&descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
+static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto(&descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto);
 namespace circuitsegmentservicemodule {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* CircuitSegmentServiceModeKind_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto);
@@ -437,8 +518,6 @@ bool CircuitSegmentServiceModeKind_IsValid(int value) {
       return false;
   }
 }
-
-
 // ===================================================================
 
 class Optional_CircuitSegmentServiceModeKind::_Internal {
@@ -447,164 +526,148 @@ class Optional_CircuitSegmentServiceModeKind::_Internal {
 
 Optional_CircuitSegmentServiceModeKind::Optional_CircuitSegmentServiceModeKind(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:circuitsegmentservicemodule.Optional_CircuitSegmentServiceModeKind)
 }
 Optional_CircuitSegmentServiceModeKind::Optional_CircuitSegmentServiceModeKind(const Optional_CircuitSegmentServiceModeKind& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  value_ = from.value_;
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _impl_(from._impl_) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(
+      from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:circuitsegmentservicemodule.Optional_CircuitSegmentServiceModeKind)
 }
 
-void Optional_CircuitSegmentServiceModeKind::SharedCtor() {
-value_ = 0;
+inline void Optional_CircuitSegmentServiceModeKind::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.value_) { 0 }
+
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 Optional_CircuitSegmentServiceModeKind::~Optional_CircuitSegmentServiceModeKind() {
   // @@protoc_insertion_point(destructor:circuitsegmentservicemodule.Optional_CircuitSegmentServiceModeKind)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void Optional_CircuitSegmentServiceModeKind::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void Optional_CircuitSegmentServiceModeKind::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void Optional_CircuitSegmentServiceModeKind::ArenaDtor(void* object) {
-  Optional_CircuitSegmentServiceModeKind* _this = reinterpret_cast< Optional_CircuitSegmentServiceModeKind* >(object);
-  (void)_this;
-}
-void Optional_CircuitSegmentServiceModeKind::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void Optional_CircuitSegmentServiceModeKind::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void Optional_CircuitSegmentServiceModeKind::Clear() {
 // @@protoc_insertion_point(message_clear_start:circuitsegmentservicemodule.Optional_CircuitSegmentServiceModeKind)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  value_ = 0;
+  _impl_.value_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Optional_CircuitSegmentServiceModeKind::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Optional_CircuitSegmentServiceModeKind::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .circuitsegmentservicemodule.CircuitSegmentServiceModeKind value = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 8)) {
+          ::uint32_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
           _internal_set_value(static_cast<::circuitsegmentservicemodule::CircuitSegmentServiceModeKind>(val));
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* Optional_CircuitSegmentServiceModeKind::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* Optional_CircuitSegmentServiceModeKind::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:circuitsegmentservicemodule.Optional_CircuitSegmentServiceModeKind)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .circuitsegmentservicemodule.CircuitSegmentServiceModeKind value = 1;
-  if (this->value() != 0) {
+  if (this->_internal_value() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      1, this->_internal_value(), target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+        1, this->_internal_value(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:circuitsegmentservicemodule.Optional_CircuitSegmentServiceModeKind)
   return target;
 }
 
-size_t Optional_CircuitSegmentServiceModeKind::ByteSizeLong() const {
+::size_t Optional_CircuitSegmentServiceModeKind::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:circuitsegmentservicemodule.Optional_CircuitSegmentServiceModeKind)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .circuitsegmentservicemodule.CircuitSegmentServiceModeKind value = 1;
-  if (this->value() != 0) {
+  if (this->_internal_value() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_value());
+                  ::_pbi::WireFormatLite::EnumSize(this->_internal_value());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Optional_CircuitSegmentServiceModeKind::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:circuitsegmentservicemodule.Optional_CircuitSegmentServiceModeKind)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Optional_CircuitSegmentServiceModeKind* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Optional_CircuitSegmentServiceModeKind>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:circuitsegmentservicemodule.Optional_CircuitSegmentServiceModeKind)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:circuitsegmentservicemodule.Optional_CircuitSegmentServiceModeKind)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Optional_CircuitSegmentServiceModeKind::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Optional_CircuitSegmentServiceModeKind::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Optional_CircuitSegmentServiceModeKind::GetClassData() const { return &_class_data_; }
 
-void Optional_CircuitSegmentServiceModeKind::MergeFrom(const Optional_CircuitSegmentServiceModeKind& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.Optional_CircuitSegmentServiceModeKind)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void Optional_CircuitSegmentServiceModeKind::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Optional_CircuitSegmentServiceModeKind*>(&to_msg);
+  auto& from = static_cast<const Optional_CircuitSegmentServiceModeKind&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.Optional_CircuitSegmentServiceModeKind)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.value() != 0) {
-    _internal_set_value(from._internal_value());
+  if (from._internal_value() != 0) {
+    _this->_internal_set_value(from._internal_value());
   }
-}
-
-void Optional_CircuitSegmentServiceModeKind::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:circuitsegmentservicemodule.Optional_CircuitSegmentServiceModeKind)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Optional_CircuitSegmentServiceModeKind::CopyFrom(const Optional_CircuitSegmentServiceModeKind& from) {
@@ -620,230 +683,219 @@ bool Optional_CircuitSegmentServiceModeKind::IsInitialized() const {
 
 void Optional_CircuitSegmentServiceModeKind::InternalSwap(Optional_CircuitSegmentServiceModeKind* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(value_, other->value_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.value_, other->_impl_.value_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Optional_CircuitSegmentServiceModeKind::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_getter, &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_once,
+      file_level_metadata_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto[0]);
 }
-
-
 // ===================================================================
 
 class ENG_CircuitSegmentServiceModeKind::_Internal {
  public:
-  static const PROTOBUF_NAMESPACE_ID::StringValue& setvalextension(const ENG_CircuitSegmentServiceModeKind* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::StringValue& setvalextension(const ENG_CircuitSegmentServiceModeKind* msg);
 };
 
-const PROTOBUF_NAMESPACE_ID::StringValue&
+const ::PROTOBUF_NAMESPACE_ID::StringValue&
 ENG_CircuitSegmentServiceModeKind::_Internal::setvalextension(const ENG_CircuitSegmentServiceModeKind* msg) {
-  return *msg->setvalextension_;
+  return *msg->_impl_.setvalextension_;
 }
 void ENG_CircuitSegmentServiceModeKind::clear_setvalextension() {
-  if (GetArena() == nullptr && setvalextension_ != nullptr) {
-    delete setvalextension_;
+  if (GetArenaForAllocation() == nullptr && _impl_.setvalextension_ != nullptr) {
+    delete _impl_.setvalextension_;
   }
-  setvalextension_ = nullptr;
+  _impl_.setvalextension_ = nullptr;
 }
 ENG_CircuitSegmentServiceModeKind::ENG_CircuitSegmentServiceModeKind(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind)
 }
 ENG_CircuitSegmentServiceModeKind::ENG_CircuitSegmentServiceModeKind(const ENG_CircuitSegmentServiceModeKind& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ENG_CircuitSegmentServiceModeKind* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.setvalextension_){nullptr}
+    , decltype(_impl_.setval_) {}
+
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_setvalextension()) {
-    setvalextension_ = new PROTOBUF_NAMESPACE_ID::StringValue(*from.setvalextension_);
-  } else {
-    setvalextension_ = nullptr;
+    _this->_impl_.setvalextension_ = new ::PROTOBUF_NAMESPACE_ID::StringValue(*from._impl_.setvalextension_);
   }
-  setval_ = from.setval_;
+  _this->_impl_.setval_ = from._impl_.setval_;
   // @@protoc_insertion_point(copy_constructor:circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind)
 }
 
-void ENG_CircuitSegmentServiceModeKind::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&setvalextension_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&setval_) -
-    reinterpret_cast<char*>(&setvalextension_)) + sizeof(setval_));
+inline void ENG_CircuitSegmentServiceModeKind::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.setvalextension_){nullptr}
+    , decltype(_impl_.setval_) { 0 }
+
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ENG_CircuitSegmentServiceModeKind::~ENG_CircuitSegmentServiceModeKind() {
   // @@protoc_insertion_point(destructor:circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ENG_CircuitSegmentServiceModeKind::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete setvalextension_;
+inline void ENG_CircuitSegmentServiceModeKind::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.setvalextension_;
 }
 
-void ENG_CircuitSegmentServiceModeKind::ArenaDtor(void* object) {
-  ENG_CircuitSegmentServiceModeKind* _this = reinterpret_cast< ENG_CircuitSegmentServiceModeKind* >(object);
-  (void)_this;
-}
-void ENG_CircuitSegmentServiceModeKind::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ENG_CircuitSegmentServiceModeKind::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ENG_CircuitSegmentServiceModeKind::Clear() {
 // @@protoc_insertion_point(message_clear_start:circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && setvalextension_ != nullptr) {
-    delete setvalextension_;
+  if (GetArenaForAllocation() == nullptr && _impl_.setvalextension_ != nullptr) {
+    delete _impl_.setvalextension_;
   }
-  setvalextension_ = nullptr;
-  setval_ = 0;
+  _impl_.setvalextension_ = nullptr;
+  _impl_.setval_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ENG_CircuitSegmentServiceModeKind::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ENG_CircuitSegmentServiceModeKind::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .circuitsegmentservicemodule.CircuitSegmentServiceModeKind setVal = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 8)) {
+          ::uint32_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
           _internal_set_setval(static_cast<::circuitsegmentservicemodule::CircuitSegmentServiceModeKind>(val));
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.StringValue setValExtension = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_setvalextension(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ENG_CircuitSegmentServiceModeKind::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ENG_CircuitSegmentServiceModeKind::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .circuitsegmentservicemodule.CircuitSegmentServiceModeKind setVal = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->setval() != 0) {
+  if (this->_internal_setval() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      1, this->_internal_setval(), target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+        1, this->_internal_setval(), target);
   }
 
   // .google.protobuf.StringValue setValExtension = 2;
-  if (this->has_setvalextension()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_setvalextension()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::setvalextension(this), target, stream);
+      InternalWriteMessage(2, _Internal::setvalextension(this),
+        _Internal::setvalextension(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind)
   return target;
 }
 
-size_t ENG_CircuitSegmentServiceModeKind::ByteSizeLong() const {
+::size_t ENG_CircuitSegmentServiceModeKind::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .google.protobuf.StringValue setValExtension = 2;
-  if (this->has_setvalextension()) {
+  if (this->_internal_has_setvalextension()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *setvalextension_);
+        *_impl_.setvalextension_);
   }
 
   // .circuitsegmentservicemodule.CircuitSegmentServiceModeKind setVal = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->setval() != 0) {
+  if (this->_internal_setval() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_setval());
+                  ::_pbi::WireFormatLite::EnumSize(this->_internal_setval());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ENG_CircuitSegmentServiceModeKind::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ENG_CircuitSegmentServiceModeKind* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ENG_CircuitSegmentServiceModeKind>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ENG_CircuitSegmentServiceModeKind::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ENG_CircuitSegmentServiceModeKind::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ENG_CircuitSegmentServiceModeKind::GetClassData() const { return &_class_data_; }
 
-void ENG_CircuitSegmentServiceModeKind::MergeFrom(const ENG_CircuitSegmentServiceModeKind& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ENG_CircuitSegmentServiceModeKind::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ENG_CircuitSegmentServiceModeKind*>(&to_msg);
+  auto& from = static_cast<const ENG_CircuitSegmentServiceModeKind&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_setvalextension()) {
-    _internal_mutable_setvalextension()->PROTOBUF_NAMESPACE_ID::StringValue::MergeFrom(from._internal_setvalextension());
+  if (from._internal_has_setvalextension()) {
+    _this->_internal_mutable_setvalextension()->::PROTOBUF_NAMESPACE_ID::StringValue::MergeFrom(
+        from._internal_setvalextension());
   }
-  if (from.setval() != 0) {
-    _internal_set_setval(from._internal_setval());
+  if (from._internal_setval() != 0) {
+    _this->_internal_set_setval(from._internal_setval());
   }
-}
-
-void ENG_CircuitSegmentServiceModeKind::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ENG_CircuitSegmentServiceModeKind::CopyFrom(const ENG_CircuitSegmentServiceModeKind& from) {
@@ -859,20 +911,20 @@ bool ENG_CircuitSegmentServiceModeKind::IsInitialized() const {
 
 void ENG_CircuitSegmentServiceModeKind::InternalSwap(ENG_CircuitSegmentServiceModeKind* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ENG_CircuitSegmentServiceModeKind, setval_)
-      + sizeof(ENG_CircuitSegmentServiceModeKind::setval_)
-      - PROTOBUF_FIELD_OFFSET(ENG_CircuitSegmentServiceModeKind, setvalextension_)>(
-          reinterpret_cast<char*>(&setvalextension_),
-          reinterpret_cast<char*>(&other->setvalextension_));
+      PROTOBUF_FIELD_OFFSET(ENG_CircuitSegmentServiceModeKind, _impl_.setval_)
+      + sizeof(ENG_CircuitSegmentServiceModeKind::_impl_.setval_)
+      - PROTOBUF_FIELD_OFFSET(ENG_CircuitSegmentServiceModeKind, _impl_.setvalextension_)>(
+          reinterpret_cast<char*>(&_impl_.setvalextension_),
+          reinterpret_cast<char*>(&other->_impl_.setvalextension_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ENG_CircuitSegmentServiceModeKind::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_getter, &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_once,
+      file_level_metadata_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto[1]);
 }
-
-
 // ===================================================================
 
 class CircuitSegmentControlDCSC::_Internal {
@@ -884,270 +936,257 @@ class CircuitSegmentControlDCSC::_Internal {
 
 const ::commonmodule::LogicalNodeForControl&
 CircuitSegmentControlDCSC::_Internal::logicalnodeforcontrol(const CircuitSegmentControlDCSC* msg) {
-  return *msg->logicalnodeforcontrol_;
+  return *msg->_impl_.logicalnodeforcontrol_;
 }
 const ::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind&
 CircuitSegmentControlDCSC::_Internal::circuitsegmentservicemode(const CircuitSegmentControlDCSC* msg) {
-  return *msg->circuitsegmentservicemode_;
+  return *msg->_impl_.circuitsegmentservicemode_;
 }
 const ::commonmodule::ControlDPC&
 CircuitSegmentControlDCSC::_Internal::island(const CircuitSegmentControlDCSC* msg) {
-  return *msg->island_;
+  return *msg->_impl_.island_;
 }
 void CircuitSegmentControlDCSC::clear_logicalnodeforcontrol() {
-  if (GetArena() == nullptr && logicalnodeforcontrol_ != nullptr) {
-    delete logicalnodeforcontrol_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforcontrol_ != nullptr) {
+    delete _impl_.logicalnodeforcontrol_;
   }
-  logicalnodeforcontrol_ = nullptr;
+  _impl_.logicalnodeforcontrol_ = nullptr;
 }
 void CircuitSegmentControlDCSC::clear_island() {
-  if (GetArena() == nullptr && island_ != nullptr) {
-    delete island_;
+  if (GetArenaForAllocation() == nullptr && _impl_.island_ != nullptr) {
+    delete _impl_.island_;
   }
-  island_ = nullptr;
+  _impl_.island_ = nullptr;
 }
 CircuitSegmentControlDCSC::CircuitSegmentControlDCSC(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:circuitsegmentservicemodule.CircuitSegmentControlDCSC)
 }
 CircuitSegmentControlDCSC::CircuitSegmentControlDCSC(const CircuitSegmentControlDCSC& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CircuitSegmentControlDCSC* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforcontrol_){nullptr}
+    , decltype(_impl_.circuitsegmentservicemode_){nullptr}
+    , decltype(_impl_.island_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_logicalnodeforcontrol()) {
-    logicalnodeforcontrol_ = new ::commonmodule::LogicalNodeForControl(*from.logicalnodeforcontrol_);
-  } else {
-    logicalnodeforcontrol_ = nullptr;
+    _this->_impl_.logicalnodeforcontrol_ = new ::commonmodule::LogicalNodeForControl(*from._impl_.logicalnodeforcontrol_);
   }
   if (from._internal_has_circuitsegmentservicemode()) {
-    circuitsegmentservicemode_ = new ::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind(*from.circuitsegmentservicemode_);
-  } else {
-    circuitsegmentservicemode_ = nullptr;
+    _this->_impl_.circuitsegmentservicemode_ = new ::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind(*from._impl_.circuitsegmentservicemode_);
   }
   if (from._internal_has_island()) {
-    island_ = new ::commonmodule::ControlDPC(*from.island_);
-  } else {
-    island_ = nullptr;
+    _this->_impl_.island_ = new ::commonmodule::ControlDPC(*from._impl_.island_);
   }
   // @@protoc_insertion_point(copy_constructor:circuitsegmentservicemodule.CircuitSegmentControlDCSC)
 }
 
-void CircuitSegmentControlDCSC::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnodeforcontrol_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&island_) -
-    reinterpret_cast<char*>(&logicalnodeforcontrol_)) + sizeof(island_));
+inline void CircuitSegmentControlDCSC::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforcontrol_){nullptr}
+    , decltype(_impl_.circuitsegmentservicemode_){nullptr}
+    , decltype(_impl_.island_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CircuitSegmentControlDCSC::~CircuitSegmentControlDCSC() {
   // @@protoc_insertion_point(destructor:circuitsegmentservicemodule.CircuitSegmentControlDCSC)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CircuitSegmentControlDCSC::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete logicalnodeforcontrol_;
-  if (this != internal_default_instance()) delete circuitsegmentservicemode_;
-  if (this != internal_default_instance()) delete island_;
+inline void CircuitSegmentControlDCSC::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.logicalnodeforcontrol_;
+  if (this != internal_default_instance()) delete _impl_.circuitsegmentservicemode_;
+  if (this != internal_default_instance()) delete _impl_.island_;
 }
 
-void CircuitSegmentControlDCSC::ArenaDtor(void* object) {
-  CircuitSegmentControlDCSC* _this = reinterpret_cast< CircuitSegmentControlDCSC* >(object);
-  (void)_this;
-}
-void CircuitSegmentControlDCSC::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CircuitSegmentControlDCSC::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CircuitSegmentControlDCSC::Clear() {
 // @@protoc_insertion_point(message_clear_start:circuitsegmentservicemodule.CircuitSegmentControlDCSC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && logicalnodeforcontrol_ != nullptr) {
-    delete logicalnodeforcontrol_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforcontrol_ != nullptr) {
+    delete _impl_.logicalnodeforcontrol_;
   }
-  logicalnodeforcontrol_ = nullptr;
-  if (GetArena() == nullptr && circuitsegmentservicemode_ != nullptr) {
-    delete circuitsegmentservicemode_;
+  _impl_.logicalnodeforcontrol_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.circuitsegmentservicemode_ != nullptr) {
+    delete _impl_.circuitsegmentservicemode_;
   }
-  circuitsegmentservicemode_ = nullptr;
-  if (GetArena() == nullptr && island_ != nullptr) {
-    delete island_;
+  _impl_.circuitsegmentservicemode_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.island_ != nullptr) {
+    delete _impl_.island_;
   }
-  island_ = nullptr;
+  _impl_.island_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CircuitSegmentControlDCSC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CircuitSegmentControlDCSC::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforcontrol(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind CircuitSegmentServiceMode = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_circuitsegmentservicemode(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlDPC Island = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_island(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CircuitSegmentControlDCSC::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CircuitSegmentControlDCSC::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:circuitsegmentservicemodule.CircuitSegmentControlDCSC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforcontrol()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_logicalnodeforcontrol()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnodeforcontrol(this), target, stream);
+      InternalWriteMessage(1, _Internal::logicalnodeforcontrol(this),
+        _Internal::logicalnodeforcontrol(this).GetCachedSize(), target, stream);
   }
 
   // .circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind CircuitSegmentServiceMode = 2;
-  if (this->has_circuitsegmentservicemode()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_circuitsegmentservicemode()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::circuitsegmentservicemode(this), target, stream);
+      InternalWriteMessage(2, _Internal::circuitsegmentservicemode(this),
+        _Internal::circuitsegmentservicemode(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlDPC Island = 3;
-  if (this->has_island()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_island()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::island(this), target, stream);
+      InternalWriteMessage(3, _Internal::island(this),
+        _Internal::island(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:circuitsegmentservicemodule.CircuitSegmentControlDCSC)
   return target;
 }
 
-size_t CircuitSegmentControlDCSC::ByteSizeLong() const {
+::size_t CircuitSegmentControlDCSC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:circuitsegmentservicemodule.CircuitSegmentControlDCSC)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforcontrol()) {
+  if (this->_internal_has_logicalnodeforcontrol()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *logicalnodeforcontrol_);
+        *_impl_.logicalnodeforcontrol_);
   }
 
   // .circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind CircuitSegmentServiceMode = 2;
-  if (this->has_circuitsegmentservicemode()) {
+  if (this->_internal_has_circuitsegmentservicemode()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *circuitsegmentservicemode_);
+        *_impl_.circuitsegmentservicemode_);
   }
 
   // .commonmodule.ControlDPC Island = 3;
-  if (this->has_island()) {
+  if (this->_internal_has_island()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *island_);
+        *_impl_.island_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CircuitSegmentControlDCSC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:circuitsegmentservicemodule.CircuitSegmentControlDCSC)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CircuitSegmentControlDCSC* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CircuitSegmentControlDCSC>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:circuitsegmentservicemodule.CircuitSegmentControlDCSC)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:circuitsegmentservicemodule.CircuitSegmentControlDCSC)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CircuitSegmentControlDCSC::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CircuitSegmentControlDCSC::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CircuitSegmentControlDCSC::GetClassData() const { return &_class_data_; }
 
-void CircuitSegmentControlDCSC::MergeFrom(const CircuitSegmentControlDCSC& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.CircuitSegmentControlDCSC)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CircuitSegmentControlDCSC::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CircuitSegmentControlDCSC*>(&to_msg);
+  auto& from = static_cast<const CircuitSegmentControlDCSC&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.CircuitSegmentControlDCSC)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_logicalnodeforcontrol()) {
-    _internal_mutable_logicalnodeforcontrol()->::commonmodule::LogicalNodeForControl::MergeFrom(from._internal_logicalnodeforcontrol());
+  if (from._internal_has_logicalnodeforcontrol()) {
+    _this->_internal_mutable_logicalnodeforcontrol()->::commonmodule::LogicalNodeForControl::MergeFrom(
+        from._internal_logicalnodeforcontrol());
   }
-  if (from.has_circuitsegmentservicemode()) {
-    _internal_mutable_circuitsegmentservicemode()->::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind::MergeFrom(from._internal_circuitsegmentservicemode());
+  if (from._internal_has_circuitsegmentservicemode()) {
+    _this->_internal_mutable_circuitsegmentservicemode()->::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind::MergeFrom(
+        from._internal_circuitsegmentservicemode());
   }
-  if (from.has_island()) {
-    _internal_mutable_island()->::commonmodule::ControlDPC::MergeFrom(from._internal_island());
+  if (from._internal_has_island()) {
+    _this->_internal_mutable_island()->::commonmodule::ControlDPC::MergeFrom(
+        from._internal_island());
   }
-}
-
-void CircuitSegmentControlDCSC::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:circuitsegmentservicemodule.CircuitSegmentControlDCSC)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CircuitSegmentControlDCSC::CopyFrom(const CircuitSegmentControlDCSC& from) {
@@ -1163,20 +1202,20 @@ bool CircuitSegmentControlDCSC::IsInitialized() const {
 
 void CircuitSegmentControlDCSC::InternalSwap(CircuitSegmentControlDCSC* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CircuitSegmentControlDCSC, island_)
-      + sizeof(CircuitSegmentControlDCSC::island_)
-      - PROTOBUF_FIELD_OFFSET(CircuitSegmentControlDCSC, logicalnodeforcontrol_)>(
-          reinterpret_cast<char*>(&logicalnodeforcontrol_),
-          reinterpret_cast<char*>(&other->logicalnodeforcontrol_));
+      PROTOBUF_FIELD_OFFSET(CircuitSegmentControlDCSC, _impl_.island_)
+      + sizeof(CircuitSegmentControlDCSC::_impl_.island_)
+      - PROTOBUF_FIELD_OFFSET(CircuitSegmentControlDCSC, _impl_.logicalnodeforcontrol_)>(
+          reinterpret_cast<char*>(&_impl_.logicalnodeforcontrol_),
+          reinterpret_cast<char*>(&other->_impl_.logicalnodeforcontrol_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CircuitSegmentControlDCSC::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_getter, &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_once,
+      file_level_metadata_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto[2]);
 }
-
-
 // ===================================================================
 
 class CircuitSegmentControl::_Internal {
@@ -1188,270 +1227,257 @@ class CircuitSegmentControl::_Internal {
 
 const ::commonmodule::IdentifiedObject&
 CircuitSegmentControl::_Internal::identifiedobject(const CircuitSegmentControl* msg) {
-  return *msg->identifiedobject_;
+  return *msg->_impl_.identifiedobject_;
 }
 const ::commonmodule::CheckConditions&
 CircuitSegmentControl::_Internal::check(const CircuitSegmentControl* msg) {
-  return *msg->check_;
+  return *msg->_impl_.check_;
 }
 const ::circuitsegmentservicemodule::CircuitSegmentControlDCSC&
 CircuitSegmentControl::_Internal::circuitsegmentcontroldcsc(const CircuitSegmentControl* msg) {
-  return *msg->circuitsegmentcontroldcsc_;
+  return *msg->_impl_.circuitsegmentcontroldcsc_;
 }
 void CircuitSegmentControl::clear_identifiedobject() {
-  if (GetArena() == nullptr && identifiedobject_ != nullptr) {
-    delete identifiedobject_;
+  if (GetArenaForAllocation() == nullptr && _impl_.identifiedobject_ != nullptr) {
+    delete _impl_.identifiedobject_;
   }
-  identifiedobject_ = nullptr;
+  _impl_.identifiedobject_ = nullptr;
 }
 void CircuitSegmentControl::clear_check() {
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
+  _impl_.check_ = nullptr;
 }
 CircuitSegmentControl::CircuitSegmentControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:circuitsegmentservicemodule.CircuitSegmentControl)
 }
 CircuitSegmentControl::CircuitSegmentControl(const CircuitSegmentControl& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CircuitSegmentControl* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.identifiedobject_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.circuitsegmentcontroldcsc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_identifiedobject()) {
-    identifiedobject_ = new ::commonmodule::IdentifiedObject(*from.identifiedobject_);
-  } else {
-    identifiedobject_ = nullptr;
+    _this->_impl_.identifiedobject_ = new ::commonmodule::IdentifiedObject(*from._impl_.identifiedobject_);
   }
   if (from._internal_has_check()) {
-    check_ = new ::commonmodule::CheckConditions(*from.check_);
-  } else {
-    check_ = nullptr;
+    _this->_impl_.check_ = new ::commonmodule::CheckConditions(*from._impl_.check_);
   }
   if (from._internal_has_circuitsegmentcontroldcsc()) {
-    circuitsegmentcontroldcsc_ = new ::circuitsegmentservicemodule::CircuitSegmentControlDCSC(*from.circuitsegmentcontroldcsc_);
-  } else {
-    circuitsegmentcontroldcsc_ = nullptr;
+    _this->_impl_.circuitsegmentcontroldcsc_ = new ::circuitsegmentservicemodule::CircuitSegmentControlDCSC(*from._impl_.circuitsegmentcontroldcsc_);
   }
   // @@protoc_insertion_point(copy_constructor:circuitsegmentservicemodule.CircuitSegmentControl)
 }
 
-void CircuitSegmentControl::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&identifiedobject_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&circuitsegmentcontroldcsc_) -
-    reinterpret_cast<char*>(&identifiedobject_)) + sizeof(circuitsegmentcontroldcsc_));
+inline void CircuitSegmentControl::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.identifiedobject_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.circuitsegmentcontroldcsc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CircuitSegmentControl::~CircuitSegmentControl() {
   // @@protoc_insertion_point(destructor:circuitsegmentservicemodule.CircuitSegmentControl)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CircuitSegmentControl::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete identifiedobject_;
-  if (this != internal_default_instance()) delete check_;
-  if (this != internal_default_instance()) delete circuitsegmentcontroldcsc_;
+inline void CircuitSegmentControl::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.identifiedobject_;
+  if (this != internal_default_instance()) delete _impl_.check_;
+  if (this != internal_default_instance()) delete _impl_.circuitsegmentcontroldcsc_;
 }
 
-void CircuitSegmentControl::ArenaDtor(void* object) {
-  CircuitSegmentControl* _this = reinterpret_cast< CircuitSegmentControl* >(object);
-  (void)_this;
-}
-void CircuitSegmentControl::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CircuitSegmentControl::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CircuitSegmentControl::Clear() {
 // @@protoc_insertion_point(message_clear_start:circuitsegmentservicemodule.CircuitSegmentControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && identifiedobject_ != nullptr) {
-    delete identifiedobject_;
+  if (GetArenaForAllocation() == nullptr && _impl_.identifiedobject_ != nullptr) {
+    delete _impl_.identifiedobject_;
   }
-  identifiedobject_ = nullptr;
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  _impl_.identifiedobject_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
-  if (GetArena() == nullptr && circuitsegmentcontroldcsc_ != nullptr) {
-    delete circuitsegmentcontroldcsc_;
+  _impl_.check_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.circuitsegmentcontroldcsc_ != nullptr) {
+    delete _impl_.circuitsegmentcontroldcsc_;
   }
-  circuitsegmentcontroldcsc_ = nullptr;
+  _impl_.circuitsegmentcontroldcsc_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CircuitSegmentControl::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CircuitSegmentControl::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_identifiedobject(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.CheckConditions check = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .circuitsegmentservicemodule.CircuitSegmentControlDCSC circuitSegmentControlDCSC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_circuitsegmentcontroldcsc(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CircuitSegmentControl::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CircuitSegmentControl::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:circuitsegmentservicemodule.CircuitSegmentControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
-  if (this->has_identifiedobject()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_identifiedobject()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::identifiedobject(this), target, stream);
+      InternalWriteMessage(1, _Internal::identifiedobject(this),
+        _Internal::identifiedobject(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_check()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::check(this), target, stream);
+      InternalWriteMessage(2, _Internal::check(this),
+        _Internal::check(this).GetCachedSize(), target, stream);
   }
 
   // .circuitsegmentservicemodule.CircuitSegmentControlDCSC circuitSegmentControlDCSC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_circuitsegmentcontroldcsc()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_circuitsegmentcontroldcsc()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::circuitsegmentcontroldcsc(this), target, stream);
+      InternalWriteMessage(3, _Internal::circuitsegmentcontroldcsc(this),
+        _Internal::circuitsegmentcontroldcsc(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:circuitsegmentservicemodule.CircuitSegmentControl)
   return target;
 }
 
-size_t CircuitSegmentControl::ByteSizeLong() const {
+::size_t CircuitSegmentControl::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:circuitsegmentservicemodule.CircuitSegmentControl)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
-  if (this->has_identifiedobject()) {
+  if (this->_internal_has_identifiedobject()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *identifiedobject_);
+        *_impl_.identifiedobject_);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
+  if (this->_internal_has_check()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *check_);
+        *_impl_.check_);
   }
 
   // .circuitsegmentservicemodule.CircuitSegmentControlDCSC circuitSegmentControlDCSC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_circuitsegmentcontroldcsc()) {
+  if (this->_internal_has_circuitsegmentcontroldcsc()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *circuitsegmentcontroldcsc_);
+        *_impl_.circuitsegmentcontroldcsc_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CircuitSegmentControl::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:circuitsegmentservicemodule.CircuitSegmentControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CircuitSegmentControl* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CircuitSegmentControl>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:circuitsegmentservicemodule.CircuitSegmentControl)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:circuitsegmentservicemodule.CircuitSegmentControl)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CircuitSegmentControl::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CircuitSegmentControl::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CircuitSegmentControl::GetClassData() const { return &_class_data_; }
 
-void CircuitSegmentControl::MergeFrom(const CircuitSegmentControl& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.CircuitSegmentControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CircuitSegmentControl::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CircuitSegmentControl*>(&to_msg);
+  auto& from = static_cast<const CircuitSegmentControl&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.CircuitSegmentControl)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_identifiedobject()) {
-    _internal_mutable_identifiedobject()->::commonmodule::IdentifiedObject::MergeFrom(from._internal_identifiedobject());
+  if (from._internal_has_identifiedobject()) {
+    _this->_internal_mutable_identifiedobject()->::commonmodule::IdentifiedObject::MergeFrom(
+        from._internal_identifiedobject());
   }
-  if (from.has_check()) {
-    _internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(from._internal_check());
+  if (from._internal_has_check()) {
+    _this->_internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(
+        from._internal_check());
   }
-  if (from.has_circuitsegmentcontroldcsc()) {
-    _internal_mutable_circuitsegmentcontroldcsc()->::circuitsegmentservicemodule::CircuitSegmentControlDCSC::MergeFrom(from._internal_circuitsegmentcontroldcsc());
+  if (from._internal_has_circuitsegmentcontroldcsc()) {
+    _this->_internal_mutable_circuitsegmentcontroldcsc()->::circuitsegmentservicemodule::CircuitSegmentControlDCSC::MergeFrom(
+        from._internal_circuitsegmentcontroldcsc());
   }
-}
-
-void CircuitSegmentControl::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:circuitsegmentservicemodule.CircuitSegmentControl)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CircuitSegmentControl::CopyFrom(const CircuitSegmentControl& from) {
@@ -1467,20 +1493,20 @@ bool CircuitSegmentControl::IsInitialized() const {
 
 void CircuitSegmentControl::InternalSwap(CircuitSegmentControl* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CircuitSegmentControl, circuitsegmentcontroldcsc_)
-      + sizeof(CircuitSegmentControl::circuitsegmentcontroldcsc_)
-      - PROTOBUF_FIELD_OFFSET(CircuitSegmentControl, identifiedobject_)>(
-          reinterpret_cast<char*>(&identifiedobject_),
-          reinterpret_cast<char*>(&other->identifiedobject_));
+      PROTOBUF_FIELD_OFFSET(CircuitSegmentControl, _impl_.circuitsegmentcontroldcsc_)
+      + sizeof(CircuitSegmentControl::_impl_.circuitsegmentcontroldcsc_)
+      - PROTOBUF_FIELD_OFFSET(CircuitSegmentControl, _impl_.identifiedobject_)>(
+          reinterpret_cast<char*>(&_impl_.identifiedobject_),
+          reinterpret_cast<char*>(&other->_impl_.identifiedobject_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CircuitSegmentControl::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_getter, &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_once,
+      file_level_metadata_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto[3]);
 }
-
-
 // ===================================================================
 
 class CircuitSegmentControlProfile::_Internal {
@@ -1492,270 +1518,257 @@ class CircuitSegmentControlProfile::_Internal {
 
 const ::commonmodule::ControlMessageInfo&
 CircuitSegmentControlProfile::_Internal::controlmessageinfo(const CircuitSegmentControlProfile* msg) {
-  return *msg->controlmessageinfo_;
+  return *msg->_impl_.controlmessageinfo_;
 }
 const ::commonmodule::ApplicationSystem&
 CircuitSegmentControlProfile::_Internal::applicationsystem(const CircuitSegmentControlProfile* msg) {
-  return *msg->applicationsystem_;
+  return *msg->_impl_.applicationsystem_;
 }
 const ::circuitsegmentservicemodule::CircuitSegmentControl&
 CircuitSegmentControlProfile::_Internal::circuitsegmentcontrol(const CircuitSegmentControlProfile* msg) {
-  return *msg->circuitsegmentcontrol_;
+  return *msg->_impl_.circuitsegmentcontrol_;
 }
 void CircuitSegmentControlProfile::clear_controlmessageinfo() {
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
+  _impl_.controlmessageinfo_ = nullptr;
 }
 void CircuitSegmentControlProfile::clear_applicationsystem() {
-  if (GetArena() == nullptr && applicationsystem_ != nullptr) {
-    delete applicationsystem_;
+  if (GetArenaForAllocation() == nullptr && _impl_.applicationsystem_ != nullptr) {
+    delete _impl_.applicationsystem_;
   }
-  applicationsystem_ = nullptr;
+  _impl_.applicationsystem_ = nullptr;
 }
 CircuitSegmentControlProfile::CircuitSegmentControlProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:circuitsegmentservicemodule.CircuitSegmentControlProfile)
 }
 CircuitSegmentControlProfile::CircuitSegmentControlProfile(const CircuitSegmentControlProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CircuitSegmentControlProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.applicationsystem_){nullptr}
+    , decltype(_impl_.circuitsegmentcontrol_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlmessageinfo()) {
-    controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
-  } else {
-    controlmessageinfo_ = nullptr;
+    _this->_impl_.controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from._impl_.controlmessageinfo_);
   }
   if (from._internal_has_applicationsystem()) {
-    applicationsystem_ = new ::commonmodule::ApplicationSystem(*from.applicationsystem_);
-  } else {
-    applicationsystem_ = nullptr;
+    _this->_impl_.applicationsystem_ = new ::commonmodule::ApplicationSystem(*from._impl_.applicationsystem_);
   }
   if (from._internal_has_circuitsegmentcontrol()) {
-    circuitsegmentcontrol_ = new ::circuitsegmentservicemodule::CircuitSegmentControl(*from.circuitsegmentcontrol_);
-  } else {
-    circuitsegmentcontrol_ = nullptr;
+    _this->_impl_.circuitsegmentcontrol_ = new ::circuitsegmentservicemodule::CircuitSegmentControl(*from._impl_.circuitsegmentcontrol_);
   }
   // @@protoc_insertion_point(copy_constructor:circuitsegmentservicemodule.CircuitSegmentControlProfile)
 }
 
-void CircuitSegmentControlProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&circuitsegmentcontrol_) -
-    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(circuitsegmentcontrol_));
+inline void CircuitSegmentControlProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.applicationsystem_){nullptr}
+    , decltype(_impl_.circuitsegmentcontrol_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CircuitSegmentControlProfile::~CircuitSegmentControlProfile() {
   // @@protoc_insertion_point(destructor:circuitsegmentservicemodule.CircuitSegmentControlProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CircuitSegmentControlProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete applicationsystem_;
-  if (this != internal_default_instance()) delete circuitsegmentcontrol_;
+inline void CircuitSegmentControlProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.applicationsystem_;
+  if (this != internal_default_instance()) delete _impl_.circuitsegmentcontrol_;
 }
 
-void CircuitSegmentControlProfile::ArenaDtor(void* object) {
-  CircuitSegmentControlProfile* _this = reinterpret_cast< CircuitSegmentControlProfile* >(object);
-  (void)_this;
-}
-void CircuitSegmentControlProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CircuitSegmentControlProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CircuitSegmentControlProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:circuitsegmentservicemodule.CircuitSegmentControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && applicationsystem_ != nullptr) {
-    delete applicationsystem_;
+  _impl_.controlmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.applicationsystem_ != nullptr) {
+    delete _impl_.applicationsystem_;
   }
-  applicationsystem_ = nullptr;
-  if (GetArena() == nullptr && circuitsegmentcontrol_ != nullptr) {
-    delete circuitsegmentcontrol_;
+  _impl_.applicationsystem_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.circuitsegmentcontrol_ != nullptr) {
+    delete _impl_.circuitsegmentcontrol_;
   }
-  circuitsegmentcontrol_ = nullptr;
+  _impl_.circuitsegmentcontrol_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CircuitSegmentControlProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CircuitSegmentControlProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ApplicationSystem applicationSystem = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_applicationsystem(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .circuitsegmentservicemodule.CircuitSegmentControl circuitSegmentControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_circuitsegmentcontrol(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CircuitSegmentControlProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CircuitSegmentControlProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:circuitsegmentservicemodule.CircuitSegmentControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlmessageinfo(this),
+        _Internal::controlmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ApplicationSystem applicationSystem = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_applicationsystem()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_applicationsystem()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::applicationsystem(this), target, stream);
+      InternalWriteMessage(2, _Internal::applicationsystem(this),
+        _Internal::applicationsystem(this).GetCachedSize(), target, stream);
   }
 
   // .circuitsegmentservicemodule.CircuitSegmentControl circuitSegmentControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_circuitsegmentcontrol()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_circuitsegmentcontrol()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::circuitsegmentcontrol(this), target, stream);
+      InternalWriteMessage(3, _Internal::circuitsegmentcontrol(this),
+        _Internal::circuitsegmentcontrol(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:circuitsegmentservicemodule.CircuitSegmentControlProfile)
   return target;
 }
 
-size_t CircuitSegmentControlProfile::ByteSizeLong() const {
+::size_t CircuitSegmentControlProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:circuitsegmentservicemodule.CircuitSegmentControlProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
+  if (this->_internal_has_controlmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlmessageinfo_);
+        *_impl_.controlmessageinfo_);
   }
 
   // .commonmodule.ApplicationSystem applicationSystem = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_applicationsystem()) {
+  if (this->_internal_has_applicationsystem()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *applicationsystem_);
+        *_impl_.applicationsystem_);
   }
 
   // .circuitsegmentservicemodule.CircuitSegmentControl circuitSegmentControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_circuitsegmentcontrol()) {
+  if (this->_internal_has_circuitsegmentcontrol()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *circuitsegmentcontrol_);
+        *_impl_.circuitsegmentcontrol_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CircuitSegmentControlProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:circuitsegmentservicemodule.CircuitSegmentControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CircuitSegmentControlProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CircuitSegmentControlProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:circuitsegmentservicemodule.CircuitSegmentControlProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:circuitsegmentservicemodule.CircuitSegmentControlProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CircuitSegmentControlProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CircuitSegmentControlProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CircuitSegmentControlProfile::GetClassData() const { return &_class_data_; }
 
-void CircuitSegmentControlProfile::MergeFrom(const CircuitSegmentControlProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.CircuitSegmentControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CircuitSegmentControlProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CircuitSegmentControlProfile*>(&to_msg);
+  auto& from = static_cast<const CircuitSegmentControlProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.CircuitSegmentControlProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlmessageinfo()) {
-    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
+  if (from._internal_has_controlmessageinfo()) {
+    _this->_internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(
+        from._internal_controlmessageinfo());
   }
-  if (from.has_applicationsystem()) {
-    _internal_mutable_applicationsystem()->::commonmodule::ApplicationSystem::MergeFrom(from._internal_applicationsystem());
+  if (from._internal_has_applicationsystem()) {
+    _this->_internal_mutable_applicationsystem()->::commonmodule::ApplicationSystem::MergeFrom(
+        from._internal_applicationsystem());
   }
-  if (from.has_circuitsegmentcontrol()) {
-    _internal_mutable_circuitsegmentcontrol()->::circuitsegmentservicemodule::CircuitSegmentControl::MergeFrom(from._internal_circuitsegmentcontrol());
+  if (from._internal_has_circuitsegmentcontrol()) {
+    _this->_internal_mutable_circuitsegmentcontrol()->::circuitsegmentservicemodule::CircuitSegmentControl::MergeFrom(
+        from._internal_circuitsegmentcontrol());
   }
-}
-
-void CircuitSegmentControlProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:circuitsegmentservicemodule.CircuitSegmentControlProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CircuitSegmentControlProfile::CopyFrom(const CircuitSegmentControlProfile& from) {
@@ -1771,20 +1784,20 @@ bool CircuitSegmentControlProfile::IsInitialized() const {
 
 void CircuitSegmentControlProfile::InternalSwap(CircuitSegmentControlProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CircuitSegmentControlProfile, circuitsegmentcontrol_)
-      + sizeof(CircuitSegmentControlProfile::circuitsegmentcontrol_)
-      - PROTOBUF_FIELD_OFFSET(CircuitSegmentControlProfile, controlmessageinfo_)>(
-          reinterpret_cast<char*>(&controlmessageinfo_),
-          reinterpret_cast<char*>(&other->controlmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(CircuitSegmentControlProfile, _impl_.circuitsegmentcontrol_)
+      + sizeof(CircuitSegmentControlProfile::_impl_.circuitsegmentcontrol_)
+      - PROTOBUF_FIELD_OFFSET(CircuitSegmentControlProfile, _impl_.controlmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.controlmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.controlmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CircuitSegmentControlProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_getter, &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_once,
+      file_level_metadata_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto[4]);
 }
-
-
 // ===================================================================
 
 class CircuitSegmentEventDCSC::_Internal {
@@ -1801,495 +1814,492 @@ class CircuitSegmentEventDCSC::_Internal {
 
 const ::commonmodule::LogicalNode&
 CircuitSegmentEventDCSC::_Internal::logicalnode(const CircuitSegmentEventDCSC* msg) {
-  return *msg->logicalnode_;
+  return *msg->_impl_.logicalnode_;
 }
 const ::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind&
 CircuitSegmentEventDCSC::_Internal::circuitsegmentservicemode(const CircuitSegmentEventDCSC* msg) {
-  return *msg->circuitsegmentservicemode_;
+  return *msg->_impl_.circuitsegmentservicemode_;
 }
 const ::commonmodule::StatusSPS&
 CircuitSegmentEventDCSC::_Internal::island(const CircuitSegmentEventDCSC* msg) {
-  return *msg->island_;
+  return *msg->_impl_.island_;
 }
 const ::commonmodule::StatusSPS&
 CircuitSegmentEventDCSC::_Internal::permissibleauto(const CircuitSegmentEventDCSC* msg) {
-  return *msg->permissibleauto_;
+  return *msg->_impl_.permissibleauto_;
 }
 const ::commonmodule::StatusSPS&
 CircuitSegmentEventDCSC::_Internal::permissiblemanual(const CircuitSegmentEventDCSC* msg) {
-  return *msg->permissiblemanual_;
+  return *msg->_impl_.permissiblemanual_;
 }
 const ::commonmodule::StatusSPS&
 CircuitSegmentEventDCSC::_Internal::permissiblenetzero(const CircuitSegmentEventDCSC* msg) {
-  return *msg->permissiblenetzero_;
+  return *msg->_impl_.permissiblenetzero_;
 }
 const ::commonmodule::StatusSPS&
 CircuitSegmentEventDCSC::_Internal::permissiblestart(const CircuitSegmentEventDCSC* msg) {
-  return *msg->permissiblestart_;
+  return *msg->_impl_.permissiblestart_;
 }
 const ::commonmodule::StatusSPS&
 CircuitSegmentEventDCSC::_Internal::permissiblestop(const CircuitSegmentEventDCSC* msg) {
-  return *msg->permissiblestop_;
+  return *msg->_impl_.permissiblestop_;
 }
 void CircuitSegmentEventDCSC::clear_logicalnode() {
-  if (GetArena() == nullptr && logicalnode_ != nullptr) {
-    delete logicalnode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnode_ != nullptr) {
+    delete _impl_.logicalnode_;
   }
-  logicalnode_ = nullptr;
+  _impl_.logicalnode_ = nullptr;
 }
 void CircuitSegmentEventDCSC::clear_island() {
-  if (GetArena() == nullptr && island_ != nullptr) {
-    delete island_;
+  if (GetArenaForAllocation() == nullptr && _impl_.island_ != nullptr) {
+    delete _impl_.island_;
   }
-  island_ = nullptr;
+  _impl_.island_ = nullptr;
 }
 void CircuitSegmentEventDCSC::clear_permissibleauto() {
-  if (GetArena() == nullptr && permissibleauto_ != nullptr) {
-    delete permissibleauto_;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissibleauto_ != nullptr) {
+    delete _impl_.permissibleauto_;
   }
-  permissibleauto_ = nullptr;
+  _impl_.permissibleauto_ = nullptr;
 }
 void CircuitSegmentEventDCSC::clear_permissiblemanual() {
-  if (GetArena() == nullptr && permissiblemanual_ != nullptr) {
-    delete permissiblemanual_;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissiblemanual_ != nullptr) {
+    delete _impl_.permissiblemanual_;
   }
-  permissiblemanual_ = nullptr;
+  _impl_.permissiblemanual_ = nullptr;
 }
 void CircuitSegmentEventDCSC::clear_permissiblenetzero() {
-  if (GetArena() == nullptr && permissiblenetzero_ != nullptr) {
-    delete permissiblenetzero_;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissiblenetzero_ != nullptr) {
+    delete _impl_.permissiblenetzero_;
   }
-  permissiblenetzero_ = nullptr;
+  _impl_.permissiblenetzero_ = nullptr;
 }
 void CircuitSegmentEventDCSC::clear_permissiblestart() {
-  if (GetArena() == nullptr && permissiblestart_ != nullptr) {
-    delete permissiblestart_;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissiblestart_ != nullptr) {
+    delete _impl_.permissiblestart_;
   }
-  permissiblestart_ = nullptr;
+  _impl_.permissiblestart_ = nullptr;
 }
 void CircuitSegmentEventDCSC::clear_permissiblestop() {
-  if (GetArena() == nullptr && permissiblestop_ != nullptr) {
-    delete permissiblestop_;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissiblestop_ != nullptr) {
+    delete _impl_.permissiblestop_;
   }
-  permissiblestop_ = nullptr;
+  _impl_.permissiblestop_ = nullptr;
 }
 CircuitSegmentEventDCSC::CircuitSegmentEventDCSC(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:circuitsegmentservicemodule.CircuitSegmentEventDCSC)
 }
 CircuitSegmentEventDCSC::CircuitSegmentEventDCSC(const CircuitSegmentEventDCSC& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CircuitSegmentEventDCSC* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnode_){nullptr}
+    , decltype(_impl_.circuitsegmentservicemode_){nullptr}
+    , decltype(_impl_.island_){nullptr}
+    , decltype(_impl_.permissibleauto_){nullptr}
+    , decltype(_impl_.permissiblemanual_){nullptr}
+    , decltype(_impl_.permissiblenetzero_){nullptr}
+    , decltype(_impl_.permissiblestart_){nullptr}
+    , decltype(_impl_.permissiblestop_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_logicalnode()) {
-    logicalnode_ = new ::commonmodule::LogicalNode(*from.logicalnode_);
-  } else {
-    logicalnode_ = nullptr;
+    _this->_impl_.logicalnode_ = new ::commonmodule::LogicalNode(*from._impl_.logicalnode_);
   }
   if (from._internal_has_circuitsegmentservicemode()) {
-    circuitsegmentservicemode_ = new ::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind(*from.circuitsegmentservicemode_);
-  } else {
-    circuitsegmentservicemode_ = nullptr;
+    _this->_impl_.circuitsegmentservicemode_ = new ::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind(*from._impl_.circuitsegmentservicemode_);
   }
   if (from._internal_has_island()) {
-    island_ = new ::commonmodule::StatusSPS(*from.island_);
-  } else {
-    island_ = nullptr;
+    _this->_impl_.island_ = new ::commonmodule::StatusSPS(*from._impl_.island_);
   }
   if (from._internal_has_permissibleauto()) {
-    permissibleauto_ = new ::commonmodule::StatusSPS(*from.permissibleauto_);
-  } else {
-    permissibleauto_ = nullptr;
+    _this->_impl_.permissibleauto_ = new ::commonmodule::StatusSPS(*from._impl_.permissibleauto_);
   }
   if (from._internal_has_permissiblemanual()) {
-    permissiblemanual_ = new ::commonmodule::StatusSPS(*from.permissiblemanual_);
-  } else {
-    permissiblemanual_ = nullptr;
+    _this->_impl_.permissiblemanual_ = new ::commonmodule::StatusSPS(*from._impl_.permissiblemanual_);
   }
   if (from._internal_has_permissiblenetzero()) {
-    permissiblenetzero_ = new ::commonmodule::StatusSPS(*from.permissiblenetzero_);
-  } else {
-    permissiblenetzero_ = nullptr;
+    _this->_impl_.permissiblenetzero_ = new ::commonmodule::StatusSPS(*from._impl_.permissiblenetzero_);
   }
   if (from._internal_has_permissiblestart()) {
-    permissiblestart_ = new ::commonmodule::StatusSPS(*from.permissiblestart_);
-  } else {
-    permissiblestart_ = nullptr;
+    _this->_impl_.permissiblestart_ = new ::commonmodule::StatusSPS(*from._impl_.permissiblestart_);
   }
   if (from._internal_has_permissiblestop()) {
-    permissiblestop_ = new ::commonmodule::StatusSPS(*from.permissiblestop_);
-  } else {
-    permissiblestop_ = nullptr;
+    _this->_impl_.permissiblestop_ = new ::commonmodule::StatusSPS(*from._impl_.permissiblestop_);
   }
   // @@protoc_insertion_point(copy_constructor:circuitsegmentservicemodule.CircuitSegmentEventDCSC)
 }
 
-void CircuitSegmentEventDCSC::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnode_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&permissiblestop_) -
-    reinterpret_cast<char*>(&logicalnode_)) + sizeof(permissiblestop_));
+inline void CircuitSegmentEventDCSC::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnode_){nullptr}
+    , decltype(_impl_.circuitsegmentservicemode_){nullptr}
+    , decltype(_impl_.island_){nullptr}
+    , decltype(_impl_.permissibleauto_){nullptr}
+    , decltype(_impl_.permissiblemanual_){nullptr}
+    , decltype(_impl_.permissiblenetzero_){nullptr}
+    , decltype(_impl_.permissiblestart_){nullptr}
+    , decltype(_impl_.permissiblestop_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CircuitSegmentEventDCSC::~CircuitSegmentEventDCSC() {
   // @@protoc_insertion_point(destructor:circuitsegmentservicemodule.CircuitSegmentEventDCSC)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CircuitSegmentEventDCSC::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete logicalnode_;
-  if (this != internal_default_instance()) delete circuitsegmentservicemode_;
-  if (this != internal_default_instance()) delete island_;
-  if (this != internal_default_instance()) delete permissibleauto_;
-  if (this != internal_default_instance()) delete permissiblemanual_;
-  if (this != internal_default_instance()) delete permissiblenetzero_;
-  if (this != internal_default_instance()) delete permissiblestart_;
-  if (this != internal_default_instance()) delete permissiblestop_;
+inline void CircuitSegmentEventDCSC::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.logicalnode_;
+  if (this != internal_default_instance()) delete _impl_.circuitsegmentservicemode_;
+  if (this != internal_default_instance()) delete _impl_.island_;
+  if (this != internal_default_instance()) delete _impl_.permissibleauto_;
+  if (this != internal_default_instance()) delete _impl_.permissiblemanual_;
+  if (this != internal_default_instance()) delete _impl_.permissiblenetzero_;
+  if (this != internal_default_instance()) delete _impl_.permissiblestart_;
+  if (this != internal_default_instance()) delete _impl_.permissiblestop_;
 }
 
-void CircuitSegmentEventDCSC::ArenaDtor(void* object) {
-  CircuitSegmentEventDCSC* _this = reinterpret_cast< CircuitSegmentEventDCSC* >(object);
-  (void)_this;
-}
-void CircuitSegmentEventDCSC::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CircuitSegmentEventDCSC::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CircuitSegmentEventDCSC::Clear() {
 // @@protoc_insertion_point(message_clear_start:circuitsegmentservicemodule.CircuitSegmentEventDCSC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && logicalnode_ != nullptr) {
-    delete logicalnode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnode_ != nullptr) {
+    delete _impl_.logicalnode_;
   }
-  logicalnode_ = nullptr;
-  if (GetArena() == nullptr && circuitsegmentservicemode_ != nullptr) {
-    delete circuitsegmentservicemode_;
+  _impl_.logicalnode_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.circuitsegmentservicemode_ != nullptr) {
+    delete _impl_.circuitsegmentservicemode_;
   }
-  circuitsegmentservicemode_ = nullptr;
-  if (GetArena() == nullptr && island_ != nullptr) {
-    delete island_;
+  _impl_.circuitsegmentservicemode_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.island_ != nullptr) {
+    delete _impl_.island_;
   }
-  island_ = nullptr;
-  if (GetArena() == nullptr && permissibleauto_ != nullptr) {
-    delete permissibleauto_;
+  _impl_.island_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissibleauto_ != nullptr) {
+    delete _impl_.permissibleauto_;
   }
-  permissibleauto_ = nullptr;
-  if (GetArena() == nullptr && permissiblemanual_ != nullptr) {
-    delete permissiblemanual_;
+  _impl_.permissibleauto_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissiblemanual_ != nullptr) {
+    delete _impl_.permissiblemanual_;
   }
-  permissiblemanual_ = nullptr;
-  if (GetArena() == nullptr && permissiblenetzero_ != nullptr) {
-    delete permissiblenetzero_;
+  _impl_.permissiblemanual_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissiblenetzero_ != nullptr) {
+    delete _impl_.permissiblenetzero_;
   }
-  permissiblenetzero_ = nullptr;
-  if (GetArena() == nullptr && permissiblestart_ != nullptr) {
-    delete permissiblestart_;
+  _impl_.permissiblenetzero_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissiblestart_ != nullptr) {
+    delete _impl_.permissiblestart_;
   }
-  permissiblestart_ = nullptr;
-  if (GetArena() == nullptr && permissiblestop_ != nullptr) {
-    delete permissiblestop_;
+  _impl_.permissiblestart_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissiblestop_ != nullptr) {
+    delete _impl_.permissiblestop_;
   }
-  permissiblestop_ = nullptr;
+  _impl_.permissiblestop_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CircuitSegmentEventDCSC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CircuitSegmentEventDCSC::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_logicalnode(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind CircuitSegmentServiceMode = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_circuitsegmentservicemode(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS Island = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_island(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS PermissibleAuto = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_permissibleauto(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS PermissibleManual = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_permissiblemanual(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS PermissibleNetzero = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_permissiblenetzero(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS PermissibleStart = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_permissiblestart(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS PermissibleStop = 8;
       case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 66)) {
           ptr = ctx->ParseMessage(_internal_mutable_permissiblestop(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CircuitSegmentEventDCSC::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CircuitSegmentEventDCSC::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:circuitsegmentservicemodule.CircuitSegmentEventDCSC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnode()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_logicalnode()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnode(this), target, stream);
+      InternalWriteMessage(1, _Internal::logicalnode(this),
+        _Internal::logicalnode(this).GetCachedSize(), target, stream);
   }
 
   // .circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind CircuitSegmentServiceMode = 2;
-  if (this->has_circuitsegmentservicemode()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_circuitsegmentservicemode()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::circuitsegmentservicemode(this), target, stream);
+      InternalWriteMessage(2, _Internal::circuitsegmentservicemode(this),
+        _Internal::circuitsegmentservicemode(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS Island = 3;
-  if (this->has_island()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_island()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::island(this), target, stream);
+      InternalWriteMessage(3, _Internal::island(this),
+        _Internal::island(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS PermissibleAuto = 4;
-  if (this->has_permissibleauto()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_permissibleauto()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::permissibleauto(this), target, stream);
+      InternalWriteMessage(4, _Internal::permissibleauto(this),
+        _Internal::permissibleauto(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS PermissibleManual = 5;
-  if (this->has_permissiblemanual()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_permissiblemanual()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::permissiblemanual(this), target, stream);
+      InternalWriteMessage(5, _Internal::permissiblemanual(this),
+        _Internal::permissiblemanual(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS PermissibleNetzero = 6;
-  if (this->has_permissiblenetzero()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_permissiblenetzero()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::permissiblenetzero(this), target, stream);
+      InternalWriteMessage(6, _Internal::permissiblenetzero(this),
+        _Internal::permissiblenetzero(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS PermissibleStart = 7;
-  if (this->has_permissiblestart()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_permissiblestart()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::permissiblestart(this), target, stream);
+      InternalWriteMessage(7, _Internal::permissiblestart(this),
+        _Internal::permissiblestart(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS PermissibleStop = 8;
-  if (this->has_permissiblestop()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_permissiblestop()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::permissiblestop(this), target, stream);
+      InternalWriteMessage(8, _Internal::permissiblestop(this),
+        _Internal::permissiblestop(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:circuitsegmentservicemodule.CircuitSegmentEventDCSC)
   return target;
 }
 
-size_t CircuitSegmentEventDCSC::ByteSizeLong() const {
+::size_t CircuitSegmentEventDCSC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:circuitsegmentservicemodule.CircuitSegmentEventDCSC)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnode()) {
+  if (this->_internal_has_logicalnode()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *logicalnode_);
+        *_impl_.logicalnode_);
   }
 
   // .circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind CircuitSegmentServiceMode = 2;
-  if (this->has_circuitsegmentservicemode()) {
+  if (this->_internal_has_circuitsegmentservicemode()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *circuitsegmentservicemode_);
+        *_impl_.circuitsegmentservicemode_);
   }
 
   // .commonmodule.StatusSPS Island = 3;
-  if (this->has_island()) {
+  if (this->_internal_has_island()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *island_);
+        *_impl_.island_);
   }
 
   // .commonmodule.StatusSPS PermissibleAuto = 4;
-  if (this->has_permissibleauto()) {
+  if (this->_internal_has_permissibleauto()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *permissibleauto_);
+        *_impl_.permissibleauto_);
   }
 
   // .commonmodule.StatusSPS PermissibleManual = 5;
-  if (this->has_permissiblemanual()) {
+  if (this->_internal_has_permissiblemanual()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *permissiblemanual_);
+        *_impl_.permissiblemanual_);
   }
 
   // .commonmodule.StatusSPS PermissibleNetzero = 6;
-  if (this->has_permissiblenetzero()) {
+  if (this->_internal_has_permissiblenetzero()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *permissiblenetzero_);
+        *_impl_.permissiblenetzero_);
   }
 
   // .commonmodule.StatusSPS PermissibleStart = 7;
-  if (this->has_permissiblestart()) {
+  if (this->_internal_has_permissiblestart()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *permissiblestart_);
+        *_impl_.permissiblestart_);
   }
 
   // .commonmodule.StatusSPS PermissibleStop = 8;
-  if (this->has_permissiblestop()) {
+  if (this->_internal_has_permissiblestop()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *permissiblestop_);
+        *_impl_.permissiblestop_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CircuitSegmentEventDCSC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:circuitsegmentservicemodule.CircuitSegmentEventDCSC)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CircuitSegmentEventDCSC* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CircuitSegmentEventDCSC>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:circuitsegmentservicemodule.CircuitSegmentEventDCSC)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:circuitsegmentservicemodule.CircuitSegmentEventDCSC)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CircuitSegmentEventDCSC::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CircuitSegmentEventDCSC::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CircuitSegmentEventDCSC::GetClassData() const { return &_class_data_; }
 
-void CircuitSegmentEventDCSC::MergeFrom(const CircuitSegmentEventDCSC& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.CircuitSegmentEventDCSC)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CircuitSegmentEventDCSC::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CircuitSegmentEventDCSC*>(&to_msg);
+  auto& from = static_cast<const CircuitSegmentEventDCSC&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.CircuitSegmentEventDCSC)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_logicalnode()) {
-    _internal_mutable_logicalnode()->::commonmodule::LogicalNode::MergeFrom(from._internal_logicalnode());
+  if (from._internal_has_logicalnode()) {
+    _this->_internal_mutable_logicalnode()->::commonmodule::LogicalNode::MergeFrom(
+        from._internal_logicalnode());
   }
-  if (from.has_circuitsegmentservicemode()) {
-    _internal_mutable_circuitsegmentservicemode()->::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind::MergeFrom(from._internal_circuitsegmentservicemode());
+  if (from._internal_has_circuitsegmentservicemode()) {
+    _this->_internal_mutable_circuitsegmentservicemode()->::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind::MergeFrom(
+        from._internal_circuitsegmentservicemode());
   }
-  if (from.has_island()) {
-    _internal_mutable_island()->::commonmodule::StatusSPS::MergeFrom(from._internal_island());
+  if (from._internal_has_island()) {
+    _this->_internal_mutable_island()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_island());
   }
-  if (from.has_permissibleauto()) {
-    _internal_mutable_permissibleauto()->::commonmodule::StatusSPS::MergeFrom(from._internal_permissibleauto());
+  if (from._internal_has_permissibleauto()) {
+    _this->_internal_mutable_permissibleauto()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_permissibleauto());
   }
-  if (from.has_permissiblemanual()) {
-    _internal_mutable_permissiblemanual()->::commonmodule::StatusSPS::MergeFrom(from._internal_permissiblemanual());
+  if (from._internal_has_permissiblemanual()) {
+    _this->_internal_mutable_permissiblemanual()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_permissiblemanual());
   }
-  if (from.has_permissiblenetzero()) {
-    _internal_mutable_permissiblenetzero()->::commonmodule::StatusSPS::MergeFrom(from._internal_permissiblenetzero());
+  if (from._internal_has_permissiblenetzero()) {
+    _this->_internal_mutable_permissiblenetzero()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_permissiblenetzero());
   }
-  if (from.has_permissiblestart()) {
-    _internal_mutable_permissiblestart()->::commonmodule::StatusSPS::MergeFrom(from._internal_permissiblestart());
+  if (from._internal_has_permissiblestart()) {
+    _this->_internal_mutable_permissiblestart()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_permissiblestart());
   }
-  if (from.has_permissiblestop()) {
-    _internal_mutable_permissiblestop()->::commonmodule::StatusSPS::MergeFrom(from._internal_permissiblestop());
+  if (from._internal_has_permissiblestop()) {
+    _this->_internal_mutable_permissiblestop()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_permissiblestop());
   }
-}
-
-void CircuitSegmentEventDCSC::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:circuitsegmentservicemodule.CircuitSegmentEventDCSC)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CircuitSegmentEventDCSC::CopyFrom(const CircuitSegmentEventDCSC& from) {
@@ -2305,20 +2315,20 @@ bool CircuitSegmentEventDCSC::IsInitialized() const {
 
 void CircuitSegmentEventDCSC::InternalSwap(CircuitSegmentEventDCSC* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CircuitSegmentEventDCSC, permissiblestop_)
-      + sizeof(CircuitSegmentEventDCSC::permissiblestop_)
-      - PROTOBUF_FIELD_OFFSET(CircuitSegmentEventDCSC, logicalnode_)>(
-          reinterpret_cast<char*>(&logicalnode_),
-          reinterpret_cast<char*>(&other->logicalnode_));
+      PROTOBUF_FIELD_OFFSET(CircuitSegmentEventDCSC, _impl_.permissiblestop_)
+      + sizeof(CircuitSegmentEventDCSC::_impl_.permissiblestop_)
+      - PROTOBUF_FIELD_OFFSET(CircuitSegmentEventDCSC, _impl_.logicalnode_)>(
+          reinterpret_cast<char*>(&_impl_.logicalnode_),
+          reinterpret_cast<char*>(&other->_impl_.logicalnode_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CircuitSegmentEventDCSC::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_getter, &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_once,
+      file_level_metadata_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto[5]);
 }
-
-
 // ===================================================================
 
 class CircuitSegmentEvent::_Internal {
@@ -2329,225 +2339,210 @@ class CircuitSegmentEvent::_Internal {
 
 const ::commonmodule::IdentifiedObject&
 CircuitSegmentEvent::_Internal::identifiedobject(const CircuitSegmentEvent* msg) {
-  return *msg->identifiedobject_;
+  return *msg->_impl_.identifiedobject_;
 }
 const ::circuitsegmentservicemodule::CircuitSegmentEventDCSC&
 CircuitSegmentEvent::_Internal::circuitsegmenteventdcsc(const CircuitSegmentEvent* msg) {
-  return *msg->circuitsegmenteventdcsc_;
+  return *msg->_impl_.circuitsegmenteventdcsc_;
 }
 void CircuitSegmentEvent::clear_identifiedobject() {
-  if (GetArena() == nullptr && identifiedobject_ != nullptr) {
-    delete identifiedobject_;
+  if (GetArenaForAllocation() == nullptr && _impl_.identifiedobject_ != nullptr) {
+    delete _impl_.identifiedobject_;
   }
-  identifiedobject_ = nullptr;
+  _impl_.identifiedobject_ = nullptr;
 }
 CircuitSegmentEvent::CircuitSegmentEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:circuitsegmentservicemodule.CircuitSegmentEvent)
 }
 CircuitSegmentEvent::CircuitSegmentEvent(const CircuitSegmentEvent& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CircuitSegmentEvent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.identifiedobject_){nullptr}
+    , decltype(_impl_.circuitsegmenteventdcsc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_identifiedobject()) {
-    identifiedobject_ = new ::commonmodule::IdentifiedObject(*from.identifiedobject_);
-  } else {
-    identifiedobject_ = nullptr;
+    _this->_impl_.identifiedobject_ = new ::commonmodule::IdentifiedObject(*from._impl_.identifiedobject_);
   }
   if (from._internal_has_circuitsegmenteventdcsc()) {
-    circuitsegmenteventdcsc_ = new ::circuitsegmentservicemodule::CircuitSegmentEventDCSC(*from.circuitsegmenteventdcsc_);
-  } else {
-    circuitsegmenteventdcsc_ = nullptr;
+    _this->_impl_.circuitsegmenteventdcsc_ = new ::circuitsegmentservicemodule::CircuitSegmentEventDCSC(*from._impl_.circuitsegmenteventdcsc_);
   }
   // @@protoc_insertion_point(copy_constructor:circuitsegmentservicemodule.CircuitSegmentEvent)
 }
 
-void CircuitSegmentEvent::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&identifiedobject_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&circuitsegmenteventdcsc_) -
-    reinterpret_cast<char*>(&identifiedobject_)) + sizeof(circuitsegmenteventdcsc_));
+inline void CircuitSegmentEvent::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.identifiedobject_){nullptr}
+    , decltype(_impl_.circuitsegmenteventdcsc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CircuitSegmentEvent::~CircuitSegmentEvent() {
   // @@protoc_insertion_point(destructor:circuitsegmentservicemodule.CircuitSegmentEvent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CircuitSegmentEvent::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete identifiedobject_;
-  if (this != internal_default_instance()) delete circuitsegmenteventdcsc_;
+inline void CircuitSegmentEvent::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.identifiedobject_;
+  if (this != internal_default_instance()) delete _impl_.circuitsegmenteventdcsc_;
 }
 
-void CircuitSegmentEvent::ArenaDtor(void* object) {
-  CircuitSegmentEvent* _this = reinterpret_cast< CircuitSegmentEvent* >(object);
-  (void)_this;
-}
-void CircuitSegmentEvent::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CircuitSegmentEvent::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CircuitSegmentEvent::Clear() {
 // @@protoc_insertion_point(message_clear_start:circuitsegmentservicemodule.CircuitSegmentEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && identifiedobject_ != nullptr) {
-    delete identifiedobject_;
+  if (GetArenaForAllocation() == nullptr && _impl_.identifiedobject_ != nullptr) {
+    delete _impl_.identifiedobject_;
   }
-  identifiedobject_ = nullptr;
-  if (GetArena() == nullptr && circuitsegmenteventdcsc_ != nullptr) {
-    delete circuitsegmenteventdcsc_;
+  _impl_.identifiedobject_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.circuitsegmenteventdcsc_ != nullptr) {
+    delete _impl_.circuitsegmenteventdcsc_;
   }
-  circuitsegmenteventdcsc_ = nullptr;
+  _impl_.circuitsegmenteventdcsc_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CircuitSegmentEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CircuitSegmentEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_identifiedobject(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .circuitsegmentservicemodule.CircuitSegmentEventDCSC circuitSegmentEventDCSC = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_circuitsegmenteventdcsc(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CircuitSegmentEvent::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CircuitSegmentEvent::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:circuitsegmentservicemodule.CircuitSegmentEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
-  if (this->has_identifiedobject()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_identifiedobject()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::identifiedobject(this), target, stream);
+      InternalWriteMessage(1, _Internal::identifiedobject(this),
+        _Internal::identifiedobject(this).GetCachedSize(), target, stream);
   }
 
   // .circuitsegmentservicemodule.CircuitSegmentEventDCSC circuitSegmentEventDCSC = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_circuitsegmenteventdcsc()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_circuitsegmenteventdcsc()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::circuitsegmenteventdcsc(this), target, stream);
+      InternalWriteMessage(2, _Internal::circuitsegmenteventdcsc(this),
+        _Internal::circuitsegmenteventdcsc(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:circuitsegmentservicemodule.CircuitSegmentEvent)
   return target;
 }
 
-size_t CircuitSegmentEvent::ByteSizeLong() const {
+::size_t CircuitSegmentEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:circuitsegmentservicemodule.CircuitSegmentEvent)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
-  if (this->has_identifiedobject()) {
+  if (this->_internal_has_identifiedobject()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *identifiedobject_);
+        *_impl_.identifiedobject_);
   }
 
   // .circuitsegmentservicemodule.CircuitSegmentEventDCSC circuitSegmentEventDCSC = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_circuitsegmenteventdcsc()) {
+  if (this->_internal_has_circuitsegmenteventdcsc()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *circuitsegmenteventdcsc_);
+        *_impl_.circuitsegmenteventdcsc_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CircuitSegmentEvent::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:circuitsegmentservicemodule.CircuitSegmentEvent)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CircuitSegmentEvent* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CircuitSegmentEvent>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:circuitsegmentservicemodule.CircuitSegmentEvent)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:circuitsegmentservicemodule.CircuitSegmentEvent)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CircuitSegmentEvent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CircuitSegmentEvent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CircuitSegmentEvent::GetClassData() const { return &_class_data_; }
 
-void CircuitSegmentEvent::MergeFrom(const CircuitSegmentEvent& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.CircuitSegmentEvent)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CircuitSegmentEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CircuitSegmentEvent*>(&to_msg);
+  auto& from = static_cast<const CircuitSegmentEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.CircuitSegmentEvent)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_identifiedobject()) {
-    _internal_mutable_identifiedobject()->::commonmodule::IdentifiedObject::MergeFrom(from._internal_identifiedobject());
+  if (from._internal_has_identifiedobject()) {
+    _this->_internal_mutable_identifiedobject()->::commonmodule::IdentifiedObject::MergeFrom(
+        from._internal_identifiedobject());
   }
-  if (from.has_circuitsegmenteventdcsc()) {
-    _internal_mutable_circuitsegmenteventdcsc()->::circuitsegmentservicemodule::CircuitSegmentEventDCSC::MergeFrom(from._internal_circuitsegmenteventdcsc());
+  if (from._internal_has_circuitsegmenteventdcsc()) {
+    _this->_internal_mutable_circuitsegmenteventdcsc()->::circuitsegmentservicemodule::CircuitSegmentEventDCSC::MergeFrom(
+        from._internal_circuitsegmenteventdcsc());
   }
-}
-
-void CircuitSegmentEvent::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:circuitsegmentservicemodule.CircuitSegmentEvent)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CircuitSegmentEvent::CopyFrom(const CircuitSegmentEvent& from) {
@@ -2563,20 +2558,20 @@ bool CircuitSegmentEvent::IsInitialized() const {
 
 void CircuitSegmentEvent::InternalSwap(CircuitSegmentEvent* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CircuitSegmentEvent, circuitsegmenteventdcsc_)
-      + sizeof(CircuitSegmentEvent::circuitsegmenteventdcsc_)
-      - PROTOBUF_FIELD_OFFSET(CircuitSegmentEvent, identifiedobject_)>(
-          reinterpret_cast<char*>(&identifiedobject_),
-          reinterpret_cast<char*>(&other->identifiedobject_));
+      PROTOBUF_FIELD_OFFSET(CircuitSegmentEvent, _impl_.circuitsegmenteventdcsc_)
+      + sizeof(CircuitSegmentEvent::_impl_.circuitsegmenteventdcsc_)
+      - PROTOBUF_FIELD_OFFSET(CircuitSegmentEvent, _impl_.identifiedobject_)>(
+          reinterpret_cast<char*>(&_impl_.identifiedobject_),
+          reinterpret_cast<char*>(&other->_impl_.identifiedobject_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CircuitSegmentEvent::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_getter, &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_once,
+      file_level_metadata_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto[6]);
 }
-
-
 // ===================================================================
 
 class CircuitSegmentEventProfile::_Internal {
@@ -2588,270 +2583,257 @@ class CircuitSegmentEventProfile::_Internal {
 
 const ::commonmodule::EventMessageInfo&
 CircuitSegmentEventProfile::_Internal::eventmessageinfo(const CircuitSegmentEventProfile* msg) {
-  return *msg->eventmessageinfo_;
+  return *msg->_impl_.eventmessageinfo_;
 }
 const ::commonmodule::ApplicationSystem&
 CircuitSegmentEventProfile::_Internal::applicationsystem(const CircuitSegmentEventProfile* msg) {
-  return *msg->applicationsystem_;
+  return *msg->_impl_.applicationsystem_;
 }
 const ::circuitsegmentservicemodule::CircuitSegmentEvent&
 CircuitSegmentEventProfile::_Internal::circuitsegmentevent(const CircuitSegmentEventProfile* msg) {
-  return *msg->circuitsegmentevent_;
+  return *msg->_impl_.circuitsegmentevent_;
 }
 void CircuitSegmentEventProfile::clear_eventmessageinfo() {
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
-    delete eventmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventmessageinfo_ != nullptr) {
+    delete _impl_.eventmessageinfo_;
   }
-  eventmessageinfo_ = nullptr;
+  _impl_.eventmessageinfo_ = nullptr;
 }
 void CircuitSegmentEventProfile::clear_applicationsystem() {
-  if (GetArena() == nullptr && applicationsystem_ != nullptr) {
-    delete applicationsystem_;
+  if (GetArenaForAllocation() == nullptr && _impl_.applicationsystem_ != nullptr) {
+    delete _impl_.applicationsystem_;
   }
-  applicationsystem_ = nullptr;
+  _impl_.applicationsystem_ = nullptr;
 }
 CircuitSegmentEventProfile::CircuitSegmentEventProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:circuitsegmentservicemodule.CircuitSegmentEventProfile)
 }
 CircuitSegmentEventProfile::CircuitSegmentEventProfile(const CircuitSegmentEventProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CircuitSegmentEventProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventmessageinfo_){nullptr}
+    , decltype(_impl_.applicationsystem_){nullptr}
+    , decltype(_impl_.circuitsegmentevent_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_eventmessageinfo()) {
-    eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from.eventmessageinfo_);
-  } else {
-    eventmessageinfo_ = nullptr;
+    _this->_impl_.eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from._impl_.eventmessageinfo_);
   }
   if (from._internal_has_applicationsystem()) {
-    applicationsystem_ = new ::commonmodule::ApplicationSystem(*from.applicationsystem_);
-  } else {
-    applicationsystem_ = nullptr;
+    _this->_impl_.applicationsystem_ = new ::commonmodule::ApplicationSystem(*from._impl_.applicationsystem_);
   }
   if (from._internal_has_circuitsegmentevent()) {
-    circuitsegmentevent_ = new ::circuitsegmentservicemodule::CircuitSegmentEvent(*from.circuitsegmentevent_);
-  } else {
-    circuitsegmentevent_ = nullptr;
+    _this->_impl_.circuitsegmentevent_ = new ::circuitsegmentservicemodule::CircuitSegmentEvent(*from._impl_.circuitsegmentevent_);
   }
   // @@protoc_insertion_point(copy_constructor:circuitsegmentservicemodule.CircuitSegmentEventProfile)
 }
 
-void CircuitSegmentEventProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&eventmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&circuitsegmentevent_) -
-    reinterpret_cast<char*>(&eventmessageinfo_)) + sizeof(circuitsegmentevent_));
+inline void CircuitSegmentEventProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventmessageinfo_){nullptr}
+    , decltype(_impl_.applicationsystem_){nullptr}
+    , decltype(_impl_.circuitsegmentevent_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CircuitSegmentEventProfile::~CircuitSegmentEventProfile() {
   // @@protoc_insertion_point(destructor:circuitsegmentservicemodule.CircuitSegmentEventProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CircuitSegmentEventProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete eventmessageinfo_;
-  if (this != internal_default_instance()) delete applicationsystem_;
-  if (this != internal_default_instance()) delete circuitsegmentevent_;
+inline void CircuitSegmentEventProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.eventmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.applicationsystem_;
+  if (this != internal_default_instance()) delete _impl_.circuitsegmentevent_;
 }
 
-void CircuitSegmentEventProfile::ArenaDtor(void* object) {
-  CircuitSegmentEventProfile* _this = reinterpret_cast< CircuitSegmentEventProfile* >(object);
-  (void)_this;
-}
-void CircuitSegmentEventProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CircuitSegmentEventProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CircuitSegmentEventProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:circuitsegmentservicemodule.CircuitSegmentEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
-    delete eventmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventmessageinfo_ != nullptr) {
+    delete _impl_.eventmessageinfo_;
   }
-  eventmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && applicationsystem_ != nullptr) {
-    delete applicationsystem_;
+  _impl_.eventmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.applicationsystem_ != nullptr) {
+    delete _impl_.applicationsystem_;
   }
-  applicationsystem_ = nullptr;
-  if (GetArena() == nullptr && circuitsegmentevent_ != nullptr) {
-    delete circuitsegmentevent_;
+  _impl_.applicationsystem_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.circuitsegmentevent_ != nullptr) {
+    delete _impl_.circuitsegmentevent_;
   }
-  circuitsegmentevent_ = nullptr;
+  _impl_.circuitsegmentevent_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CircuitSegmentEventProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CircuitSegmentEventProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_eventmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ApplicationSystem applicationSystem = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_applicationsystem(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .circuitsegmentservicemodule.CircuitSegmentEvent circuitSegmentEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_circuitsegmentevent(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CircuitSegmentEventProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CircuitSegmentEventProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:circuitsegmentservicemodule.CircuitSegmentEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_eventmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::eventmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::eventmessageinfo(this),
+        _Internal::eventmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ApplicationSystem applicationSystem = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_applicationsystem()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_applicationsystem()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::applicationsystem(this), target, stream);
+      InternalWriteMessage(2, _Internal::applicationsystem(this),
+        _Internal::applicationsystem(this).GetCachedSize(), target, stream);
   }
 
   // .circuitsegmentservicemodule.CircuitSegmentEvent circuitSegmentEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_circuitsegmentevent()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_circuitsegmentevent()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::circuitsegmentevent(this), target, stream);
+      InternalWriteMessage(3, _Internal::circuitsegmentevent(this),
+        _Internal::circuitsegmentevent(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:circuitsegmentservicemodule.CircuitSegmentEventProfile)
   return target;
 }
 
-size_t CircuitSegmentEventProfile::ByteSizeLong() const {
+::size_t CircuitSegmentEventProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:circuitsegmentservicemodule.CircuitSegmentEventProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
+  if (this->_internal_has_eventmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *eventmessageinfo_);
+        *_impl_.eventmessageinfo_);
   }
 
   // .commonmodule.ApplicationSystem applicationSystem = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_applicationsystem()) {
+  if (this->_internal_has_applicationsystem()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *applicationsystem_);
+        *_impl_.applicationsystem_);
   }
 
   // .circuitsegmentservicemodule.CircuitSegmentEvent circuitSegmentEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_circuitsegmentevent()) {
+  if (this->_internal_has_circuitsegmentevent()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *circuitsegmentevent_);
+        *_impl_.circuitsegmentevent_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CircuitSegmentEventProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:circuitsegmentservicemodule.CircuitSegmentEventProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CircuitSegmentEventProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CircuitSegmentEventProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:circuitsegmentservicemodule.CircuitSegmentEventProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:circuitsegmentservicemodule.CircuitSegmentEventProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CircuitSegmentEventProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CircuitSegmentEventProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CircuitSegmentEventProfile::GetClassData() const { return &_class_data_; }
 
-void CircuitSegmentEventProfile::MergeFrom(const CircuitSegmentEventProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.CircuitSegmentEventProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CircuitSegmentEventProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CircuitSegmentEventProfile*>(&to_msg);
+  auto& from = static_cast<const CircuitSegmentEventProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.CircuitSegmentEventProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_eventmessageinfo()) {
-    _internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(from._internal_eventmessageinfo());
+  if (from._internal_has_eventmessageinfo()) {
+    _this->_internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(
+        from._internal_eventmessageinfo());
   }
-  if (from.has_applicationsystem()) {
-    _internal_mutable_applicationsystem()->::commonmodule::ApplicationSystem::MergeFrom(from._internal_applicationsystem());
+  if (from._internal_has_applicationsystem()) {
+    _this->_internal_mutable_applicationsystem()->::commonmodule::ApplicationSystem::MergeFrom(
+        from._internal_applicationsystem());
   }
-  if (from.has_circuitsegmentevent()) {
-    _internal_mutable_circuitsegmentevent()->::circuitsegmentservicemodule::CircuitSegmentEvent::MergeFrom(from._internal_circuitsegmentevent());
+  if (from._internal_has_circuitsegmentevent()) {
+    _this->_internal_mutable_circuitsegmentevent()->::circuitsegmentservicemodule::CircuitSegmentEvent::MergeFrom(
+        from._internal_circuitsegmentevent());
   }
-}
-
-void CircuitSegmentEventProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:circuitsegmentservicemodule.CircuitSegmentEventProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CircuitSegmentEventProfile::CopyFrom(const CircuitSegmentEventProfile& from) {
@@ -2867,20 +2849,20 @@ bool CircuitSegmentEventProfile::IsInitialized() const {
 
 void CircuitSegmentEventProfile::InternalSwap(CircuitSegmentEventProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CircuitSegmentEventProfile, circuitsegmentevent_)
-      + sizeof(CircuitSegmentEventProfile::circuitsegmentevent_)
-      - PROTOBUF_FIELD_OFFSET(CircuitSegmentEventProfile, eventmessageinfo_)>(
-          reinterpret_cast<char*>(&eventmessageinfo_),
-          reinterpret_cast<char*>(&other->eventmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(CircuitSegmentEventProfile, _impl_.circuitsegmentevent_)
+      + sizeof(CircuitSegmentEventProfile::_impl_.circuitsegmentevent_)
+      - PROTOBUF_FIELD_OFFSET(CircuitSegmentEventProfile, _impl_.eventmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.eventmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.eventmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CircuitSegmentEventProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_getter, &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_once,
+      file_level_metadata_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto[7]);
 }
-
-
 // ===================================================================
 
 class CircuitSegmentStatusDCSC::_Internal {
@@ -2897,495 +2879,492 @@ class CircuitSegmentStatusDCSC::_Internal {
 
 const ::commonmodule::LogicalNode&
 CircuitSegmentStatusDCSC::_Internal::logicalnode(const CircuitSegmentStatusDCSC* msg) {
-  return *msg->logicalnode_;
+  return *msg->_impl_.logicalnode_;
 }
 const ::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind&
 CircuitSegmentStatusDCSC::_Internal::circuitsegmentservicemode(const CircuitSegmentStatusDCSC* msg) {
-  return *msg->circuitsegmentservicemode_;
+  return *msg->_impl_.circuitsegmentservicemode_;
 }
 const ::commonmodule::StatusDPS&
 CircuitSegmentStatusDCSC::_Internal::island(const CircuitSegmentStatusDCSC* msg) {
-  return *msg->island_;
+  return *msg->_impl_.island_;
 }
 const ::commonmodule::StatusSPS&
 CircuitSegmentStatusDCSC::_Internal::permissibleauto(const CircuitSegmentStatusDCSC* msg) {
-  return *msg->permissibleauto_;
+  return *msg->_impl_.permissibleauto_;
 }
 const ::commonmodule::StatusSPS&
 CircuitSegmentStatusDCSC::_Internal::permissiblemanual(const CircuitSegmentStatusDCSC* msg) {
-  return *msg->permissiblemanual_;
+  return *msg->_impl_.permissiblemanual_;
 }
 const ::commonmodule::StatusSPS&
 CircuitSegmentStatusDCSC::_Internal::permissiblenetzero(const CircuitSegmentStatusDCSC* msg) {
-  return *msg->permissiblenetzero_;
+  return *msg->_impl_.permissiblenetzero_;
 }
 const ::commonmodule::StatusSPS&
 CircuitSegmentStatusDCSC::_Internal::permissiblestart(const CircuitSegmentStatusDCSC* msg) {
-  return *msg->permissiblestart_;
+  return *msg->_impl_.permissiblestart_;
 }
 const ::commonmodule::StatusSPS&
 CircuitSegmentStatusDCSC::_Internal::permissiblestop(const CircuitSegmentStatusDCSC* msg) {
-  return *msg->permissiblestop_;
+  return *msg->_impl_.permissiblestop_;
 }
 void CircuitSegmentStatusDCSC::clear_logicalnode() {
-  if (GetArena() == nullptr && logicalnode_ != nullptr) {
-    delete logicalnode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnode_ != nullptr) {
+    delete _impl_.logicalnode_;
   }
-  logicalnode_ = nullptr;
+  _impl_.logicalnode_ = nullptr;
 }
 void CircuitSegmentStatusDCSC::clear_island() {
-  if (GetArena() == nullptr && island_ != nullptr) {
-    delete island_;
+  if (GetArenaForAllocation() == nullptr && _impl_.island_ != nullptr) {
+    delete _impl_.island_;
   }
-  island_ = nullptr;
+  _impl_.island_ = nullptr;
 }
 void CircuitSegmentStatusDCSC::clear_permissibleauto() {
-  if (GetArena() == nullptr && permissibleauto_ != nullptr) {
-    delete permissibleauto_;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissibleauto_ != nullptr) {
+    delete _impl_.permissibleauto_;
   }
-  permissibleauto_ = nullptr;
+  _impl_.permissibleauto_ = nullptr;
 }
 void CircuitSegmentStatusDCSC::clear_permissiblemanual() {
-  if (GetArena() == nullptr && permissiblemanual_ != nullptr) {
-    delete permissiblemanual_;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissiblemanual_ != nullptr) {
+    delete _impl_.permissiblemanual_;
   }
-  permissiblemanual_ = nullptr;
+  _impl_.permissiblemanual_ = nullptr;
 }
 void CircuitSegmentStatusDCSC::clear_permissiblenetzero() {
-  if (GetArena() == nullptr && permissiblenetzero_ != nullptr) {
-    delete permissiblenetzero_;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissiblenetzero_ != nullptr) {
+    delete _impl_.permissiblenetzero_;
   }
-  permissiblenetzero_ = nullptr;
+  _impl_.permissiblenetzero_ = nullptr;
 }
 void CircuitSegmentStatusDCSC::clear_permissiblestart() {
-  if (GetArena() == nullptr && permissiblestart_ != nullptr) {
-    delete permissiblestart_;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissiblestart_ != nullptr) {
+    delete _impl_.permissiblestart_;
   }
-  permissiblestart_ = nullptr;
+  _impl_.permissiblestart_ = nullptr;
 }
 void CircuitSegmentStatusDCSC::clear_permissiblestop() {
-  if (GetArena() == nullptr && permissiblestop_ != nullptr) {
-    delete permissiblestop_;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissiblestop_ != nullptr) {
+    delete _impl_.permissiblestop_;
   }
-  permissiblestop_ = nullptr;
+  _impl_.permissiblestop_ = nullptr;
 }
 CircuitSegmentStatusDCSC::CircuitSegmentStatusDCSC(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:circuitsegmentservicemodule.CircuitSegmentStatusDCSC)
 }
 CircuitSegmentStatusDCSC::CircuitSegmentStatusDCSC(const CircuitSegmentStatusDCSC& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CircuitSegmentStatusDCSC* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnode_){nullptr}
+    , decltype(_impl_.circuitsegmentservicemode_){nullptr}
+    , decltype(_impl_.island_){nullptr}
+    , decltype(_impl_.permissibleauto_){nullptr}
+    , decltype(_impl_.permissiblemanual_){nullptr}
+    , decltype(_impl_.permissiblenetzero_){nullptr}
+    , decltype(_impl_.permissiblestart_){nullptr}
+    , decltype(_impl_.permissiblestop_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_logicalnode()) {
-    logicalnode_ = new ::commonmodule::LogicalNode(*from.logicalnode_);
-  } else {
-    logicalnode_ = nullptr;
+    _this->_impl_.logicalnode_ = new ::commonmodule::LogicalNode(*from._impl_.logicalnode_);
   }
   if (from._internal_has_circuitsegmentservicemode()) {
-    circuitsegmentservicemode_ = new ::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind(*from.circuitsegmentservicemode_);
-  } else {
-    circuitsegmentservicemode_ = nullptr;
+    _this->_impl_.circuitsegmentservicemode_ = new ::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind(*from._impl_.circuitsegmentservicemode_);
   }
   if (from._internal_has_island()) {
-    island_ = new ::commonmodule::StatusDPS(*from.island_);
-  } else {
-    island_ = nullptr;
+    _this->_impl_.island_ = new ::commonmodule::StatusDPS(*from._impl_.island_);
   }
   if (from._internal_has_permissibleauto()) {
-    permissibleauto_ = new ::commonmodule::StatusSPS(*from.permissibleauto_);
-  } else {
-    permissibleauto_ = nullptr;
+    _this->_impl_.permissibleauto_ = new ::commonmodule::StatusSPS(*from._impl_.permissibleauto_);
   }
   if (from._internal_has_permissiblemanual()) {
-    permissiblemanual_ = new ::commonmodule::StatusSPS(*from.permissiblemanual_);
-  } else {
-    permissiblemanual_ = nullptr;
+    _this->_impl_.permissiblemanual_ = new ::commonmodule::StatusSPS(*from._impl_.permissiblemanual_);
   }
   if (from._internal_has_permissiblenetzero()) {
-    permissiblenetzero_ = new ::commonmodule::StatusSPS(*from.permissiblenetzero_);
-  } else {
-    permissiblenetzero_ = nullptr;
+    _this->_impl_.permissiblenetzero_ = new ::commonmodule::StatusSPS(*from._impl_.permissiblenetzero_);
   }
   if (from._internal_has_permissiblestart()) {
-    permissiblestart_ = new ::commonmodule::StatusSPS(*from.permissiblestart_);
-  } else {
-    permissiblestart_ = nullptr;
+    _this->_impl_.permissiblestart_ = new ::commonmodule::StatusSPS(*from._impl_.permissiblestart_);
   }
   if (from._internal_has_permissiblestop()) {
-    permissiblestop_ = new ::commonmodule::StatusSPS(*from.permissiblestop_);
-  } else {
-    permissiblestop_ = nullptr;
+    _this->_impl_.permissiblestop_ = new ::commonmodule::StatusSPS(*from._impl_.permissiblestop_);
   }
   // @@protoc_insertion_point(copy_constructor:circuitsegmentservicemodule.CircuitSegmentStatusDCSC)
 }
 
-void CircuitSegmentStatusDCSC::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnode_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&permissiblestop_) -
-    reinterpret_cast<char*>(&logicalnode_)) + sizeof(permissiblestop_));
+inline void CircuitSegmentStatusDCSC::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnode_){nullptr}
+    , decltype(_impl_.circuitsegmentservicemode_){nullptr}
+    , decltype(_impl_.island_){nullptr}
+    , decltype(_impl_.permissibleauto_){nullptr}
+    , decltype(_impl_.permissiblemanual_){nullptr}
+    , decltype(_impl_.permissiblenetzero_){nullptr}
+    , decltype(_impl_.permissiblestart_){nullptr}
+    , decltype(_impl_.permissiblestop_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CircuitSegmentStatusDCSC::~CircuitSegmentStatusDCSC() {
   // @@protoc_insertion_point(destructor:circuitsegmentservicemodule.CircuitSegmentStatusDCSC)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CircuitSegmentStatusDCSC::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete logicalnode_;
-  if (this != internal_default_instance()) delete circuitsegmentservicemode_;
-  if (this != internal_default_instance()) delete island_;
-  if (this != internal_default_instance()) delete permissibleauto_;
-  if (this != internal_default_instance()) delete permissiblemanual_;
-  if (this != internal_default_instance()) delete permissiblenetzero_;
-  if (this != internal_default_instance()) delete permissiblestart_;
-  if (this != internal_default_instance()) delete permissiblestop_;
+inline void CircuitSegmentStatusDCSC::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.logicalnode_;
+  if (this != internal_default_instance()) delete _impl_.circuitsegmentservicemode_;
+  if (this != internal_default_instance()) delete _impl_.island_;
+  if (this != internal_default_instance()) delete _impl_.permissibleauto_;
+  if (this != internal_default_instance()) delete _impl_.permissiblemanual_;
+  if (this != internal_default_instance()) delete _impl_.permissiblenetzero_;
+  if (this != internal_default_instance()) delete _impl_.permissiblestart_;
+  if (this != internal_default_instance()) delete _impl_.permissiblestop_;
 }
 
-void CircuitSegmentStatusDCSC::ArenaDtor(void* object) {
-  CircuitSegmentStatusDCSC* _this = reinterpret_cast< CircuitSegmentStatusDCSC* >(object);
-  (void)_this;
-}
-void CircuitSegmentStatusDCSC::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CircuitSegmentStatusDCSC::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CircuitSegmentStatusDCSC::Clear() {
 // @@protoc_insertion_point(message_clear_start:circuitsegmentservicemodule.CircuitSegmentStatusDCSC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && logicalnode_ != nullptr) {
-    delete logicalnode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnode_ != nullptr) {
+    delete _impl_.logicalnode_;
   }
-  logicalnode_ = nullptr;
-  if (GetArena() == nullptr && circuitsegmentservicemode_ != nullptr) {
-    delete circuitsegmentservicemode_;
+  _impl_.logicalnode_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.circuitsegmentservicemode_ != nullptr) {
+    delete _impl_.circuitsegmentservicemode_;
   }
-  circuitsegmentservicemode_ = nullptr;
-  if (GetArena() == nullptr && island_ != nullptr) {
-    delete island_;
+  _impl_.circuitsegmentservicemode_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.island_ != nullptr) {
+    delete _impl_.island_;
   }
-  island_ = nullptr;
-  if (GetArena() == nullptr && permissibleauto_ != nullptr) {
-    delete permissibleauto_;
+  _impl_.island_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissibleauto_ != nullptr) {
+    delete _impl_.permissibleauto_;
   }
-  permissibleauto_ = nullptr;
-  if (GetArena() == nullptr && permissiblemanual_ != nullptr) {
-    delete permissiblemanual_;
+  _impl_.permissibleauto_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissiblemanual_ != nullptr) {
+    delete _impl_.permissiblemanual_;
   }
-  permissiblemanual_ = nullptr;
-  if (GetArena() == nullptr && permissiblenetzero_ != nullptr) {
-    delete permissiblenetzero_;
+  _impl_.permissiblemanual_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissiblenetzero_ != nullptr) {
+    delete _impl_.permissiblenetzero_;
   }
-  permissiblenetzero_ = nullptr;
-  if (GetArena() == nullptr && permissiblestart_ != nullptr) {
-    delete permissiblestart_;
+  _impl_.permissiblenetzero_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissiblestart_ != nullptr) {
+    delete _impl_.permissiblestart_;
   }
-  permissiblestart_ = nullptr;
-  if (GetArena() == nullptr && permissiblestop_ != nullptr) {
-    delete permissiblestop_;
+  _impl_.permissiblestart_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.permissiblestop_ != nullptr) {
+    delete _impl_.permissiblestop_;
   }
-  permissiblestop_ = nullptr;
+  _impl_.permissiblestop_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CircuitSegmentStatusDCSC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CircuitSegmentStatusDCSC::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_logicalnode(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind CircuitSegmentServiceMode = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_circuitsegmentservicemode(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusDPS Island = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_island(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS PermissibleAuto = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_permissibleauto(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS PermissibleManual = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_permissiblemanual(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS PermissibleNetzero = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_permissiblenetzero(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS PermissibleStart = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_permissiblestart(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS PermissibleStop = 8;
       case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 66)) {
           ptr = ctx->ParseMessage(_internal_mutable_permissiblestop(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CircuitSegmentStatusDCSC::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CircuitSegmentStatusDCSC::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:circuitsegmentservicemodule.CircuitSegmentStatusDCSC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnode()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_logicalnode()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnode(this), target, stream);
+      InternalWriteMessage(1, _Internal::logicalnode(this),
+        _Internal::logicalnode(this).GetCachedSize(), target, stream);
   }
 
   // .circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind CircuitSegmentServiceMode = 2;
-  if (this->has_circuitsegmentservicemode()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_circuitsegmentservicemode()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::circuitsegmentservicemode(this), target, stream);
+      InternalWriteMessage(2, _Internal::circuitsegmentservicemode(this),
+        _Internal::circuitsegmentservicemode(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusDPS Island = 3;
-  if (this->has_island()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_island()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::island(this), target, stream);
+      InternalWriteMessage(3, _Internal::island(this),
+        _Internal::island(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS PermissibleAuto = 4;
-  if (this->has_permissibleauto()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_permissibleauto()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::permissibleauto(this), target, stream);
+      InternalWriteMessage(4, _Internal::permissibleauto(this),
+        _Internal::permissibleauto(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS PermissibleManual = 5;
-  if (this->has_permissiblemanual()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_permissiblemanual()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::permissiblemanual(this), target, stream);
+      InternalWriteMessage(5, _Internal::permissiblemanual(this),
+        _Internal::permissiblemanual(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS PermissibleNetzero = 6;
-  if (this->has_permissiblenetzero()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_permissiblenetzero()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::permissiblenetzero(this), target, stream);
+      InternalWriteMessage(6, _Internal::permissiblenetzero(this),
+        _Internal::permissiblenetzero(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS PermissibleStart = 7;
-  if (this->has_permissiblestart()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_permissiblestart()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::permissiblestart(this), target, stream);
+      InternalWriteMessage(7, _Internal::permissiblestart(this),
+        _Internal::permissiblestart(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS PermissibleStop = 8;
-  if (this->has_permissiblestop()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_permissiblestop()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::permissiblestop(this), target, stream);
+      InternalWriteMessage(8, _Internal::permissiblestop(this),
+        _Internal::permissiblestop(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:circuitsegmentservicemodule.CircuitSegmentStatusDCSC)
   return target;
 }
 
-size_t CircuitSegmentStatusDCSC::ByteSizeLong() const {
+::size_t CircuitSegmentStatusDCSC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:circuitsegmentservicemodule.CircuitSegmentStatusDCSC)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnode()) {
+  if (this->_internal_has_logicalnode()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *logicalnode_);
+        *_impl_.logicalnode_);
   }
 
   // .circuitsegmentservicemodule.ENG_CircuitSegmentServiceModeKind CircuitSegmentServiceMode = 2;
-  if (this->has_circuitsegmentservicemode()) {
+  if (this->_internal_has_circuitsegmentservicemode()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *circuitsegmentservicemode_);
+        *_impl_.circuitsegmentservicemode_);
   }
 
   // .commonmodule.StatusDPS Island = 3;
-  if (this->has_island()) {
+  if (this->_internal_has_island()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *island_);
+        *_impl_.island_);
   }
 
   // .commonmodule.StatusSPS PermissibleAuto = 4;
-  if (this->has_permissibleauto()) {
+  if (this->_internal_has_permissibleauto()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *permissibleauto_);
+        *_impl_.permissibleauto_);
   }
 
   // .commonmodule.StatusSPS PermissibleManual = 5;
-  if (this->has_permissiblemanual()) {
+  if (this->_internal_has_permissiblemanual()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *permissiblemanual_);
+        *_impl_.permissiblemanual_);
   }
 
   // .commonmodule.StatusSPS PermissibleNetzero = 6;
-  if (this->has_permissiblenetzero()) {
+  if (this->_internal_has_permissiblenetzero()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *permissiblenetzero_);
+        *_impl_.permissiblenetzero_);
   }
 
   // .commonmodule.StatusSPS PermissibleStart = 7;
-  if (this->has_permissiblestart()) {
+  if (this->_internal_has_permissiblestart()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *permissiblestart_);
+        *_impl_.permissiblestart_);
   }
 
   // .commonmodule.StatusSPS PermissibleStop = 8;
-  if (this->has_permissiblestop()) {
+  if (this->_internal_has_permissiblestop()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *permissiblestop_);
+        *_impl_.permissiblestop_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CircuitSegmentStatusDCSC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:circuitsegmentservicemodule.CircuitSegmentStatusDCSC)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CircuitSegmentStatusDCSC* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CircuitSegmentStatusDCSC>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:circuitsegmentservicemodule.CircuitSegmentStatusDCSC)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:circuitsegmentservicemodule.CircuitSegmentStatusDCSC)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CircuitSegmentStatusDCSC::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CircuitSegmentStatusDCSC::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CircuitSegmentStatusDCSC::GetClassData() const { return &_class_data_; }
 
-void CircuitSegmentStatusDCSC::MergeFrom(const CircuitSegmentStatusDCSC& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.CircuitSegmentStatusDCSC)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CircuitSegmentStatusDCSC::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CircuitSegmentStatusDCSC*>(&to_msg);
+  auto& from = static_cast<const CircuitSegmentStatusDCSC&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.CircuitSegmentStatusDCSC)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_logicalnode()) {
-    _internal_mutable_logicalnode()->::commonmodule::LogicalNode::MergeFrom(from._internal_logicalnode());
+  if (from._internal_has_logicalnode()) {
+    _this->_internal_mutable_logicalnode()->::commonmodule::LogicalNode::MergeFrom(
+        from._internal_logicalnode());
   }
-  if (from.has_circuitsegmentservicemode()) {
-    _internal_mutable_circuitsegmentservicemode()->::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind::MergeFrom(from._internal_circuitsegmentservicemode());
+  if (from._internal_has_circuitsegmentservicemode()) {
+    _this->_internal_mutable_circuitsegmentservicemode()->::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind::MergeFrom(
+        from._internal_circuitsegmentservicemode());
   }
-  if (from.has_island()) {
-    _internal_mutable_island()->::commonmodule::StatusDPS::MergeFrom(from._internal_island());
+  if (from._internal_has_island()) {
+    _this->_internal_mutable_island()->::commonmodule::StatusDPS::MergeFrom(
+        from._internal_island());
   }
-  if (from.has_permissibleauto()) {
-    _internal_mutable_permissibleauto()->::commonmodule::StatusSPS::MergeFrom(from._internal_permissibleauto());
+  if (from._internal_has_permissibleauto()) {
+    _this->_internal_mutable_permissibleauto()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_permissibleauto());
   }
-  if (from.has_permissiblemanual()) {
-    _internal_mutable_permissiblemanual()->::commonmodule::StatusSPS::MergeFrom(from._internal_permissiblemanual());
+  if (from._internal_has_permissiblemanual()) {
+    _this->_internal_mutable_permissiblemanual()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_permissiblemanual());
   }
-  if (from.has_permissiblenetzero()) {
-    _internal_mutable_permissiblenetzero()->::commonmodule::StatusSPS::MergeFrom(from._internal_permissiblenetzero());
+  if (from._internal_has_permissiblenetzero()) {
+    _this->_internal_mutable_permissiblenetzero()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_permissiblenetzero());
   }
-  if (from.has_permissiblestart()) {
-    _internal_mutable_permissiblestart()->::commonmodule::StatusSPS::MergeFrom(from._internal_permissiblestart());
+  if (from._internal_has_permissiblestart()) {
+    _this->_internal_mutable_permissiblestart()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_permissiblestart());
   }
-  if (from.has_permissiblestop()) {
-    _internal_mutable_permissiblestop()->::commonmodule::StatusSPS::MergeFrom(from._internal_permissiblestop());
+  if (from._internal_has_permissiblestop()) {
+    _this->_internal_mutable_permissiblestop()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_permissiblestop());
   }
-}
-
-void CircuitSegmentStatusDCSC::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:circuitsegmentservicemodule.CircuitSegmentStatusDCSC)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CircuitSegmentStatusDCSC::CopyFrom(const CircuitSegmentStatusDCSC& from) {
@@ -3401,20 +3380,20 @@ bool CircuitSegmentStatusDCSC::IsInitialized() const {
 
 void CircuitSegmentStatusDCSC::InternalSwap(CircuitSegmentStatusDCSC* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CircuitSegmentStatusDCSC, permissiblestop_)
-      + sizeof(CircuitSegmentStatusDCSC::permissiblestop_)
-      - PROTOBUF_FIELD_OFFSET(CircuitSegmentStatusDCSC, logicalnode_)>(
-          reinterpret_cast<char*>(&logicalnode_),
-          reinterpret_cast<char*>(&other->logicalnode_));
+      PROTOBUF_FIELD_OFFSET(CircuitSegmentStatusDCSC, _impl_.permissiblestop_)
+      + sizeof(CircuitSegmentStatusDCSC::_impl_.permissiblestop_)
+      - PROTOBUF_FIELD_OFFSET(CircuitSegmentStatusDCSC, _impl_.logicalnode_)>(
+          reinterpret_cast<char*>(&_impl_.logicalnode_),
+          reinterpret_cast<char*>(&other->_impl_.logicalnode_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CircuitSegmentStatusDCSC::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_getter, &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_once,
+      file_level_metadata_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto[8]);
 }
-
-
 // ===================================================================
 
 class CircuitSegmentStatus::_Internal {
@@ -3425,225 +3404,210 @@ class CircuitSegmentStatus::_Internal {
 
 const ::commonmodule::IdentifiedObject&
 CircuitSegmentStatus::_Internal::identifiedobject(const CircuitSegmentStatus* msg) {
-  return *msg->identifiedobject_;
+  return *msg->_impl_.identifiedobject_;
 }
 const ::circuitsegmentservicemodule::CircuitSegmentStatusDCSC&
 CircuitSegmentStatus::_Internal::circuitsegmentstatusdcsc(const CircuitSegmentStatus* msg) {
-  return *msg->circuitsegmentstatusdcsc_;
+  return *msg->_impl_.circuitsegmentstatusdcsc_;
 }
 void CircuitSegmentStatus::clear_identifiedobject() {
-  if (GetArena() == nullptr && identifiedobject_ != nullptr) {
-    delete identifiedobject_;
+  if (GetArenaForAllocation() == nullptr && _impl_.identifiedobject_ != nullptr) {
+    delete _impl_.identifiedobject_;
   }
-  identifiedobject_ = nullptr;
+  _impl_.identifiedobject_ = nullptr;
 }
 CircuitSegmentStatus::CircuitSegmentStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:circuitsegmentservicemodule.CircuitSegmentStatus)
 }
 CircuitSegmentStatus::CircuitSegmentStatus(const CircuitSegmentStatus& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CircuitSegmentStatus* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.identifiedobject_){nullptr}
+    , decltype(_impl_.circuitsegmentstatusdcsc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_identifiedobject()) {
-    identifiedobject_ = new ::commonmodule::IdentifiedObject(*from.identifiedobject_);
-  } else {
-    identifiedobject_ = nullptr;
+    _this->_impl_.identifiedobject_ = new ::commonmodule::IdentifiedObject(*from._impl_.identifiedobject_);
   }
   if (from._internal_has_circuitsegmentstatusdcsc()) {
-    circuitsegmentstatusdcsc_ = new ::circuitsegmentservicemodule::CircuitSegmentStatusDCSC(*from.circuitsegmentstatusdcsc_);
-  } else {
-    circuitsegmentstatusdcsc_ = nullptr;
+    _this->_impl_.circuitsegmentstatusdcsc_ = new ::circuitsegmentservicemodule::CircuitSegmentStatusDCSC(*from._impl_.circuitsegmentstatusdcsc_);
   }
   // @@protoc_insertion_point(copy_constructor:circuitsegmentservicemodule.CircuitSegmentStatus)
 }
 
-void CircuitSegmentStatus::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&identifiedobject_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&circuitsegmentstatusdcsc_) -
-    reinterpret_cast<char*>(&identifiedobject_)) + sizeof(circuitsegmentstatusdcsc_));
+inline void CircuitSegmentStatus::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.identifiedobject_){nullptr}
+    , decltype(_impl_.circuitsegmentstatusdcsc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CircuitSegmentStatus::~CircuitSegmentStatus() {
   // @@protoc_insertion_point(destructor:circuitsegmentservicemodule.CircuitSegmentStatus)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CircuitSegmentStatus::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete identifiedobject_;
-  if (this != internal_default_instance()) delete circuitsegmentstatusdcsc_;
+inline void CircuitSegmentStatus::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.identifiedobject_;
+  if (this != internal_default_instance()) delete _impl_.circuitsegmentstatusdcsc_;
 }
 
-void CircuitSegmentStatus::ArenaDtor(void* object) {
-  CircuitSegmentStatus* _this = reinterpret_cast< CircuitSegmentStatus* >(object);
-  (void)_this;
-}
-void CircuitSegmentStatus::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CircuitSegmentStatus::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CircuitSegmentStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:circuitsegmentservicemodule.CircuitSegmentStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && identifiedobject_ != nullptr) {
-    delete identifiedobject_;
+  if (GetArenaForAllocation() == nullptr && _impl_.identifiedobject_ != nullptr) {
+    delete _impl_.identifiedobject_;
   }
-  identifiedobject_ = nullptr;
-  if (GetArena() == nullptr && circuitsegmentstatusdcsc_ != nullptr) {
-    delete circuitsegmentstatusdcsc_;
+  _impl_.identifiedobject_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.circuitsegmentstatusdcsc_ != nullptr) {
+    delete _impl_.circuitsegmentstatusdcsc_;
   }
-  circuitsegmentstatusdcsc_ = nullptr;
+  _impl_.circuitsegmentstatusdcsc_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CircuitSegmentStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CircuitSegmentStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_identifiedobject(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .circuitsegmentservicemodule.CircuitSegmentStatusDCSC circuitSegmentStatusDCSC = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_circuitsegmentstatusdcsc(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CircuitSegmentStatus::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CircuitSegmentStatus::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:circuitsegmentservicemodule.CircuitSegmentStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
-  if (this->has_identifiedobject()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_identifiedobject()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::identifiedobject(this), target, stream);
+      InternalWriteMessage(1, _Internal::identifiedobject(this),
+        _Internal::identifiedobject(this).GetCachedSize(), target, stream);
   }
 
   // .circuitsegmentservicemodule.CircuitSegmentStatusDCSC circuitSegmentStatusDCSC = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_circuitsegmentstatusdcsc()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_circuitsegmentstatusdcsc()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::circuitsegmentstatusdcsc(this), target, stream);
+      InternalWriteMessage(2, _Internal::circuitsegmentstatusdcsc(this),
+        _Internal::circuitsegmentstatusdcsc(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:circuitsegmentservicemodule.CircuitSegmentStatus)
   return target;
 }
 
-size_t CircuitSegmentStatus::ByteSizeLong() const {
+::size_t CircuitSegmentStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:circuitsegmentservicemodule.CircuitSegmentStatus)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
-  if (this->has_identifiedobject()) {
+  if (this->_internal_has_identifiedobject()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *identifiedobject_);
+        *_impl_.identifiedobject_);
   }
 
   // .circuitsegmentservicemodule.CircuitSegmentStatusDCSC circuitSegmentStatusDCSC = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_circuitsegmentstatusdcsc()) {
+  if (this->_internal_has_circuitsegmentstatusdcsc()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *circuitsegmentstatusdcsc_);
+        *_impl_.circuitsegmentstatusdcsc_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CircuitSegmentStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:circuitsegmentservicemodule.CircuitSegmentStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CircuitSegmentStatus* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CircuitSegmentStatus>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:circuitsegmentservicemodule.CircuitSegmentStatus)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:circuitsegmentservicemodule.CircuitSegmentStatus)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CircuitSegmentStatus::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CircuitSegmentStatus::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CircuitSegmentStatus::GetClassData() const { return &_class_data_; }
 
-void CircuitSegmentStatus::MergeFrom(const CircuitSegmentStatus& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.CircuitSegmentStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CircuitSegmentStatus::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CircuitSegmentStatus*>(&to_msg);
+  auto& from = static_cast<const CircuitSegmentStatus&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.CircuitSegmentStatus)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_identifiedobject()) {
-    _internal_mutable_identifiedobject()->::commonmodule::IdentifiedObject::MergeFrom(from._internal_identifiedobject());
+  if (from._internal_has_identifiedobject()) {
+    _this->_internal_mutable_identifiedobject()->::commonmodule::IdentifiedObject::MergeFrom(
+        from._internal_identifiedobject());
   }
-  if (from.has_circuitsegmentstatusdcsc()) {
-    _internal_mutable_circuitsegmentstatusdcsc()->::circuitsegmentservicemodule::CircuitSegmentStatusDCSC::MergeFrom(from._internal_circuitsegmentstatusdcsc());
+  if (from._internal_has_circuitsegmentstatusdcsc()) {
+    _this->_internal_mutable_circuitsegmentstatusdcsc()->::circuitsegmentservicemodule::CircuitSegmentStatusDCSC::MergeFrom(
+        from._internal_circuitsegmentstatusdcsc());
   }
-}
-
-void CircuitSegmentStatus::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:circuitsegmentservicemodule.CircuitSegmentStatus)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CircuitSegmentStatus::CopyFrom(const CircuitSegmentStatus& from) {
@@ -3659,295 +3623,282 @@ bool CircuitSegmentStatus::IsInitialized() const {
 
 void CircuitSegmentStatus::InternalSwap(CircuitSegmentStatus* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CircuitSegmentStatus, circuitsegmentstatusdcsc_)
-      + sizeof(CircuitSegmentStatus::circuitsegmentstatusdcsc_)
-      - PROTOBUF_FIELD_OFFSET(CircuitSegmentStatus, identifiedobject_)>(
-          reinterpret_cast<char*>(&identifiedobject_),
-          reinterpret_cast<char*>(&other->identifiedobject_));
+      PROTOBUF_FIELD_OFFSET(CircuitSegmentStatus, _impl_.circuitsegmentstatusdcsc_)
+      + sizeof(CircuitSegmentStatus::_impl_.circuitsegmentstatusdcsc_)
+      - PROTOBUF_FIELD_OFFSET(CircuitSegmentStatus, _impl_.identifiedobject_)>(
+          reinterpret_cast<char*>(&_impl_.identifiedobject_),
+          reinterpret_cast<char*>(&other->_impl_.identifiedobject_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CircuitSegmentStatus::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_getter, &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_once,
+      file_level_metadata_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto[9]);
 }
-
-
 // ===================================================================
 
 class CircuitSegmentStatusProfile::_Internal {
  public:
-  static const ::commonmodule::EventMessageInfo& eventmessageinfo(const CircuitSegmentStatusProfile* msg);
+  static const ::commonmodule::StatusMessageInfo& statusmessageinfo(const CircuitSegmentStatusProfile* msg);
   static const ::commonmodule::ApplicationSystem& applicationsystem(const CircuitSegmentStatusProfile* msg);
   static const ::circuitsegmentservicemodule::CircuitSegmentStatus& circuitsegmentstatus(const CircuitSegmentStatusProfile* msg);
 };
 
-const ::commonmodule::EventMessageInfo&
-CircuitSegmentStatusProfile::_Internal::eventmessageinfo(const CircuitSegmentStatusProfile* msg) {
-  return *msg->eventmessageinfo_;
+const ::commonmodule::StatusMessageInfo&
+CircuitSegmentStatusProfile::_Internal::statusmessageinfo(const CircuitSegmentStatusProfile* msg) {
+  return *msg->_impl_.statusmessageinfo_;
 }
 const ::commonmodule::ApplicationSystem&
 CircuitSegmentStatusProfile::_Internal::applicationsystem(const CircuitSegmentStatusProfile* msg) {
-  return *msg->applicationsystem_;
+  return *msg->_impl_.applicationsystem_;
 }
 const ::circuitsegmentservicemodule::CircuitSegmentStatus&
 CircuitSegmentStatusProfile::_Internal::circuitsegmentstatus(const CircuitSegmentStatusProfile* msg) {
-  return *msg->circuitsegmentstatus_;
+  return *msg->_impl_.circuitsegmentstatus_;
 }
-void CircuitSegmentStatusProfile::clear_eventmessageinfo() {
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
-    delete eventmessageinfo_;
+void CircuitSegmentStatusProfile::clear_statusmessageinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.statusmessageinfo_ != nullptr) {
+    delete _impl_.statusmessageinfo_;
   }
-  eventmessageinfo_ = nullptr;
+  _impl_.statusmessageinfo_ = nullptr;
 }
 void CircuitSegmentStatusProfile::clear_applicationsystem() {
-  if (GetArena() == nullptr && applicationsystem_ != nullptr) {
-    delete applicationsystem_;
+  if (GetArenaForAllocation() == nullptr && _impl_.applicationsystem_ != nullptr) {
+    delete _impl_.applicationsystem_;
   }
-  applicationsystem_ = nullptr;
+  _impl_.applicationsystem_ = nullptr;
 }
 CircuitSegmentStatusProfile::CircuitSegmentStatusProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:circuitsegmentservicemodule.CircuitSegmentStatusProfile)
 }
 CircuitSegmentStatusProfile::CircuitSegmentStatusProfile(const CircuitSegmentStatusProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CircuitSegmentStatusProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusmessageinfo_){nullptr}
+    , decltype(_impl_.applicationsystem_){nullptr}
+    , decltype(_impl_.circuitsegmentstatus_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_eventmessageinfo()) {
-    eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from.eventmessageinfo_);
-  } else {
-    eventmessageinfo_ = nullptr;
+  if (from._internal_has_statusmessageinfo()) {
+    _this->_impl_.statusmessageinfo_ = new ::commonmodule::StatusMessageInfo(*from._impl_.statusmessageinfo_);
   }
   if (from._internal_has_applicationsystem()) {
-    applicationsystem_ = new ::commonmodule::ApplicationSystem(*from.applicationsystem_);
-  } else {
-    applicationsystem_ = nullptr;
+    _this->_impl_.applicationsystem_ = new ::commonmodule::ApplicationSystem(*from._impl_.applicationsystem_);
   }
   if (from._internal_has_circuitsegmentstatus()) {
-    circuitsegmentstatus_ = new ::circuitsegmentservicemodule::CircuitSegmentStatus(*from.circuitsegmentstatus_);
-  } else {
-    circuitsegmentstatus_ = nullptr;
+    _this->_impl_.circuitsegmentstatus_ = new ::circuitsegmentservicemodule::CircuitSegmentStatus(*from._impl_.circuitsegmentstatus_);
   }
   // @@protoc_insertion_point(copy_constructor:circuitsegmentservicemodule.CircuitSegmentStatusProfile)
 }
 
-void CircuitSegmentStatusProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&eventmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&circuitsegmentstatus_) -
-    reinterpret_cast<char*>(&eventmessageinfo_)) + sizeof(circuitsegmentstatus_));
+inline void CircuitSegmentStatusProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusmessageinfo_){nullptr}
+    , decltype(_impl_.applicationsystem_){nullptr}
+    , decltype(_impl_.circuitsegmentstatus_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CircuitSegmentStatusProfile::~CircuitSegmentStatusProfile() {
   // @@protoc_insertion_point(destructor:circuitsegmentservicemodule.CircuitSegmentStatusProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CircuitSegmentStatusProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete eventmessageinfo_;
-  if (this != internal_default_instance()) delete applicationsystem_;
-  if (this != internal_default_instance()) delete circuitsegmentstatus_;
+inline void CircuitSegmentStatusProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.statusmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.applicationsystem_;
+  if (this != internal_default_instance()) delete _impl_.circuitsegmentstatus_;
 }
 
-void CircuitSegmentStatusProfile::ArenaDtor(void* object) {
-  CircuitSegmentStatusProfile* _this = reinterpret_cast< CircuitSegmentStatusProfile* >(object);
-  (void)_this;
-}
-void CircuitSegmentStatusProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CircuitSegmentStatusProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CircuitSegmentStatusProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:circuitsegmentservicemodule.CircuitSegmentStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
-    delete eventmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusmessageinfo_ != nullptr) {
+    delete _impl_.statusmessageinfo_;
   }
-  eventmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && applicationsystem_ != nullptr) {
-    delete applicationsystem_;
+  _impl_.statusmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.applicationsystem_ != nullptr) {
+    delete _impl_.applicationsystem_;
   }
-  applicationsystem_ = nullptr;
-  if (GetArena() == nullptr && circuitsegmentstatus_ != nullptr) {
-    delete circuitsegmentstatus_;
+  _impl_.applicationsystem_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.circuitsegmentstatus_ != nullptr) {
+    delete _impl_.circuitsegmentstatus_;
   }
-  circuitsegmentstatus_ = nullptr;
+  _impl_.circuitsegmentstatus_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CircuitSegmentStatusProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CircuitSegmentStatusProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
+      // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_eventmessageinfo(), ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_statusmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ApplicationSystem applicationSystem = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_applicationsystem(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .circuitsegmentservicemodule.CircuitSegmentStatus circuitSegmentStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_circuitsegmentstatus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CircuitSegmentStatusProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CircuitSegmentStatusProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:circuitsegmentservicemodule.CircuitSegmentStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_statusmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::eventmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::statusmessageinfo(this),
+        _Internal::statusmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ApplicationSystem applicationSystem = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_applicationsystem()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_applicationsystem()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::applicationsystem(this), target, stream);
+      InternalWriteMessage(2, _Internal::applicationsystem(this),
+        _Internal::applicationsystem(this).GetCachedSize(), target, stream);
   }
 
   // .circuitsegmentservicemodule.CircuitSegmentStatus circuitSegmentStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_circuitsegmentstatus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_circuitsegmentstatus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::circuitsegmentstatus(this), target, stream);
+      InternalWriteMessage(3, _Internal::circuitsegmentstatus(this),
+        _Internal::circuitsegmentstatus(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:circuitsegmentservicemodule.CircuitSegmentStatusProfile)
   return target;
 }
 
-size_t CircuitSegmentStatusProfile::ByteSizeLong() const {
+::size_t CircuitSegmentStatusProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:circuitsegmentservicemodule.CircuitSegmentStatusProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
+  // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_statusmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *eventmessageinfo_);
+        *_impl_.statusmessageinfo_);
   }
 
   // .commonmodule.ApplicationSystem applicationSystem = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_applicationsystem()) {
+  if (this->_internal_has_applicationsystem()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *applicationsystem_);
+        *_impl_.applicationsystem_);
   }
 
   // .circuitsegmentservicemodule.CircuitSegmentStatus circuitSegmentStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_circuitsegmentstatus()) {
+  if (this->_internal_has_circuitsegmentstatus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *circuitsegmentstatus_);
+        *_impl_.circuitsegmentstatus_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CircuitSegmentStatusProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:circuitsegmentservicemodule.CircuitSegmentStatusProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CircuitSegmentStatusProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CircuitSegmentStatusProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:circuitsegmentservicemodule.CircuitSegmentStatusProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:circuitsegmentservicemodule.CircuitSegmentStatusProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CircuitSegmentStatusProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CircuitSegmentStatusProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CircuitSegmentStatusProfile::GetClassData() const { return &_class_data_; }
 
-void CircuitSegmentStatusProfile::MergeFrom(const CircuitSegmentStatusProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.CircuitSegmentStatusProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CircuitSegmentStatusProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CircuitSegmentStatusProfile*>(&to_msg);
+  auto& from = static_cast<const CircuitSegmentStatusProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:circuitsegmentservicemodule.CircuitSegmentStatusProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_eventmessageinfo()) {
-    _internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(from._internal_eventmessageinfo());
+  if (from._internal_has_statusmessageinfo()) {
+    _this->_internal_mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(
+        from._internal_statusmessageinfo());
   }
-  if (from.has_applicationsystem()) {
-    _internal_mutable_applicationsystem()->::commonmodule::ApplicationSystem::MergeFrom(from._internal_applicationsystem());
+  if (from._internal_has_applicationsystem()) {
+    _this->_internal_mutable_applicationsystem()->::commonmodule::ApplicationSystem::MergeFrom(
+        from._internal_applicationsystem());
   }
-  if (from.has_circuitsegmentstatus()) {
-    _internal_mutable_circuitsegmentstatus()->::circuitsegmentservicemodule::CircuitSegmentStatus::MergeFrom(from._internal_circuitsegmentstatus());
+  if (from._internal_has_circuitsegmentstatus()) {
+    _this->_internal_mutable_circuitsegmentstatus()->::circuitsegmentservicemodule::CircuitSegmentStatus::MergeFrom(
+        from._internal_circuitsegmentstatus());
   }
-}
-
-void CircuitSegmentStatusProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:circuitsegmentservicemodule.CircuitSegmentStatusProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CircuitSegmentStatusProfile::CopyFrom(const CircuitSegmentStatusProfile& from) {
@@ -3963,57 +3914,67 @@ bool CircuitSegmentStatusProfile::IsInitialized() const {
 
 void CircuitSegmentStatusProfile::InternalSwap(CircuitSegmentStatusProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CircuitSegmentStatusProfile, circuitsegmentstatus_)
-      + sizeof(CircuitSegmentStatusProfile::circuitsegmentstatus_)
-      - PROTOBUF_FIELD_OFFSET(CircuitSegmentStatusProfile, eventmessageinfo_)>(
-          reinterpret_cast<char*>(&eventmessageinfo_),
-          reinterpret_cast<char*>(&other->eventmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(CircuitSegmentStatusProfile, _impl_.circuitsegmentstatus_)
+      + sizeof(CircuitSegmentStatusProfile::_impl_.circuitsegmentstatus_)
+      - PROTOBUF_FIELD_OFFSET(CircuitSegmentStatusProfile, _impl_.statusmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.statusmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.statusmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CircuitSegmentStatusProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_getter, &descriptor_table_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto_once,
+      file_level_metadata_circuitsegmentservicemodule_2fcircuitsegmentservicemodule_2eproto[10]);
 }
-
-
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace circuitsegmentservicemodule
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::Optional_CircuitSegmentServiceModeKind* Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::Optional_CircuitSegmentServiceModeKind >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::Optional_CircuitSegmentServiceModeKind*
+Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::Optional_CircuitSegmentServiceModeKind >(Arena* arena) {
   return Arena::CreateMessageInternal< ::circuitsegmentservicemodule::Optional_CircuitSegmentServiceModeKind >(arena);
 }
-template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind* Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind*
+Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind >(Arena* arena) {
   return Arena::CreateMessageInternal< ::circuitsegmentservicemodule::ENG_CircuitSegmentServiceModeKind >(arena);
 }
-template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::CircuitSegmentControlDCSC* Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::CircuitSegmentControlDCSC >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::CircuitSegmentControlDCSC*
+Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::CircuitSegmentControlDCSC >(Arena* arena) {
   return Arena::CreateMessageInternal< ::circuitsegmentservicemodule::CircuitSegmentControlDCSC >(arena);
 }
-template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::CircuitSegmentControl* Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::CircuitSegmentControl >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::CircuitSegmentControl*
+Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::CircuitSegmentControl >(Arena* arena) {
   return Arena::CreateMessageInternal< ::circuitsegmentservicemodule::CircuitSegmentControl >(arena);
 }
-template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::CircuitSegmentControlProfile* Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::CircuitSegmentControlProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::CircuitSegmentControlProfile*
+Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::CircuitSegmentControlProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::circuitsegmentservicemodule::CircuitSegmentControlProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::CircuitSegmentEventDCSC* Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::CircuitSegmentEventDCSC >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::CircuitSegmentEventDCSC*
+Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::CircuitSegmentEventDCSC >(Arena* arena) {
   return Arena::CreateMessageInternal< ::circuitsegmentservicemodule::CircuitSegmentEventDCSC >(arena);
 }
-template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::CircuitSegmentEvent* Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::CircuitSegmentEvent >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::CircuitSegmentEvent*
+Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::CircuitSegmentEvent >(Arena* arena) {
   return Arena::CreateMessageInternal< ::circuitsegmentservicemodule::CircuitSegmentEvent >(arena);
 }
-template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::CircuitSegmentEventProfile* Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::CircuitSegmentEventProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::CircuitSegmentEventProfile*
+Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::CircuitSegmentEventProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::circuitsegmentservicemodule::CircuitSegmentEventProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::CircuitSegmentStatusDCSC* Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::CircuitSegmentStatusDCSC >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::CircuitSegmentStatusDCSC*
+Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::CircuitSegmentStatusDCSC >(Arena* arena) {
   return Arena::CreateMessageInternal< ::circuitsegmentservicemodule::CircuitSegmentStatusDCSC >(arena);
 }
-template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::CircuitSegmentStatus* Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::CircuitSegmentStatus >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::CircuitSegmentStatus*
+Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::CircuitSegmentStatus >(Arena* arena) {
   return Arena::CreateMessageInternal< ::circuitsegmentservicemodule::CircuitSegmentStatus >(arena);
 }
-template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::CircuitSegmentStatusProfile* Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::CircuitSegmentStatusProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::circuitsegmentservicemodule::CircuitSegmentStatusProfile*
+Arena::CreateMaybeMessage< ::circuitsegmentservicemodule::CircuitSegmentStatusProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::circuitsegmentservicemodule::CircuitSegmentStatusProfile >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
-
 // @@protoc_insertion_point(global_scope)
-#include <google/protobuf/port_undef.inc>
+#include "google/protobuf/port_undef.inc"

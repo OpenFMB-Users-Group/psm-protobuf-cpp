@@ -4,1915 +4,3970 @@
 #include "essmodule/essmodule.pb.h"
 
 #include <algorithm>
-
-#include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include "google/protobuf/io/coded_stream.h"
+#include "google/protobuf/extension_set.h"
+#include "google/protobuf/wire_format_lite.h"
+#include "google/protobuf/descriptor.h"
+#include "google/protobuf/generated_message_reflection.h"
+#include "google/protobuf/reflection_ops.h"
+#include "google/protobuf/wire_format.h"
 // @@protoc_insertion_point(includes)
-#include <google/protobuf/port_def.inc>
 
+// Must be included last.
+#include "google/protobuf/port_def.inc"
 PROTOBUF_PRAGMA_INIT_SEG
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = ::PROTOBUF_NAMESPACE_ID::internal;
 namespace essmodule {
-constexpr EssEventZBAT::EssEventZBAT(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnodeforeventandstatus_(nullptr)
-  , bathi_(nullptr)
-  , batlo_(nullptr)
-  , batst_(nullptr)
-  , soc_(nullptr)
-  , stdby_(nullptr){}
-struct EssEventZBATDefaultTypeInternal {
-  constexpr EssEventZBATDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~EssEventZBATDefaultTypeInternal() {}
+PROTOBUF_CONSTEXPR ESSCapabilityConfiguration::ESSCapabilityConfiguration(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.sourcecapabilityconfiguration_)*/nullptr
+  , /*decltype(_impl_.vachartemax_)*/nullptr
+  , /*decltype(_impl_.vadischartemax_)*/nullptr
+  , /*decltype(_impl_.wchartemax_)*/nullptr
+  , /*decltype(_impl_.wdischartemax_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSCapabilityConfigurationDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSCapabilityConfigurationDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSCapabilityConfigurationDefaultTypeInternal() {}
   union {
-    EssEventZBAT _instance;
+    ESSCapabilityConfiguration _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EssEventZBATDefaultTypeInternal _EssEventZBAT_default_instance_;
-constexpr FrequencyRegulation::FrequencyRegulation(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : frequencydeadbandminus_(nullptr)
-  , frequencydeadbandplus_(nullptr)
-  , frequencyregulationctl_(nullptr)
-  , frequencysetpoint_(nullptr)
-  , gridfrequencystablebandminus_(nullptr)
-  , gridfrequencystablebandplus_(nullptr)
-  , overfrequencydroop_(nullptr)
-  , underfrequencydroop_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSCapabilityConfigurationDefaultTypeInternal _ESSCapabilityConfiguration_default_instance_;
+PROTOBUF_CONSTEXPR ESSCapabilityOverride::ESSCapabilityOverride(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.nameplatevalue_)*/nullptr
+  , /*decltype(_impl_.esscapabilityconfiguration_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSCapabilityOverrideDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSCapabilityOverrideDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSCapabilityOverrideDefaultTypeInternal() {}
+  union {
+    ESSCapabilityOverride _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSCapabilityOverrideDefaultTypeInternal _ESSCapabilityOverride_default_instance_;
+PROTOBUF_CONSTEXPR ESSCapabilityOverrideProfile::ESSCapabilityOverrideProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.capabilitymessageinfo_)*/nullptr
+  , /*decltype(_impl_.ess_)*/nullptr
+  , /*decltype(_impl_.esscapabilityoverride_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSCapabilityOverrideProfileDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSCapabilityOverrideProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSCapabilityOverrideProfileDefaultTypeInternal() {}
+  union {
+    ESSCapabilityOverrideProfile _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSCapabilityOverrideProfileDefaultTypeInternal _ESSCapabilityOverrideProfile_default_instance_;
+PROTOBUF_CONSTEXPR ESSCapabilityRatings::ESSCapabilityRatings(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.sourcecapabilityratings_)*/nullptr
+  , /*decltype(_impl_.vachartemaxrtg_)*/nullptr
+  , /*decltype(_impl_.vadischartemaxrtg_)*/nullptr
+  , /*decltype(_impl_.wchartemaxrtg_)*/nullptr
+  , /*decltype(_impl_.wdischartemaxrtg_)*/nullptr
+  , /*decltype(_impl_.whrtg_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSCapabilityRatingsDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSCapabilityRatingsDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSCapabilityRatingsDefaultTypeInternal() {}
+  union {
+    ESSCapabilityRatings _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSCapabilityRatingsDefaultTypeInternal _ESSCapabilityRatings_default_instance_;
+PROTOBUF_CONSTEXPR ESSCapability::ESSCapability(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.nameplatevalue_)*/nullptr
+  , /*decltype(_impl_.esscapabilityratings_)*/nullptr
+  , /*decltype(_impl_.esscapabilityconfiguration_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSCapabilityDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSCapabilityDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSCapabilityDefaultTypeInternal() {}
+  union {
+    ESSCapability _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSCapabilityDefaultTypeInternal _ESSCapability_default_instance_;
+PROTOBUF_CONSTEXPR ESSCapabilityProfile::ESSCapabilityProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.capabilitymessageinfo_)*/nullptr
+  , /*decltype(_impl_.ess_)*/nullptr
+  , /*decltype(_impl_.esscapability_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSCapabilityProfileDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSCapabilityProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSCapabilityProfileDefaultTypeInternal() {}
+  union {
+    ESSCapabilityProfile _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSCapabilityProfileDefaultTypeInternal _ESSCapabilityProfile_default_instance_;
+PROTOBUF_CONSTEXPR FrequencyRegulation::FrequencyRegulation(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.frequencydeadbandminus_)*/nullptr
+  , /*decltype(_impl_.frequencydeadbandplus_)*/nullptr
+  , /*decltype(_impl_.frequencyregulationctl_)*/nullptr
+  , /*decltype(_impl_.frequencysetpoint_)*/nullptr
+  , /*decltype(_impl_.gridfrequencystablebandminus_)*/nullptr
+  , /*decltype(_impl_.gridfrequencystablebandplus_)*/nullptr
+  , /*decltype(_impl_.overfrequencydroop_)*/nullptr
+  , /*decltype(_impl_.underfrequencydroop_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct FrequencyRegulationDefaultTypeInternal {
-  constexpr FrequencyRegulationDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR FrequencyRegulationDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~FrequencyRegulationDefaultTypeInternal() {}
   union {
     FrequencyRegulation _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT FrequencyRegulationDefaultTypeInternal _FrequencyRegulation_default_instance_;
-constexpr PeakShaving::PeakShaving(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : baseshavinglimit_(nullptr)
-  , peakshavingctl_(nullptr)
-  , peakshavinglimit_(nullptr)
-  , socmanagementallowedhighlimit_(nullptr)
-  , socmanagementallowedlowlimit_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 FrequencyRegulationDefaultTypeInternal _FrequencyRegulation_default_instance_;
+PROTOBUF_CONSTEXPR PeakShaving::PeakShaving(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.baseshavinglimit_)*/nullptr
+  , /*decltype(_impl_.peakshavingctl_)*/nullptr
+  , /*decltype(_impl_.peakshavinglimit_)*/nullptr
+  , /*decltype(_impl_.socmanagementallowedhighlimit_)*/nullptr
+  , /*decltype(_impl_.socmanagementallowedlowlimit_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct PeakShavingDefaultTypeInternal {
-  constexpr PeakShavingDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR PeakShavingDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~PeakShavingDefaultTypeInternal() {}
   union {
     PeakShaving _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PeakShavingDefaultTypeInternal _PeakShaving_default_instance_;
-constexpr SocLimit::SocLimit(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : sochighlimit_(nullptr)
-  , sochighlimithysteresis_(nullptr)
-  , soclimitctl_(nullptr)
-  , soclowlimit_(nullptr)
-  , soclowlimithysteresis_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PeakShavingDefaultTypeInternal _PeakShaving_default_instance_;
+PROTOBUF_CONSTEXPR SocLimit::SocLimit(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.sochighlimit_)*/nullptr
+  , /*decltype(_impl_.sochighlimithysteresis_)*/nullptr
+  , /*decltype(_impl_.soclimitctl_)*/nullptr
+  , /*decltype(_impl_.soclowlimit_)*/nullptr
+  , /*decltype(_impl_.soclowlimithysteresis_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SocLimitDefaultTypeInternal {
-  constexpr SocLimitDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SocLimitDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~SocLimitDefaultTypeInternal() {}
   union {
     SocLimit _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SocLimitDefaultTypeInternal _SocLimit_default_instance_;
-constexpr SOCManagement::SOCManagement(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : socdeadbandminus_(nullptr)
-  , socdeadbandplus_(nullptr)
-  , socmanagementctl_(nullptr)
-  , socpowersetpoint_(nullptr)
-  , socsetpoint_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SocLimitDefaultTypeInternal _SocLimit_default_instance_;
+PROTOBUF_CONSTEXPR SOCManagement::SOCManagement(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.socdeadbandminus_)*/nullptr
+  , /*decltype(_impl_.socdeadbandplus_)*/nullptr
+  , /*decltype(_impl_.socmanagementctl_)*/nullptr
+  , /*decltype(_impl_.socpowersetpoint_)*/nullptr
+  , /*decltype(_impl_.socsetpoint_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SOCManagementDefaultTypeInternal {
-  constexpr SOCManagementDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SOCManagementDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~SOCManagementDefaultTypeInternal() {}
   union {
     SOCManagement _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SOCManagementDefaultTypeInternal _SOCManagement_default_instance_;
-constexpr VoltageRegulation::VoltageRegulation(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : overvoltagedroop_(nullptr)
-  , undervoltagedroop_(nullptr)
-  , voltagedeadbandminus_(nullptr)
-  , voltagedeadbandplus_(nullptr)
-  , voltagesetpoint_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SOCManagementDefaultTypeInternal _SOCManagement_default_instance_;
+PROTOBUF_CONSTEXPR VoltageRegulation::VoltageRegulation(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.overvoltagedroop_)*/nullptr
+  , /*decltype(_impl_.undervoltagedroop_)*/nullptr
+  , /*decltype(_impl_.voltagedeadbandminus_)*/nullptr
+  , /*decltype(_impl_.voltagedeadbandplus_)*/nullptr
+  , /*decltype(_impl_.voltagesetpoint_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct VoltageRegulationDefaultTypeInternal {
-  constexpr VoltageRegulationDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR VoltageRegulationDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~VoltageRegulationDefaultTypeInternal() {}
   union {
     VoltageRegulation _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT VoltageRegulationDefaultTypeInternal _VoltageRegulation_default_instance_;
-constexpr VoltageDroop::VoltageDroop(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : voltagedroopctl_(nullptr)
-  , voltageregulation_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 VoltageRegulationDefaultTypeInternal _VoltageRegulation_default_instance_;
+PROTOBUF_CONSTEXPR VoltageDroop::VoltageDroop(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.voltagedroopctl_)*/nullptr
+  , /*decltype(_impl_.voltageregulation_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct VoltageDroopDefaultTypeInternal {
-  constexpr VoltageDroopDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR VoltageDroopDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~VoltageDroopDefaultTypeInternal() {}
   union {
     VoltageDroop _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT VoltageDroopDefaultTypeInternal _VoltageDroop_default_instance_;
-constexpr VoltagePI::VoltagePI(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : voltagepictl_(nullptr)
-  , voltageregulation_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 VoltageDroopDefaultTypeInternal _VoltageDroop_default_instance_;
+PROTOBUF_CONSTEXPR VoltagePI::VoltagePI(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.voltagepictl_)*/nullptr
+  , /*decltype(_impl_.voltageregulation_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct VoltagePIDefaultTypeInternal {
-  constexpr VoltagePIDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR VoltagePIDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~VoltagePIDefaultTypeInternal() {}
   union {
     VoltagePI _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT VoltagePIDefaultTypeInternal _VoltagePI_default_instance_;
-constexpr CapacityFirming::CapacityFirming(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : capacityfirmingctl_(nullptr)
-  , limitnegative_dp_dt_(nullptr)
-  , limitpositive_dp_dt_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 VoltagePIDefaultTypeInternal _VoltagePI_default_instance_;
+PROTOBUF_CONSTEXPR CapacityFirming::CapacityFirming(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.capacityfirmingctl_)*/nullptr
+  , /*decltype(_impl_.limitnegative_dp_dt_)*/nullptr
+  , /*decltype(_impl_.limitpositive_dp_dt_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CapacityFirmingDefaultTypeInternal {
-  constexpr CapacityFirmingDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CapacityFirmingDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CapacityFirmingDefaultTypeInternal() {}
   union {
     CapacityFirming _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapacityFirmingDefaultTypeInternal _CapacityFirming_default_instance_;
-constexpr ESSFunction::ESSFunction(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : capacityfirming_(nullptr)
-  , frequencyregulation_(nullptr)
-  , peakshaving_(nullptr)
-  , soclimit_(nullptr)
-  , socmanagement_(nullptr)
-  , voltagedroop_(nullptr)
-  , voltagepi_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CapacityFirmingDefaultTypeInternal _CapacityFirming_default_instance_;
+PROTOBUF_CONSTEXPR ESSFunction::ESSFunction(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.capacityfirming_)*/nullptr
+  , /*decltype(_impl_.frequencyregulation_)*/nullptr
+  , /*decltype(_impl_.peakshaving_)*/nullptr
+  , /*decltype(_impl_.soclimit_)*/nullptr
+  , /*decltype(_impl_.socmanagement_)*/nullptr
+  , /*decltype(_impl_.voltagedroop_)*/nullptr
+  , /*decltype(_impl_.voltagepi_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ESSFunctionDefaultTypeInternal {
-  constexpr ESSFunctionDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ESSFunctionDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ESSFunctionDefaultTypeInternal() {}
   union {
     ESSFunction _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSFunctionDefaultTypeInternal _ESSFunction_default_instance_;
-constexpr ESSPointStatus::ESSPointStatus(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : blackstartenabled_(nullptr)
-  , frequencysetpointenabled_(nullptr)
-  , function_(nullptr)
-  , mode_(nullptr)
-  , pcthzdroop_(nullptr)
-  , pctvdroop_(nullptr)
-  , ramprates_(nullptr)
-  , reactivepwrsetpointenabled_(nullptr)
-  , realpwrsetpointenabled_(nullptr)
-  , state_(nullptr)
-  , syncbacktogrid_(nullptr)
-  , transtoislndongridlossenabled_(nullptr)
-  , voltagesetpointenabled_(nullptr){}
-struct ESSPointStatusDefaultTypeInternal {
-  constexpr ESSPointStatusDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSPointStatusDefaultTypeInternal() {}
-  union {
-    ESSPointStatus _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSPointStatusDefaultTypeInternal _ESSPointStatus_default_instance_;
-constexpr ESSEventAndStatusZGEN::ESSEventAndStatusZGEN(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnodeforeventandstatus_(nullptr)
-  , auxpwrst_(nullptr)
-  , dynamictest_(nullptr)
-  , emgstop_(nullptr)
-  , gnsynst_(nullptr)
-  , pointstatus_(nullptr){}
-struct ESSEventAndStatusZGENDefaultTypeInternal {
-  constexpr ESSEventAndStatusZGENDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSEventAndStatusZGENDefaultTypeInternal() {}
-  union {
-    ESSEventAndStatusZGEN _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSEventAndStatusZGENDefaultTypeInternal _ESSEventAndStatusZGEN_default_instance_;
-constexpr ESSEventZGEN::ESSEventZGEN(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : esseventandstatuszgen_(nullptr){}
-struct ESSEventZGENDefaultTypeInternal {
-  constexpr ESSEventZGENDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSEventZGENDefaultTypeInternal() {}
-  union {
-    ESSEventZGEN _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSEventZGENDefaultTypeInternal _ESSEventZGEN_default_instance_;
-constexpr ESSEvent::ESSEvent(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : eventvalue_(nullptr)
-  , esseventzbat_(nullptr)
-  , esseventzgen_(nullptr){}
-struct ESSEventDefaultTypeInternal {
-  constexpr ESSEventDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSEventDefaultTypeInternal() {}
-  union {
-    ESSEvent _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSEventDefaultTypeInternal _ESSEvent_default_instance_;
-constexpr ESSEventProfile::ESSEventProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : eventmessageinfo_(nullptr)
-  , ess_(nullptr)
-  , essevent_(nullptr){}
-struct ESSEventProfileDefaultTypeInternal {
-  constexpr ESSEventProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSEventProfileDefaultTypeInternal() {}
-  union {
-    ESSEventProfile _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSEventProfileDefaultTypeInternal _ESSEventProfile_default_instance_;
-constexpr ESSReading::ESSReading(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : conductingequipmentterminalreading_(nullptr)
-  , phasemmtn_(nullptr)
-  , readingmmtr_(nullptr)
-  , readingmmxu_(nullptr){}
-struct ESSReadingDefaultTypeInternal {
-  constexpr ESSReadingDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSReadingDefaultTypeInternal() {}
-  union {
-    ESSReading _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSReadingDefaultTypeInternal _ESSReading_default_instance_;
-constexpr ESSReadingProfile::ESSReadingProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : readingmessageinfo_(nullptr)
-  , ess_(nullptr)
-  , essreading_(nullptr){}
-struct ESSReadingProfileDefaultTypeInternal {
-  constexpr ESSReadingProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSReadingProfileDefaultTypeInternal() {}
-  union {
-    ESSReadingProfile _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSReadingProfileDefaultTypeInternal _ESSReadingProfile_default_instance_;
-constexpr EssStatusZBAT::EssStatusZBAT(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnodeforeventandstatus_(nullptr)
-  , batst_(nullptr)
-  , grimod_(nullptr)
-  , soc_(nullptr)
-  , stdby_(nullptr){}
-struct EssStatusZBATDefaultTypeInternal {
-  constexpr EssStatusZBATDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~EssStatusZBATDefaultTypeInternal() {}
-  union {
-    EssStatusZBAT _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EssStatusZBATDefaultTypeInternal _EssStatusZBAT_default_instance_;
-constexpr ESSStatusZGEN::ESSStatusZGEN(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : esseventandstatuszgen_(nullptr){}
-struct ESSStatusZGENDefaultTypeInternal {
-  constexpr ESSStatusZGENDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSStatusZGENDefaultTypeInternal() {}
-  union {
-    ESSStatusZGEN _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSStatusZGENDefaultTypeInternal _ESSStatusZGEN_default_instance_;
-constexpr ESSStatus::ESSStatus(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : statusvalue_(nullptr)
-  , essstatuszbat_(nullptr)
-  , essstatuszgen_(nullptr){}
-struct ESSStatusDefaultTypeInternal {
-  constexpr ESSStatusDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSStatusDefaultTypeInternal() {}
-  union {
-    ESSStatus _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSStatusDefaultTypeInternal _ESSStatus_default_instance_;
-constexpr ESSStatusProfile::ESSStatusProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : statusmessageinfo_(nullptr)
-  , ess_(nullptr)
-  , essstatus_(nullptr){}
-struct ESSStatusProfileDefaultTypeInternal {
-  constexpr ESSStatusProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~ESSStatusProfileDefaultTypeInternal() {}
-  union {
-    ESSStatusProfile _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSStatusProfileDefaultTypeInternal _ESSStatusProfile_default_instance_;
-constexpr ESSPoint::ESSPoint(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : blackstartenabled_(nullptr)
-  , frequencysetpointenabled_(nullptr)
-  , function_(nullptr)
-  , mode_(nullptr)
-  , pcthzdroop_(nullptr)
-  , pctvdroop_(nullptr)
-  , ramprates_(nullptr)
-  , reactivepwrsetpointenabled_(nullptr)
-  , realpwrsetpointenabled_(nullptr)
-  , reset_(nullptr)
-  , state_(nullptr)
-  , syncbacktogrid_(nullptr)
-  , transtoislndongridlossenabled_(nullptr)
-  , voltagesetpointenabled_(nullptr)
-  , starttime_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSFunctionDefaultTypeInternal _ESSFunction_default_instance_;
+PROTOBUF_CONSTEXPR ESSPoint::ESSPoint(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.blackstartenabled_)*/nullptr
+  , /*decltype(_impl_.function_)*/nullptr
+  , /*decltype(_impl_.mode_)*/nullptr
+  , /*decltype(_impl_.ramprates_)*/nullptr
+  , /*decltype(_impl_.reset_)*/nullptr
+  , /*decltype(_impl_.state_)*/nullptr
+  , /*decltype(_impl_.transtoislndongridlossenabled_)*/nullptr
+  , /*decltype(_impl_.enterserviceoperation_)*/nullptr
+  , /*decltype(_impl_.hzwoperation_)*/nullptr
+  , /*decltype(_impl_.limitwoperation_)*/nullptr
+  , /*decltype(_impl_.pfoperation_)*/nullptr
+  , /*decltype(_impl_.tmhztripoperation_)*/nullptr
+  , /*decltype(_impl_.tmvolttripoperation_)*/nullptr
+  , /*decltype(_impl_.varoperation_)*/nullptr
+  , /*decltype(_impl_.voltvaroperation_)*/nullptr
+  , /*decltype(_impl_.voltwoperation_)*/nullptr
+  , /*decltype(_impl_.wvaroperation_)*/nullptr
+  , /*decltype(_impl_.woperation_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ESSPointDefaultTypeInternal {
-  constexpr ESSPointDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ESSPointDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ESSPointDefaultTypeInternal() {}
   union {
     ESSPoint _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSPointDefaultTypeInternal _ESSPoint_default_instance_;
-constexpr ESSCSG::ESSCSG(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : crvpts_(){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSPointDefaultTypeInternal _ESSPoint_default_instance_;
+PROTOBUF_CONSTEXPR ESSCurvePoint::ESSCurvePoint(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.control_)*/nullptr
+  , /*decltype(_impl_.starttime_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSCurvePointDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSCurvePointDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSCurvePointDefaultTypeInternal() {}
+  union {
+    ESSCurvePoint _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSCurvePointDefaultTypeInternal _ESSCurvePoint_default_instance_;
+PROTOBUF_CONSTEXPR ESSCSG::ESSCSG(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.crvpts_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ESSCSGDefaultTypeInternal {
-  constexpr ESSCSGDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ESSCSGDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ESSCSGDefaultTypeInternal() {}
   union {
     ESSCSG _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSCSGDefaultTypeInternal _ESSCSG_default_instance_;
-constexpr ESSControlScheduleFSCH::ESSControlScheduleFSCH(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : valdcsg_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSCSGDefaultTypeInternal _ESSCSG_default_instance_;
+PROTOBUF_CONSTEXPR ESSControlScheduleFSCH::ESSControlScheduleFSCH(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.valdcsg_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ESSControlScheduleFSCHDefaultTypeInternal {
-  constexpr ESSControlScheduleFSCHDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ESSControlScheduleFSCHDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ESSControlScheduleFSCHDefaultTypeInternal() {}
   union {
     ESSControlScheduleFSCH _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSControlScheduleFSCHDefaultTypeInternal _ESSControlScheduleFSCH_default_instance_;
-constexpr EssControlFSCC::EssControlFSCC(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlfscc_(nullptr)
-  , esscontrolschedulefsch_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSControlScheduleFSCHDefaultTypeInternal _ESSControlScheduleFSCH_default_instance_;
+PROTOBUF_CONSTEXPR EssControlFSCC::EssControlFSCC(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlfscc_)*/nullptr
+  , /*decltype(_impl_.esscontrolschedulefsch_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct EssControlFSCCDefaultTypeInternal {
-  constexpr EssControlFSCCDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR EssControlFSCCDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~EssControlFSCCDefaultTypeInternal() {}
   union {
     EssControlFSCC _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT EssControlFSCCDefaultTypeInternal _EssControlFSCC_default_instance_;
-constexpr ESSControl::ESSControl(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlvalue_(nullptr)
-  , check_(nullptr)
-  , esscontrolfscc_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EssControlFSCCDefaultTypeInternal _EssControlFSCC_default_instance_;
+PROTOBUF_CONSTEXPR ESSControl::ESSControl(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlvalue_)*/nullptr
+  , /*decltype(_impl_.check_)*/nullptr
+  , /*decltype(_impl_.esscontrolfscc_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ESSControlDefaultTypeInternal {
-  constexpr ESSControlDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ESSControlDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ESSControlDefaultTypeInternal() {}
   union {
     ESSControl _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSControlDefaultTypeInternal _ESSControl_default_instance_;
-constexpr ESSControlProfile::ESSControlProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlmessageinfo_(nullptr)
-  , ess_(nullptr)
-  , esscontrol_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSControlDefaultTypeInternal _ESSControl_default_instance_;
+PROTOBUF_CONSTEXPR ESSControlProfile::ESSControlProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlmessageinfo_)*/nullptr
+  , /*decltype(_impl_.ess_)*/nullptr
+  , /*decltype(_impl_.esscontrol_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ESSControlProfileDefaultTypeInternal {
-  constexpr ESSControlProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ESSControlProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ESSControlProfileDefaultTypeInternal() {}
   union {
     ESSControlProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ESSControlProfileDefaultTypeInternal _ESSControlProfile_default_instance_;
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSControlProfileDefaultTypeInternal _ESSControlProfile_default_instance_;
+PROTOBUF_CONSTEXPR ESSDiscreteControlDBAT::ESSDiscreteControlDBAT(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.logicalnodeforcontrol_)*/nullptr
+  , /*decltype(_impl_.control_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSDiscreteControlDBATDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSDiscreteControlDBATDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSDiscreteControlDBATDefaultTypeInternal() {}
+  union {
+    ESSDiscreteControlDBAT _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSDiscreteControlDBATDefaultTypeInternal _ESSDiscreteControlDBAT_default_instance_;
+PROTOBUF_CONSTEXPR ESSDiscreteControl::ESSDiscreteControl(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlvalue_)*/nullptr
+  , /*decltype(_impl_.check_)*/nullptr
+  , /*decltype(_impl_.essdiscretecontroldbat_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSDiscreteControlDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSDiscreteControlDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSDiscreteControlDefaultTypeInternal() {}
+  union {
+    ESSDiscreteControl _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSDiscreteControlDefaultTypeInternal _ESSDiscreteControl_default_instance_;
+PROTOBUF_CONSTEXPR ESSDiscreteControlProfile::ESSDiscreteControlProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlmessageinfo_)*/nullptr
+  , /*decltype(_impl_.ess_)*/nullptr
+  , /*decltype(_impl_.essdiscretecontrol_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSDiscreteControlProfileDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSDiscreteControlProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSDiscreteControlProfileDefaultTypeInternal() {}
+  union {
+    ESSDiscreteControlProfile _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSDiscreteControlProfileDefaultTypeInternal _ESSDiscreteControlProfile_default_instance_;
+PROTOBUF_CONSTEXPR EssEventZBAT::EssEventZBAT(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.logicalnodeforeventandstatus_)*/nullptr
+  , /*decltype(_impl_.bathi_)*/nullptr
+  , /*decltype(_impl_.batlo_)*/nullptr
+  , /*decltype(_impl_.batst_)*/nullptr
+  , /*decltype(_impl_.soc_)*/nullptr
+  , /*decltype(_impl_.stdby_)*/nullptr
+  , /*decltype(_impl_.soh_)*/nullptr
+  , /*decltype(_impl_.whavail_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct EssEventZBATDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR EssEventZBATDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~EssEventZBATDefaultTypeInternal() {}
+  union {
+    EssEventZBAT _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EssEventZBATDefaultTypeInternal _EssEventZBAT_default_instance_;
+PROTOBUF_CONSTEXPR ESSPointStatus::ESSPointStatus(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.blackstartenabled_)*/nullptr
+  , /*decltype(_impl_.frequencysetpointenabled_)*/nullptr
+  , /*decltype(_impl_.function_)*/nullptr
+  , /*decltype(_impl_.mode_)*/nullptr
+  , /*decltype(_impl_.pcthzdroop_)*/nullptr
+  , /*decltype(_impl_.pctvdroop_)*/nullptr
+  , /*decltype(_impl_.ramprates_)*/nullptr
+  , /*decltype(_impl_.reactivepwrsetpointenabled_)*/nullptr
+  , /*decltype(_impl_.realpwrsetpointenabled_)*/nullptr
+  , /*decltype(_impl_.state_)*/nullptr
+  , /*decltype(_impl_.syncbacktogrid_)*/nullptr
+  , /*decltype(_impl_.transtoislndongridlossenabled_)*/nullptr
+  , /*decltype(_impl_.voltagesetpointenabled_)*/nullptr
+  , /*decltype(_impl_.enterserviceoperation_)*/nullptr
+  , /*decltype(_impl_.hzwoperation_)*/nullptr
+  , /*decltype(_impl_.limitwoperation_)*/nullptr
+  , /*decltype(_impl_.pfoperation_)*/nullptr
+  , /*decltype(_impl_.tmhztripoperation_)*/nullptr
+  , /*decltype(_impl_.tmvolttripoperation_)*/nullptr
+  , /*decltype(_impl_.varoperation_)*/nullptr
+  , /*decltype(_impl_.voltvaroperation_)*/nullptr
+  , /*decltype(_impl_.voltwoperation_)*/nullptr
+  , /*decltype(_impl_.wvaroperation_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSPointStatusDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSPointStatusDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSPointStatusDefaultTypeInternal() {}
+  union {
+    ESSPointStatus _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSPointStatusDefaultTypeInternal _ESSPointStatus_default_instance_;
+PROTOBUF_CONSTEXPR ESSEventAndStatusZGEN::ESSEventAndStatusZGEN(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.logicalnodeforeventandstatus_)*/nullptr
+  , /*decltype(_impl_.auxpwrst_)*/nullptr
+  , /*decltype(_impl_.dynamictest_)*/nullptr
+  , /*decltype(_impl_.emgstop_)*/nullptr
+  , /*decltype(_impl_.gnsynst_)*/nullptr
+  , /*decltype(_impl_.pointstatus_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSEventAndStatusZGENDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSEventAndStatusZGENDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSEventAndStatusZGENDefaultTypeInternal() {}
+  union {
+    ESSEventAndStatusZGEN _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSEventAndStatusZGENDefaultTypeInternal _ESSEventAndStatusZGEN_default_instance_;
+PROTOBUF_CONSTEXPR ESSEventZGEN::ESSEventZGEN(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.esseventandstatuszgen_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSEventZGENDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSEventZGENDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSEventZGENDefaultTypeInternal() {}
+  union {
+    ESSEventZGEN _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSEventZGENDefaultTypeInternal _ESSEventZGEN_default_instance_;
+PROTOBUF_CONSTEXPR ESSEvent::ESSEvent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.eventvalue_)*/nullptr
+  , /*decltype(_impl_.esseventzbat_)*/nullptr
+  , /*decltype(_impl_.esseventzgen_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSEventDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSEventDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSEventDefaultTypeInternal() {}
+  union {
+    ESSEvent _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSEventDefaultTypeInternal _ESSEvent_default_instance_;
+PROTOBUF_CONSTEXPR ESSEventProfile::ESSEventProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.eventmessageinfo_)*/nullptr
+  , /*decltype(_impl_.ess_)*/nullptr
+  , /*decltype(_impl_.essevent_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSEventProfileDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSEventProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSEventProfileDefaultTypeInternal() {}
+  union {
+    ESSEventProfile _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSEventProfileDefaultTypeInternal _ESSEventProfile_default_instance_;
+PROTOBUF_CONSTEXPR ESSReading::ESSReading(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.conductingequipmentterminalreading_)*/nullptr
+  , /*decltype(_impl_.phasemmtn_)*/nullptr
+  , /*decltype(_impl_.readingmmtr_)*/nullptr
+  , /*decltype(_impl_.readingmmxu_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSReadingDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSReadingDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSReadingDefaultTypeInternal() {}
+  union {
+    ESSReading _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSReadingDefaultTypeInternal _ESSReading_default_instance_;
+PROTOBUF_CONSTEXPR ESSReadingProfile::ESSReadingProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.readingmessageinfo_)*/nullptr
+  , /*decltype(_impl_.ess_)*/nullptr
+  , /*decltype(_impl_.essreading_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSReadingProfileDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSReadingProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSReadingProfileDefaultTypeInternal() {}
+  union {
+    ESSReadingProfile _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSReadingProfileDefaultTypeInternal _ESSReadingProfile_default_instance_;
+PROTOBUF_CONSTEXPR EssStatusZBAT::EssStatusZBAT(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.logicalnodeforeventandstatus_)*/nullptr
+  , /*decltype(_impl_.batst_)*/nullptr
+  , /*decltype(_impl_.grimod_)*/nullptr
+  , /*decltype(_impl_.soc_)*/nullptr
+  , /*decltype(_impl_.stdby_)*/nullptr
+  , /*decltype(_impl_.soh_)*/nullptr
+  , /*decltype(_impl_.whavail_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct EssStatusZBATDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR EssStatusZBATDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~EssStatusZBATDefaultTypeInternal() {}
+  union {
+    EssStatusZBAT _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EssStatusZBATDefaultTypeInternal _EssStatusZBAT_default_instance_;
+PROTOBUF_CONSTEXPR ESSStatusZGEN::ESSStatusZGEN(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.esseventandstatuszgen_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSStatusZGENDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSStatusZGENDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSStatusZGENDefaultTypeInternal() {}
+  union {
+    ESSStatusZGEN _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSStatusZGENDefaultTypeInternal _ESSStatusZGEN_default_instance_;
+PROTOBUF_CONSTEXPR ESSStatus::ESSStatus(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.statusvalue_)*/nullptr
+  , /*decltype(_impl_.essstatuszbat_)*/nullptr
+  , /*decltype(_impl_.essstatuszgen_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSStatusDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSStatusDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSStatusDefaultTypeInternal() {}
+  union {
+    ESSStatus _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSStatusDefaultTypeInternal _ESSStatus_default_instance_;
+PROTOBUF_CONSTEXPR ESSStatusProfile::ESSStatusProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.statusmessageinfo_)*/nullptr
+  , /*decltype(_impl_.ess_)*/nullptr
+  , /*decltype(_impl_.essstatus_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ESSStatusProfileDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ESSStatusProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ESSStatusProfileDefaultTypeInternal() {}
+  union {
+    ESSStatusProfile _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ESSStatusProfileDefaultTypeInternal _ESSStatusProfile_default_instance_;
 }  // namespace essmodule
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_essmodule_2fessmodule_2eproto[27];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_essmodule_2fessmodule_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_essmodule_2fessmodule_2eproto = nullptr;
+static ::_pb::Metadata file_level_metadata_essmodule_2fessmodule_2eproto[37];
+static constexpr const ::_pb::EnumDescriptor**
+    file_level_enum_descriptors_essmodule_2fessmodule_2eproto = nullptr;
+static constexpr const ::_pb::ServiceDescriptor**
+    file_level_service_descriptors_essmodule_2fessmodule_2eproto = nullptr;
+const ::uint32_t TableStruct_essmodule_2fessmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
+    protodesc_cold) = {
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityConfiguration, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityConfiguration, _impl_.sourcecapabilityconfiguration_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityConfiguration, _impl_.vachartemax_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityConfiguration, _impl_.vadischartemax_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityConfiguration, _impl_.wchartemax_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityConfiguration, _impl_.wdischartemax_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityOverride, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityOverride, _impl_.nameplatevalue_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityOverride, _impl_.esscapabilityconfiguration_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityOverrideProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityOverrideProfile, _impl_.capabilitymessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityOverrideProfile, _impl_.ess_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityOverrideProfile, _impl_.esscapabilityoverride_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityRatings, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityRatings, _impl_.sourcecapabilityratings_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityRatings, _impl_.vachartemaxrtg_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityRatings, _impl_.vadischartemaxrtg_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityRatings, _impl_.wchartemaxrtg_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityRatings, _impl_.wdischartemaxrtg_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityRatings, _impl_.whrtg_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapability, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapability, _impl_.nameplatevalue_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapability, _impl_.esscapabilityratings_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapability, _impl_.esscapabilityconfiguration_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityProfile, _impl_.capabilitymessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityProfile, _impl_.ess_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCapabilityProfile, _impl_.esscapability_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::FrequencyRegulation, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::FrequencyRegulation, _impl_.frequencydeadbandminus_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::FrequencyRegulation, _impl_.frequencydeadbandplus_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::FrequencyRegulation, _impl_.frequencyregulationctl_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::FrequencyRegulation, _impl_.frequencysetpoint_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::FrequencyRegulation, _impl_.gridfrequencystablebandminus_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::FrequencyRegulation, _impl_.gridfrequencystablebandplus_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::FrequencyRegulation, _impl_.overfrequencydroop_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::FrequencyRegulation, _impl_.underfrequencydroop_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::PeakShaving, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::PeakShaving, _impl_.baseshavinglimit_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::PeakShaving, _impl_.peakshavingctl_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::PeakShaving, _impl_.peakshavinglimit_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::PeakShaving, _impl_.socmanagementallowedhighlimit_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::PeakShaving, _impl_.socmanagementallowedlowlimit_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::SocLimit, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::SocLimit, _impl_.sochighlimit_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::SocLimit, _impl_.sochighlimithysteresis_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::SocLimit, _impl_.soclimitctl_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::SocLimit, _impl_.soclowlimit_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::SocLimit, _impl_.soclowlimithysteresis_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::SOCManagement, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::SOCManagement, _impl_.socdeadbandminus_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::SOCManagement, _impl_.socdeadbandplus_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::SOCManagement, _impl_.socmanagementctl_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::SOCManagement, _impl_.socpowersetpoint_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::SOCManagement, _impl_.socsetpoint_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::VoltageRegulation, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::VoltageRegulation, _impl_.overvoltagedroop_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::VoltageRegulation, _impl_.undervoltagedroop_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::VoltageRegulation, _impl_.voltagedeadbandminus_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::VoltageRegulation, _impl_.voltagedeadbandplus_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::VoltageRegulation, _impl_.voltagesetpoint_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::VoltageDroop, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::VoltageDroop, _impl_.voltagedroopctl_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::VoltageDroop, _impl_.voltageregulation_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::VoltagePI, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::VoltagePI, _impl_.voltagepictl_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::VoltagePI, _impl_.voltageregulation_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::CapacityFirming, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::CapacityFirming, _impl_.capacityfirmingctl_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::CapacityFirming, _impl_.limitnegative_dp_dt_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::CapacityFirming, _impl_.limitpositive_dp_dt_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSFunction, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSFunction, _impl_.capacityfirming_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSFunction, _impl_.frequencyregulation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSFunction, _impl_.peakshaving_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSFunction, _impl_.soclimit_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSFunction, _impl_.socmanagement_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSFunction, _impl_.voltagedroop_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSFunction, _impl_.voltagepi_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _impl_.blackstartenabled_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _impl_.function_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _impl_.mode_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _impl_.ramprates_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _impl_.reset_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _impl_.state_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _impl_.transtoislndongridlossenabled_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _impl_.enterserviceoperation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _impl_.hzwoperation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _impl_.limitwoperation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _impl_.pfoperation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _impl_.tmhztripoperation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _impl_.tmvolttripoperation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _impl_.varoperation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _impl_.voltvaroperation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _impl_.voltwoperation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _impl_.wvaroperation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _impl_.woperation_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCurvePoint, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCurvePoint, _impl_.control_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCurvePoint, _impl_.starttime_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCSG, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSCSG, _impl_.crvpts_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSControlScheduleFSCH, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSControlScheduleFSCH, _impl_.valdcsg_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssControlFSCC, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssControlFSCC, _impl_.controlfscc_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssControlFSCC, _impl_.esscontrolschedulefsch_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSControl, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSControl, _impl_.controlvalue_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSControl, _impl_.check_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSControl, _impl_.esscontrolfscc_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSControlProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSControlProfile, _impl_.controlmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSControlProfile, _impl_.ess_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSControlProfile, _impl_.esscontrol_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSDiscreteControlDBAT, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSDiscreteControlDBAT, _impl_.logicalnodeforcontrol_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSDiscreteControlDBAT, _impl_.control_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSDiscreteControl, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSDiscreteControl, _impl_.controlvalue_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSDiscreteControl, _impl_.check_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSDiscreteControl, _impl_.essdiscretecontroldbat_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSDiscreteControlProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSDiscreteControlProfile, _impl_.controlmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSDiscreteControlProfile, _impl_.ess_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSDiscreteControlProfile, _impl_.essdiscretecontrol_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssEventZBAT, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssEventZBAT, _impl_.logicalnodeforeventandstatus_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssEventZBAT, _impl_.bathi_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssEventZBAT, _impl_.batlo_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssEventZBAT, _impl_.batst_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssEventZBAT, _impl_.soc_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssEventZBAT, _impl_.stdby_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssEventZBAT, _impl_.soh_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssEventZBAT, _impl_.whavail_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.blackstartenabled_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.frequencysetpointenabled_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.function_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.mode_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.pcthzdroop_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.pctvdroop_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.ramprates_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.reactivepwrsetpointenabled_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.realpwrsetpointenabled_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.state_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.syncbacktogrid_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.transtoislndongridlossenabled_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.voltagesetpointenabled_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.enterserviceoperation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.hzwoperation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.limitwoperation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.pfoperation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.tmhztripoperation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.tmvolttripoperation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.varoperation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.voltvaroperation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.voltwoperation_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _impl_.wvaroperation_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventAndStatusZGEN, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventAndStatusZGEN, _impl_.logicalnodeforeventandstatus_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventAndStatusZGEN, _impl_.auxpwrst_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventAndStatusZGEN, _impl_.dynamictest_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventAndStatusZGEN, _impl_.emgstop_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventAndStatusZGEN, _impl_.gnsynst_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventAndStatusZGEN, _impl_.pointstatus_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventZGEN, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventZGEN, _impl_.esseventandstatuszgen_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSEvent, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSEvent, _impl_.eventvalue_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSEvent, _impl_.esseventzbat_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSEvent, _impl_.esseventzgen_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventProfile, _impl_.eventmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventProfile, _impl_.ess_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventProfile, _impl_.essevent_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSReading, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSReading, _impl_.conductingequipmentterminalreading_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSReading, _impl_.phasemmtn_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSReading, _impl_.readingmmtr_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSReading, _impl_.readingmmxu_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSReadingProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSReadingProfile, _impl_.readingmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSReadingProfile, _impl_.ess_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSReadingProfile, _impl_.essreading_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssStatusZBAT, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssStatusZBAT, _impl_.logicalnodeforeventandstatus_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssStatusZBAT, _impl_.batst_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssStatusZBAT, _impl_.grimod_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssStatusZBAT, _impl_.soc_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssStatusZBAT, _impl_.stdby_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssStatusZBAT, _impl_.soh_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::EssStatusZBAT, _impl_.whavail_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatusZGEN, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatusZGEN, _impl_.esseventandstatuszgen_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatus, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatus, _impl_.statusvalue_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatus, _impl_.essstatuszbat_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatus, _impl_.essstatuszgen_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatusProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatusProfile, _impl_.statusmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatusProfile, _impl_.ess_),
+    PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatusProfile, _impl_.essstatus_),
+};
 
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_essmodule_2fessmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::EssEventZBAT, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::EssEventZBAT, logicalnodeforeventandstatus_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::EssEventZBAT, bathi_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::EssEventZBAT, batlo_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::EssEventZBAT, batst_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::EssEventZBAT, soc_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::EssEventZBAT, stdby_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::FrequencyRegulation, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::FrequencyRegulation, frequencydeadbandminus_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::FrequencyRegulation, frequencydeadbandplus_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::FrequencyRegulation, frequencyregulationctl_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::FrequencyRegulation, frequencysetpoint_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::FrequencyRegulation, gridfrequencystablebandminus_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::FrequencyRegulation, gridfrequencystablebandplus_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::FrequencyRegulation, overfrequencydroop_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::FrequencyRegulation, underfrequencydroop_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::PeakShaving, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::PeakShaving, baseshavinglimit_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::PeakShaving, peakshavingctl_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::PeakShaving, peakshavinglimit_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::PeakShaving, socmanagementallowedhighlimit_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::PeakShaving, socmanagementallowedlowlimit_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::SocLimit, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::SocLimit, sochighlimit_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::SocLimit, sochighlimithysteresis_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::SocLimit, soclimitctl_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::SocLimit, soclowlimit_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::SocLimit, soclowlimithysteresis_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::SOCManagement, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::SOCManagement, socdeadbandminus_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::SOCManagement, socdeadbandplus_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::SOCManagement, socmanagementctl_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::SOCManagement, socpowersetpoint_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::SOCManagement, socsetpoint_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::VoltageRegulation, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::VoltageRegulation, overvoltagedroop_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::VoltageRegulation, undervoltagedroop_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::VoltageRegulation, voltagedeadbandminus_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::VoltageRegulation, voltagedeadbandplus_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::VoltageRegulation, voltagesetpoint_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::VoltageDroop, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::VoltageDroop, voltagedroopctl_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::VoltageDroop, voltageregulation_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::VoltagePI, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::VoltagePI, voltagepictl_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::VoltagePI, voltageregulation_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::CapacityFirming, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::CapacityFirming, capacityfirmingctl_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::CapacityFirming, limitnegative_dp_dt_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::CapacityFirming, limitpositive_dp_dt_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSFunction, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSFunction, capacityfirming_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSFunction, frequencyregulation_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSFunction, peakshaving_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSFunction, soclimit_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSFunction, socmanagement_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSFunction, voltagedroop_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSFunction, voltagepi_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, blackstartenabled_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, frequencysetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, function_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, mode_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, pcthzdroop_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, pctvdroop_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, ramprates_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, reactivepwrsetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, realpwrsetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, state_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, syncbacktogrid_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, transtoislndongridlossenabled_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPointStatus, voltagesetpointenabled_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventAndStatusZGEN, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventAndStatusZGEN, logicalnodeforeventandstatus_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventAndStatusZGEN, auxpwrst_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventAndStatusZGEN, dynamictest_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventAndStatusZGEN, emgstop_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventAndStatusZGEN, gnsynst_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventAndStatusZGEN, pointstatus_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventZGEN, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventZGEN, esseventandstatuszgen_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSEvent, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSEvent, eventvalue_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSEvent, esseventzbat_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSEvent, esseventzgen_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventProfile, eventmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventProfile, ess_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSEventProfile, essevent_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSReading, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSReading, conductingequipmentterminalreading_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSReading, phasemmtn_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSReading, readingmmtr_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSReading, readingmmxu_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSReadingProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSReadingProfile, readingmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSReadingProfile, ess_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSReadingProfile, essreading_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::EssStatusZBAT, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::EssStatusZBAT, logicalnodeforeventandstatus_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::EssStatusZBAT, batst_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::EssStatusZBAT, grimod_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::EssStatusZBAT, soc_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::EssStatusZBAT, stdby_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatusZGEN, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatusZGEN, esseventandstatuszgen_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatus, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatus, statusvalue_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatus, essstatuszbat_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatus, essstatuszgen_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatusProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatusProfile, statusmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatusProfile, ess_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSStatusProfile, essstatus_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, blackstartenabled_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, frequencysetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, function_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, mode_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, pcthzdroop_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, pctvdroop_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, ramprates_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, reactivepwrsetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, realpwrsetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, reset_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, state_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, syncbacktogrid_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, transtoislndongridlossenabled_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, voltagesetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSPoint, starttime_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSCSG, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSCSG, crvpts_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSControlScheduleFSCH, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSControlScheduleFSCH, valdcsg_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::EssControlFSCC, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::EssControlFSCC, controlfscc_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::EssControlFSCC, esscontrolschedulefsch_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSControl, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSControl, controlvalue_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSControl, check_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSControl, esscontrolfscc_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSControlProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSControlProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSControlProfile, ess_),
-  PROTOBUF_FIELD_OFFSET(::essmodule::ESSControlProfile, esscontrol_),
-};
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::essmodule::EssEventZBAT)},
-  { 11, -1, sizeof(::essmodule::FrequencyRegulation)},
-  { 24, -1, sizeof(::essmodule::PeakShaving)},
-  { 34, -1, sizeof(::essmodule::SocLimit)},
-  { 44, -1, sizeof(::essmodule::SOCManagement)},
-  { 54, -1, sizeof(::essmodule::VoltageRegulation)},
-  { 64, -1, sizeof(::essmodule::VoltageDroop)},
-  { 71, -1, sizeof(::essmodule::VoltagePI)},
-  { 78, -1, sizeof(::essmodule::CapacityFirming)},
-  { 86, -1, sizeof(::essmodule::ESSFunction)},
-  { 98, -1, sizeof(::essmodule::ESSPointStatus)},
-  { 116, -1, sizeof(::essmodule::ESSEventAndStatusZGEN)},
-  { 127, -1, sizeof(::essmodule::ESSEventZGEN)},
-  { 133, -1, sizeof(::essmodule::ESSEvent)},
-  { 141, -1, sizeof(::essmodule::ESSEventProfile)},
-  { 149, -1, sizeof(::essmodule::ESSReading)},
-  { 158, -1, sizeof(::essmodule::ESSReadingProfile)},
-  { 166, -1, sizeof(::essmodule::EssStatusZBAT)},
-  { 176, -1, sizeof(::essmodule::ESSStatusZGEN)},
-  { 182, -1, sizeof(::essmodule::ESSStatus)},
-  { 190, -1, sizeof(::essmodule::ESSStatusProfile)},
-  { 198, -1, sizeof(::essmodule::ESSPoint)},
-  { 218, -1, sizeof(::essmodule::ESSCSG)},
-  { 224, -1, sizeof(::essmodule::ESSControlScheduleFSCH)},
-  { 230, -1, sizeof(::essmodule::EssControlFSCC)},
-  { 237, -1, sizeof(::essmodule::ESSControl)},
-  { 245, -1, sizeof(::essmodule::ESSControlProfile)},
+static const ::_pbi::MigrationSchema
+    schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+        { 0, -1, -1, sizeof(::essmodule::ESSCapabilityConfiguration)},
+        { 13, -1, -1, sizeof(::essmodule::ESSCapabilityOverride)},
+        { 23, -1, -1, sizeof(::essmodule::ESSCapabilityOverrideProfile)},
+        { 34, -1, -1, sizeof(::essmodule::ESSCapabilityRatings)},
+        { 48, -1, -1, sizeof(::essmodule::ESSCapability)},
+        { 59, -1, -1, sizeof(::essmodule::ESSCapabilityProfile)},
+        { 70, -1, -1, sizeof(::essmodule::FrequencyRegulation)},
+        { 86, -1, -1, sizeof(::essmodule::PeakShaving)},
+        { 99, -1, -1, sizeof(::essmodule::SocLimit)},
+        { 112, -1, -1, sizeof(::essmodule::SOCManagement)},
+        { 125, -1, -1, sizeof(::essmodule::VoltageRegulation)},
+        { 138, -1, -1, sizeof(::essmodule::VoltageDroop)},
+        { 148, -1, -1, sizeof(::essmodule::VoltagePI)},
+        { 158, -1, -1, sizeof(::essmodule::CapacityFirming)},
+        { 169, -1, -1, sizeof(::essmodule::ESSFunction)},
+        { 184, -1, -1, sizeof(::essmodule::ESSPoint)},
+        { 210, -1, -1, sizeof(::essmodule::ESSCurvePoint)},
+        { 220, -1, -1, sizeof(::essmodule::ESSCSG)},
+        { 229, -1, -1, sizeof(::essmodule::ESSControlScheduleFSCH)},
+        { 238, -1, -1, sizeof(::essmodule::EssControlFSCC)},
+        { 248, -1, -1, sizeof(::essmodule::ESSControl)},
+        { 259, -1, -1, sizeof(::essmodule::ESSControlProfile)},
+        { 270, -1, -1, sizeof(::essmodule::ESSDiscreteControlDBAT)},
+        { 280, -1, -1, sizeof(::essmodule::ESSDiscreteControl)},
+        { 291, -1, -1, sizeof(::essmodule::ESSDiscreteControlProfile)},
+        { 302, -1, -1, sizeof(::essmodule::EssEventZBAT)},
+        { 318, -1, -1, sizeof(::essmodule::ESSPointStatus)},
+        { 349, -1, -1, sizeof(::essmodule::ESSEventAndStatusZGEN)},
+        { 363, -1, -1, sizeof(::essmodule::ESSEventZGEN)},
+        { 372, -1, -1, sizeof(::essmodule::ESSEvent)},
+        { 383, -1, -1, sizeof(::essmodule::ESSEventProfile)},
+        { 394, -1, -1, sizeof(::essmodule::ESSReading)},
+        { 406, -1, -1, sizeof(::essmodule::ESSReadingProfile)},
+        { 417, -1, -1, sizeof(::essmodule::EssStatusZBAT)},
+        { 432, -1, -1, sizeof(::essmodule::ESSStatusZGEN)},
+        { 441, -1, -1, sizeof(::essmodule::ESSStatus)},
+        { 452, -1, -1, sizeof(::essmodule::ESSStatusProfile)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_EssEventZBAT_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_FrequencyRegulation_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_PeakShaving_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_SocLimit_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_SOCManagement_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_VoltageRegulation_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_VoltageDroop_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_VoltagePI_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_CapacityFirming_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSFunction_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSPointStatus_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSEventAndStatusZGEN_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSEventZGEN_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSEvent_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSEventProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSReading_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSReadingProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_EssStatusZBAT_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSStatusZGEN_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSStatus_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSStatusProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSPoint_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSCSG_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSControlScheduleFSCH_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_EssControlFSCC_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSControl_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::essmodule::_ESSControlProfile_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+    &::essmodule::_ESSCapabilityConfiguration_default_instance_._instance,
+    &::essmodule::_ESSCapabilityOverride_default_instance_._instance,
+    &::essmodule::_ESSCapabilityOverrideProfile_default_instance_._instance,
+    &::essmodule::_ESSCapabilityRatings_default_instance_._instance,
+    &::essmodule::_ESSCapability_default_instance_._instance,
+    &::essmodule::_ESSCapabilityProfile_default_instance_._instance,
+    &::essmodule::_FrequencyRegulation_default_instance_._instance,
+    &::essmodule::_PeakShaving_default_instance_._instance,
+    &::essmodule::_SocLimit_default_instance_._instance,
+    &::essmodule::_SOCManagement_default_instance_._instance,
+    &::essmodule::_VoltageRegulation_default_instance_._instance,
+    &::essmodule::_VoltageDroop_default_instance_._instance,
+    &::essmodule::_VoltagePI_default_instance_._instance,
+    &::essmodule::_CapacityFirming_default_instance_._instance,
+    &::essmodule::_ESSFunction_default_instance_._instance,
+    &::essmodule::_ESSPoint_default_instance_._instance,
+    &::essmodule::_ESSCurvePoint_default_instance_._instance,
+    &::essmodule::_ESSCSG_default_instance_._instance,
+    &::essmodule::_ESSControlScheduleFSCH_default_instance_._instance,
+    &::essmodule::_EssControlFSCC_default_instance_._instance,
+    &::essmodule::_ESSControl_default_instance_._instance,
+    &::essmodule::_ESSControlProfile_default_instance_._instance,
+    &::essmodule::_ESSDiscreteControlDBAT_default_instance_._instance,
+    &::essmodule::_ESSDiscreteControl_default_instance_._instance,
+    &::essmodule::_ESSDiscreteControlProfile_default_instance_._instance,
+    &::essmodule::_EssEventZBAT_default_instance_._instance,
+    &::essmodule::_ESSPointStatus_default_instance_._instance,
+    &::essmodule::_ESSEventAndStatusZGEN_default_instance_._instance,
+    &::essmodule::_ESSEventZGEN_default_instance_._instance,
+    &::essmodule::_ESSEvent_default_instance_._instance,
+    &::essmodule::_ESSEventProfile_default_instance_._instance,
+    &::essmodule::_ESSReading_default_instance_._instance,
+    &::essmodule::_ESSReadingProfile_default_instance_._instance,
+    &::essmodule::_EssStatusZBAT_default_instance_._instance,
+    &::essmodule::_ESSStatusZGEN_default_instance_._instance,
+    &::essmodule::_ESSStatus_default_instance_._instance,
+    &::essmodule::_ESSStatusProfile_default_instance_._instance,
+};
+const char descriptor_table_protodef_essmodule_2fessmodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+    "\n\031essmodule/essmodule.proto\022\tessmodule\032\t"
+    "uml.proto\032\036google/protobuf/wrappers.prot"
+    "o\032\037commonmodule/commonmodule.proto\"\232\002\n\032E"
+    "SSCapabilityConfiguration\022X\n\035sourceCapab"
+    "ilityConfiguration\030\001 \001(\0132+.commonmodule."
+    "SourceCapabilityConfigurationB\004\200\265\030\001\022&\n\013V"
+    "AChaRteMax\030\002 \001(\0132\021.commonmodule.ASG\022)\n\016V"
+    "ADisChaRteMax\030\003 \001(\0132\021.commonmodule.ASG\022%"
+    "\n\nWChaRteMax\030\004 \001(\0132\021.commonmodule.ASG\022(\n"
+    "\rWDisChaRteMax\030\005 \001(\0132\021.commonmodule.ASG\""
+    "\250\001\n\025ESSCapabilityOverride\022:\n\016nameplateVa"
+    "lue\030\001 \001(\0132\034.commonmodule.NameplateValueB"
+    "\004\200\265\030\001\022S\n\032essCapabilityConfiguration\030\002 \001("
+    "\0132%.essmodule.ESSCapabilityConfiguration"
+    "B\010\210\265\030\001\220\265\030\001\"\343\001\n\034ESSCapabilityOverrideProf"
+    "ile\022H\n\025capabilityMessageInfo\030\001 \001(\0132#.com"
+    "monmodule.CapabilityMessageInfoB\004\200\265\030\001\022(\n"
+    "\003ess\030\002 \001(\0132\021.commonmodule.ESSB\010\210\265\030\001\220\265\030\001\022"
+    "I\n\025essCapabilityOverride\030\003 \001(\0132 .essmodu"
+    "le.ESSCapabilityOverrideB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001"
+    "\"\350\002\n\024ESSCapabilityRatings\022L\n\027sourceCapab"
+    "ilityRatings\030\001 \001(\0132%.commonmodule.Source"
+    "CapabilityRatingsB\004\200\265\030\001\0223\n\016VAChaRteMaxRt"
+    "g\030\002 \001(\0132\021.commonmodule.ASGB\010\210\265\030\001\220\265\030\001\0226\n\021"
+    "VADisChaRteMaxRtg\030\003 \001(\0132\021.commonmodule.A"
+    "SGB\010\210\265\030\001\220\265\030\001\0222\n\rWChaRteMaxRtg\030\004 \001(\0132\021.co"
+    "mmonmodule.ASGB\010\210\265\030\001\220\265\030\001\0225\n\020WDisChaRteMa"
+    "xRtg\030\005 \001(\0132\021.commonmodule.ASGB\010\210\265\030\001\220\265\030\001\022"
+    "*\n\005WHRtg\030\006 \001(\0132\021.commonmodule.ASGB\010\210\265\030\001\220"
+    "\265\030\001\"\337\001\n\rESSCapability\022:\n\016nameplateValue\030"
+    "\001 \001(\0132\034.commonmodule.NameplateValueB\004\200\265\030"
+    "\001\022G\n\024essCapabilityRatings\030\002 \001(\0132\037.essmod"
+    "ule.ESSCapabilityRatingsB\010\210\265\030\001\220\265\030\001\022I\n\032es"
+    "sCapabilityConfiguration\030\003 \001(\0132%.essmodu"
+    "le.ESSCapabilityConfiguration\"\313\001\n\024ESSCap"
+    "abilityProfile\022H\n\025capabilityMessageInfo\030"
+    "\001 \001(\0132#.commonmodule.CapabilityMessageIn"
+    "foB\004\200\265\030\001\022(\n\003ess\030\002 \001(\0132\021.commonmodule.ESS"
+    "B\010\210\265\030\001\220\265\030\001\0229\n\ressCapability\030\003 \001(\0132\030.essm"
+    "odule.ESSCapabilityB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\372\003\n\023"
+    "FrequencyRegulation\022;\n\026frequencyDeadBand"
+    "Minus\030\001 \001(\0132\033.google.protobuf.FloatValue"
+    "\022:\n\025frequencyDeadBandPlus\030\002 \001(\0132\033.google"
+    ".protobuf.FloatValue\022:\n\026frequencyRegulat"
+    "ionCtl\030\003 \001(\0132\032.google.protobuf.BoolValue"
+    "\0226\n\021frequencySetPoint\030\004 \001(\0132\033.google.pro"
+    "tobuf.FloatValue\022A\n\034gridFrequencyStableB"
+    "andMinus\030\005 \001(\0132\033.google.protobuf.FloatVa"
+    "lue\022@\n\033gridFrequencyStableBandPlus\030\006 \001(\013"
+    "2\033.google.protobuf.FloatValue\0227\n\022overFre"
+    "quencyDroop\030\007 \001(\0132\033.google.protobuf.Floa"
+    "tValue\0228\n\023underFrequencyDroop\030\010 \001(\0132\033.go"
+    "ogle.protobuf.FloatValue\"\266\002\n\013PeakShaving"
+    "\0225\n\020baseShavingLimit\030\001 \001(\0132\033.google.prot"
+    "obuf.FloatValue\0222\n\016peakShavingCtl\030\002 \001(\0132"
+    "\032.google.protobuf.BoolValue\0225\n\020peakShavi"
+    "ngLimit\030\003 \001(\0132\033.google.protobuf.FloatVal"
+    "ue\022B\n\035socManagementAllowedHighLimit\030\004 \001("
+    "\0132\033.google.protobuf.FloatValue\022A\n\034socMan"
+    "agementAllowedLowLimit\030\005 \001(\0132\033.google.pr"
+    "otobuf.FloatValue\"\231\002\n\010SocLimit\0221\n\014socHig"
+    "hLimit\030\001 \001(\0132\033.google.protobuf.FloatValu"
+    "e\022;\n\026socHighLimitHysteresis\030\002 \001(\0132\033.goog"
+    "le.protobuf.FloatValue\022/\n\013socLimitCtl\030\003 "
+    "\001(\0132\032.google.protobuf.BoolValue\0220\n\013socLo"
+    "wLimit\030\004 \001(\0132\033.google.protobuf.FloatValu"
+    "e\022:\n\025socLowLimitHysteresis\030\005 \001(\0132\033.googl"
+    "e.protobuf.FloatValue\"\233\002\n\rSOCManagement\022"
+    "5\n\020socDeadBandMinus\030\001 \001(\0132\033.google.proto"
+    "buf.FloatValue\0224\n\017socDeadBandPlus\030\002 \001(\0132"
+    "\033.google.protobuf.FloatValue\0224\n\020socManag"
+    "ementCtl\030\003 \001(\0132\032.google.protobuf.BoolVal"
+    "ue\0225\n\020socPowerSetPoint\030\004 \001(\0132\033.google.pr"
+    "otobuf.FloatValue\0220\n\013socSetPoint\030\005 \001(\0132\033"
+    ".google.protobuf.FloatValue\"\255\002\n\021VoltageR"
+    "egulation\0225\n\020overVoltageDroop\030\001 \001(\0132\033.go"
+    "ogle.protobuf.FloatValue\0226\n\021underVoltage"
+    "Droop\030\002 \001(\0132\033.google.protobuf.FloatValue"
+    "\0229\n\024voltageDeadBandMinus\030\003 \001(\0132\033.google."
+    "protobuf.FloatValue\0228\n\023voltageDeadBandPl"
+    "us\030\004 \001(\0132\033.google.protobuf.FloatValue\0224\n"
+    "\017voltageSetPoint\030\005 \001(\0132\033.google.protobuf"
+    ".FloatValue\"|\n\014VoltageDroop\0223\n\017voltageDr"
+    "oopCtl\030\001 \001(\0132\032.google.protobuf.BoolValue"
+    "\0227\n\021voltageRegulation\030\002 \001(\0132\034.essmodule."
+    "VoltageRegulation\"v\n\tVoltagePI\0220\n\014voltag"
+    "ePICtl\030\001 \001(\0132\032.google.protobuf.BoolValue"
+    "\0227\n\021voltageRegulation\030\002 \001(\0132\034.essmodule."
+    "VoltageRegulation\"\275\001\n\017CapacityFirming\0226\n"
+    "\022capacityFirmingCtl\030\001 \001(\0132\032.google.proto"
+    "buf.BoolValue\0228\n\023limitNegative_dp_dt\030\002 \001"
+    "(\0132\033.google.protobuf.FloatValue\0228\n\023limit"
+    "Positive_dp_dt\030\003 \001(\0132\033.google.protobuf.F"
+    "loatValue\"\334\002\n\013ESSFunction\0223\n\017capacityFir"
+    "ming\030\001 \001(\0132\032.essmodule.CapacityFirming\022;"
+    "\n\023frequencyRegulation\030\002 \001(\0132\036.essmodule."
+    "FrequencyRegulation\022+\n\013peakShaving\030\003 \001(\013"
+    "2\026.essmodule.PeakShaving\022%\n\010socLimit\030\004 \001"
+    "(\0132\023.essmodule.SocLimit\022/\n\rsocManagement"
+    "\030\005 \001(\0132\030.essmodule.SOCManagement\022-\n\014volt"
+    "ageDroop\030\006 \001(\0132\027.essmodule.VoltageDroop\022"
+    "\'\n\tvoltagePI\030\007 \001(\0132\024.essmodule.VoltagePI"
+    "\"\250\007\n\010ESSPoint\0223\n\021blackStartEnabled\030\001 \001(\013"
+    "2\030.commonmodule.ControlSPC\022(\n\010function\030\003"
+    " \001(\0132\026.essmodule.ESSFunction\0223\n\004mode\030\004 \001"
+    "(\0132%.commonmodule.ENG_GridConnectModeKin"
+    "d\022)\n\trampRates\030\007 \001(\0132\026.commonmodule.Ramp"
+    "Rate\022\'\n\005reset\030\n \001(\0132\030.commonmodule.Contr"
+    "olSPC\022/\n\005state\030\013 \001(\0132 .commonmodule.Opti"
+    "onal_StateKind\022\?\n\035transToIslndOnGridLoss"
+    "Enabled\030\r \001(\0132\030.commonmodule.ControlSPC\022"
+    "<\n\025enterServiceOperation\030\020 \001(\0132\035.commonm"
+    "odule.EnterServiceAPC\022*\n\014hzWOperation\030\021 "
+    "\001(\0132\024.commonmodule.HzWAPC\0220\n\017limitWOpera"
+    "tion\030\022 \001(\0132\027.commonmodule.LimitWAPC\022(\n\013p"
+    "FOperation\030\023 \001(\0132\023.commonmodule.PFSPC\0220\n"
+    "\021tmHzTripOperation\030\024 \001(\0132\025.commonmodule."
+    "TmHzCSG\0224\n\023tmVoltTripOperation\030\025 \001(\0132\027.c"
+    "ommonmodule.TmVoltCSG\022*\n\014vArOperation\030\026 "
+    "\001(\0132\024.commonmodule.VarSPC\0222\n\020voltVarOper"
+    "ation\030\027 \001(\0132\030.commonmodule.VoltVarCSG\022.\n"
+    "\016voltWOperation\030\030 \001(\0132\026.commonmodule.Vol"
+    "tWCSG\022,\n\rwVarOperation\030\031 \001(\0132\025.commonmod"
+    "ule.WVarCSG\022&\n\nwOperation\030\032 \001(\0132\022.common"
+    "module.WSPCJ\004\010\002\020\003J\004\010\005\020\006J\004\010\006\020\007J\004\010\010\020\tJ\004\010\t\020"
+    "\nJ\004\010\014\020\rJ\004\010\016\020\017J\004\010\017\020\020\"|\n\rESSCurvePoint\022.\n\007"
+    "control\030\001 \001(\0132\023.essmodule.ESSPointB\010\210\265\030\001"
+    "\220\265\030\001\022;\n\tstartTime\030\002 \001(\0132\036.commonmodule.C"
+    "ontrolTimestampB\010\210\265\030\001\220\265\030\001\"<\n\006ESSCSG\0222\n\006c"
+    "rvPts\030\001 \003(\0132\030.essmodule.ESSCurvePointB\010\210"
+    "\265\030\001\220\265\030\001\"F\n\026ESSControlScheduleFSCH\022,\n\007Val"
+    "DCSG\030\001 \001(\0132\021.essmodule.ESSCSGB\010\210\265\030\001\220\265\030\001\""
+    "\211\001\n\016EssControlFSCC\0224\n\013controlFSCC\030\001 \001(\0132"
+    "\031.commonmodule.ControlFSCCB\004\200\265\030\001\022A\n\026essC"
+    "ontrolScheduleFSCH\030\002 \001(\0132!.essmodule.ESS"
+    "ControlScheduleFSCH\"\245\001\n\nESSControl\0226\n\014co"
+    "ntrolValue\030\001 \001(\0132\032.commonmodule.ControlV"
+    "alueB\004\200\265\030\001\022,\n\005check\030\002 \001(\0132\035.commonmodule"
+    ".CheckConditions\0221\n\016essControlFSCC\030\003 \001(\013"
+    "2\031.essmodule.EssControlFSCC\"\274\001\n\021ESSContr"
+    "olProfile\022B\n\022controlMessageInfo\030\001 \001(\0132 ."
+    "commonmodule.ControlMessageInfoB\004\200\265\030\001\022(\n"
+    "\003ess\030\002 \001(\0132\021.commonmodule.ESSB\010\210\265\030\001\220\265\030\001\022"
+    "3\n\nessControl\030\003 \001(\0132\025.essmodule.ESSContr"
+    "olB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\210\001\n\026ESSDiscreteContro"
+    "lDBAT\022H\n\025logicalNodeForControl\030\001 \001(\0132#.c"
+    "ommonmodule.LogicalNodeForControlB\004\200\265\030\001\022"
+    "$\n\007control\030\002 \001(\0132\023.essmodule.ESSPoint\"\275\001"
+    "\n\022ESSDiscreteControl\0226\n\014controlValue\030\001 \001"
+    "(\0132\032.commonmodule.ControlValueB\004\200\265\030\001\022,\n\005"
+    "check\030\002 \001(\0132\035.commonmodule.CheckConditio"
+    "ns\022A\n\026essDiscreteControlDBAT\030\003 \001(\0132!.ess"
+    "module.ESSDiscreteControlDBAT\"\324\001\n\031ESSDis"
+    "creteControlProfile\022B\n\022controlMessageInf"
+    "o\030\001 \001(\0132 .commonmodule.ControlMessageInf"
+    "oB\004\200\265\030\001\022(\n\003ess\030\002 \001(\0132\021.commonmodule.ESSB"
+    "\010\210\265\030\001\220\265\030\001\022C\n\022essDiscreteControl\030\003 \001(\0132\035."
+    "essmodule.ESSDiscreteControlB\010\210\265\030\001\220\265\030\001:\004"
+    "\300\363\030\001\"\347\002\n\014EssEventZBAT\022V\n\034logicalNodeForE"
+    "ventAndStatus\030\001 \001(\0132*.commonmodule.Logic"
+    "alNodeForEventAndStatusB\004\200\265\030\001\022&\n\005BatHi\030\002"
+    " \001(\0132\027.commonmodule.StatusSPS\022&\n\005BatLo\030\003"
+    " \001(\0132\027.commonmodule.StatusSPS\022&\n\005BatSt\030\004"
+    " \001(\0132\027.commonmodule.StatusSPS\022\035\n\003Soc\030\005 \001"
+    "(\0132\020.commonmodule.MV\022&\n\005Stdby\030\006 \001(\0132\027.co"
+    "mmonmodule.StatusSPS\022\035\n\003SoH\030\007 \001(\0132\020.comm"
+    "onmodule.MV\022!\n\007WHAvail\030\010 \001(\0132\020.commonmod"
+    "ule.MV\"\247\t\n\016ESSPointStatus\0222\n\021blackStartE"
+    "nabled\030\001 \001(\0132\027.commonmodule.StatusSPS\0229\n"
+    "\030frequencySetPointEnabled\030\002 \001(\0132\027.common"
+    "module.StatusSPS\022(\n\010function\030\003 \001(\0132\026.ess"
+    "module.ESSFunction\0223\n\004mode\030\004 \001(\0132%.commo"
+    "nmodule.ENG_GridConnectModeKind\022/\n\npctHz"
+    "Droop\030\005 \001(\0132\033.google.protobuf.FloatValue"
+    "\022.\n\tpctVDroop\030\006 \001(\0132\033.google.protobuf.Fl"
+    "oatValue\022)\n\trampRates\030\007 \001(\0132\026.commonmodu"
+    "le.RampRate\022;\n\032reactivePwrSetPointEnable"
+    "d\030\010 \001(\0132\027.commonmodule.StatusSPS\0227\n\026real"
+    "PwrSetPointEnabled\030\t \001(\0132\027.commonmodule."
+    "StatusSPS\022/\n\005state\030\n \001(\0132 .commonmodule."
+    "Optional_StateKind\022/\n\016syncBackToGrid\030\013 \001"
+    "(\0132\027.commonmodule.StatusSPS\022>\n\035transToIs"
+    "lndOnGridLossEnabled\030\014 \001(\0132\027.commonmodul"
+    "e.StatusSPS\0227\n\026voltageSetPointEnabled\030\r "
+    "\001(\0132\027.commonmodule.StatusSPS\022<\n\025enterSer"
+    "viceOperation\030\016 \001(\0132\035.commonmodule.Enter"
+    "ServiceAPC\022*\n\014hzWOperation\030\017 \001(\0132\024.commo"
+    "nmodule.HzWAPC\0220\n\017limitWOperation\030\020 \001(\0132"
+    "\027.commonmodule.LimitWAPC\022(\n\013pFOperation\030"
+    "\021 \001(\0132\023.commonmodule.PFSPC\0220\n\021tmHzTripOp"
+    "eration\030\022 \001(\0132\025.commonmodule.TmHzCSG\0224\n\023"
+    "tmVoltTripOperation\030\023 \001(\0132\027.commonmodule"
+    ".TmVoltCSG\022*\n\014vArOperation\030\024 \001(\0132\024.commo"
+    "nmodule.VarSPC\0222\n\020voltVarOperation\030\025 \001(\013"
+    "2\030.commonmodule.VoltVarCSG\022.\n\016voltWOpera"
+    "tion\030\026 \001(\0132\026.commonmodule.VoltWCSG\022,\n\rwV"
+    "arOperation\030\027 \001(\0132\025.commonmodule.WVarCSG"
+    "\"\326\002\n\025ESSEventAndStatusZGEN\022V\n\034logicalNod"
+    "eForEventAndStatus\030\001 \001(\0132*.commonmodule."
+    "LogicalNodeForEventAndStatusB\004\200\265\030\001\022)\n\010Au"
+    "xPwrSt\030\002 \001(\0132\027.commonmodule.StatusSPS\0226\n"
+    "\013DynamicTest\030\003 \001(\0132!.commonmodule.ENS_Dy"
+    "namicTestKind\022(\n\007EmgStop\030\004 \001(\0132\027.commonm"
+    "odule.StatusSPS\022(\n\007GnSynSt\030\005 \001(\0132\027.commo"
+    "nmodule.StatusSPS\022.\n\013PointStatus\030\006 \001(\0132\031"
+    ".essmodule.ESSPointStatus\"U\n\014ESSEventZGE"
+    "N\022E\n\025eSSEventAndStatusZGEN\030\001 \001(\0132 .essmo"
+    "dule.ESSEventAndStatusZGENB\004\200\265\030\001\"\234\001\n\010ESS"
+    "Event\0222\n\neventValue\030\001 \001(\0132\030.commonmodule"
+    ".EventValueB\004\200\265\030\001\022-\n\014essEventZBAT\030\002 \001(\0132"
+    "\027.essmodule.EssEventZBAT\022-\n\014essEventZGEN"
+    "\030\003 \001(\0132\027.essmodule.ESSEventZGEN\"\262\001\n\017ESSE"
+    "ventProfile\022>\n\020eventMessageInfo\030\001 \001(\0132\036."
+    "commonmodule.EventMessageInfoB\004\200\265\030\001\022(\n\003e"
+    "ss\030\002 \001(\0132\021.commonmodule.ESSB\010\210\265\030\001\220\265\030\001\022/\n"
+    "\010essEvent\030\003 \001(\0132\023.essmodule.ESSEventB\010\210\265"
+    "\030\001\220\265\030\001:\004\300\363\030\001\"\374\001\n\nESSReading\022b\n\"conductin"
+    "gEquipmentTerminalReading\030\001 \001(\01320.common"
+    "module.ConductingEquipmentTerminalReadin"
+    "gB\004\200\265\030\001\022*\n\tphaseMMTN\030\002 \001(\0132\027.commonmodul"
+    "e.PhaseMMTN\022.\n\013readingMMTR\030\003 \001(\0132\031.commo"
+    "nmodule.ReadingMMTR\022.\n\013readingMMXU\030\004 \001(\013"
+    "2\031.commonmodule.ReadingMMXU\"\274\001\n\021ESSReadi"
+    "ngProfile\022B\n\022readingMessageInfo\030\001 \001(\0132 ."
+    "commonmodule.ReadingMessageInfoB\004\200\265\030\001\022(\n"
+    "\003ess\030\002 \001(\0132\021.commonmodule.ESSB\010\210\265\030\001\220\265\030\001\022"
+    "3\n\nessReading\030\003 \001(\0132\025.essmodule.ESSReadi"
+    "ngB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\317\002\n\rEssStatusZBAT\022V\n\034"
+    "logicalNodeForEventAndStatus\030\001 \001(\0132*.com"
+    "monmodule.LogicalNodeForEventAndStatusB\004"
+    "\200\265\030\001\022&\n\005BatSt\030\002 \001(\0132\027.commonmodule.Statu"
+    "sSPS\0225\n\006GriMod\030\003 \001(\0132%.commonmodule.ENG_"
+    "GridConnectModeKind\022\035\n\003Soc\030\004 \001(\0132\020.commo"
+    "nmodule.MV\022&\n\005Stdby\030\005 \001(\0132\027.commonmodule"
+    ".StatusSPS\022\035\n\003SoH\030\006 \001(\0132\020.commonmodule.M"
+    "V\022!\n\007WHAvail\030\007 \001(\0132\020.commonmodule.MV\"V\n\r"
+    "ESSStatusZGEN\022E\n\025eSSEventAndStatusZGEN\030\001"
+    " \001(\0132 .essmodule.ESSEventAndStatusZGENB\004"
+    "\200\265\030\001\"\243\001\n\tESSStatus\0224\n\013statusValue\030\001 \001(\0132"
+    "\031.commonmodule.StatusValueB\004\200\265\030\001\022/\n\ressS"
+    "tatusZBAT\030\002 \001(\0132\030.essmodule.EssStatusZBA"
+    "T\022/\n\ressStatusZGEN\030\003 \001(\0132\030.essmodule.ESS"
+    "StatusZGEN\"\267\001\n\020ESSStatusProfile\022@\n\021statu"
+    "sMessageInfo\030\001 \001(\0132\037.commonmodule.Status"
+    "MessageInfoB\004\200\265\030\001\022(\n\003ess\030\002 \001(\0132\021.commonm"
+    "odule.ESSB\010\210\265\030\001\220\265\030\001\0221\n\tessStatus\030\003 \001(\0132\024"
+    ".essmodule.ESSStatusB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001B{\n\021"
+    "openfmb.essmoduleP\001ZPgitlab.com/openfmb/"
+    "psm/ops/protobuf/go-openfmb-ops-protobuf"
+    "/v2/openfmb/essmodule\252\002\021openfmb.essmodul"
+    "eb\006proto3"
+};
+static const ::_pbi::DescriptorTable* const descriptor_table_essmodule_2fessmodule_2eproto_deps[3] =
+    {
+        &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
+        &::descriptor_table_google_2fprotobuf_2fwrappers_2eproto,
+        &::descriptor_table_uml_2eproto,
+};
+static ::absl::once_flag descriptor_table_essmodule_2fessmodule_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_essmodule_2fessmodule_2eproto = {
+    false,
+    false,
+    10009,
+    descriptor_table_protodef_essmodule_2fessmodule_2eproto,
+    "essmodule/essmodule.proto",
+    &descriptor_table_essmodule_2fessmodule_2eproto_once,
+    descriptor_table_essmodule_2fessmodule_2eproto_deps,
+    3,
+    37,
+    schemas,
+    file_default_instances,
+    TableStruct_essmodule_2fessmodule_2eproto::offsets,
+    file_level_metadata_essmodule_2fessmodule_2eproto,
+    file_level_enum_descriptors_essmodule_2fessmodule_2eproto,
+    file_level_service_descriptors_essmodule_2fessmodule_2eproto,
 };
 
-const char descriptor_table_protodef_essmodule_2fessmodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\031essmodule/essmodule.proto\022\tessmodule\032\t"
-  "uml.proto\032\036google/protobuf/wrappers.prot"
-  "o\032\037commonmodule/commonmodule.proto\"\245\002\n\014E"
-  "ssEventZBAT\022V\n\034logicalNodeForEventAndSta"
-  "tus\030\001 \001(\0132*.commonmodule.LogicalNodeForE"
-  "ventAndStatusB\004\200\265\030\001\022&\n\005BatHi\030\002 \001(\0132\027.com"
-  "monmodule.StatusSPS\022&\n\005BatLo\030\003 \001(\0132\027.com"
-  "monmodule.StatusSPS\022&\n\005BatSt\030\004 \001(\0132\027.com"
-  "monmodule.StatusSPS\022\035\n\003Soc\030\005 \001(\0132\020.commo"
-  "nmodule.MV\022&\n\005Stdby\030\006 \001(\0132\027.commonmodule"
-  ".StatusSPS\"\372\003\n\023FrequencyRegulation\022;\n\026fr"
-  "equencyDeadBandMinus\030\001 \001(\0132\033.google.prot"
-  "obuf.FloatValue\022:\n\025frequencyDeadBandPlus"
-  "\030\002 \001(\0132\033.google.protobuf.FloatValue\022:\n\026f"
-  "requencyRegulationCtl\030\003 \001(\0132\032.google.pro"
-  "tobuf.BoolValue\0226\n\021frequencySetPoint\030\004 \001"
-  "(\0132\033.google.protobuf.FloatValue\022A\n\034gridF"
-  "requencyStableBandMinus\030\005 \001(\0132\033.google.p"
-  "rotobuf.FloatValue\022@\n\033gridFrequencyStabl"
-  "eBandPlus\030\006 \001(\0132\033.google.protobuf.FloatV"
-  "alue\0227\n\022overFrequencyDroop\030\007 \001(\0132\033.googl"
-  "e.protobuf.FloatValue\0228\n\023underFrequencyD"
-  "roop\030\010 \001(\0132\033.google.protobuf.FloatValue\""
-  "\266\002\n\013PeakShaving\0225\n\020baseShavingLimit\030\001 \001("
-  "\0132\033.google.protobuf.FloatValue\0222\n\016peakSh"
-  "avingCtl\030\002 \001(\0132\032.google.protobuf.BoolVal"
-  "ue\0225\n\020peakShavingLimit\030\003 \001(\0132\033.google.pr"
-  "otobuf.FloatValue\022B\n\035socManagementAllowe"
-  "dHighLimit\030\004 \001(\0132\033.google.protobuf.Float"
-  "Value\022A\n\034socManagementAllowedLowLimit\030\005 "
-  "\001(\0132\033.google.protobuf.FloatValue\"\231\002\n\010Soc"
-  "Limit\0221\n\014socHighLimit\030\001 \001(\0132\033.google.pro"
-  "tobuf.FloatValue\022;\n\026socHighLimitHysteres"
-  "is\030\002 \001(\0132\033.google.protobuf.FloatValue\022/\n"
-  "\013socLimitCtl\030\003 \001(\0132\032.google.protobuf.Boo"
-  "lValue\0220\n\013socLowLimit\030\004 \001(\0132\033.google.pro"
-  "tobuf.FloatValue\022:\n\025socLowLimitHysteresi"
-  "s\030\005 \001(\0132\033.google.protobuf.FloatValue\"\233\002\n"
-  "\rSOCManagement\0225\n\020socDeadBandMinus\030\001 \001(\013"
-  "2\033.google.protobuf.FloatValue\0224\n\017socDead"
-  "BandPlus\030\002 \001(\0132\033.google.protobuf.FloatVa"
-  "lue\0224\n\020socManagementCtl\030\003 \001(\0132\032.google.p"
-  "rotobuf.BoolValue\0225\n\020socPowerSetPoint\030\004 "
-  "\001(\0132\033.google.protobuf.FloatValue\0220\n\013socS"
-  "etPoint\030\005 \001(\0132\033.google.protobuf.FloatVal"
-  "ue\"\255\002\n\021VoltageRegulation\0225\n\020overVoltageD"
-  "roop\030\001 \001(\0132\033.google.protobuf.FloatValue\022"
-  "6\n\021underVoltageDroop\030\002 \001(\0132\033.google.prot"
-  "obuf.FloatValue\0229\n\024voltageDeadBandMinus\030"
-  "\003 \001(\0132\033.google.protobuf.FloatValue\0228\n\023vo"
-  "ltageDeadBandPlus\030\004 \001(\0132\033.google.protobu"
-  "f.FloatValue\0224\n\017voltageSetPoint\030\005 \001(\0132\033."
-  "google.protobuf.FloatValue\"|\n\014VoltageDro"
-  "op\0223\n\017voltageDroopCtl\030\001 \001(\0132\032.google.pro"
-  "tobuf.BoolValue\0227\n\021voltageRegulation\030\002 \001"
-  "(\0132\034.essmodule.VoltageRegulation\"v\n\tVolt"
-  "agePI\0220\n\014voltagePICtl\030\001 \001(\0132\032.google.pro"
-  "tobuf.BoolValue\0227\n\021voltageRegulation\030\002 \001"
-  "(\0132\034.essmodule.VoltageRegulation\"\275\001\n\017Cap"
-  "acityFirming\0226\n\022capacityFirmingCtl\030\001 \001(\013"
-  "2\032.google.protobuf.BoolValue\0228\n\023limitNeg"
-  "ative_dp_dt\030\002 \001(\0132\033.google.protobuf.Floa"
-  "tValue\0228\n\023limitPositive_dp_dt\030\003 \001(\0132\033.go"
-  "ogle.protobuf.FloatValue\"\334\002\n\013ESSFunction"
-  "\0223\n\017capacityFirming\030\001 \001(\0132\032.essmodule.Ca"
-  "pacityFirming\022;\n\023frequencyRegulation\030\002 \001"
-  "(\0132\036.essmodule.FrequencyRegulation\022+\n\013pe"
-  "akShaving\030\003 \001(\0132\026.essmodule.PeakShaving\022"
-  "%\n\010socLimit\030\004 \001(\0132\023.essmodule.SocLimit\022/"
-  "\n\rsocManagement\030\005 \001(\0132\030.essmodule.SOCMan"
-  "agement\022-\n\014voltageDroop\030\006 \001(\0132\027.essmodul"
-  "e.VoltageDroop\022\'\n\tvoltagePI\030\007 \001(\0132\024.essm"
-  "odule.VoltagePI\"\273\005\n\016ESSPointStatus\0222\n\021bl"
-  "ackStartEnabled\030\001 \001(\0132\027.commonmodule.Sta"
-  "tusSPS\0229\n\030frequencySetPointEnabled\030\002 \001(\013"
-  "2\027.commonmodule.StatusSPS\022(\n\010function\030\003 "
-  "\001(\0132\026.essmodule.ESSFunction\0223\n\004mode\030\004 \001("
-  "\0132%.commonmodule.ENG_GridConnectModeKind"
-  "\022/\n\npctHzDroop\030\005 \001(\0132\033.google.protobuf.F"
-  "loatValue\022.\n\tpctVDroop\030\006 \001(\0132\033.google.pr"
-  "otobuf.FloatValue\022)\n\trampRates\030\007 \001(\0132\026.c"
-  "ommonmodule.RampRate\022;\n\032reactivePwrSetPo"
-  "intEnabled\030\010 \001(\0132\027.commonmodule.StatusSP"
-  "S\0227\n\026realPwrSetPointEnabled\030\t \001(\0132\027.comm"
-  "onmodule.StatusSPS\022/\n\005state\030\n \001(\0132 .comm"
-  "onmodule.Optional_StateKind\022/\n\016syncBackT"
-  "oGrid\030\013 \001(\0132\027.commonmodule.StatusSPS\022>\n\035"
-  "transToIslndOnGridLossEnabled\030\014 \001(\0132\027.co"
-  "mmonmodule.StatusSPS\0227\n\026voltageSetPointE"
-  "nabled\030\r \001(\0132\027.commonmodule.StatusSPS\"\326\002"
-  "\n\025ESSEventAndStatusZGEN\022V\n\034logicalNodeFo"
-  "rEventAndStatus\030\001 \001(\0132*.commonmodule.Log"
-  "icalNodeForEventAndStatusB\004\200\265\030\001\022)\n\010AuxPw"
-  "rSt\030\002 \001(\0132\027.commonmodule.StatusSPS\0226\n\013Dy"
-  "namicTest\030\003 \001(\0132!.commonmodule.ENS_Dynam"
-  "icTestKind\022(\n\007EmgStop\030\004 \001(\0132\027.commonmodu"
-  "le.StatusSPS\022(\n\007GnSynSt\030\005 \001(\0132\027.commonmo"
-  "dule.StatusSPS\022.\n\013PointStatus\030\006 \001(\0132\031.es"
-  "smodule.ESSPointStatus\"U\n\014ESSEventZGEN\022E"
-  "\n\025eSSEventAndStatusZGEN\030\001 \001(\0132 .essmodul"
-  "e.ESSEventAndStatusZGENB\004\200\265\030\001\"\234\001\n\010ESSEve"
-  "nt\0222\n\neventValue\030\001 \001(\0132\030.commonmodule.Ev"
-  "entValueB\004\200\265\030\001\022-\n\014essEventZBAT\030\002 \001(\0132\027.e"
-  "ssmodule.EssEventZBAT\022-\n\014essEventZGEN\030\003 "
-  "\001(\0132\027.essmodule.ESSEventZGEN\"\262\001\n\017ESSEven"
-  "tProfile\022>\n\020eventMessageInfo\030\001 \001(\0132\036.com"
-  "monmodule.EventMessageInfoB\004\200\265\030\001\022(\n\003ess\030"
-  "\002 \001(\0132\021.commonmodule.ESSB\010\210\265\030\001\220\265\030\001\022/\n\010es"
-  "sEvent\030\003 \001(\0132\023.essmodule.ESSEventB\010\210\265\030\001\220"
-  "\265\030\001:\004\300\363\030\001\"\374\001\n\nESSReading\022b\n\"conductingEq"
-  "uipmentTerminalReading\030\001 \001(\01320.commonmod"
-  "ule.ConductingEquipmentTerminalReadingB\004"
-  "\200\265\030\001\022*\n\tphaseMMTN\030\002 \001(\0132\027.commonmodule.P"
-  "haseMMTN\022.\n\013readingMMTR\030\003 \001(\0132\031.commonmo"
-  "dule.ReadingMMTR\022.\n\013readingMMXU\030\004 \001(\0132\031."
-  "commonmodule.ReadingMMXU\"\274\001\n\021ESSReadingP"
-  "rofile\022B\n\022readingMessageInfo\030\001 \001(\0132 .com"
-  "monmodule.ReadingMessageInfoB\004\200\265\030\001\022(\n\003es"
-  "s\030\002 \001(\0132\021.commonmodule.ESSB\010\210\265\030\001\220\265\030\001\0223\n\n"
-  "essReading\030\003 \001(\0132\025.essmodule.ESSReadingB"
-  "\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\215\002\n\rEssStatusZBAT\022V\n\034log"
-  "icalNodeForEventAndStatus\030\001 \001(\0132*.common"
-  "module.LogicalNodeForEventAndStatusB\004\200\265\030"
-  "\001\022&\n\005BatSt\030\002 \001(\0132\027.commonmodule.StatusSP"
-  "S\0225\n\006GriMod\030\003 \001(\0132%.commonmodule.ENG_Gri"
-  "dConnectModeKind\022\035\n\003Soc\030\004 \001(\0132\020.commonmo"
-  "dule.MV\022&\n\005Stdby\030\005 \001(\0132\027.commonmodule.St"
-  "atusSPS\"V\n\rESSStatusZGEN\022E\n\025eSSEventAndS"
-  "tatusZGEN\030\001 \001(\0132 .essmodule.ESSEventAndS"
-  "tatusZGENB\004\200\265\030\001\"\243\001\n\tESSStatus\0224\n\013statusV"
-  "alue\030\001 \001(\0132\031.commonmodule.StatusValueB\004\200"
-  "\265\030\001\022/\n\ressStatusZBAT\030\002 \001(\0132\030.essmodule.E"
-  "ssStatusZBAT\022/\n\ressStatusZGEN\030\003 \001(\0132\030.es"
-  "smodule.ESSStatusZGEN\"\267\001\n\020ESSStatusProfi"
-  "le\022@\n\021statusMessageInfo\030\001 \001(\0132\037.commonmo"
-  "dule.StatusMessageInfoB\004\200\265\030\001\022(\n\003ess\030\002 \001("
-  "\0132\021.commonmodule.ESSB\010\210\265\030\001\220\265\030\001\0221\n\tessSta"
-  "tus\030\003 \001(\0132\024.essmodule.ESSStatusB\010\210\265\030\001\220\265\030"
-  "\001:\004\300\363\030\001\"\242\006\n\010ESSPoint\0223\n\021blackStartEnable"
-  "d\030\001 \001(\0132\030.commonmodule.ControlSPC\022:\n\030fre"
-  "quencySetPointEnabled\030\002 \001(\0132\030.commonmodu"
-  "le.ControlSPC\022(\n\010function\030\003 \001(\0132\026.essmod"
-  "ule.ESSFunction\0223\n\004mode\030\004 \001(\0132%.commonmo"
-  "dule.ENG_GridConnectModeKind\022/\n\npctHzDro"
-  "op\030\005 \001(\0132\033.google.protobuf.FloatValue\022.\n"
-  "\tpctVDroop\030\006 \001(\0132\033.google.protobuf.Float"
-  "Value\022)\n\trampRates\030\007 \001(\0132\026.commonmodule."
-  "RampRate\022<\n\032reactivePwrSetPointEnabled\030\010"
-  " \001(\0132\030.commonmodule.ControlSPC\0228\n\026realPw"
-  "rSetPointEnabled\030\t \001(\0132\030.commonmodule.Co"
-  "ntrolSPC\022\'\n\005reset\030\n \001(\0132\030.commonmodule.C"
-  "ontrolSPC\022/\n\005state\030\013 \001(\0132 .commonmodule."
-  "Optional_StateKind\0220\n\016syncBackToGrid\030\014 \001"
-  "(\0132\030.commonmodule.ControlSPC\022\?\n\035transToI"
-  "slndOnGridLossEnabled\030\r \001(\0132\030.commonmodu"
-  "le.ControlSPC\0228\n\026voltageSetPointEnabled\030"
-  "\016 \001(\0132\030.commonmodule.ControlSPC\022;\n\tstart"
-  "Time\030\017 \001(\0132\036.commonmodule.ControlTimesta"
-  "mpB\010\210\265\030\001\220\265\030\001\"7\n\006ESSCSG\022-\n\006crvPts\030\001 \003(\0132\023"
-  ".essmodule.ESSPointB\010\210\265\030\001\220\265\030\001\"F\n\026ESSCont"
-  "rolScheduleFSCH\022,\n\007ValDCSG\030\001 \001(\0132\021.essmo"
-  "dule.ESSCSGB\010\210\265\030\001\220\265\030\001\"\211\001\n\016EssControlFSCC"
-  "\0224\n\013controlFSCC\030\001 \001(\0132\031.commonmodule.Con"
-  "trolFSCCB\004\200\265\030\001\022A\n\026essControlScheduleFSCH"
-  "\030\002 \001(\0132!.essmodule.ESSControlScheduleFSC"
-  "H\"\245\001\n\nESSControl\0226\n\014controlValue\030\001 \001(\0132\032"
-  ".commonmodule.ControlValueB\004\200\265\030\001\022,\n\005chec"
-  "k\030\002 \001(\0132\035.commonmodule.CheckConditions\0221"
-  "\n\016essControlFSCC\030\003 \001(\0132\031.essmodule.EssCo"
-  "ntrolFSCC\"\274\001\n\021ESSControlProfile\022B\n\022contr"
-  "olMessageInfo\030\001 \001(\0132 .commonmodule.Contr"
-  "olMessageInfoB\004\200\265\030\001\022(\n\003ess\030\002 \001(\0132\021.commo"
-  "nmodule.ESSB\010\210\265\030\001\220\265\030\001\0223\n\nessControl\030\003 \001("
-  "\0132\025.essmodule.ESSControlB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001"
-  "B{\n\021openfmb.essmoduleP\001ZPgitlab.com/open"
-  "fmb/psm/ops/protobuf/go-openfmb-ops-prot"
-  "obuf/v2/openfmb/essmodule\252\002\021openfmb.essm"
-  "oduleb\006proto3"
-  ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_essmodule_2fessmodule_2eproto_deps[3] = {
-  &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
-  &::descriptor_table_google_2fprotobuf_2fwrappers_2eproto,
-  &::descriptor_table_uml_2eproto,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_essmodule_2fessmodule_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_essmodule_2fessmodule_2eproto = {
-  false, false, 7093, descriptor_table_protodef_essmodule_2fessmodule_2eproto, "essmodule/essmodule.proto", 
-  &descriptor_table_essmodule_2fessmodule_2eproto_once, descriptor_table_essmodule_2fessmodule_2eproto_deps, 3, 27,
-  schemas, file_default_instances, TableStruct_essmodule_2fessmodule_2eproto::offsets,
-  file_level_metadata_essmodule_2fessmodule_2eproto, file_level_enum_descriptors_essmodule_2fessmodule_2eproto, file_level_service_descriptors_essmodule_2fessmodule_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
-descriptor_table_essmodule_2fessmodule_2eproto_metadata_getter(int index) {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_essmodule_2fessmodule_2eproto);
-  return descriptor_table_essmodule_2fessmodule_2eproto.file_level_metadata[index];
+// This function exists to be marked as weak.
+// It can significantly speed up compilation by breaking up LLVM's SCC
+// in the .pb.cc translation units. Large translation units see a
+// reduction of more than 35% of walltime for optimized builds. Without
+// the weak attribute all the messages in the file, including all the
+// vtables and everything they use become part of the same SCC through
+// a cycle like:
+// GetMetadata -> descriptor table -> default instances ->
+//   vtables -> GetMetadata
+// By adding a weak function here we break the connection from the
+// individual vtables back into the descriptor table.
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_essmodule_2fessmodule_2eproto_getter() {
+  return &descriptor_table_essmodule_2fessmodule_2eproto;
 }
-
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_essmodule_2fessmodule_2eproto(&descriptor_table_essmodule_2fessmodule_2eproto);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
+static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_essmodule_2fessmodule_2eproto(&descriptor_table_essmodule_2fessmodule_2eproto);
 namespace essmodule {
-
 // ===================================================================
 
-class EssEventZBAT::_Internal {
+class ESSCapabilityConfiguration::_Internal {
  public:
-  static const ::commonmodule::LogicalNodeForEventAndStatus& logicalnodeforeventandstatus(const EssEventZBAT* msg);
-  static const ::commonmodule::StatusSPS& bathi(const EssEventZBAT* msg);
-  static const ::commonmodule::StatusSPS& batlo(const EssEventZBAT* msg);
-  static const ::commonmodule::StatusSPS& batst(const EssEventZBAT* msg);
-  static const ::commonmodule::MV& soc(const EssEventZBAT* msg);
-  static const ::commonmodule::StatusSPS& stdby(const EssEventZBAT* msg);
+  static const ::commonmodule::SourceCapabilityConfiguration& sourcecapabilityconfiguration(const ESSCapabilityConfiguration* msg);
+  static const ::commonmodule::ASG& vachartemax(const ESSCapabilityConfiguration* msg);
+  static const ::commonmodule::ASG& vadischartemax(const ESSCapabilityConfiguration* msg);
+  static const ::commonmodule::ASG& wchartemax(const ESSCapabilityConfiguration* msg);
+  static const ::commonmodule::ASG& wdischartemax(const ESSCapabilityConfiguration* msg);
 };
 
-const ::commonmodule::LogicalNodeForEventAndStatus&
-EssEventZBAT::_Internal::logicalnodeforeventandstatus(const EssEventZBAT* msg) {
-  return *msg->logicalnodeforeventandstatus_;
+const ::commonmodule::SourceCapabilityConfiguration&
+ESSCapabilityConfiguration::_Internal::sourcecapabilityconfiguration(const ESSCapabilityConfiguration* msg) {
+  return *msg->_impl_.sourcecapabilityconfiguration_;
 }
-const ::commonmodule::StatusSPS&
-EssEventZBAT::_Internal::bathi(const EssEventZBAT* msg) {
-  return *msg->bathi_;
+const ::commonmodule::ASG&
+ESSCapabilityConfiguration::_Internal::vachartemax(const ESSCapabilityConfiguration* msg) {
+  return *msg->_impl_.vachartemax_;
 }
-const ::commonmodule::StatusSPS&
-EssEventZBAT::_Internal::batlo(const EssEventZBAT* msg) {
-  return *msg->batlo_;
+const ::commonmodule::ASG&
+ESSCapabilityConfiguration::_Internal::vadischartemax(const ESSCapabilityConfiguration* msg) {
+  return *msg->_impl_.vadischartemax_;
 }
-const ::commonmodule::StatusSPS&
-EssEventZBAT::_Internal::batst(const EssEventZBAT* msg) {
-  return *msg->batst_;
+const ::commonmodule::ASG&
+ESSCapabilityConfiguration::_Internal::wchartemax(const ESSCapabilityConfiguration* msg) {
+  return *msg->_impl_.wchartemax_;
 }
-const ::commonmodule::MV&
-EssEventZBAT::_Internal::soc(const EssEventZBAT* msg) {
-  return *msg->soc_;
+const ::commonmodule::ASG&
+ESSCapabilityConfiguration::_Internal::wdischartemax(const ESSCapabilityConfiguration* msg) {
+  return *msg->_impl_.wdischartemax_;
 }
-const ::commonmodule::StatusSPS&
-EssEventZBAT::_Internal::stdby(const EssEventZBAT* msg) {
-  return *msg->stdby_;
-}
-void EssEventZBAT::clear_logicalnodeforeventandstatus() {
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
-    delete logicalnodeforeventandstatus_;
+void ESSCapabilityConfiguration::clear_sourcecapabilityconfiguration() {
+  if (GetArenaForAllocation() == nullptr && _impl_.sourcecapabilityconfiguration_ != nullptr) {
+    delete _impl_.sourcecapabilityconfiguration_;
   }
-  logicalnodeforeventandstatus_ = nullptr;
+  _impl_.sourcecapabilityconfiguration_ = nullptr;
 }
-void EssEventZBAT::clear_bathi() {
-  if (GetArena() == nullptr && bathi_ != nullptr) {
-    delete bathi_;
+void ESSCapabilityConfiguration::clear_vachartemax() {
+  if (GetArenaForAllocation() == nullptr && _impl_.vachartemax_ != nullptr) {
+    delete _impl_.vachartemax_;
   }
-  bathi_ = nullptr;
+  _impl_.vachartemax_ = nullptr;
 }
-void EssEventZBAT::clear_batlo() {
-  if (GetArena() == nullptr && batlo_ != nullptr) {
-    delete batlo_;
+void ESSCapabilityConfiguration::clear_vadischartemax() {
+  if (GetArenaForAllocation() == nullptr && _impl_.vadischartemax_ != nullptr) {
+    delete _impl_.vadischartemax_;
   }
-  batlo_ = nullptr;
+  _impl_.vadischartemax_ = nullptr;
 }
-void EssEventZBAT::clear_batst() {
-  if (GetArena() == nullptr && batst_ != nullptr) {
-    delete batst_;
+void ESSCapabilityConfiguration::clear_wchartemax() {
+  if (GetArenaForAllocation() == nullptr && _impl_.wchartemax_ != nullptr) {
+    delete _impl_.wchartemax_;
   }
-  batst_ = nullptr;
+  _impl_.wchartemax_ = nullptr;
 }
-void EssEventZBAT::clear_soc() {
-  if (GetArena() == nullptr && soc_ != nullptr) {
-    delete soc_;
+void ESSCapabilityConfiguration::clear_wdischartemax() {
+  if (GetArenaForAllocation() == nullptr && _impl_.wdischartemax_ != nullptr) {
+    delete _impl_.wdischartemax_;
   }
-  soc_ = nullptr;
+  _impl_.wdischartemax_ = nullptr;
 }
-void EssEventZBAT::clear_stdby() {
-  if (GetArena() == nullptr && stdby_ != nullptr) {
-    delete stdby_;
-  }
-  stdby_ = nullptr;
-}
-EssEventZBAT::EssEventZBAT(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+ESSCapabilityConfiguration::ESSCapabilityConfiguration(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.EssEventZBAT)
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSCapabilityConfiguration)
 }
-EssEventZBAT::EssEventZBAT(const EssEventZBAT& from)
+ESSCapabilityConfiguration::ESSCapabilityConfiguration(const ESSCapabilityConfiguration& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSCapabilityConfiguration* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.sourcecapabilityconfiguration_){nullptr}
+    , decltype(_impl_.vachartemax_){nullptr}
+    , decltype(_impl_.vadischartemax_){nullptr}
+    , decltype(_impl_.wchartemax_){nullptr}
+    , decltype(_impl_.wdischartemax_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_logicalnodeforeventandstatus()) {
-    logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from.logicalnodeforeventandstatus_);
-  } else {
-    logicalnodeforeventandstatus_ = nullptr;
+  if (from._internal_has_sourcecapabilityconfiguration()) {
+    _this->_impl_.sourcecapabilityconfiguration_ = new ::commonmodule::SourceCapabilityConfiguration(*from._impl_.sourcecapabilityconfiguration_);
   }
-  if (from._internal_has_bathi()) {
-    bathi_ = new ::commonmodule::StatusSPS(*from.bathi_);
-  } else {
-    bathi_ = nullptr;
+  if (from._internal_has_vachartemax()) {
+    _this->_impl_.vachartemax_ = new ::commonmodule::ASG(*from._impl_.vachartemax_);
   }
-  if (from._internal_has_batlo()) {
-    batlo_ = new ::commonmodule::StatusSPS(*from.batlo_);
-  } else {
-    batlo_ = nullptr;
+  if (from._internal_has_vadischartemax()) {
+    _this->_impl_.vadischartemax_ = new ::commonmodule::ASG(*from._impl_.vadischartemax_);
   }
-  if (from._internal_has_batst()) {
-    batst_ = new ::commonmodule::StatusSPS(*from.batst_);
-  } else {
-    batst_ = nullptr;
+  if (from._internal_has_wchartemax()) {
+    _this->_impl_.wchartemax_ = new ::commonmodule::ASG(*from._impl_.wchartemax_);
   }
-  if (from._internal_has_soc()) {
-    soc_ = new ::commonmodule::MV(*from.soc_);
-  } else {
-    soc_ = nullptr;
+  if (from._internal_has_wdischartemax()) {
+    _this->_impl_.wdischartemax_ = new ::commonmodule::ASG(*from._impl_.wdischartemax_);
   }
-  if (from._internal_has_stdby()) {
-    stdby_ = new ::commonmodule::StatusSPS(*from.stdby_);
-  } else {
-    stdby_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:essmodule.EssEventZBAT)
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSCapabilityConfiguration)
 }
 
-void EssEventZBAT::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&stdby_) -
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(stdby_));
+inline void ESSCapabilityConfiguration::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.sourcecapabilityconfiguration_){nullptr}
+    , decltype(_impl_.vachartemax_){nullptr}
+    , decltype(_impl_.vadischartemax_){nullptr}
+    , decltype(_impl_.wchartemax_){nullptr}
+    , decltype(_impl_.wdischartemax_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
-EssEventZBAT::~EssEventZBAT() {
-  // @@protoc_insertion_point(destructor:essmodule.EssEventZBAT)
+ESSCapabilityConfiguration::~ESSCapabilityConfiguration() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSCapabilityConfiguration)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void EssEventZBAT::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete logicalnodeforeventandstatus_;
-  if (this != internal_default_instance()) delete bathi_;
-  if (this != internal_default_instance()) delete batlo_;
-  if (this != internal_default_instance()) delete batst_;
-  if (this != internal_default_instance()) delete soc_;
-  if (this != internal_default_instance()) delete stdby_;
+inline void ESSCapabilityConfiguration::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.sourcecapabilityconfiguration_;
+  if (this != internal_default_instance()) delete _impl_.vachartemax_;
+  if (this != internal_default_instance()) delete _impl_.vadischartemax_;
+  if (this != internal_default_instance()) delete _impl_.wchartemax_;
+  if (this != internal_default_instance()) delete _impl_.wdischartemax_;
 }
 
-void EssEventZBAT::ArenaDtor(void* object) {
-  EssEventZBAT* _this = reinterpret_cast< EssEventZBAT* >(object);
-  (void)_this;
-}
-void EssEventZBAT::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void EssEventZBAT::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+void ESSCapabilityConfiguration::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
 }
 
-void EssEventZBAT::Clear() {
-// @@protoc_insertion_point(message_clear_start:essmodule.EssEventZBAT)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+void ESSCapabilityConfiguration::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSCapabilityConfiguration)
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
-    delete logicalnodeforeventandstatus_;
+  if (GetArenaForAllocation() == nullptr && _impl_.sourcecapabilityconfiguration_ != nullptr) {
+    delete _impl_.sourcecapabilityconfiguration_;
   }
-  logicalnodeforeventandstatus_ = nullptr;
-  if (GetArena() == nullptr && bathi_ != nullptr) {
-    delete bathi_;
+  _impl_.sourcecapabilityconfiguration_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.vachartemax_ != nullptr) {
+    delete _impl_.vachartemax_;
   }
-  bathi_ = nullptr;
-  if (GetArena() == nullptr && batlo_ != nullptr) {
-    delete batlo_;
+  _impl_.vachartemax_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.vadischartemax_ != nullptr) {
+    delete _impl_.vadischartemax_;
   }
-  batlo_ = nullptr;
-  if (GetArena() == nullptr && batst_ != nullptr) {
-    delete batst_;
+  _impl_.vadischartemax_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.wchartemax_ != nullptr) {
+    delete _impl_.wchartemax_;
   }
-  batst_ = nullptr;
-  if (GetArena() == nullptr && soc_ != nullptr) {
-    delete soc_;
+  _impl_.wchartemax_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.wdischartemax_ != nullptr) {
+    delete _impl_.wdischartemax_;
   }
-  soc_ = nullptr;
-  if (GetArena() == nullptr && stdby_ != nullptr) {
-    delete stdby_;
-  }
-  stdby_ = nullptr;
+  _impl_.wdischartemax_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* EssEventZBAT::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ESSCapabilityConfiguration::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
+      // .commonmodule.SourceCapabilityConfiguration sourceCapabilityConfiguration = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforeventandstatus(), ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_sourcecapabilityconfiguration(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS BatHi = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_bathi(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS BatLo = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_batlo(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS BatSt = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_batst(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.MV Soc = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_soc(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS Stdby = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(_internal_mutable_stdby(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      // .commonmodule.ASG VAChaRteMax = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_vachartemax(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ASG VADisChaRteMax = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_vadischartemax(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ASG WChaRteMax = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_wchartemax(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ASG WDisChaRteMax = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_wdischartemax(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* EssEventZBAT::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.EssEventZBAT)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+::uint8_t* ESSCapabilityConfiguration::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSCapabilityConfiguration)
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforeventandstatus()) {
-    target = stream->EnsureSpace(target);
+  // .commonmodule.SourceCapabilityConfiguration sourceCapabilityConfiguration = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_sourcecapabilityconfiguration()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnodeforeventandstatus(this), target, stream);
+      InternalWriteMessage(1, _Internal::sourcecapabilityconfiguration(this),
+        _Internal::sourcecapabilityconfiguration(this).GetCachedSize(), target, stream);
   }
 
-  // .commonmodule.StatusSPS BatHi = 2;
-  if (this->has_bathi()) {
-    target = stream->EnsureSpace(target);
+  // .commonmodule.ASG VAChaRteMax = 2;
+  if (this->_internal_has_vachartemax()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::bathi(this), target, stream);
+      InternalWriteMessage(2, _Internal::vachartemax(this),
+        _Internal::vachartemax(this).GetCachedSize(), target, stream);
   }
 
-  // .commonmodule.StatusSPS BatLo = 3;
-  if (this->has_batlo()) {
-    target = stream->EnsureSpace(target);
+  // .commonmodule.ASG VADisChaRteMax = 3;
+  if (this->_internal_has_vadischartemax()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::batlo(this), target, stream);
+      InternalWriteMessage(3, _Internal::vadischartemax(this),
+        _Internal::vadischartemax(this).GetCachedSize(), target, stream);
   }
 
-  // .commonmodule.StatusSPS BatSt = 4;
-  if (this->has_batst()) {
-    target = stream->EnsureSpace(target);
+  // .commonmodule.ASG WChaRteMax = 4;
+  if (this->_internal_has_wchartemax()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::batst(this), target, stream);
+      InternalWriteMessage(4, _Internal::wchartemax(this),
+        _Internal::wchartemax(this).GetCachedSize(), target, stream);
   }
 
-  // .commonmodule.MV Soc = 5;
-  if (this->has_soc()) {
-    target = stream->EnsureSpace(target);
+  // .commonmodule.ASG WDisChaRteMax = 5;
+  if (this->_internal_has_wdischartemax()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::soc(this), target, stream);
-  }
-
-  // .commonmodule.StatusSPS Stdby = 6;
-  if (this->has_stdby()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::stdby(this), target, stream);
+      InternalWriteMessage(5, _Internal::wdischartemax(this),
+        _Internal::wdischartemax(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:essmodule.EssEventZBAT)
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSCapabilityConfiguration)
   return target;
 }
 
-size_t EssEventZBAT::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:essmodule.EssEventZBAT)
-  size_t total_size = 0;
+::size_t ESSCapabilityConfiguration::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSCapabilityConfiguration)
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforeventandstatus()) {
+  // .commonmodule.SourceCapabilityConfiguration sourceCapabilityConfiguration = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_sourcecapabilityconfiguration()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *logicalnodeforeventandstatus_);
+        *_impl_.sourcecapabilityconfiguration_);
   }
 
-  // .commonmodule.StatusSPS BatHi = 2;
-  if (this->has_bathi()) {
+  // .commonmodule.ASG VAChaRteMax = 2;
+  if (this->_internal_has_vachartemax()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *bathi_);
+        *_impl_.vachartemax_);
   }
 
-  // .commonmodule.StatusSPS BatLo = 3;
-  if (this->has_batlo()) {
+  // .commonmodule.ASG VADisChaRteMax = 3;
+  if (this->_internal_has_vadischartemax()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *batlo_);
+        *_impl_.vadischartemax_);
   }
 
-  // .commonmodule.StatusSPS BatSt = 4;
-  if (this->has_batst()) {
+  // .commonmodule.ASG WChaRteMax = 4;
+  if (this->_internal_has_wchartemax()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *batst_);
+        *_impl_.wchartemax_);
   }
 
-  // .commonmodule.MV Soc = 5;
-  if (this->has_soc()) {
+  // .commonmodule.ASG WDisChaRteMax = 5;
+  if (this->_internal_has_wdischartemax()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *soc_);
+        *_impl_.wdischartemax_);
   }
 
-  // .commonmodule.StatusSPS Stdby = 6;
-  if (this->has_stdby()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *stdby_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void EssEventZBAT::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.EssEventZBAT)
-  GOOGLE_DCHECK_NE(&from, this);
-  const EssEventZBAT* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<EssEventZBAT>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.EssEventZBAT)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.EssEventZBAT)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSCapabilityConfiguration::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSCapabilityConfiguration::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSCapabilityConfiguration::GetClassData() const { return &_class_data_; }
 
-void EssEventZBAT::MergeFrom(const EssEventZBAT& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.EssEventZBAT)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ESSCapabilityConfiguration::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSCapabilityConfiguration*>(&to_msg);
+  auto& from = static_cast<const ESSCapabilityConfiguration&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSCapabilityConfiguration)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_logicalnodeforeventandstatus()) {
-    _internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from._internal_logicalnodeforeventandstatus());
+  if (from._internal_has_sourcecapabilityconfiguration()) {
+    _this->_internal_mutable_sourcecapabilityconfiguration()->::commonmodule::SourceCapabilityConfiguration::MergeFrom(
+        from._internal_sourcecapabilityconfiguration());
   }
-  if (from.has_bathi()) {
-    _internal_mutable_bathi()->::commonmodule::StatusSPS::MergeFrom(from._internal_bathi());
+  if (from._internal_has_vachartemax()) {
+    _this->_internal_mutable_vachartemax()->::commonmodule::ASG::MergeFrom(
+        from._internal_vachartemax());
   }
-  if (from.has_batlo()) {
-    _internal_mutable_batlo()->::commonmodule::StatusSPS::MergeFrom(from._internal_batlo());
+  if (from._internal_has_vadischartemax()) {
+    _this->_internal_mutable_vadischartemax()->::commonmodule::ASG::MergeFrom(
+        from._internal_vadischartemax());
   }
-  if (from.has_batst()) {
-    _internal_mutable_batst()->::commonmodule::StatusSPS::MergeFrom(from._internal_batst());
+  if (from._internal_has_wchartemax()) {
+    _this->_internal_mutable_wchartemax()->::commonmodule::ASG::MergeFrom(
+        from._internal_wchartemax());
   }
-  if (from.has_soc()) {
-    _internal_mutable_soc()->::commonmodule::MV::MergeFrom(from._internal_soc());
+  if (from._internal_has_wdischartemax()) {
+    _this->_internal_mutable_wdischartemax()->::commonmodule::ASG::MergeFrom(
+        from._internal_wdischartemax());
   }
-  if (from.has_stdby()) {
-    _internal_mutable_stdby()->::commonmodule::StatusSPS::MergeFrom(from._internal_stdby());
-  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void EssEventZBAT::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.EssEventZBAT)
+void ESSCapabilityConfiguration::CopyFrom(const ESSCapabilityConfiguration& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSCapabilityConfiguration)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void EssEventZBAT::CopyFrom(const EssEventZBAT& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.EssEventZBAT)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool EssEventZBAT::IsInitialized() const {
+bool ESSCapabilityConfiguration::IsInitialized() const {
   return true;
 }
 
-void EssEventZBAT::InternalSwap(EssEventZBAT* other) {
+void ESSCapabilityConfiguration::InternalSwap(ESSCapabilityConfiguration* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(EssEventZBAT, stdby_)
-      + sizeof(EssEventZBAT::stdby_)
-      - PROTOBUF_FIELD_OFFSET(EssEventZBAT, logicalnodeforeventandstatus_)>(
-          reinterpret_cast<char*>(&logicalnodeforeventandstatus_),
-          reinterpret_cast<char*>(&other->logicalnodeforeventandstatus_));
+      PROTOBUF_FIELD_OFFSET(ESSCapabilityConfiguration, _impl_.wdischartemax_)
+      + sizeof(ESSCapabilityConfiguration::_impl_.wdischartemax_)
+      - PROTOBUF_FIELD_OFFSET(ESSCapabilityConfiguration, _impl_.sourcecapabilityconfiguration_)>(
+          reinterpret_cast<char*>(&_impl_.sourcecapabilityconfiguration_),
+          reinterpret_cast<char*>(&other->_impl_.sourcecapabilityconfiguration_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata EssEventZBAT::GetMetadata() const {
-  return GetMetadataStatic();
+::PROTOBUF_NAMESPACE_ID::Metadata ESSCapabilityConfiguration::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[0]);
+}
+// ===================================================================
+
+class ESSCapabilityOverride::_Internal {
+ public:
+  static const ::commonmodule::NameplateValue& nameplatevalue(const ESSCapabilityOverride* msg);
+  static const ::essmodule::ESSCapabilityConfiguration& esscapabilityconfiguration(const ESSCapabilityOverride* msg);
+};
+
+const ::commonmodule::NameplateValue&
+ESSCapabilityOverride::_Internal::nameplatevalue(const ESSCapabilityOverride* msg) {
+  return *msg->_impl_.nameplatevalue_;
+}
+const ::essmodule::ESSCapabilityConfiguration&
+ESSCapabilityOverride::_Internal::esscapabilityconfiguration(const ESSCapabilityOverride* msg) {
+  return *msg->_impl_.esscapabilityconfiguration_;
+}
+void ESSCapabilityOverride::clear_nameplatevalue() {
+  if (GetArenaForAllocation() == nullptr && _impl_.nameplatevalue_ != nullptr) {
+    delete _impl_.nameplatevalue_;
+  }
+  _impl_.nameplatevalue_ = nullptr;
+}
+ESSCapabilityOverride::ESSCapabilityOverride(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSCapabilityOverride)
+}
+ESSCapabilityOverride::ESSCapabilityOverride(const ESSCapabilityOverride& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSCapabilityOverride* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.nameplatevalue_){nullptr}
+    , decltype(_impl_.esscapabilityconfiguration_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_nameplatevalue()) {
+    _this->_impl_.nameplatevalue_ = new ::commonmodule::NameplateValue(*from._impl_.nameplatevalue_);
+  }
+  if (from._internal_has_esscapabilityconfiguration()) {
+    _this->_impl_.esscapabilityconfiguration_ = new ::essmodule::ESSCapabilityConfiguration(*from._impl_.esscapabilityconfiguration_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSCapabilityOverride)
 }
 
+inline void ESSCapabilityOverride::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.nameplatevalue_){nullptr}
+    , decltype(_impl_.esscapabilityconfiguration_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
 
+ESSCapabilityOverride::~ESSCapabilityOverride() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSCapabilityOverride)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ESSCapabilityOverride::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.nameplatevalue_;
+  if (this != internal_default_instance()) delete _impl_.esscapabilityconfiguration_;
+}
+
+void ESSCapabilityOverride::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ESSCapabilityOverride::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSCapabilityOverride)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.nameplatevalue_ != nullptr) {
+    delete _impl_.nameplatevalue_;
+  }
+  _impl_.nameplatevalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.esscapabilityconfiguration_ != nullptr) {
+    delete _impl_.esscapabilityconfiguration_;
+  }
+  _impl_.esscapabilityconfiguration_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ESSCapabilityOverride::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.NameplateValue nameplateValue = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_nameplatevalue(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .essmodule.ESSCapabilityConfiguration essCapabilityConfiguration = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_esscapabilityconfiguration(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* ESSCapabilityOverride::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSCapabilityOverride)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.NameplateValue nameplateValue = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_nameplatevalue()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::nameplatevalue(this),
+        _Internal::nameplatevalue(this).GetCachedSize(), target, stream);
+  }
+
+  // .essmodule.ESSCapabilityConfiguration essCapabilityConfiguration = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_esscapabilityconfiguration()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::esscapabilityconfiguration(this),
+        _Internal::esscapabilityconfiguration(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSCapabilityOverride)
+  return target;
+}
+
+::size_t ESSCapabilityOverride::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSCapabilityOverride)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.NameplateValue nameplateValue = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_nameplatevalue()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.nameplatevalue_);
+  }
+
+  // .essmodule.ESSCapabilityConfiguration essCapabilityConfiguration = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_esscapabilityconfiguration()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.esscapabilityconfiguration_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSCapabilityOverride::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSCapabilityOverride::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSCapabilityOverride::GetClassData() const { return &_class_data_; }
+
+
+void ESSCapabilityOverride::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSCapabilityOverride*>(&to_msg);
+  auto& from = static_cast<const ESSCapabilityOverride&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSCapabilityOverride)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_nameplatevalue()) {
+    _this->_internal_mutable_nameplatevalue()->::commonmodule::NameplateValue::MergeFrom(
+        from._internal_nameplatevalue());
+  }
+  if (from._internal_has_esscapabilityconfiguration()) {
+    _this->_internal_mutable_esscapabilityconfiguration()->::essmodule::ESSCapabilityConfiguration::MergeFrom(
+        from._internal_esscapabilityconfiguration());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ESSCapabilityOverride::CopyFrom(const ESSCapabilityOverride& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSCapabilityOverride)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ESSCapabilityOverride::IsInitialized() const {
+  return true;
+}
+
+void ESSCapabilityOverride::InternalSwap(ESSCapabilityOverride* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ESSCapabilityOverride, _impl_.esscapabilityconfiguration_)
+      + sizeof(ESSCapabilityOverride::_impl_.esscapabilityconfiguration_)
+      - PROTOBUF_FIELD_OFFSET(ESSCapabilityOverride, _impl_.nameplatevalue_)>(
+          reinterpret_cast<char*>(&_impl_.nameplatevalue_),
+          reinterpret_cast<char*>(&other->_impl_.nameplatevalue_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ESSCapabilityOverride::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[1]);
+}
+// ===================================================================
+
+class ESSCapabilityOverrideProfile::_Internal {
+ public:
+  static const ::commonmodule::CapabilityMessageInfo& capabilitymessageinfo(const ESSCapabilityOverrideProfile* msg);
+  static const ::commonmodule::ESS& ess(const ESSCapabilityOverrideProfile* msg);
+  static const ::essmodule::ESSCapabilityOverride& esscapabilityoverride(const ESSCapabilityOverrideProfile* msg);
+};
+
+const ::commonmodule::CapabilityMessageInfo&
+ESSCapabilityOverrideProfile::_Internal::capabilitymessageinfo(const ESSCapabilityOverrideProfile* msg) {
+  return *msg->_impl_.capabilitymessageinfo_;
+}
+const ::commonmodule::ESS&
+ESSCapabilityOverrideProfile::_Internal::ess(const ESSCapabilityOverrideProfile* msg) {
+  return *msg->_impl_.ess_;
+}
+const ::essmodule::ESSCapabilityOverride&
+ESSCapabilityOverrideProfile::_Internal::esscapabilityoverride(const ESSCapabilityOverrideProfile* msg) {
+  return *msg->_impl_.esscapabilityoverride_;
+}
+void ESSCapabilityOverrideProfile::clear_capabilitymessageinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.capabilitymessageinfo_ != nullptr) {
+    delete _impl_.capabilitymessageinfo_;
+  }
+  _impl_.capabilitymessageinfo_ = nullptr;
+}
+void ESSCapabilityOverrideProfile::clear_ess() {
+  if (GetArenaForAllocation() == nullptr && _impl_.ess_ != nullptr) {
+    delete _impl_.ess_;
+  }
+  _impl_.ess_ = nullptr;
+}
+ESSCapabilityOverrideProfile::ESSCapabilityOverrideProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSCapabilityOverrideProfile)
+}
+ESSCapabilityOverrideProfile::ESSCapabilityOverrideProfile(const ESSCapabilityOverrideProfile& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSCapabilityOverrideProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.capabilitymessageinfo_){nullptr}
+    , decltype(_impl_.ess_){nullptr}
+    , decltype(_impl_.esscapabilityoverride_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_capabilitymessageinfo()) {
+    _this->_impl_.capabilitymessageinfo_ = new ::commonmodule::CapabilityMessageInfo(*from._impl_.capabilitymessageinfo_);
+  }
+  if (from._internal_has_ess()) {
+    _this->_impl_.ess_ = new ::commonmodule::ESS(*from._impl_.ess_);
+  }
+  if (from._internal_has_esscapabilityoverride()) {
+    _this->_impl_.esscapabilityoverride_ = new ::essmodule::ESSCapabilityOverride(*from._impl_.esscapabilityoverride_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSCapabilityOverrideProfile)
+}
+
+inline void ESSCapabilityOverrideProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.capabilitymessageinfo_){nullptr}
+    , decltype(_impl_.ess_){nullptr}
+    , decltype(_impl_.esscapabilityoverride_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+ESSCapabilityOverrideProfile::~ESSCapabilityOverrideProfile() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSCapabilityOverrideProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ESSCapabilityOverrideProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.capabilitymessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.ess_;
+  if (this != internal_default_instance()) delete _impl_.esscapabilityoverride_;
+}
+
+void ESSCapabilityOverrideProfile::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ESSCapabilityOverrideProfile::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSCapabilityOverrideProfile)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.capabilitymessageinfo_ != nullptr) {
+    delete _impl_.capabilitymessageinfo_;
+  }
+  _impl_.capabilitymessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ess_ != nullptr) {
+    delete _impl_.ess_;
+  }
+  _impl_.ess_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.esscapabilityoverride_ != nullptr) {
+    delete _impl_.esscapabilityoverride_;
+  }
+  _impl_.esscapabilityoverride_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ESSCapabilityOverrideProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.CapabilityMessageInfo capabilityMessageInfo = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_capabilitymessageinfo(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_ess(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .essmodule.ESSCapabilityOverride essCapabilityOverride = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_esscapabilityoverride(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* ESSCapabilityOverrideProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSCapabilityOverrideProfile)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.CapabilityMessageInfo capabilityMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_capabilitymessageinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::capabilitymessageinfo(this),
+        _Internal::capabilitymessageinfo(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_ess()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::ess(this),
+        _Internal::ess(this).GetCachedSize(), target, stream);
+  }
+
+  // .essmodule.ESSCapabilityOverride essCapabilityOverride = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_esscapabilityoverride()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::esscapabilityoverride(this),
+        _Internal::esscapabilityoverride(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSCapabilityOverrideProfile)
+  return target;
+}
+
+::size_t ESSCapabilityOverrideProfile::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSCapabilityOverrideProfile)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.CapabilityMessageInfo capabilityMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_capabilitymessageinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.capabilitymessageinfo_);
+  }
+
+  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_ess()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.ess_);
+  }
+
+  // .essmodule.ESSCapabilityOverride essCapabilityOverride = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_esscapabilityoverride()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.esscapabilityoverride_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSCapabilityOverrideProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSCapabilityOverrideProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSCapabilityOverrideProfile::GetClassData() const { return &_class_data_; }
+
+
+void ESSCapabilityOverrideProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSCapabilityOverrideProfile*>(&to_msg);
+  auto& from = static_cast<const ESSCapabilityOverrideProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSCapabilityOverrideProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_capabilitymessageinfo()) {
+    _this->_internal_mutable_capabilitymessageinfo()->::commonmodule::CapabilityMessageInfo::MergeFrom(
+        from._internal_capabilitymessageinfo());
+  }
+  if (from._internal_has_ess()) {
+    _this->_internal_mutable_ess()->::commonmodule::ESS::MergeFrom(
+        from._internal_ess());
+  }
+  if (from._internal_has_esscapabilityoverride()) {
+    _this->_internal_mutable_esscapabilityoverride()->::essmodule::ESSCapabilityOverride::MergeFrom(
+        from._internal_esscapabilityoverride());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ESSCapabilityOverrideProfile::CopyFrom(const ESSCapabilityOverrideProfile& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSCapabilityOverrideProfile)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ESSCapabilityOverrideProfile::IsInitialized() const {
+  return true;
+}
+
+void ESSCapabilityOverrideProfile::InternalSwap(ESSCapabilityOverrideProfile* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ESSCapabilityOverrideProfile, _impl_.esscapabilityoverride_)
+      + sizeof(ESSCapabilityOverrideProfile::_impl_.esscapabilityoverride_)
+      - PROTOBUF_FIELD_OFFSET(ESSCapabilityOverrideProfile, _impl_.capabilitymessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.capabilitymessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.capabilitymessageinfo_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ESSCapabilityOverrideProfile::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[2]);
+}
+// ===================================================================
+
+class ESSCapabilityRatings::_Internal {
+ public:
+  static const ::commonmodule::SourceCapabilityRatings& sourcecapabilityratings(const ESSCapabilityRatings* msg);
+  static const ::commonmodule::ASG& vachartemaxrtg(const ESSCapabilityRatings* msg);
+  static const ::commonmodule::ASG& vadischartemaxrtg(const ESSCapabilityRatings* msg);
+  static const ::commonmodule::ASG& wchartemaxrtg(const ESSCapabilityRatings* msg);
+  static const ::commonmodule::ASG& wdischartemaxrtg(const ESSCapabilityRatings* msg);
+  static const ::commonmodule::ASG& whrtg(const ESSCapabilityRatings* msg);
+};
+
+const ::commonmodule::SourceCapabilityRatings&
+ESSCapabilityRatings::_Internal::sourcecapabilityratings(const ESSCapabilityRatings* msg) {
+  return *msg->_impl_.sourcecapabilityratings_;
+}
+const ::commonmodule::ASG&
+ESSCapabilityRatings::_Internal::vachartemaxrtg(const ESSCapabilityRatings* msg) {
+  return *msg->_impl_.vachartemaxrtg_;
+}
+const ::commonmodule::ASG&
+ESSCapabilityRatings::_Internal::vadischartemaxrtg(const ESSCapabilityRatings* msg) {
+  return *msg->_impl_.vadischartemaxrtg_;
+}
+const ::commonmodule::ASG&
+ESSCapabilityRatings::_Internal::wchartemaxrtg(const ESSCapabilityRatings* msg) {
+  return *msg->_impl_.wchartemaxrtg_;
+}
+const ::commonmodule::ASG&
+ESSCapabilityRatings::_Internal::wdischartemaxrtg(const ESSCapabilityRatings* msg) {
+  return *msg->_impl_.wdischartemaxrtg_;
+}
+const ::commonmodule::ASG&
+ESSCapabilityRatings::_Internal::whrtg(const ESSCapabilityRatings* msg) {
+  return *msg->_impl_.whrtg_;
+}
+void ESSCapabilityRatings::clear_sourcecapabilityratings() {
+  if (GetArenaForAllocation() == nullptr && _impl_.sourcecapabilityratings_ != nullptr) {
+    delete _impl_.sourcecapabilityratings_;
+  }
+  _impl_.sourcecapabilityratings_ = nullptr;
+}
+void ESSCapabilityRatings::clear_vachartemaxrtg() {
+  if (GetArenaForAllocation() == nullptr && _impl_.vachartemaxrtg_ != nullptr) {
+    delete _impl_.vachartemaxrtg_;
+  }
+  _impl_.vachartemaxrtg_ = nullptr;
+}
+void ESSCapabilityRatings::clear_vadischartemaxrtg() {
+  if (GetArenaForAllocation() == nullptr && _impl_.vadischartemaxrtg_ != nullptr) {
+    delete _impl_.vadischartemaxrtg_;
+  }
+  _impl_.vadischartemaxrtg_ = nullptr;
+}
+void ESSCapabilityRatings::clear_wchartemaxrtg() {
+  if (GetArenaForAllocation() == nullptr && _impl_.wchartemaxrtg_ != nullptr) {
+    delete _impl_.wchartemaxrtg_;
+  }
+  _impl_.wchartemaxrtg_ = nullptr;
+}
+void ESSCapabilityRatings::clear_wdischartemaxrtg() {
+  if (GetArenaForAllocation() == nullptr && _impl_.wdischartemaxrtg_ != nullptr) {
+    delete _impl_.wdischartemaxrtg_;
+  }
+  _impl_.wdischartemaxrtg_ = nullptr;
+}
+void ESSCapabilityRatings::clear_whrtg() {
+  if (GetArenaForAllocation() == nullptr && _impl_.whrtg_ != nullptr) {
+    delete _impl_.whrtg_;
+  }
+  _impl_.whrtg_ = nullptr;
+}
+ESSCapabilityRatings::ESSCapabilityRatings(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSCapabilityRatings)
+}
+ESSCapabilityRatings::ESSCapabilityRatings(const ESSCapabilityRatings& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSCapabilityRatings* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.sourcecapabilityratings_){nullptr}
+    , decltype(_impl_.vachartemaxrtg_){nullptr}
+    , decltype(_impl_.vadischartemaxrtg_){nullptr}
+    , decltype(_impl_.wchartemaxrtg_){nullptr}
+    , decltype(_impl_.wdischartemaxrtg_){nullptr}
+    , decltype(_impl_.whrtg_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_sourcecapabilityratings()) {
+    _this->_impl_.sourcecapabilityratings_ = new ::commonmodule::SourceCapabilityRatings(*from._impl_.sourcecapabilityratings_);
+  }
+  if (from._internal_has_vachartemaxrtg()) {
+    _this->_impl_.vachartemaxrtg_ = new ::commonmodule::ASG(*from._impl_.vachartemaxrtg_);
+  }
+  if (from._internal_has_vadischartemaxrtg()) {
+    _this->_impl_.vadischartemaxrtg_ = new ::commonmodule::ASG(*from._impl_.vadischartemaxrtg_);
+  }
+  if (from._internal_has_wchartemaxrtg()) {
+    _this->_impl_.wchartemaxrtg_ = new ::commonmodule::ASG(*from._impl_.wchartemaxrtg_);
+  }
+  if (from._internal_has_wdischartemaxrtg()) {
+    _this->_impl_.wdischartemaxrtg_ = new ::commonmodule::ASG(*from._impl_.wdischartemaxrtg_);
+  }
+  if (from._internal_has_whrtg()) {
+    _this->_impl_.whrtg_ = new ::commonmodule::ASG(*from._impl_.whrtg_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSCapabilityRatings)
+}
+
+inline void ESSCapabilityRatings::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.sourcecapabilityratings_){nullptr}
+    , decltype(_impl_.vachartemaxrtg_){nullptr}
+    , decltype(_impl_.vadischartemaxrtg_){nullptr}
+    , decltype(_impl_.wchartemaxrtg_){nullptr}
+    , decltype(_impl_.wdischartemaxrtg_){nullptr}
+    , decltype(_impl_.whrtg_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+ESSCapabilityRatings::~ESSCapabilityRatings() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSCapabilityRatings)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ESSCapabilityRatings::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.sourcecapabilityratings_;
+  if (this != internal_default_instance()) delete _impl_.vachartemaxrtg_;
+  if (this != internal_default_instance()) delete _impl_.vadischartemaxrtg_;
+  if (this != internal_default_instance()) delete _impl_.wchartemaxrtg_;
+  if (this != internal_default_instance()) delete _impl_.wdischartemaxrtg_;
+  if (this != internal_default_instance()) delete _impl_.whrtg_;
+}
+
+void ESSCapabilityRatings::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ESSCapabilityRatings::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSCapabilityRatings)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.sourcecapabilityratings_ != nullptr) {
+    delete _impl_.sourcecapabilityratings_;
+  }
+  _impl_.sourcecapabilityratings_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.vachartemaxrtg_ != nullptr) {
+    delete _impl_.vachartemaxrtg_;
+  }
+  _impl_.vachartemaxrtg_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.vadischartemaxrtg_ != nullptr) {
+    delete _impl_.vadischartemaxrtg_;
+  }
+  _impl_.vadischartemaxrtg_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.wchartemaxrtg_ != nullptr) {
+    delete _impl_.wchartemaxrtg_;
+  }
+  _impl_.wchartemaxrtg_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.wdischartemaxrtg_ != nullptr) {
+    delete _impl_.wdischartemaxrtg_;
+  }
+  _impl_.wdischartemaxrtg_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.whrtg_ != nullptr) {
+    delete _impl_.whrtg_;
+  }
+  _impl_.whrtg_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ESSCapabilityRatings::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.SourceCapabilityRatings sourceCapabilityRatings = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_sourcecapabilityratings(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ASG VAChaRteMaxRtg = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_vachartemaxrtg(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ASG VADisChaRteMaxRtg = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_vadischartemaxrtg(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ASG WChaRteMaxRtg = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_wchartemaxrtg(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ASG WDisChaRteMaxRtg = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_wdischartemaxrtg(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ASG WHRtg = 6 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_whrtg(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* ESSCapabilityRatings::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSCapabilityRatings)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.SourceCapabilityRatings sourceCapabilityRatings = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_sourcecapabilityratings()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::sourcecapabilityratings(this),
+        _Internal::sourcecapabilityratings(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ASG VAChaRteMaxRtg = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_vachartemaxrtg()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::vachartemaxrtg(this),
+        _Internal::vachartemaxrtg(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ASG VADisChaRteMaxRtg = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_vadischartemaxrtg()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::vadischartemaxrtg(this),
+        _Internal::vadischartemaxrtg(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ASG WChaRteMaxRtg = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_wchartemaxrtg()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::wchartemaxrtg(this),
+        _Internal::wchartemaxrtg(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ASG WDisChaRteMaxRtg = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_wdischartemaxrtg()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(5, _Internal::wdischartemaxrtg(this),
+        _Internal::wdischartemaxrtg(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ASG WHRtg = 6 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_whrtg()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(6, _Internal::whrtg(this),
+        _Internal::whrtg(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSCapabilityRatings)
+  return target;
+}
+
+::size_t ESSCapabilityRatings::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSCapabilityRatings)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.SourceCapabilityRatings sourceCapabilityRatings = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_sourcecapabilityratings()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.sourcecapabilityratings_);
+  }
+
+  // .commonmodule.ASG VAChaRteMaxRtg = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_vachartemaxrtg()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.vachartemaxrtg_);
+  }
+
+  // .commonmodule.ASG VADisChaRteMaxRtg = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_vadischartemaxrtg()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.vadischartemaxrtg_);
+  }
+
+  // .commonmodule.ASG WChaRteMaxRtg = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_wchartemaxrtg()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.wchartemaxrtg_);
+  }
+
+  // .commonmodule.ASG WDisChaRteMaxRtg = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_wdischartemaxrtg()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.wdischartemaxrtg_);
+  }
+
+  // .commonmodule.ASG WHRtg = 6 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_whrtg()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.whrtg_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSCapabilityRatings::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSCapabilityRatings::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSCapabilityRatings::GetClassData() const { return &_class_data_; }
+
+
+void ESSCapabilityRatings::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSCapabilityRatings*>(&to_msg);
+  auto& from = static_cast<const ESSCapabilityRatings&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSCapabilityRatings)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_sourcecapabilityratings()) {
+    _this->_internal_mutable_sourcecapabilityratings()->::commonmodule::SourceCapabilityRatings::MergeFrom(
+        from._internal_sourcecapabilityratings());
+  }
+  if (from._internal_has_vachartemaxrtg()) {
+    _this->_internal_mutable_vachartemaxrtg()->::commonmodule::ASG::MergeFrom(
+        from._internal_vachartemaxrtg());
+  }
+  if (from._internal_has_vadischartemaxrtg()) {
+    _this->_internal_mutable_vadischartemaxrtg()->::commonmodule::ASG::MergeFrom(
+        from._internal_vadischartemaxrtg());
+  }
+  if (from._internal_has_wchartemaxrtg()) {
+    _this->_internal_mutable_wchartemaxrtg()->::commonmodule::ASG::MergeFrom(
+        from._internal_wchartemaxrtg());
+  }
+  if (from._internal_has_wdischartemaxrtg()) {
+    _this->_internal_mutable_wdischartemaxrtg()->::commonmodule::ASG::MergeFrom(
+        from._internal_wdischartemaxrtg());
+  }
+  if (from._internal_has_whrtg()) {
+    _this->_internal_mutable_whrtg()->::commonmodule::ASG::MergeFrom(
+        from._internal_whrtg());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ESSCapabilityRatings::CopyFrom(const ESSCapabilityRatings& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSCapabilityRatings)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ESSCapabilityRatings::IsInitialized() const {
+  return true;
+}
+
+void ESSCapabilityRatings::InternalSwap(ESSCapabilityRatings* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ESSCapabilityRatings, _impl_.whrtg_)
+      + sizeof(ESSCapabilityRatings::_impl_.whrtg_)
+      - PROTOBUF_FIELD_OFFSET(ESSCapabilityRatings, _impl_.sourcecapabilityratings_)>(
+          reinterpret_cast<char*>(&_impl_.sourcecapabilityratings_),
+          reinterpret_cast<char*>(&other->_impl_.sourcecapabilityratings_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ESSCapabilityRatings::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[3]);
+}
+// ===================================================================
+
+class ESSCapability::_Internal {
+ public:
+  static const ::commonmodule::NameplateValue& nameplatevalue(const ESSCapability* msg);
+  static const ::essmodule::ESSCapabilityRatings& esscapabilityratings(const ESSCapability* msg);
+  static const ::essmodule::ESSCapabilityConfiguration& esscapabilityconfiguration(const ESSCapability* msg);
+};
+
+const ::commonmodule::NameplateValue&
+ESSCapability::_Internal::nameplatevalue(const ESSCapability* msg) {
+  return *msg->_impl_.nameplatevalue_;
+}
+const ::essmodule::ESSCapabilityRatings&
+ESSCapability::_Internal::esscapabilityratings(const ESSCapability* msg) {
+  return *msg->_impl_.esscapabilityratings_;
+}
+const ::essmodule::ESSCapabilityConfiguration&
+ESSCapability::_Internal::esscapabilityconfiguration(const ESSCapability* msg) {
+  return *msg->_impl_.esscapabilityconfiguration_;
+}
+void ESSCapability::clear_nameplatevalue() {
+  if (GetArenaForAllocation() == nullptr && _impl_.nameplatevalue_ != nullptr) {
+    delete _impl_.nameplatevalue_;
+  }
+  _impl_.nameplatevalue_ = nullptr;
+}
+ESSCapability::ESSCapability(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSCapability)
+}
+ESSCapability::ESSCapability(const ESSCapability& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSCapability* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.nameplatevalue_){nullptr}
+    , decltype(_impl_.esscapabilityratings_){nullptr}
+    , decltype(_impl_.esscapabilityconfiguration_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_nameplatevalue()) {
+    _this->_impl_.nameplatevalue_ = new ::commonmodule::NameplateValue(*from._impl_.nameplatevalue_);
+  }
+  if (from._internal_has_esscapabilityratings()) {
+    _this->_impl_.esscapabilityratings_ = new ::essmodule::ESSCapabilityRatings(*from._impl_.esscapabilityratings_);
+  }
+  if (from._internal_has_esscapabilityconfiguration()) {
+    _this->_impl_.esscapabilityconfiguration_ = new ::essmodule::ESSCapabilityConfiguration(*from._impl_.esscapabilityconfiguration_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSCapability)
+}
+
+inline void ESSCapability::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.nameplatevalue_){nullptr}
+    , decltype(_impl_.esscapabilityratings_){nullptr}
+    , decltype(_impl_.esscapabilityconfiguration_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+ESSCapability::~ESSCapability() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSCapability)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ESSCapability::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.nameplatevalue_;
+  if (this != internal_default_instance()) delete _impl_.esscapabilityratings_;
+  if (this != internal_default_instance()) delete _impl_.esscapabilityconfiguration_;
+}
+
+void ESSCapability::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ESSCapability::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSCapability)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.nameplatevalue_ != nullptr) {
+    delete _impl_.nameplatevalue_;
+  }
+  _impl_.nameplatevalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.esscapabilityratings_ != nullptr) {
+    delete _impl_.esscapabilityratings_;
+  }
+  _impl_.esscapabilityratings_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.esscapabilityconfiguration_ != nullptr) {
+    delete _impl_.esscapabilityconfiguration_;
+  }
+  _impl_.esscapabilityconfiguration_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ESSCapability::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.NameplateValue nameplateValue = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_nameplatevalue(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .essmodule.ESSCapabilityRatings essCapabilityRatings = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_esscapabilityratings(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .essmodule.ESSCapabilityConfiguration essCapabilityConfiguration = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_esscapabilityconfiguration(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* ESSCapability::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSCapability)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.NameplateValue nameplateValue = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_nameplatevalue()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::nameplatevalue(this),
+        _Internal::nameplatevalue(this).GetCachedSize(), target, stream);
+  }
+
+  // .essmodule.ESSCapabilityRatings essCapabilityRatings = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_esscapabilityratings()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::esscapabilityratings(this),
+        _Internal::esscapabilityratings(this).GetCachedSize(), target, stream);
+  }
+
+  // .essmodule.ESSCapabilityConfiguration essCapabilityConfiguration = 3;
+  if (this->_internal_has_esscapabilityconfiguration()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::esscapabilityconfiguration(this),
+        _Internal::esscapabilityconfiguration(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSCapability)
+  return target;
+}
+
+::size_t ESSCapability::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSCapability)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.NameplateValue nameplateValue = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_nameplatevalue()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.nameplatevalue_);
+  }
+
+  // .essmodule.ESSCapabilityRatings essCapabilityRatings = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_esscapabilityratings()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.esscapabilityratings_);
+  }
+
+  // .essmodule.ESSCapabilityConfiguration essCapabilityConfiguration = 3;
+  if (this->_internal_has_esscapabilityconfiguration()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.esscapabilityconfiguration_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSCapability::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSCapability::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSCapability::GetClassData() const { return &_class_data_; }
+
+
+void ESSCapability::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSCapability*>(&to_msg);
+  auto& from = static_cast<const ESSCapability&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSCapability)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_nameplatevalue()) {
+    _this->_internal_mutable_nameplatevalue()->::commonmodule::NameplateValue::MergeFrom(
+        from._internal_nameplatevalue());
+  }
+  if (from._internal_has_esscapabilityratings()) {
+    _this->_internal_mutable_esscapabilityratings()->::essmodule::ESSCapabilityRatings::MergeFrom(
+        from._internal_esscapabilityratings());
+  }
+  if (from._internal_has_esscapabilityconfiguration()) {
+    _this->_internal_mutable_esscapabilityconfiguration()->::essmodule::ESSCapabilityConfiguration::MergeFrom(
+        from._internal_esscapabilityconfiguration());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ESSCapability::CopyFrom(const ESSCapability& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSCapability)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ESSCapability::IsInitialized() const {
+  return true;
+}
+
+void ESSCapability::InternalSwap(ESSCapability* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ESSCapability, _impl_.esscapabilityconfiguration_)
+      + sizeof(ESSCapability::_impl_.esscapabilityconfiguration_)
+      - PROTOBUF_FIELD_OFFSET(ESSCapability, _impl_.nameplatevalue_)>(
+          reinterpret_cast<char*>(&_impl_.nameplatevalue_),
+          reinterpret_cast<char*>(&other->_impl_.nameplatevalue_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ESSCapability::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[4]);
+}
+// ===================================================================
+
+class ESSCapabilityProfile::_Internal {
+ public:
+  static const ::commonmodule::CapabilityMessageInfo& capabilitymessageinfo(const ESSCapabilityProfile* msg);
+  static const ::commonmodule::ESS& ess(const ESSCapabilityProfile* msg);
+  static const ::essmodule::ESSCapability& esscapability(const ESSCapabilityProfile* msg);
+};
+
+const ::commonmodule::CapabilityMessageInfo&
+ESSCapabilityProfile::_Internal::capabilitymessageinfo(const ESSCapabilityProfile* msg) {
+  return *msg->_impl_.capabilitymessageinfo_;
+}
+const ::commonmodule::ESS&
+ESSCapabilityProfile::_Internal::ess(const ESSCapabilityProfile* msg) {
+  return *msg->_impl_.ess_;
+}
+const ::essmodule::ESSCapability&
+ESSCapabilityProfile::_Internal::esscapability(const ESSCapabilityProfile* msg) {
+  return *msg->_impl_.esscapability_;
+}
+void ESSCapabilityProfile::clear_capabilitymessageinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.capabilitymessageinfo_ != nullptr) {
+    delete _impl_.capabilitymessageinfo_;
+  }
+  _impl_.capabilitymessageinfo_ = nullptr;
+}
+void ESSCapabilityProfile::clear_ess() {
+  if (GetArenaForAllocation() == nullptr && _impl_.ess_ != nullptr) {
+    delete _impl_.ess_;
+  }
+  _impl_.ess_ = nullptr;
+}
+ESSCapabilityProfile::ESSCapabilityProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSCapabilityProfile)
+}
+ESSCapabilityProfile::ESSCapabilityProfile(const ESSCapabilityProfile& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSCapabilityProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.capabilitymessageinfo_){nullptr}
+    , decltype(_impl_.ess_){nullptr}
+    , decltype(_impl_.esscapability_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_capabilitymessageinfo()) {
+    _this->_impl_.capabilitymessageinfo_ = new ::commonmodule::CapabilityMessageInfo(*from._impl_.capabilitymessageinfo_);
+  }
+  if (from._internal_has_ess()) {
+    _this->_impl_.ess_ = new ::commonmodule::ESS(*from._impl_.ess_);
+  }
+  if (from._internal_has_esscapability()) {
+    _this->_impl_.esscapability_ = new ::essmodule::ESSCapability(*from._impl_.esscapability_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSCapabilityProfile)
+}
+
+inline void ESSCapabilityProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.capabilitymessageinfo_){nullptr}
+    , decltype(_impl_.ess_){nullptr}
+    , decltype(_impl_.esscapability_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+ESSCapabilityProfile::~ESSCapabilityProfile() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSCapabilityProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ESSCapabilityProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.capabilitymessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.ess_;
+  if (this != internal_default_instance()) delete _impl_.esscapability_;
+}
+
+void ESSCapabilityProfile::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ESSCapabilityProfile::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSCapabilityProfile)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.capabilitymessageinfo_ != nullptr) {
+    delete _impl_.capabilitymessageinfo_;
+  }
+  _impl_.capabilitymessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ess_ != nullptr) {
+    delete _impl_.ess_;
+  }
+  _impl_.ess_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.esscapability_ != nullptr) {
+    delete _impl_.esscapability_;
+  }
+  _impl_.esscapability_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ESSCapabilityProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.CapabilityMessageInfo capabilityMessageInfo = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_capabilitymessageinfo(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_ess(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .essmodule.ESSCapability essCapability = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_esscapability(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* ESSCapabilityProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSCapabilityProfile)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.CapabilityMessageInfo capabilityMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_capabilitymessageinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::capabilitymessageinfo(this),
+        _Internal::capabilitymessageinfo(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_ess()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::ess(this),
+        _Internal::ess(this).GetCachedSize(), target, stream);
+  }
+
+  // .essmodule.ESSCapability essCapability = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_esscapability()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::esscapability(this),
+        _Internal::esscapability(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSCapabilityProfile)
+  return target;
+}
+
+::size_t ESSCapabilityProfile::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSCapabilityProfile)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.CapabilityMessageInfo capabilityMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_capabilitymessageinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.capabilitymessageinfo_);
+  }
+
+  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_ess()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.ess_);
+  }
+
+  // .essmodule.ESSCapability essCapability = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_esscapability()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.esscapability_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSCapabilityProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSCapabilityProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSCapabilityProfile::GetClassData() const { return &_class_data_; }
+
+
+void ESSCapabilityProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSCapabilityProfile*>(&to_msg);
+  auto& from = static_cast<const ESSCapabilityProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSCapabilityProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_capabilitymessageinfo()) {
+    _this->_internal_mutable_capabilitymessageinfo()->::commonmodule::CapabilityMessageInfo::MergeFrom(
+        from._internal_capabilitymessageinfo());
+  }
+  if (from._internal_has_ess()) {
+    _this->_internal_mutable_ess()->::commonmodule::ESS::MergeFrom(
+        from._internal_ess());
+  }
+  if (from._internal_has_esscapability()) {
+    _this->_internal_mutable_esscapability()->::essmodule::ESSCapability::MergeFrom(
+        from._internal_esscapability());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ESSCapabilityProfile::CopyFrom(const ESSCapabilityProfile& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSCapabilityProfile)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ESSCapabilityProfile::IsInitialized() const {
+  return true;
+}
+
+void ESSCapabilityProfile::InternalSwap(ESSCapabilityProfile* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ESSCapabilityProfile, _impl_.esscapability_)
+      + sizeof(ESSCapabilityProfile::_impl_.esscapability_)
+      - PROTOBUF_FIELD_OFFSET(ESSCapabilityProfile, _impl_.capabilitymessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.capabilitymessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.capabilitymessageinfo_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ESSCapabilityProfile::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[5]);
+}
 // ===================================================================
 
 class FrequencyRegulation::_Internal {
  public:
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& frequencydeadbandminus(const FrequencyRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& frequencydeadbandplus(const FrequencyRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::BoolValue& frequencyregulationctl(const FrequencyRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& frequencysetpoint(const FrequencyRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& gridfrequencystablebandminus(const FrequencyRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& gridfrequencystablebandplus(const FrequencyRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& overfrequencydroop(const FrequencyRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& underfrequencydroop(const FrequencyRegulation* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& frequencydeadbandminus(const FrequencyRegulation* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& frequencydeadbandplus(const FrequencyRegulation* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::BoolValue& frequencyregulationctl(const FrequencyRegulation* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& frequencysetpoint(const FrequencyRegulation* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& gridfrequencystablebandminus(const FrequencyRegulation* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& gridfrequencystablebandplus(const FrequencyRegulation* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& overfrequencydroop(const FrequencyRegulation* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& underfrequencydroop(const FrequencyRegulation* msg);
 };
 
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 FrequencyRegulation::_Internal::frequencydeadbandminus(const FrequencyRegulation* msg) {
-  return *msg->frequencydeadbandminus_;
+  return *msg->_impl_.frequencydeadbandminus_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 FrequencyRegulation::_Internal::frequencydeadbandplus(const FrequencyRegulation* msg) {
-  return *msg->frequencydeadbandplus_;
+  return *msg->_impl_.frequencydeadbandplus_;
 }
-const PROTOBUF_NAMESPACE_ID::BoolValue&
+const ::PROTOBUF_NAMESPACE_ID::BoolValue&
 FrequencyRegulation::_Internal::frequencyregulationctl(const FrequencyRegulation* msg) {
-  return *msg->frequencyregulationctl_;
+  return *msg->_impl_.frequencyregulationctl_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 FrequencyRegulation::_Internal::frequencysetpoint(const FrequencyRegulation* msg) {
-  return *msg->frequencysetpoint_;
+  return *msg->_impl_.frequencysetpoint_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 FrequencyRegulation::_Internal::gridfrequencystablebandminus(const FrequencyRegulation* msg) {
-  return *msg->gridfrequencystablebandminus_;
+  return *msg->_impl_.gridfrequencystablebandminus_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 FrequencyRegulation::_Internal::gridfrequencystablebandplus(const FrequencyRegulation* msg) {
-  return *msg->gridfrequencystablebandplus_;
+  return *msg->_impl_.gridfrequencystablebandplus_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 FrequencyRegulation::_Internal::overfrequencydroop(const FrequencyRegulation* msg) {
-  return *msg->overfrequencydroop_;
+  return *msg->_impl_.overfrequencydroop_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 FrequencyRegulation::_Internal::underfrequencydroop(const FrequencyRegulation* msg) {
-  return *msg->underfrequencydroop_;
+  return *msg->_impl_.underfrequencydroop_;
 }
 void FrequencyRegulation::clear_frequencydeadbandminus() {
-  if (GetArena() == nullptr && frequencydeadbandminus_ != nullptr) {
-    delete frequencydeadbandminus_;
+  if (GetArenaForAllocation() == nullptr && _impl_.frequencydeadbandminus_ != nullptr) {
+    delete _impl_.frequencydeadbandminus_;
   }
-  frequencydeadbandminus_ = nullptr;
+  _impl_.frequencydeadbandminus_ = nullptr;
 }
 void FrequencyRegulation::clear_frequencydeadbandplus() {
-  if (GetArena() == nullptr && frequencydeadbandplus_ != nullptr) {
-    delete frequencydeadbandplus_;
+  if (GetArenaForAllocation() == nullptr && _impl_.frequencydeadbandplus_ != nullptr) {
+    delete _impl_.frequencydeadbandplus_;
   }
-  frequencydeadbandplus_ = nullptr;
+  _impl_.frequencydeadbandplus_ = nullptr;
 }
 void FrequencyRegulation::clear_frequencyregulationctl() {
-  if (GetArena() == nullptr && frequencyregulationctl_ != nullptr) {
-    delete frequencyregulationctl_;
+  if (GetArenaForAllocation() == nullptr && _impl_.frequencyregulationctl_ != nullptr) {
+    delete _impl_.frequencyregulationctl_;
   }
-  frequencyregulationctl_ = nullptr;
+  _impl_.frequencyregulationctl_ = nullptr;
 }
 void FrequencyRegulation::clear_frequencysetpoint() {
-  if (GetArena() == nullptr && frequencysetpoint_ != nullptr) {
-    delete frequencysetpoint_;
+  if (GetArenaForAllocation() == nullptr && _impl_.frequencysetpoint_ != nullptr) {
+    delete _impl_.frequencysetpoint_;
   }
-  frequencysetpoint_ = nullptr;
+  _impl_.frequencysetpoint_ = nullptr;
 }
 void FrequencyRegulation::clear_gridfrequencystablebandminus() {
-  if (GetArena() == nullptr && gridfrequencystablebandminus_ != nullptr) {
-    delete gridfrequencystablebandminus_;
+  if (GetArenaForAllocation() == nullptr && _impl_.gridfrequencystablebandminus_ != nullptr) {
+    delete _impl_.gridfrequencystablebandminus_;
   }
-  gridfrequencystablebandminus_ = nullptr;
+  _impl_.gridfrequencystablebandminus_ = nullptr;
 }
 void FrequencyRegulation::clear_gridfrequencystablebandplus() {
-  if (GetArena() == nullptr && gridfrequencystablebandplus_ != nullptr) {
-    delete gridfrequencystablebandplus_;
+  if (GetArenaForAllocation() == nullptr && _impl_.gridfrequencystablebandplus_ != nullptr) {
+    delete _impl_.gridfrequencystablebandplus_;
   }
-  gridfrequencystablebandplus_ = nullptr;
+  _impl_.gridfrequencystablebandplus_ = nullptr;
 }
 void FrequencyRegulation::clear_overfrequencydroop() {
-  if (GetArena() == nullptr && overfrequencydroop_ != nullptr) {
-    delete overfrequencydroop_;
+  if (GetArenaForAllocation() == nullptr && _impl_.overfrequencydroop_ != nullptr) {
+    delete _impl_.overfrequencydroop_;
   }
-  overfrequencydroop_ = nullptr;
+  _impl_.overfrequencydroop_ = nullptr;
 }
 void FrequencyRegulation::clear_underfrequencydroop() {
-  if (GetArena() == nullptr && underfrequencydroop_ != nullptr) {
-    delete underfrequencydroop_;
+  if (GetArenaForAllocation() == nullptr && _impl_.underfrequencydroop_ != nullptr) {
+    delete _impl_.underfrequencydroop_;
   }
-  underfrequencydroop_ = nullptr;
+  _impl_.underfrequencydroop_ = nullptr;
 }
 FrequencyRegulation::FrequencyRegulation(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:essmodule.FrequencyRegulation)
 }
 FrequencyRegulation::FrequencyRegulation(const FrequencyRegulation& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  FrequencyRegulation* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.frequencydeadbandminus_){nullptr}
+    , decltype(_impl_.frequencydeadbandplus_){nullptr}
+    , decltype(_impl_.frequencyregulationctl_){nullptr}
+    , decltype(_impl_.frequencysetpoint_){nullptr}
+    , decltype(_impl_.gridfrequencystablebandminus_){nullptr}
+    , decltype(_impl_.gridfrequencystablebandplus_){nullptr}
+    , decltype(_impl_.overfrequencydroop_){nullptr}
+    , decltype(_impl_.underfrequencydroop_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_frequencydeadbandminus()) {
-    frequencydeadbandminus_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.frequencydeadbandminus_);
-  } else {
-    frequencydeadbandminus_ = nullptr;
+    _this->_impl_.frequencydeadbandminus_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.frequencydeadbandminus_);
   }
   if (from._internal_has_frequencydeadbandplus()) {
-    frequencydeadbandplus_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.frequencydeadbandplus_);
-  } else {
-    frequencydeadbandplus_ = nullptr;
+    _this->_impl_.frequencydeadbandplus_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.frequencydeadbandplus_);
   }
   if (from._internal_has_frequencyregulationctl()) {
-    frequencyregulationctl_ = new PROTOBUF_NAMESPACE_ID::BoolValue(*from.frequencyregulationctl_);
-  } else {
-    frequencyregulationctl_ = nullptr;
+    _this->_impl_.frequencyregulationctl_ = new ::PROTOBUF_NAMESPACE_ID::BoolValue(*from._impl_.frequencyregulationctl_);
   }
   if (from._internal_has_frequencysetpoint()) {
-    frequencysetpoint_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.frequencysetpoint_);
-  } else {
-    frequencysetpoint_ = nullptr;
+    _this->_impl_.frequencysetpoint_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.frequencysetpoint_);
   }
   if (from._internal_has_gridfrequencystablebandminus()) {
-    gridfrequencystablebandminus_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.gridfrequencystablebandminus_);
-  } else {
-    gridfrequencystablebandminus_ = nullptr;
+    _this->_impl_.gridfrequencystablebandminus_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.gridfrequencystablebandminus_);
   }
   if (from._internal_has_gridfrequencystablebandplus()) {
-    gridfrequencystablebandplus_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.gridfrequencystablebandplus_);
-  } else {
-    gridfrequencystablebandplus_ = nullptr;
+    _this->_impl_.gridfrequencystablebandplus_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.gridfrequencystablebandplus_);
   }
   if (from._internal_has_overfrequencydroop()) {
-    overfrequencydroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.overfrequencydroop_);
-  } else {
-    overfrequencydroop_ = nullptr;
+    _this->_impl_.overfrequencydroop_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.overfrequencydroop_);
   }
   if (from._internal_has_underfrequencydroop()) {
-    underfrequencydroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.underfrequencydroop_);
-  } else {
-    underfrequencydroop_ = nullptr;
+    _this->_impl_.underfrequencydroop_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.underfrequencydroop_);
   }
   // @@protoc_insertion_point(copy_constructor:essmodule.FrequencyRegulation)
 }
 
-void FrequencyRegulation::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&frequencydeadbandminus_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&underfrequencydroop_) -
-    reinterpret_cast<char*>(&frequencydeadbandminus_)) + sizeof(underfrequencydroop_));
+inline void FrequencyRegulation::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.frequencydeadbandminus_){nullptr}
+    , decltype(_impl_.frequencydeadbandplus_){nullptr}
+    , decltype(_impl_.frequencyregulationctl_){nullptr}
+    , decltype(_impl_.frequencysetpoint_){nullptr}
+    , decltype(_impl_.gridfrequencystablebandminus_){nullptr}
+    , decltype(_impl_.gridfrequencystablebandplus_){nullptr}
+    , decltype(_impl_.overfrequencydroop_){nullptr}
+    , decltype(_impl_.underfrequencydroop_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 FrequencyRegulation::~FrequencyRegulation() {
   // @@protoc_insertion_point(destructor:essmodule.FrequencyRegulation)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void FrequencyRegulation::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete frequencydeadbandminus_;
-  if (this != internal_default_instance()) delete frequencydeadbandplus_;
-  if (this != internal_default_instance()) delete frequencyregulationctl_;
-  if (this != internal_default_instance()) delete frequencysetpoint_;
-  if (this != internal_default_instance()) delete gridfrequencystablebandminus_;
-  if (this != internal_default_instance()) delete gridfrequencystablebandplus_;
-  if (this != internal_default_instance()) delete overfrequencydroop_;
-  if (this != internal_default_instance()) delete underfrequencydroop_;
+inline void FrequencyRegulation::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.frequencydeadbandminus_;
+  if (this != internal_default_instance()) delete _impl_.frequencydeadbandplus_;
+  if (this != internal_default_instance()) delete _impl_.frequencyregulationctl_;
+  if (this != internal_default_instance()) delete _impl_.frequencysetpoint_;
+  if (this != internal_default_instance()) delete _impl_.gridfrequencystablebandminus_;
+  if (this != internal_default_instance()) delete _impl_.gridfrequencystablebandplus_;
+  if (this != internal_default_instance()) delete _impl_.overfrequencydroop_;
+  if (this != internal_default_instance()) delete _impl_.underfrequencydroop_;
 }
 
-void FrequencyRegulation::ArenaDtor(void* object) {
-  FrequencyRegulation* _this = reinterpret_cast< FrequencyRegulation* >(object);
-  (void)_this;
-}
-void FrequencyRegulation::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void FrequencyRegulation::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void FrequencyRegulation::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.FrequencyRegulation)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && frequencydeadbandminus_ != nullptr) {
-    delete frequencydeadbandminus_;
+  if (GetArenaForAllocation() == nullptr && _impl_.frequencydeadbandminus_ != nullptr) {
+    delete _impl_.frequencydeadbandminus_;
   }
-  frequencydeadbandminus_ = nullptr;
-  if (GetArena() == nullptr && frequencydeadbandplus_ != nullptr) {
-    delete frequencydeadbandplus_;
+  _impl_.frequencydeadbandminus_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.frequencydeadbandplus_ != nullptr) {
+    delete _impl_.frequencydeadbandplus_;
   }
-  frequencydeadbandplus_ = nullptr;
-  if (GetArena() == nullptr && frequencyregulationctl_ != nullptr) {
-    delete frequencyregulationctl_;
+  _impl_.frequencydeadbandplus_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.frequencyregulationctl_ != nullptr) {
+    delete _impl_.frequencyregulationctl_;
   }
-  frequencyregulationctl_ = nullptr;
-  if (GetArena() == nullptr && frequencysetpoint_ != nullptr) {
-    delete frequencysetpoint_;
+  _impl_.frequencyregulationctl_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.frequencysetpoint_ != nullptr) {
+    delete _impl_.frequencysetpoint_;
   }
-  frequencysetpoint_ = nullptr;
-  if (GetArena() == nullptr && gridfrequencystablebandminus_ != nullptr) {
-    delete gridfrequencystablebandminus_;
+  _impl_.frequencysetpoint_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.gridfrequencystablebandminus_ != nullptr) {
+    delete _impl_.gridfrequencystablebandminus_;
   }
-  gridfrequencystablebandminus_ = nullptr;
-  if (GetArena() == nullptr && gridfrequencystablebandplus_ != nullptr) {
-    delete gridfrequencystablebandplus_;
+  _impl_.gridfrequencystablebandminus_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.gridfrequencystablebandplus_ != nullptr) {
+    delete _impl_.gridfrequencystablebandplus_;
   }
-  gridfrequencystablebandplus_ = nullptr;
-  if (GetArena() == nullptr && overfrequencydroop_ != nullptr) {
-    delete overfrequencydroop_;
+  _impl_.gridfrequencystablebandplus_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.overfrequencydroop_ != nullptr) {
+    delete _impl_.overfrequencydroop_;
   }
-  overfrequencydroop_ = nullptr;
-  if (GetArena() == nullptr && underfrequencydroop_ != nullptr) {
-    delete underfrequencydroop_;
+  _impl_.overfrequencydroop_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.underfrequencydroop_ != nullptr) {
+    delete _impl_.underfrequencydroop_;
   }
-  underfrequencydroop_ = nullptr;
+  _impl_.underfrequencydroop_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* FrequencyRegulation::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* FrequencyRegulation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .google.protobuf.FloatValue frequencyDeadBandMinus = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_frequencydeadbandminus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue frequencyDeadBandPlus = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_frequencydeadbandplus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.BoolValue frequencyRegulationCtl = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_frequencyregulationctl(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue frequencySetPoint = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_frequencysetpoint(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue gridFrequencyStableBandMinus = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_gridfrequencystablebandminus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue gridFrequencyStableBandPlus = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_gridfrequencystablebandplus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue overFrequencyDroop = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_overfrequencydroop(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue underFrequencyDroop = 8;
       case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 66)) {
           ptr = ctx->ParseMessage(_internal_mutable_underfrequencydroop(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* FrequencyRegulation::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* FrequencyRegulation::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:essmodule.FrequencyRegulation)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue frequencyDeadBandMinus = 1;
-  if (this->has_frequencydeadbandminus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_frequencydeadbandminus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::frequencydeadbandminus(this), target, stream);
+      InternalWriteMessage(1, _Internal::frequencydeadbandminus(this),
+        _Internal::frequencydeadbandminus(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue frequencyDeadBandPlus = 2;
-  if (this->has_frequencydeadbandplus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_frequencydeadbandplus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::frequencydeadbandplus(this), target, stream);
+      InternalWriteMessage(2, _Internal::frequencydeadbandplus(this),
+        _Internal::frequencydeadbandplus(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.BoolValue frequencyRegulationCtl = 3;
-  if (this->has_frequencyregulationctl()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_frequencyregulationctl()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::frequencyregulationctl(this), target, stream);
+      InternalWriteMessage(3, _Internal::frequencyregulationctl(this),
+        _Internal::frequencyregulationctl(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue frequencySetPoint = 4;
-  if (this->has_frequencysetpoint()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_frequencysetpoint()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::frequencysetpoint(this), target, stream);
+      InternalWriteMessage(4, _Internal::frequencysetpoint(this),
+        _Internal::frequencysetpoint(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue gridFrequencyStableBandMinus = 5;
-  if (this->has_gridfrequencystablebandminus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_gridfrequencystablebandminus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::gridfrequencystablebandminus(this), target, stream);
+      InternalWriteMessage(5, _Internal::gridfrequencystablebandminus(this),
+        _Internal::gridfrequencystablebandminus(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue gridFrequencyStableBandPlus = 6;
-  if (this->has_gridfrequencystablebandplus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_gridfrequencystablebandplus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::gridfrequencystablebandplus(this), target, stream);
+      InternalWriteMessage(6, _Internal::gridfrequencystablebandplus(this),
+        _Internal::gridfrequencystablebandplus(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue overFrequencyDroop = 7;
-  if (this->has_overfrequencydroop()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_overfrequencydroop()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::overfrequencydroop(this), target, stream);
+      InternalWriteMessage(7, _Internal::overfrequencydroop(this),
+        _Internal::overfrequencydroop(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue underFrequencyDroop = 8;
-  if (this->has_underfrequencydroop()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_underfrequencydroop()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::underfrequencydroop(this), target, stream);
+      InternalWriteMessage(8, _Internal::underfrequencydroop(this),
+        _Internal::underfrequencydroop(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.FrequencyRegulation)
   return target;
 }
 
-size_t FrequencyRegulation::ByteSizeLong() const {
+::size_t FrequencyRegulation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.FrequencyRegulation)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue frequencyDeadBandMinus = 1;
-  if (this->has_frequencydeadbandminus()) {
+  if (this->_internal_has_frequencydeadbandminus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *frequencydeadbandminus_);
+        *_impl_.frequencydeadbandminus_);
   }
 
   // .google.protobuf.FloatValue frequencyDeadBandPlus = 2;
-  if (this->has_frequencydeadbandplus()) {
+  if (this->_internal_has_frequencydeadbandplus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *frequencydeadbandplus_);
+        *_impl_.frequencydeadbandplus_);
   }
 
   // .google.protobuf.BoolValue frequencyRegulationCtl = 3;
-  if (this->has_frequencyregulationctl()) {
+  if (this->_internal_has_frequencyregulationctl()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *frequencyregulationctl_);
+        *_impl_.frequencyregulationctl_);
   }
 
   // .google.protobuf.FloatValue frequencySetPoint = 4;
-  if (this->has_frequencysetpoint()) {
+  if (this->_internal_has_frequencysetpoint()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *frequencysetpoint_);
+        *_impl_.frequencysetpoint_);
   }
 
   // .google.protobuf.FloatValue gridFrequencyStableBandMinus = 5;
-  if (this->has_gridfrequencystablebandminus()) {
+  if (this->_internal_has_gridfrequencystablebandminus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *gridfrequencystablebandminus_);
+        *_impl_.gridfrequencystablebandminus_);
   }
 
   // .google.protobuf.FloatValue gridFrequencyStableBandPlus = 6;
-  if (this->has_gridfrequencystablebandplus()) {
+  if (this->_internal_has_gridfrequencystablebandplus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *gridfrequencystablebandplus_);
+        *_impl_.gridfrequencystablebandplus_);
   }
 
   // .google.protobuf.FloatValue overFrequencyDroop = 7;
-  if (this->has_overfrequencydroop()) {
+  if (this->_internal_has_overfrequencydroop()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *overfrequencydroop_);
+        *_impl_.overfrequencydroop_);
   }
 
   // .google.protobuf.FloatValue underFrequencyDroop = 8;
-  if (this->has_underfrequencydroop()) {
+  if (this->_internal_has_underfrequencydroop()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *underfrequencydroop_);
+        *_impl_.underfrequencydroop_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void FrequencyRegulation::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.FrequencyRegulation)
-  GOOGLE_DCHECK_NE(&from, this);
-  const FrequencyRegulation* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<FrequencyRegulation>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.FrequencyRegulation)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.FrequencyRegulation)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FrequencyRegulation::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    FrequencyRegulation::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FrequencyRegulation::GetClassData() const { return &_class_data_; }
 
-void FrequencyRegulation::MergeFrom(const FrequencyRegulation& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.FrequencyRegulation)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void FrequencyRegulation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<FrequencyRegulation*>(&to_msg);
+  auto& from = static_cast<const FrequencyRegulation&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.FrequencyRegulation)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_frequencydeadbandminus()) {
-    _internal_mutable_frequencydeadbandminus()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_frequencydeadbandminus());
+  if (from._internal_has_frequencydeadbandminus()) {
+    _this->_internal_mutable_frequencydeadbandminus()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_frequencydeadbandminus());
   }
-  if (from.has_frequencydeadbandplus()) {
-    _internal_mutable_frequencydeadbandplus()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_frequencydeadbandplus());
+  if (from._internal_has_frequencydeadbandplus()) {
+    _this->_internal_mutable_frequencydeadbandplus()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_frequencydeadbandplus());
   }
-  if (from.has_frequencyregulationctl()) {
-    _internal_mutable_frequencyregulationctl()->PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(from._internal_frequencyregulationctl());
+  if (from._internal_has_frequencyregulationctl()) {
+    _this->_internal_mutable_frequencyregulationctl()->::PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(
+        from._internal_frequencyregulationctl());
   }
-  if (from.has_frequencysetpoint()) {
-    _internal_mutable_frequencysetpoint()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_frequencysetpoint());
+  if (from._internal_has_frequencysetpoint()) {
+    _this->_internal_mutable_frequencysetpoint()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_frequencysetpoint());
   }
-  if (from.has_gridfrequencystablebandminus()) {
-    _internal_mutable_gridfrequencystablebandminus()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_gridfrequencystablebandminus());
+  if (from._internal_has_gridfrequencystablebandminus()) {
+    _this->_internal_mutable_gridfrequencystablebandminus()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_gridfrequencystablebandminus());
   }
-  if (from.has_gridfrequencystablebandplus()) {
-    _internal_mutable_gridfrequencystablebandplus()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_gridfrequencystablebandplus());
+  if (from._internal_has_gridfrequencystablebandplus()) {
+    _this->_internal_mutable_gridfrequencystablebandplus()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_gridfrequencystablebandplus());
   }
-  if (from.has_overfrequencydroop()) {
-    _internal_mutable_overfrequencydroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_overfrequencydroop());
+  if (from._internal_has_overfrequencydroop()) {
+    _this->_internal_mutable_overfrequencydroop()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_overfrequencydroop());
   }
-  if (from.has_underfrequencydroop()) {
-    _internal_mutable_underfrequencydroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_underfrequencydroop());
+  if (from._internal_has_underfrequencydroop()) {
+    _this->_internal_mutable_underfrequencydroop()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_underfrequencydroop());
   }
-}
-
-void FrequencyRegulation::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.FrequencyRegulation)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void FrequencyRegulation::CopyFrom(const FrequencyRegulation& from) {
@@ -1928,393 +3983,384 @@ bool FrequencyRegulation::IsInitialized() const {
 
 void FrequencyRegulation::InternalSwap(FrequencyRegulation* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FrequencyRegulation, underfrequencydroop_)
-      + sizeof(FrequencyRegulation::underfrequencydroop_)
-      - PROTOBUF_FIELD_OFFSET(FrequencyRegulation, frequencydeadbandminus_)>(
-          reinterpret_cast<char*>(&frequencydeadbandminus_),
-          reinterpret_cast<char*>(&other->frequencydeadbandminus_));
+      PROTOBUF_FIELD_OFFSET(FrequencyRegulation, _impl_.underfrequencydroop_)
+      + sizeof(FrequencyRegulation::_impl_.underfrequencydroop_)
+      - PROTOBUF_FIELD_OFFSET(FrequencyRegulation, _impl_.frequencydeadbandminus_)>(
+          reinterpret_cast<char*>(&_impl_.frequencydeadbandminus_),
+          reinterpret_cast<char*>(&other->_impl_.frequencydeadbandminus_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata FrequencyRegulation::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[6]);
 }
-
-
 // ===================================================================
 
 class PeakShaving::_Internal {
  public:
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& baseshavinglimit(const PeakShaving* msg);
-  static const PROTOBUF_NAMESPACE_ID::BoolValue& peakshavingctl(const PeakShaving* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& peakshavinglimit(const PeakShaving* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& socmanagementallowedhighlimit(const PeakShaving* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& socmanagementallowedlowlimit(const PeakShaving* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& baseshavinglimit(const PeakShaving* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::BoolValue& peakshavingctl(const PeakShaving* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& peakshavinglimit(const PeakShaving* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& socmanagementallowedhighlimit(const PeakShaving* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& socmanagementallowedlowlimit(const PeakShaving* msg);
 };
 
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 PeakShaving::_Internal::baseshavinglimit(const PeakShaving* msg) {
-  return *msg->baseshavinglimit_;
+  return *msg->_impl_.baseshavinglimit_;
 }
-const PROTOBUF_NAMESPACE_ID::BoolValue&
+const ::PROTOBUF_NAMESPACE_ID::BoolValue&
 PeakShaving::_Internal::peakshavingctl(const PeakShaving* msg) {
-  return *msg->peakshavingctl_;
+  return *msg->_impl_.peakshavingctl_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 PeakShaving::_Internal::peakshavinglimit(const PeakShaving* msg) {
-  return *msg->peakshavinglimit_;
+  return *msg->_impl_.peakshavinglimit_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 PeakShaving::_Internal::socmanagementallowedhighlimit(const PeakShaving* msg) {
-  return *msg->socmanagementallowedhighlimit_;
+  return *msg->_impl_.socmanagementallowedhighlimit_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 PeakShaving::_Internal::socmanagementallowedlowlimit(const PeakShaving* msg) {
-  return *msg->socmanagementallowedlowlimit_;
+  return *msg->_impl_.socmanagementallowedlowlimit_;
 }
 void PeakShaving::clear_baseshavinglimit() {
-  if (GetArena() == nullptr && baseshavinglimit_ != nullptr) {
-    delete baseshavinglimit_;
+  if (GetArenaForAllocation() == nullptr && _impl_.baseshavinglimit_ != nullptr) {
+    delete _impl_.baseshavinglimit_;
   }
-  baseshavinglimit_ = nullptr;
+  _impl_.baseshavinglimit_ = nullptr;
 }
 void PeakShaving::clear_peakshavingctl() {
-  if (GetArena() == nullptr && peakshavingctl_ != nullptr) {
-    delete peakshavingctl_;
+  if (GetArenaForAllocation() == nullptr && _impl_.peakshavingctl_ != nullptr) {
+    delete _impl_.peakshavingctl_;
   }
-  peakshavingctl_ = nullptr;
+  _impl_.peakshavingctl_ = nullptr;
 }
 void PeakShaving::clear_peakshavinglimit() {
-  if (GetArena() == nullptr && peakshavinglimit_ != nullptr) {
-    delete peakshavinglimit_;
+  if (GetArenaForAllocation() == nullptr && _impl_.peakshavinglimit_ != nullptr) {
+    delete _impl_.peakshavinglimit_;
   }
-  peakshavinglimit_ = nullptr;
+  _impl_.peakshavinglimit_ = nullptr;
 }
 void PeakShaving::clear_socmanagementallowedhighlimit() {
-  if (GetArena() == nullptr && socmanagementallowedhighlimit_ != nullptr) {
-    delete socmanagementallowedhighlimit_;
+  if (GetArenaForAllocation() == nullptr && _impl_.socmanagementallowedhighlimit_ != nullptr) {
+    delete _impl_.socmanagementallowedhighlimit_;
   }
-  socmanagementallowedhighlimit_ = nullptr;
+  _impl_.socmanagementallowedhighlimit_ = nullptr;
 }
 void PeakShaving::clear_socmanagementallowedlowlimit() {
-  if (GetArena() == nullptr && socmanagementallowedlowlimit_ != nullptr) {
-    delete socmanagementallowedlowlimit_;
+  if (GetArenaForAllocation() == nullptr && _impl_.socmanagementallowedlowlimit_ != nullptr) {
+    delete _impl_.socmanagementallowedlowlimit_;
   }
-  socmanagementallowedlowlimit_ = nullptr;
+  _impl_.socmanagementallowedlowlimit_ = nullptr;
 }
 PeakShaving::PeakShaving(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:essmodule.PeakShaving)
 }
 PeakShaving::PeakShaving(const PeakShaving& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  PeakShaving* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.baseshavinglimit_){nullptr}
+    , decltype(_impl_.peakshavingctl_){nullptr}
+    , decltype(_impl_.peakshavinglimit_){nullptr}
+    , decltype(_impl_.socmanagementallowedhighlimit_){nullptr}
+    , decltype(_impl_.socmanagementallowedlowlimit_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_baseshavinglimit()) {
-    baseshavinglimit_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.baseshavinglimit_);
-  } else {
-    baseshavinglimit_ = nullptr;
+    _this->_impl_.baseshavinglimit_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.baseshavinglimit_);
   }
   if (from._internal_has_peakshavingctl()) {
-    peakshavingctl_ = new PROTOBUF_NAMESPACE_ID::BoolValue(*from.peakshavingctl_);
-  } else {
-    peakshavingctl_ = nullptr;
+    _this->_impl_.peakshavingctl_ = new ::PROTOBUF_NAMESPACE_ID::BoolValue(*from._impl_.peakshavingctl_);
   }
   if (from._internal_has_peakshavinglimit()) {
-    peakshavinglimit_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.peakshavinglimit_);
-  } else {
-    peakshavinglimit_ = nullptr;
+    _this->_impl_.peakshavinglimit_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.peakshavinglimit_);
   }
   if (from._internal_has_socmanagementallowedhighlimit()) {
-    socmanagementallowedhighlimit_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.socmanagementallowedhighlimit_);
-  } else {
-    socmanagementallowedhighlimit_ = nullptr;
+    _this->_impl_.socmanagementallowedhighlimit_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.socmanagementallowedhighlimit_);
   }
   if (from._internal_has_socmanagementallowedlowlimit()) {
-    socmanagementallowedlowlimit_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.socmanagementallowedlowlimit_);
-  } else {
-    socmanagementallowedlowlimit_ = nullptr;
+    _this->_impl_.socmanagementallowedlowlimit_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.socmanagementallowedlowlimit_);
   }
   // @@protoc_insertion_point(copy_constructor:essmodule.PeakShaving)
 }
 
-void PeakShaving::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&baseshavinglimit_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&socmanagementallowedlowlimit_) -
-    reinterpret_cast<char*>(&baseshavinglimit_)) + sizeof(socmanagementallowedlowlimit_));
+inline void PeakShaving::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.baseshavinglimit_){nullptr}
+    , decltype(_impl_.peakshavingctl_){nullptr}
+    , decltype(_impl_.peakshavinglimit_){nullptr}
+    , decltype(_impl_.socmanagementallowedhighlimit_){nullptr}
+    , decltype(_impl_.socmanagementallowedlowlimit_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 PeakShaving::~PeakShaving() {
   // @@protoc_insertion_point(destructor:essmodule.PeakShaving)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void PeakShaving::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete baseshavinglimit_;
-  if (this != internal_default_instance()) delete peakshavingctl_;
-  if (this != internal_default_instance()) delete peakshavinglimit_;
-  if (this != internal_default_instance()) delete socmanagementallowedhighlimit_;
-  if (this != internal_default_instance()) delete socmanagementallowedlowlimit_;
+inline void PeakShaving::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.baseshavinglimit_;
+  if (this != internal_default_instance()) delete _impl_.peakshavingctl_;
+  if (this != internal_default_instance()) delete _impl_.peakshavinglimit_;
+  if (this != internal_default_instance()) delete _impl_.socmanagementallowedhighlimit_;
+  if (this != internal_default_instance()) delete _impl_.socmanagementallowedlowlimit_;
 }
 
-void PeakShaving::ArenaDtor(void* object) {
-  PeakShaving* _this = reinterpret_cast< PeakShaving* >(object);
-  (void)_this;
-}
-void PeakShaving::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void PeakShaving::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void PeakShaving::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.PeakShaving)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && baseshavinglimit_ != nullptr) {
-    delete baseshavinglimit_;
+  if (GetArenaForAllocation() == nullptr && _impl_.baseshavinglimit_ != nullptr) {
+    delete _impl_.baseshavinglimit_;
   }
-  baseshavinglimit_ = nullptr;
-  if (GetArena() == nullptr && peakshavingctl_ != nullptr) {
-    delete peakshavingctl_;
+  _impl_.baseshavinglimit_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.peakshavingctl_ != nullptr) {
+    delete _impl_.peakshavingctl_;
   }
-  peakshavingctl_ = nullptr;
-  if (GetArena() == nullptr && peakshavinglimit_ != nullptr) {
-    delete peakshavinglimit_;
+  _impl_.peakshavingctl_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.peakshavinglimit_ != nullptr) {
+    delete _impl_.peakshavinglimit_;
   }
-  peakshavinglimit_ = nullptr;
-  if (GetArena() == nullptr && socmanagementallowedhighlimit_ != nullptr) {
-    delete socmanagementallowedhighlimit_;
+  _impl_.peakshavinglimit_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.socmanagementallowedhighlimit_ != nullptr) {
+    delete _impl_.socmanagementallowedhighlimit_;
   }
-  socmanagementallowedhighlimit_ = nullptr;
-  if (GetArena() == nullptr && socmanagementallowedlowlimit_ != nullptr) {
-    delete socmanagementallowedlowlimit_;
+  _impl_.socmanagementallowedhighlimit_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.socmanagementallowedlowlimit_ != nullptr) {
+    delete _impl_.socmanagementallowedlowlimit_;
   }
-  socmanagementallowedlowlimit_ = nullptr;
+  _impl_.socmanagementallowedlowlimit_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* PeakShaving::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* PeakShaving::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .google.protobuf.FloatValue baseShavingLimit = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_baseshavinglimit(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.BoolValue peakShavingCtl = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_peakshavingctl(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue peakShavingLimit = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_peakshavinglimit(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue socManagementAllowedHighLimit = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_socmanagementallowedhighlimit(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue socManagementAllowedLowLimit = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_socmanagementallowedlowlimit(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* PeakShaving::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* PeakShaving::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:essmodule.PeakShaving)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue baseShavingLimit = 1;
-  if (this->has_baseshavinglimit()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_baseshavinglimit()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::baseshavinglimit(this), target, stream);
+      InternalWriteMessage(1, _Internal::baseshavinglimit(this),
+        _Internal::baseshavinglimit(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.BoolValue peakShavingCtl = 2;
-  if (this->has_peakshavingctl()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_peakshavingctl()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::peakshavingctl(this), target, stream);
+      InternalWriteMessage(2, _Internal::peakshavingctl(this),
+        _Internal::peakshavingctl(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue peakShavingLimit = 3;
-  if (this->has_peakshavinglimit()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_peakshavinglimit()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::peakshavinglimit(this), target, stream);
+      InternalWriteMessage(3, _Internal::peakshavinglimit(this),
+        _Internal::peakshavinglimit(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue socManagementAllowedHighLimit = 4;
-  if (this->has_socmanagementallowedhighlimit()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_socmanagementallowedhighlimit()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::socmanagementallowedhighlimit(this), target, stream);
+      InternalWriteMessage(4, _Internal::socmanagementallowedhighlimit(this),
+        _Internal::socmanagementallowedhighlimit(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue socManagementAllowedLowLimit = 5;
-  if (this->has_socmanagementallowedlowlimit()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_socmanagementallowedlowlimit()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::socmanagementallowedlowlimit(this), target, stream);
+      InternalWriteMessage(5, _Internal::socmanagementallowedlowlimit(this),
+        _Internal::socmanagementallowedlowlimit(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.PeakShaving)
   return target;
 }
 
-size_t PeakShaving::ByteSizeLong() const {
+::size_t PeakShaving::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.PeakShaving)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue baseShavingLimit = 1;
-  if (this->has_baseshavinglimit()) {
+  if (this->_internal_has_baseshavinglimit()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *baseshavinglimit_);
+        *_impl_.baseshavinglimit_);
   }
 
   // .google.protobuf.BoolValue peakShavingCtl = 2;
-  if (this->has_peakshavingctl()) {
+  if (this->_internal_has_peakshavingctl()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *peakshavingctl_);
+        *_impl_.peakshavingctl_);
   }
 
   // .google.protobuf.FloatValue peakShavingLimit = 3;
-  if (this->has_peakshavinglimit()) {
+  if (this->_internal_has_peakshavinglimit()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *peakshavinglimit_);
+        *_impl_.peakshavinglimit_);
   }
 
   // .google.protobuf.FloatValue socManagementAllowedHighLimit = 4;
-  if (this->has_socmanagementallowedhighlimit()) {
+  if (this->_internal_has_socmanagementallowedhighlimit()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *socmanagementallowedhighlimit_);
+        *_impl_.socmanagementallowedhighlimit_);
   }
 
   // .google.protobuf.FloatValue socManagementAllowedLowLimit = 5;
-  if (this->has_socmanagementallowedlowlimit()) {
+  if (this->_internal_has_socmanagementallowedlowlimit()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *socmanagementallowedlowlimit_);
+        *_impl_.socmanagementallowedlowlimit_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void PeakShaving::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.PeakShaving)
-  GOOGLE_DCHECK_NE(&from, this);
-  const PeakShaving* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PeakShaving>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.PeakShaving)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.PeakShaving)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PeakShaving::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    PeakShaving::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PeakShaving::GetClassData() const { return &_class_data_; }
 
-void PeakShaving::MergeFrom(const PeakShaving& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.PeakShaving)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void PeakShaving::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<PeakShaving*>(&to_msg);
+  auto& from = static_cast<const PeakShaving&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.PeakShaving)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_baseshavinglimit()) {
-    _internal_mutable_baseshavinglimit()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_baseshavinglimit());
+  if (from._internal_has_baseshavinglimit()) {
+    _this->_internal_mutable_baseshavinglimit()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_baseshavinglimit());
   }
-  if (from.has_peakshavingctl()) {
-    _internal_mutable_peakshavingctl()->PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(from._internal_peakshavingctl());
+  if (from._internal_has_peakshavingctl()) {
+    _this->_internal_mutable_peakshavingctl()->::PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(
+        from._internal_peakshavingctl());
   }
-  if (from.has_peakshavinglimit()) {
-    _internal_mutable_peakshavinglimit()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_peakshavinglimit());
+  if (from._internal_has_peakshavinglimit()) {
+    _this->_internal_mutable_peakshavinglimit()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_peakshavinglimit());
   }
-  if (from.has_socmanagementallowedhighlimit()) {
-    _internal_mutable_socmanagementallowedhighlimit()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_socmanagementallowedhighlimit());
+  if (from._internal_has_socmanagementallowedhighlimit()) {
+    _this->_internal_mutable_socmanagementallowedhighlimit()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_socmanagementallowedhighlimit());
   }
-  if (from.has_socmanagementallowedlowlimit()) {
-    _internal_mutable_socmanagementallowedlowlimit()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_socmanagementallowedlowlimit());
+  if (from._internal_has_socmanagementallowedlowlimit()) {
+    _this->_internal_mutable_socmanagementallowedlowlimit()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_socmanagementallowedlowlimit());
   }
-}
-
-void PeakShaving::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.PeakShaving)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void PeakShaving::CopyFrom(const PeakShaving& from) {
@@ -2330,393 +4376,384 @@ bool PeakShaving::IsInitialized() const {
 
 void PeakShaving::InternalSwap(PeakShaving* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(PeakShaving, socmanagementallowedlowlimit_)
-      + sizeof(PeakShaving::socmanagementallowedlowlimit_)
-      - PROTOBUF_FIELD_OFFSET(PeakShaving, baseshavinglimit_)>(
-          reinterpret_cast<char*>(&baseshavinglimit_),
-          reinterpret_cast<char*>(&other->baseshavinglimit_));
+      PROTOBUF_FIELD_OFFSET(PeakShaving, _impl_.socmanagementallowedlowlimit_)
+      + sizeof(PeakShaving::_impl_.socmanagementallowedlowlimit_)
+      - PROTOBUF_FIELD_OFFSET(PeakShaving, _impl_.baseshavinglimit_)>(
+          reinterpret_cast<char*>(&_impl_.baseshavinglimit_),
+          reinterpret_cast<char*>(&other->_impl_.baseshavinglimit_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata PeakShaving::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[7]);
 }
-
-
 // ===================================================================
 
 class SocLimit::_Internal {
  public:
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& sochighlimit(const SocLimit* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& sochighlimithysteresis(const SocLimit* msg);
-  static const PROTOBUF_NAMESPACE_ID::BoolValue& soclimitctl(const SocLimit* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& soclowlimit(const SocLimit* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& soclowlimithysteresis(const SocLimit* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& sochighlimit(const SocLimit* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& sochighlimithysteresis(const SocLimit* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::BoolValue& soclimitctl(const SocLimit* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& soclowlimit(const SocLimit* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& soclowlimithysteresis(const SocLimit* msg);
 };
 
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 SocLimit::_Internal::sochighlimit(const SocLimit* msg) {
-  return *msg->sochighlimit_;
+  return *msg->_impl_.sochighlimit_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 SocLimit::_Internal::sochighlimithysteresis(const SocLimit* msg) {
-  return *msg->sochighlimithysteresis_;
+  return *msg->_impl_.sochighlimithysteresis_;
 }
-const PROTOBUF_NAMESPACE_ID::BoolValue&
+const ::PROTOBUF_NAMESPACE_ID::BoolValue&
 SocLimit::_Internal::soclimitctl(const SocLimit* msg) {
-  return *msg->soclimitctl_;
+  return *msg->_impl_.soclimitctl_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 SocLimit::_Internal::soclowlimit(const SocLimit* msg) {
-  return *msg->soclowlimit_;
+  return *msg->_impl_.soclowlimit_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 SocLimit::_Internal::soclowlimithysteresis(const SocLimit* msg) {
-  return *msg->soclowlimithysteresis_;
+  return *msg->_impl_.soclowlimithysteresis_;
 }
 void SocLimit::clear_sochighlimit() {
-  if (GetArena() == nullptr && sochighlimit_ != nullptr) {
-    delete sochighlimit_;
+  if (GetArenaForAllocation() == nullptr && _impl_.sochighlimit_ != nullptr) {
+    delete _impl_.sochighlimit_;
   }
-  sochighlimit_ = nullptr;
+  _impl_.sochighlimit_ = nullptr;
 }
 void SocLimit::clear_sochighlimithysteresis() {
-  if (GetArena() == nullptr && sochighlimithysteresis_ != nullptr) {
-    delete sochighlimithysteresis_;
+  if (GetArenaForAllocation() == nullptr && _impl_.sochighlimithysteresis_ != nullptr) {
+    delete _impl_.sochighlimithysteresis_;
   }
-  sochighlimithysteresis_ = nullptr;
+  _impl_.sochighlimithysteresis_ = nullptr;
 }
 void SocLimit::clear_soclimitctl() {
-  if (GetArena() == nullptr && soclimitctl_ != nullptr) {
-    delete soclimitctl_;
+  if (GetArenaForAllocation() == nullptr && _impl_.soclimitctl_ != nullptr) {
+    delete _impl_.soclimitctl_;
   }
-  soclimitctl_ = nullptr;
+  _impl_.soclimitctl_ = nullptr;
 }
 void SocLimit::clear_soclowlimit() {
-  if (GetArena() == nullptr && soclowlimit_ != nullptr) {
-    delete soclowlimit_;
+  if (GetArenaForAllocation() == nullptr && _impl_.soclowlimit_ != nullptr) {
+    delete _impl_.soclowlimit_;
   }
-  soclowlimit_ = nullptr;
+  _impl_.soclowlimit_ = nullptr;
 }
 void SocLimit::clear_soclowlimithysteresis() {
-  if (GetArena() == nullptr && soclowlimithysteresis_ != nullptr) {
-    delete soclowlimithysteresis_;
+  if (GetArenaForAllocation() == nullptr && _impl_.soclowlimithysteresis_ != nullptr) {
+    delete _impl_.soclowlimithysteresis_;
   }
-  soclowlimithysteresis_ = nullptr;
+  _impl_.soclowlimithysteresis_ = nullptr;
 }
 SocLimit::SocLimit(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:essmodule.SocLimit)
 }
 SocLimit::SocLimit(const SocLimit& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SocLimit* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.sochighlimit_){nullptr}
+    , decltype(_impl_.sochighlimithysteresis_){nullptr}
+    , decltype(_impl_.soclimitctl_){nullptr}
+    , decltype(_impl_.soclowlimit_){nullptr}
+    , decltype(_impl_.soclowlimithysteresis_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_sochighlimit()) {
-    sochighlimit_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.sochighlimit_);
-  } else {
-    sochighlimit_ = nullptr;
+    _this->_impl_.sochighlimit_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.sochighlimit_);
   }
   if (from._internal_has_sochighlimithysteresis()) {
-    sochighlimithysteresis_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.sochighlimithysteresis_);
-  } else {
-    sochighlimithysteresis_ = nullptr;
+    _this->_impl_.sochighlimithysteresis_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.sochighlimithysteresis_);
   }
   if (from._internal_has_soclimitctl()) {
-    soclimitctl_ = new PROTOBUF_NAMESPACE_ID::BoolValue(*from.soclimitctl_);
-  } else {
-    soclimitctl_ = nullptr;
+    _this->_impl_.soclimitctl_ = new ::PROTOBUF_NAMESPACE_ID::BoolValue(*from._impl_.soclimitctl_);
   }
   if (from._internal_has_soclowlimit()) {
-    soclowlimit_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.soclowlimit_);
-  } else {
-    soclowlimit_ = nullptr;
+    _this->_impl_.soclowlimit_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.soclowlimit_);
   }
   if (from._internal_has_soclowlimithysteresis()) {
-    soclowlimithysteresis_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.soclowlimithysteresis_);
-  } else {
-    soclowlimithysteresis_ = nullptr;
+    _this->_impl_.soclowlimithysteresis_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.soclowlimithysteresis_);
   }
   // @@protoc_insertion_point(copy_constructor:essmodule.SocLimit)
 }
 
-void SocLimit::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&sochighlimit_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&soclowlimithysteresis_) -
-    reinterpret_cast<char*>(&sochighlimit_)) + sizeof(soclowlimithysteresis_));
+inline void SocLimit::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.sochighlimit_){nullptr}
+    , decltype(_impl_.sochighlimithysteresis_){nullptr}
+    , decltype(_impl_.soclimitctl_){nullptr}
+    , decltype(_impl_.soclowlimit_){nullptr}
+    , decltype(_impl_.soclowlimithysteresis_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SocLimit::~SocLimit() {
   // @@protoc_insertion_point(destructor:essmodule.SocLimit)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void SocLimit::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete sochighlimit_;
-  if (this != internal_default_instance()) delete sochighlimithysteresis_;
-  if (this != internal_default_instance()) delete soclimitctl_;
-  if (this != internal_default_instance()) delete soclowlimit_;
-  if (this != internal_default_instance()) delete soclowlimithysteresis_;
+inline void SocLimit::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.sochighlimit_;
+  if (this != internal_default_instance()) delete _impl_.sochighlimithysteresis_;
+  if (this != internal_default_instance()) delete _impl_.soclimitctl_;
+  if (this != internal_default_instance()) delete _impl_.soclowlimit_;
+  if (this != internal_default_instance()) delete _impl_.soclowlimithysteresis_;
 }
 
-void SocLimit::ArenaDtor(void* object) {
-  SocLimit* _this = reinterpret_cast< SocLimit* >(object);
-  (void)_this;
-}
-void SocLimit::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SocLimit::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SocLimit::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.SocLimit)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && sochighlimit_ != nullptr) {
-    delete sochighlimit_;
+  if (GetArenaForAllocation() == nullptr && _impl_.sochighlimit_ != nullptr) {
+    delete _impl_.sochighlimit_;
   }
-  sochighlimit_ = nullptr;
-  if (GetArena() == nullptr && sochighlimithysteresis_ != nullptr) {
-    delete sochighlimithysteresis_;
+  _impl_.sochighlimit_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.sochighlimithysteresis_ != nullptr) {
+    delete _impl_.sochighlimithysteresis_;
   }
-  sochighlimithysteresis_ = nullptr;
-  if (GetArena() == nullptr && soclimitctl_ != nullptr) {
-    delete soclimitctl_;
+  _impl_.sochighlimithysteresis_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.soclimitctl_ != nullptr) {
+    delete _impl_.soclimitctl_;
   }
-  soclimitctl_ = nullptr;
-  if (GetArena() == nullptr && soclowlimit_ != nullptr) {
-    delete soclowlimit_;
+  _impl_.soclimitctl_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.soclowlimit_ != nullptr) {
+    delete _impl_.soclowlimit_;
   }
-  soclowlimit_ = nullptr;
-  if (GetArena() == nullptr && soclowlimithysteresis_ != nullptr) {
-    delete soclowlimithysteresis_;
+  _impl_.soclowlimit_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.soclowlimithysteresis_ != nullptr) {
+    delete _impl_.soclowlimithysteresis_;
   }
-  soclowlimithysteresis_ = nullptr;
+  _impl_.soclowlimithysteresis_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SocLimit::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SocLimit::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .google.protobuf.FloatValue socHighLimit = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_sochighlimit(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue socHighLimitHysteresis = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_sochighlimithysteresis(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.BoolValue socLimitCtl = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_soclimitctl(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue socLowLimit = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_soclowlimit(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue socLowLimitHysteresis = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_soclowlimithysteresis(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SocLimit::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* SocLimit::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:essmodule.SocLimit)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue socHighLimit = 1;
-  if (this->has_sochighlimit()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_sochighlimit()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::sochighlimit(this), target, stream);
+      InternalWriteMessage(1, _Internal::sochighlimit(this),
+        _Internal::sochighlimit(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue socHighLimitHysteresis = 2;
-  if (this->has_sochighlimithysteresis()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_sochighlimithysteresis()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::sochighlimithysteresis(this), target, stream);
+      InternalWriteMessage(2, _Internal::sochighlimithysteresis(this),
+        _Internal::sochighlimithysteresis(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.BoolValue socLimitCtl = 3;
-  if (this->has_soclimitctl()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_soclimitctl()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::soclimitctl(this), target, stream);
+      InternalWriteMessage(3, _Internal::soclimitctl(this),
+        _Internal::soclimitctl(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue socLowLimit = 4;
-  if (this->has_soclowlimit()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_soclowlimit()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::soclowlimit(this), target, stream);
+      InternalWriteMessage(4, _Internal::soclowlimit(this),
+        _Internal::soclowlimit(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue socLowLimitHysteresis = 5;
-  if (this->has_soclowlimithysteresis()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_soclowlimithysteresis()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::soclowlimithysteresis(this), target, stream);
+      InternalWriteMessage(5, _Internal::soclowlimithysteresis(this),
+        _Internal::soclowlimithysteresis(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.SocLimit)
   return target;
 }
 
-size_t SocLimit::ByteSizeLong() const {
+::size_t SocLimit::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.SocLimit)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue socHighLimit = 1;
-  if (this->has_sochighlimit()) {
+  if (this->_internal_has_sochighlimit()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *sochighlimit_);
+        *_impl_.sochighlimit_);
   }
 
   // .google.protobuf.FloatValue socHighLimitHysteresis = 2;
-  if (this->has_sochighlimithysteresis()) {
+  if (this->_internal_has_sochighlimithysteresis()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *sochighlimithysteresis_);
+        *_impl_.sochighlimithysteresis_);
   }
 
   // .google.protobuf.BoolValue socLimitCtl = 3;
-  if (this->has_soclimitctl()) {
+  if (this->_internal_has_soclimitctl()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *soclimitctl_);
+        *_impl_.soclimitctl_);
   }
 
   // .google.protobuf.FloatValue socLowLimit = 4;
-  if (this->has_soclowlimit()) {
+  if (this->_internal_has_soclowlimit()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *soclowlimit_);
+        *_impl_.soclowlimit_);
   }
 
   // .google.protobuf.FloatValue socLowLimitHysteresis = 5;
-  if (this->has_soclowlimithysteresis()) {
+  if (this->_internal_has_soclowlimithysteresis()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *soclowlimithysteresis_);
+        *_impl_.soclowlimithysteresis_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SocLimit::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.SocLimit)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SocLimit* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SocLimit>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.SocLimit)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.SocLimit)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SocLimit::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SocLimit::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SocLimit::GetClassData() const { return &_class_data_; }
 
-void SocLimit::MergeFrom(const SocLimit& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.SocLimit)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void SocLimit::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SocLimit*>(&to_msg);
+  auto& from = static_cast<const SocLimit&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.SocLimit)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_sochighlimit()) {
-    _internal_mutable_sochighlimit()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_sochighlimit());
+  if (from._internal_has_sochighlimit()) {
+    _this->_internal_mutable_sochighlimit()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_sochighlimit());
   }
-  if (from.has_sochighlimithysteresis()) {
-    _internal_mutable_sochighlimithysteresis()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_sochighlimithysteresis());
+  if (from._internal_has_sochighlimithysteresis()) {
+    _this->_internal_mutable_sochighlimithysteresis()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_sochighlimithysteresis());
   }
-  if (from.has_soclimitctl()) {
-    _internal_mutable_soclimitctl()->PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(from._internal_soclimitctl());
+  if (from._internal_has_soclimitctl()) {
+    _this->_internal_mutable_soclimitctl()->::PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(
+        from._internal_soclimitctl());
   }
-  if (from.has_soclowlimit()) {
-    _internal_mutable_soclowlimit()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_soclowlimit());
+  if (from._internal_has_soclowlimit()) {
+    _this->_internal_mutable_soclowlimit()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_soclowlimit());
   }
-  if (from.has_soclowlimithysteresis()) {
-    _internal_mutable_soclowlimithysteresis()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_soclowlimithysteresis());
+  if (from._internal_has_soclowlimithysteresis()) {
+    _this->_internal_mutable_soclowlimithysteresis()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_soclowlimithysteresis());
   }
-}
-
-void SocLimit::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.SocLimit)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SocLimit::CopyFrom(const SocLimit& from) {
@@ -2732,393 +4769,384 @@ bool SocLimit::IsInitialized() const {
 
 void SocLimit::InternalSwap(SocLimit* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SocLimit, soclowlimithysteresis_)
-      + sizeof(SocLimit::soclowlimithysteresis_)
-      - PROTOBUF_FIELD_OFFSET(SocLimit, sochighlimit_)>(
-          reinterpret_cast<char*>(&sochighlimit_),
-          reinterpret_cast<char*>(&other->sochighlimit_));
+      PROTOBUF_FIELD_OFFSET(SocLimit, _impl_.soclowlimithysteresis_)
+      + sizeof(SocLimit::_impl_.soclowlimithysteresis_)
+      - PROTOBUF_FIELD_OFFSET(SocLimit, _impl_.sochighlimit_)>(
+          reinterpret_cast<char*>(&_impl_.sochighlimit_),
+          reinterpret_cast<char*>(&other->_impl_.sochighlimit_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SocLimit::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[8]);
 }
-
-
 // ===================================================================
 
 class SOCManagement::_Internal {
  public:
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& socdeadbandminus(const SOCManagement* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& socdeadbandplus(const SOCManagement* msg);
-  static const PROTOBUF_NAMESPACE_ID::BoolValue& socmanagementctl(const SOCManagement* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& socpowersetpoint(const SOCManagement* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& socsetpoint(const SOCManagement* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& socdeadbandminus(const SOCManagement* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& socdeadbandplus(const SOCManagement* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::BoolValue& socmanagementctl(const SOCManagement* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& socpowersetpoint(const SOCManagement* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& socsetpoint(const SOCManagement* msg);
 };
 
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 SOCManagement::_Internal::socdeadbandminus(const SOCManagement* msg) {
-  return *msg->socdeadbandminus_;
+  return *msg->_impl_.socdeadbandminus_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 SOCManagement::_Internal::socdeadbandplus(const SOCManagement* msg) {
-  return *msg->socdeadbandplus_;
+  return *msg->_impl_.socdeadbandplus_;
 }
-const PROTOBUF_NAMESPACE_ID::BoolValue&
+const ::PROTOBUF_NAMESPACE_ID::BoolValue&
 SOCManagement::_Internal::socmanagementctl(const SOCManagement* msg) {
-  return *msg->socmanagementctl_;
+  return *msg->_impl_.socmanagementctl_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 SOCManagement::_Internal::socpowersetpoint(const SOCManagement* msg) {
-  return *msg->socpowersetpoint_;
+  return *msg->_impl_.socpowersetpoint_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 SOCManagement::_Internal::socsetpoint(const SOCManagement* msg) {
-  return *msg->socsetpoint_;
+  return *msg->_impl_.socsetpoint_;
 }
 void SOCManagement::clear_socdeadbandminus() {
-  if (GetArena() == nullptr && socdeadbandminus_ != nullptr) {
-    delete socdeadbandminus_;
+  if (GetArenaForAllocation() == nullptr && _impl_.socdeadbandminus_ != nullptr) {
+    delete _impl_.socdeadbandminus_;
   }
-  socdeadbandminus_ = nullptr;
+  _impl_.socdeadbandminus_ = nullptr;
 }
 void SOCManagement::clear_socdeadbandplus() {
-  if (GetArena() == nullptr && socdeadbandplus_ != nullptr) {
-    delete socdeadbandplus_;
+  if (GetArenaForAllocation() == nullptr && _impl_.socdeadbandplus_ != nullptr) {
+    delete _impl_.socdeadbandplus_;
   }
-  socdeadbandplus_ = nullptr;
+  _impl_.socdeadbandplus_ = nullptr;
 }
 void SOCManagement::clear_socmanagementctl() {
-  if (GetArena() == nullptr && socmanagementctl_ != nullptr) {
-    delete socmanagementctl_;
+  if (GetArenaForAllocation() == nullptr && _impl_.socmanagementctl_ != nullptr) {
+    delete _impl_.socmanagementctl_;
   }
-  socmanagementctl_ = nullptr;
+  _impl_.socmanagementctl_ = nullptr;
 }
 void SOCManagement::clear_socpowersetpoint() {
-  if (GetArena() == nullptr && socpowersetpoint_ != nullptr) {
-    delete socpowersetpoint_;
+  if (GetArenaForAllocation() == nullptr && _impl_.socpowersetpoint_ != nullptr) {
+    delete _impl_.socpowersetpoint_;
   }
-  socpowersetpoint_ = nullptr;
+  _impl_.socpowersetpoint_ = nullptr;
 }
 void SOCManagement::clear_socsetpoint() {
-  if (GetArena() == nullptr && socsetpoint_ != nullptr) {
-    delete socsetpoint_;
+  if (GetArenaForAllocation() == nullptr && _impl_.socsetpoint_ != nullptr) {
+    delete _impl_.socsetpoint_;
   }
-  socsetpoint_ = nullptr;
+  _impl_.socsetpoint_ = nullptr;
 }
 SOCManagement::SOCManagement(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:essmodule.SOCManagement)
 }
 SOCManagement::SOCManagement(const SOCManagement& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SOCManagement* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.socdeadbandminus_){nullptr}
+    , decltype(_impl_.socdeadbandplus_){nullptr}
+    , decltype(_impl_.socmanagementctl_){nullptr}
+    , decltype(_impl_.socpowersetpoint_){nullptr}
+    , decltype(_impl_.socsetpoint_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_socdeadbandminus()) {
-    socdeadbandminus_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.socdeadbandminus_);
-  } else {
-    socdeadbandminus_ = nullptr;
+    _this->_impl_.socdeadbandminus_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.socdeadbandminus_);
   }
   if (from._internal_has_socdeadbandplus()) {
-    socdeadbandplus_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.socdeadbandplus_);
-  } else {
-    socdeadbandplus_ = nullptr;
+    _this->_impl_.socdeadbandplus_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.socdeadbandplus_);
   }
   if (from._internal_has_socmanagementctl()) {
-    socmanagementctl_ = new PROTOBUF_NAMESPACE_ID::BoolValue(*from.socmanagementctl_);
-  } else {
-    socmanagementctl_ = nullptr;
+    _this->_impl_.socmanagementctl_ = new ::PROTOBUF_NAMESPACE_ID::BoolValue(*from._impl_.socmanagementctl_);
   }
   if (from._internal_has_socpowersetpoint()) {
-    socpowersetpoint_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.socpowersetpoint_);
-  } else {
-    socpowersetpoint_ = nullptr;
+    _this->_impl_.socpowersetpoint_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.socpowersetpoint_);
   }
   if (from._internal_has_socsetpoint()) {
-    socsetpoint_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.socsetpoint_);
-  } else {
-    socsetpoint_ = nullptr;
+    _this->_impl_.socsetpoint_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.socsetpoint_);
   }
   // @@protoc_insertion_point(copy_constructor:essmodule.SOCManagement)
 }
 
-void SOCManagement::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&socdeadbandminus_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&socsetpoint_) -
-    reinterpret_cast<char*>(&socdeadbandminus_)) + sizeof(socsetpoint_));
+inline void SOCManagement::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.socdeadbandminus_){nullptr}
+    , decltype(_impl_.socdeadbandplus_){nullptr}
+    , decltype(_impl_.socmanagementctl_){nullptr}
+    , decltype(_impl_.socpowersetpoint_){nullptr}
+    , decltype(_impl_.socsetpoint_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SOCManagement::~SOCManagement() {
   // @@protoc_insertion_point(destructor:essmodule.SOCManagement)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void SOCManagement::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete socdeadbandminus_;
-  if (this != internal_default_instance()) delete socdeadbandplus_;
-  if (this != internal_default_instance()) delete socmanagementctl_;
-  if (this != internal_default_instance()) delete socpowersetpoint_;
-  if (this != internal_default_instance()) delete socsetpoint_;
+inline void SOCManagement::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.socdeadbandminus_;
+  if (this != internal_default_instance()) delete _impl_.socdeadbandplus_;
+  if (this != internal_default_instance()) delete _impl_.socmanagementctl_;
+  if (this != internal_default_instance()) delete _impl_.socpowersetpoint_;
+  if (this != internal_default_instance()) delete _impl_.socsetpoint_;
 }
 
-void SOCManagement::ArenaDtor(void* object) {
-  SOCManagement* _this = reinterpret_cast< SOCManagement* >(object);
-  (void)_this;
-}
-void SOCManagement::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SOCManagement::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SOCManagement::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.SOCManagement)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && socdeadbandminus_ != nullptr) {
-    delete socdeadbandminus_;
+  if (GetArenaForAllocation() == nullptr && _impl_.socdeadbandminus_ != nullptr) {
+    delete _impl_.socdeadbandminus_;
   }
-  socdeadbandminus_ = nullptr;
-  if (GetArena() == nullptr && socdeadbandplus_ != nullptr) {
-    delete socdeadbandplus_;
+  _impl_.socdeadbandminus_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.socdeadbandplus_ != nullptr) {
+    delete _impl_.socdeadbandplus_;
   }
-  socdeadbandplus_ = nullptr;
-  if (GetArena() == nullptr && socmanagementctl_ != nullptr) {
-    delete socmanagementctl_;
+  _impl_.socdeadbandplus_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.socmanagementctl_ != nullptr) {
+    delete _impl_.socmanagementctl_;
   }
-  socmanagementctl_ = nullptr;
-  if (GetArena() == nullptr && socpowersetpoint_ != nullptr) {
-    delete socpowersetpoint_;
+  _impl_.socmanagementctl_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.socpowersetpoint_ != nullptr) {
+    delete _impl_.socpowersetpoint_;
   }
-  socpowersetpoint_ = nullptr;
-  if (GetArena() == nullptr && socsetpoint_ != nullptr) {
-    delete socsetpoint_;
+  _impl_.socpowersetpoint_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.socsetpoint_ != nullptr) {
+    delete _impl_.socsetpoint_;
   }
-  socsetpoint_ = nullptr;
+  _impl_.socsetpoint_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SOCManagement::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SOCManagement::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .google.protobuf.FloatValue socDeadBandMinus = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_socdeadbandminus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue socDeadBandPlus = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_socdeadbandplus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.BoolValue socManagementCtl = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_socmanagementctl(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue socPowerSetPoint = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_socpowersetpoint(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue socSetPoint = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_socsetpoint(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SOCManagement::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* SOCManagement::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:essmodule.SOCManagement)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue socDeadBandMinus = 1;
-  if (this->has_socdeadbandminus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_socdeadbandminus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::socdeadbandminus(this), target, stream);
+      InternalWriteMessage(1, _Internal::socdeadbandminus(this),
+        _Internal::socdeadbandminus(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue socDeadBandPlus = 2;
-  if (this->has_socdeadbandplus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_socdeadbandplus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::socdeadbandplus(this), target, stream);
+      InternalWriteMessage(2, _Internal::socdeadbandplus(this),
+        _Internal::socdeadbandplus(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.BoolValue socManagementCtl = 3;
-  if (this->has_socmanagementctl()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_socmanagementctl()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::socmanagementctl(this), target, stream);
+      InternalWriteMessage(3, _Internal::socmanagementctl(this),
+        _Internal::socmanagementctl(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue socPowerSetPoint = 4;
-  if (this->has_socpowersetpoint()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_socpowersetpoint()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::socpowersetpoint(this), target, stream);
+      InternalWriteMessage(4, _Internal::socpowersetpoint(this),
+        _Internal::socpowersetpoint(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue socSetPoint = 5;
-  if (this->has_socsetpoint()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_socsetpoint()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::socsetpoint(this), target, stream);
+      InternalWriteMessage(5, _Internal::socsetpoint(this),
+        _Internal::socsetpoint(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.SOCManagement)
   return target;
 }
 
-size_t SOCManagement::ByteSizeLong() const {
+::size_t SOCManagement::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.SOCManagement)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue socDeadBandMinus = 1;
-  if (this->has_socdeadbandminus()) {
+  if (this->_internal_has_socdeadbandminus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *socdeadbandminus_);
+        *_impl_.socdeadbandminus_);
   }
 
   // .google.protobuf.FloatValue socDeadBandPlus = 2;
-  if (this->has_socdeadbandplus()) {
+  if (this->_internal_has_socdeadbandplus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *socdeadbandplus_);
+        *_impl_.socdeadbandplus_);
   }
 
   // .google.protobuf.BoolValue socManagementCtl = 3;
-  if (this->has_socmanagementctl()) {
+  if (this->_internal_has_socmanagementctl()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *socmanagementctl_);
+        *_impl_.socmanagementctl_);
   }
 
   // .google.protobuf.FloatValue socPowerSetPoint = 4;
-  if (this->has_socpowersetpoint()) {
+  if (this->_internal_has_socpowersetpoint()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *socpowersetpoint_);
+        *_impl_.socpowersetpoint_);
   }
 
   // .google.protobuf.FloatValue socSetPoint = 5;
-  if (this->has_socsetpoint()) {
+  if (this->_internal_has_socsetpoint()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *socsetpoint_);
+        *_impl_.socsetpoint_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SOCManagement::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.SOCManagement)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SOCManagement* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SOCManagement>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.SOCManagement)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.SOCManagement)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SOCManagement::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SOCManagement::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SOCManagement::GetClassData() const { return &_class_data_; }
 
-void SOCManagement::MergeFrom(const SOCManagement& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.SOCManagement)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void SOCManagement::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SOCManagement*>(&to_msg);
+  auto& from = static_cast<const SOCManagement&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.SOCManagement)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_socdeadbandminus()) {
-    _internal_mutable_socdeadbandminus()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_socdeadbandminus());
+  if (from._internal_has_socdeadbandminus()) {
+    _this->_internal_mutable_socdeadbandminus()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_socdeadbandminus());
   }
-  if (from.has_socdeadbandplus()) {
-    _internal_mutable_socdeadbandplus()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_socdeadbandplus());
+  if (from._internal_has_socdeadbandplus()) {
+    _this->_internal_mutable_socdeadbandplus()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_socdeadbandplus());
   }
-  if (from.has_socmanagementctl()) {
-    _internal_mutable_socmanagementctl()->PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(from._internal_socmanagementctl());
+  if (from._internal_has_socmanagementctl()) {
+    _this->_internal_mutable_socmanagementctl()->::PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(
+        from._internal_socmanagementctl());
   }
-  if (from.has_socpowersetpoint()) {
-    _internal_mutable_socpowersetpoint()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_socpowersetpoint());
+  if (from._internal_has_socpowersetpoint()) {
+    _this->_internal_mutable_socpowersetpoint()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_socpowersetpoint());
   }
-  if (from.has_socsetpoint()) {
-    _internal_mutable_socsetpoint()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_socsetpoint());
+  if (from._internal_has_socsetpoint()) {
+    _this->_internal_mutable_socsetpoint()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_socsetpoint());
   }
-}
-
-void SOCManagement::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.SOCManagement)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SOCManagement::CopyFrom(const SOCManagement& from) {
@@ -3134,393 +5162,384 @@ bool SOCManagement::IsInitialized() const {
 
 void SOCManagement::InternalSwap(SOCManagement* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SOCManagement, socsetpoint_)
-      + sizeof(SOCManagement::socsetpoint_)
-      - PROTOBUF_FIELD_OFFSET(SOCManagement, socdeadbandminus_)>(
-          reinterpret_cast<char*>(&socdeadbandminus_),
-          reinterpret_cast<char*>(&other->socdeadbandminus_));
+      PROTOBUF_FIELD_OFFSET(SOCManagement, _impl_.socsetpoint_)
+      + sizeof(SOCManagement::_impl_.socsetpoint_)
+      - PROTOBUF_FIELD_OFFSET(SOCManagement, _impl_.socdeadbandminus_)>(
+          reinterpret_cast<char*>(&_impl_.socdeadbandminus_),
+          reinterpret_cast<char*>(&other->_impl_.socdeadbandminus_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SOCManagement::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[9]);
 }
-
-
 // ===================================================================
 
 class VoltageRegulation::_Internal {
  public:
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& overvoltagedroop(const VoltageRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& undervoltagedroop(const VoltageRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& voltagedeadbandminus(const VoltageRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& voltagedeadbandplus(const VoltageRegulation* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& voltagesetpoint(const VoltageRegulation* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& overvoltagedroop(const VoltageRegulation* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& undervoltagedroop(const VoltageRegulation* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& voltagedeadbandminus(const VoltageRegulation* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& voltagedeadbandplus(const VoltageRegulation* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& voltagesetpoint(const VoltageRegulation* msg);
 };
 
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 VoltageRegulation::_Internal::overvoltagedroop(const VoltageRegulation* msg) {
-  return *msg->overvoltagedroop_;
+  return *msg->_impl_.overvoltagedroop_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 VoltageRegulation::_Internal::undervoltagedroop(const VoltageRegulation* msg) {
-  return *msg->undervoltagedroop_;
+  return *msg->_impl_.undervoltagedroop_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 VoltageRegulation::_Internal::voltagedeadbandminus(const VoltageRegulation* msg) {
-  return *msg->voltagedeadbandminus_;
+  return *msg->_impl_.voltagedeadbandminus_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 VoltageRegulation::_Internal::voltagedeadbandplus(const VoltageRegulation* msg) {
-  return *msg->voltagedeadbandplus_;
+  return *msg->_impl_.voltagedeadbandplus_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 VoltageRegulation::_Internal::voltagesetpoint(const VoltageRegulation* msg) {
-  return *msg->voltagesetpoint_;
+  return *msg->_impl_.voltagesetpoint_;
 }
 void VoltageRegulation::clear_overvoltagedroop() {
-  if (GetArena() == nullptr && overvoltagedroop_ != nullptr) {
-    delete overvoltagedroop_;
+  if (GetArenaForAllocation() == nullptr && _impl_.overvoltagedroop_ != nullptr) {
+    delete _impl_.overvoltagedroop_;
   }
-  overvoltagedroop_ = nullptr;
+  _impl_.overvoltagedroop_ = nullptr;
 }
 void VoltageRegulation::clear_undervoltagedroop() {
-  if (GetArena() == nullptr && undervoltagedroop_ != nullptr) {
-    delete undervoltagedroop_;
+  if (GetArenaForAllocation() == nullptr && _impl_.undervoltagedroop_ != nullptr) {
+    delete _impl_.undervoltagedroop_;
   }
-  undervoltagedroop_ = nullptr;
+  _impl_.undervoltagedroop_ = nullptr;
 }
 void VoltageRegulation::clear_voltagedeadbandminus() {
-  if (GetArena() == nullptr && voltagedeadbandminus_ != nullptr) {
-    delete voltagedeadbandminus_;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagedeadbandminus_ != nullptr) {
+    delete _impl_.voltagedeadbandminus_;
   }
-  voltagedeadbandminus_ = nullptr;
+  _impl_.voltagedeadbandminus_ = nullptr;
 }
 void VoltageRegulation::clear_voltagedeadbandplus() {
-  if (GetArena() == nullptr && voltagedeadbandplus_ != nullptr) {
-    delete voltagedeadbandplus_;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagedeadbandplus_ != nullptr) {
+    delete _impl_.voltagedeadbandplus_;
   }
-  voltagedeadbandplus_ = nullptr;
+  _impl_.voltagedeadbandplus_ = nullptr;
 }
 void VoltageRegulation::clear_voltagesetpoint() {
-  if (GetArena() == nullptr && voltagesetpoint_ != nullptr) {
-    delete voltagesetpoint_;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagesetpoint_ != nullptr) {
+    delete _impl_.voltagesetpoint_;
   }
-  voltagesetpoint_ = nullptr;
+  _impl_.voltagesetpoint_ = nullptr;
 }
 VoltageRegulation::VoltageRegulation(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:essmodule.VoltageRegulation)
 }
 VoltageRegulation::VoltageRegulation(const VoltageRegulation& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  VoltageRegulation* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.overvoltagedroop_){nullptr}
+    , decltype(_impl_.undervoltagedroop_){nullptr}
+    , decltype(_impl_.voltagedeadbandminus_){nullptr}
+    , decltype(_impl_.voltagedeadbandplus_){nullptr}
+    , decltype(_impl_.voltagesetpoint_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_overvoltagedroop()) {
-    overvoltagedroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.overvoltagedroop_);
-  } else {
-    overvoltagedroop_ = nullptr;
+    _this->_impl_.overvoltagedroop_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.overvoltagedroop_);
   }
   if (from._internal_has_undervoltagedroop()) {
-    undervoltagedroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.undervoltagedroop_);
-  } else {
-    undervoltagedroop_ = nullptr;
+    _this->_impl_.undervoltagedroop_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.undervoltagedroop_);
   }
   if (from._internal_has_voltagedeadbandminus()) {
-    voltagedeadbandminus_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.voltagedeadbandminus_);
-  } else {
-    voltagedeadbandminus_ = nullptr;
+    _this->_impl_.voltagedeadbandminus_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.voltagedeadbandminus_);
   }
   if (from._internal_has_voltagedeadbandplus()) {
-    voltagedeadbandplus_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.voltagedeadbandplus_);
-  } else {
-    voltagedeadbandplus_ = nullptr;
+    _this->_impl_.voltagedeadbandplus_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.voltagedeadbandplus_);
   }
   if (from._internal_has_voltagesetpoint()) {
-    voltagesetpoint_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.voltagesetpoint_);
-  } else {
-    voltagesetpoint_ = nullptr;
+    _this->_impl_.voltagesetpoint_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.voltagesetpoint_);
   }
   // @@protoc_insertion_point(copy_constructor:essmodule.VoltageRegulation)
 }
 
-void VoltageRegulation::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&overvoltagedroop_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&voltagesetpoint_) -
-    reinterpret_cast<char*>(&overvoltagedroop_)) + sizeof(voltagesetpoint_));
+inline void VoltageRegulation::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.overvoltagedroop_){nullptr}
+    , decltype(_impl_.undervoltagedroop_){nullptr}
+    , decltype(_impl_.voltagedeadbandminus_){nullptr}
+    , decltype(_impl_.voltagedeadbandplus_){nullptr}
+    , decltype(_impl_.voltagesetpoint_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 VoltageRegulation::~VoltageRegulation() {
   // @@protoc_insertion_point(destructor:essmodule.VoltageRegulation)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void VoltageRegulation::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete overvoltagedroop_;
-  if (this != internal_default_instance()) delete undervoltagedroop_;
-  if (this != internal_default_instance()) delete voltagedeadbandminus_;
-  if (this != internal_default_instance()) delete voltagedeadbandplus_;
-  if (this != internal_default_instance()) delete voltagesetpoint_;
+inline void VoltageRegulation::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.overvoltagedroop_;
+  if (this != internal_default_instance()) delete _impl_.undervoltagedroop_;
+  if (this != internal_default_instance()) delete _impl_.voltagedeadbandminus_;
+  if (this != internal_default_instance()) delete _impl_.voltagedeadbandplus_;
+  if (this != internal_default_instance()) delete _impl_.voltagesetpoint_;
 }
 
-void VoltageRegulation::ArenaDtor(void* object) {
-  VoltageRegulation* _this = reinterpret_cast< VoltageRegulation* >(object);
-  (void)_this;
-}
-void VoltageRegulation::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void VoltageRegulation::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void VoltageRegulation::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.VoltageRegulation)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && overvoltagedroop_ != nullptr) {
-    delete overvoltagedroop_;
+  if (GetArenaForAllocation() == nullptr && _impl_.overvoltagedroop_ != nullptr) {
+    delete _impl_.overvoltagedroop_;
   }
-  overvoltagedroop_ = nullptr;
-  if (GetArena() == nullptr && undervoltagedroop_ != nullptr) {
-    delete undervoltagedroop_;
+  _impl_.overvoltagedroop_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.undervoltagedroop_ != nullptr) {
+    delete _impl_.undervoltagedroop_;
   }
-  undervoltagedroop_ = nullptr;
-  if (GetArena() == nullptr && voltagedeadbandminus_ != nullptr) {
-    delete voltagedeadbandminus_;
+  _impl_.undervoltagedroop_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagedeadbandminus_ != nullptr) {
+    delete _impl_.voltagedeadbandminus_;
   }
-  voltagedeadbandminus_ = nullptr;
-  if (GetArena() == nullptr && voltagedeadbandplus_ != nullptr) {
-    delete voltagedeadbandplus_;
+  _impl_.voltagedeadbandminus_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagedeadbandplus_ != nullptr) {
+    delete _impl_.voltagedeadbandplus_;
   }
-  voltagedeadbandplus_ = nullptr;
-  if (GetArena() == nullptr && voltagesetpoint_ != nullptr) {
-    delete voltagesetpoint_;
+  _impl_.voltagedeadbandplus_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagesetpoint_ != nullptr) {
+    delete _impl_.voltagesetpoint_;
   }
-  voltagesetpoint_ = nullptr;
+  _impl_.voltagesetpoint_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* VoltageRegulation::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* VoltageRegulation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .google.protobuf.FloatValue overVoltageDroop = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_overvoltagedroop(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue underVoltageDroop = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_undervoltagedroop(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue voltageDeadBandMinus = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_voltagedeadbandminus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue voltageDeadBandPlus = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_voltagedeadbandplus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue voltageSetPoint = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_voltagesetpoint(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* VoltageRegulation::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* VoltageRegulation::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:essmodule.VoltageRegulation)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue overVoltageDroop = 1;
-  if (this->has_overvoltagedroop()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_overvoltagedroop()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::overvoltagedroop(this), target, stream);
+      InternalWriteMessage(1, _Internal::overvoltagedroop(this),
+        _Internal::overvoltagedroop(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue underVoltageDroop = 2;
-  if (this->has_undervoltagedroop()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_undervoltagedroop()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::undervoltagedroop(this), target, stream);
+      InternalWriteMessage(2, _Internal::undervoltagedroop(this),
+        _Internal::undervoltagedroop(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue voltageDeadBandMinus = 3;
-  if (this->has_voltagedeadbandminus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_voltagedeadbandminus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::voltagedeadbandminus(this), target, stream);
+      InternalWriteMessage(3, _Internal::voltagedeadbandminus(this),
+        _Internal::voltagedeadbandminus(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue voltageDeadBandPlus = 4;
-  if (this->has_voltagedeadbandplus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_voltagedeadbandplus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::voltagedeadbandplus(this), target, stream);
+      InternalWriteMessage(4, _Internal::voltagedeadbandplus(this),
+        _Internal::voltagedeadbandplus(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue voltageSetPoint = 5;
-  if (this->has_voltagesetpoint()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_voltagesetpoint()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::voltagesetpoint(this), target, stream);
+      InternalWriteMessage(5, _Internal::voltagesetpoint(this),
+        _Internal::voltagesetpoint(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.VoltageRegulation)
   return target;
 }
 
-size_t VoltageRegulation::ByteSizeLong() const {
+::size_t VoltageRegulation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.VoltageRegulation)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .google.protobuf.FloatValue overVoltageDroop = 1;
-  if (this->has_overvoltagedroop()) {
+  if (this->_internal_has_overvoltagedroop()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *overvoltagedroop_);
+        *_impl_.overvoltagedroop_);
   }
 
   // .google.protobuf.FloatValue underVoltageDroop = 2;
-  if (this->has_undervoltagedroop()) {
+  if (this->_internal_has_undervoltagedroop()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *undervoltagedroop_);
+        *_impl_.undervoltagedroop_);
   }
 
   // .google.protobuf.FloatValue voltageDeadBandMinus = 3;
-  if (this->has_voltagedeadbandminus()) {
+  if (this->_internal_has_voltagedeadbandminus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *voltagedeadbandminus_);
+        *_impl_.voltagedeadbandminus_);
   }
 
   // .google.protobuf.FloatValue voltageDeadBandPlus = 4;
-  if (this->has_voltagedeadbandplus()) {
+  if (this->_internal_has_voltagedeadbandplus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *voltagedeadbandplus_);
+        *_impl_.voltagedeadbandplus_);
   }
 
   // .google.protobuf.FloatValue voltageSetPoint = 5;
-  if (this->has_voltagesetpoint()) {
+  if (this->_internal_has_voltagesetpoint()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *voltagesetpoint_);
+        *_impl_.voltagesetpoint_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void VoltageRegulation::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.VoltageRegulation)
-  GOOGLE_DCHECK_NE(&from, this);
-  const VoltageRegulation* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<VoltageRegulation>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.VoltageRegulation)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.VoltageRegulation)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData VoltageRegulation::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    VoltageRegulation::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*VoltageRegulation::GetClassData() const { return &_class_data_; }
 
-void VoltageRegulation::MergeFrom(const VoltageRegulation& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.VoltageRegulation)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void VoltageRegulation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<VoltageRegulation*>(&to_msg);
+  auto& from = static_cast<const VoltageRegulation&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.VoltageRegulation)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_overvoltagedroop()) {
-    _internal_mutable_overvoltagedroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_overvoltagedroop());
+  if (from._internal_has_overvoltagedroop()) {
+    _this->_internal_mutable_overvoltagedroop()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_overvoltagedroop());
   }
-  if (from.has_undervoltagedroop()) {
-    _internal_mutable_undervoltagedroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_undervoltagedroop());
+  if (from._internal_has_undervoltagedroop()) {
+    _this->_internal_mutable_undervoltagedroop()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_undervoltagedroop());
   }
-  if (from.has_voltagedeadbandminus()) {
-    _internal_mutable_voltagedeadbandminus()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_voltagedeadbandminus());
+  if (from._internal_has_voltagedeadbandminus()) {
+    _this->_internal_mutable_voltagedeadbandminus()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_voltagedeadbandminus());
   }
-  if (from.has_voltagedeadbandplus()) {
-    _internal_mutable_voltagedeadbandplus()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_voltagedeadbandplus());
+  if (from._internal_has_voltagedeadbandplus()) {
+    _this->_internal_mutable_voltagedeadbandplus()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_voltagedeadbandplus());
   }
-  if (from.has_voltagesetpoint()) {
-    _internal_mutable_voltagesetpoint()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_voltagesetpoint());
+  if (from._internal_has_voltagesetpoint()) {
+    _this->_internal_mutable_voltagesetpoint()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_voltagesetpoint());
   }
-}
-
-void VoltageRegulation::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.VoltageRegulation)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void VoltageRegulation::CopyFrom(const VoltageRegulation& from) {
@@ -3536,249 +5555,234 @@ bool VoltageRegulation::IsInitialized() const {
 
 void VoltageRegulation::InternalSwap(VoltageRegulation* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(VoltageRegulation, voltagesetpoint_)
-      + sizeof(VoltageRegulation::voltagesetpoint_)
-      - PROTOBUF_FIELD_OFFSET(VoltageRegulation, overvoltagedroop_)>(
-          reinterpret_cast<char*>(&overvoltagedroop_),
-          reinterpret_cast<char*>(&other->overvoltagedroop_));
+      PROTOBUF_FIELD_OFFSET(VoltageRegulation, _impl_.voltagesetpoint_)
+      + sizeof(VoltageRegulation::_impl_.voltagesetpoint_)
+      - PROTOBUF_FIELD_OFFSET(VoltageRegulation, _impl_.overvoltagedroop_)>(
+          reinterpret_cast<char*>(&_impl_.overvoltagedroop_),
+          reinterpret_cast<char*>(&other->_impl_.overvoltagedroop_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata VoltageRegulation::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[10]);
 }
-
-
 // ===================================================================
 
 class VoltageDroop::_Internal {
  public:
-  static const PROTOBUF_NAMESPACE_ID::BoolValue& voltagedroopctl(const VoltageDroop* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::BoolValue& voltagedroopctl(const VoltageDroop* msg);
   static const ::essmodule::VoltageRegulation& voltageregulation(const VoltageDroop* msg);
 };
 
-const PROTOBUF_NAMESPACE_ID::BoolValue&
+const ::PROTOBUF_NAMESPACE_ID::BoolValue&
 VoltageDroop::_Internal::voltagedroopctl(const VoltageDroop* msg) {
-  return *msg->voltagedroopctl_;
+  return *msg->_impl_.voltagedroopctl_;
 }
 const ::essmodule::VoltageRegulation&
 VoltageDroop::_Internal::voltageregulation(const VoltageDroop* msg) {
-  return *msg->voltageregulation_;
+  return *msg->_impl_.voltageregulation_;
 }
 void VoltageDroop::clear_voltagedroopctl() {
-  if (GetArena() == nullptr && voltagedroopctl_ != nullptr) {
-    delete voltagedroopctl_;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagedroopctl_ != nullptr) {
+    delete _impl_.voltagedroopctl_;
   }
-  voltagedroopctl_ = nullptr;
+  _impl_.voltagedroopctl_ = nullptr;
 }
 VoltageDroop::VoltageDroop(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:essmodule.VoltageDroop)
 }
 VoltageDroop::VoltageDroop(const VoltageDroop& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  VoltageDroop* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.voltagedroopctl_){nullptr}
+    , decltype(_impl_.voltageregulation_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_voltagedroopctl()) {
-    voltagedroopctl_ = new PROTOBUF_NAMESPACE_ID::BoolValue(*from.voltagedroopctl_);
-  } else {
-    voltagedroopctl_ = nullptr;
+    _this->_impl_.voltagedroopctl_ = new ::PROTOBUF_NAMESPACE_ID::BoolValue(*from._impl_.voltagedroopctl_);
   }
   if (from._internal_has_voltageregulation()) {
-    voltageregulation_ = new ::essmodule::VoltageRegulation(*from.voltageregulation_);
-  } else {
-    voltageregulation_ = nullptr;
+    _this->_impl_.voltageregulation_ = new ::essmodule::VoltageRegulation(*from._impl_.voltageregulation_);
   }
   // @@protoc_insertion_point(copy_constructor:essmodule.VoltageDroop)
 }
 
-void VoltageDroop::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&voltagedroopctl_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&voltageregulation_) -
-    reinterpret_cast<char*>(&voltagedroopctl_)) + sizeof(voltageregulation_));
+inline void VoltageDroop::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.voltagedroopctl_){nullptr}
+    , decltype(_impl_.voltageregulation_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 VoltageDroop::~VoltageDroop() {
   // @@protoc_insertion_point(destructor:essmodule.VoltageDroop)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void VoltageDroop::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete voltagedroopctl_;
-  if (this != internal_default_instance()) delete voltageregulation_;
+inline void VoltageDroop::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.voltagedroopctl_;
+  if (this != internal_default_instance()) delete _impl_.voltageregulation_;
 }
 
-void VoltageDroop::ArenaDtor(void* object) {
-  VoltageDroop* _this = reinterpret_cast< VoltageDroop* >(object);
-  (void)_this;
-}
-void VoltageDroop::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void VoltageDroop::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void VoltageDroop::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.VoltageDroop)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && voltagedroopctl_ != nullptr) {
-    delete voltagedroopctl_;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagedroopctl_ != nullptr) {
+    delete _impl_.voltagedroopctl_;
   }
-  voltagedroopctl_ = nullptr;
-  if (GetArena() == nullptr && voltageregulation_ != nullptr) {
-    delete voltageregulation_;
+  _impl_.voltagedroopctl_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltageregulation_ != nullptr) {
+    delete _impl_.voltageregulation_;
   }
-  voltageregulation_ = nullptr;
+  _impl_.voltageregulation_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* VoltageDroop::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* VoltageDroop::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .google.protobuf.BoolValue voltageDroopCtl = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_voltagedroopctl(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .essmodule.VoltageRegulation voltageRegulation = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_voltageregulation(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* VoltageDroop::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* VoltageDroop::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:essmodule.VoltageDroop)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.BoolValue voltageDroopCtl = 1;
-  if (this->has_voltagedroopctl()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_voltagedroopctl()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::voltagedroopctl(this), target, stream);
+      InternalWriteMessage(1, _Internal::voltagedroopctl(this),
+        _Internal::voltagedroopctl(this).GetCachedSize(), target, stream);
   }
 
   // .essmodule.VoltageRegulation voltageRegulation = 2;
-  if (this->has_voltageregulation()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_voltageregulation()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::voltageregulation(this), target, stream);
+      InternalWriteMessage(2, _Internal::voltageregulation(this),
+        _Internal::voltageregulation(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.VoltageDroop)
   return target;
 }
 
-size_t VoltageDroop::ByteSizeLong() const {
+::size_t VoltageDroop::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.VoltageDroop)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .google.protobuf.BoolValue voltageDroopCtl = 1;
-  if (this->has_voltagedroopctl()) {
+  if (this->_internal_has_voltagedroopctl()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *voltagedroopctl_);
+        *_impl_.voltagedroopctl_);
   }
 
   // .essmodule.VoltageRegulation voltageRegulation = 2;
-  if (this->has_voltageregulation()) {
+  if (this->_internal_has_voltageregulation()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *voltageregulation_);
+        *_impl_.voltageregulation_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void VoltageDroop::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.VoltageDroop)
-  GOOGLE_DCHECK_NE(&from, this);
-  const VoltageDroop* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<VoltageDroop>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.VoltageDroop)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.VoltageDroop)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData VoltageDroop::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    VoltageDroop::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*VoltageDroop::GetClassData() const { return &_class_data_; }
 
-void VoltageDroop::MergeFrom(const VoltageDroop& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.VoltageDroop)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void VoltageDroop::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<VoltageDroop*>(&to_msg);
+  auto& from = static_cast<const VoltageDroop&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.VoltageDroop)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_voltagedroopctl()) {
-    _internal_mutable_voltagedroopctl()->PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(from._internal_voltagedroopctl());
+  if (from._internal_has_voltagedroopctl()) {
+    _this->_internal_mutable_voltagedroopctl()->::PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(
+        from._internal_voltagedroopctl());
   }
-  if (from.has_voltageregulation()) {
-    _internal_mutable_voltageregulation()->::essmodule::VoltageRegulation::MergeFrom(from._internal_voltageregulation());
+  if (from._internal_has_voltageregulation()) {
+    _this->_internal_mutable_voltageregulation()->::essmodule::VoltageRegulation::MergeFrom(
+        from._internal_voltageregulation());
   }
-}
-
-void VoltageDroop::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.VoltageDroop)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void VoltageDroop::CopyFrom(const VoltageDroop& from) {
@@ -3794,249 +5798,234 @@ bool VoltageDroop::IsInitialized() const {
 
 void VoltageDroop::InternalSwap(VoltageDroop* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(VoltageDroop, voltageregulation_)
-      + sizeof(VoltageDroop::voltageregulation_)
-      - PROTOBUF_FIELD_OFFSET(VoltageDroop, voltagedroopctl_)>(
-          reinterpret_cast<char*>(&voltagedroopctl_),
-          reinterpret_cast<char*>(&other->voltagedroopctl_));
+      PROTOBUF_FIELD_OFFSET(VoltageDroop, _impl_.voltageregulation_)
+      + sizeof(VoltageDroop::_impl_.voltageregulation_)
+      - PROTOBUF_FIELD_OFFSET(VoltageDroop, _impl_.voltagedroopctl_)>(
+          reinterpret_cast<char*>(&_impl_.voltagedroopctl_),
+          reinterpret_cast<char*>(&other->_impl_.voltagedroopctl_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata VoltageDroop::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[11]);
 }
-
-
 // ===================================================================
 
 class VoltagePI::_Internal {
  public:
-  static const PROTOBUF_NAMESPACE_ID::BoolValue& voltagepictl(const VoltagePI* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::BoolValue& voltagepictl(const VoltagePI* msg);
   static const ::essmodule::VoltageRegulation& voltageregulation(const VoltagePI* msg);
 };
 
-const PROTOBUF_NAMESPACE_ID::BoolValue&
+const ::PROTOBUF_NAMESPACE_ID::BoolValue&
 VoltagePI::_Internal::voltagepictl(const VoltagePI* msg) {
-  return *msg->voltagepictl_;
+  return *msg->_impl_.voltagepictl_;
 }
 const ::essmodule::VoltageRegulation&
 VoltagePI::_Internal::voltageregulation(const VoltagePI* msg) {
-  return *msg->voltageregulation_;
+  return *msg->_impl_.voltageregulation_;
 }
 void VoltagePI::clear_voltagepictl() {
-  if (GetArena() == nullptr && voltagepictl_ != nullptr) {
-    delete voltagepictl_;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagepictl_ != nullptr) {
+    delete _impl_.voltagepictl_;
   }
-  voltagepictl_ = nullptr;
+  _impl_.voltagepictl_ = nullptr;
 }
 VoltagePI::VoltagePI(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:essmodule.VoltagePI)
 }
 VoltagePI::VoltagePI(const VoltagePI& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  VoltagePI* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.voltagepictl_){nullptr}
+    , decltype(_impl_.voltageregulation_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_voltagepictl()) {
-    voltagepictl_ = new PROTOBUF_NAMESPACE_ID::BoolValue(*from.voltagepictl_);
-  } else {
-    voltagepictl_ = nullptr;
+    _this->_impl_.voltagepictl_ = new ::PROTOBUF_NAMESPACE_ID::BoolValue(*from._impl_.voltagepictl_);
   }
   if (from._internal_has_voltageregulation()) {
-    voltageregulation_ = new ::essmodule::VoltageRegulation(*from.voltageregulation_);
-  } else {
-    voltageregulation_ = nullptr;
+    _this->_impl_.voltageregulation_ = new ::essmodule::VoltageRegulation(*from._impl_.voltageregulation_);
   }
   // @@protoc_insertion_point(copy_constructor:essmodule.VoltagePI)
 }
 
-void VoltagePI::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&voltagepictl_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&voltageregulation_) -
-    reinterpret_cast<char*>(&voltagepictl_)) + sizeof(voltageregulation_));
+inline void VoltagePI::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.voltagepictl_){nullptr}
+    , decltype(_impl_.voltageregulation_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 VoltagePI::~VoltagePI() {
   // @@protoc_insertion_point(destructor:essmodule.VoltagePI)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void VoltagePI::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete voltagepictl_;
-  if (this != internal_default_instance()) delete voltageregulation_;
+inline void VoltagePI::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.voltagepictl_;
+  if (this != internal_default_instance()) delete _impl_.voltageregulation_;
 }
 
-void VoltagePI::ArenaDtor(void* object) {
-  VoltagePI* _this = reinterpret_cast< VoltagePI* >(object);
-  (void)_this;
-}
-void VoltagePI::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void VoltagePI::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void VoltagePI::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.VoltagePI)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && voltagepictl_ != nullptr) {
-    delete voltagepictl_;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagepictl_ != nullptr) {
+    delete _impl_.voltagepictl_;
   }
-  voltagepictl_ = nullptr;
-  if (GetArena() == nullptr && voltageregulation_ != nullptr) {
-    delete voltageregulation_;
+  _impl_.voltagepictl_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltageregulation_ != nullptr) {
+    delete _impl_.voltageregulation_;
   }
-  voltageregulation_ = nullptr;
+  _impl_.voltageregulation_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* VoltagePI::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* VoltagePI::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .google.protobuf.BoolValue voltagePICtl = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_voltagepictl(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .essmodule.VoltageRegulation voltageRegulation = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_voltageregulation(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* VoltagePI::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* VoltagePI::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:essmodule.VoltagePI)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.BoolValue voltagePICtl = 1;
-  if (this->has_voltagepictl()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_voltagepictl()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::voltagepictl(this), target, stream);
+      InternalWriteMessage(1, _Internal::voltagepictl(this),
+        _Internal::voltagepictl(this).GetCachedSize(), target, stream);
   }
 
   // .essmodule.VoltageRegulation voltageRegulation = 2;
-  if (this->has_voltageregulation()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_voltageregulation()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::voltageregulation(this), target, stream);
+      InternalWriteMessage(2, _Internal::voltageregulation(this),
+        _Internal::voltageregulation(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.VoltagePI)
   return target;
 }
 
-size_t VoltagePI::ByteSizeLong() const {
+::size_t VoltagePI::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.VoltagePI)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .google.protobuf.BoolValue voltagePICtl = 1;
-  if (this->has_voltagepictl()) {
+  if (this->_internal_has_voltagepictl()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *voltagepictl_);
+        *_impl_.voltagepictl_);
   }
 
   // .essmodule.VoltageRegulation voltageRegulation = 2;
-  if (this->has_voltageregulation()) {
+  if (this->_internal_has_voltageregulation()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *voltageregulation_);
+        *_impl_.voltageregulation_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void VoltagePI::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.VoltagePI)
-  GOOGLE_DCHECK_NE(&from, this);
-  const VoltagePI* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<VoltagePI>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.VoltagePI)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.VoltagePI)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData VoltagePI::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    VoltagePI::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*VoltagePI::GetClassData() const { return &_class_data_; }
 
-void VoltagePI::MergeFrom(const VoltagePI& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.VoltagePI)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void VoltagePI::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<VoltagePI*>(&to_msg);
+  auto& from = static_cast<const VoltagePI&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.VoltagePI)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_voltagepictl()) {
-    _internal_mutable_voltagepictl()->PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(from._internal_voltagepictl());
+  if (from._internal_has_voltagepictl()) {
+    _this->_internal_mutable_voltagepictl()->::PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(
+        from._internal_voltagepictl());
   }
-  if (from.has_voltageregulation()) {
-    _internal_mutable_voltageregulation()->::essmodule::VoltageRegulation::MergeFrom(from._internal_voltageregulation());
+  if (from._internal_has_voltageregulation()) {
+    _this->_internal_mutable_voltageregulation()->::essmodule::VoltageRegulation::MergeFrom(
+        from._internal_voltageregulation());
   }
-}
-
-void VoltagePI::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.VoltagePI)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void VoltagePI::CopyFrom(const VoltagePI& from) {
@@ -4052,301 +6041,288 @@ bool VoltagePI::IsInitialized() const {
 
 void VoltagePI::InternalSwap(VoltagePI* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(VoltagePI, voltageregulation_)
-      + sizeof(VoltagePI::voltageregulation_)
-      - PROTOBUF_FIELD_OFFSET(VoltagePI, voltagepictl_)>(
-          reinterpret_cast<char*>(&voltagepictl_),
-          reinterpret_cast<char*>(&other->voltagepictl_));
+      PROTOBUF_FIELD_OFFSET(VoltagePI, _impl_.voltageregulation_)
+      + sizeof(VoltagePI::_impl_.voltageregulation_)
+      - PROTOBUF_FIELD_OFFSET(VoltagePI, _impl_.voltagepictl_)>(
+          reinterpret_cast<char*>(&_impl_.voltagepictl_),
+          reinterpret_cast<char*>(&other->_impl_.voltagepictl_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata VoltagePI::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[12]);
 }
-
-
 // ===================================================================
 
 class CapacityFirming::_Internal {
  public:
-  static const PROTOBUF_NAMESPACE_ID::BoolValue& capacityfirmingctl(const CapacityFirming* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& limitnegative_dp_dt(const CapacityFirming* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& limitpositive_dp_dt(const CapacityFirming* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::BoolValue& capacityfirmingctl(const CapacityFirming* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& limitnegative_dp_dt(const CapacityFirming* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& limitpositive_dp_dt(const CapacityFirming* msg);
 };
 
-const PROTOBUF_NAMESPACE_ID::BoolValue&
+const ::PROTOBUF_NAMESPACE_ID::BoolValue&
 CapacityFirming::_Internal::capacityfirmingctl(const CapacityFirming* msg) {
-  return *msg->capacityfirmingctl_;
+  return *msg->_impl_.capacityfirmingctl_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 CapacityFirming::_Internal::limitnegative_dp_dt(const CapacityFirming* msg) {
-  return *msg->limitnegative_dp_dt_;
+  return *msg->_impl_.limitnegative_dp_dt_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 CapacityFirming::_Internal::limitpositive_dp_dt(const CapacityFirming* msg) {
-  return *msg->limitpositive_dp_dt_;
+  return *msg->_impl_.limitpositive_dp_dt_;
 }
 void CapacityFirming::clear_capacityfirmingctl() {
-  if (GetArena() == nullptr && capacityfirmingctl_ != nullptr) {
-    delete capacityfirmingctl_;
+  if (GetArenaForAllocation() == nullptr && _impl_.capacityfirmingctl_ != nullptr) {
+    delete _impl_.capacityfirmingctl_;
   }
-  capacityfirmingctl_ = nullptr;
+  _impl_.capacityfirmingctl_ = nullptr;
 }
 void CapacityFirming::clear_limitnegative_dp_dt() {
-  if (GetArena() == nullptr && limitnegative_dp_dt_ != nullptr) {
-    delete limitnegative_dp_dt_;
+  if (GetArenaForAllocation() == nullptr && _impl_.limitnegative_dp_dt_ != nullptr) {
+    delete _impl_.limitnegative_dp_dt_;
   }
-  limitnegative_dp_dt_ = nullptr;
+  _impl_.limitnegative_dp_dt_ = nullptr;
 }
 void CapacityFirming::clear_limitpositive_dp_dt() {
-  if (GetArena() == nullptr && limitpositive_dp_dt_ != nullptr) {
-    delete limitpositive_dp_dt_;
+  if (GetArenaForAllocation() == nullptr && _impl_.limitpositive_dp_dt_ != nullptr) {
+    delete _impl_.limitpositive_dp_dt_;
   }
-  limitpositive_dp_dt_ = nullptr;
+  _impl_.limitpositive_dp_dt_ = nullptr;
 }
 CapacityFirming::CapacityFirming(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:essmodule.CapacityFirming)
 }
 CapacityFirming::CapacityFirming(const CapacityFirming& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CapacityFirming* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.capacityfirmingctl_){nullptr}
+    , decltype(_impl_.limitnegative_dp_dt_){nullptr}
+    , decltype(_impl_.limitpositive_dp_dt_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_capacityfirmingctl()) {
-    capacityfirmingctl_ = new PROTOBUF_NAMESPACE_ID::BoolValue(*from.capacityfirmingctl_);
-  } else {
-    capacityfirmingctl_ = nullptr;
+    _this->_impl_.capacityfirmingctl_ = new ::PROTOBUF_NAMESPACE_ID::BoolValue(*from._impl_.capacityfirmingctl_);
   }
   if (from._internal_has_limitnegative_dp_dt()) {
-    limitnegative_dp_dt_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.limitnegative_dp_dt_);
-  } else {
-    limitnegative_dp_dt_ = nullptr;
+    _this->_impl_.limitnegative_dp_dt_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.limitnegative_dp_dt_);
   }
   if (from._internal_has_limitpositive_dp_dt()) {
-    limitpositive_dp_dt_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.limitpositive_dp_dt_);
-  } else {
-    limitpositive_dp_dt_ = nullptr;
+    _this->_impl_.limitpositive_dp_dt_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.limitpositive_dp_dt_);
   }
   // @@protoc_insertion_point(copy_constructor:essmodule.CapacityFirming)
 }
 
-void CapacityFirming::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&capacityfirmingctl_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&limitpositive_dp_dt_) -
-    reinterpret_cast<char*>(&capacityfirmingctl_)) + sizeof(limitpositive_dp_dt_));
+inline void CapacityFirming::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.capacityfirmingctl_){nullptr}
+    , decltype(_impl_.limitnegative_dp_dt_){nullptr}
+    , decltype(_impl_.limitpositive_dp_dt_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CapacityFirming::~CapacityFirming() {
   // @@protoc_insertion_point(destructor:essmodule.CapacityFirming)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CapacityFirming::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete capacityfirmingctl_;
-  if (this != internal_default_instance()) delete limitnegative_dp_dt_;
-  if (this != internal_default_instance()) delete limitpositive_dp_dt_;
+inline void CapacityFirming::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.capacityfirmingctl_;
+  if (this != internal_default_instance()) delete _impl_.limitnegative_dp_dt_;
+  if (this != internal_default_instance()) delete _impl_.limitpositive_dp_dt_;
 }
 
-void CapacityFirming::ArenaDtor(void* object) {
-  CapacityFirming* _this = reinterpret_cast< CapacityFirming* >(object);
-  (void)_this;
-}
-void CapacityFirming::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapacityFirming::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CapacityFirming::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.CapacityFirming)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && capacityfirmingctl_ != nullptr) {
-    delete capacityfirmingctl_;
+  if (GetArenaForAllocation() == nullptr && _impl_.capacityfirmingctl_ != nullptr) {
+    delete _impl_.capacityfirmingctl_;
   }
-  capacityfirmingctl_ = nullptr;
-  if (GetArena() == nullptr && limitnegative_dp_dt_ != nullptr) {
-    delete limitnegative_dp_dt_;
+  _impl_.capacityfirmingctl_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.limitnegative_dp_dt_ != nullptr) {
+    delete _impl_.limitnegative_dp_dt_;
   }
-  limitnegative_dp_dt_ = nullptr;
-  if (GetArena() == nullptr && limitpositive_dp_dt_ != nullptr) {
-    delete limitpositive_dp_dt_;
+  _impl_.limitnegative_dp_dt_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.limitpositive_dp_dt_ != nullptr) {
+    delete _impl_.limitpositive_dp_dt_;
   }
-  limitpositive_dp_dt_ = nullptr;
+  _impl_.limitpositive_dp_dt_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CapacityFirming::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CapacityFirming::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .google.protobuf.BoolValue capacityFirmingCtl = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_capacityfirmingctl(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue limitNegative_dp_dt = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_limitnegative_dp_dt(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue limitPositive_dp_dt = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_limitpositive_dp_dt(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapacityFirming::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CapacityFirming::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:essmodule.CapacityFirming)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.BoolValue capacityFirmingCtl = 1;
-  if (this->has_capacityfirmingctl()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_capacityfirmingctl()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::capacityfirmingctl(this), target, stream);
+      InternalWriteMessage(1, _Internal::capacityfirmingctl(this),
+        _Internal::capacityfirmingctl(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue limitNegative_dp_dt = 2;
-  if (this->has_limitnegative_dp_dt()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_limitnegative_dp_dt()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::limitnegative_dp_dt(this), target, stream);
+      InternalWriteMessage(2, _Internal::limitnegative_dp_dt(this),
+        _Internal::limitnegative_dp_dt(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue limitPositive_dp_dt = 3;
-  if (this->has_limitpositive_dp_dt()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_limitpositive_dp_dt()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::limitpositive_dp_dt(this), target, stream);
+      InternalWriteMessage(3, _Internal::limitpositive_dp_dt(this),
+        _Internal::limitpositive_dp_dt(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.CapacityFirming)
   return target;
 }
 
-size_t CapacityFirming::ByteSizeLong() const {
+::size_t CapacityFirming::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.CapacityFirming)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .google.protobuf.BoolValue capacityFirmingCtl = 1;
-  if (this->has_capacityfirmingctl()) {
+  if (this->_internal_has_capacityfirmingctl()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *capacityfirmingctl_);
+        *_impl_.capacityfirmingctl_);
   }
 
   // .google.protobuf.FloatValue limitNegative_dp_dt = 2;
-  if (this->has_limitnegative_dp_dt()) {
+  if (this->_internal_has_limitnegative_dp_dt()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *limitnegative_dp_dt_);
+        *_impl_.limitnegative_dp_dt_);
   }
 
   // .google.protobuf.FloatValue limitPositive_dp_dt = 3;
-  if (this->has_limitpositive_dp_dt()) {
+  if (this->_internal_has_limitpositive_dp_dt()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *limitpositive_dp_dt_);
+        *_impl_.limitpositive_dp_dt_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CapacityFirming::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.CapacityFirming)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CapacityFirming* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapacityFirming>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.CapacityFirming)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.CapacityFirming)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CapacityFirming::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CapacityFirming::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CapacityFirming::GetClassData() const { return &_class_data_; }
 
-void CapacityFirming::MergeFrom(const CapacityFirming& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.CapacityFirming)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CapacityFirming::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CapacityFirming*>(&to_msg);
+  auto& from = static_cast<const CapacityFirming&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.CapacityFirming)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_capacityfirmingctl()) {
-    _internal_mutable_capacityfirmingctl()->PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(from._internal_capacityfirmingctl());
+  if (from._internal_has_capacityfirmingctl()) {
+    _this->_internal_mutable_capacityfirmingctl()->::PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(
+        from._internal_capacityfirmingctl());
   }
-  if (from.has_limitnegative_dp_dt()) {
-    _internal_mutable_limitnegative_dp_dt()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_limitnegative_dp_dt());
+  if (from._internal_has_limitnegative_dp_dt()) {
+    _this->_internal_mutable_limitnegative_dp_dt()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_limitnegative_dp_dt());
   }
-  if (from.has_limitpositive_dp_dt()) {
-    _internal_mutable_limitpositive_dp_dt()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_limitpositive_dp_dt());
+  if (from._internal_has_limitpositive_dp_dt()) {
+    _this->_internal_mutable_limitpositive_dp_dt()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_limitpositive_dp_dt());
   }
-}
-
-void CapacityFirming::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.CapacityFirming)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapacityFirming::CopyFrom(const CapacityFirming& from) {
@@ -4362,20 +6338,20 @@ bool CapacityFirming::IsInitialized() const {
 
 void CapacityFirming::InternalSwap(CapacityFirming* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CapacityFirming, limitpositive_dp_dt_)
-      + sizeof(CapacityFirming::limitpositive_dp_dt_)
-      - PROTOBUF_FIELD_OFFSET(CapacityFirming, capacityfirmingctl_)>(
-          reinterpret_cast<char*>(&capacityfirmingctl_),
-          reinterpret_cast<char*>(&other->capacityfirmingctl_));
+      PROTOBUF_FIELD_OFFSET(CapacityFirming, _impl_.limitpositive_dp_dt_)
+      + sizeof(CapacityFirming::_impl_.limitpositive_dp_dt_)
+      - PROTOBUF_FIELD_OFFSET(CapacityFirming, _impl_.capacityfirmingctl_)>(
+          reinterpret_cast<char*>(&_impl_.capacityfirmingctl_),
+          reinterpret_cast<char*>(&other->_impl_.capacityfirmingctl_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CapacityFirming::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[13]);
 }
-
-
 // ===================================================================
 
 class ESSFunction::_Internal {
@@ -4391,414 +6367,409 @@ class ESSFunction::_Internal {
 
 const ::essmodule::CapacityFirming&
 ESSFunction::_Internal::capacityfirming(const ESSFunction* msg) {
-  return *msg->capacityfirming_;
+  return *msg->_impl_.capacityfirming_;
 }
 const ::essmodule::FrequencyRegulation&
 ESSFunction::_Internal::frequencyregulation(const ESSFunction* msg) {
-  return *msg->frequencyregulation_;
+  return *msg->_impl_.frequencyregulation_;
 }
 const ::essmodule::PeakShaving&
 ESSFunction::_Internal::peakshaving(const ESSFunction* msg) {
-  return *msg->peakshaving_;
+  return *msg->_impl_.peakshaving_;
 }
 const ::essmodule::SocLimit&
 ESSFunction::_Internal::soclimit(const ESSFunction* msg) {
-  return *msg->soclimit_;
+  return *msg->_impl_.soclimit_;
 }
 const ::essmodule::SOCManagement&
 ESSFunction::_Internal::socmanagement(const ESSFunction* msg) {
-  return *msg->socmanagement_;
+  return *msg->_impl_.socmanagement_;
 }
 const ::essmodule::VoltageDroop&
 ESSFunction::_Internal::voltagedroop(const ESSFunction* msg) {
-  return *msg->voltagedroop_;
+  return *msg->_impl_.voltagedroop_;
 }
 const ::essmodule::VoltagePI&
 ESSFunction::_Internal::voltagepi(const ESSFunction* msg) {
-  return *msg->voltagepi_;
+  return *msg->_impl_.voltagepi_;
 }
 ESSFunction::ESSFunction(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:essmodule.ESSFunction)
 }
 ESSFunction::ESSFunction(const ESSFunction& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSFunction* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.capacityfirming_){nullptr}
+    , decltype(_impl_.frequencyregulation_){nullptr}
+    , decltype(_impl_.peakshaving_){nullptr}
+    , decltype(_impl_.soclimit_){nullptr}
+    , decltype(_impl_.socmanagement_){nullptr}
+    , decltype(_impl_.voltagedroop_){nullptr}
+    , decltype(_impl_.voltagepi_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_capacityfirming()) {
-    capacityfirming_ = new ::essmodule::CapacityFirming(*from.capacityfirming_);
-  } else {
-    capacityfirming_ = nullptr;
+    _this->_impl_.capacityfirming_ = new ::essmodule::CapacityFirming(*from._impl_.capacityfirming_);
   }
   if (from._internal_has_frequencyregulation()) {
-    frequencyregulation_ = new ::essmodule::FrequencyRegulation(*from.frequencyregulation_);
-  } else {
-    frequencyregulation_ = nullptr;
+    _this->_impl_.frequencyregulation_ = new ::essmodule::FrequencyRegulation(*from._impl_.frequencyregulation_);
   }
   if (from._internal_has_peakshaving()) {
-    peakshaving_ = new ::essmodule::PeakShaving(*from.peakshaving_);
-  } else {
-    peakshaving_ = nullptr;
+    _this->_impl_.peakshaving_ = new ::essmodule::PeakShaving(*from._impl_.peakshaving_);
   }
   if (from._internal_has_soclimit()) {
-    soclimit_ = new ::essmodule::SocLimit(*from.soclimit_);
-  } else {
-    soclimit_ = nullptr;
+    _this->_impl_.soclimit_ = new ::essmodule::SocLimit(*from._impl_.soclimit_);
   }
   if (from._internal_has_socmanagement()) {
-    socmanagement_ = new ::essmodule::SOCManagement(*from.socmanagement_);
-  } else {
-    socmanagement_ = nullptr;
+    _this->_impl_.socmanagement_ = new ::essmodule::SOCManagement(*from._impl_.socmanagement_);
   }
   if (from._internal_has_voltagedroop()) {
-    voltagedroop_ = new ::essmodule::VoltageDroop(*from.voltagedroop_);
-  } else {
-    voltagedroop_ = nullptr;
+    _this->_impl_.voltagedroop_ = new ::essmodule::VoltageDroop(*from._impl_.voltagedroop_);
   }
   if (from._internal_has_voltagepi()) {
-    voltagepi_ = new ::essmodule::VoltagePI(*from.voltagepi_);
-  } else {
-    voltagepi_ = nullptr;
+    _this->_impl_.voltagepi_ = new ::essmodule::VoltagePI(*from._impl_.voltagepi_);
   }
   // @@protoc_insertion_point(copy_constructor:essmodule.ESSFunction)
 }
 
-void ESSFunction::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&capacityfirming_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&voltagepi_) -
-    reinterpret_cast<char*>(&capacityfirming_)) + sizeof(voltagepi_));
+inline void ESSFunction::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.capacityfirming_){nullptr}
+    , decltype(_impl_.frequencyregulation_){nullptr}
+    , decltype(_impl_.peakshaving_){nullptr}
+    , decltype(_impl_.soclimit_){nullptr}
+    , decltype(_impl_.socmanagement_){nullptr}
+    , decltype(_impl_.voltagedroop_){nullptr}
+    , decltype(_impl_.voltagepi_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ESSFunction::~ESSFunction() {
   // @@protoc_insertion_point(destructor:essmodule.ESSFunction)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ESSFunction::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete capacityfirming_;
-  if (this != internal_default_instance()) delete frequencyregulation_;
-  if (this != internal_default_instance()) delete peakshaving_;
-  if (this != internal_default_instance()) delete soclimit_;
-  if (this != internal_default_instance()) delete socmanagement_;
-  if (this != internal_default_instance()) delete voltagedroop_;
-  if (this != internal_default_instance()) delete voltagepi_;
+inline void ESSFunction::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.capacityfirming_;
+  if (this != internal_default_instance()) delete _impl_.frequencyregulation_;
+  if (this != internal_default_instance()) delete _impl_.peakshaving_;
+  if (this != internal_default_instance()) delete _impl_.soclimit_;
+  if (this != internal_default_instance()) delete _impl_.socmanagement_;
+  if (this != internal_default_instance()) delete _impl_.voltagedroop_;
+  if (this != internal_default_instance()) delete _impl_.voltagepi_;
 }
 
-void ESSFunction::ArenaDtor(void* object) {
-  ESSFunction* _this = reinterpret_cast< ESSFunction* >(object);
-  (void)_this;
-}
-void ESSFunction::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSFunction::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ESSFunction::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSFunction)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && capacityfirming_ != nullptr) {
-    delete capacityfirming_;
+  if (GetArenaForAllocation() == nullptr && _impl_.capacityfirming_ != nullptr) {
+    delete _impl_.capacityfirming_;
   }
-  capacityfirming_ = nullptr;
-  if (GetArena() == nullptr && frequencyregulation_ != nullptr) {
-    delete frequencyregulation_;
+  _impl_.capacityfirming_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.frequencyregulation_ != nullptr) {
+    delete _impl_.frequencyregulation_;
   }
-  frequencyregulation_ = nullptr;
-  if (GetArena() == nullptr && peakshaving_ != nullptr) {
-    delete peakshaving_;
+  _impl_.frequencyregulation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.peakshaving_ != nullptr) {
+    delete _impl_.peakshaving_;
   }
-  peakshaving_ = nullptr;
-  if (GetArena() == nullptr && soclimit_ != nullptr) {
-    delete soclimit_;
+  _impl_.peakshaving_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.soclimit_ != nullptr) {
+    delete _impl_.soclimit_;
   }
-  soclimit_ = nullptr;
-  if (GetArena() == nullptr && socmanagement_ != nullptr) {
-    delete socmanagement_;
+  _impl_.soclimit_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.socmanagement_ != nullptr) {
+    delete _impl_.socmanagement_;
   }
-  socmanagement_ = nullptr;
-  if (GetArena() == nullptr && voltagedroop_ != nullptr) {
-    delete voltagedroop_;
+  _impl_.socmanagement_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagedroop_ != nullptr) {
+    delete _impl_.voltagedroop_;
   }
-  voltagedroop_ = nullptr;
-  if (GetArena() == nullptr && voltagepi_ != nullptr) {
-    delete voltagepi_;
+  _impl_.voltagedroop_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagepi_ != nullptr) {
+    delete _impl_.voltagepi_;
   }
-  voltagepi_ = nullptr;
+  _impl_.voltagepi_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ESSFunction::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ESSFunction::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .essmodule.CapacityFirming capacityFirming = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_capacityfirming(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .essmodule.FrequencyRegulation frequencyRegulation = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_frequencyregulation(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .essmodule.PeakShaving peakShaving = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_peakshaving(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .essmodule.SocLimit socLimit = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_soclimit(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .essmodule.SOCManagement socManagement = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_socmanagement(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .essmodule.VoltageDroop voltageDroop = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_voltagedroop(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .essmodule.VoltagePI voltagePI = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_voltagepi(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSFunction::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ESSFunction::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSFunction)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .essmodule.CapacityFirming capacityFirming = 1;
-  if (this->has_capacityfirming()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_capacityfirming()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::capacityfirming(this), target, stream);
+      InternalWriteMessage(1, _Internal::capacityfirming(this),
+        _Internal::capacityfirming(this).GetCachedSize(), target, stream);
   }
 
   // .essmodule.FrequencyRegulation frequencyRegulation = 2;
-  if (this->has_frequencyregulation()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_frequencyregulation()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::frequencyregulation(this), target, stream);
+      InternalWriteMessage(2, _Internal::frequencyregulation(this),
+        _Internal::frequencyregulation(this).GetCachedSize(), target, stream);
   }
 
   // .essmodule.PeakShaving peakShaving = 3;
-  if (this->has_peakshaving()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_peakshaving()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::peakshaving(this), target, stream);
+      InternalWriteMessage(3, _Internal::peakshaving(this),
+        _Internal::peakshaving(this).GetCachedSize(), target, stream);
   }
 
   // .essmodule.SocLimit socLimit = 4;
-  if (this->has_soclimit()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_soclimit()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::soclimit(this), target, stream);
+      InternalWriteMessage(4, _Internal::soclimit(this),
+        _Internal::soclimit(this).GetCachedSize(), target, stream);
   }
 
   // .essmodule.SOCManagement socManagement = 5;
-  if (this->has_socmanagement()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_socmanagement()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::socmanagement(this), target, stream);
+      InternalWriteMessage(5, _Internal::socmanagement(this),
+        _Internal::socmanagement(this).GetCachedSize(), target, stream);
   }
 
   // .essmodule.VoltageDroop voltageDroop = 6;
-  if (this->has_voltagedroop()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_voltagedroop()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::voltagedroop(this), target, stream);
+      InternalWriteMessage(6, _Internal::voltagedroop(this),
+        _Internal::voltagedroop(this).GetCachedSize(), target, stream);
   }
 
   // .essmodule.VoltagePI voltagePI = 7;
-  if (this->has_voltagepi()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_voltagepi()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::voltagepi(this), target, stream);
+      InternalWriteMessage(7, _Internal::voltagepi(this),
+        _Internal::voltagepi(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSFunction)
   return target;
 }
 
-size_t ESSFunction::ByteSizeLong() const {
+::size_t ESSFunction::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSFunction)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .essmodule.CapacityFirming capacityFirming = 1;
-  if (this->has_capacityfirming()) {
+  if (this->_internal_has_capacityfirming()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *capacityfirming_);
+        *_impl_.capacityfirming_);
   }
 
   // .essmodule.FrequencyRegulation frequencyRegulation = 2;
-  if (this->has_frequencyregulation()) {
+  if (this->_internal_has_frequencyregulation()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *frequencyregulation_);
+        *_impl_.frequencyregulation_);
   }
 
   // .essmodule.PeakShaving peakShaving = 3;
-  if (this->has_peakshaving()) {
+  if (this->_internal_has_peakshaving()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *peakshaving_);
+        *_impl_.peakshaving_);
   }
 
   // .essmodule.SocLimit socLimit = 4;
-  if (this->has_soclimit()) {
+  if (this->_internal_has_soclimit()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *soclimit_);
+        *_impl_.soclimit_);
   }
 
   // .essmodule.SOCManagement socManagement = 5;
-  if (this->has_socmanagement()) {
+  if (this->_internal_has_socmanagement()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *socmanagement_);
+        *_impl_.socmanagement_);
   }
 
   // .essmodule.VoltageDroop voltageDroop = 6;
-  if (this->has_voltagedroop()) {
+  if (this->_internal_has_voltagedroop()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *voltagedroop_);
+        *_impl_.voltagedroop_);
   }
 
   // .essmodule.VoltagePI voltagePI = 7;
-  if (this->has_voltagepi()) {
+  if (this->_internal_has_voltagepi()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *voltagepi_);
+        *_impl_.voltagepi_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ESSFunction::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSFunction)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ESSFunction* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSFunction>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSFunction)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSFunction)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSFunction::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSFunction::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSFunction::GetClassData() const { return &_class_data_; }
 
-void ESSFunction::MergeFrom(const ESSFunction& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSFunction)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ESSFunction::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSFunction*>(&to_msg);
+  auto& from = static_cast<const ESSFunction&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSFunction)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_capacityfirming()) {
-    _internal_mutable_capacityfirming()->::essmodule::CapacityFirming::MergeFrom(from._internal_capacityfirming());
+  if (from._internal_has_capacityfirming()) {
+    _this->_internal_mutable_capacityfirming()->::essmodule::CapacityFirming::MergeFrom(
+        from._internal_capacityfirming());
   }
-  if (from.has_frequencyregulation()) {
-    _internal_mutable_frequencyregulation()->::essmodule::FrequencyRegulation::MergeFrom(from._internal_frequencyregulation());
+  if (from._internal_has_frequencyregulation()) {
+    _this->_internal_mutable_frequencyregulation()->::essmodule::FrequencyRegulation::MergeFrom(
+        from._internal_frequencyregulation());
   }
-  if (from.has_peakshaving()) {
-    _internal_mutable_peakshaving()->::essmodule::PeakShaving::MergeFrom(from._internal_peakshaving());
+  if (from._internal_has_peakshaving()) {
+    _this->_internal_mutable_peakshaving()->::essmodule::PeakShaving::MergeFrom(
+        from._internal_peakshaving());
   }
-  if (from.has_soclimit()) {
-    _internal_mutable_soclimit()->::essmodule::SocLimit::MergeFrom(from._internal_soclimit());
+  if (from._internal_has_soclimit()) {
+    _this->_internal_mutable_soclimit()->::essmodule::SocLimit::MergeFrom(
+        from._internal_soclimit());
   }
-  if (from.has_socmanagement()) {
-    _internal_mutable_socmanagement()->::essmodule::SOCManagement::MergeFrom(from._internal_socmanagement());
+  if (from._internal_has_socmanagement()) {
+    _this->_internal_mutable_socmanagement()->::essmodule::SOCManagement::MergeFrom(
+        from._internal_socmanagement());
   }
-  if (from.has_voltagedroop()) {
-    _internal_mutable_voltagedroop()->::essmodule::VoltageDroop::MergeFrom(from._internal_voltagedroop());
+  if (from._internal_has_voltagedroop()) {
+    _this->_internal_mutable_voltagedroop()->::essmodule::VoltageDroop::MergeFrom(
+        from._internal_voltagedroop());
   }
-  if (from.has_voltagepi()) {
-    _internal_mutable_voltagepi()->::essmodule::VoltagePI::MergeFrom(from._internal_voltagepi());
+  if (from._internal_has_voltagepi()) {
+    _this->_internal_mutable_voltagepi()->::essmodule::VoltagePI::MergeFrom(
+        from._internal_voltagepi());
   }
-}
-
-void ESSFunction::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSFunction)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ESSFunction::CopyFrom(const ESSFunction& from) {
@@ -4814,4727 +6785,1002 @@ bool ESSFunction::IsInitialized() const {
 
 void ESSFunction::InternalSwap(ESSFunction* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSFunction, voltagepi_)
-      + sizeof(ESSFunction::voltagepi_)
-      - PROTOBUF_FIELD_OFFSET(ESSFunction, capacityfirming_)>(
-          reinterpret_cast<char*>(&capacityfirming_),
-          reinterpret_cast<char*>(&other->capacityfirming_));
+      PROTOBUF_FIELD_OFFSET(ESSFunction, _impl_.voltagepi_)
+      + sizeof(ESSFunction::_impl_.voltagepi_)
+      - PROTOBUF_FIELD_OFFSET(ESSFunction, _impl_.capacityfirming_)>(
+          reinterpret_cast<char*>(&_impl_.capacityfirming_),
+          reinterpret_cast<char*>(&other->_impl_.capacityfirming_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ESSFunction::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[14]);
 }
-
-
-// ===================================================================
-
-class ESSPointStatus::_Internal {
- public:
-  static const ::commonmodule::StatusSPS& blackstartenabled(const ESSPointStatus* msg);
-  static const ::commonmodule::StatusSPS& frequencysetpointenabled(const ESSPointStatus* msg);
-  static const ::essmodule::ESSFunction& function(const ESSPointStatus* msg);
-  static const ::commonmodule::ENG_GridConnectModeKind& mode(const ESSPointStatus* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pcthzdroop(const ESSPointStatus* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pctvdroop(const ESSPointStatus* msg);
-  static const ::commonmodule::RampRate& ramprates(const ESSPointStatus* msg);
-  static const ::commonmodule::StatusSPS& reactivepwrsetpointenabled(const ESSPointStatus* msg);
-  static const ::commonmodule::StatusSPS& realpwrsetpointenabled(const ESSPointStatus* msg);
-  static const ::commonmodule::Optional_StateKind& state(const ESSPointStatus* msg);
-  static const ::commonmodule::StatusSPS& syncbacktogrid(const ESSPointStatus* msg);
-  static const ::commonmodule::StatusSPS& transtoislndongridlossenabled(const ESSPointStatus* msg);
-  static const ::commonmodule::StatusSPS& voltagesetpointenabled(const ESSPointStatus* msg);
-};
-
-const ::commonmodule::StatusSPS&
-ESSPointStatus::_Internal::blackstartenabled(const ESSPointStatus* msg) {
-  return *msg->blackstartenabled_;
-}
-const ::commonmodule::StatusSPS&
-ESSPointStatus::_Internal::frequencysetpointenabled(const ESSPointStatus* msg) {
-  return *msg->frequencysetpointenabled_;
-}
-const ::essmodule::ESSFunction&
-ESSPointStatus::_Internal::function(const ESSPointStatus* msg) {
-  return *msg->function_;
-}
-const ::commonmodule::ENG_GridConnectModeKind&
-ESSPointStatus::_Internal::mode(const ESSPointStatus* msg) {
-  return *msg->mode_;
-}
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-ESSPointStatus::_Internal::pcthzdroop(const ESSPointStatus* msg) {
-  return *msg->pcthzdroop_;
-}
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-ESSPointStatus::_Internal::pctvdroop(const ESSPointStatus* msg) {
-  return *msg->pctvdroop_;
-}
-const ::commonmodule::RampRate&
-ESSPointStatus::_Internal::ramprates(const ESSPointStatus* msg) {
-  return *msg->ramprates_;
-}
-const ::commonmodule::StatusSPS&
-ESSPointStatus::_Internal::reactivepwrsetpointenabled(const ESSPointStatus* msg) {
-  return *msg->reactivepwrsetpointenabled_;
-}
-const ::commonmodule::StatusSPS&
-ESSPointStatus::_Internal::realpwrsetpointenabled(const ESSPointStatus* msg) {
-  return *msg->realpwrsetpointenabled_;
-}
-const ::commonmodule::Optional_StateKind&
-ESSPointStatus::_Internal::state(const ESSPointStatus* msg) {
-  return *msg->state_;
-}
-const ::commonmodule::StatusSPS&
-ESSPointStatus::_Internal::syncbacktogrid(const ESSPointStatus* msg) {
-  return *msg->syncbacktogrid_;
-}
-const ::commonmodule::StatusSPS&
-ESSPointStatus::_Internal::transtoislndongridlossenabled(const ESSPointStatus* msg) {
-  return *msg->transtoislndongridlossenabled_;
-}
-const ::commonmodule::StatusSPS&
-ESSPointStatus::_Internal::voltagesetpointenabled(const ESSPointStatus* msg) {
-  return *msg->voltagesetpointenabled_;
-}
-void ESSPointStatus::clear_blackstartenabled() {
-  if (GetArena() == nullptr && blackstartenabled_ != nullptr) {
-    delete blackstartenabled_;
-  }
-  blackstartenabled_ = nullptr;
-}
-void ESSPointStatus::clear_frequencysetpointenabled() {
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
-    delete frequencysetpointenabled_;
-  }
-  frequencysetpointenabled_ = nullptr;
-}
-void ESSPointStatus::clear_mode() {
-  if (GetArena() == nullptr && mode_ != nullptr) {
-    delete mode_;
-  }
-  mode_ = nullptr;
-}
-void ESSPointStatus::clear_pcthzdroop() {
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
-    delete pcthzdroop_;
-  }
-  pcthzdroop_ = nullptr;
-}
-void ESSPointStatus::clear_pctvdroop() {
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
-    delete pctvdroop_;
-  }
-  pctvdroop_ = nullptr;
-}
-void ESSPointStatus::clear_ramprates() {
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
-    delete ramprates_;
-  }
-  ramprates_ = nullptr;
-}
-void ESSPointStatus::clear_reactivepwrsetpointenabled() {
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
-    delete reactivepwrsetpointenabled_;
-  }
-  reactivepwrsetpointenabled_ = nullptr;
-}
-void ESSPointStatus::clear_realpwrsetpointenabled() {
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
-    delete realpwrsetpointenabled_;
-  }
-  realpwrsetpointenabled_ = nullptr;
-}
-void ESSPointStatus::clear_state() {
-  if (GetArena() == nullptr && state_ != nullptr) {
-    delete state_;
-  }
-  state_ = nullptr;
-}
-void ESSPointStatus::clear_syncbacktogrid() {
-  if (GetArena() == nullptr && syncbacktogrid_ != nullptr) {
-    delete syncbacktogrid_;
-  }
-  syncbacktogrid_ = nullptr;
-}
-void ESSPointStatus::clear_transtoislndongridlossenabled() {
-  if (GetArena() == nullptr && transtoislndongridlossenabled_ != nullptr) {
-    delete transtoislndongridlossenabled_;
-  }
-  transtoislndongridlossenabled_ = nullptr;
-}
-void ESSPointStatus::clear_voltagesetpointenabled() {
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
-    delete voltagesetpointenabled_;
-  }
-  voltagesetpointenabled_ = nullptr;
-}
-ESSPointStatus::ESSPointStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSPointStatus)
-}
-ESSPointStatus::ESSPointStatus(const ESSPointStatus& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_blackstartenabled()) {
-    blackstartenabled_ = new ::commonmodule::StatusSPS(*from.blackstartenabled_);
-  } else {
-    blackstartenabled_ = nullptr;
-  }
-  if (from._internal_has_frequencysetpointenabled()) {
-    frequencysetpointenabled_ = new ::commonmodule::StatusSPS(*from.frequencysetpointenabled_);
-  } else {
-    frequencysetpointenabled_ = nullptr;
-  }
-  if (from._internal_has_function()) {
-    function_ = new ::essmodule::ESSFunction(*from.function_);
-  } else {
-    function_ = nullptr;
-  }
-  if (from._internal_has_mode()) {
-    mode_ = new ::commonmodule::ENG_GridConnectModeKind(*from.mode_);
-  } else {
-    mode_ = nullptr;
-  }
-  if (from._internal_has_pcthzdroop()) {
-    pcthzdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pcthzdroop_);
-  } else {
-    pcthzdroop_ = nullptr;
-  }
-  if (from._internal_has_pctvdroop()) {
-    pctvdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pctvdroop_);
-  } else {
-    pctvdroop_ = nullptr;
-  }
-  if (from._internal_has_ramprates()) {
-    ramprates_ = new ::commonmodule::RampRate(*from.ramprates_);
-  } else {
-    ramprates_ = nullptr;
-  }
-  if (from._internal_has_reactivepwrsetpointenabled()) {
-    reactivepwrsetpointenabled_ = new ::commonmodule::StatusSPS(*from.reactivepwrsetpointenabled_);
-  } else {
-    reactivepwrsetpointenabled_ = nullptr;
-  }
-  if (from._internal_has_realpwrsetpointenabled()) {
-    realpwrsetpointenabled_ = new ::commonmodule::StatusSPS(*from.realpwrsetpointenabled_);
-  } else {
-    realpwrsetpointenabled_ = nullptr;
-  }
-  if (from._internal_has_state()) {
-    state_ = new ::commonmodule::Optional_StateKind(*from.state_);
-  } else {
-    state_ = nullptr;
-  }
-  if (from._internal_has_syncbacktogrid()) {
-    syncbacktogrid_ = new ::commonmodule::StatusSPS(*from.syncbacktogrid_);
-  } else {
-    syncbacktogrid_ = nullptr;
-  }
-  if (from._internal_has_transtoislndongridlossenabled()) {
-    transtoislndongridlossenabled_ = new ::commonmodule::StatusSPS(*from.transtoislndongridlossenabled_);
-  } else {
-    transtoislndongridlossenabled_ = nullptr;
-  }
-  if (from._internal_has_voltagesetpointenabled()) {
-    voltagesetpointenabled_ = new ::commonmodule::StatusSPS(*from.voltagesetpointenabled_);
-  } else {
-    voltagesetpointenabled_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:essmodule.ESSPointStatus)
-}
-
-void ESSPointStatus::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&blackstartenabled_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&voltagesetpointenabled_) -
-    reinterpret_cast<char*>(&blackstartenabled_)) + sizeof(voltagesetpointenabled_));
-}
-
-ESSPointStatus::~ESSPointStatus() {
-  // @@protoc_insertion_point(destructor:essmodule.ESSPointStatus)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void ESSPointStatus::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete blackstartenabled_;
-  if (this != internal_default_instance()) delete frequencysetpointenabled_;
-  if (this != internal_default_instance()) delete function_;
-  if (this != internal_default_instance()) delete mode_;
-  if (this != internal_default_instance()) delete pcthzdroop_;
-  if (this != internal_default_instance()) delete pctvdroop_;
-  if (this != internal_default_instance()) delete ramprates_;
-  if (this != internal_default_instance()) delete reactivepwrsetpointenabled_;
-  if (this != internal_default_instance()) delete realpwrsetpointenabled_;
-  if (this != internal_default_instance()) delete state_;
-  if (this != internal_default_instance()) delete syncbacktogrid_;
-  if (this != internal_default_instance()) delete transtoislndongridlossenabled_;
-  if (this != internal_default_instance()) delete voltagesetpointenabled_;
-}
-
-void ESSPointStatus::ArenaDtor(void* object) {
-  ESSPointStatus* _this = reinterpret_cast< ESSPointStatus* >(object);
-  (void)_this;
-}
-void ESSPointStatus::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void ESSPointStatus::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void ESSPointStatus::Clear() {
-// @@protoc_insertion_point(message_clear_start:essmodule.ESSPointStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && blackstartenabled_ != nullptr) {
-    delete blackstartenabled_;
-  }
-  blackstartenabled_ = nullptr;
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
-    delete frequencysetpointenabled_;
-  }
-  frequencysetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && function_ != nullptr) {
-    delete function_;
-  }
-  function_ = nullptr;
-  if (GetArena() == nullptr && mode_ != nullptr) {
-    delete mode_;
-  }
-  mode_ = nullptr;
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
-    delete pcthzdroop_;
-  }
-  pcthzdroop_ = nullptr;
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
-    delete pctvdroop_;
-  }
-  pctvdroop_ = nullptr;
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
-    delete ramprates_;
-  }
-  ramprates_ = nullptr;
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
-    delete reactivepwrsetpointenabled_;
-  }
-  reactivepwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
-    delete realpwrsetpointenabled_;
-  }
-  realpwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && state_ != nullptr) {
-    delete state_;
-  }
-  state_ = nullptr;
-  if (GetArena() == nullptr && syncbacktogrid_ != nullptr) {
-    delete syncbacktogrid_;
-  }
-  syncbacktogrid_ = nullptr;
-  if (GetArena() == nullptr && transtoislndongridlossenabled_ != nullptr) {
-    delete transtoislndongridlossenabled_;
-  }
-  transtoislndongridlossenabled_ = nullptr;
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
-    delete voltagesetpointenabled_;
-  }
-  voltagesetpointenabled_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* ESSPointStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .commonmodule.StatusSPS blackStartEnabled = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_blackstartenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS frequencySetPointEnabled = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_frequencysetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .essmodule.ESSFunction function = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_function(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ENG_GridConnectModeKind mode = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mode(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .google.protobuf.FloatValue pctHzDroop = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_pcthzdroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .google.protobuf.FloatValue pctVDroop = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(_internal_mutable_pctvdroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.RampRate rampRates = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ctx->ParseMessage(_internal_mutable_ramprates(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 8;
-      case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          ptr = ctx->ParseMessage(_internal_mutable_reactivepwrsetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS realPwrSetPointEnabled = 9;
-      case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
-          ptr = ctx->ParseMessage(_internal_mutable_realpwrsetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.Optional_StateKind state = 10;
-      case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
-          ptr = ctx->ParseMessage(_internal_mutable_state(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS syncBackToGrid = 11;
-      case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
-          ptr = ctx->ParseMessage(_internal_mutable_syncbacktogrid(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS transToIslndOnGridLossEnabled = 12;
-      case 12:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
-          ptr = ctx->ParseMessage(_internal_mutable_transtoislndongridlossenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS voltageSetPointEnabled = 13;
-      case 13:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
-          ptr = ctx->ParseMessage(_internal_mutable_voltagesetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ESSPointStatus::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSPointStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.StatusSPS blackStartEnabled = 1;
-  if (this->has_blackstartenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::blackstartenabled(this), target, stream);
-  }
-
-  // .commonmodule.StatusSPS frequencySetPointEnabled = 2;
-  if (this->has_frequencysetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::frequencysetpointenabled(this), target, stream);
-  }
-
-  // .essmodule.ESSFunction function = 3;
-  if (this->has_function()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::function(this), target, stream);
-  }
-
-  // .commonmodule.ENG_GridConnectModeKind mode = 4;
-  if (this->has_mode()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::mode(this), target, stream);
-  }
-
-  // .google.protobuf.FloatValue pctHzDroop = 5;
-  if (this->has_pcthzdroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::pcthzdroop(this), target, stream);
-  }
-
-  // .google.protobuf.FloatValue pctVDroop = 6;
-  if (this->has_pctvdroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::pctvdroop(this), target, stream);
-  }
-
-  // .commonmodule.RampRate rampRates = 7;
-  if (this->has_ramprates()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::ramprates(this), target, stream);
-  }
-
-  // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 8;
-  if (this->has_reactivepwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::reactivepwrsetpointenabled(this), target, stream);
-  }
-
-  // .commonmodule.StatusSPS realPwrSetPointEnabled = 9;
-  if (this->has_realpwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        9, _Internal::realpwrsetpointenabled(this), target, stream);
-  }
-
-  // .commonmodule.Optional_StateKind state = 10;
-  if (this->has_state()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        10, _Internal::state(this), target, stream);
-  }
-
-  // .commonmodule.StatusSPS syncBackToGrid = 11;
-  if (this->has_syncbacktogrid()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        11, _Internal::syncbacktogrid(this), target, stream);
-  }
-
-  // .commonmodule.StatusSPS transToIslndOnGridLossEnabled = 12;
-  if (this->has_transtoislndongridlossenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        12, _Internal::transtoislndongridlossenabled(this), target, stream);
-  }
-
-  // .commonmodule.StatusSPS voltageSetPointEnabled = 13;
-  if (this->has_voltagesetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        13, _Internal::voltagesetpointenabled(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSPointStatus)
-  return target;
-}
-
-size_t ESSPointStatus::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSPointStatus)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .commonmodule.StatusSPS blackStartEnabled = 1;
-  if (this->has_blackstartenabled()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *blackstartenabled_);
-  }
-
-  // .commonmodule.StatusSPS frequencySetPointEnabled = 2;
-  if (this->has_frequencysetpointenabled()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *frequencysetpointenabled_);
-  }
-
-  // .essmodule.ESSFunction function = 3;
-  if (this->has_function()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *function_);
-  }
-
-  // .commonmodule.ENG_GridConnectModeKind mode = 4;
-  if (this->has_mode()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *mode_);
-  }
-
-  // .google.protobuf.FloatValue pctHzDroop = 5;
-  if (this->has_pcthzdroop()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *pcthzdroop_);
-  }
-
-  // .google.protobuf.FloatValue pctVDroop = 6;
-  if (this->has_pctvdroop()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *pctvdroop_);
-  }
-
-  // .commonmodule.RampRate rampRates = 7;
-  if (this->has_ramprates()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ramprates_);
-  }
-
-  // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 8;
-  if (this->has_reactivepwrsetpointenabled()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *reactivepwrsetpointenabled_);
-  }
-
-  // .commonmodule.StatusSPS realPwrSetPointEnabled = 9;
-  if (this->has_realpwrsetpointenabled()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *realpwrsetpointenabled_);
-  }
-
-  // .commonmodule.Optional_StateKind state = 10;
-  if (this->has_state()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *state_);
-  }
-
-  // .commonmodule.StatusSPS syncBackToGrid = 11;
-  if (this->has_syncbacktogrid()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *syncbacktogrid_);
-  }
-
-  // .commonmodule.StatusSPS transToIslndOnGridLossEnabled = 12;
-  if (this->has_transtoislndongridlossenabled()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *transtoislndongridlossenabled_);
-  }
-
-  // .commonmodule.StatusSPS voltageSetPointEnabled = 13;
-  if (this->has_voltagesetpointenabled()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *voltagesetpointenabled_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void ESSPointStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSPointStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ESSPointStatus* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSPointStatus>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSPointStatus)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSPointStatus)
-    MergeFrom(*source);
-  }
-}
-
-void ESSPointStatus::MergeFrom(const ESSPointStatus& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSPointStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_blackstartenabled()) {
-    _internal_mutable_blackstartenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_blackstartenabled());
-  }
-  if (from.has_frequencysetpointenabled()) {
-    _internal_mutable_frequencysetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_frequencysetpointenabled());
-  }
-  if (from.has_function()) {
-    _internal_mutable_function()->::essmodule::ESSFunction::MergeFrom(from._internal_function());
-  }
-  if (from.has_mode()) {
-    _internal_mutable_mode()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from._internal_mode());
-  }
-  if (from.has_pcthzdroop()) {
-    _internal_mutable_pcthzdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pcthzdroop());
-  }
-  if (from.has_pctvdroop()) {
-    _internal_mutable_pctvdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pctvdroop());
-  }
-  if (from.has_ramprates()) {
-    _internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from._internal_ramprates());
-  }
-  if (from.has_reactivepwrsetpointenabled()) {
-    _internal_mutable_reactivepwrsetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_reactivepwrsetpointenabled());
-  }
-  if (from.has_realpwrsetpointenabled()) {
-    _internal_mutable_realpwrsetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_realpwrsetpointenabled());
-  }
-  if (from.has_state()) {
-    _internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from._internal_state());
-  }
-  if (from.has_syncbacktogrid()) {
-    _internal_mutable_syncbacktogrid()->::commonmodule::StatusSPS::MergeFrom(from._internal_syncbacktogrid());
-  }
-  if (from.has_transtoislndongridlossenabled()) {
-    _internal_mutable_transtoislndongridlossenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_transtoislndongridlossenabled());
-  }
-  if (from.has_voltagesetpointenabled()) {
-    _internal_mutable_voltagesetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_voltagesetpointenabled());
-  }
-}
-
-void ESSPointStatus::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSPointStatus)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void ESSPointStatus::CopyFrom(const ESSPointStatus& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSPointStatus)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ESSPointStatus::IsInitialized() const {
-  return true;
-}
-
-void ESSPointStatus::InternalSwap(ESSPointStatus* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSPointStatus, voltagesetpointenabled_)
-      + sizeof(ESSPointStatus::voltagesetpointenabled_)
-      - PROTOBUF_FIELD_OFFSET(ESSPointStatus, blackstartenabled_)>(
-          reinterpret_cast<char*>(&blackstartenabled_),
-          reinterpret_cast<char*>(&other->blackstartenabled_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata ESSPointStatus::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-class ESSEventAndStatusZGEN::_Internal {
- public:
-  static const ::commonmodule::LogicalNodeForEventAndStatus& logicalnodeforeventandstatus(const ESSEventAndStatusZGEN* msg);
-  static const ::commonmodule::StatusSPS& auxpwrst(const ESSEventAndStatusZGEN* msg);
-  static const ::commonmodule::ENS_DynamicTestKind& dynamictest(const ESSEventAndStatusZGEN* msg);
-  static const ::commonmodule::StatusSPS& emgstop(const ESSEventAndStatusZGEN* msg);
-  static const ::commonmodule::StatusSPS& gnsynst(const ESSEventAndStatusZGEN* msg);
-  static const ::essmodule::ESSPointStatus& pointstatus(const ESSEventAndStatusZGEN* msg);
-};
-
-const ::commonmodule::LogicalNodeForEventAndStatus&
-ESSEventAndStatusZGEN::_Internal::logicalnodeforeventandstatus(const ESSEventAndStatusZGEN* msg) {
-  return *msg->logicalnodeforeventandstatus_;
-}
-const ::commonmodule::StatusSPS&
-ESSEventAndStatusZGEN::_Internal::auxpwrst(const ESSEventAndStatusZGEN* msg) {
-  return *msg->auxpwrst_;
-}
-const ::commonmodule::ENS_DynamicTestKind&
-ESSEventAndStatusZGEN::_Internal::dynamictest(const ESSEventAndStatusZGEN* msg) {
-  return *msg->dynamictest_;
-}
-const ::commonmodule::StatusSPS&
-ESSEventAndStatusZGEN::_Internal::emgstop(const ESSEventAndStatusZGEN* msg) {
-  return *msg->emgstop_;
-}
-const ::commonmodule::StatusSPS&
-ESSEventAndStatusZGEN::_Internal::gnsynst(const ESSEventAndStatusZGEN* msg) {
-  return *msg->gnsynst_;
-}
-const ::essmodule::ESSPointStatus&
-ESSEventAndStatusZGEN::_Internal::pointstatus(const ESSEventAndStatusZGEN* msg) {
-  return *msg->pointstatus_;
-}
-void ESSEventAndStatusZGEN::clear_logicalnodeforeventandstatus() {
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
-    delete logicalnodeforeventandstatus_;
-  }
-  logicalnodeforeventandstatus_ = nullptr;
-}
-void ESSEventAndStatusZGEN::clear_auxpwrst() {
-  if (GetArena() == nullptr && auxpwrst_ != nullptr) {
-    delete auxpwrst_;
-  }
-  auxpwrst_ = nullptr;
-}
-void ESSEventAndStatusZGEN::clear_dynamictest() {
-  if (GetArena() == nullptr && dynamictest_ != nullptr) {
-    delete dynamictest_;
-  }
-  dynamictest_ = nullptr;
-}
-void ESSEventAndStatusZGEN::clear_emgstop() {
-  if (GetArena() == nullptr && emgstop_ != nullptr) {
-    delete emgstop_;
-  }
-  emgstop_ = nullptr;
-}
-void ESSEventAndStatusZGEN::clear_gnsynst() {
-  if (GetArena() == nullptr && gnsynst_ != nullptr) {
-    delete gnsynst_;
-  }
-  gnsynst_ = nullptr;
-}
-ESSEventAndStatusZGEN::ESSEventAndStatusZGEN(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSEventAndStatusZGEN)
-}
-ESSEventAndStatusZGEN::ESSEventAndStatusZGEN(const ESSEventAndStatusZGEN& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_logicalnodeforeventandstatus()) {
-    logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from.logicalnodeforeventandstatus_);
-  } else {
-    logicalnodeforeventandstatus_ = nullptr;
-  }
-  if (from._internal_has_auxpwrst()) {
-    auxpwrst_ = new ::commonmodule::StatusSPS(*from.auxpwrst_);
-  } else {
-    auxpwrst_ = nullptr;
-  }
-  if (from._internal_has_dynamictest()) {
-    dynamictest_ = new ::commonmodule::ENS_DynamicTestKind(*from.dynamictest_);
-  } else {
-    dynamictest_ = nullptr;
-  }
-  if (from._internal_has_emgstop()) {
-    emgstop_ = new ::commonmodule::StatusSPS(*from.emgstop_);
-  } else {
-    emgstop_ = nullptr;
-  }
-  if (from._internal_has_gnsynst()) {
-    gnsynst_ = new ::commonmodule::StatusSPS(*from.gnsynst_);
-  } else {
-    gnsynst_ = nullptr;
-  }
-  if (from._internal_has_pointstatus()) {
-    pointstatus_ = new ::essmodule::ESSPointStatus(*from.pointstatus_);
-  } else {
-    pointstatus_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:essmodule.ESSEventAndStatusZGEN)
-}
-
-void ESSEventAndStatusZGEN::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&pointstatus_) -
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(pointstatus_));
-}
-
-ESSEventAndStatusZGEN::~ESSEventAndStatusZGEN() {
-  // @@protoc_insertion_point(destructor:essmodule.ESSEventAndStatusZGEN)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void ESSEventAndStatusZGEN::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete logicalnodeforeventandstatus_;
-  if (this != internal_default_instance()) delete auxpwrst_;
-  if (this != internal_default_instance()) delete dynamictest_;
-  if (this != internal_default_instance()) delete emgstop_;
-  if (this != internal_default_instance()) delete gnsynst_;
-  if (this != internal_default_instance()) delete pointstatus_;
-}
-
-void ESSEventAndStatusZGEN::ArenaDtor(void* object) {
-  ESSEventAndStatusZGEN* _this = reinterpret_cast< ESSEventAndStatusZGEN* >(object);
-  (void)_this;
-}
-void ESSEventAndStatusZGEN::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void ESSEventAndStatusZGEN::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void ESSEventAndStatusZGEN::Clear() {
-// @@protoc_insertion_point(message_clear_start:essmodule.ESSEventAndStatusZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
-    delete logicalnodeforeventandstatus_;
-  }
-  logicalnodeforeventandstatus_ = nullptr;
-  if (GetArena() == nullptr && auxpwrst_ != nullptr) {
-    delete auxpwrst_;
-  }
-  auxpwrst_ = nullptr;
-  if (GetArena() == nullptr && dynamictest_ != nullptr) {
-    delete dynamictest_;
-  }
-  dynamictest_ = nullptr;
-  if (GetArena() == nullptr && emgstop_ != nullptr) {
-    delete emgstop_;
-  }
-  emgstop_ = nullptr;
-  if (GetArena() == nullptr && gnsynst_ != nullptr) {
-    delete gnsynst_;
-  }
-  gnsynst_ = nullptr;
-  if (GetArena() == nullptr && pointstatus_ != nullptr) {
-    delete pointstatus_;
-  }
-  pointstatus_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* ESSEventAndStatusZGEN::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforeventandstatus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS AuxPwrSt = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_auxpwrst(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_dynamictest(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS EmgStop = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_emgstop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS GnSynSt = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_gnsynst(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .essmodule.ESSPointStatus PointStatus = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(_internal_mutable_pointstatus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ESSEventAndStatusZGEN::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSEventAndStatusZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforeventandstatus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnodeforeventandstatus(this), target, stream);
-  }
-
-  // .commonmodule.StatusSPS AuxPwrSt = 2;
-  if (this->has_auxpwrst()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::auxpwrst(this), target, stream);
-  }
-
-  // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
-  if (this->has_dynamictest()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::dynamictest(this), target, stream);
-  }
-
-  // .commonmodule.StatusSPS EmgStop = 4;
-  if (this->has_emgstop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::emgstop(this), target, stream);
-  }
-
-  // .commonmodule.StatusSPS GnSynSt = 5;
-  if (this->has_gnsynst()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::gnsynst(this), target, stream);
-  }
-
-  // .essmodule.ESSPointStatus PointStatus = 6;
-  if (this->has_pointstatus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::pointstatus(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSEventAndStatusZGEN)
-  return target;
-}
-
-size_t ESSEventAndStatusZGEN::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSEventAndStatusZGEN)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforeventandstatus()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *logicalnodeforeventandstatus_);
-  }
-
-  // .commonmodule.StatusSPS AuxPwrSt = 2;
-  if (this->has_auxpwrst()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *auxpwrst_);
-  }
-
-  // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
-  if (this->has_dynamictest()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *dynamictest_);
-  }
-
-  // .commonmodule.StatusSPS EmgStop = 4;
-  if (this->has_emgstop()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *emgstop_);
-  }
-
-  // .commonmodule.StatusSPS GnSynSt = 5;
-  if (this->has_gnsynst()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *gnsynst_);
-  }
-
-  // .essmodule.ESSPointStatus PointStatus = 6;
-  if (this->has_pointstatus()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *pointstatus_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void ESSEventAndStatusZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSEventAndStatusZGEN)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ESSEventAndStatusZGEN* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSEventAndStatusZGEN>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSEventAndStatusZGEN)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSEventAndStatusZGEN)
-    MergeFrom(*source);
-  }
-}
-
-void ESSEventAndStatusZGEN::MergeFrom(const ESSEventAndStatusZGEN& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSEventAndStatusZGEN)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_logicalnodeforeventandstatus()) {
-    _internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from._internal_logicalnodeforeventandstatus());
-  }
-  if (from.has_auxpwrst()) {
-    _internal_mutable_auxpwrst()->::commonmodule::StatusSPS::MergeFrom(from._internal_auxpwrst());
-  }
-  if (from.has_dynamictest()) {
-    _internal_mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(from._internal_dynamictest());
-  }
-  if (from.has_emgstop()) {
-    _internal_mutable_emgstop()->::commonmodule::StatusSPS::MergeFrom(from._internal_emgstop());
-  }
-  if (from.has_gnsynst()) {
-    _internal_mutable_gnsynst()->::commonmodule::StatusSPS::MergeFrom(from._internal_gnsynst());
-  }
-  if (from.has_pointstatus()) {
-    _internal_mutable_pointstatus()->::essmodule::ESSPointStatus::MergeFrom(from._internal_pointstatus());
-  }
-}
-
-void ESSEventAndStatusZGEN::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSEventAndStatusZGEN)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void ESSEventAndStatusZGEN::CopyFrom(const ESSEventAndStatusZGEN& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSEventAndStatusZGEN)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ESSEventAndStatusZGEN::IsInitialized() const {
-  return true;
-}
-
-void ESSEventAndStatusZGEN::InternalSwap(ESSEventAndStatusZGEN* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSEventAndStatusZGEN, pointstatus_)
-      + sizeof(ESSEventAndStatusZGEN::pointstatus_)
-      - PROTOBUF_FIELD_OFFSET(ESSEventAndStatusZGEN, logicalnodeforeventandstatus_)>(
-          reinterpret_cast<char*>(&logicalnodeforeventandstatus_),
-          reinterpret_cast<char*>(&other->logicalnodeforeventandstatus_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata ESSEventAndStatusZGEN::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-class ESSEventZGEN::_Internal {
- public:
-  static const ::essmodule::ESSEventAndStatusZGEN& esseventandstatuszgen(const ESSEventZGEN* msg);
-};
-
-const ::essmodule::ESSEventAndStatusZGEN&
-ESSEventZGEN::_Internal::esseventandstatuszgen(const ESSEventZGEN* msg) {
-  return *msg->esseventandstatuszgen_;
-}
-ESSEventZGEN::ESSEventZGEN(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSEventZGEN)
-}
-ESSEventZGEN::ESSEventZGEN(const ESSEventZGEN& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_esseventandstatuszgen()) {
-    esseventandstatuszgen_ = new ::essmodule::ESSEventAndStatusZGEN(*from.esseventandstatuszgen_);
-  } else {
-    esseventandstatuszgen_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:essmodule.ESSEventZGEN)
-}
-
-void ESSEventZGEN::SharedCtor() {
-esseventandstatuszgen_ = nullptr;
-}
-
-ESSEventZGEN::~ESSEventZGEN() {
-  // @@protoc_insertion_point(destructor:essmodule.ESSEventZGEN)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void ESSEventZGEN::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete esseventandstatuszgen_;
-}
-
-void ESSEventZGEN::ArenaDtor(void* object) {
-  ESSEventZGEN* _this = reinterpret_cast< ESSEventZGEN* >(object);
-  (void)_this;
-}
-void ESSEventZGEN::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void ESSEventZGEN::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void ESSEventZGEN::Clear() {
-// @@protoc_insertion_point(message_clear_start:essmodule.ESSEventZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && esseventandstatuszgen_ != nullptr) {
-    delete esseventandstatuszgen_;
-  }
-  esseventandstatuszgen_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* ESSEventZGEN::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_esseventandstatuszgen(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ESSEventZGEN::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSEventZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-  if (this->has_esseventandstatuszgen()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::esseventandstatuszgen(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSEventZGEN)
-  return target;
-}
-
-size_t ESSEventZGEN::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSEventZGEN)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-  if (this->has_esseventandstatuszgen()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *esseventandstatuszgen_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void ESSEventZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSEventZGEN)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ESSEventZGEN* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSEventZGEN>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSEventZGEN)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSEventZGEN)
-    MergeFrom(*source);
-  }
-}
-
-void ESSEventZGEN::MergeFrom(const ESSEventZGEN& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSEventZGEN)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_esseventandstatuszgen()) {
-    _internal_mutable_esseventandstatuszgen()->::essmodule::ESSEventAndStatusZGEN::MergeFrom(from._internal_esseventandstatuszgen());
-  }
-}
-
-void ESSEventZGEN::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSEventZGEN)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void ESSEventZGEN::CopyFrom(const ESSEventZGEN& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSEventZGEN)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ESSEventZGEN::IsInitialized() const {
-  return true;
-}
-
-void ESSEventZGEN::InternalSwap(ESSEventZGEN* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(esseventandstatuszgen_, other->esseventandstatuszgen_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata ESSEventZGEN::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-class ESSEvent::_Internal {
- public:
-  static const ::commonmodule::EventValue& eventvalue(const ESSEvent* msg);
-  static const ::essmodule::EssEventZBAT& esseventzbat(const ESSEvent* msg);
-  static const ::essmodule::ESSEventZGEN& esseventzgen(const ESSEvent* msg);
-};
-
-const ::commonmodule::EventValue&
-ESSEvent::_Internal::eventvalue(const ESSEvent* msg) {
-  return *msg->eventvalue_;
-}
-const ::essmodule::EssEventZBAT&
-ESSEvent::_Internal::esseventzbat(const ESSEvent* msg) {
-  return *msg->esseventzbat_;
-}
-const ::essmodule::ESSEventZGEN&
-ESSEvent::_Internal::esseventzgen(const ESSEvent* msg) {
-  return *msg->esseventzgen_;
-}
-void ESSEvent::clear_eventvalue() {
-  if (GetArena() == nullptr && eventvalue_ != nullptr) {
-    delete eventvalue_;
-  }
-  eventvalue_ = nullptr;
-}
-ESSEvent::ESSEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSEvent)
-}
-ESSEvent::ESSEvent(const ESSEvent& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_eventvalue()) {
-    eventvalue_ = new ::commonmodule::EventValue(*from.eventvalue_);
-  } else {
-    eventvalue_ = nullptr;
-  }
-  if (from._internal_has_esseventzbat()) {
-    esseventzbat_ = new ::essmodule::EssEventZBAT(*from.esseventzbat_);
-  } else {
-    esseventzbat_ = nullptr;
-  }
-  if (from._internal_has_esseventzgen()) {
-    esseventzgen_ = new ::essmodule::ESSEventZGEN(*from.esseventzgen_);
-  } else {
-    esseventzgen_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:essmodule.ESSEvent)
-}
-
-void ESSEvent::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&eventvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&esseventzgen_) -
-    reinterpret_cast<char*>(&eventvalue_)) + sizeof(esseventzgen_));
-}
-
-ESSEvent::~ESSEvent() {
-  // @@protoc_insertion_point(destructor:essmodule.ESSEvent)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void ESSEvent::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete eventvalue_;
-  if (this != internal_default_instance()) delete esseventzbat_;
-  if (this != internal_default_instance()) delete esseventzgen_;
-}
-
-void ESSEvent::ArenaDtor(void* object) {
-  ESSEvent* _this = reinterpret_cast< ESSEvent* >(object);
-  (void)_this;
-}
-void ESSEvent::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void ESSEvent::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void ESSEvent::Clear() {
-// @@protoc_insertion_point(message_clear_start:essmodule.ESSEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && eventvalue_ != nullptr) {
-    delete eventvalue_;
-  }
-  eventvalue_ = nullptr;
-  if (GetArena() == nullptr && esseventzbat_ != nullptr) {
-    delete esseventzbat_;
-  }
-  esseventzbat_ = nullptr;
-  if (GetArena() == nullptr && esseventzgen_ != nullptr) {
-    delete esseventzgen_;
-  }
-  esseventzgen_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* ESSEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_eventvalue(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .essmodule.EssEventZBAT essEventZBAT = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_esseventzbat(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .essmodule.ESSEventZGEN essEventZGEN = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_esseventzgen(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ESSEvent::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventvalue()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::eventvalue(this), target, stream);
-  }
-
-  // .essmodule.EssEventZBAT essEventZBAT = 2;
-  if (this->has_esseventzbat()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::esseventzbat(this), target, stream);
-  }
-
-  // .essmodule.ESSEventZGEN essEventZGEN = 3;
-  if (this->has_esseventzgen()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::esseventzgen(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSEvent)
-  return target;
-}
-
-size_t ESSEvent::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSEvent)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventvalue()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *eventvalue_);
-  }
-
-  // .essmodule.EssEventZBAT essEventZBAT = 2;
-  if (this->has_esseventzbat()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *esseventzbat_);
-  }
-
-  // .essmodule.ESSEventZGEN essEventZGEN = 3;
-  if (this->has_esseventzgen()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *esseventzgen_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void ESSEvent::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSEvent)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ESSEvent* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSEvent>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSEvent)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSEvent)
-    MergeFrom(*source);
-  }
-}
-
-void ESSEvent::MergeFrom(const ESSEvent& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSEvent)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_eventvalue()) {
-    _internal_mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(from._internal_eventvalue());
-  }
-  if (from.has_esseventzbat()) {
-    _internal_mutable_esseventzbat()->::essmodule::EssEventZBAT::MergeFrom(from._internal_esseventzbat());
-  }
-  if (from.has_esseventzgen()) {
-    _internal_mutable_esseventzgen()->::essmodule::ESSEventZGEN::MergeFrom(from._internal_esseventzgen());
-  }
-}
-
-void ESSEvent::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSEvent)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void ESSEvent::CopyFrom(const ESSEvent& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSEvent)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ESSEvent::IsInitialized() const {
-  return true;
-}
-
-void ESSEvent::InternalSwap(ESSEvent* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSEvent, esseventzgen_)
-      + sizeof(ESSEvent::esseventzgen_)
-      - PROTOBUF_FIELD_OFFSET(ESSEvent, eventvalue_)>(
-          reinterpret_cast<char*>(&eventvalue_),
-          reinterpret_cast<char*>(&other->eventvalue_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata ESSEvent::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-class ESSEventProfile::_Internal {
- public:
-  static const ::commonmodule::EventMessageInfo& eventmessageinfo(const ESSEventProfile* msg);
-  static const ::commonmodule::ESS& ess(const ESSEventProfile* msg);
-  static const ::essmodule::ESSEvent& essevent(const ESSEventProfile* msg);
-};
-
-const ::commonmodule::EventMessageInfo&
-ESSEventProfile::_Internal::eventmessageinfo(const ESSEventProfile* msg) {
-  return *msg->eventmessageinfo_;
-}
-const ::commonmodule::ESS&
-ESSEventProfile::_Internal::ess(const ESSEventProfile* msg) {
-  return *msg->ess_;
-}
-const ::essmodule::ESSEvent&
-ESSEventProfile::_Internal::essevent(const ESSEventProfile* msg) {
-  return *msg->essevent_;
-}
-void ESSEventProfile::clear_eventmessageinfo() {
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
-    delete eventmessageinfo_;
-  }
-  eventmessageinfo_ = nullptr;
-}
-void ESSEventProfile::clear_ess() {
-  if (GetArena() == nullptr && ess_ != nullptr) {
-    delete ess_;
-  }
-  ess_ = nullptr;
-}
-ESSEventProfile::ESSEventProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSEventProfile)
-}
-ESSEventProfile::ESSEventProfile(const ESSEventProfile& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_eventmessageinfo()) {
-    eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from.eventmessageinfo_);
-  } else {
-    eventmessageinfo_ = nullptr;
-  }
-  if (from._internal_has_ess()) {
-    ess_ = new ::commonmodule::ESS(*from.ess_);
-  } else {
-    ess_ = nullptr;
-  }
-  if (from._internal_has_essevent()) {
-    essevent_ = new ::essmodule::ESSEvent(*from.essevent_);
-  } else {
-    essevent_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:essmodule.ESSEventProfile)
-}
-
-void ESSEventProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&eventmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&essevent_) -
-    reinterpret_cast<char*>(&eventmessageinfo_)) + sizeof(essevent_));
-}
-
-ESSEventProfile::~ESSEventProfile() {
-  // @@protoc_insertion_point(destructor:essmodule.ESSEventProfile)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void ESSEventProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete eventmessageinfo_;
-  if (this != internal_default_instance()) delete ess_;
-  if (this != internal_default_instance()) delete essevent_;
-}
-
-void ESSEventProfile::ArenaDtor(void* object) {
-  ESSEventProfile* _this = reinterpret_cast< ESSEventProfile* >(object);
-  (void)_this;
-}
-void ESSEventProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void ESSEventProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void ESSEventProfile::Clear() {
-// @@protoc_insertion_point(message_clear_start:essmodule.ESSEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
-    delete eventmessageinfo_;
-  }
-  eventmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && ess_ != nullptr) {
-    delete ess_;
-  }
-  ess_ = nullptr;
-  if (GetArena() == nullptr && essevent_ != nullptr) {
-    delete essevent_;
-  }
-  essevent_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* ESSEventProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_eventmessageinfo(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_ess(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .essmodule.ESSEvent essEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_essevent(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ESSEventProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::eventmessageinfo(this), target, stream);
-  }
-
-  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ess()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::ess(this), target, stream);
-  }
-
-  // .essmodule.ESSEvent essEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_essevent()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::essevent(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSEventProfile)
-  return target;
-}
-
-size_t ESSEventProfile::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSEventProfile)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *eventmessageinfo_);
-  }
-
-  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ess()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ess_);
-  }
-
-  // .essmodule.ESSEvent essEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_essevent()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *essevent_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void ESSEventProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSEventProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ESSEventProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSEventProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSEventProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSEventProfile)
-    MergeFrom(*source);
-  }
-}
-
-void ESSEventProfile::MergeFrom(const ESSEventProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSEventProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_eventmessageinfo()) {
-    _internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(from._internal_eventmessageinfo());
-  }
-  if (from.has_ess()) {
-    _internal_mutable_ess()->::commonmodule::ESS::MergeFrom(from._internal_ess());
-  }
-  if (from.has_essevent()) {
-    _internal_mutable_essevent()->::essmodule::ESSEvent::MergeFrom(from._internal_essevent());
-  }
-}
-
-void ESSEventProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSEventProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void ESSEventProfile::CopyFrom(const ESSEventProfile& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSEventProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ESSEventProfile::IsInitialized() const {
-  return true;
-}
-
-void ESSEventProfile::InternalSwap(ESSEventProfile* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSEventProfile, essevent_)
-      + sizeof(ESSEventProfile::essevent_)
-      - PROTOBUF_FIELD_OFFSET(ESSEventProfile, eventmessageinfo_)>(
-          reinterpret_cast<char*>(&eventmessageinfo_),
-          reinterpret_cast<char*>(&other->eventmessageinfo_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata ESSEventProfile::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-class ESSReading::_Internal {
- public:
-  static const ::commonmodule::ConductingEquipmentTerminalReading& conductingequipmentterminalreading(const ESSReading* msg);
-  static const ::commonmodule::PhaseMMTN& phasemmtn(const ESSReading* msg);
-  static const ::commonmodule::ReadingMMTR& readingmmtr(const ESSReading* msg);
-  static const ::commonmodule::ReadingMMXU& readingmmxu(const ESSReading* msg);
-};
-
-const ::commonmodule::ConductingEquipmentTerminalReading&
-ESSReading::_Internal::conductingequipmentterminalreading(const ESSReading* msg) {
-  return *msg->conductingequipmentterminalreading_;
-}
-const ::commonmodule::PhaseMMTN&
-ESSReading::_Internal::phasemmtn(const ESSReading* msg) {
-  return *msg->phasemmtn_;
-}
-const ::commonmodule::ReadingMMTR&
-ESSReading::_Internal::readingmmtr(const ESSReading* msg) {
-  return *msg->readingmmtr_;
-}
-const ::commonmodule::ReadingMMXU&
-ESSReading::_Internal::readingmmxu(const ESSReading* msg) {
-  return *msg->readingmmxu_;
-}
-void ESSReading::clear_conductingequipmentterminalreading() {
-  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
-    delete conductingequipmentterminalreading_;
-  }
-  conductingequipmentterminalreading_ = nullptr;
-}
-void ESSReading::clear_phasemmtn() {
-  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
-    delete phasemmtn_;
-  }
-  phasemmtn_ = nullptr;
-}
-void ESSReading::clear_readingmmtr() {
-  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
-    delete readingmmtr_;
-  }
-  readingmmtr_ = nullptr;
-}
-void ESSReading::clear_readingmmxu() {
-  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
-    delete readingmmxu_;
-  }
-  readingmmxu_ = nullptr;
-}
-ESSReading::ESSReading(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSReading)
-}
-ESSReading::ESSReading(const ESSReading& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_conductingequipmentterminalreading()) {
-    conductingequipmentterminalreading_ = new ::commonmodule::ConductingEquipmentTerminalReading(*from.conductingequipmentterminalreading_);
-  } else {
-    conductingequipmentterminalreading_ = nullptr;
-  }
-  if (from._internal_has_phasemmtn()) {
-    phasemmtn_ = new ::commonmodule::PhaseMMTN(*from.phasemmtn_);
-  } else {
-    phasemmtn_ = nullptr;
-  }
-  if (from._internal_has_readingmmtr()) {
-    readingmmtr_ = new ::commonmodule::ReadingMMTR(*from.readingmmtr_);
-  } else {
-    readingmmtr_ = nullptr;
-  }
-  if (from._internal_has_readingmmxu()) {
-    readingmmxu_ = new ::commonmodule::ReadingMMXU(*from.readingmmxu_);
-  } else {
-    readingmmxu_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:essmodule.ESSReading)
-}
-
-void ESSReading::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&conductingequipmentterminalreading_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&readingmmxu_) -
-    reinterpret_cast<char*>(&conductingequipmentterminalreading_)) + sizeof(readingmmxu_));
-}
-
-ESSReading::~ESSReading() {
-  // @@protoc_insertion_point(destructor:essmodule.ESSReading)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void ESSReading::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete conductingequipmentterminalreading_;
-  if (this != internal_default_instance()) delete phasemmtn_;
-  if (this != internal_default_instance()) delete readingmmtr_;
-  if (this != internal_default_instance()) delete readingmmxu_;
-}
-
-void ESSReading::ArenaDtor(void* object) {
-  ESSReading* _this = reinterpret_cast< ESSReading* >(object);
-  (void)_this;
-}
-void ESSReading::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void ESSReading::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void ESSReading::Clear() {
-// @@protoc_insertion_point(message_clear_start:essmodule.ESSReading)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
-    delete conductingequipmentterminalreading_;
-  }
-  conductingequipmentterminalreading_ = nullptr;
-  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
-    delete phasemmtn_;
-  }
-  phasemmtn_ = nullptr;
-  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
-    delete readingmmtr_;
-  }
-  readingmmtr_ = nullptr;
-  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
-    delete readingmmxu_;
-  }
-  readingmmxu_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* ESSReading::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_conductingequipmentterminalreading(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.PhaseMMTN phaseMMTN = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_phasemmtn(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ReadingMMTR readingMMTR = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_readingmmtr(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ReadingMMXU readingMMXU = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_readingmmxu(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ESSReading::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSReading)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipmentterminalreading()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::conductingequipmentterminalreading(this), target, stream);
-  }
-
-  // .commonmodule.PhaseMMTN phaseMMTN = 2;
-  if (this->has_phasemmtn()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::phasemmtn(this), target, stream);
-  }
-
-  // .commonmodule.ReadingMMTR readingMMTR = 3;
-  if (this->has_readingmmtr()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::readingmmtr(this), target, stream);
-  }
-
-  // .commonmodule.ReadingMMXU readingMMXU = 4;
-  if (this->has_readingmmxu()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::readingmmxu(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSReading)
-  return target;
-}
-
-size_t ESSReading::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSReading)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipmentterminalreading()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *conductingequipmentterminalreading_);
-  }
-
-  // .commonmodule.PhaseMMTN phaseMMTN = 2;
-  if (this->has_phasemmtn()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *phasemmtn_);
-  }
-
-  // .commonmodule.ReadingMMTR readingMMTR = 3;
-  if (this->has_readingmmtr()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmmtr_);
-  }
-
-  // .commonmodule.ReadingMMXU readingMMXU = 4;
-  if (this->has_readingmmxu()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmmxu_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void ESSReading::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSReading)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ESSReading* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSReading>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSReading)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSReading)
-    MergeFrom(*source);
-  }
-}
-
-void ESSReading::MergeFrom(const ESSReading& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSReading)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_conductingequipmentterminalreading()) {
-    _internal_mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(from._internal_conductingequipmentterminalreading());
-  }
-  if (from.has_phasemmtn()) {
-    _internal_mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(from._internal_phasemmtn());
-  }
-  if (from.has_readingmmtr()) {
-    _internal_mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(from._internal_readingmmtr());
-  }
-  if (from.has_readingmmxu()) {
-    _internal_mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from._internal_readingmmxu());
-  }
-}
-
-void ESSReading::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSReading)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void ESSReading::CopyFrom(const ESSReading& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSReading)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ESSReading::IsInitialized() const {
-  return true;
-}
-
-void ESSReading::InternalSwap(ESSReading* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSReading, readingmmxu_)
-      + sizeof(ESSReading::readingmmxu_)
-      - PROTOBUF_FIELD_OFFSET(ESSReading, conductingequipmentterminalreading_)>(
-          reinterpret_cast<char*>(&conductingequipmentterminalreading_),
-          reinterpret_cast<char*>(&other->conductingequipmentterminalreading_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata ESSReading::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-class ESSReadingProfile::_Internal {
- public:
-  static const ::commonmodule::ReadingMessageInfo& readingmessageinfo(const ESSReadingProfile* msg);
-  static const ::commonmodule::ESS& ess(const ESSReadingProfile* msg);
-  static const ::essmodule::ESSReading& essreading(const ESSReadingProfile* msg);
-};
-
-const ::commonmodule::ReadingMessageInfo&
-ESSReadingProfile::_Internal::readingmessageinfo(const ESSReadingProfile* msg) {
-  return *msg->readingmessageinfo_;
-}
-const ::commonmodule::ESS&
-ESSReadingProfile::_Internal::ess(const ESSReadingProfile* msg) {
-  return *msg->ess_;
-}
-const ::essmodule::ESSReading&
-ESSReadingProfile::_Internal::essreading(const ESSReadingProfile* msg) {
-  return *msg->essreading_;
-}
-void ESSReadingProfile::clear_readingmessageinfo() {
-  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
-    delete readingmessageinfo_;
-  }
-  readingmessageinfo_ = nullptr;
-}
-void ESSReadingProfile::clear_ess() {
-  if (GetArena() == nullptr && ess_ != nullptr) {
-    delete ess_;
-  }
-  ess_ = nullptr;
-}
-ESSReadingProfile::ESSReadingProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSReadingProfile)
-}
-ESSReadingProfile::ESSReadingProfile(const ESSReadingProfile& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_readingmessageinfo()) {
-    readingmessageinfo_ = new ::commonmodule::ReadingMessageInfo(*from.readingmessageinfo_);
-  } else {
-    readingmessageinfo_ = nullptr;
-  }
-  if (from._internal_has_ess()) {
-    ess_ = new ::commonmodule::ESS(*from.ess_);
-  } else {
-    ess_ = nullptr;
-  }
-  if (from._internal_has_essreading()) {
-    essreading_ = new ::essmodule::ESSReading(*from.essreading_);
-  } else {
-    essreading_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:essmodule.ESSReadingProfile)
-}
-
-void ESSReadingProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&readingmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&essreading_) -
-    reinterpret_cast<char*>(&readingmessageinfo_)) + sizeof(essreading_));
-}
-
-ESSReadingProfile::~ESSReadingProfile() {
-  // @@protoc_insertion_point(destructor:essmodule.ESSReadingProfile)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void ESSReadingProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete readingmessageinfo_;
-  if (this != internal_default_instance()) delete ess_;
-  if (this != internal_default_instance()) delete essreading_;
-}
-
-void ESSReadingProfile::ArenaDtor(void* object) {
-  ESSReadingProfile* _this = reinterpret_cast< ESSReadingProfile* >(object);
-  (void)_this;
-}
-void ESSReadingProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void ESSReadingProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void ESSReadingProfile::Clear() {
-// @@protoc_insertion_point(message_clear_start:essmodule.ESSReadingProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
-    delete readingmessageinfo_;
-  }
-  readingmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && ess_ != nullptr) {
-    delete ess_;
-  }
-  ess_ = nullptr;
-  if (GetArena() == nullptr && essreading_ != nullptr) {
-    delete essreading_;
-  }
-  essreading_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* ESSReadingProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_readingmessageinfo(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_ess(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .essmodule.ESSReading essReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_essreading(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ESSReadingProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSReadingProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_readingmessageinfo()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::readingmessageinfo(this), target, stream);
-  }
-
-  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ess()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::ess(this), target, stream);
-  }
-
-  // .essmodule.ESSReading essReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_essreading()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::essreading(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSReadingProfile)
-  return target;
-}
-
-size_t ESSReadingProfile::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSReadingProfile)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_readingmessageinfo()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmessageinfo_);
-  }
-
-  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ess()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ess_);
-  }
-
-  // .essmodule.ESSReading essReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_essreading()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *essreading_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void ESSReadingProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSReadingProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ESSReadingProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSReadingProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSReadingProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSReadingProfile)
-    MergeFrom(*source);
-  }
-}
-
-void ESSReadingProfile::MergeFrom(const ESSReadingProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSReadingProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_readingmessageinfo()) {
-    _internal_mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(from._internal_readingmessageinfo());
-  }
-  if (from.has_ess()) {
-    _internal_mutable_ess()->::commonmodule::ESS::MergeFrom(from._internal_ess());
-  }
-  if (from.has_essreading()) {
-    _internal_mutable_essreading()->::essmodule::ESSReading::MergeFrom(from._internal_essreading());
-  }
-}
-
-void ESSReadingProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSReadingProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void ESSReadingProfile::CopyFrom(const ESSReadingProfile& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSReadingProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ESSReadingProfile::IsInitialized() const {
-  return true;
-}
-
-void ESSReadingProfile::InternalSwap(ESSReadingProfile* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSReadingProfile, essreading_)
-      + sizeof(ESSReadingProfile::essreading_)
-      - PROTOBUF_FIELD_OFFSET(ESSReadingProfile, readingmessageinfo_)>(
-          reinterpret_cast<char*>(&readingmessageinfo_),
-          reinterpret_cast<char*>(&other->readingmessageinfo_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata ESSReadingProfile::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-class EssStatusZBAT::_Internal {
- public:
-  static const ::commonmodule::LogicalNodeForEventAndStatus& logicalnodeforeventandstatus(const EssStatusZBAT* msg);
-  static const ::commonmodule::StatusSPS& batst(const EssStatusZBAT* msg);
-  static const ::commonmodule::ENG_GridConnectModeKind& grimod(const EssStatusZBAT* msg);
-  static const ::commonmodule::MV& soc(const EssStatusZBAT* msg);
-  static const ::commonmodule::StatusSPS& stdby(const EssStatusZBAT* msg);
-};
-
-const ::commonmodule::LogicalNodeForEventAndStatus&
-EssStatusZBAT::_Internal::logicalnodeforeventandstatus(const EssStatusZBAT* msg) {
-  return *msg->logicalnodeforeventandstatus_;
-}
-const ::commonmodule::StatusSPS&
-EssStatusZBAT::_Internal::batst(const EssStatusZBAT* msg) {
-  return *msg->batst_;
-}
-const ::commonmodule::ENG_GridConnectModeKind&
-EssStatusZBAT::_Internal::grimod(const EssStatusZBAT* msg) {
-  return *msg->grimod_;
-}
-const ::commonmodule::MV&
-EssStatusZBAT::_Internal::soc(const EssStatusZBAT* msg) {
-  return *msg->soc_;
-}
-const ::commonmodule::StatusSPS&
-EssStatusZBAT::_Internal::stdby(const EssStatusZBAT* msg) {
-  return *msg->stdby_;
-}
-void EssStatusZBAT::clear_logicalnodeforeventandstatus() {
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
-    delete logicalnodeforeventandstatus_;
-  }
-  logicalnodeforeventandstatus_ = nullptr;
-}
-void EssStatusZBAT::clear_batst() {
-  if (GetArena() == nullptr && batst_ != nullptr) {
-    delete batst_;
-  }
-  batst_ = nullptr;
-}
-void EssStatusZBAT::clear_grimod() {
-  if (GetArena() == nullptr && grimod_ != nullptr) {
-    delete grimod_;
-  }
-  grimod_ = nullptr;
-}
-void EssStatusZBAT::clear_soc() {
-  if (GetArena() == nullptr && soc_ != nullptr) {
-    delete soc_;
-  }
-  soc_ = nullptr;
-}
-void EssStatusZBAT::clear_stdby() {
-  if (GetArena() == nullptr && stdby_ != nullptr) {
-    delete stdby_;
-  }
-  stdby_ = nullptr;
-}
-EssStatusZBAT::EssStatusZBAT(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.EssStatusZBAT)
-}
-EssStatusZBAT::EssStatusZBAT(const EssStatusZBAT& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_logicalnodeforeventandstatus()) {
-    logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from.logicalnodeforeventandstatus_);
-  } else {
-    logicalnodeforeventandstatus_ = nullptr;
-  }
-  if (from._internal_has_batst()) {
-    batst_ = new ::commonmodule::StatusSPS(*from.batst_);
-  } else {
-    batst_ = nullptr;
-  }
-  if (from._internal_has_grimod()) {
-    grimod_ = new ::commonmodule::ENG_GridConnectModeKind(*from.grimod_);
-  } else {
-    grimod_ = nullptr;
-  }
-  if (from._internal_has_soc()) {
-    soc_ = new ::commonmodule::MV(*from.soc_);
-  } else {
-    soc_ = nullptr;
-  }
-  if (from._internal_has_stdby()) {
-    stdby_ = new ::commonmodule::StatusSPS(*from.stdby_);
-  } else {
-    stdby_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:essmodule.EssStatusZBAT)
-}
-
-void EssStatusZBAT::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&stdby_) -
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(stdby_));
-}
-
-EssStatusZBAT::~EssStatusZBAT() {
-  // @@protoc_insertion_point(destructor:essmodule.EssStatusZBAT)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void EssStatusZBAT::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete logicalnodeforeventandstatus_;
-  if (this != internal_default_instance()) delete batst_;
-  if (this != internal_default_instance()) delete grimod_;
-  if (this != internal_default_instance()) delete soc_;
-  if (this != internal_default_instance()) delete stdby_;
-}
-
-void EssStatusZBAT::ArenaDtor(void* object) {
-  EssStatusZBAT* _this = reinterpret_cast< EssStatusZBAT* >(object);
-  (void)_this;
-}
-void EssStatusZBAT::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void EssStatusZBAT::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void EssStatusZBAT::Clear() {
-// @@protoc_insertion_point(message_clear_start:essmodule.EssStatusZBAT)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
-    delete logicalnodeforeventandstatus_;
-  }
-  logicalnodeforeventandstatus_ = nullptr;
-  if (GetArena() == nullptr && batst_ != nullptr) {
-    delete batst_;
-  }
-  batst_ = nullptr;
-  if (GetArena() == nullptr && grimod_ != nullptr) {
-    delete grimod_;
-  }
-  grimod_ = nullptr;
-  if (GetArena() == nullptr && soc_ != nullptr) {
-    delete soc_;
-  }
-  soc_ = nullptr;
-  if (GetArena() == nullptr && stdby_ != nullptr) {
-    delete stdby_;
-  }
-  stdby_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* EssStatusZBAT::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforeventandstatus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS BatSt = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_batst(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ENG_GridConnectModeKind GriMod = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_grimod(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.MV Soc = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_soc(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.StatusSPS Stdby = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_stdby(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* EssStatusZBAT::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.EssStatusZBAT)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforeventandstatus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnodeforeventandstatus(this), target, stream);
-  }
-
-  // .commonmodule.StatusSPS BatSt = 2;
-  if (this->has_batst()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::batst(this), target, stream);
-  }
-
-  // .commonmodule.ENG_GridConnectModeKind GriMod = 3;
-  if (this->has_grimod()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::grimod(this), target, stream);
-  }
-
-  // .commonmodule.MV Soc = 4;
-  if (this->has_soc()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::soc(this), target, stream);
-  }
-
-  // .commonmodule.StatusSPS Stdby = 5;
-  if (this->has_stdby()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::stdby(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:essmodule.EssStatusZBAT)
-  return target;
-}
-
-size_t EssStatusZBAT::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:essmodule.EssStatusZBAT)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforeventandstatus()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *logicalnodeforeventandstatus_);
-  }
-
-  // .commonmodule.StatusSPS BatSt = 2;
-  if (this->has_batst()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *batst_);
-  }
-
-  // .commonmodule.ENG_GridConnectModeKind GriMod = 3;
-  if (this->has_grimod()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *grimod_);
-  }
-
-  // .commonmodule.MV Soc = 4;
-  if (this->has_soc()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *soc_);
-  }
-
-  // .commonmodule.StatusSPS Stdby = 5;
-  if (this->has_stdby()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *stdby_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void EssStatusZBAT::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.EssStatusZBAT)
-  GOOGLE_DCHECK_NE(&from, this);
-  const EssStatusZBAT* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<EssStatusZBAT>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.EssStatusZBAT)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.EssStatusZBAT)
-    MergeFrom(*source);
-  }
-}
-
-void EssStatusZBAT::MergeFrom(const EssStatusZBAT& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.EssStatusZBAT)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_logicalnodeforeventandstatus()) {
-    _internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from._internal_logicalnodeforeventandstatus());
-  }
-  if (from.has_batst()) {
-    _internal_mutable_batst()->::commonmodule::StatusSPS::MergeFrom(from._internal_batst());
-  }
-  if (from.has_grimod()) {
-    _internal_mutable_grimod()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from._internal_grimod());
-  }
-  if (from.has_soc()) {
-    _internal_mutable_soc()->::commonmodule::MV::MergeFrom(from._internal_soc());
-  }
-  if (from.has_stdby()) {
-    _internal_mutable_stdby()->::commonmodule::StatusSPS::MergeFrom(from._internal_stdby());
-  }
-}
-
-void EssStatusZBAT::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.EssStatusZBAT)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void EssStatusZBAT::CopyFrom(const EssStatusZBAT& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.EssStatusZBAT)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool EssStatusZBAT::IsInitialized() const {
-  return true;
-}
-
-void EssStatusZBAT::InternalSwap(EssStatusZBAT* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(EssStatusZBAT, stdby_)
-      + sizeof(EssStatusZBAT::stdby_)
-      - PROTOBUF_FIELD_OFFSET(EssStatusZBAT, logicalnodeforeventandstatus_)>(
-          reinterpret_cast<char*>(&logicalnodeforeventandstatus_),
-          reinterpret_cast<char*>(&other->logicalnodeforeventandstatus_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata EssStatusZBAT::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-class ESSStatusZGEN::_Internal {
- public:
-  static const ::essmodule::ESSEventAndStatusZGEN& esseventandstatuszgen(const ESSStatusZGEN* msg);
-};
-
-const ::essmodule::ESSEventAndStatusZGEN&
-ESSStatusZGEN::_Internal::esseventandstatuszgen(const ESSStatusZGEN* msg) {
-  return *msg->esseventandstatuszgen_;
-}
-ESSStatusZGEN::ESSStatusZGEN(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSStatusZGEN)
-}
-ESSStatusZGEN::ESSStatusZGEN(const ESSStatusZGEN& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_esseventandstatuszgen()) {
-    esseventandstatuszgen_ = new ::essmodule::ESSEventAndStatusZGEN(*from.esseventandstatuszgen_);
-  } else {
-    esseventandstatuszgen_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:essmodule.ESSStatusZGEN)
-}
-
-void ESSStatusZGEN::SharedCtor() {
-esseventandstatuszgen_ = nullptr;
-}
-
-ESSStatusZGEN::~ESSStatusZGEN() {
-  // @@protoc_insertion_point(destructor:essmodule.ESSStatusZGEN)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void ESSStatusZGEN::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete esseventandstatuszgen_;
-}
-
-void ESSStatusZGEN::ArenaDtor(void* object) {
-  ESSStatusZGEN* _this = reinterpret_cast< ESSStatusZGEN* >(object);
-  (void)_this;
-}
-void ESSStatusZGEN::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void ESSStatusZGEN::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void ESSStatusZGEN::Clear() {
-// @@protoc_insertion_point(message_clear_start:essmodule.ESSStatusZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && esseventandstatuszgen_ != nullptr) {
-    delete esseventandstatuszgen_;
-  }
-  esseventandstatuszgen_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* ESSStatusZGEN::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_esseventandstatuszgen(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ESSStatusZGEN::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSStatusZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-  if (this->has_esseventandstatuszgen()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::esseventandstatuszgen(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSStatusZGEN)
-  return target;
-}
-
-size_t ESSStatusZGEN::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSStatusZGEN)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-  if (this->has_esseventandstatuszgen()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *esseventandstatuszgen_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void ESSStatusZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSStatusZGEN)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ESSStatusZGEN* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSStatusZGEN>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSStatusZGEN)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSStatusZGEN)
-    MergeFrom(*source);
-  }
-}
-
-void ESSStatusZGEN::MergeFrom(const ESSStatusZGEN& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSStatusZGEN)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_esseventandstatuszgen()) {
-    _internal_mutable_esseventandstatuszgen()->::essmodule::ESSEventAndStatusZGEN::MergeFrom(from._internal_esseventandstatuszgen());
-  }
-}
-
-void ESSStatusZGEN::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSStatusZGEN)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void ESSStatusZGEN::CopyFrom(const ESSStatusZGEN& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSStatusZGEN)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ESSStatusZGEN::IsInitialized() const {
-  return true;
-}
-
-void ESSStatusZGEN::InternalSwap(ESSStatusZGEN* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(esseventandstatuszgen_, other->esseventandstatuszgen_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata ESSStatusZGEN::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-class ESSStatus::_Internal {
- public:
-  static const ::commonmodule::StatusValue& statusvalue(const ESSStatus* msg);
-  static const ::essmodule::EssStatusZBAT& essstatuszbat(const ESSStatus* msg);
-  static const ::essmodule::ESSStatusZGEN& essstatuszgen(const ESSStatus* msg);
-};
-
-const ::commonmodule::StatusValue&
-ESSStatus::_Internal::statusvalue(const ESSStatus* msg) {
-  return *msg->statusvalue_;
-}
-const ::essmodule::EssStatusZBAT&
-ESSStatus::_Internal::essstatuszbat(const ESSStatus* msg) {
-  return *msg->essstatuszbat_;
-}
-const ::essmodule::ESSStatusZGEN&
-ESSStatus::_Internal::essstatuszgen(const ESSStatus* msg) {
-  return *msg->essstatuszgen_;
-}
-void ESSStatus::clear_statusvalue() {
-  if (GetArena() == nullptr && statusvalue_ != nullptr) {
-    delete statusvalue_;
-  }
-  statusvalue_ = nullptr;
-}
-ESSStatus::ESSStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSStatus)
-}
-ESSStatus::ESSStatus(const ESSStatus& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_statusvalue()) {
-    statusvalue_ = new ::commonmodule::StatusValue(*from.statusvalue_);
-  } else {
-    statusvalue_ = nullptr;
-  }
-  if (from._internal_has_essstatuszbat()) {
-    essstatuszbat_ = new ::essmodule::EssStatusZBAT(*from.essstatuszbat_);
-  } else {
-    essstatuszbat_ = nullptr;
-  }
-  if (from._internal_has_essstatuszgen()) {
-    essstatuszgen_ = new ::essmodule::ESSStatusZGEN(*from.essstatuszgen_);
-  } else {
-    essstatuszgen_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:essmodule.ESSStatus)
-}
-
-void ESSStatus::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&statusvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&essstatuszgen_) -
-    reinterpret_cast<char*>(&statusvalue_)) + sizeof(essstatuszgen_));
-}
-
-ESSStatus::~ESSStatus() {
-  // @@protoc_insertion_point(destructor:essmodule.ESSStatus)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void ESSStatus::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete statusvalue_;
-  if (this != internal_default_instance()) delete essstatuszbat_;
-  if (this != internal_default_instance()) delete essstatuszgen_;
-}
-
-void ESSStatus::ArenaDtor(void* object) {
-  ESSStatus* _this = reinterpret_cast< ESSStatus* >(object);
-  (void)_this;
-}
-void ESSStatus::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void ESSStatus::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void ESSStatus::Clear() {
-// @@protoc_insertion_point(message_clear_start:essmodule.ESSStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && statusvalue_ != nullptr) {
-    delete statusvalue_;
-  }
-  statusvalue_ = nullptr;
-  if (GetArena() == nullptr && essstatuszbat_ != nullptr) {
-    delete essstatuszbat_;
-  }
-  essstatuszbat_ = nullptr;
-  if (GetArena() == nullptr && essstatuszgen_ != nullptr) {
-    delete essstatuszgen_;
-  }
-  essstatuszgen_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* ESSStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_statusvalue(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .essmodule.EssStatusZBAT essStatusZBAT = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_essstatuszbat(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .essmodule.ESSStatusZGEN essStatusZGEN = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_essstatuszgen(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ESSStatus::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusvalue()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::statusvalue(this), target, stream);
-  }
-
-  // .essmodule.EssStatusZBAT essStatusZBAT = 2;
-  if (this->has_essstatuszbat()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::essstatuszbat(this), target, stream);
-  }
-
-  // .essmodule.ESSStatusZGEN essStatusZGEN = 3;
-  if (this->has_essstatuszgen()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::essstatuszgen(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSStatus)
-  return target;
-}
-
-size_t ESSStatus::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSStatus)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusvalue()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *statusvalue_);
-  }
-
-  // .essmodule.EssStatusZBAT essStatusZBAT = 2;
-  if (this->has_essstatuszbat()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *essstatuszbat_);
-  }
-
-  // .essmodule.ESSStatusZGEN essStatusZGEN = 3;
-  if (this->has_essstatuszgen()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *essstatuszgen_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void ESSStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ESSStatus* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSStatus>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSStatus)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSStatus)
-    MergeFrom(*source);
-  }
-}
-
-void ESSStatus::MergeFrom(const ESSStatus& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_statusvalue()) {
-    _internal_mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(from._internal_statusvalue());
-  }
-  if (from.has_essstatuszbat()) {
-    _internal_mutable_essstatuszbat()->::essmodule::EssStatusZBAT::MergeFrom(from._internal_essstatuszbat());
-  }
-  if (from.has_essstatuszgen()) {
-    _internal_mutable_essstatuszgen()->::essmodule::ESSStatusZGEN::MergeFrom(from._internal_essstatuszgen());
-  }
-}
-
-void ESSStatus::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSStatus)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void ESSStatus::CopyFrom(const ESSStatus& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSStatus)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ESSStatus::IsInitialized() const {
-  return true;
-}
-
-void ESSStatus::InternalSwap(ESSStatus* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSStatus, essstatuszgen_)
-      + sizeof(ESSStatus::essstatuszgen_)
-      - PROTOBUF_FIELD_OFFSET(ESSStatus, statusvalue_)>(
-          reinterpret_cast<char*>(&statusvalue_),
-          reinterpret_cast<char*>(&other->statusvalue_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata ESSStatus::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-class ESSStatusProfile::_Internal {
- public:
-  static const ::commonmodule::StatusMessageInfo& statusmessageinfo(const ESSStatusProfile* msg);
-  static const ::commonmodule::ESS& ess(const ESSStatusProfile* msg);
-  static const ::essmodule::ESSStatus& essstatus(const ESSStatusProfile* msg);
-};
-
-const ::commonmodule::StatusMessageInfo&
-ESSStatusProfile::_Internal::statusmessageinfo(const ESSStatusProfile* msg) {
-  return *msg->statusmessageinfo_;
-}
-const ::commonmodule::ESS&
-ESSStatusProfile::_Internal::ess(const ESSStatusProfile* msg) {
-  return *msg->ess_;
-}
-const ::essmodule::ESSStatus&
-ESSStatusProfile::_Internal::essstatus(const ESSStatusProfile* msg) {
-  return *msg->essstatus_;
-}
-void ESSStatusProfile::clear_statusmessageinfo() {
-  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
-    delete statusmessageinfo_;
-  }
-  statusmessageinfo_ = nullptr;
-}
-void ESSStatusProfile::clear_ess() {
-  if (GetArena() == nullptr && ess_ != nullptr) {
-    delete ess_;
-  }
-  ess_ = nullptr;
-}
-ESSStatusProfile::ESSStatusProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:essmodule.ESSStatusProfile)
-}
-ESSStatusProfile::ESSStatusProfile(const ESSStatusProfile& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_statusmessageinfo()) {
-    statusmessageinfo_ = new ::commonmodule::StatusMessageInfo(*from.statusmessageinfo_);
-  } else {
-    statusmessageinfo_ = nullptr;
-  }
-  if (from._internal_has_ess()) {
-    ess_ = new ::commonmodule::ESS(*from.ess_);
-  } else {
-    ess_ = nullptr;
-  }
-  if (from._internal_has_essstatus()) {
-    essstatus_ = new ::essmodule::ESSStatus(*from.essstatus_);
-  } else {
-    essstatus_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:essmodule.ESSStatusProfile)
-}
-
-void ESSStatusProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&statusmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&essstatus_) -
-    reinterpret_cast<char*>(&statusmessageinfo_)) + sizeof(essstatus_));
-}
-
-ESSStatusProfile::~ESSStatusProfile() {
-  // @@protoc_insertion_point(destructor:essmodule.ESSStatusProfile)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void ESSStatusProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete statusmessageinfo_;
-  if (this != internal_default_instance()) delete ess_;
-  if (this != internal_default_instance()) delete essstatus_;
-}
-
-void ESSStatusProfile::ArenaDtor(void* object) {
-  ESSStatusProfile* _this = reinterpret_cast< ESSStatusProfile* >(object);
-  (void)_this;
-}
-void ESSStatusProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void ESSStatusProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void ESSStatusProfile::Clear() {
-// @@protoc_insertion_point(message_clear_start:essmodule.ESSStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
-    delete statusmessageinfo_;
-  }
-  statusmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && ess_ != nullptr) {
-    delete ess_;
-  }
-  ess_ = nullptr;
-  if (GetArena() == nullptr && essstatus_ != nullptr) {
-    delete essstatus_;
-  }
-  essstatus_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* ESSStatusProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_statusmessageinfo(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_ess(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .essmodule.ESSStatus essStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_essstatus(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* ESSStatusProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusmessageinfo()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::statusmessageinfo(this), target, stream);
-  }
-
-  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ess()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::ess(this), target, stream);
-  }
-
-  // .essmodule.ESSStatus essStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_essstatus()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::essstatus(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSStatusProfile)
-  return target;
-}
-
-size_t ESSStatusProfile::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSStatusProfile)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusmessageinfo()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *statusmessageinfo_);
-  }
-
-  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ess()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ess_);
-  }
-
-  // .essmodule.ESSStatus essStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_essstatus()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *essstatus_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void ESSStatusProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSStatusProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ESSStatusProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSStatusProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSStatusProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSStatusProfile)
-    MergeFrom(*source);
-  }
-}
-
-void ESSStatusProfile::MergeFrom(const ESSStatusProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSStatusProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_statusmessageinfo()) {
-    _internal_mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(from._internal_statusmessageinfo());
-  }
-  if (from.has_ess()) {
-    _internal_mutable_ess()->::commonmodule::ESS::MergeFrom(from._internal_ess());
-  }
-  if (from.has_essstatus()) {
-    _internal_mutable_essstatus()->::essmodule::ESSStatus::MergeFrom(from._internal_essstatus());
-  }
-}
-
-void ESSStatusProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSStatusProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void ESSStatusProfile::CopyFrom(const ESSStatusProfile& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSStatusProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ESSStatusProfile::IsInitialized() const {
-  return true;
-}
-
-void ESSStatusProfile::InternalSwap(ESSStatusProfile* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSStatusProfile, essstatus_)
-      + sizeof(ESSStatusProfile::essstatus_)
-      - PROTOBUF_FIELD_OFFSET(ESSStatusProfile, statusmessageinfo_)>(
-          reinterpret_cast<char*>(&statusmessageinfo_),
-          reinterpret_cast<char*>(&other->statusmessageinfo_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata ESSStatusProfile::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
 // ===================================================================
 
 class ESSPoint::_Internal {
  public:
   static const ::commonmodule::ControlSPC& blackstartenabled(const ESSPoint* msg);
-  static const ::commonmodule::ControlSPC& frequencysetpointenabled(const ESSPoint* msg);
   static const ::essmodule::ESSFunction& function(const ESSPoint* msg);
   static const ::commonmodule::ENG_GridConnectModeKind& mode(const ESSPoint* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pcthzdroop(const ESSPoint* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pctvdroop(const ESSPoint* msg);
   static const ::commonmodule::RampRate& ramprates(const ESSPoint* msg);
-  static const ::commonmodule::ControlSPC& reactivepwrsetpointenabled(const ESSPoint* msg);
-  static const ::commonmodule::ControlSPC& realpwrsetpointenabled(const ESSPoint* msg);
   static const ::commonmodule::ControlSPC& reset(const ESSPoint* msg);
   static const ::commonmodule::Optional_StateKind& state(const ESSPoint* msg);
-  static const ::commonmodule::ControlSPC& syncbacktogrid(const ESSPoint* msg);
   static const ::commonmodule::ControlSPC& transtoislndongridlossenabled(const ESSPoint* msg);
-  static const ::commonmodule::ControlSPC& voltagesetpointenabled(const ESSPoint* msg);
-  static const ::commonmodule::ControlTimestamp& starttime(const ESSPoint* msg);
+  static const ::commonmodule::EnterServiceAPC& enterserviceoperation(const ESSPoint* msg);
+  static const ::commonmodule::HzWAPC& hzwoperation(const ESSPoint* msg);
+  static const ::commonmodule::LimitWAPC& limitwoperation(const ESSPoint* msg);
+  static const ::commonmodule::PFSPC& pfoperation(const ESSPoint* msg);
+  static const ::commonmodule::TmHzCSG& tmhztripoperation(const ESSPoint* msg);
+  static const ::commonmodule::TmVoltCSG& tmvolttripoperation(const ESSPoint* msg);
+  static const ::commonmodule::VarSPC& varoperation(const ESSPoint* msg);
+  static const ::commonmodule::VoltVarCSG& voltvaroperation(const ESSPoint* msg);
+  static const ::commonmodule::VoltWCSG& voltwoperation(const ESSPoint* msg);
+  static const ::commonmodule::WVarCSG& wvaroperation(const ESSPoint* msg);
+  static const ::commonmodule::WSPC& woperation(const ESSPoint* msg);
 };
 
 const ::commonmodule::ControlSPC&
 ESSPoint::_Internal::blackstartenabled(const ESSPoint* msg) {
-  return *msg->blackstartenabled_;
-}
-const ::commonmodule::ControlSPC&
-ESSPoint::_Internal::frequencysetpointenabled(const ESSPoint* msg) {
-  return *msg->frequencysetpointenabled_;
+  return *msg->_impl_.blackstartenabled_;
 }
 const ::essmodule::ESSFunction&
 ESSPoint::_Internal::function(const ESSPoint* msg) {
-  return *msg->function_;
+  return *msg->_impl_.function_;
 }
 const ::commonmodule::ENG_GridConnectModeKind&
 ESSPoint::_Internal::mode(const ESSPoint* msg) {
-  return *msg->mode_;
-}
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-ESSPoint::_Internal::pcthzdroop(const ESSPoint* msg) {
-  return *msg->pcthzdroop_;
-}
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-ESSPoint::_Internal::pctvdroop(const ESSPoint* msg) {
-  return *msg->pctvdroop_;
+  return *msg->_impl_.mode_;
 }
 const ::commonmodule::RampRate&
 ESSPoint::_Internal::ramprates(const ESSPoint* msg) {
-  return *msg->ramprates_;
-}
-const ::commonmodule::ControlSPC&
-ESSPoint::_Internal::reactivepwrsetpointenabled(const ESSPoint* msg) {
-  return *msg->reactivepwrsetpointenabled_;
-}
-const ::commonmodule::ControlSPC&
-ESSPoint::_Internal::realpwrsetpointenabled(const ESSPoint* msg) {
-  return *msg->realpwrsetpointenabled_;
+  return *msg->_impl_.ramprates_;
 }
 const ::commonmodule::ControlSPC&
 ESSPoint::_Internal::reset(const ESSPoint* msg) {
-  return *msg->reset_;
+  return *msg->_impl_.reset_;
 }
 const ::commonmodule::Optional_StateKind&
 ESSPoint::_Internal::state(const ESSPoint* msg) {
-  return *msg->state_;
-}
-const ::commonmodule::ControlSPC&
-ESSPoint::_Internal::syncbacktogrid(const ESSPoint* msg) {
-  return *msg->syncbacktogrid_;
+  return *msg->_impl_.state_;
 }
 const ::commonmodule::ControlSPC&
 ESSPoint::_Internal::transtoislndongridlossenabled(const ESSPoint* msg) {
-  return *msg->transtoislndongridlossenabled_;
+  return *msg->_impl_.transtoislndongridlossenabled_;
 }
-const ::commonmodule::ControlSPC&
-ESSPoint::_Internal::voltagesetpointenabled(const ESSPoint* msg) {
-  return *msg->voltagesetpointenabled_;
+const ::commonmodule::EnterServiceAPC&
+ESSPoint::_Internal::enterserviceoperation(const ESSPoint* msg) {
+  return *msg->_impl_.enterserviceoperation_;
 }
-const ::commonmodule::ControlTimestamp&
-ESSPoint::_Internal::starttime(const ESSPoint* msg) {
-  return *msg->starttime_;
+const ::commonmodule::HzWAPC&
+ESSPoint::_Internal::hzwoperation(const ESSPoint* msg) {
+  return *msg->_impl_.hzwoperation_;
+}
+const ::commonmodule::LimitWAPC&
+ESSPoint::_Internal::limitwoperation(const ESSPoint* msg) {
+  return *msg->_impl_.limitwoperation_;
+}
+const ::commonmodule::PFSPC&
+ESSPoint::_Internal::pfoperation(const ESSPoint* msg) {
+  return *msg->_impl_.pfoperation_;
+}
+const ::commonmodule::TmHzCSG&
+ESSPoint::_Internal::tmhztripoperation(const ESSPoint* msg) {
+  return *msg->_impl_.tmhztripoperation_;
+}
+const ::commonmodule::TmVoltCSG&
+ESSPoint::_Internal::tmvolttripoperation(const ESSPoint* msg) {
+  return *msg->_impl_.tmvolttripoperation_;
+}
+const ::commonmodule::VarSPC&
+ESSPoint::_Internal::varoperation(const ESSPoint* msg) {
+  return *msg->_impl_.varoperation_;
+}
+const ::commonmodule::VoltVarCSG&
+ESSPoint::_Internal::voltvaroperation(const ESSPoint* msg) {
+  return *msg->_impl_.voltvaroperation_;
+}
+const ::commonmodule::VoltWCSG&
+ESSPoint::_Internal::voltwoperation(const ESSPoint* msg) {
+  return *msg->_impl_.voltwoperation_;
+}
+const ::commonmodule::WVarCSG&
+ESSPoint::_Internal::wvaroperation(const ESSPoint* msg) {
+  return *msg->_impl_.wvaroperation_;
+}
+const ::commonmodule::WSPC&
+ESSPoint::_Internal::woperation(const ESSPoint* msg) {
+  return *msg->_impl_.woperation_;
 }
 void ESSPoint::clear_blackstartenabled() {
-  if (GetArena() == nullptr && blackstartenabled_ != nullptr) {
-    delete blackstartenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.blackstartenabled_ != nullptr) {
+    delete _impl_.blackstartenabled_;
   }
-  blackstartenabled_ = nullptr;
-}
-void ESSPoint::clear_frequencysetpointenabled() {
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
-    delete frequencysetpointenabled_;
-  }
-  frequencysetpointenabled_ = nullptr;
+  _impl_.blackstartenabled_ = nullptr;
 }
 void ESSPoint::clear_mode() {
-  if (GetArena() == nullptr && mode_ != nullptr) {
-    delete mode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.mode_ != nullptr) {
+    delete _impl_.mode_;
   }
-  mode_ = nullptr;
-}
-void ESSPoint::clear_pcthzdroop() {
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
-    delete pcthzdroop_;
-  }
-  pcthzdroop_ = nullptr;
-}
-void ESSPoint::clear_pctvdroop() {
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
-    delete pctvdroop_;
-  }
-  pctvdroop_ = nullptr;
+  _impl_.mode_ = nullptr;
 }
 void ESSPoint::clear_ramprates() {
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
-    delete ramprates_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ramprates_ != nullptr) {
+    delete _impl_.ramprates_;
   }
-  ramprates_ = nullptr;
-}
-void ESSPoint::clear_reactivepwrsetpointenabled() {
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
-    delete reactivepwrsetpointenabled_;
-  }
-  reactivepwrsetpointenabled_ = nullptr;
-}
-void ESSPoint::clear_realpwrsetpointenabled() {
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
-    delete realpwrsetpointenabled_;
-  }
-  realpwrsetpointenabled_ = nullptr;
+  _impl_.ramprates_ = nullptr;
 }
 void ESSPoint::clear_reset() {
-  if (GetArena() == nullptr && reset_ != nullptr) {
-    delete reset_;
+  if (GetArenaForAllocation() == nullptr && _impl_.reset_ != nullptr) {
+    delete _impl_.reset_;
   }
-  reset_ = nullptr;
+  _impl_.reset_ = nullptr;
 }
 void ESSPoint::clear_state() {
-  if (GetArena() == nullptr && state_ != nullptr) {
-    delete state_;
+  if (GetArenaForAllocation() == nullptr && _impl_.state_ != nullptr) {
+    delete _impl_.state_;
   }
-  state_ = nullptr;
-}
-void ESSPoint::clear_syncbacktogrid() {
-  if (GetArena() == nullptr && syncbacktogrid_ != nullptr) {
-    delete syncbacktogrid_;
-  }
-  syncbacktogrid_ = nullptr;
+  _impl_.state_ = nullptr;
 }
 void ESSPoint::clear_transtoislndongridlossenabled() {
-  if (GetArena() == nullptr && transtoislndongridlossenabled_ != nullptr) {
-    delete transtoislndongridlossenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.transtoislndongridlossenabled_ != nullptr) {
+    delete _impl_.transtoislndongridlossenabled_;
   }
-  transtoislndongridlossenabled_ = nullptr;
+  _impl_.transtoislndongridlossenabled_ = nullptr;
 }
-void ESSPoint::clear_voltagesetpointenabled() {
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
-    delete voltagesetpointenabled_;
+void ESSPoint::clear_enterserviceoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.enterserviceoperation_ != nullptr) {
+    delete _impl_.enterserviceoperation_;
   }
-  voltagesetpointenabled_ = nullptr;
+  _impl_.enterserviceoperation_ = nullptr;
 }
-void ESSPoint::clear_starttime() {
-  if (GetArena() == nullptr && starttime_ != nullptr) {
-    delete starttime_;
+void ESSPoint::clear_hzwoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.hzwoperation_ != nullptr) {
+    delete _impl_.hzwoperation_;
   }
-  starttime_ = nullptr;
+  _impl_.hzwoperation_ = nullptr;
+}
+void ESSPoint::clear_limitwoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.limitwoperation_ != nullptr) {
+    delete _impl_.limitwoperation_;
+  }
+  _impl_.limitwoperation_ = nullptr;
+}
+void ESSPoint::clear_pfoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.pfoperation_ != nullptr) {
+    delete _impl_.pfoperation_;
+  }
+  _impl_.pfoperation_ = nullptr;
+}
+void ESSPoint::clear_tmhztripoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.tmhztripoperation_ != nullptr) {
+    delete _impl_.tmhztripoperation_;
+  }
+  _impl_.tmhztripoperation_ = nullptr;
+}
+void ESSPoint::clear_tmvolttripoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.tmvolttripoperation_ != nullptr) {
+    delete _impl_.tmvolttripoperation_;
+  }
+  _impl_.tmvolttripoperation_ = nullptr;
+}
+void ESSPoint::clear_varoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.varoperation_ != nullptr) {
+    delete _impl_.varoperation_;
+  }
+  _impl_.varoperation_ = nullptr;
+}
+void ESSPoint::clear_voltvaroperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.voltvaroperation_ != nullptr) {
+    delete _impl_.voltvaroperation_;
+  }
+  _impl_.voltvaroperation_ = nullptr;
+}
+void ESSPoint::clear_voltwoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.voltwoperation_ != nullptr) {
+    delete _impl_.voltwoperation_;
+  }
+  _impl_.voltwoperation_ = nullptr;
+}
+void ESSPoint::clear_wvaroperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.wvaroperation_ != nullptr) {
+    delete _impl_.wvaroperation_;
+  }
+  _impl_.wvaroperation_ = nullptr;
+}
+void ESSPoint::clear_woperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.woperation_ != nullptr) {
+    delete _impl_.woperation_;
+  }
+  _impl_.woperation_ = nullptr;
 }
 ESSPoint::ESSPoint(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:essmodule.ESSPoint)
 }
 ESSPoint::ESSPoint(const ESSPoint& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSPoint* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.blackstartenabled_){nullptr}
+    , decltype(_impl_.function_){nullptr}
+    , decltype(_impl_.mode_){nullptr}
+    , decltype(_impl_.ramprates_){nullptr}
+    , decltype(_impl_.reset_){nullptr}
+    , decltype(_impl_.state_){nullptr}
+    , decltype(_impl_.transtoislndongridlossenabled_){nullptr}
+    , decltype(_impl_.enterserviceoperation_){nullptr}
+    , decltype(_impl_.hzwoperation_){nullptr}
+    , decltype(_impl_.limitwoperation_){nullptr}
+    , decltype(_impl_.pfoperation_){nullptr}
+    , decltype(_impl_.tmhztripoperation_){nullptr}
+    , decltype(_impl_.tmvolttripoperation_){nullptr}
+    , decltype(_impl_.varoperation_){nullptr}
+    , decltype(_impl_.voltvaroperation_){nullptr}
+    , decltype(_impl_.voltwoperation_){nullptr}
+    , decltype(_impl_.wvaroperation_){nullptr}
+    , decltype(_impl_.woperation_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_blackstartenabled()) {
-    blackstartenabled_ = new ::commonmodule::ControlSPC(*from.blackstartenabled_);
-  } else {
-    blackstartenabled_ = nullptr;
-  }
-  if (from._internal_has_frequencysetpointenabled()) {
-    frequencysetpointenabled_ = new ::commonmodule::ControlSPC(*from.frequencysetpointenabled_);
-  } else {
-    frequencysetpointenabled_ = nullptr;
+    _this->_impl_.blackstartenabled_ = new ::commonmodule::ControlSPC(*from._impl_.blackstartenabled_);
   }
   if (from._internal_has_function()) {
-    function_ = new ::essmodule::ESSFunction(*from.function_);
-  } else {
-    function_ = nullptr;
+    _this->_impl_.function_ = new ::essmodule::ESSFunction(*from._impl_.function_);
   }
   if (from._internal_has_mode()) {
-    mode_ = new ::commonmodule::ENG_GridConnectModeKind(*from.mode_);
-  } else {
-    mode_ = nullptr;
-  }
-  if (from._internal_has_pcthzdroop()) {
-    pcthzdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pcthzdroop_);
-  } else {
-    pcthzdroop_ = nullptr;
-  }
-  if (from._internal_has_pctvdroop()) {
-    pctvdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pctvdroop_);
-  } else {
-    pctvdroop_ = nullptr;
+    _this->_impl_.mode_ = new ::commonmodule::ENG_GridConnectModeKind(*from._impl_.mode_);
   }
   if (from._internal_has_ramprates()) {
-    ramprates_ = new ::commonmodule::RampRate(*from.ramprates_);
-  } else {
-    ramprates_ = nullptr;
-  }
-  if (from._internal_has_reactivepwrsetpointenabled()) {
-    reactivepwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from.reactivepwrsetpointenabled_);
-  } else {
-    reactivepwrsetpointenabled_ = nullptr;
-  }
-  if (from._internal_has_realpwrsetpointenabled()) {
-    realpwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from.realpwrsetpointenabled_);
-  } else {
-    realpwrsetpointenabled_ = nullptr;
+    _this->_impl_.ramprates_ = new ::commonmodule::RampRate(*from._impl_.ramprates_);
   }
   if (from._internal_has_reset()) {
-    reset_ = new ::commonmodule::ControlSPC(*from.reset_);
-  } else {
-    reset_ = nullptr;
+    _this->_impl_.reset_ = new ::commonmodule::ControlSPC(*from._impl_.reset_);
   }
   if (from._internal_has_state()) {
-    state_ = new ::commonmodule::Optional_StateKind(*from.state_);
-  } else {
-    state_ = nullptr;
-  }
-  if (from._internal_has_syncbacktogrid()) {
-    syncbacktogrid_ = new ::commonmodule::ControlSPC(*from.syncbacktogrid_);
-  } else {
-    syncbacktogrid_ = nullptr;
+    _this->_impl_.state_ = new ::commonmodule::Optional_StateKind(*from._impl_.state_);
   }
   if (from._internal_has_transtoislndongridlossenabled()) {
-    transtoislndongridlossenabled_ = new ::commonmodule::ControlSPC(*from.transtoislndongridlossenabled_);
-  } else {
-    transtoislndongridlossenabled_ = nullptr;
+    _this->_impl_.transtoislndongridlossenabled_ = new ::commonmodule::ControlSPC(*from._impl_.transtoislndongridlossenabled_);
   }
-  if (from._internal_has_voltagesetpointenabled()) {
-    voltagesetpointenabled_ = new ::commonmodule::ControlSPC(*from.voltagesetpointenabled_);
-  } else {
-    voltagesetpointenabled_ = nullptr;
+  if (from._internal_has_enterserviceoperation()) {
+    _this->_impl_.enterserviceoperation_ = new ::commonmodule::EnterServiceAPC(*from._impl_.enterserviceoperation_);
   }
-  if (from._internal_has_starttime()) {
-    starttime_ = new ::commonmodule::ControlTimestamp(*from.starttime_);
-  } else {
-    starttime_ = nullptr;
+  if (from._internal_has_hzwoperation()) {
+    _this->_impl_.hzwoperation_ = new ::commonmodule::HzWAPC(*from._impl_.hzwoperation_);
+  }
+  if (from._internal_has_limitwoperation()) {
+    _this->_impl_.limitwoperation_ = new ::commonmodule::LimitWAPC(*from._impl_.limitwoperation_);
+  }
+  if (from._internal_has_pfoperation()) {
+    _this->_impl_.pfoperation_ = new ::commonmodule::PFSPC(*from._impl_.pfoperation_);
+  }
+  if (from._internal_has_tmhztripoperation()) {
+    _this->_impl_.tmhztripoperation_ = new ::commonmodule::TmHzCSG(*from._impl_.tmhztripoperation_);
+  }
+  if (from._internal_has_tmvolttripoperation()) {
+    _this->_impl_.tmvolttripoperation_ = new ::commonmodule::TmVoltCSG(*from._impl_.tmvolttripoperation_);
+  }
+  if (from._internal_has_varoperation()) {
+    _this->_impl_.varoperation_ = new ::commonmodule::VarSPC(*from._impl_.varoperation_);
+  }
+  if (from._internal_has_voltvaroperation()) {
+    _this->_impl_.voltvaroperation_ = new ::commonmodule::VoltVarCSG(*from._impl_.voltvaroperation_);
+  }
+  if (from._internal_has_voltwoperation()) {
+    _this->_impl_.voltwoperation_ = new ::commonmodule::VoltWCSG(*from._impl_.voltwoperation_);
+  }
+  if (from._internal_has_wvaroperation()) {
+    _this->_impl_.wvaroperation_ = new ::commonmodule::WVarCSG(*from._impl_.wvaroperation_);
+  }
+  if (from._internal_has_woperation()) {
+    _this->_impl_.woperation_ = new ::commonmodule::WSPC(*from._impl_.woperation_);
   }
   // @@protoc_insertion_point(copy_constructor:essmodule.ESSPoint)
 }
 
-void ESSPoint::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&blackstartenabled_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&starttime_) -
-    reinterpret_cast<char*>(&blackstartenabled_)) + sizeof(starttime_));
+inline void ESSPoint::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.blackstartenabled_){nullptr}
+    , decltype(_impl_.function_){nullptr}
+    , decltype(_impl_.mode_){nullptr}
+    , decltype(_impl_.ramprates_){nullptr}
+    , decltype(_impl_.reset_){nullptr}
+    , decltype(_impl_.state_){nullptr}
+    , decltype(_impl_.transtoislndongridlossenabled_){nullptr}
+    , decltype(_impl_.enterserviceoperation_){nullptr}
+    , decltype(_impl_.hzwoperation_){nullptr}
+    , decltype(_impl_.limitwoperation_){nullptr}
+    , decltype(_impl_.pfoperation_){nullptr}
+    , decltype(_impl_.tmhztripoperation_){nullptr}
+    , decltype(_impl_.tmvolttripoperation_){nullptr}
+    , decltype(_impl_.varoperation_){nullptr}
+    , decltype(_impl_.voltvaroperation_){nullptr}
+    , decltype(_impl_.voltwoperation_){nullptr}
+    , decltype(_impl_.wvaroperation_){nullptr}
+    , decltype(_impl_.woperation_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ESSPoint::~ESSPoint() {
   // @@protoc_insertion_point(destructor:essmodule.ESSPoint)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ESSPoint::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete blackstartenabled_;
-  if (this != internal_default_instance()) delete frequencysetpointenabled_;
-  if (this != internal_default_instance()) delete function_;
-  if (this != internal_default_instance()) delete mode_;
-  if (this != internal_default_instance()) delete pcthzdroop_;
-  if (this != internal_default_instance()) delete pctvdroop_;
-  if (this != internal_default_instance()) delete ramprates_;
-  if (this != internal_default_instance()) delete reactivepwrsetpointenabled_;
-  if (this != internal_default_instance()) delete realpwrsetpointenabled_;
-  if (this != internal_default_instance()) delete reset_;
-  if (this != internal_default_instance()) delete state_;
-  if (this != internal_default_instance()) delete syncbacktogrid_;
-  if (this != internal_default_instance()) delete transtoislndongridlossenabled_;
-  if (this != internal_default_instance()) delete voltagesetpointenabled_;
-  if (this != internal_default_instance()) delete starttime_;
+inline void ESSPoint::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.blackstartenabled_;
+  if (this != internal_default_instance()) delete _impl_.function_;
+  if (this != internal_default_instance()) delete _impl_.mode_;
+  if (this != internal_default_instance()) delete _impl_.ramprates_;
+  if (this != internal_default_instance()) delete _impl_.reset_;
+  if (this != internal_default_instance()) delete _impl_.state_;
+  if (this != internal_default_instance()) delete _impl_.transtoislndongridlossenabled_;
+  if (this != internal_default_instance()) delete _impl_.enterserviceoperation_;
+  if (this != internal_default_instance()) delete _impl_.hzwoperation_;
+  if (this != internal_default_instance()) delete _impl_.limitwoperation_;
+  if (this != internal_default_instance()) delete _impl_.pfoperation_;
+  if (this != internal_default_instance()) delete _impl_.tmhztripoperation_;
+  if (this != internal_default_instance()) delete _impl_.tmvolttripoperation_;
+  if (this != internal_default_instance()) delete _impl_.varoperation_;
+  if (this != internal_default_instance()) delete _impl_.voltvaroperation_;
+  if (this != internal_default_instance()) delete _impl_.voltwoperation_;
+  if (this != internal_default_instance()) delete _impl_.wvaroperation_;
+  if (this != internal_default_instance()) delete _impl_.woperation_;
 }
 
-void ESSPoint::ArenaDtor(void* object) {
-  ESSPoint* _this = reinterpret_cast< ESSPoint* >(object);
-  (void)_this;
-}
-void ESSPoint::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSPoint::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ESSPoint::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && blackstartenabled_ != nullptr) {
-    delete blackstartenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.blackstartenabled_ != nullptr) {
+    delete _impl_.blackstartenabled_;
   }
-  blackstartenabled_ = nullptr;
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
-    delete frequencysetpointenabled_;
+  _impl_.blackstartenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.function_ != nullptr) {
+    delete _impl_.function_;
   }
-  frequencysetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && function_ != nullptr) {
-    delete function_;
+  _impl_.function_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.mode_ != nullptr) {
+    delete _impl_.mode_;
   }
-  function_ = nullptr;
-  if (GetArena() == nullptr && mode_ != nullptr) {
-    delete mode_;
+  _impl_.mode_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ramprates_ != nullptr) {
+    delete _impl_.ramprates_;
   }
-  mode_ = nullptr;
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
-    delete pcthzdroop_;
+  _impl_.ramprates_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.reset_ != nullptr) {
+    delete _impl_.reset_;
   }
-  pcthzdroop_ = nullptr;
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
-    delete pctvdroop_;
+  _impl_.reset_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.state_ != nullptr) {
+    delete _impl_.state_;
   }
-  pctvdroop_ = nullptr;
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
-    delete ramprates_;
+  _impl_.state_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.transtoislndongridlossenabled_ != nullptr) {
+    delete _impl_.transtoislndongridlossenabled_;
   }
-  ramprates_ = nullptr;
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
-    delete reactivepwrsetpointenabled_;
+  _impl_.transtoislndongridlossenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.enterserviceoperation_ != nullptr) {
+    delete _impl_.enterserviceoperation_;
   }
-  reactivepwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
-    delete realpwrsetpointenabled_;
+  _impl_.enterserviceoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.hzwoperation_ != nullptr) {
+    delete _impl_.hzwoperation_;
   }
-  realpwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && reset_ != nullptr) {
-    delete reset_;
+  _impl_.hzwoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.limitwoperation_ != nullptr) {
+    delete _impl_.limitwoperation_;
   }
-  reset_ = nullptr;
-  if (GetArena() == nullptr && state_ != nullptr) {
-    delete state_;
+  _impl_.limitwoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.pfoperation_ != nullptr) {
+    delete _impl_.pfoperation_;
   }
-  state_ = nullptr;
-  if (GetArena() == nullptr && syncbacktogrid_ != nullptr) {
-    delete syncbacktogrid_;
+  _impl_.pfoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.tmhztripoperation_ != nullptr) {
+    delete _impl_.tmhztripoperation_;
   }
-  syncbacktogrid_ = nullptr;
-  if (GetArena() == nullptr && transtoislndongridlossenabled_ != nullptr) {
-    delete transtoislndongridlossenabled_;
+  _impl_.tmhztripoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.tmvolttripoperation_ != nullptr) {
+    delete _impl_.tmvolttripoperation_;
   }
-  transtoislndongridlossenabled_ = nullptr;
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
-    delete voltagesetpointenabled_;
+  _impl_.tmvolttripoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.varoperation_ != nullptr) {
+    delete _impl_.varoperation_;
   }
-  voltagesetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && starttime_ != nullptr) {
-    delete starttime_;
+  _impl_.varoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltvaroperation_ != nullptr) {
+    delete _impl_.voltvaroperation_;
   }
-  starttime_ = nullptr;
+  _impl_.voltvaroperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltwoperation_ != nullptr) {
+    delete _impl_.voltwoperation_;
+  }
+  _impl_.voltwoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.wvaroperation_ != nullptr) {
+    delete _impl_.wvaroperation_;
+  }
+  _impl_.wvaroperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.woperation_ != nullptr) {
+    delete _impl_.woperation_;
+  }
+  _impl_.woperation_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ESSPoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ESSPoint::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlSPC blackStartEnabled = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_blackstartenabled(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC frequencySetPointEnabled = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_frequencysetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .essmodule.ESSFunction function = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_function(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ENG_GridConnectModeKind mode = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_mode(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .google.protobuf.FloatValue pctHzDroop = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_pcthzdroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .google.protobuf.FloatValue pctVDroop = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(_internal_mutable_pctvdroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.RampRate rampRates = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_ramprates(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 8;
-      case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          ptr = ctx->ParseMessage(_internal_mutable_reactivepwrsetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC realPwrSetPointEnabled = 9;
-      case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
-          ptr = ctx->ParseMessage(_internal_mutable_realpwrsetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlSPC reset = 10;
       case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 82)) {
           ptr = ctx->ParseMessage(_internal_mutable_reset(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.Optional_StateKind state = 11;
       case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 90)) {
           ptr = ctx->ParseMessage(_internal_mutable_state(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC syncBackToGrid = 12;
-      case 12:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
-          ptr = ctx->ParseMessage(_internal_mutable_syncbacktogrid(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlSPC transToIslndOnGridLossEnabled = 13;
       case 13:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 106)) {
           ptr = ctx->ParseMessage(_internal_mutable_transtoislndongridlossenabled(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC voltageSetPointEnabled = 14;
-      case 14:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 114)) {
-          ptr = ctx->ParseMessage(_internal_mutable_voltagesetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlTimestamp startTime = 15 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 15:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 122)) {
-          ptr = ctx->ParseMessage(_internal_mutable_starttime(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      // .commonmodule.EnterServiceAPC enterServiceOperation = 16;
+      case 16:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 130)) {
+          ptr = ctx->ParseMessage(_internal_mutable_enterserviceoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.HzWAPC hzWOperation = 17;
+      case 17:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 138)) {
+          ptr = ctx->ParseMessage(_internal_mutable_hzwoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.LimitWAPC limitWOperation = 18;
+      case 18:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 146)) {
+          ptr = ctx->ParseMessage(_internal_mutable_limitwoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.PFSPC pFOperation = 19;
+      case 19:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 154)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pfoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.TmHzCSG tmHzTripOperation = 20;
+      case 20:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 162)) {
+          ptr = ctx->ParseMessage(_internal_mutable_tmhztripoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.TmVoltCSG tmVoltTripOperation = 21;
+      case 21:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 170)) {
+          ptr = ctx->ParseMessage(_internal_mutable_tmvolttripoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.VarSPC vArOperation = 22;
+      case 22:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 178)) {
+          ptr = ctx->ParseMessage(_internal_mutable_varoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.VoltVarCSG voltVarOperation = 23;
+      case 23:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 186)) {
+          ptr = ctx->ParseMessage(_internal_mutable_voltvaroperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.VoltWCSG voltWOperation = 24;
+      case 24:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 194)) {
+          ptr = ctx->ParseMessage(_internal_mutable_voltwoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.WVarCSG wVarOperation = 25;
+      case 25:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 202)) {
+          ptr = ctx->ParseMessage(_internal_mutable_wvaroperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.WSPC wOperation = 26;
+      case 26:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 210)) {
+          ptr = ctx->ParseMessage(_internal_mutable_woperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSPoint::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ESSPoint::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlSPC blackStartEnabled = 1;
-  if (this->has_blackstartenabled()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_blackstartenabled()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::blackstartenabled(this), target, stream);
-  }
-
-  // .commonmodule.ControlSPC frequencySetPointEnabled = 2;
-  if (this->has_frequencysetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::frequencysetpointenabled(this), target, stream);
+      InternalWriteMessage(1, _Internal::blackstartenabled(this),
+        _Internal::blackstartenabled(this).GetCachedSize(), target, stream);
   }
 
   // .essmodule.ESSFunction function = 3;
-  if (this->has_function()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_function()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::function(this), target, stream);
+      InternalWriteMessage(3, _Internal::function(this),
+        _Internal::function(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ENG_GridConnectModeKind mode = 4;
-  if (this->has_mode()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_mode()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::mode(this), target, stream);
-  }
-
-  // .google.protobuf.FloatValue pctHzDroop = 5;
-  if (this->has_pcthzdroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::pcthzdroop(this), target, stream);
-  }
-
-  // .google.protobuf.FloatValue pctVDroop = 6;
-  if (this->has_pctvdroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::pctvdroop(this), target, stream);
+      InternalWriteMessage(4, _Internal::mode(this),
+        _Internal::mode(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.RampRate rampRates = 7;
-  if (this->has_ramprates()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ramprates()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::ramprates(this), target, stream);
-  }
-
-  // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 8;
-  if (this->has_reactivepwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::reactivepwrsetpointenabled(this), target, stream);
-  }
-
-  // .commonmodule.ControlSPC realPwrSetPointEnabled = 9;
-  if (this->has_realpwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        9, _Internal::realpwrsetpointenabled(this), target, stream);
+      InternalWriteMessage(7, _Internal::ramprates(this),
+        _Internal::ramprates(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlSPC reset = 10;
-  if (this->has_reset()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_reset()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        10, _Internal::reset(this), target, stream);
+      InternalWriteMessage(10, _Internal::reset(this),
+        _Internal::reset(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.Optional_StateKind state = 11;
-  if (this->has_state()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_state()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        11, _Internal::state(this), target, stream);
-  }
-
-  // .commonmodule.ControlSPC syncBackToGrid = 12;
-  if (this->has_syncbacktogrid()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        12, _Internal::syncbacktogrid(this), target, stream);
+      InternalWriteMessage(11, _Internal::state(this),
+        _Internal::state(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlSPC transToIslndOnGridLossEnabled = 13;
-  if (this->has_transtoislndongridlossenabled()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_transtoislndongridlossenabled()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        13, _Internal::transtoislndongridlossenabled(this), target, stream);
+      InternalWriteMessage(13, _Internal::transtoislndongridlossenabled(this),
+        _Internal::transtoislndongridlossenabled(this).GetCachedSize(), target, stream);
   }
 
-  // .commonmodule.ControlSPC voltageSetPointEnabled = 14;
-  if (this->has_voltagesetpointenabled()) {
-    target = stream->EnsureSpace(target);
+  // .commonmodule.EnterServiceAPC enterServiceOperation = 16;
+  if (this->_internal_has_enterserviceoperation()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        14, _Internal::voltagesetpointenabled(this), target, stream);
+      InternalWriteMessage(16, _Internal::enterserviceoperation(this),
+        _Internal::enterserviceoperation(this).GetCachedSize(), target, stream);
   }
 
-  // .commonmodule.ControlTimestamp startTime = 15 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_starttime()) {
-    target = stream->EnsureSpace(target);
+  // .commonmodule.HzWAPC hzWOperation = 17;
+  if (this->_internal_has_hzwoperation()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        15, _Internal::starttime(this), target, stream);
+      InternalWriteMessage(17, _Internal::hzwoperation(this),
+        _Internal::hzwoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.LimitWAPC limitWOperation = 18;
+  if (this->_internal_has_limitwoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(18, _Internal::limitwoperation(this),
+        _Internal::limitwoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.PFSPC pFOperation = 19;
+  if (this->_internal_has_pfoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(19, _Internal::pfoperation(this),
+        _Internal::pfoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.TmHzCSG tmHzTripOperation = 20;
+  if (this->_internal_has_tmhztripoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(20, _Internal::tmhztripoperation(this),
+        _Internal::tmhztripoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.TmVoltCSG tmVoltTripOperation = 21;
+  if (this->_internal_has_tmvolttripoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(21, _Internal::tmvolttripoperation(this),
+        _Internal::tmvolttripoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.VarSPC vArOperation = 22;
+  if (this->_internal_has_varoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(22, _Internal::varoperation(this),
+        _Internal::varoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.VoltVarCSG voltVarOperation = 23;
+  if (this->_internal_has_voltvaroperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(23, _Internal::voltvaroperation(this),
+        _Internal::voltvaroperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.VoltWCSG voltWOperation = 24;
+  if (this->_internal_has_voltwoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(24, _Internal::voltwoperation(this),
+        _Internal::voltwoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.WVarCSG wVarOperation = 25;
+  if (this->_internal_has_wvaroperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(25, _Internal::wvaroperation(this),
+        _Internal::wvaroperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.WSPC wOperation = 26;
+  if (this->_internal_has_woperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(26, _Internal::woperation(this),
+        _Internal::woperation(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSPoint)
   return target;
 }
 
-size_t ESSPoint::ByteSizeLong() const {
+::size_t ESSPoint::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSPoint)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlSPC blackStartEnabled = 1;
-  if (this->has_blackstartenabled()) {
+  if (this->_internal_has_blackstartenabled()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *blackstartenabled_);
-  }
-
-  // .commonmodule.ControlSPC frequencySetPointEnabled = 2;
-  if (this->has_frequencysetpointenabled()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *frequencysetpointenabled_);
+        *_impl_.blackstartenabled_);
   }
 
   // .essmodule.ESSFunction function = 3;
-  if (this->has_function()) {
+  if (this->_internal_has_function()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *function_);
+        *_impl_.function_);
   }
 
   // .commonmodule.ENG_GridConnectModeKind mode = 4;
-  if (this->has_mode()) {
+  if (this->_internal_has_mode()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *mode_);
-  }
-
-  // .google.protobuf.FloatValue pctHzDroop = 5;
-  if (this->has_pcthzdroop()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *pcthzdroop_);
-  }
-
-  // .google.protobuf.FloatValue pctVDroop = 6;
-  if (this->has_pctvdroop()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *pctvdroop_);
+        *_impl_.mode_);
   }
 
   // .commonmodule.RampRate rampRates = 7;
-  if (this->has_ramprates()) {
+  if (this->_internal_has_ramprates()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ramprates_);
-  }
-
-  // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 8;
-  if (this->has_reactivepwrsetpointenabled()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *reactivepwrsetpointenabled_);
-  }
-
-  // .commonmodule.ControlSPC realPwrSetPointEnabled = 9;
-  if (this->has_realpwrsetpointenabled()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *realpwrsetpointenabled_);
+        *_impl_.ramprates_);
   }
 
   // .commonmodule.ControlSPC reset = 10;
-  if (this->has_reset()) {
+  if (this->_internal_has_reset()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *reset_);
+        *_impl_.reset_);
   }
 
   // .commonmodule.Optional_StateKind state = 11;
-  if (this->has_state()) {
+  if (this->_internal_has_state()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *state_);
-  }
-
-  // .commonmodule.ControlSPC syncBackToGrid = 12;
-  if (this->has_syncbacktogrid()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *syncbacktogrid_);
+        *_impl_.state_);
   }
 
   // .commonmodule.ControlSPC transToIslndOnGridLossEnabled = 13;
-  if (this->has_transtoislndongridlossenabled()) {
+  if (this->_internal_has_transtoislndongridlossenabled()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *transtoislndongridlossenabled_);
+        *_impl_.transtoislndongridlossenabled_);
   }
 
-  // .commonmodule.ControlSPC voltageSetPointEnabled = 14;
-  if (this->has_voltagesetpointenabled()) {
-    total_size += 1 +
+  // .commonmodule.EnterServiceAPC enterServiceOperation = 16;
+  if (this->_internal_has_enterserviceoperation()) {
+    total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *voltagesetpointenabled_);
+        *_impl_.enterserviceoperation_);
   }
 
-  // .commonmodule.ControlTimestamp startTime = 15 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_starttime()) {
-    total_size += 1 +
+  // .commonmodule.HzWAPC hzWOperation = 17;
+  if (this->_internal_has_hzwoperation()) {
+    total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *starttime_);
+        *_impl_.hzwoperation_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
+  // .commonmodule.LimitWAPC limitWOperation = 18;
+  if (this->_internal_has_limitwoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.limitwoperation_);
   }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // .commonmodule.PFSPC pFOperation = 19;
+  if (this->_internal_has_pfoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.pfoperation_);
+  }
+
+  // .commonmodule.TmHzCSG tmHzTripOperation = 20;
+  if (this->_internal_has_tmhztripoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.tmhztripoperation_);
+  }
+
+  // .commonmodule.TmVoltCSG tmVoltTripOperation = 21;
+  if (this->_internal_has_tmvolttripoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.tmvolttripoperation_);
+  }
+
+  // .commonmodule.VarSPC vArOperation = 22;
+  if (this->_internal_has_varoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.varoperation_);
+  }
+
+  // .commonmodule.VoltVarCSG voltVarOperation = 23;
+  if (this->_internal_has_voltvaroperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.voltvaroperation_);
+  }
+
+  // .commonmodule.VoltWCSG voltWOperation = 24;
+  if (this->_internal_has_voltwoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.voltwoperation_);
+  }
+
+  // .commonmodule.WVarCSG wVarOperation = 25;
+  if (this->_internal_has_wvaroperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.wvaroperation_);
+  }
+
+  // .commonmodule.WSPC wOperation = 26;
+  if (this->_internal_has_woperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.woperation_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ESSPoint::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSPoint)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ESSPoint* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSPoint>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSPoint)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSPoint)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSPoint::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSPoint::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSPoint::GetClassData() const { return &_class_data_; }
 
-void ESSPoint::MergeFrom(const ESSPoint& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSPoint)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ESSPoint::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSPoint*>(&to_msg);
+  auto& from = static_cast<const ESSPoint&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSPoint)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_blackstartenabled()) {
-    _internal_mutable_blackstartenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_blackstartenabled());
+  if (from._internal_has_blackstartenabled()) {
+    _this->_internal_mutable_blackstartenabled()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_blackstartenabled());
   }
-  if (from.has_frequencysetpointenabled()) {
-    _internal_mutable_frequencysetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_frequencysetpointenabled());
+  if (from._internal_has_function()) {
+    _this->_internal_mutable_function()->::essmodule::ESSFunction::MergeFrom(
+        from._internal_function());
   }
-  if (from.has_function()) {
-    _internal_mutable_function()->::essmodule::ESSFunction::MergeFrom(from._internal_function());
+  if (from._internal_has_mode()) {
+    _this->_internal_mutable_mode()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(
+        from._internal_mode());
   }
-  if (from.has_mode()) {
-    _internal_mutable_mode()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from._internal_mode());
+  if (from._internal_has_ramprates()) {
+    _this->_internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(
+        from._internal_ramprates());
   }
-  if (from.has_pcthzdroop()) {
-    _internal_mutable_pcthzdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pcthzdroop());
+  if (from._internal_has_reset()) {
+    _this->_internal_mutable_reset()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_reset());
   }
-  if (from.has_pctvdroop()) {
-    _internal_mutable_pctvdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pctvdroop());
+  if (from._internal_has_state()) {
+    _this->_internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(
+        from._internal_state());
   }
-  if (from.has_ramprates()) {
-    _internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from._internal_ramprates());
+  if (from._internal_has_transtoislndongridlossenabled()) {
+    _this->_internal_mutable_transtoislndongridlossenabled()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_transtoislndongridlossenabled());
   }
-  if (from.has_reactivepwrsetpointenabled()) {
-    _internal_mutable_reactivepwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_reactivepwrsetpointenabled());
+  if (from._internal_has_enterserviceoperation()) {
+    _this->_internal_mutable_enterserviceoperation()->::commonmodule::EnterServiceAPC::MergeFrom(
+        from._internal_enterserviceoperation());
   }
-  if (from.has_realpwrsetpointenabled()) {
-    _internal_mutable_realpwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_realpwrsetpointenabled());
+  if (from._internal_has_hzwoperation()) {
+    _this->_internal_mutable_hzwoperation()->::commonmodule::HzWAPC::MergeFrom(
+        from._internal_hzwoperation());
   }
-  if (from.has_reset()) {
-    _internal_mutable_reset()->::commonmodule::ControlSPC::MergeFrom(from._internal_reset());
+  if (from._internal_has_limitwoperation()) {
+    _this->_internal_mutable_limitwoperation()->::commonmodule::LimitWAPC::MergeFrom(
+        from._internal_limitwoperation());
   }
-  if (from.has_state()) {
-    _internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from._internal_state());
+  if (from._internal_has_pfoperation()) {
+    _this->_internal_mutable_pfoperation()->::commonmodule::PFSPC::MergeFrom(
+        from._internal_pfoperation());
   }
-  if (from.has_syncbacktogrid()) {
-    _internal_mutable_syncbacktogrid()->::commonmodule::ControlSPC::MergeFrom(from._internal_syncbacktogrid());
+  if (from._internal_has_tmhztripoperation()) {
+    _this->_internal_mutable_tmhztripoperation()->::commonmodule::TmHzCSG::MergeFrom(
+        from._internal_tmhztripoperation());
   }
-  if (from.has_transtoislndongridlossenabled()) {
-    _internal_mutable_transtoislndongridlossenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_transtoislndongridlossenabled());
+  if (from._internal_has_tmvolttripoperation()) {
+    _this->_internal_mutable_tmvolttripoperation()->::commonmodule::TmVoltCSG::MergeFrom(
+        from._internal_tmvolttripoperation());
   }
-  if (from.has_voltagesetpointenabled()) {
-    _internal_mutable_voltagesetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_voltagesetpointenabled());
+  if (from._internal_has_varoperation()) {
+    _this->_internal_mutable_varoperation()->::commonmodule::VarSPC::MergeFrom(
+        from._internal_varoperation());
   }
-  if (from.has_starttime()) {
-    _internal_mutable_starttime()->::commonmodule::ControlTimestamp::MergeFrom(from._internal_starttime());
+  if (from._internal_has_voltvaroperation()) {
+    _this->_internal_mutable_voltvaroperation()->::commonmodule::VoltVarCSG::MergeFrom(
+        from._internal_voltvaroperation());
   }
-}
-
-void ESSPoint::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSPoint)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  if (from._internal_has_voltwoperation()) {
+    _this->_internal_mutable_voltwoperation()->::commonmodule::VoltWCSG::MergeFrom(
+        from._internal_voltwoperation());
+  }
+  if (from._internal_has_wvaroperation()) {
+    _this->_internal_mutable_wvaroperation()->::commonmodule::WVarCSG::MergeFrom(
+        from._internal_wvaroperation());
+  }
+  if (from._internal_has_woperation()) {
+    _this->_internal_mutable_woperation()->::commonmodule::WSPC::MergeFrom(
+        from._internal_woperation());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ESSPoint::CopyFrom(const ESSPoint& from) {
@@ -9550,20 +7796,263 @@ bool ESSPoint::IsInitialized() const {
 
 void ESSPoint::InternalSwap(ESSPoint* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSPoint, starttime_)
-      + sizeof(ESSPoint::starttime_)
-      - PROTOBUF_FIELD_OFFSET(ESSPoint, blackstartenabled_)>(
-          reinterpret_cast<char*>(&blackstartenabled_),
-          reinterpret_cast<char*>(&other->blackstartenabled_));
+      PROTOBUF_FIELD_OFFSET(ESSPoint, _impl_.woperation_)
+      + sizeof(ESSPoint::_impl_.woperation_)
+      - PROTOBUF_FIELD_OFFSET(ESSPoint, _impl_.blackstartenabled_)>(
+          reinterpret_cast<char*>(&_impl_.blackstartenabled_),
+          reinterpret_cast<char*>(&other->_impl_.blackstartenabled_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ESSPoint::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[15]);
+}
+// ===================================================================
+
+class ESSCurvePoint::_Internal {
+ public:
+  static const ::essmodule::ESSPoint& control(const ESSCurvePoint* msg);
+  static const ::commonmodule::ControlTimestamp& starttime(const ESSCurvePoint* msg);
+};
+
+const ::essmodule::ESSPoint&
+ESSCurvePoint::_Internal::control(const ESSCurvePoint* msg) {
+  return *msg->_impl_.control_;
+}
+const ::commonmodule::ControlTimestamp&
+ESSCurvePoint::_Internal::starttime(const ESSCurvePoint* msg) {
+  return *msg->_impl_.starttime_;
+}
+void ESSCurvePoint::clear_starttime() {
+  if (GetArenaForAllocation() == nullptr && _impl_.starttime_ != nullptr) {
+    delete _impl_.starttime_;
+  }
+  _impl_.starttime_ = nullptr;
+}
+ESSCurvePoint::ESSCurvePoint(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSCurvePoint)
+}
+ESSCurvePoint::ESSCurvePoint(const ESSCurvePoint& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSCurvePoint* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.control_){nullptr}
+    , decltype(_impl_.starttime_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_control()) {
+    _this->_impl_.control_ = new ::essmodule::ESSPoint(*from._impl_.control_);
+  }
+  if (from._internal_has_starttime()) {
+    _this->_impl_.starttime_ = new ::commonmodule::ControlTimestamp(*from._impl_.starttime_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSCurvePoint)
 }
 
+inline void ESSCurvePoint::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.control_){nullptr}
+    , decltype(_impl_.starttime_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
 
+ESSCurvePoint::~ESSCurvePoint() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSCurvePoint)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ESSCurvePoint::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.control_;
+  if (this != internal_default_instance()) delete _impl_.starttime_;
+}
+
+void ESSCurvePoint::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ESSCurvePoint::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSCurvePoint)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.control_ != nullptr) {
+    delete _impl_.control_;
+  }
+  _impl_.control_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.starttime_ != nullptr) {
+    delete _impl_.starttime_;
+  }
+  _impl_.starttime_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ESSCurvePoint::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .essmodule.ESSPoint control = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_control(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ControlTimestamp startTime = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_starttime(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* ESSCurvePoint::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSCurvePoint)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .essmodule.ESSPoint control = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_control()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::control(this),
+        _Internal::control(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ControlTimestamp startTime = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_starttime()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::starttime(this),
+        _Internal::starttime(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSCurvePoint)
+  return target;
+}
+
+::size_t ESSCurvePoint::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSCurvePoint)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .essmodule.ESSPoint control = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_control()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.control_);
+  }
+
+  // .commonmodule.ControlTimestamp startTime = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_starttime()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.starttime_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSCurvePoint::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSCurvePoint::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSCurvePoint::GetClassData() const { return &_class_data_; }
+
+
+void ESSCurvePoint::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSCurvePoint*>(&to_msg);
+  auto& from = static_cast<const ESSCurvePoint&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSCurvePoint)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_control()) {
+    _this->_internal_mutable_control()->::essmodule::ESSPoint::MergeFrom(
+        from._internal_control());
+  }
+  if (from._internal_has_starttime()) {
+    _this->_internal_mutable_starttime()->::commonmodule::ControlTimestamp::MergeFrom(
+        from._internal_starttime());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ESSCurvePoint::CopyFrom(const ESSCurvePoint& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSCurvePoint)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ESSCurvePoint::IsInitialized() const {
+  return true;
+}
+
+void ESSCurvePoint::InternalSwap(ESSCurvePoint* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ESSCurvePoint, _impl_.starttime_)
+      + sizeof(ESSCurvePoint::_impl_.starttime_)
+      - PROTOBUF_FIELD_OFFSET(ESSCurvePoint, _impl_.control_)>(
+          reinterpret_cast<char*>(&_impl_.control_),
+          reinterpret_cast<char*>(&other->_impl_.control_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ESSCurvePoint::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[16]);
+}
 // ===================================================================
 
 class ESSCSG::_Internal {
@@ -9571,62 +8060,66 @@ class ESSCSG::_Internal {
 };
 
 ESSCSG::ESSCSG(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  crvpts_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:essmodule.ESSCSG)
 }
 ESSCSG::ESSCSG(const ESSCSG& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      crvpts_(from.crvpts_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSCSG* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.crvpts_){from._impl_.crvpts_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:essmodule.ESSCSG)
 }
 
-void ESSCSG::SharedCtor() {
+inline void ESSCSG::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.crvpts_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ESSCSG::~ESSCSG() {
   // @@protoc_insertion_point(destructor:essmodule.ESSCSG)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ESSCSG::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void ESSCSG::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.crvpts_.~RepeatedPtrField();
 }
 
-void ESSCSG::ArenaDtor(void* object) {
-  ESSCSG* _this = reinterpret_cast< ESSCSG* >(object);
-  (void)_this;
-}
-void ESSCSG::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSCSG::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ESSCSG::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSCSG)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  crvpts_.Clear();
+  _impl_.crvpts_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ESSCSG::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ESSCSG::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // repeated .essmodule.ESSPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      // repeated .essmodule.ESSCurvePoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -9634,106 +8127,90 @@ const char* ESSCSG::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::int
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSCSG::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ESSCSG::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSCSG)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .essmodule.ESSPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_crvpts_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  // repeated .essmodule.ESSCurvePoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_crvpts_size()); i < n; i++) {
+    const auto& repfield = this->_internal_crvpts(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_crvpts(i), target, stream);
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSCSG)
   return target;
 }
 
-size_t ESSCSG::ByteSizeLong() const {
+::size_t ESSCSG::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSCSG)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .essmodule.ESSPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  // repeated .essmodule.ESSCurvePoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   total_size += 1UL * this->_internal_crvpts_size();
-  for (const auto& msg : this->crvpts_) {
+  for (const auto& msg : this->_impl_.crvpts_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ESSCSG::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSCSG)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ESSCSG* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSCSG>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSCSG)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSCSG)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSCSG::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSCSG::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSCSG::GetClassData() const { return &_class_data_; }
 
-void ESSCSG::MergeFrom(const ESSCSG& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSCSG)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ESSCSG::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSCSG*>(&to_msg);
+  auto& from = static_cast<const ESSCSG&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSCSG)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  crvpts_.MergeFrom(from.crvpts_);
-}
-
-void ESSCSG::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSCSG)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_impl_.crvpts_.MergeFrom(from._impl_.crvpts_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ESSCSG::CopyFrom(const ESSCSG& from) {
@@ -9749,15 +8226,15 @@ bool ESSCSG::IsInitialized() const {
 
 void ESSCSG::InternalSwap(ESSCSG* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  crvpts_.InternalSwap(&other->crvpts_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.crvpts_.InternalSwap(&other->_impl_.crvpts_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ESSCSG::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[17]);
 }
-
-
 // ===================================================================
 
 class ESSControlScheduleFSCH::_Internal {
@@ -9767,177 +8244,163 @@ class ESSControlScheduleFSCH::_Internal {
 
 const ::essmodule::ESSCSG&
 ESSControlScheduleFSCH::_Internal::valdcsg(const ESSControlScheduleFSCH* msg) {
-  return *msg->valdcsg_;
+  return *msg->_impl_.valdcsg_;
 }
 ESSControlScheduleFSCH::ESSControlScheduleFSCH(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:essmodule.ESSControlScheduleFSCH)
 }
 ESSControlScheduleFSCH::ESSControlScheduleFSCH(const ESSControlScheduleFSCH& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSControlScheduleFSCH* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.valdcsg_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_valdcsg()) {
-    valdcsg_ = new ::essmodule::ESSCSG(*from.valdcsg_);
-  } else {
-    valdcsg_ = nullptr;
+    _this->_impl_.valdcsg_ = new ::essmodule::ESSCSG(*from._impl_.valdcsg_);
   }
   // @@protoc_insertion_point(copy_constructor:essmodule.ESSControlScheduleFSCH)
 }
 
-void ESSControlScheduleFSCH::SharedCtor() {
-valdcsg_ = nullptr;
+inline void ESSControlScheduleFSCH::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.valdcsg_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ESSControlScheduleFSCH::~ESSControlScheduleFSCH() {
   // @@protoc_insertion_point(destructor:essmodule.ESSControlScheduleFSCH)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ESSControlScheduleFSCH::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete valdcsg_;
+inline void ESSControlScheduleFSCH::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.valdcsg_;
 }
 
-void ESSControlScheduleFSCH::ArenaDtor(void* object) {
-  ESSControlScheduleFSCH* _this = reinterpret_cast< ESSControlScheduleFSCH* >(object);
-  (void)_this;
-}
-void ESSControlScheduleFSCH::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSControlScheduleFSCH::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ESSControlScheduleFSCH::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSControlScheduleFSCH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && valdcsg_ != nullptr) {
-    delete valdcsg_;
+  if (GetArenaForAllocation() == nullptr && _impl_.valdcsg_ != nullptr) {
+    delete _impl_.valdcsg_;
   }
-  valdcsg_ = nullptr;
+  _impl_.valdcsg_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ESSControlScheduleFSCH::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ESSControlScheduleFSCH::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .essmodule.ESSCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_valdcsg(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSControlScheduleFSCH::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ESSControlScheduleFSCH::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSControlScheduleFSCH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .essmodule.ESSCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_valdcsg()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_valdcsg()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::valdcsg(this), target, stream);
+      InternalWriteMessage(1, _Internal::valdcsg(this),
+        _Internal::valdcsg(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSControlScheduleFSCH)
   return target;
 }
 
-size_t ESSControlScheduleFSCH::ByteSizeLong() const {
+::size_t ESSControlScheduleFSCH::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSControlScheduleFSCH)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .essmodule.ESSCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_valdcsg()) {
+  if (this->_internal_has_valdcsg()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *valdcsg_);
+        *_impl_.valdcsg_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ESSControlScheduleFSCH::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSControlScheduleFSCH)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ESSControlScheduleFSCH* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSControlScheduleFSCH>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSControlScheduleFSCH)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSControlScheduleFSCH)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSControlScheduleFSCH::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSControlScheduleFSCH::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSControlScheduleFSCH::GetClassData() const { return &_class_data_; }
 
-void ESSControlScheduleFSCH::MergeFrom(const ESSControlScheduleFSCH& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSControlScheduleFSCH)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ESSControlScheduleFSCH::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSControlScheduleFSCH*>(&to_msg);
+  auto& from = static_cast<const ESSControlScheduleFSCH&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSControlScheduleFSCH)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_valdcsg()) {
-    _internal_mutable_valdcsg()->::essmodule::ESSCSG::MergeFrom(from._internal_valdcsg());
+  if (from._internal_has_valdcsg()) {
+    _this->_internal_mutable_valdcsg()->::essmodule::ESSCSG::MergeFrom(
+        from._internal_valdcsg());
   }
-}
-
-void ESSControlScheduleFSCH::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSControlScheduleFSCH)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ESSControlScheduleFSCH::CopyFrom(const ESSControlScheduleFSCH& from) {
@@ -9953,15 +8416,15 @@ bool ESSControlScheduleFSCH::IsInitialized() const {
 
 void ESSControlScheduleFSCH::InternalSwap(ESSControlScheduleFSCH* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(valdcsg_, other->valdcsg_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.valdcsg_, other->_impl_.valdcsg_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ESSControlScheduleFSCH::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[18]);
 }
-
-
 // ===================================================================
 
 class EssControlFSCC::_Internal {
@@ -9972,225 +8435,210 @@ class EssControlFSCC::_Internal {
 
 const ::commonmodule::ControlFSCC&
 EssControlFSCC::_Internal::controlfscc(const EssControlFSCC* msg) {
-  return *msg->controlfscc_;
+  return *msg->_impl_.controlfscc_;
 }
 const ::essmodule::ESSControlScheduleFSCH&
 EssControlFSCC::_Internal::esscontrolschedulefsch(const EssControlFSCC* msg) {
-  return *msg->esscontrolschedulefsch_;
+  return *msg->_impl_.esscontrolschedulefsch_;
 }
 void EssControlFSCC::clear_controlfscc() {
-  if (GetArena() == nullptr && controlfscc_ != nullptr) {
-    delete controlfscc_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlfscc_ != nullptr) {
+    delete _impl_.controlfscc_;
   }
-  controlfscc_ = nullptr;
+  _impl_.controlfscc_ = nullptr;
 }
 EssControlFSCC::EssControlFSCC(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:essmodule.EssControlFSCC)
 }
 EssControlFSCC::EssControlFSCC(const EssControlFSCC& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  EssControlFSCC* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlfscc_){nullptr}
+    , decltype(_impl_.esscontrolschedulefsch_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlfscc()) {
-    controlfscc_ = new ::commonmodule::ControlFSCC(*from.controlfscc_);
-  } else {
-    controlfscc_ = nullptr;
+    _this->_impl_.controlfscc_ = new ::commonmodule::ControlFSCC(*from._impl_.controlfscc_);
   }
   if (from._internal_has_esscontrolschedulefsch()) {
-    esscontrolschedulefsch_ = new ::essmodule::ESSControlScheduleFSCH(*from.esscontrolschedulefsch_);
-  } else {
-    esscontrolschedulefsch_ = nullptr;
+    _this->_impl_.esscontrolschedulefsch_ = new ::essmodule::ESSControlScheduleFSCH(*from._impl_.esscontrolschedulefsch_);
   }
   // @@protoc_insertion_point(copy_constructor:essmodule.EssControlFSCC)
 }
 
-void EssControlFSCC::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlfscc_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&esscontrolschedulefsch_) -
-    reinterpret_cast<char*>(&controlfscc_)) + sizeof(esscontrolschedulefsch_));
+inline void EssControlFSCC::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlfscc_){nullptr}
+    , decltype(_impl_.esscontrolschedulefsch_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 EssControlFSCC::~EssControlFSCC() {
   // @@protoc_insertion_point(destructor:essmodule.EssControlFSCC)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void EssControlFSCC::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlfscc_;
-  if (this != internal_default_instance()) delete esscontrolschedulefsch_;
+inline void EssControlFSCC::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlfscc_;
+  if (this != internal_default_instance()) delete _impl_.esscontrolschedulefsch_;
 }
 
-void EssControlFSCC::ArenaDtor(void* object) {
-  EssControlFSCC* _this = reinterpret_cast< EssControlFSCC* >(object);
-  (void)_this;
-}
-void EssControlFSCC::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void EssControlFSCC::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void EssControlFSCC::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.EssControlFSCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlfscc_ != nullptr) {
-    delete controlfscc_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlfscc_ != nullptr) {
+    delete _impl_.controlfscc_;
   }
-  controlfscc_ = nullptr;
-  if (GetArena() == nullptr && esscontrolschedulefsch_ != nullptr) {
-    delete esscontrolschedulefsch_;
+  _impl_.controlfscc_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.esscontrolschedulefsch_ != nullptr) {
+    delete _impl_.esscontrolschedulefsch_;
   }
-  esscontrolschedulefsch_ = nullptr;
+  _impl_.esscontrolschedulefsch_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* EssControlFSCC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* EssControlFSCC::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlfscc(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .essmodule.ESSControlScheduleFSCH essControlScheduleFSCH = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_esscontrolschedulefsch(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* EssControlFSCC::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* EssControlFSCC::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:essmodule.EssControlFSCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlfscc()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlfscc()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlfscc(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlfscc(this),
+        _Internal::controlfscc(this).GetCachedSize(), target, stream);
   }
 
   // .essmodule.ESSControlScheduleFSCH essControlScheduleFSCH = 2;
-  if (this->has_esscontrolschedulefsch()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_esscontrolschedulefsch()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::esscontrolschedulefsch(this), target, stream);
+      InternalWriteMessage(2, _Internal::esscontrolschedulefsch(this),
+        _Internal::esscontrolschedulefsch(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.EssControlFSCC)
   return target;
 }
 
-size_t EssControlFSCC::ByteSizeLong() const {
+::size_t EssControlFSCC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.EssControlFSCC)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlfscc()) {
+  if (this->_internal_has_controlfscc()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlfscc_);
+        *_impl_.controlfscc_);
   }
 
   // .essmodule.ESSControlScheduleFSCH essControlScheduleFSCH = 2;
-  if (this->has_esscontrolschedulefsch()) {
+  if (this->_internal_has_esscontrolschedulefsch()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *esscontrolschedulefsch_);
+        *_impl_.esscontrolschedulefsch_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void EssControlFSCC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.EssControlFSCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  const EssControlFSCC* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<EssControlFSCC>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.EssControlFSCC)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.EssControlFSCC)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EssControlFSCC::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    EssControlFSCC::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EssControlFSCC::GetClassData() const { return &_class_data_; }
 
-void EssControlFSCC::MergeFrom(const EssControlFSCC& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.EssControlFSCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void EssControlFSCC::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<EssControlFSCC*>(&to_msg);
+  auto& from = static_cast<const EssControlFSCC&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.EssControlFSCC)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlfscc()) {
-    _internal_mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(from._internal_controlfscc());
+  if (from._internal_has_controlfscc()) {
+    _this->_internal_mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(
+        from._internal_controlfscc());
   }
-  if (from.has_esscontrolschedulefsch()) {
-    _internal_mutable_esscontrolschedulefsch()->::essmodule::ESSControlScheduleFSCH::MergeFrom(from._internal_esscontrolschedulefsch());
+  if (from._internal_has_esscontrolschedulefsch()) {
+    _this->_internal_mutable_esscontrolschedulefsch()->::essmodule::ESSControlScheduleFSCH::MergeFrom(
+        from._internal_esscontrolschedulefsch());
   }
-}
-
-void EssControlFSCC::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.EssControlFSCC)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void EssControlFSCC::CopyFrom(const EssControlFSCC& from) {
@@ -10206,20 +8654,20 @@ bool EssControlFSCC::IsInitialized() const {
 
 void EssControlFSCC::InternalSwap(EssControlFSCC* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(EssControlFSCC, esscontrolschedulefsch_)
-      + sizeof(EssControlFSCC::esscontrolschedulefsch_)
-      - PROTOBUF_FIELD_OFFSET(EssControlFSCC, controlfscc_)>(
-          reinterpret_cast<char*>(&controlfscc_),
-          reinterpret_cast<char*>(&other->controlfscc_));
+      PROTOBUF_FIELD_OFFSET(EssControlFSCC, _impl_.esscontrolschedulefsch_)
+      + sizeof(EssControlFSCC::_impl_.esscontrolschedulefsch_)
+      - PROTOBUF_FIELD_OFFSET(EssControlFSCC, _impl_.controlfscc_)>(
+          reinterpret_cast<char*>(&_impl_.controlfscc_),
+          reinterpret_cast<char*>(&other->_impl_.controlfscc_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata EssControlFSCC::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[19]);
 }
-
-
 // ===================================================================
 
 class ESSControl::_Internal {
@@ -10231,270 +8679,257 @@ class ESSControl::_Internal {
 
 const ::commonmodule::ControlValue&
 ESSControl::_Internal::controlvalue(const ESSControl* msg) {
-  return *msg->controlvalue_;
+  return *msg->_impl_.controlvalue_;
 }
 const ::commonmodule::CheckConditions&
 ESSControl::_Internal::check(const ESSControl* msg) {
-  return *msg->check_;
+  return *msg->_impl_.check_;
 }
 const ::essmodule::EssControlFSCC&
 ESSControl::_Internal::esscontrolfscc(const ESSControl* msg) {
-  return *msg->esscontrolfscc_;
+  return *msg->_impl_.esscontrolfscc_;
 }
 void ESSControl::clear_controlvalue() {
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
   }
-  controlvalue_ = nullptr;
+  _impl_.controlvalue_ = nullptr;
 }
 void ESSControl::clear_check() {
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
+  _impl_.check_ = nullptr;
 }
 ESSControl::ESSControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:essmodule.ESSControl)
 }
 ESSControl::ESSControl(const ESSControl& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSControl* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.esscontrolfscc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlvalue()) {
-    controlvalue_ = new ::commonmodule::ControlValue(*from.controlvalue_);
-  } else {
-    controlvalue_ = nullptr;
+    _this->_impl_.controlvalue_ = new ::commonmodule::ControlValue(*from._impl_.controlvalue_);
   }
   if (from._internal_has_check()) {
-    check_ = new ::commonmodule::CheckConditions(*from.check_);
-  } else {
-    check_ = nullptr;
+    _this->_impl_.check_ = new ::commonmodule::CheckConditions(*from._impl_.check_);
   }
   if (from._internal_has_esscontrolfscc()) {
-    esscontrolfscc_ = new ::essmodule::EssControlFSCC(*from.esscontrolfscc_);
-  } else {
-    esscontrolfscc_ = nullptr;
+    _this->_impl_.esscontrolfscc_ = new ::essmodule::EssControlFSCC(*from._impl_.esscontrolfscc_);
   }
   // @@protoc_insertion_point(copy_constructor:essmodule.ESSControl)
 }
 
-void ESSControl::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&esscontrolfscc_) -
-    reinterpret_cast<char*>(&controlvalue_)) + sizeof(esscontrolfscc_));
+inline void ESSControl::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.esscontrolfscc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ESSControl::~ESSControl() {
   // @@protoc_insertion_point(destructor:essmodule.ESSControl)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ESSControl::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlvalue_;
-  if (this != internal_default_instance()) delete check_;
-  if (this != internal_default_instance()) delete esscontrolfscc_;
+inline void ESSControl::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlvalue_;
+  if (this != internal_default_instance()) delete _impl_.check_;
+  if (this != internal_default_instance()) delete _impl_.esscontrolfscc_;
 }
 
-void ESSControl::ArenaDtor(void* object) {
-  ESSControl* _this = reinterpret_cast< ESSControl* >(object);
-  (void)_this;
-}
-void ESSControl::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSControl::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ESSControl::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
   }
-  controlvalue_ = nullptr;
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  _impl_.controlvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
-  if (GetArena() == nullptr && esscontrolfscc_ != nullptr) {
-    delete esscontrolfscc_;
+  _impl_.check_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.esscontrolfscc_ != nullptr) {
+    delete _impl_.esscontrolfscc_;
   }
-  esscontrolfscc_ = nullptr;
+  _impl_.esscontrolfscc_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ESSControl::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ESSControl::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlvalue(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.CheckConditions check = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .essmodule.EssControlFSCC essControlFSCC = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_esscontrolfscc(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSControl::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ESSControl::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlvalue()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlvalue(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlvalue(this),
+        _Internal::controlvalue(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_check()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::check(this), target, stream);
+      InternalWriteMessage(2, _Internal::check(this),
+        _Internal::check(this).GetCachedSize(), target, stream);
   }
 
   // .essmodule.EssControlFSCC essControlFSCC = 3;
-  if (this->has_esscontrolfscc()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_esscontrolfscc()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::esscontrolfscc(this), target, stream);
+      InternalWriteMessage(3, _Internal::esscontrolfscc(this),
+        _Internal::esscontrolfscc(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSControl)
   return target;
 }
 
-size_t ESSControl::ByteSizeLong() const {
+::size_t ESSControl::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSControl)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
+  if (this->_internal_has_controlvalue()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlvalue_);
+        *_impl_.controlvalue_);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
+  if (this->_internal_has_check()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *check_);
+        *_impl_.check_);
   }
 
   // .essmodule.EssControlFSCC essControlFSCC = 3;
-  if (this->has_esscontrolfscc()) {
+  if (this->_internal_has_esscontrolfscc()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *esscontrolfscc_);
+        *_impl_.esscontrolfscc_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ESSControl::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ESSControl* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSControl>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSControl)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSControl)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSControl::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSControl::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSControl::GetClassData() const { return &_class_data_; }
 
-void ESSControl::MergeFrom(const ESSControl& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ESSControl::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSControl*>(&to_msg);
+  auto& from = static_cast<const ESSControl&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSControl)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlvalue()) {
-    _internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(from._internal_controlvalue());
+  if (from._internal_has_controlvalue()) {
+    _this->_internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(
+        from._internal_controlvalue());
   }
-  if (from.has_check()) {
-    _internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(from._internal_check());
+  if (from._internal_has_check()) {
+    _this->_internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(
+        from._internal_check());
   }
-  if (from.has_esscontrolfscc()) {
-    _internal_mutable_esscontrolfscc()->::essmodule::EssControlFSCC::MergeFrom(from._internal_esscontrolfscc());
+  if (from._internal_has_esscontrolfscc()) {
+    _this->_internal_mutable_esscontrolfscc()->::essmodule::EssControlFSCC::MergeFrom(
+        from._internal_esscontrolfscc());
   }
-}
-
-void ESSControl::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSControl)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ESSControl::CopyFrom(const ESSControl& from) {
@@ -10510,20 +8945,20 @@ bool ESSControl::IsInitialized() const {
 
 void ESSControl::InternalSwap(ESSControl* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSControl, esscontrolfscc_)
-      + sizeof(ESSControl::esscontrolfscc_)
-      - PROTOBUF_FIELD_OFFSET(ESSControl, controlvalue_)>(
-          reinterpret_cast<char*>(&controlvalue_),
-          reinterpret_cast<char*>(&other->controlvalue_));
+      PROTOBUF_FIELD_OFFSET(ESSControl, _impl_.esscontrolfscc_)
+      + sizeof(ESSControl::_impl_.esscontrolfscc_)
+      - PROTOBUF_FIELD_OFFSET(ESSControl, _impl_.controlvalue_)>(
+          reinterpret_cast<char*>(&_impl_.controlvalue_),
+          reinterpret_cast<char*>(&other->_impl_.controlvalue_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ESSControl::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[20]);
 }
-
-
 // ===================================================================
 
 class ESSControlProfile::_Internal {
@@ -10535,270 +8970,257 @@ class ESSControlProfile::_Internal {
 
 const ::commonmodule::ControlMessageInfo&
 ESSControlProfile::_Internal::controlmessageinfo(const ESSControlProfile* msg) {
-  return *msg->controlmessageinfo_;
+  return *msg->_impl_.controlmessageinfo_;
 }
 const ::commonmodule::ESS&
 ESSControlProfile::_Internal::ess(const ESSControlProfile* msg) {
-  return *msg->ess_;
+  return *msg->_impl_.ess_;
 }
 const ::essmodule::ESSControl&
 ESSControlProfile::_Internal::esscontrol(const ESSControlProfile* msg) {
-  return *msg->esscontrol_;
+  return *msg->_impl_.esscontrol_;
 }
 void ESSControlProfile::clear_controlmessageinfo() {
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
+  _impl_.controlmessageinfo_ = nullptr;
 }
 void ESSControlProfile::clear_ess() {
-  if (GetArena() == nullptr && ess_ != nullptr) {
-    delete ess_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ess_ != nullptr) {
+    delete _impl_.ess_;
   }
-  ess_ = nullptr;
+  _impl_.ess_ = nullptr;
 }
 ESSControlProfile::ESSControlProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:essmodule.ESSControlProfile)
 }
 ESSControlProfile::ESSControlProfile(const ESSControlProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSControlProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.ess_){nullptr}
+    , decltype(_impl_.esscontrol_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlmessageinfo()) {
-    controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
-  } else {
-    controlmessageinfo_ = nullptr;
+    _this->_impl_.controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from._impl_.controlmessageinfo_);
   }
   if (from._internal_has_ess()) {
-    ess_ = new ::commonmodule::ESS(*from.ess_);
-  } else {
-    ess_ = nullptr;
+    _this->_impl_.ess_ = new ::commonmodule::ESS(*from._impl_.ess_);
   }
   if (from._internal_has_esscontrol()) {
-    esscontrol_ = new ::essmodule::ESSControl(*from.esscontrol_);
-  } else {
-    esscontrol_ = nullptr;
+    _this->_impl_.esscontrol_ = new ::essmodule::ESSControl(*from._impl_.esscontrol_);
   }
   // @@protoc_insertion_point(copy_constructor:essmodule.ESSControlProfile)
 }
 
-void ESSControlProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&esscontrol_) -
-    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(esscontrol_));
+inline void ESSControlProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.ess_){nullptr}
+    , decltype(_impl_.esscontrol_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ESSControlProfile::~ESSControlProfile() {
   // @@protoc_insertion_point(destructor:essmodule.ESSControlProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ESSControlProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete ess_;
-  if (this != internal_default_instance()) delete esscontrol_;
+inline void ESSControlProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.ess_;
+  if (this != internal_default_instance()) delete _impl_.esscontrol_;
 }
 
-void ESSControlProfile::ArenaDtor(void* object) {
-  ESSControlProfile* _this = reinterpret_cast< ESSControlProfile* >(object);
-  (void)_this;
-}
-void ESSControlProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ESSControlProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ESSControlProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:essmodule.ESSControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && ess_ != nullptr) {
-    delete ess_;
+  _impl_.controlmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ess_ != nullptr) {
+    delete _impl_.ess_;
   }
-  ess_ = nullptr;
-  if (GetArena() == nullptr && esscontrol_ != nullptr) {
-    delete esscontrol_;
+  _impl_.ess_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.esscontrol_ != nullptr) {
+    delete _impl_.esscontrol_;
   }
-  esscontrol_ = nullptr;
+  _impl_.esscontrol_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ESSControlProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ESSControlProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_ess(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .essmodule.ESSControl essControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_esscontrol(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ESSControlProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ESSControlProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlmessageinfo(this),
+        _Internal::controlmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ess()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ess()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::ess(this), target, stream);
+      InternalWriteMessage(2, _Internal::ess(this),
+        _Internal::ess(this).GetCachedSize(), target, stream);
   }
 
   // .essmodule.ESSControl essControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_esscontrol()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_esscontrol()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::esscontrol(this), target, stream);
+      InternalWriteMessage(3, _Internal::esscontrol(this),
+        _Internal::esscontrol(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSControlProfile)
   return target;
 }
 
-size_t ESSControlProfile::ByteSizeLong() const {
+::size_t ESSControlProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:essmodule.ESSControlProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
+  if (this->_internal_has_controlmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlmessageinfo_);
+        *_impl_.controlmessageinfo_);
   }
 
   // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_ess()) {
+  if (this->_internal_has_ess()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ess_);
+        *_impl_.ess_);
   }
 
   // .essmodule.ESSControl essControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_esscontrol()) {
+  if (this->_internal_has_esscontrol()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *esscontrol_);
+        *_impl_.esscontrol_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ESSControlProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:essmodule.ESSControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ESSControlProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ESSControlProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:essmodule.ESSControlProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:essmodule.ESSControlProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSControlProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSControlProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSControlProfile::GetClassData() const { return &_class_data_; }
 
-void ESSControlProfile::MergeFrom(const ESSControlProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ESSControlProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSControlProfile*>(&to_msg);
+  auto& from = static_cast<const ESSControlProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSControlProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlmessageinfo()) {
-    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
+  if (from._internal_has_controlmessageinfo()) {
+    _this->_internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(
+        from._internal_controlmessageinfo());
   }
-  if (from.has_ess()) {
-    _internal_mutable_ess()->::commonmodule::ESS::MergeFrom(from._internal_ess());
+  if (from._internal_has_ess()) {
+    _this->_internal_mutable_ess()->::commonmodule::ESS::MergeFrom(
+        from._internal_ess());
   }
-  if (from.has_esscontrol()) {
-    _internal_mutable_esscontrol()->::essmodule::ESSControl::MergeFrom(from._internal_esscontrol());
+  if (from._internal_has_esscontrol()) {
+    _this->_internal_mutable_esscontrol()->::essmodule::ESSControl::MergeFrom(
+        from._internal_esscontrol());
   }
-}
-
-void ESSControlProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:essmodule.ESSControlProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ESSControlProfile::CopyFrom(const ESSControlProfile& from) {
@@ -10814,105 +9236,5876 @@ bool ESSControlProfile::IsInitialized() const {
 
 void ESSControlProfile::InternalSwap(ESSControlProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ESSControlProfile, esscontrol_)
-      + sizeof(ESSControlProfile::esscontrol_)
-      - PROTOBUF_FIELD_OFFSET(ESSControlProfile, controlmessageinfo_)>(
-          reinterpret_cast<char*>(&controlmessageinfo_),
-          reinterpret_cast<char*>(&other->controlmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(ESSControlProfile, _impl_.esscontrol_)
+      + sizeof(ESSControlProfile::_impl_.esscontrol_)
+      - PROTOBUF_FIELD_OFFSET(ESSControlProfile, _impl_.controlmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.controlmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.controlmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ESSControlProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[21]);
+}
+// ===================================================================
+
+class ESSDiscreteControlDBAT::_Internal {
+ public:
+  static const ::commonmodule::LogicalNodeForControl& logicalnodeforcontrol(const ESSDiscreteControlDBAT* msg);
+  static const ::essmodule::ESSPoint& control(const ESSDiscreteControlDBAT* msg);
+};
+
+const ::commonmodule::LogicalNodeForControl&
+ESSDiscreteControlDBAT::_Internal::logicalnodeforcontrol(const ESSDiscreteControlDBAT* msg) {
+  return *msg->_impl_.logicalnodeforcontrol_;
+}
+const ::essmodule::ESSPoint&
+ESSDiscreteControlDBAT::_Internal::control(const ESSDiscreteControlDBAT* msg) {
+  return *msg->_impl_.control_;
+}
+void ESSDiscreteControlDBAT::clear_logicalnodeforcontrol() {
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforcontrol_ != nullptr) {
+    delete _impl_.logicalnodeforcontrol_;
+  }
+  _impl_.logicalnodeforcontrol_ = nullptr;
+}
+ESSDiscreteControlDBAT::ESSDiscreteControlDBAT(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSDiscreteControlDBAT)
+}
+ESSDiscreteControlDBAT::ESSDiscreteControlDBAT(const ESSDiscreteControlDBAT& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSDiscreteControlDBAT* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforcontrol_){nullptr}
+    , decltype(_impl_.control_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_logicalnodeforcontrol()) {
+    _this->_impl_.logicalnodeforcontrol_ = new ::commonmodule::LogicalNodeForControl(*from._impl_.logicalnodeforcontrol_);
+  }
+  if (from._internal_has_control()) {
+    _this->_impl_.control_ = new ::essmodule::ESSPoint(*from._impl_.control_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSDiscreteControlDBAT)
 }
 
+inline void ESSDiscreteControlDBAT::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforcontrol_){nullptr}
+    , decltype(_impl_.control_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
 
+ESSDiscreteControlDBAT::~ESSDiscreteControlDBAT() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSDiscreteControlDBAT)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ESSDiscreteControlDBAT::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.logicalnodeforcontrol_;
+  if (this != internal_default_instance()) delete _impl_.control_;
+}
+
+void ESSDiscreteControlDBAT::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ESSDiscreteControlDBAT::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSDiscreteControlDBAT)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforcontrol_ != nullptr) {
+    delete _impl_.logicalnodeforcontrol_;
+  }
+  _impl_.logicalnodeforcontrol_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.control_ != nullptr) {
+    delete _impl_.control_;
+  }
+  _impl_.control_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ESSDiscreteControlDBAT::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforcontrol(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .essmodule.ESSPoint control = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_control(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* ESSDiscreteControlDBAT::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSDiscreteControlDBAT)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_logicalnodeforcontrol()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::logicalnodeforcontrol(this),
+        _Internal::logicalnodeforcontrol(this).GetCachedSize(), target, stream);
+  }
+
+  // .essmodule.ESSPoint control = 2;
+  if (this->_internal_has_control()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::control(this),
+        _Internal::control(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSDiscreteControlDBAT)
+  return target;
+}
+
+::size_t ESSDiscreteControlDBAT::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSDiscreteControlDBAT)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_logicalnodeforcontrol()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.logicalnodeforcontrol_);
+  }
+
+  // .essmodule.ESSPoint control = 2;
+  if (this->_internal_has_control()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.control_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSDiscreteControlDBAT::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSDiscreteControlDBAT::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSDiscreteControlDBAT::GetClassData() const { return &_class_data_; }
+
+
+void ESSDiscreteControlDBAT::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSDiscreteControlDBAT*>(&to_msg);
+  auto& from = static_cast<const ESSDiscreteControlDBAT&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSDiscreteControlDBAT)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_logicalnodeforcontrol()) {
+    _this->_internal_mutable_logicalnodeforcontrol()->::commonmodule::LogicalNodeForControl::MergeFrom(
+        from._internal_logicalnodeforcontrol());
+  }
+  if (from._internal_has_control()) {
+    _this->_internal_mutable_control()->::essmodule::ESSPoint::MergeFrom(
+        from._internal_control());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ESSDiscreteControlDBAT::CopyFrom(const ESSDiscreteControlDBAT& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSDiscreteControlDBAT)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ESSDiscreteControlDBAT::IsInitialized() const {
+  return true;
+}
+
+void ESSDiscreteControlDBAT::InternalSwap(ESSDiscreteControlDBAT* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ESSDiscreteControlDBAT, _impl_.control_)
+      + sizeof(ESSDiscreteControlDBAT::_impl_.control_)
+      - PROTOBUF_FIELD_OFFSET(ESSDiscreteControlDBAT, _impl_.logicalnodeforcontrol_)>(
+          reinterpret_cast<char*>(&_impl_.logicalnodeforcontrol_),
+          reinterpret_cast<char*>(&other->_impl_.logicalnodeforcontrol_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ESSDiscreteControlDBAT::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[22]);
+}
+// ===================================================================
+
+class ESSDiscreteControl::_Internal {
+ public:
+  static const ::commonmodule::ControlValue& controlvalue(const ESSDiscreteControl* msg);
+  static const ::commonmodule::CheckConditions& check(const ESSDiscreteControl* msg);
+  static const ::essmodule::ESSDiscreteControlDBAT& essdiscretecontroldbat(const ESSDiscreteControl* msg);
+};
+
+const ::commonmodule::ControlValue&
+ESSDiscreteControl::_Internal::controlvalue(const ESSDiscreteControl* msg) {
+  return *msg->_impl_.controlvalue_;
+}
+const ::commonmodule::CheckConditions&
+ESSDiscreteControl::_Internal::check(const ESSDiscreteControl* msg) {
+  return *msg->_impl_.check_;
+}
+const ::essmodule::ESSDiscreteControlDBAT&
+ESSDiscreteControl::_Internal::essdiscretecontroldbat(const ESSDiscreteControl* msg) {
+  return *msg->_impl_.essdiscretecontroldbat_;
+}
+void ESSDiscreteControl::clear_controlvalue() {
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
+  }
+  _impl_.controlvalue_ = nullptr;
+}
+void ESSDiscreteControl::clear_check() {
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
+  }
+  _impl_.check_ = nullptr;
+}
+ESSDiscreteControl::ESSDiscreteControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSDiscreteControl)
+}
+ESSDiscreteControl::ESSDiscreteControl(const ESSDiscreteControl& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSDiscreteControl* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.essdiscretecontroldbat_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_controlvalue()) {
+    _this->_impl_.controlvalue_ = new ::commonmodule::ControlValue(*from._impl_.controlvalue_);
+  }
+  if (from._internal_has_check()) {
+    _this->_impl_.check_ = new ::commonmodule::CheckConditions(*from._impl_.check_);
+  }
+  if (from._internal_has_essdiscretecontroldbat()) {
+    _this->_impl_.essdiscretecontroldbat_ = new ::essmodule::ESSDiscreteControlDBAT(*from._impl_.essdiscretecontroldbat_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSDiscreteControl)
+}
+
+inline void ESSDiscreteControl::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.essdiscretecontroldbat_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+ESSDiscreteControl::~ESSDiscreteControl() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSDiscreteControl)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ESSDiscreteControl::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlvalue_;
+  if (this != internal_default_instance()) delete _impl_.check_;
+  if (this != internal_default_instance()) delete _impl_.essdiscretecontroldbat_;
+}
+
+void ESSDiscreteControl::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ESSDiscreteControl::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSDiscreteControl)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
+  }
+  _impl_.controlvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
+  }
+  _impl_.check_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.essdiscretecontroldbat_ != nullptr) {
+    delete _impl_.essdiscretecontroldbat_;
+  }
+  _impl_.essdiscretecontroldbat_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ESSDiscreteControl::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_controlvalue(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.CheckConditions check = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .essmodule.ESSDiscreteControlDBAT essDiscreteControlDBAT = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_essdiscretecontroldbat(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* ESSDiscreteControl::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSDiscreteControl)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_controlvalue()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::controlvalue(this),
+        _Internal::controlvalue(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.CheckConditions check = 2;
+  if (this->_internal_has_check()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::check(this),
+        _Internal::check(this).GetCachedSize(), target, stream);
+  }
+
+  // .essmodule.ESSDiscreteControlDBAT essDiscreteControlDBAT = 3;
+  if (this->_internal_has_essdiscretecontroldbat()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::essdiscretecontroldbat(this),
+        _Internal::essdiscretecontroldbat(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSDiscreteControl)
+  return target;
+}
+
+::size_t ESSDiscreteControl::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSDiscreteControl)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_controlvalue()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.controlvalue_);
+  }
+
+  // .commonmodule.CheckConditions check = 2;
+  if (this->_internal_has_check()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.check_);
+  }
+
+  // .essmodule.ESSDiscreteControlDBAT essDiscreteControlDBAT = 3;
+  if (this->_internal_has_essdiscretecontroldbat()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.essdiscretecontroldbat_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSDiscreteControl::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSDiscreteControl::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSDiscreteControl::GetClassData() const { return &_class_data_; }
+
+
+void ESSDiscreteControl::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSDiscreteControl*>(&to_msg);
+  auto& from = static_cast<const ESSDiscreteControl&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSDiscreteControl)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_controlvalue()) {
+    _this->_internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(
+        from._internal_controlvalue());
+  }
+  if (from._internal_has_check()) {
+    _this->_internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(
+        from._internal_check());
+  }
+  if (from._internal_has_essdiscretecontroldbat()) {
+    _this->_internal_mutable_essdiscretecontroldbat()->::essmodule::ESSDiscreteControlDBAT::MergeFrom(
+        from._internal_essdiscretecontroldbat());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ESSDiscreteControl::CopyFrom(const ESSDiscreteControl& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSDiscreteControl)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ESSDiscreteControl::IsInitialized() const {
+  return true;
+}
+
+void ESSDiscreteControl::InternalSwap(ESSDiscreteControl* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ESSDiscreteControl, _impl_.essdiscretecontroldbat_)
+      + sizeof(ESSDiscreteControl::_impl_.essdiscretecontroldbat_)
+      - PROTOBUF_FIELD_OFFSET(ESSDiscreteControl, _impl_.controlvalue_)>(
+          reinterpret_cast<char*>(&_impl_.controlvalue_),
+          reinterpret_cast<char*>(&other->_impl_.controlvalue_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ESSDiscreteControl::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[23]);
+}
+// ===================================================================
+
+class ESSDiscreteControlProfile::_Internal {
+ public:
+  static const ::commonmodule::ControlMessageInfo& controlmessageinfo(const ESSDiscreteControlProfile* msg);
+  static const ::commonmodule::ESS& ess(const ESSDiscreteControlProfile* msg);
+  static const ::essmodule::ESSDiscreteControl& essdiscretecontrol(const ESSDiscreteControlProfile* msg);
+};
+
+const ::commonmodule::ControlMessageInfo&
+ESSDiscreteControlProfile::_Internal::controlmessageinfo(const ESSDiscreteControlProfile* msg) {
+  return *msg->_impl_.controlmessageinfo_;
+}
+const ::commonmodule::ESS&
+ESSDiscreteControlProfile::_Internal::ess(const ESSDiscreteControlProfile* msg) {
+  return *msg->_impl_.ess_;
+}
+const ::essmodule::ESSDiscreteControl&
+ESSDiscreteControlProfile::_Internal::essdiscretecontrol(const ESSDiscreteControlProfile* msg) {
+  return *msg->_impl_.essdiscretecontrol_;
+}
+void ESSDiscreteControlProfile::clear_controlmessageinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
+  }
+  _impl_.controlmessageinfo_ = nullptr;
+}
+void ESSDiscreteControlProfile::clear_ess() {
+  if (GetArenaForAllocation() == nullptr && _impl_.ess_ != nullptr) {
+    delete _impl_.ess_;
+  }
+  _impl_.ess_ = nullptr;
+}
+ESSDiscreteControlProfile::ESSDiscreteControlProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSDiscreteControlProfile)
+}
+ESSDiscreteControlProfile::ESSDiscreteControlProfile(const ESSDiscreteControlProfile& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSDiscreteControlProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.ess_){nullptr}
+    , decltype(_impl_.essdiscretecontrol_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_controlmessageinfo()) {
+    _this->_impl_.controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from._impl_.controlmessageinfo_);
+  }
+  if (from._internal_has_ess()) {
+    _this->_impl_.ess_ = new ::commonmodule::ESS(*from._impl_.ess_);
+  }
+  if (from._internal_has_essdiscretecontrol()) {
+    _this->_impl_.essdiscretecontrol_ = new ::essmodule::ESSDiscreteControl(*from._impl_.essdiscretecontrol_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSDiscreteControlProfile)
+}
+
+inline void ESSDiscreteControlProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.ess_){nullptr}
+    , decltype(_impl_.essdiscretecontrol_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+ESSDiscreteControlProfile::~ESSDiscreteControlProfile() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSDiscreteControlProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ESSDiscreteControlProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.ess_;
+  if (this != internal_default_instance()) delete _impl_.essdiscretecontrol_;
+}
+
+void ESSDiscreteControlProfile::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ESSDiscreteControlProfile::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSDiscreteControlProfile)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
+  }
+  _impl_.controlmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ess_ != nullptr) {
+    delete _impl_.ess_;
+  }
+  _impl_.ess_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.essdiscretecontrol_ != nullptr) {
+    delete _impl_.essdiscretecontrol_;
+  }
+  _impl_.essdiscretecontrol_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ESSDiscreteControlProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_ess(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .essmodule.ESSDiscreteControl essDiscreteControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_essdiscretecontrol(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* ESSDiscreteControlProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSDiscreteControlProfile)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_controlmessageinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::controlmessageinfo(this),
+        _Internal::controlmessageinfo(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_ess()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::ess(this),
+        _Internal::ess(this).GetCachedSize(), target, stream);
+  }
+
+  // .essmodule.ESSDiscreteControl essDiscreteControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_essdiscretecontrol()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::essdiscretecontrol(this),
+        _Internal::essdiscretecontrol(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSDiscreteControlProfile)
+  return target;
+}
+
+::size_t ESSDiscreteControlProfile::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSDiscreteControlProfile)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_controlmessageinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.controlmessageinfo_);
+  }
+
+  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_ess()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.ess_);
+  }
+
+  // .essmodule.ESSDiscreteControl essDiscreteControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_essdiscretecontrol()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.essdiscretecontrol_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSDiscreteControlProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSDiscreteControlProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSDiscreteControlProfile::GetClassData() const { return &_class_data_; }
+
+
+void ESSDiscreteControlProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSDiscreteControlProfile*>(&to_msg);
+  auto& from = static_cast<const ESSDiscreteControlProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSDiscreteControlProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_controlmessageinfo()) {
+    _this->_internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(
+        from._internal_controlmessageinfo());
+  }
+  if (from._internal_has_ess()) {
+    _this->_internal_mutable_ess()->::commonmodule::ESS::MergeFrom(
+        from._internal_ess());
+  }
+  if (from._internal_has_essdiscretecontrol()) {
+    _this->_internal_mutable_essdiscretecontrol()->::essmodule::ESSDiscreteControl::MergeFrom(
+        from._internal_essdiscretecontrol());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ESSDiscreteControlProfile::CopyFrom(const ESSDiscreteControlProfile& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSDiscreteControlProfile)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ESSDiscreteControlProfile::IsInitialized() const {
+  return true;
+}
+
+void ESSDiscreteControlProfile::InternalSwap(ESSDiscreteControlProfile* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ESSDiscreteControlProfile, _impl_.essdiscretecontrol_)
+      + sizeof(ESSDiscreteControlProfile::_impl_.essdiscretecontrol_)
+      - PROTOBUF_FIELD_OFFSET(ESSDiscreteControlProfile, _impl_.controlmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.controlmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.controlmessageinfo_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ESSDiscreteControlProfile::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[24]);
+}
+// ===================================================================
+
+class EssEventZBAT::_Internal {
+ public:
+  static const ::commonmodule::LogicalNodeForEventAndStatus& logicalnodeforeventandstatus(const EssEventZBAT* msg);
+  static const ::commonmodule::StatusSPS& bathi(const EssEventZBAT* msg);
+  static const ::commonmodule::StatusSPS& batlo(const EssEventZBAT* msg);
+  static const ::commonmodule::StatusSPS& batst(const EssEventZBAT* msg);
+  static const ::commonmodule::MV& soc(const EssEventZBAT* msg);
+  static const ::commonmodule::StatusSPS& stdby(const EssEventZBAT* msg);
+  static const ::commonmodule::MV& soh(const EssEventZBAT* msg);
+  static const ::commonmodule::MV& whavail(const EssEventZBAT* msg);
+};
+
+const ::commonmodule::LogicalNodeForEventAndStatus&
+EssEventZBAT::_Internal::logicalnodeforeventandstatus(const EssEventZBAT* msg) {
+  return *msg->_impl_.logicalnodeforeventandstatus_;
+}
+const ::commonmodule::StatusSPS&
+EssEventZBAT::_Internal::bathi(const EssEventZBAT* msg) {
+  return *msg->_impl_.bathi_;
+}
+const ::commonmodule::StatusSPS&
+EssEventZBAT::_Internal::batlo(const EssEventZBAT* msg) {
+  return *msg->_impl_.batlo_;
+}
+const ::commonmodule::StatusSPS&
+EssEventZBAT::_Internal::batst(const EssEventZBAT* msg) {
+  return *msg->_impl_.batst_;
+}
+const ::commonmodule::MV&
+EssEventZBAT::_Internal::soc(const EssEventZBAT* msg) {
+  return *msg->_impl_.soc_;
+}
+const ::commonmodule::StatusSPS&
+EssEventZBAT::_Internal::stdby(const EssEventZBAT* msg) {
+  return *msg->_impl_.stdby_;
+}
+const ::commonmodule::MV&
+EssEventZBAT::_Internal::soh(const EssEventZBAT* msg) {
+  return *msg->_impl_.soh_;
+}
+const ::commonmodule::MV&
+EssEventZBAT::_Internal::whavail(const EssEventZBAT* msg) {
+  return *msg->_impl_.whavail_;
+}
+void EssEventZBAT::clear_logicalnodeforeventandstatus() {
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforeventandstatus_ != nullptr) {
+    delete _impl_.logicalnodeforeventandstatus_;
+  }
+  _impl_.logicalnodeforeventandstatus_ = nullptr;
+}
+void EssEventZBAT::clear_bathi() {
+  if (GetArenaForAllocation() == nullptr && _impl_.bathi_ != nullptr) {
+    delete _impl_.bathi_;
+  }
+  _impl_.bathi_ = nullptr;
+}
+void EssEventZBAT::clear_batlo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.batlo_ != nullptr) {
+    delete _impl_.batlo_;
+  }
+  _impl_.batlo_ = nullptr;
+}
+void EssEventZBAT::clear_batst() {
+  if (GetArenaForAllocation() == nullptr && _impl_.batst_ != nullptr) {
+    delete _impl_.batst_;
+  }
+  _impl_.batst_ = nullptr;
+}
+void EssEventZBAT::clear_soc() {
+  if (GetArenaForAllocation() == nullptr && _impl_.soc_ != nullptr) {
+    delete _impl_.soc_;
+  }
+  _impl_.soc_ = nullptr;
+}
+void EssEventZBAT::clear_stdby() {
+  if (GetArenaForAllocation() == nullptr && _impl_.stdby_ != nullptr) {
+    delete _impl_.stdby_;
+  }
+  _impl_.stdby_ = nullptr;
+}
+void EssEventZBAT::clear_soh() {
+  if (GetArenaForAllocation() == nullptr && _impl_.soh_ != nullptr) {
+    delete _impl_.soh_;
+  }
+  _impl_.soh_ = nullptr;
+}
+void EssEventZBAT::clear_whavail() {
+  if (GetArenaForAllocation() == nullptr && _impl_.whavail_ != nullptr) {
+    delete _impl_.whavail_;
+  }
+  _impl_.whavail_ = nullptr;
+}
+EssEventZBAT::EssEventZBAT(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.EssEventZBAT)
+}
+EssEventZBAT::EssEventZBAT(const EssEventZBAT& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  EssEventZBAT* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforeventandstatus_){nullptr}
+    , decltype(_impl_.bathi_){nullptr}
+    , decltype(_impl_.batlo_){nullptr}
+    , decltype(_impl_.batst_){nullptr}
+    , decltype(_impl_.soc_){nullptr}
+    , decltype(_impl_.stdby_){nullptr}
+    , decltype(_impl_.soh_){nullptr}
+    , decltype(_impl_.whavail_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_logicalnodeforeventandstatus()) {
+    _this->_impl_.logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from._impl_.logicalnodeforeventandstatus_);
+  }
+  if (from._internal_has_bathi()) {
+    _this->_impl_.bathi_ = new ::commonmodule::StatusSPS(*from._impl_.bathi_);
+  }
+  if (from._internal_has_batlo()) {
+    _this->_impl_.batlo_ = new ::commonmodule::StatusSPS(*from._impl_.batlo_);
+  }
+  if (from._internal_has_batst()) {
+    _this->_impl_.batst_ = new ::commonmodule::StatusSPS(*from._impl_.batst_);
+  }
+  if (from._internal_has_soc()) {
+    _this->_impl_.soc_ = new ::commonmodule::MV(*from._impl_.soc_);
+  }
+  if (from._internal_has_stdby()) {
+    _this->_impl_.stdby_ = new ::commonmodule::StatusSPS(*from._impl_.stdby_);
+  }
+  if (from._internal_has_soh()) {
+    _this->_impl_.soh_ = new ::commonmodule::MV(*from._impl_.soh_);
+  }
+  if (from._internal_has_whavail()) {
+    _this->_impl_.whavail_ = new ::commonmodule::MV(*from._impl_.whavail_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.EssEventZBAT)
+}
+
+inline void EssEventZBAT::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforeventandstatus_){nullptr}
+    , decltype(_impl_.bathi_){nullptr}
+    , decltype(_impl_.batlo_){nullptr}
+    , decltype(_impl_.batst_){nullptr}
+    , decltype(_impl_.soc_){nullptr}
+    , decltype(_impl_.stdby_){nullptr}
+    , decltype(_impl_.soh_){nullptr}
+    , decltype(_impl_.whavail_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+EssEventZBAT::~EssEventZBAT() {
+  // @@protoc_insertion_point(destructor:essmodule.EssEventZBAT)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void EssEventZBAT::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.logicalnodeforeventandstatus_;
+  if (this != internal_default_instance()) delete _impl_.bathi_;
+  if (this != internal_default_instance()) delete _impl_.batlo_;
+  if (this != internal_default_instance()) delete _impl_.batst_;
+  if (this != internal_default_instance()) delete _impl_.soc_;
+  if (this != internal_default_instance()) delete _impl_.stdby_;
+  if (this != internal_default_instance()) delete _impl_.soh_;
+  if (this != internal_default_instance()) delete _impl_.whavail_;
+}
+
+void EssEventZBAT::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void EssEventZBAT::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.EssEventZBAT)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforeventandstatus_ != nullptr) {
+    delete _impl_.logicalnodeforeventandstatus_;
+  }
+  _impl_.logicalnodeforeventandstatus_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.bathi_ != nullptr) {
+    delete _impl_.bathi_;
+  }
+  _impl_.bathi_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.batlo_ != nullptr) {
+    delete _impl_.batlo_;
+  }
+  _impl_.batlo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.batst_ != nullptr) {
+    delete _impl_.batst_;
+  }
+  _impl_.batst_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.soc_ != nullptr) {
+    delete _impl_.soc_;
+  }
+  _impl_.soc_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.stdby_ != nullptr) {
+    delete _impl_.stdby_;
+  }
+  _impl_.stdby_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.soh_ != nullptr) {
+    delete _impl_.soh_;
+  }
+  _impl_.soh_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.whavail_ != nullptr) {
+    delete _impl_.whavail_;
+  }
+  _impl_.whavail_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* EssEventZBAT::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforeventandstatus(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.StatusSPS BatHi = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_bathi(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.StatusSPS BatLo = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_batlo(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.StatusSPS BatSt = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_batst(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.MV Soc = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_soc(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.StatusSPS Stdby = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_stdby(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.MV SoH = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 58)) {
+          ptr = ctx->ParseMessage(_internal_mutable_soh(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.MV WHAvail = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 66)) {
+          ptr = ctx->ParseMessage(_internal_mutable_whavail(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* EssEventZBAT::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.EssEventZBAT)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_logicalnodeforeventandstatus()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::logicalnodeforeventandstatus(this),
+        _Internal::logicalnodeforeventandstatus(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.StatusSPS BatHi = 2;
+  if (this->_internal_has_bathi()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::bathi(this),
+        _Internal::bathi(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.StatusSPS BatLo = 3;
+  if (this->_internal_has_batlo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::batlo(this),
+        _Internal::batlo(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.StatusSPS BatSt = 4;
+  if (this->_internal_has_batst()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::batst(this),
+        _Internal::batst(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.MV Soc = 5;
+  if (this->_internal_has_soc()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(5, _Internal::soc(this),
+        _Internal::soc(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.StatusSPS Stdby = 6;
+  if (this->_internal_has_stdby()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(6, _Internal::stdby(this),
+        _Internal::stdby(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.MV SoH = 7;
+  if (this->_internal_has_soh()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(7, _Internal::soh(this),
+        _Internal::soh(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.MV WHAvail = 8;
+  if (this->_internal_has_whavail()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(8, _Internal::whavail(this),
+        _Internal::whavail(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.EssEventZBAT)
+  return target;
+}
+
+::size_t EssEventZBAT::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.EssEventZBAT)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_logicalnodeforeventandstatus()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.logicalnodeforeventandstatus_);
+  }
+
+  // .commonmodule.StatusSPS BatHi = 2;
+  if (this->_internal_has_bathi()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.bathi_);
+  }
+
+  // .commonmodule.StatusSPS BatLo = 3;
+  if (this->_internal_has_batlo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.batlo_);
+  }
+
+  // .commonmodule.StatusSPS BatSt = 4;
+  if (this->_internal_has_batst()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.batst_);
+  }
+
+  // .commonmodule.MV Soc = 5;
+  if (this->_internal_has_soc()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.soc_);
+  }
+
+  // .commonmodule.StatusSPS Stdby = 6;
+  if (this->_internal_has_stdby()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.stdby_);
+  }
+
+  // .commonmodule.MV SoH = 7;
+  if (this->_internal_has_soh()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.soh_);
+  }
+
+  // .commonmodule.MV WHAvail = 8;
+  if (this->_internal_has_whavail()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.whavail_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EssEventZBAT::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    EssEventZBAT::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EssEventZBAT::GetClassData() const { return &_class_data_; }
+
+
+void EssEventZBAT::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<EssEventZBAT*>(&to_msg);
+  auto& from = static_cast<const EssEventZBAT&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.EssEventZBAT)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_logicalnodeforeventandstatus()) {
+    _this->_internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(
+        from._internal_logicalnodeforeventandstatus());
+  }
+  if (from._internal_has_bathi()) {
+    _this->_internal_mutable_bathi()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_bathi());
+  }
+  if (from._internal_has_batlo()) {
+    _this->_internal_mutable_batlo()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_batlo());
+  }
+  if (from._internal_has_batst()) {
+    _this->_internal_mutable_batst()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_batst());
+  }
+  if (from._internal_has_soc()) {
+    _this->_internal_mutable_soc()->::commonmodule::MV::MergeFrom(
+        from._internal_soc());
+  }
+  if (from._internal_has_stdby()) {
+    _this->_internal_mutable_stdby()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_stdby());
+  }
+  if (from._internal_has_soh()) {
+    _this->_internal_mutable_soh()->::commonmodule::MV::MergeFrom(
+        from._internal_soh());
+  }
+  if (from._internal_has_whavail()) {
+    _this->_internal_mutable_whavail()->::commonmodule::MV::MergeFrom(
+        from._internal_whavail());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void EssEventZBAT::CopyFrom(const EssEventZBAT& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.EssEventZBAT)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool EssEventZBAT::IsInitialized() const {
+  return true;
+}
+
+void EssEventZBAT::InternalSwap(EssEventZBAT* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(EssEventZBAT, _impl_.whavail_)
+      + sizeof(EssEventZBAT::_impl_.whavail_)
+      - PROTOBUF_FIELD_OFFSET(EssEventZBAT, _impl_.logicalnodeforeventandstatus_)>(
+          reinterpret_cast<char*>(&_impl_.logicalnodeforeventandstatus_),
+          reinterpret_cast<char*>(&other->_impl_.logicalnodeforeventandstatus_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata EssEventZBAT::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[25]);
+}
+// ===================================================================
+
+class ESSPointStatus::_Internal {
+ public:
+  static const ::commonmodule::StatusSPS& blackstartenabled(const ESSPointStatus* msg);
+  static const ::commonmodule::StatusSPS& frequencysetpointenabled(const ESSPointStatus* msg);
+  static const ::essmodule::ESSFunction& function(const ESSPointStatus* msg);
+  static const ::commonmodule::ENG_GridConnectModeKind& mode(const ESSPointStatus* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& pcthzdroop(const ESSPointStatus* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& pctvdroop(const ESSPointStatus* msg);
+  static const ::commonmodule::RampRate& ramprates(const ESSPointStatus* msg);
+  static const ::commonmodule::StatusSPS& reactivepwrsetpointenabled(const ESSPointStatus* msg);
+  static const ::commonmodule::StatusSPS& realpwrsetpointenabled(const ESSPointStatus* msg);
+  static const ::commonmodule::Optional_StateKind& state(const ESSPointStatus* msg);
+  static const ::commonmodule::StatusSPS& syncbacktogrid(const ESSPointStatus* msg);
+  static const ::commonmodule::StatusSPS& transtoislndongridlossenabled(const ESSPointStatus* msg);
+  static const ::commonmodule::StatusSPS& voltagesetpointenabled(const ESSPointStatus* msg);
+  static const ::commonmodule::EnterServiceAPC& enterserviceoperation(const ESSPointStatus* msg);
+  static const ::commonmodule::HzWAPC& hzwoperation(const ESSPointStatus* msg);
+  static const ::commonmodule::LimitWAPC& limitwoperation(const ESSPointStatus* msg);
+  static const ::commonmodule::PFSPC& pfoperation(const ESSPointStatus* msg);
+  static const ::commonmodule::TmHzCSG& tmhztripoperation(const ESSPointStatus* msg);
+  static const ::commonmodule::TmVoltCSG& tmvolttripoperation(const ESSPointStatus* msg);
+  static const ::commonmodule::VarSPC& varoperation(const ESSPointStatus* msg);
+  static const ::commonmodule::VoltVarCSG& voltvaroperation(const ESSPointStatus* msg);
+  static const ::commonmodule::VoltWCSG& voltwoperation(const ESSPointStatus* msg);
+  static const ::commonmodule::WVarCSG& wvaroperation(const ESSPointStatus* msg);
+};
+
+const ::commonmodule::StatusSPS&
+ESSPointStatus::_Internal::blackstartenabled(const ESSPointStatus* msg) {
+  return *msg->_impl_.blackstartenabled_;
+}
+const ::commonmodule::StatusSPS&
+ESSPointStatus::_Internal::frequencysetpointenabled(const ESSPointStatus* msg) {
+  return *msg->_impl_.frequencysetpointenabled_;
+}
+const ::essmodule::ESSFunction&
+ESSPointStatus::_Internal::function(const ESSPointStatus* msg) {
+  return *msg->_impl_.function_;
+}
+const ::commonmodule::ENG_GridConnectModeKind&
+ESSPointStatus::_Internal::mode(const ESSPointStatus* msg) {
+  return *msg->_impl_.mode_;
+}
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
+ESSPointStatus::_Internal::pcthzdroop(const ESSPointStatus* msg) {
+  return *msg->_impl_.pcthzdroop_;
+}
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
+ESSPointStatus::_Internal::pctvdroop(const ESSPointStatus* msg) {
+  return *msg->_impl_.pctvdroop_;
+}
+const ::commonmodule::RampRate&
+ESSPointStatus::_Internal::ramprates(const ESSPointStatus* msg) {
+  return *msg->_impl_.ramprates_;
+}
+const ::commonmodule::StatusSPS&
+ESSPointStatus::_Internal::reactivepwrsetpointenabled(const ESSPointStatus* msg) {
+  return *msg->_impl_.reactivepwrsetpointenabled_;
+}
+const ::commonmodule::StatusSPS&
+ESSPointStatus::_Internal::realpwrsetpointenabled(const ESSPointStatus* msg) {
+  return *msg->_impl_.realpwrsetpointenabled_;
+}
+const ::commonmodule::Optional_StateKind&
+ESSPointStatus::_Internal::state(const ESSPointStatus* msg) {
+  return *msg->_impl_.state_;
+}
+const ::commonmodule::StatusSPS&
+ESSPointStatus::_Internal::syncbacktogrid(const ESSPointStatus* msg) {
+  return *msg->_impl_.syncbacktogrid_;
+}
+const ::commonmodule::StatusSPS&
+ESSPointStatus::_Internal::transtoislndongridlossenabled(const ESSPointStatus* msg) {
+  return *msg->_impl_.transtoislndongridlossenabled_;
+}
+const ::commonmodule::StatusSPS&
+ESSPointStatus::_Internal::voltagesetpointenabled(const ESSPointStatus* msg) {
+  return *msg->_impl_.voltagesetpointenabled_;
+}
+const ::commonmodule::EnterServiceAPC&
+ESSPointStatus::_Internal::enterserviceoperation(const ESSPointStatus* msg) {
+  return *msg->_impl_.enterserviceoperation_;
+}
+const ::commonmodule::HzWAPC&
+ESSPointStatus::_Internal::hzwoperation(const ESSPointStatus* msg) {
+  return *msg->_impl_.hzwoperation_;
+}
+const ::commonmodule::LimitWAPC&
+ESSPointStatus::_Internal::limitwoperation(const ESSPointStatus* msg) {
+  return *msg->_impl_.limitwoperation_;
+}
+const ::commonmodule::PFSPC&
+ESSPointStatus::_Internal::pfoperation(const ESSPointStatus* msg) {
+  return *msg->_impl_.pfoperation_;
+}
+const ::commonmodule::TmHzCSG&
+ESSPointStatus::_Internal::tmhztripoperation(const ESSPointStatus* msg) {
+  return *msg->_impl_.tmhztripoperation_;
+}
+const ::commonmodule::TmVoltCSG&
+ESSPointStatus::_Internal::tmvolttripoperation(const ESSPointStatus* msg) {
+  return *msg->_impl_.tmvolttripoperation_;
+}
+const ::commonmodule::VarSPC&
+ESSPointStatus::_Internal::varoperation(const ESSPointStatus* msg) {
+  return *msg->_impl_.varoperation_;
+}
+const ::commonmodule::VoltVarCSG&
+ESSPointStatus::_Internal::voltvaroperation(const ESSPointStatus* msg) {
+  return *msg->_impl_.voltvaroperation_;
+}
+const ::commonmodule::VoltWCSG&
+ESSPointStatus::_Internal::voltwoperation(const ESSPointStatus* msg) {
+  return *msg->_impl_.voltwoperation_;
+}
+const ::commonmodule::WVarCSG&
+ESSPointStatus::_Internal::wvaroperation(const ESSPointStatus* msg) {
+  return *msg->_impl_.wvaroperation_;
+}
+void ESSPointStatus::clear_blackstartenabled() {
+  if (GetArenaForAllocation() == nullptr && _impl_.blackstartenabled_ != nullptr) {
+    delete _impl_.blackstartenabled_;
+  }
+  _impl_.blackstartenabled_ = nullptr;
+}
+void ESSPointStatus::clear_frequencysetpointenabled() {
+  if (GetArenaForAllocation() == nullptr && _impl_.frequencysetpointenabled_ != nullptr) {
+    delete _impl_.frequencysetpointenabled_;
+  }
+  _impl_.frequencysetpointenabled_ = nullptr;
+}
+void ESSPointStatus::clear_mode() {
+  if (GetArenaForAllocation() == nullptr && _impl_.mode_ != nullptr) {
+    delete _impl_.mode_;
+  }
+  _impl_.mode_ = nullptr;
+}
+void ESSPointStatus::clear_pcthzdroop() {
+  if (GetArenaForAllocation() == nullptr && _impl_.pcthzdroop_ != nullptr) {
+    delete _impl_.pcthzdroop_;
+  }
+  _impl_.pcthzdroop_ = nullptr;
+}
+void ESSPointStatus::clear_pctvdroop() {
+  if (GetArenaForAllocation() == nullptr && _impl_.pctvdroop_ != nullptr) {
+    delete _impl_.pctvdroop_;
+  }
+  _impl_.pctvdroop_ = nullptr;
+}
+void ESSPointStatus::clear_ramprates() {
+  if (GetArenaForAllocation() == nullptr && _impl_.ramprates_ != nullptr) {
+    delete _impl_.ramprates_;
+  }
+  _impl_.ramprates_ = nullptr;
+}
+void ESSPointStatus::clear_reactivepwrsetpointenabled() {
+  if (GetArenaForAllocation() == nullptr && _impl_.reactivepwrsetpointenabled_ != nullptr) {
+    delete _impl_.reactivepwrsetpointenabled_;
+  }
+  _impl_.reactivepwrsetpointenabled_ = nullptr;
+}
+void ESSPointStatus::clear_realpwrsetpointenabled() {
+  if (GetArenaForAllocation() == nullptr && _impl_.realpwrsetpointenabled_ != nullptr) {
+    delete _impl_.realpwrsetpointenabled_;
+  }
+  _impl_.realpwrsetpointenabled_ = nullptr;
+}
+void ESSPointStatus::clear_state() {
+  if (GetArenaForAllocation() == nullptr && _impl_.state_ != nullptr) {
+    delete _impl_.state_;
+  }
+  _impl_.state_ = nullptr;
+}
+void ESSPointStatus::clear_syncbacktogrid() {
+  if (GetArenaForAllocation() == nullptr && _impl_.syncbacktogrid_ != nullptr) {
+    delete _impl_.syncbacktogrid_;
+  }
+  _impl_.syncbacktogrid_ = nullptr;
+}
+void ESSPointStatus::clear_transtoislndongridlossenabled() {
+  if (GetArenaForAllocation() == nullptr && _impl_.transtoislndongridlossenabled_ != nullptr) {
+    delete _impl_.transtoislndongridlossenabled_;
+  }
+  _impl_.transtoislndongridlossenabled_ = nullptr;
+}
+void ESSPointStatus::clear_voltagesetpointenabled() {
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagesetpointenabled_ != nullptr) {
+    delete _impl_.voltagesetpointenabled_;
+  }
+  _impl_.voltagesetpointenabled_ = nullptr;
+}
+void ESSPointStatus::clear_enterserviceoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.enterserviceoperation_ != nullptr) {
+    delete _impl_.enterserviceoperation_;
+  }
+  _impl_.enterserviceoperation_ = nullptr;
+}
+void ESSPointStatus::clear_hzwoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.hzwoperation_ != nullptr) {
+    delete _impl_.hzwoperation_;
+  }
+  _impl_.hzwoperation_ = nullptr;
+}
+void ESSPointStatus::clear_limitwoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.limitwoperation_ != nullptr) {
+    delete _impl_.limitwoperation_;
+  }
+  _impl_.limitwoperation_ = nullptr;
+}
+void ESSPointStatus::clear_pfoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.pfoperation_ != nullptr) {
+    delete _impl_.pfoperation_;
+  }
+  _impl_.pfoperation_ = nullptr;
+}
+void ESSPointStatus::clear_tmhztripoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.tmhztripoperation_ != nullptr) {
+    delete _impl_.tmhztripoperation_;
+  }
+  _impl_.tmhztripoperation_ = nullptr;
+}
+void ESSPointStatus::clear_tmvolttripoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.tmvolttripoperation_ != nullptr) {
+    delete _impl_.tmvolttripoperation_;
+  }
+  _impl_.tmvolttripoperation_ = nullptr;
+}
+void ESSPointStatus::clear_varoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.varoperation_ != nullptr) {
+    delete _impl_.varoperation_;
+  }
+  _impl_.varoperation_ = nullptr;
+}
+void ESSPointStatus::clear_voltvaroperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.voltvaroperation_ != nullptr) {
+    delete _impl_.voltvaroperation_;
+  }
+  _impl_.voltvaroperation_ = nullptr;
+}
+void ESSPointStatus::clear_voltwoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.voltwoperation_ != nullptr) {
+    delete _impl_.voltwoperation_;
+  }
+  _impl_.voltwoperation_ = nullptr;
+}
+void ESSPointStatus::clear_wvaroperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.wvaroperation_ != nullptr) {
+    delete _impl_.wvaroperation_;
+  }
+  _impl_.wvaroperation_ = nullptr;
+}
+ESSPointStatus::ESSPointStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSPointStatus)
+}
+ESSPointStatus::ESSPointStatus(const ESSPointStatus& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSPointStatus* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.blackstartenabled_){nullptr}
+    , decltype(_impl_.frequencysetpointenabled_){nullptr}
+    , decltype(_impl_.function_){nullptr}
+    , decltype(_impl_.mode_){nullptr}
+    , decltype(_impl_.pcthzdroop_){nullptr}
+    , decltype(_impl_.pctvdroop_){nullptr}
+    , decltype(_impl_.ramprates_){nullptr}
+    , decltype(_impl_.reactivepwrsetpointenabled_){nullptr}
+    , decltype(_impl_.realpwrsetpointenabled_){nullptr}
+    , decltype(_impl_.state_){nullptr}
+    , decltype(_impl_.syncbacktogrid_){nullptr}
+    , decltype(_impl_.transtoislndongridlossenabled_){nullptr}
+    , decltype(_impl_.voltagesetpointenabled_){nullptr}
+    , decltype(_impl_.enterserviceoperation_){nullptr}
+    , decltype(_impl_.hzwoperation_){nullptr}
+    , decltype(_impl_.limitwoperation_){nullptr}
+    , decltype(_impl_.pfoperation_){nullptr}
+    , decltype(_impl_.tmhztripoperation_){nullptr}
+    , decltype(_impl_.tmvolttripoperation_){nullptr}
+    , decltype(_impl_.varoperation_){nullptr}
+    , decltype(_impl_.voltvaroperation_){nullptr}
+    , decltype(_impl_.voltwoperation_){nullptr}
+    , decltype(_impl_.wvaroperation_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_blackstartenabled()) {
+    _this->_impl_.blackstartenabled_ = new ::commonmodule::StatusSPS(*from._impl_.blackstartenabled_);
+  }
+  if (from._internal_has_frequencysetpointenabled()) {
+    _this->_impl_.frequencysetpointenabled_ = new ::commonmodule::StatusSPS(*from._impl_.frequencysetpointenabled_);
+  }
+  if (from._internal_has_function()) {
+    _this->_impl_.function_ = new ::essmodule::ESSFunction(*from._impl_.function_);
+  }
+  if (from._internal_has_mode()) {
+    _this->_impl_.mode_ = new ::commonmodule::ENG_GridConnectModeKind(*from._impl_.mode_);
+  }
+  if (from._internal_has_pcthzdroop()) {
+    _this->_impl_.pcthzdroop_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.pcthzdroop_);
+  }
+  if (from._internal_has_pctvdroop()) {
+    _this->_impl_.pctvdroop_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.pctvdroop_);
+  }
+  if (from._internal_has_ramprates()) {
+    _this->_impl_.ramprates_ = new ::commonmodule::RampRate(*from._impl_.ramprates_);
+  }
+  if (from._internal_has_reactivepwrsetpointenabled()) {
+    _this->_impl_.reactivepwrsetpointenabled_ = new ::commonmodule::StatusSPS(*from._impl_.reactivepwrsetpointenabled_);
+  }
+  if (from._internal_has_realpwrsetpointenabled()) {
+    _this->_impl_.realpwrsetpointenabled_ = new ::commonmodule::StatusSPS(*from._impl_.realpwrsetpointenabled_);
+  }
+  if (from._internal_has_state()) {
+    _this->_impl_.state_ = new ::commonmodule::Optional_StateKind(*from._impl_.state_);
+  }
+  if (from._internal_has_syncbacktogrid()) {
+    _this->_impl_.syncbacktogrid_ = new ::commonmodule::StatusSPS(*from._impl_.syncbacktogrid_);
+  }
+  if (from._internal_has_transtoislndongridlossenabled()) {
+    _this->_impl_.transtoislndongridlossenabled_ = new ::commonmodule::StatusSPS(*from._impl_.transtoislndongridlossenabled_);
+  }
+  if (from._internal_has_voltagesetpointenabled()) {
+    _this->_impl_.voltagesetpointenabled_ = new ::commonmodule::StatusSPS(*from._impl_.voltagesetpointenabled_);
+  }
+  if (from._internal_has_enterserviceoperation()) {
+    _this->_impl_.enterserviceoperation_ = new ::commonmodule::EnterServiceAPC(*from._impl_.enterserviceoperation_);
+  }
+  if (from._internal_has_hzwoperation()) {
+    _this->_impl_.hzwoperation_ = new ::commonmodule::HzWAPC(*from._impl_.hzwoperation_);
+  }
+  if (from._internal_has_limitwoperation()) {
+    _this->_impl_.limitwoperation_ = new ::commonmodule::LimitWAPC(*from._impl_.limitwoperation_);
+  }
+  if (from._internal_has_pfoperation()) {
+    _this->_impl_.pfoperation_ = new ::commonmodule::PFSPC(*from._impl_.pfoperation_);
+  }
+  if (from._internal_has_tmhztripoperation()) {
+    _this->_impl_.tmhztripoperation_ = new ::commonmodule::TmHzCSG(*from._impl_.tmhztripoperation_);
+  }
+  if (from._internal_has_tmvolttripoperation()) {
+    _this->_impl_.tmvolttripoperation_ = new ::commonmodule::TmVoltCSG(*from._impl_.tmvolttripoperation_);
+  }
+  if (from._internal_has_varoperation()) {
+    _this->_impl_.varoperation_ = new ::commonmodule::VarSPC(*from._impl_.varoperation_);
+  }
+  if (from._internal_has_voltvaroperation()) {
+    _this->_impl_.voltvaroperation_ = new ::commonmodule::VoltVarCSG(*from._impl_.voltvaroperation_);
+  }
+  if (from._internal_has_voltwoperation()) {
+    _this->_impl_.voltwoperation_ = new ::commonmodule::VoltWCSG(*from._impl_.voltwoperation_);
+  }
+  if (from._internal_has_wvaroperation()) {
+    _this->_impl_.wvaroperation_ = new ::commonmodule::WVarCSG(*from._impl_.wvaroperation_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSPointStatus)
+}
+
+inline void ESSPointStatus::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.blackstartenabled_){nullptr}
+    , decltype(_impl_.frequencysetpointenabled_){nullptr}
+    , decltype(_impl_.function_){nullptr}
+    , decltype(_impl_.mode_){nullptr}
+    , decltype(_impl_.pcthzdroop_){nullptr}
+    , decltype(_impl_.pctvdroop_){nullptr}
+    , decltype(_impl_.ramprates_){nullptr}
+    , decltype(_impl_.reactivepwrsetpointenabled_){nullptr}
+    , decltype(_impl_.realpwrsetpointenabled_){nullptr}
+    , decltype(_impl_.state_){nullptr}
+    , decltype(_impl_.syncbacktogrid_){nullptr}
+    , decltype(_impl_.transtoislndongridlossenabled_){nullptr}
+    , decltype(_impl_.voltagesetpointenabled_){nullptr}
+    , decltype(_impl_.enterserviceoperation_){nullptr}
+    , decltype(_impl_.hzwoperation_){nullptr}
+    , decltype(_impl_.limitwoperation_){nullptr}
+    , decltype(_impl_.pfoperation_){nullptr}
+    , decltype(_impl_.tmhztripoperation_){nullptr}
+    , decltype(_impl_.tmvolttripoperation_){nullptr}
+    , decltype(_impl_.varoperation_){nullptr}
+    , decltype(_impl_.voltvaroperation_){nullptr}
+    , decltype(_impl_.voltwoperation_){nullptr}
+    , decltype(_impl_.wvaroperation_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+ESSPointStatus::~ESSPointStatus() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSPointStatus)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ESSPointStatus::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.blackstartenabled_;
+  if (this != internal_default_instance()) delete _impl_.frequencysetpointenabled_;
+  if (this != internal_default_instance()) delete _impl_.function_;
+  if (this != internal_default_instance()) delete _impl_.mode_;
+  if (this != internal_default_instance()) delete _impl_.pcthzdroop_;
+  if (this != internal_default_instance()) delete _impl_.pctvdroop_;
+  if (this != internal_default_instance()) delete _impl_.ramprates_;
+  if (this != internal_default_instance()) delete _impl_.reactivepwrsetpointenabled_;
+  if (this != internal_default_instance()) delete _impl_.realpwrsetpointenabled_;
+  if (this != internal_default_instance()) delete _impl_.state_;
+  if (this != internal_default_instance()) delete _impl_.syncbacktogrid_;
+  if (this != internal_default_instance()) delete _impl_.transtoislndongridlossenabled_;
+  if (this != internal_default_instance()) delete _impl_.voltagesetpointenabled_;
+  if (this != internal_default_instance()) delete _impl_.enterserviceoperation_;
+  if (this != internal_default_instance()) delete _impl_.hzwoperation_;
+  if (this != internal_default_instance()) delete _impl_.limitwoperation_;
+  if (this != internal_default_instance()) delete _impl_.pfoperation_;
+  if (this != internal_default_instance()) delete _impl_.tmhztripoperation_;
+  if (this != internal_default_instance()) delete _impl_.tmvolttripoperation_;
+  if (this != internal_default_instance()) delete _impl_.varoperation_;
+  if (this != internal_default_instance()) delete _impl_.voltvaroperation_;
+  if (this != internal_default_instance()) delete _impl_.voltwoperation_;
+  if (this != internal_default_instance()) delete _impl_.wvaroperation_;
+}
+
+void ESSPointStatus::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ESSPointStatus::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSPointStatus)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.blackstartenabled_ != nullptr) {
+    delete _impl_.blackstartenabled_;
+  }
+  _impl_.blackstartenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.frequencysetpointenabled_ != nullptr) {
+    delete _impl_.frequencysetpointenabled_;
+  }
+  _impl_.frequencysetpointenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.function_ != nullptr) {
+    delete _impl_.function_;
+  }
+  _impl_.function_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.mode_ != nullptr) {
+    delete _impl_.mode_;
+  }
+  _impl_.mode_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.pcthzdroop_ != nullptr) {
+    delete _impl_.pcthzdroop_;
+  }
+  _impl_.pcthzdroop_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.pctvdroop_ != nullptr) {
+    delete _impl_.pctvdroop_;
+  }
+  _impl_.pctvdroop_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ramprates_ != nullptr) {
+    delete _impl_.ramprates_;
+  }
+  _impl_.ramprates_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.reactivepwrsetpointenabled_ != nullptr) {
+    delete _impl_.reactivepwrsetpointenabled_;
+  }
+  _impl_.reactivepwrsetpointenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.realpwrsetpointenabled_ != nullptr) {
+    delete _impl_.realpwrsetpointenabled_;
+  }
+  _impl_.realpwrsetpointenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.state_ != nullptr) {
+    delete _impl_.state_;
+  }
+  _impl_.state_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.syncbacktogrid_ != nullptr) {
+    delete _impl_.syncbacktogrid_;
+  }
+  _impl_.syncbacktogrid_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.transtoislndongridlossenabled_ != nullptr) {
+    delete _impl_.transtoislndongridlossenabled_;
+  }
+  _impl_.transtoislndongridlossenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagesetpointenabled_ != nullptr) {
+    delete _impl_.voltagesetpointenabled_;
+  }
+  _impl_.voltagesetpointenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.enterserviceoperation_ != nullptr) {
+    delete _impl_.enterserviceoperation_;
+  }
+  _impl_.enterserviceoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.hzwoperation_ != nullptr) {
+    delete _impl_.hzwoperation_;
+  }
+  _impl_.hzwoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.limitwoperation_ != nullptr) {
+    delete _impl_.limitwoperation_;
+  }
+  _impl_.limitwoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.pfoperation_ != nullptr) {
+    delete _impl_.pfoperation_;
+  }
+  _impl_.pfoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.tmhztripoperation_ != nullptr) {
+    delete _impl_.tmhztripoperation_;
+  }
+  _impl_.tmhztripoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.tmvolttripoperation_ != nullptr) {
+    delete _impl_.tmvolttripoperation_;
+  }
+  _impl_.tmvolttripoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.varoperation_ != nullptr) {
+    delete _impl_.varoperation_;
+  }
+  _impl_.varoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltvaroperation_ != nullptr) {
+    delete _impl_.voltvaroperation_;
+  }
+  _impl_.voltvaroperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltwoperation_ != nullptr) {
+    delete _impl_.voltwoperation_;
+  }
+  _impl_.voltwoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.wvaroperation_ != nullptr) {
+    delete _impl_.wvaroperation_;
+  }
+  _impl_.wvaroperation_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ESSPointStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.StatusSPS blackStartEnabled = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_blackstartenabled(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.StatusSPS frequencySetPointEnabled = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_frequencysetpointenabled(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .essmodule.ESSFunction function = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_function(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ENG_GridConnectModeKind mode = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_mode(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .google.protobuf.FloatValue pctHzDroop = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pcthzdroop(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .google.protobuf.FloatValue pctVDroop = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pctvdroop(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.RampRate rampRates = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 58)) {
+          ptr = ctx->ParseMessage(_internal_mutable_ramprates(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 66)) {
+          ptr = ctx->ParseMessage(_internal_mutable_reactivepwrsetpointenabled(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.StatusSPS realPwrSetPointEnabled = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 74)) {
+          ptr = ctx->ParseMessage(_internal_mutable_realpwrsetpointenabled(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.Optional_StateKind state = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 82)) {
+          ptr = ctx->ParseMessage(_internal_mutable_state(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.StatusSPS syncBackToGrid = 11;
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 90)) {
+          ptr = ctx->ParseMessage(_internal_mutable_syncbacktogrid(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.StatusSPS transToIslndOnGridLossEnabled = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 98)) {
+          ptr = ctx->ParseMessage(_internal_mutable_transtoislndongridlossenabled(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.StatusSPS voltageSetPointEnabled = 13;
+      case 13:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 106)) {
+          ptr = ctx->ParseMessage(_internal_mutable_voltagesetpointenabled(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.EnterServiceAPC enterServiceOperation = 14;
+      case 14:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 114)) {
+          ptr = ctx->ParseMessage(_internal_mutable_enterserviceoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.HzWAPC hzWOperation = 15;
+      case 15:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 122)) {
+          ptr = ctx->ParseMessage(_internal_mutable_hzwoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.LimitWAPC limitWOperation = 16;
+      case 16:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 130)) {
+          ptr = ctx->ParseMessage(_internal_mutable_limitwoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.PFSPC pFOperation = 17;
+      case 17:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 138)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pfoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.TmHzCSG tmHzTripOperation = 18;
+      case 18:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 146)) {
+          ptr = ctx->ParseMessage(_internal_mutable_tmhztripoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.TmVoltCSG tmVoltTripOperation = 19;
+      case 19:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 154)) {
+          ptr = ctx->ParseMessage(_internal_mutable_tmvolttripoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.VarSPC vArOperation = 20;
+      case 20:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 162)) {
+          ptr = ctx->ParseMessage(_internal_mutable_varoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.VoltVarCSG voltVarOperation = 21;
+      case 21:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 170)) {
+          ptr = ctx->ParseMessage(_internal_mutable_voltvaroperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.VoltWCSG voltWOperation = 22;
+      case 22:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 178)) {
+          ptr = ctx->ParseMessage(_internal_mutable_voltwoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.WVarCSG wVarOperation = 23;
+      case 23:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 186)) {
+          ptr = ctx->ParseMessage(_internal_mutable_wvaroperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* ESSPointStatus::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSPointStatus)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.StatusSPS blackStartEnabled = 1;
+  if (this->_internal_has_blackstartenabled()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::blackstartenabled(this),
+        _Internal::blackstartenabled(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.StatusSPS frequencySetPointEnabled = 2;
+  if (this->_internal_has_frequencysetpointenabled()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::frequencysetpointenabled(this),
+        _Internal::frequencysetpointenabled(this).GetCachedSize(), target, stream);
+  }
+
+  // .essmodule.ESSFunction function = 3;
+  if (this->_internal_has_function()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::function(this),
+        _Internal::function(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ENG_GridConnectModeKind mode = 4;
+  if (this->_internal_has_mode()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::mode(this),
+        _Internal::mode(this).GetCachedSize(), target, stream);
+  }
+
+  // .google.protobuf.FloatValue pctHzDroop = 5;
+  if (this->_internal_has_pcthzdroop()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(5, _Internal::pcthzdroop(this),
+        _Internal::pcthzdroop(this).GetCachedSize(), target, stream);
+  }
+
+  // .google.protobuf.FloatValue pctVDroop = 6;
+  if (this->_internal_has_pctvdroop()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(6, _Internal::pctvdroop(this),
+        _Internal::pctvdroop(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.RampRate rampRates = 7;
+  if (this->_internal_has_ramprates()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(7, _Internal::ramprates(this),
+        _Internal::ramprates(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 8;
+  if (this->_internal_has_reactivepwrsetpointenabled()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(8, _Internal::reactivepwrsetpointenabled(this),
+        _Internal::reactivepwrsetpointenabled(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.StatusSPS realPwrSetPointEnabled = 9;
+  if (this->_internal_has_realpwrsetpointenabled()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(9, _Internal::realpwrsetpointenabled(this),
+        _Internal::realpwrsetpointenabled(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.Optional_StateKind state = 10;
+  if (this->_internal_has_state()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(10, _Internal::state(this),
+        _Internal::state(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.StatusSPS syncBackToGrid = 11;
+  if (this->_internal_has_syncbacktogrid()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(11, _Internal::syncbacktogrid(this),
+        _Internal::syncbacktogrid(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.StatusSPS transToIslndOnGridLossEnabled = 12;
+  if (this->_internal_has_transtoislndongridlossenabled()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(12, _Internal::transtoislndongridlossenabled(this),
+        _Internal::transtoislndongridlossenabled(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.StatusSPS voltageSetPointEnabled = 13;
+  if (this->_internal_has_voltagesetpointenabled()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(13, _Internal::voltagesetpointenabled(this),
+        _Internal::voltagesetpointenabled(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.EnterServiceAPC enterServiceOperation = 14;
+  if (this->_internal_has_enterserviceoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(14, _Internal::enterserviceoperation(this),
+        _Internal::enterserviceoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.HzWAPC hzWOperation = 15;
+  if (this->_internal_has_hzwoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(15, _Internal::hzwoperation(this),
+        _Internal::hzwoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.LimitWAPC limitWOperation = 16;
+  if (this->_internal_has_limitwoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(16, _Internal::limitwoperation(this),
+        _Internal::limitwoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.PFSPC pFOperation = 17;
+  if (this->_internal_has_pfoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(17, _Internal::pfoperation(this),
+        _Internal::pfoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.TmHzCSG tmHzTripOperation = 18;
+  if (this->_internal_has_tmhztripoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(18, _Internal::tmhztripoperation(this),
+        _Internal::tmhztripoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.TmVoltCSG tmVoltTripOperation = 19;
+  if (this->_internal_has_tmvolttripoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(19, _Internal::tmvolttripoperation(this),
+        _Internal::tmvolttripoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.VarSPC vArOperation = 20;
+  if (this->_internal_has_varoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(20, _Internal::varoperation(this),
+        _Internal::varoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.VoltVarCSG voltVarOperation = 21;
+  if (this->_internal_has_voltvaroperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(21, _Internal::voltvaroperation(this),
+        _Internal::voltvaroperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.VoltWCSG voltWOperation = 22;
+  if (this->_internal_has_voltwoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(22, _Internal::voltwoperation(this),
+        _Internal::voltwoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.WVarCSG wVarOperation = 23;
+  if (this->_internal_has_wvaroperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(23, _Internal::wvaroperation(this),
+        _Internal::wvaroperation(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSPointStatus)
+  return target;
+}
+
+::size_t ESSPointStatus::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSPointStatus)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.StatusSPS blackStartEnabled = 1;
+  if (this->_internal_has_blackstartenabled()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.blackstartenabled_);
+  }
+
+  // .commonmodule.StatusSPS frequencySetPointEnabled = 2;
+  if (this->_internal_has_frequencysetpointenabled()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.frequencysetpointenabled_);
+  }
+
+  // .essmodule.ESSFunction function = 3;
+  if (this->_internal_has_function()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.function_);
+  }
+
+  // .commonmodule.ENG_GridConnectModeKind mode = 4;
+  if (this->_internal_has_mode()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.mode_);
+  }
+
+  // .google.protobuf.FloatValue pctHzDroop = 5;
+  if (this->_internal_has_pcthzdroop()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.pcthzdroop_);
+  }
+
+  // .google.protobuf.FloatValue pctVDroop = 6;
+  if (this->_internal_has_pctvdroop()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.pctvdroop_);
+  }
+
+  // .commonmodule.RampRate rampRates = 7;
+  if (this->_internal_has_ramprates()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.ramprates_);
+  }
+
+  // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 8;
+  if (this->_internal_has_reactivepwrsetpointenabled()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.reactivepwrsetpointenabled_);
+  }
+
+  // .commonmodule.StatusSPS realPwrSetPointEnabled = 9;
+  if (this->_internal_has_realpwrsetpointenabled()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.realpwrsetpointenabled_);
+  }
+
+  // .commonmodule.Optional_StateKind state = 10;
+  if (this->_internal_has_state()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.state_);
+  }
+
+  // .commonmodule.StatusSPS syncBackToGrid = 11;
+  if (this->_internal_has_syncbacktogrid()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.syncbacktogrid_);
+  }
+
+  // .commonmodule.StatusSPS transToIslndOnGridLossEnabled = 12;
+  if (this->_internal_has_transtoislndongridlossenabled()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.transtoislndongridlossenabled_);
+  }
+
+  // .commonmodule.StatusSPS voltageSetPointEnabled = 13;
+  if (this->_internal_has_voltagesetpointenabled()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.voltagesetpointenabled_);
+  }
+
+  // .commonmodule.EnterServiceAPC enterServiceOperation = 14;
+  if (this->_internal_has_enterserviceoperation()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.enterserviceoperation_);
+  }
+
+  // .commonmodule.HzWAPC hzWOperation = 15;
+  if (this->_internal_has_hzwoperation()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.hzwoperation_);
+  }
+
+  // .commonmodule.LimitWAPC limitWOperation = 16;
+  if (this->_internal_has_limitwoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.limitwoperation_);
+  }
+
+  // .commonmodule.PFSPC pFOperation = 17;
+  if (this->_internal_has_pfoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.pfoperation_);
+  }
+
+  // .commonmodule.TmHzCSG tmHzTripOperation = 18;
+  if (this->_internal_has_tmhztripoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.tmhztripoperation_);
+  }
+
+  // .commonmodule.TmVoltCSG tmVoltTripOperation = 19;
+  if (this->_internal_has_tmvolttripoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.tmvolttripoperation_);
+  }
+
+  // .commonmodule.VarSPC vArOperation = 20;
+  if (this->_internal_has_varoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.varoperation_);
+  }
+
+  // .commonmodule.VoltVarCSG voltVarOperation = 21;
+  if (this->_internal_has_voltvaroperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.voltvaroperation_);
+  }
+
+  // .commonmodule.VoltWCSG voltWOperation = 22;
+  if (this->_internal_has_voltwoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.voltwoperation_);
+  }
+
+  // .commonmodule.WVarCSG wVarOperation = 23;
+  if (this->_internal_has_wvaroperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.wvaroperation_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSPointStatus::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSPointStatus::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSPointStatus::GetClassData() const { return &_class_data_; }
+
+
+void ESSPointStatus::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSPointStatus*>(&to_msg);
+  auto& from = static_cast<const ESSPointStatus&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSPointStatus)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_blackstartenabled()) {
+    _this->_internal_mutable_blackstartenabled()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_blackstartenabled());
+  }
+  if (from._internal_has_frequencysetpointenabled()) {
+    _this->_internal_mutable_frequencysetpointenabled()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_frequencysetpointenabled());
+  }
+  if (from._internal_has_function()) {
+    _this->_internal_mutable_function()->::essmodule::ESSFunction::MergeFrom(
+        from._internal_function());
+  }
+  if (from._internal_has_mode()) {
+    _this->_internal_mutable_mode()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(
+        from._internal_mode());
+  }
+  if (from._internal_has_pcthzdroop()) {
+    _this->_internal_mutable_pcthzdroop()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_pcthzdroop());
+  }
+  if (from._internal_has_pctvdroop()) {
+    _this->_internal_mutable_pctvdroop()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_pctvdroop());
+  }
+  if (from._internal_has_ramprates()) {
+    _this->_internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(
+        from._internal_ramprates());
+  }
+  if (from._internal_has_reactivepwrsetpointenabled()) {
+    _this->_internal_mutable_reactivepwrsetpointenabled()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_reactivepwrsetpointenabled());
+  }
+  if (from._internal_has_realpwrsetpointenabled()) {
+    _this->_internal_mutable_realpwrsetpointenabled()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_realpwrsetpointenabled());
+  }
+  if (from._internal_has_state()) {
+    _this->_internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(
+        from._internal_state());
+  }
+  if (from._internal_has_syncbacktogrid()) {
+    _this->_internal_mutable_syncbacktogrid()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_syncbacktogrid());
+  }
+  if (from._internal_has_transtoislndongridlossenabled()) {
+    _this->_internal_mutable_transtoislndongridlossenabled()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_transtoislndongridlossenabled());
+  }
+  if (from._internal_has_voltagesetpointenabled()) {
+    _this->_internal_mutable_voltagesetpointenabled()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_voltagesetpointenabled());
+  }
+  if (from._internal_has_enterserviceoperation()) {
+    _this->_internal_mutable_enterserviceoperation()->::commonmodule::EnterServiceAPC::MergeFrom(
+        from._internal_enterserviceoperation());
+  }
+  if (from._internal_has_hzwoperation()) {
+    _this->_internal_mutable_hzwoperation()->::commonmodule::HzWAPC::MergeFrom(
+        from._internal_hzwoperation());
+  }
+  if (from._internal_has_limitwoperation()) {
+    _this->_internal_mutable_limitwoperation()->::commonmodule::LimitWAPC::MergeFrom(
+        from._internal_limitwoperation());
+  }
+  if (from._internal_has_pfoperation()) {
+    _this->_internal_mutable_pfoperation()->::commonmodule::PFSPC::MergeFrom(
+        from._internal_pfoperation());
+  }
+  if (from._internal_has_tmhztripoperation()) {
+    _this->_internal_mutable_tmhztripoperation()->::commonmodule::TmHzCSG::MergeFrom(
+        from._internal_tmhztripoperation());
+  }
+  if (from._internal_has_tmvolttripoperation()) {
+    _this->_internal_mutable_tmvolttripoperation()->::commonmodule::TmVoltCSG::MergeFrom(
+        from._internal_tmvolttripoperation());
+  }
+  if (from._internal_has_varoperation()) {
+    _this->_internal_mutable_varoperation()->::commonmodule::VarSPC::MergeFrom(
+        from._internal_varoperation());
+  }
+  if (from._internal_has_voltvaroperation()) {
+    _this->_internal_mutable_voltvaroperation()->::commonmodule::VoltVarCSG::MergeFrom(
+        from._internal_voltvaroperation());
+  }
+  if (from._internal_has_voltwoperation()) {
+    _this->_internal_mutable_voltwoperation()->::commonmodule::VoltWCSG::MergeFrom(
+        from._internal_voltwoperation());
+  }
+  if (from._internal_has_wvaroperation()) {
+    _this->_internal_mutable_wvaroperation()->::commonmodule::WVarCSG::MergeFrom(
+        from._internal_wvaroperation());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ESSPointStatus::CopyFrom(const ESSPointStatus& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSPointStatus)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ESSPointStatus::IsInitialized() const {
+  return true;
+}
+
+void ESSPointStatus::InternalSwap(ESSPointStatus* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ESSPointStatus, _impl_.wvaroperation_)
+      + sizeof(ESSPointStatus::_impl_.wvaroperation_)
+      - PROTOBUF_FIELD_OFFSET(ESSPointStatus, _impl_.blackstartenabled_)>(
+          reinterpret_cast<char*>(&_impl_.blackstartenabled_),
+          reinterpret_cast<char*>(&other->_impl_.blackstartenabled_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ESSPointStatus::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[26]);
+}
+// ===================================================================
+
+class ESSEventAndStatusZGEN::_Internal {
+ public:
+  static const ::commonmodule::LogicalNodeForEventAndStatus& logicalnodeforeventandstatus(const ESSEventAndStatusZGEN* msg);
+  static const ::commonmodule::StatusSPS& auxpwrst(const ESSEventAndStatusZGEN* msg);
+  static const ::commonmodule::ENS_DynamicTestKind& dynamictest(const ESSEventAndStatusZGEN* msg);
+  static const ::commonmodule::StatusSPS& emgstop(const ESSEventAndStatusZGEN* msg);
+  static const ::commonmodule::StatusSPS& gnsynst(const ESSEventAndStatusZGEN* msg);
+  static const ::essmodule::ESSPointStatus& pointstatus(const ESSEventAndStatusZGEN* msg);
+};
+
+const ::commonmodule::LogicalNodeForEventAndStatus&
+ESSEventAndStatusZGEN::_Internal::logicalnodeforeventandstatus(const ESSEventAndStatusZGEN* msg) {
+  return *msg->_impl_.logicalnodeforeventandstatus_;
+}
+const ::commonmodule::StatusSPS&
+ESSEventAndStatusZGEN::_Internal::auxpwrst(const ESSEventAndStatusZGEN* msg) {
+  return *msg->_impl_.auxpwrst_;
+}
+const ::commonmodule::ENS_DynamicTestKind&
+ESSEventAndStatusZGEN::_Internal::dynamictest(const ESSEventAndStatusZGEN* msg) {
+  return *msg->_impl_.dynamictest_;
+}
+const ::commonmodule::StatusSPS&
+ESSEventAndStatusZGEN::_Internal::emgstop(const ESSEventAndStatusZGEN* msg) {
+  return *msg->_impl_.emgstop_;
+}
+const ::commonmodule::StatusSPS&
+ESSEventAndStatusZGEN::_Internal::gnsynst(const ESSEventAndStatusZGEN* msg) {
+  return *msg->_impl_.gnsynst_;
+}
+const ::essmodule::ESSPointStatus&
+ESSEventAndStatusZGEN::_Internal::pointstatus(const ESSEventAndStatusZGEN* msg) {
+  return *msg->_impl_.pointstatus_;
+}
+void ESSEventAndStatusZGEN::clear_logicalnodeforeventandstatus() {
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforeventandstatus_ != nullptr) {
+    delete _impl_.logicalnodeforeventandstatus_;
+  }
+  _impl_.logicalnodeforeventandstatus_ = nullptr;
+}
+void ESSEventAndStatusZGEN::clear_auxpwrst() {
+  if (GetArenaForAllocation() == nullptr && _impl_.auxpwrst_ != nullptr) {
+    delete _impl_.auxpwrst_;
+  }
+  _impl_.auxpwrst_ = nullptr;
+}
+void ESSEventAndStatusZGEN::clear_dynamictest() {
+  if (GetArenaForAllocation() == nullptr && _impl_.dynamictest_ != nullptr) {
+    delete _impl_.dynamictest_;
+  }
+  _impl_.dynamictest_ = nullptr;
+}
+void ESSEventAndStatusZGEN::clear_emgstop() {
+  if (GetArenaForAllocation() == nullptr && _impl_.emgstop_ != nullptr) {
+    delete _impl_.emgstop_;
+  }
+  _impl_.emgstop_ = nullptr;
+}
+void ESSEventAndStatusZGEN::clear_gnsynst() {
+  if (GetArenaForAllocation() == nullptr && _impl_.gnsynst_ != nullptr) {
+    delete _impl_.gnsynst_;
+  }
+  _impl_.gnsynst_ = nullptr;
+}
+ESSEventAndStatusZGEN::ESSEventAndStatusZGEN(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSEventAndStatusZGEN)
+}
+ESSEventAndStatusZGEN::ESSEventAndStatusZGEN(const ESSEventAndStatusZGEN& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSEventAndStatusZGEN* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforeventandstatus_){nullptr}
+    , decltype(_impl_.auxpwrst_){nullptr}
+    , decltype(_impl_.dynamictest_){nullptr}
+    , decltype(_impl_.emgstop_){nullptr}
+    , decltype(_impl_.gnsynst_){nullptr}
+    , decltype(_impl_.pointstatus_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_logicalnodeforeventandstatus()) {
+    _this->_impl_.logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from._impl_.logicalnodeforeventandstatus_);
+  }
+  if (from._internal_has_auxpwrst()) {
+    _this->_impl_.auxpwrst_ = new ::commonmodule::StatusSPS(*from._impl_.auxpwrst_);
+  }
+  if (from._internal_has_dynamictest()) {
+    _this->_impl_.dynamictest_ = new ::commonmodule::ENS_DynamicTestKind(*from._impl_.dynamictest_);
+  }
+  if (from._internal_has_emgstop()) {
+    _this->_impl_.emgstop_ = new ::commonmodule::StatusSPS(*from._impl_.emgstop_);
+  }
+  if (from._internal_has_gnsynst()) {
+    _this->_impl_.gnsynst_ = new ::commonmodule::StatusSPS(*from._impl_.gnsynst_);
+  }
+  if (from._internal_has_pointstatus()) {
+    _this->_impl_.pointstatus_ = new ::essmodule::ESSPointStatus(*from._impl_.pointstatus_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSEventAndStatusZGEN)
+}
+
+inline void ESSEventAndStatusZGEN::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforeventandstatus_){nullptr}
+    , decltype(_impl_.auxpwrst_){nullptr}
+    , decltype(_impl_.dynamictest_){nullptr}
+    , decltype(_impl_.emgstop_){nullptr}
+    , decltype(_impl_.gnsynst_){nullptr}
+    , decltype(_impl_.pointstatus_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+ESSEventAndStatusZGEN::~ESSEventAndStatusZGEN() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSEventAndStatusZGEN)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ESSEventAndStatusZGEN::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.logicalnodeforeventandstatus_;
+  if (this != internal_default_instance()) delete _impl_.auxpwrst_;
+  if (this != internal_default_instance()) delete _impl_.dynamictest_;
+  if (this != internal_default_instance()) delete _impl_.emgstop_;
+  if (this != internal_default_instance()) delete _impl_.gnsynst_;
+  if (this != internal_default_instance()) delete _impl_.pointstatus_;
+}
+
+void ESSEventAndStatusZGEN::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ESSEventAndStatusZGEN::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSEventAndStatusZGEN)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforeventandstatus_ != nullptr) {
+    delete _impl_.logicalnodeforeventandstatus_;
+  }
+  _impl_.logicalnodeforeventandstatus_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.auxpwrst_ != nullptr) {
+    delete _impl_.auxpwrst_;
+  }
+  _impl_.auxpwrst_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.dynamictest_ != nullptr) {
+    delete _impl_.dynamictest_;
+  }
+  _impl_.dynamictest_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.emgstop_ != nullptr) {
+    delete _impl_.emgstop_;
+  }
+  _impl_.emgstop_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.gnsynst_ != nullptr) {
+    delete _impl_.gnsynst_;
+  }
+  _impl_.gnsynst_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.pointstatus_ != nullptr) {
+    delete _impl_.pointstatus_;
+  }
+  _impl_.pointstatus_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ESSEventAndStatusZGEN::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforeventandstatus(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.StatusSPS AuxPwrSt = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_auxpwrst(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_dynamictest(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.StatusSPS EmgStop = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_emgstop(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.StatusSPS GnSynSt = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_gnsynst(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .essmodule.ESSPointStatus PointStatus = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pointstatus(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* ESSEventAndStatusZGEN::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSEventAndStatusZGEN)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_logicalnodeforeventandstatus()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::logicalnodeforeventandstatus(this),
+        _Internal::logicalnodeforeventandstatus(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.StatusSPS AuxPwrSt = 2;
+  if (this->_internal_has_auxpwrst()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::auxpwrst(this),
+        _Internal::auxpwrst(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
+  if (this->_internal_has_dynamictest()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::dynamictest(this),
+        _Internal::dynamictest(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.StatusSPS EmgStop = 4;
+  if (this->_internal_has_emgstop()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::emgstop(this),
+        _Internal::emgstop(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.StatusSPS GnSynSt = 5;
+  if (this->_internal_has_gnsynst()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(5, _Internal::gnsynst(this),
+        _Internal::gnsynst(this).GetCachedSize(), target, stream);
+  }
+
+  // .essmodule.ESSPointStatus PointStatus = 6;
+  if (this->_internal_has_pointstatus()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(6, _Internal::pointstatus(this),
+        _Internal::pointstatus(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSEventAndStatusZGEN)
+  return target;
+}
+
+::size_t ESSEventAndStatusZGEN::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSEventAndStatusZGEN)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_logicalnodeforeventandstatus()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.logicalnodeforeventandstatus_);
+  }
+
+  // .commonmodule.StatusSPS AuxPwrSt = 2;
+  if (this->_internal_has_auxpwrst()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.auxpwrst_);
+  }
+
+  // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
+  if (this->_internal_has_dynamictest()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.dynamictest_);
+  }
+
+  // .commonmodule.StatusSPS EmgStop = 4;
+  if (this->_internal_has_emgstop()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.emgstop_);
+  }
+
+  // .commonmodule.StatusSPS GnSynSt = 5;
+  if (this->_internal_has_gnsynst()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.gnsynst_);
+  }
+
+  // .essmodule.ESSPointStatus PointStatus = 6;
+  if (this->_internal_has_pointstatus()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.pointstatus_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSEventAndStatusZGEN::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSEventAndStatusZGEN::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSEventAndStatusZGEN::GetClassData() const { return &_class_data_; }
+
+
+void ESSEventAndStatusZGEN::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSEventAndStatusZGEN*>(&to_msg);
+  auto& from = static_cast<const ESSEventAndStatusZGEN&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSEventAndStatusZGEN)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_logicalnodeforeventandstatus()) {
+    _this->_internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(
+        from._internal_logicalnodeforeventandstatus());
+  }
+  if (from._internal_has_auxpwrst()) {
+    _this->_internal_mutable_auxpwrst()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_auxpwrst());
+  }
+  if (from._internal_has_dynamictest()) {
+    _this->_internal_mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(
+        from._internal_dynamictest());
+  }
+  if (from._internal_has_emgstop()) {
+    _this->_internal_mutable_emgstop()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_emgstop());
+  }
+  if (from._internal_has_gnsynst()) {
+    _this->_internal_mutable_gnsynst()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_gnsynst());
+  }
+  if (from._internal_has_pointstatus()) {
+    _this->_internal_mutable_pointstatus()->::essmodule::ESSPointStatus::MergeFrom(
+        from._internal_pointstatus());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ESSEventAndStatusZGEN::CopyFrom(const ESSEventAndStatusZGEN& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSEventAndStatusZGEN)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ESSEventAndStatusZGEN::IsInitialized() const {
+  return true;
+}
+
+void ESSEventAndStatusZGEN::InternalSwap(ESSEventAndStatusZGEN* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ESSEventAndStatusZGEN, _impl_.pointstatus_)
+      + sizeof(ESSEventAndStatusZGEN::_impl_.pointstatus_)
+      - PROTOBUF_FIELD_OFFSET(ESSEventAndStatusZGEN, _impl_.logicalnodeforeventandstatus_)>(
+          reinterpret_cast<char*>(&_impl_.logicalnodeforeventandstatus_),
+          reinterpret_cast<char*>(&other->_impl_.logicalnodeforeventandstatus_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ESSEventAndStatusZGEN::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[27]);
+}
+// ===================================================================
+
+class ESSEventZGEN::_Internal {
+ public:
+  static const ::essmodule::ESSEventAndStatusZGEN& esseventandstatuszgen(const ESSEventZGEN* msg);
+};
+
+const ::essmodule::ESSEventAndStatusZGEN&
+ESSEventZGEN::_Internal::esseventandstatuszgen(const ESSEventZGEN* msg) {
+  return *msg->_impl_.esseventandstatuszgen_;
+}
+ESSEventZGEN::ESSEventZGEN(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSEventZGEN)
+}
+ESSEventZGEN::ESSEventZGEN(const ESSEventZGEN& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSEventZGEN* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.esseventandstatuszgen_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_esseventandstatuszgen()) {
+    _this->_impl_.esseventandstatuszgen_ = new ::essmodule::ESSEventAndStatusZGEN(*from._impl_.esseventandstatuszgen_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSEventZGEN)
+}
+
+inline void ESSEventZGEN::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.esseventandstatuszgen_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+ESSEventZGEN::~ESSEventZGEN() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSEventZGEN)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ESSEventZGEN::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.esseventandstatuszgen_;
+}
+
+void ESSEventZGEN::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ESSEventZGEN::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSEventZGEN)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.esseventandstatuszgen_ != nullptr) {
+    delete _impl_.esseventandstatuszgen_;
+  }
+  _impl_.esseventandstatuszgen_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ESSEventZGEN::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_esseventandstatuszgen(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* ESSEventZGEN::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSEventZGEN)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_esseventandstatuszgen()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::esseventandstatuszgen(this),
+        _Internal::esseventandstatuszgen(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSEventZGEN)
+  return target;
+}
+
+::size_t ESSEventZGEN::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSEventZGEN)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_esseventandstatuszgen()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.esseventandstatuszgen_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSEventZGEN::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSEventZGEN::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSEventZGEN::GetClassData() const { return &_class_data_; }
+
+
+void ESSEventZGEN::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSEventZGEN*>(&to_msg);
+  auto& from = static_cast<const ESSEventZGEN&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSEventZGEN)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_esseventandstatuszgen()) {
+    _this->_internal_mutable_esseventandstatuszgen()->::essmodule::ESSEventAndStatusZGEN::MergeFrom(
+        from._internal_esseventandstatuszgen());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ESSEventZGEN::CopyFrom(const ESSEventZGEN& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSEventZGEN)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ESSEventZGEN::IsInitialized() const {
+  return true;
+}
+
+void ESSEventZGEN::InternalSwap(ESSEventZGEN* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.esseventandstatuszgen_, other->_impl_.esseventandstatuszgen_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ESSEventZGEN::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[28]);
+}
+// ===================================================================
+
+class ESSEvent::_Internal {
+ public:
+  static const ::commonmodule::EventValue& eventvalue(const ESSEvent* msg);
+  static const ::essmodule::EssEventZBAT& esseventzbat(const ESSEvent* msg);
+  static const ::essmodule::ESSEventZGEN& esseventzgen(const ESSEvent* msg);
+};
+
+const ::commonmodule::EventValue&
+ESSEvent::_Internal::eventvalue(const ESSEvent* msg) {
+  return *msg->_impl_.eventvalue_;
+}
+const ::essmodule::EssEventZBAT&
+ESSEvent::_Internal::esseventzbat(const ESSEvent* msg) {
+  return *msg->_impl_.esseventzbat_;
+}
+const ::essmodule::ESSEventZGEN&
+ESSEvent::_Internal::esseventzgen(const ESSEvent* msg) {
+  return *msg->_impl_.esseventzgen_;
+}
+void ESSEvent::clear_eventvalue() {
+  if (GetArenaForAllocation() == nullptr && _impl_.eventvalue_ != nullptr) {
+    delete _impl_.eventvalue_;
+  }
+  _impl_.eventvalue_ = nullptr;
+}
+ESSEvent::ESSEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSEvent)
+}
+ESSEvent::ESSEvent(const ESSEvent& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSEvent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventvalue_){nullptr}
+    , decltype(_impl_.esseventzbat_){nullptr}
+    , decltype(_impl_.esseventzgen_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_eventvalue()) {
+    _this->_impl_.eventvalue_ = new ::commonmodule::EventValue(*from._impl_.eventvalue_);
+  }
+  if (from._internal_has_esseventzbat()) {
+    _this->_impl_.esseventzbat_ = new ::essmodule::EssEventZBAT(*from._impl_.esseventzbat_);
+  }
+  if (from._internal_has_esseventzgen()) {
+    _this->_impl_.esseventzgen_ = new ::essmodule::ESSEventZGEN(*from._impl_.esseventzgen_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSEvent)
+}
+
+inline void ESSEvent::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventvalue_){nullptr}
+    , decltype(_impl_.esseventzbat_){nullptr}
+    , decltype(_impl_.esseventzgen_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+ESSEvent::~ESSEvent() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSEvent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ESSEvent::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.eventvalue_;
+  if (this != internal_default_instance()) delete _impl_.esseventzbat_;
+  if (this != internal_default_instance()) delete _impl_.esseventzgen_;
+}
+
+void ESSEvent::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ESSEvent::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSEvent)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.eventvalue_ != nullptr) {
+    delete _impl_.eventvalue_;
+  }
+  _impl_.eventvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.esseventzbat_ != nullptr) {
+    delete _impl_.esseventzbat_;
+  }
+  _impl_.esseventzbat_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.esseventzgen_ != nullptr) {
+    delete _impl_.esseventzgen_;
+  }
+  _impl_.esseventzgen_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ESSEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_eventvalue(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .essmodule.EssEventZBAT essEventZBAT = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_esseventzbat(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .essmodule.ESSEventZGEN essEventZGEN = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_esseventzgen(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* ESSEvent::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSEvent)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_eventvalue()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::eventvalue(this),
+        _Internal::eventvalue(this).GetCachedSize(), target, stream);
+  }
+
+  // .essmodule.EssEventZBAT essEventZBAT = 2;
+  if (this->_internal_has_esseventzbat()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::esseventzbat(this),
+        _Internal::esseventzbat(this).GetCachedSize(), target, stream);
+  }
+
+  // .essmodule.ESSEventZGEN essEventZGEN = 3;
+  if (this->_internal_has_esseventzgen()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::esseventzgen(this),
+        _Internal::esseventzgen(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSEvent)
+  return target;
+}
+
+::size_t ESSEvent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSEvent)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_eventvalue()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.eventvalue_);
+  }
+
+  // .essmodule.EssEventZBAT essEventZBAT = 2;
+  if (this->_internal_has_esseventzbat()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.esseventzbat_);
+  }
+
+  // .essmodule.ESSEventZGEN essEventZGEN = 3;
+  if (this->_internal_has_esseventzgen()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.esseventzgen_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSEvent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSEvent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSEvent::GetClassData() const { return &_class_data_; }
+
+
+void ESSEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSEvent*>(&to_msg);
+  auto& from = static_cast<const ESSEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSEvent)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_eventvalue()) {
+    _this->_internal_mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(
+        from._internal_eventvalue());
+  }
+  if (from._internal_has_esseventzbat()) {
+    _this->_internal_mutable_esseventzbat()->::essmodule::EssEventZBAT::MergeFrom(
+        from._internal_esseventzbat());
+  }
+  if (from._internal_has_esseventzgen()) {
+    _this->_internal_mutable_esseventzgen()->::essmodule::ESSEventZGEN::MergeFrom(
+        from._internal_esseventzgen());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ESSEvent::CopyFrom(const ESSEvent& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ESSEvent::IsInitialized() const {
+  return true;
+}
+
+void ESSEvent::InternalSwap(ESSEvent* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ESSEvent, _impl_.esseventzgen_)
+      + sizeof(ESSEvent::_impl_.esseventzgen_)
+      - PROTOBUF_FIELD_OFFSET(ESSEvent, _impl_.eventvalue_)>(
+          reinterpret_cast<char*>(&_impl_.eventvalue_),
+          reinterpret_cast<char*>(&other->_impl_.eventvalue_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ESSEvent::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[29]);
+}
+// ===================================================================
+
+class ESSEventProfile::_Internal {
+ public:
+  static const ::commonmodule::EventMessageInfo& eventmessageinfo(const ESSEventProfile* msg);
+  static const ::commonmodule::ESS& ess(const ESSEventProfile* msg);
+  static const ::essmodule::ESSEvent& essevent(const ESSEventProfile* msg);
+};
+
+const ::commonmodule::EventMessageInfo&
+ESSEventProfile::_Internal::eventmessageinfo(const ESSEventProfile* msg) {
+  return *msg->_impl_.eventmessageinfo_;
+}
+const ::commonmodule::ESS&
+ESSEventProfile::_Internal::ess(const ESSEventProfile* msg) {
+  return *msg->_impl_.ess_;
+}
+const ::essmodule::ESSEvent&
+ESSEventProfile::_Internal::essevent(const ESSEventProfile* msg) {
+  return *msg->_impl_.essevent_;
+}
+void ESSEventProfile::clear_eventmessageinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.eventmessageinfo_ != nullptr) {
+    delete _impl_.eventmessageinfo_;
+  }
+  _impl_.eventmessageinfo_ = nullptr;
+}
+void ESSEventProfile::clear_ess() {
+  if (GetArenaForAllocation() == nullptr && _impl_.ess_ != nullptr) {
+    delete _impl_.ess_;
+  }
+  _impl_.ess_ = nullptr;
+}
+ESSEventProfile::ESSEventProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSEventProfile)
+}
+ESSEventProfile::ESSEventProfile(const ESSEventProfile& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSEventProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventmessageinfo_){nullptr}
+    , decltype(_impl_.ess_){nullptr}
+    , decltype(_impl_.essevent_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_eventmessageinfo()) {
+    _this->_impl_.eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from._impl_.eventmessageinfo_);
+  }
+  if (from._internal_has_ess()) {
+    _this->_impl_.ess_ = new ::commonmodule::ESS(*from._impl_.ess_);
+  }
+  if (from._internal_has_essevent()) {
+    _this->_impl_.essevent_ = new ::essmodule::ESSEvent(*from._impl_.essevent_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSEventProfile)
+}
+
+inline void ESSEventProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventmessageinfo_){nullptr}
+    , decltype(_impl_.ess_){nullptr}
+    , decltype(_impl_.essevent_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+ESSEventProfile::~ESSEventProfile() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSEventProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ESSEventProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.eventmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.ess_;
+  if (this != internal_default_instance()) delete _impl_.essevent_;
+}
+
+void ESSEventProfile::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ESSEventProfile::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSEventProfile)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.eventmessageinfo_ != nullptr) {
+    delete _impl_.eventmessageinfo_;
+  }
+  _impl_.eventmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ess_ != nullptr) {
+    delete _impl_.ess_;
+  }
+  _impl_.ess_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.essevent_ != nullptr) {
+    delete _impl_.essevent_;
+  }
+  _impl_.essevent_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ESSEventProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_eventmessageinfo(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_ess(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .essmodule.ESSEvent essEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_essevent(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* ESSEventProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSEventProfile)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_eventmessageinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::eventmessageinfo(this),
+        _Internal::eventmessageinfo(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_ess()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::ess(this),
+        _Internal::ess(this).GetCachedSize(), target, stream);
+  }
+
+  // .essmodule.ESSEvent essEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_essevent()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::essevent(this),
+        _Internal::essevent(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSEventProfile)
+  return target;
+}
+
+::size_t ESSEventProfile::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSEventProfile)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_eventmessageinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.eventmessageinfo_);
+  }
+
+  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_ess()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.ess_);
+  }
+
+  // .essmodule.ESSEvent essEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_essevent()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.essevent_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSEventProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSEventProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSEventProfile::GetClassData() const { return &_class_data_; }
+
+
+void ESSEventProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSEventProfile*>(&to_msg);
+  auto& from = static_cast<const ESSEventProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSEventProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_eventmessageinfo()) {
+    _this->_internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(
+        from._internal_eventmessageinfo());
+  }
+  if (from._internal_has_ess()) {
+    _this->_internal_mutable_ess()->::commonmodule::ESS::MergeFrom(
+        from._internal_ess());
+  }
+  if (from._internal_has_essevent()) {
+    _this->_internal_mutable_essevent()->::essmodule::ESSEvent::MergeFrom(
+        from._internal_essevent());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ESSEventProfile::CopyFrom(const ESSEventProfile& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSEventProfile)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ESSEventProfile::IsInitialized() const {
+  return true;
+}
+
+void ESSEventProfile::InternalSwap(ESSEventProfile* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ESSEventProfile, _impl_.essevent_)
+      + sizeof(ESSEventProfile::_impl_.essevent_)
+      - PROTOBUF_FIELD_OFFSET(ESSEventProfile, _impl_.eventmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.eventmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.eventmessageinfo_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ESSEventProfile::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[30]);
+}
+// ===================================================================
+
+class ESSReading::_Internal {
+ public:
+  static const ::commonmodule::ConductingEquipmentTerminalReading& conductingequipmentterminalreading(const ESSReading* msg);
+  static const ::commonmodule::PhaseMMTN& phasemmtn(const ESSReading* msg);
+  static const ::commonmodule::ReadingMMTR& readingmmtr(const ESSReading* msg);
+  static const ::commonmodule::ReadingMMXU& readingmmxu(const ESSReading* msg);
+};
+
+const ::commonmodule::ConductingEquipmentTerminalReading&
+ESSReading::_Internal::conductingequipmentterminalreading(const ESSReading* msg) {
+  return *msg->_impl_.conductingequipmentterminalreading_;
+}
+const ::commonmodule::PhaseMMTN&
+ESSReading::_Internal::phasemmtn(const ESSReading* msg) {
+  return *msg->_impl_.phasemmtn_;
+}
+const ::commonmodule::ReadingMMTR&
+ESSReading::_Internal::readingmmtr(const ESSReading* msg) {
+  return *msg->_impl_.readingmmtr_;
+}
+const ::commonmodule::ReadingMMXU&
+ESSReading::_Internal::readingmmxu(const ESSReading* msg) {
+  return *msg->_impl_.readingmmxu_;
+}
+void ESSReading::clear_conductingequipmentterminalreading() {
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipmentterminalreading_ != nullptr) {
+    delete _impl_.conductingequipmentterminalreading_;
+  }
+  _impl_.conductingequipmentterminalreading_ = nullptr;
+}
+void ESSReading::clear_phasemmtn() {
+  if (GetArenaForAllocation() == nullptr && _impl_.phasemmtn_ != nullptr) {
+    delete _impl_.phasemmtn_;
+  }
+  _impl_.phasemmtn_ = nullptr;
+}
+void ESSReading::clear_readingmmtr() {
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmtr_ != nullptr) {
+    delete _impl_.readingmmtr_;
+  }
+  _impl_.readingmmtr_ = nullptr;
+}
+void ESSReading::clear_readingmmxu() {
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmxu_ != nullptr) {
+    delete _impl_.readingmmxu_;
+  }
+  _impl_.readingmmxu_ = nullptr;
+}
+ESSReading::ESSReading(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSReading)
+}
+ESSReading::ESSReading(const ESSReading& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSReading* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipmentterminalreading_){nullptr}
+    , decltype(_impl_.phasemmtn_){nullptr}
+    , decltype(_impl_.readingmmtr_){nullptr}
+    , decltype(_impl_.readingmmxu_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_conductingequipmentterminalreading()) {
+    _this->_impl_.conductingequipmentterminalreading_ = new ::commonmodule::ConductingEquipmentTerminalReading(*from._impl_.conductingequipmentterminalreading_);
+  }
+  if (from._internal_has_phasemmtn()) {
+    _this->_impl_.phasemmtn_ = new ::commonmodule::PhaseMMTN(*from._impl_.phasemmtn_);
+  }
+  if (from._internal_has_readingmmtr()) {
+    _this->_impl_.readingmmtr_ = new ::commonmodule::ReadingMMTR(*from._impl_.readingmmtr_);
+  }
+  if (from._internal_has_readingmmxu()) {
+    _this->_impl_.readingmmxu_ = new ::commonmodule::ReadingMMXU(*from._impl_.readingmmxu_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSReading)
+}
+
+inline void ESSReading::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipmentterminalreading_){nullptr}
+    , decltype(_impl_.phasemmtn_){nullptr}
+    , decltype(_impl_.readingmmtr_){nullptr}
+    , decltype(_impl_.readingmmxu_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+ESSReading::~ESSReading() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSReading)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ESSReading::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.conductingequipmentterminalreading_;
+  if (this != internal_default_instance()) delete _impl_.phasemmtn_;
+  if (this != internal_default_instance()) delete _impl_.readingmmtr_;
+  if (this != internal_default_instance()) delete _impl_.readingmmxu_;
+}
+
+void ESSReading::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ESSReading::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSReading)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipmentterminalreading_ != nullptr) {
+    delete _impl_.conductingequipmentterminalreading_;
+  }
+  _impl_.conductingequipmentterminalreading_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.phasemmtn_ != nullptr) {
+    delete _impl_.phasemmtn_;
+  }
+  _impl_.phasemmtn_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmtr_ != nullptr) {
+    delete _impl_.readingmmtr_;
+  }
+  _impl_.readingmmtr_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmxu_ != nullptr) {
+    delete _impl_.readingmmxu_;
+  }
+  _impl_.readingmmxu_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ESSReading::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_conductingequipmentterminalreading(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.PhaseMMTN phaseMMTN = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_phasemmtn(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ReadingMMTR readingMMTR = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_readingmmtr(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ReadingMMXU readingMMXU = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_readingmmxu(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* ESSReading::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSReading)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_conductingequipmentterminalreading()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::conductingequipmentterminalreading(this),
+        _Internal::conductingequipmentterminalreading(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.PhaseMMTN phaseMMTN = 2;
+  if (this->_internal_has_phasemmtn()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::phasemmtn(this),
+        _Internal::phasemmtn(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ReadingMMTR readingMMTR = 3;
+  if (this->_internal_has_readingmmtr()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::readingmmtr(this),
+        _Internal::readingmmtr(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ReadingMMXU readingMMXU = 4;
+  if (this->_internal_has_readingmmxu()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::readingmmxu(this),
+        _Internal::readingmmxu(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSReading)
+  return target;
+}
+
+::size_t ESSReading::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSReading)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_conductingequipmentterminalreading()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.conductingequipmentterminalreading_);
+  }
+
+  // .commonmodule.PhaseMMTN phaseMMTN = 2;
+  if (this->_internal_has_phasemmtn()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.phasemmtn_);
+  }
+
+  // .commonmodule.ReadingMMTR readingMMTR = 3;
+  if (this->_internal_has_readingmmtr()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.readingmmtr_);
+  }
+
+  // .commonmodule.ReadingMMXU readingMMXU = 4;
+  if (this->_internal_has_readingmmxu()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.readingmmxu_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSReading::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSReading::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSReading::GetClassData() const { return &_class_data_; }
+
+
+void ESSReading::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSReading*>(&to_msg);
+  auto& from = static_cast<const ESSReading&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSReading)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_conductingequipmentterminalreading()) {
+    _this->_internal_mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(
+        from._internal_conductingequipmentterminalreading());
+  }
+  if (from._internal_has_phasemmtn()) {
+    _this->_internal_mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(
+        from._internal_phasemmtn());
+  }
+  if (from._internal_has_readingmmtr()) {
+    _this->_internal_mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(
+        from._internal_readingmmtr());
+  }
+  if (from._internal_has_readingmmxu()) {
+    _this->_internal_mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(
+        from._internal_readingmmxu());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ESSReading::CopyFrom(const ESSReading& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSReading)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ESSReading::IsInitialized() const {
+  return true;
+}
+
+void ESSReading::InternalSwap(ESSReading* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ESSReading, _impl_.readingmmxu_)
+      + sizeof(ESSReading::_impl_.readingmmxu_)
+      - PROTOBUF_FIELD_OFFSET(ESSReading, _impl_.conductingequipmentterminalreading_)>(
+          reinterpret_cast<char*>(&_impl_.conductingequipmentterminalreading_),
+          reinterpret_cast<char*>(&other->_impl_.conductingequipmentterminalreading_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ESSReading::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[31]);
+}
+// ===================================================================
+
+class ESSReadingProfile::_Internal {
+ public:
+  static const ::commonmodule::ReadingMessageInfo& readingmessageinfo(const ESSReadingProfile* msg);
+  static const ::commonmodule::ESS& ess(const ESSReadingProfile* msg);
+  static const ::essmodule::ESSReading& essreading(const ESSReadingProfile* msg);
+};
+
+const ::commonmodule::ReadingMessageInfo&
+ESSReadingProfile::_Internal::readingmessageinfo(const ESSReadingProfile* msg) {
+  return *msg->_impl_.readingmessageinfo_;
+}
+const ::commonmodule::ESS&
+ESSReadingProfile::_Internal::ess(const ESSReadingProfile* msg) {
+  return *msg->_impl_.ess_;
+}
+const ::essmodule::ESSReading&
+ESSReadingProfile::_Internal::essreading(const ESSReadingProfile* msg) {
+  return *msg->_impl_.essreading_;
+}
+void ESSReadingProfile::clear_readingmessageinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmessageinfo_ != nullptr) {
+    delete _impl_.readingmessageinfo_;
+  }
+  _impl_.readingmessageinfo_ = nullptr;
+}
+void ESSReadingProfile::clear_ess() {
+  if (GetArenaForAllocation() == nullptr && _impl_.ess_ != nullptr) {
+    delete _impl_.ess_;
+  }
+  _impl_.ess_ = nullptr;
+}
+ESSReadingProfile::ESSReadingProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSReadingProfile)
+}
+ESSReadingProfile::ESSReadingProfile(const ESSReadingProfile& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSReadingProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.readingmessageinfo_){nullptr}
+    , decltype(_impl_.ess_){nullptr}
+    , decltype(_impl_.essreading_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_readingmessageinfo()) {
+    _this->_impl_.readingmessageinfo_ = new ::commonmodule::ReadingMessageInfo(*from._impl_.readingmessageinfo_);
+  }
+  if (from._internal_has_ess()) {
+    _this->_impl_.ess_ = new ::commonmodule::ESS(*from._impl_.ess_);
+  }
+  if (from._internal_has_essreading()) {
+    _this->_impl_.essreading_ = new ::essmodule::ESSReading(*from._impl_.essreading_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSReadingProfile)
+}
+
+inline void ESSReadingProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.readingmessageinfo_){nullptr}
+    , decltype(_impl_.ess_){nullptr}
+    , decltype(_impl_.essreading_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+ESSReadingProfile::~ESSReadingProfile() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSReadingProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ESSReadingProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.readingmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.ess_;
+  if (this != internal_default_instance()) delete _impl_.essreading_;
+}
+
+void ESSReadingProfile::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ESSReadingProfile::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSReadingProfile)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmessageinfo_ != nullptr) {
+    delete _impl_.readingmessageinfo_;
+  }
+  _impl_.readingmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ess_ != nullptr) {
+    delete _impl_.ess_;
+  }
+  _impl_.ess_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.essreading_ != nullptr) {
+    delete _impl_.essreading_;
+  }
+  _impl_.essreading_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ESSReadingProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_readingmessageinfo(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_ess(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .essmodule.ESSReading essReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_essreading(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* ESSReadingProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSReadingProfile)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_readingmessageinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::readingmessageinfo(this),
+        _Internal::readingmessageinfo(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_ess()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::ess(this),
+        _Internal::ess(this).GetCachedSize(), target, stream);
+  }
+
+  // .essmodule.ESSReading essReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_essreading()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::essreading(this),
+        _Internal::essreading(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSReadingProfile)
+  return target;
+}
+
+::size_t ESSReadingProfile::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSReadingProfile)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_readingmessageinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.readingmessageinfo_);
+  }
+
+  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_ess()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.ess_);
+  }
+
+  // .essmodule.ESSReading essReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_essreading()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.essreading_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSReadingProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSReadingProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSReadingProfile::GetClassData() const { return &_class_data_; }
+
+
+void ESSReadingProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSReadingProfile*>(&to_msg);
+  auto& from = static_cast<const ESSReadingProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSReadingProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_readingmessageinfo()) {
+    _this->_internal_mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(
+        from._internal_readingmessageinfo());
+  }
+  if (from._internal_has_ess()) {
+    _this->_internal_mutable_ess()->::commonmodule::ESS::MergeFrom(
+        from._internal_ess());
+  }
+  if (from._internal_has_essreading()) {
+    _this->_internal_mutable_essreading()->::essmodule::ESSReading::MergeFrom(
+        from._internal_essreading());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ESSReadingProfile::CopyFrom(const ESSReadingProfile& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSReadingProfile)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ESSReadingProfile::IsInitialized() const {
+  return true;
+}
+
+void ESSReadingProfile::InternalSwap(ESSReadingProfile* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ESSReadingProfile, _impl_.essreading_)
+      + sizeof(ESSReadingProfile::_impl_.essreading_)
+      - PROTOBUF_FIELD_OFFSET(ESSReadingProfile, _impl_.readingmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.readingmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.readingmessageinfo_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ESSReadingProfile::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[32]);
+}
+// ===================================================================
+
+class EssStatusZBAT::_Internal {
+ public:
+  static const ::commonmodule::LogicalNodeForEventAndStatus& logicalnodeforeventandstatus(const EssStatusZBAT* msg);
+  static const ::commonmodule::StatusSPS& batst(const EssStatusZBAT* msg);
+  static const ::commonmodule::ENG_GridConnectModeKind& grimod(const EssStatusZBAT* msg);
+  static const ::commonmodule::MV& soc(const EssStatusZBAT* msg);
+  static const ::commonmodule::StatusSPS& stdby(const EssStatusZBAT* msg);
+  static const ::commonmodule::MV& soh(const EssStatusZBAT* msg);
+  static const ::commonmodule::MV& whavail(const EssStatusZBAT* msg);
+};
+
+const ::commonmodule::LogicalNodeForEventAndStatus&
+EssStatusZBAT::_Internal::logicalnodeforeventandstatus(const EssStatusZBAT* msg) {
+  return *msg->_impl_.logicalnodeforeventandstatus_;
+}
+const ::commonmodule::StatusSPS&
+EssStatusZBAT::_Internal::batst(const EssStatusZBAT* msg) {
+  return *msg->_impl_.batst_;
+}
+const ::commonmodule::ENG_GridConnectModeKind&
+EssStatusZBAT::_Internal::grimod(const EssStatusZBAT* msg) {
+  return *msg->_impl_.grimod_;
+}
+const ::commonmodule::MV&
+EssStatusZBAT::_Internal::soc(const EssStatusZBAT* msg) {
+  return *msg->_impl_.soc_;
+}
+const ::commonmodule::StatusSPS&
+EssStatusZBAT::_Internal::stdby(const EssStatusZBAT* msg) {
+  return *msg->_impl_.stdby_;
+}
+const ::commonmodule::MV&
+EssStatusZBAT::_Internal::soh(const EssStatusZBAT* msg) {
+  return *msg->_impl_.soh_;
+}
+const ::commonmodule::MV&
+EssStatusZBAT::_Internal::whavail(const EssStatusZBAT* msg) {
+  return *msg->_impl_.whavail_;
+}
+void EssStatusZBAT::clear_logicalnodeforeventandstatus() {
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforeventandstatus_ != nullptr) {
+    delete _impl_.logicalnodeforeventandstatus_;
+  }
+  _impl_.logicalnodeforeventandstatus_ = nullptr;
+}
+void EssStatusZBAT::clear_batst() {
+  if (GetArenaForAllocation() == nullptr && _impl_.batst_ != nullptr) {
+    delete _impl_.batst_;
+  }
+  _impl_.batst_ = nullptr;
+}
+void EssStatusZBAT::clear_grimod() {
+  if (GetArenaForAllocation() == nullptr && _impl_.grimod_ != nullptr) {
+    delete _impl_.grimod_;
+  }
+  _impl_.grimod_ = nullptr;
+}
+void EssStatusZBAT::clear_soc() {
+  if (GetArenaForAllocation() == nullptr && _impl_.soc_ != nullptr) {
+    delete _impl_.soc_;
+  }
+  _impl_.soc_ = nullptr;
+}
+void EssStatusZBAT::clear_stdby() {
+  if (GetArenaForAllocation() == nullptr && _impl_.stdby_ != nullptr) {
+    delete _impl_.stdby_;
+  }
+  _impl_.stdby_ = nullptr;
+}
+void EssStatusZBAT::clear_soh() {
+  if (GetArenaForAllocation() == nullptr && _impl_.soh_ != nullptr) {
+    delete _impl_.soh_;
+  }
+  _impl_.soh_ = nullptr;
+}
+void EssStatusZBAT::clear_whavail() {
+  if (GetArenaForAllocation() == nullptr && _impl_.whavail_ != nullptr) {
+    delete _impl_.whavail_;
+  }
+  _impl_.whavail_ = nullptr;
+}
+EssStatusZBAT::EssStatusZBAT(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.EssStatusZBAT)
+}
+EssStatusZBAT::EssStatusZBAT(const EssStatusZBAT& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  EssStatusZBAT* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforeventandstatus_){nullptr}
+    , decltype(_impl_.batst_){nullptr}
+    , decltype(_impl_.grimod_){nullptr}
+    , decltype(_impl_.soc_){nullptr}
+    , decltype(_impl_.stdby_){nullptr}
+    , decltype(_impl_.soh_){nullptr}
+    , decltype(_impl_.whavail_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_logicalnodeforeventandstatus()) {
+    _this->_impl_.logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from._impl_.logicalnodeforeventandstatus_);
+  }
+  if (from._internal_has_batst()) {
+    _this->_impl_.batst_ = new ::commonmodule::StatusSPS(*from._impl_.batst_);
+  }
+  if (from._internal_has_grimod()) {
+    _this->_impl_.grimod_ = new ::commonmodule::ENG_GridConnectModeKind(*from._impl_.grimod_);
+  }
+  if (from._internal_has_soc()) {
+    _this->_impl_.soc_ = new ::commonmodule::MV(*from._impl_.soc_);
+  }
+  if (from._internal_has_stdby()) {
+    _this->_impl_.stdby_ = new ::commonmodule::StatusSPS(*from._impl_.stdby_);
+  }
+  if (from._internal_has_soh()) {
+    _this->_impl_.soh_ = new ::commonmodule::MV(*from._impl_.soh_);
+  }
+  if (from._internal_has_whavail()) {
+    _this->_impl_.whavail_ = new ::commonmodule::MV(*from._impl_.whavail_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.EssStatusZBAT)
+}
+
+inline void EssStatusZBAT::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforeventandstatus_){nullptr}
+    , decltype(_impl_.batst_){nullptr}
+    , decltype(_impl_.grimod_){nullptr}
+    , decltype(_impl_.soc_){nullptr}
+    , decltype(_impl_.stdby_){nullptr}
+    , decltype(_impl_.soh_){nullptr}
+    , decltype(_impl_.whavail_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+EssStatusZBAT::~EssStatusZBAT() {
+  // @@protoc_insertion_point(destructor:essmodule.EssStatusZBAT)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void EssStatusZBAT::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.logicalnodeforeventandstatus_;
+  if (this != internal_default_instance()) delete _impl_.batst_;
+  if (this != internal_default_instance()) delete _impl_.grimod_;
+  if (this != internal_default_instance()) delete _impl_.soc_;
+  if (this != internal_default_instance()) delete _impl_.stdby_;
+  if (this != internal_default_instance()) delete _impl_.soh_;
+  if (this != internal_default_instance()) delete _impl_.whavail_;
+}
+
+void EssStatusZBAT::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void EssStatusZBAT::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.EssStatusZBAT)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforeventandstatus_ != nullptr) {
+    delete _impl_.logicalnodeforeventandstatus_;
+  }
+  _impl_.logicalnodeforeventandstatus_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.batst_ != nullptr) {
+    delete _impl_.batst_;
+  }
+  _impl_.batst_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.grimod_ != nullptr) {
+    delete _impl_.grimod_;
+  }
+  _impl_.grimod_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.soc_ != nullptr) {
+    delete _impl_.soc_;
+  }
+  _impl_.soc_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.stdby_ != nullptr) {
+    delete _impl_.stdby_;
+  }
+  _impl_.stdby_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.soh_ != nullptr) {
+    delete _impl_.soh_;
+  }
+  _impl_.soh_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.whavail_ != nullptr) {
+    delete _impl_.whavail_;
+  }
+  _impl_.whavail_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* EssStatusZBAT::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforeventandstatus(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.StatusSPS BatSt = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_batst(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ENG_GridConnectModeKind GriMod = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_grimod(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.MV Soc = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_soc(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.StatusSPS Stdby = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_stdby(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.MV SoH = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_soh(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.MV WHAvail = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 58)) {
+          ptr = ctx->ParseMessage(_internal_mutable_whavail(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* EssStatusZBAT::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.EssStatusZBAT)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_logicalnodeforeventandstatus()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::logicalnodeforeventandstatus(this),
+        _Internal::logicalnodeforeventandstatus(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.StatusSPS BatSt = 2;
+  if (this->_internal_has_batst()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::batst(this),
+        _Internal::batst(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ENG_GridConnectModeKind GriMod = 3;
+  if (this->_internal_has_grimod()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::grimod(this),
+        _Internal::grimod(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.MV Soc = 4;
+  if (this->_internal_has_soc()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::soc(this),
+        _Internal::soc(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.StatusSPS Stdby = 5;
+  if (this->_internal_has_stdby()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(5, _Internal::stdby(this),
+        _Internal::stdby(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.MV SoH = 6;
+  if (this->_internal_has_soh()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(6, _Internal::soh(this),
+        _Internal::soh(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.MV WHAvail = 7;
+  if (this->_internal_has_whavail()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(7, _Internal::whavail(this),
+        _Internal::whavail(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.EssStatusZBAT)
+  return target;
+}
+
+::size_t EssStatusZBAT::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.EssStatusZBAT)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_logicalnodeforeventandstatus()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.logicalnodeforeventandstatus_);
+  }
+
+  // .commonmodule.StatusSPS BatSt = 2;
+  if (this->_internal_has_batst()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.batst_);
+  }
+
+  // .commonmodule.ENG_GridConnectModeKind GriMod = 3;
+  if (this->_internal_has_grimod()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.grimod_);
+  }
+
+  // .commonmodule.MV Soc = 4;
+  if (this->_internal_has_soc()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.soc_);
+  }
+
+  // .commonmodule.StatusSPS Stdby = 5;
+  if (this->_internal_has_stdby()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.stdby_);
+  }
+
+  // .commonmodule.MV SoH = 6;
+  if (this->_internal_has_soh()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.soh_);
+  }
+
+  // .commonmodule.MV WHAvail = 7;
+  if (this->_internal_has_whavail()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.whavail_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData EssStatusZBAT::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    EssStatusZBAT::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*EssStatusZBAT::GetClassData() const { return &_class_data_; }
+
+
+void EssStatusZBAT::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<EssStatusZBAT*>(&to_msg);
+  auto& from = static_cast<const EssStatusZBAT&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.EssStatusZBAT)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_logicalnodeforeventandstatus()) {
+    _this->_internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(
+        from._internal_logicalnodeforeventandstatus());
+  }
+  if (from._internal_has_batst()) {
+    _this->_internal_mutable_batst()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_batst());
+  }
+  if (from._internal_has_grimod()) {
+    _this->_internal_mutable_grimod()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(
+        from._internal_grimod());
+  }
+  if (from._internal_has_soc()) {
+    _this->_internal_mutable_soc()->::commonmodule::MV::MergeFrom(
+        from._internal_soc());
+  }
+  if (from._internal_has_stdby()) {
+    _this->_internal_mutable_stdby()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_stdby());
+  }
+  if (from._internal_has_soh()) {
+    _this->_internal_mutable_soh()->::commonmodule::MV::MergeFrom(
+        from._internal_soh());
+  }
+  if (from._internal_has_whavail()) {
+    _this->_internal_mutable_whavail()->::commonmodule::MV::MergeFrom(
+        from._internal_whavail());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void EssStatusZBAT::CopyFrom(const EssStatusZBAT& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.EssStatusZBAT)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool EssStatusZBAT::IsInitialized() const {
+  return true;
+}
+
+void EssStatusZBAT::InternalSwap(EssStatusZBAT* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(EssStatusZBAT, _impl_.whavail_)
+      + sizeof(EssStatusZBAT::_impl_.whavail_)
+      - PROTOBUF_FIELD_OFFSET(EssStatusZBAT, _impl_.logicalnodeforeventandstatus_)>(
+          reinterpret_cast<char*>(&_impl_.logicalnodeforeventandstatus_),
+          reinterpret_cast<char*>(&other->_impl_.logicalnodeforeventandstatus_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata EssStatusZBAT::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[33]);
+}
+// ===================================================================
+
+class ESSStatusZGEN::_Internal {
+ public:
+  static const ::essmodule::ESSEventAndStatusZGEN& esseventandstatuszgen(const ESSStatusZGEN* msg);
+};
+
+const ::essmodule::ESSEventAndStatusZGEN&
+ESSStatusZGEN::_Internal::esseventandstatuszgen(const ESSStatusZGEN* msg) {
+  return *msg->_impl_.esseventandstatuszgen_;
+}
+ESSStatusZGEN::ESSStatusZGEN(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSStatusZGEN)
+}
+ESSStatusZGEN::ESSStatusZGEN(const ESSStatusZGEN& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSStatusZGEN* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.esseventandstatuszgen_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_esseventandstatuszgen()) {
+    _this->_impl_.esseventandstatuszgen_ = new ::essmodule::ESSEventAndStatusZGEN(*from._impl_.esseventandstatuszgen_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSStatusZGEN)
+}
+
+inline void ESSStatusZGEN::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.esseventandstatuszgen_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+ESSStatusZGEN::~ESSStatusZGEN() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSStatusZGEN)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ESSStatusZGEN::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.esseventandstatuszgen_;
+}
+
+void ESSStatusZGEN::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ESSStatusZGEN::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSStatusZGEN)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.esseventandstatuszgen_ != nullptr) {
+    delete _impl_.esseventandstatuszgen_;
+  }
+  _impl_.esseventandstatuszgen_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ESSStatusZGEN::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_esseventandstatuszgen(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* ESSStatusZGEN::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSStatusZGEN)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_esseventandstatuszgen()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::esseventandstatuszgen(this),
+        _Internal::esseventandstatuszgen(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSStatusZGEN)
+  return target;
+}
+
+::size_t ESSStatusZGEN::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSStatusZGEN)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .essmodule.ESSEventAndStatusZGEN eSSEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_esseventandstatuszgen()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.esseventandstatuszgen_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSStatusZGEN::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSStatusZGEN::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSStatusZGEN::GetClassData() const { return &_class_data_; }
+
+
+void ESSStatusZGEN::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSStatusZGEN*>(&to_msg);
+  auto& from = static_cast<const ESSStatusZGEN&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSStatusZGEN)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_esseventandstatuszgen()) {
+    _this->_internal_mutable_esseventandstatuszgen()->::essmodule::ESSEventAndStatusZGEN::MergeFrom(
+        from._internal_esseventandstatuszgen());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ESSStatusZGEN::CopyFrom(const ESSStatusZGEN& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSStatusZGEN)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ESSStatusZGEN::IsInitialized() const {
+  return true;
+}
+
+void ESSStatusZGEN::InternalSwap(ESSStatusZGEN* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.esseventandstatuszgen_, other->_impl_.esseventandstatuszgen_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ESSStatusZGEN::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[34]);
+}
+// ===================================================================
+
+class ESSStatus::_Internal {
+ public:
+  static const ::commonmodule::StatusValue& statusvalue(const ESSStatus* msg);
+  static const ::essmodule::EssStatusZBAT& essstatuszbat(const ESSStatus* msg);
+  static const ::essmodule::ESSStatusZGEN& essstatuszgen(const ESSStatus* msg);
+};
+
+const ::commonmodule::StatusValue&
+ESSStatus::_Internal::statusvalue(const ESSStatus* msg) {
+  return *msg->_impl_.statusvalue_;
+}
+const ::essmodule::EssStatusZBAT&
+ESSStatus::_Internal::essstatuszbat(const ESSStatus* msg) {
+  return *msg->_impl_.essstatuszbat_;
+}
+const ::essmodule::ESSStatusZGEN&
+ESSStatus::_Internal::essstatuszgen(const ESSStatus* msg) {
+  return *msg->_impl_.essstatuszgen_;
+}
+void ESSStatus::clear_statusvalue() {
+  if (GetArenaForAllocation() == nullptr && _impl_.statusvalue_ != nullptr) {
+    delete _impl_.statusvalue_;
+  }
+  _impl_.statusvalue_ = nullptr;
+}
+ESSStatus::ESSStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSStatus)
+}
+ESSStatus::ESSStatus(const ESSStatus& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSStatus* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusvalue_){nullptr}
+    , decltype(_impl_.essstatuszbat_){nullptr}
+    , decltype(_impl_.essstatuszgen_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_statusvalue()) {
+    _this->_impl_.statusvalue_ = new ::commonmodule::StatusValue(*from._impl_.statusvalue_);
+  }
+  if (from._internal_has_essstatuszbat()) {
+    _this->_impl_.essstatuszbat_ = new ::essmodule::EssStatusZBAT(*from._impl_.essstatuszbat_);
+  }
+  if (from._internal_has_essstatuszgen()) {
+    _this->_impl_.essstatuszgen_ = new ::essmodule::ESSStatusZGEN(*from._impl_.essstatuszgen_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSStatus)
+}
+
+inline void ESSStatus::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusvalue_){nullptr}
+    , decltype(_impl_.essstatuszbat_){nullptr}
+    , decltype(_impl_.essstatuszgen_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+ESSStatus::~ESSStatus() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSStatus)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ESSStatus::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.statusvalue_;
+  if (this != internal_default_instance()) delete _impl_.essstatuszbat_;
+  if (this != internal_default_instance()) delete _impl_.essstatuszgen_;
+}
+
+void ESSStatus::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ESSStatus::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSStatus)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.statusvalue_ != nullptr) {
+    delete _impl_.statusvalue_;
+  }
+  _impl_.statusvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.essstatuszbat_ != nullptr) {
+    delete _impl_.essstatuszbat_;
+  }
+  _impl_.essstatuszbat_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.essstatuszgen_ != nullptr) {
+    delete _impl_.essstatuszgen_;
+  }
+  _impl_.essstatuszgen_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ESSStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_statusvalue(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .essmodule.EssStatusZBAT essStatusZBAT = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_essstatuszbat(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .essmodule.ESSStatusZGEN essStatusZGEN = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_essstatuszgen(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* ESSStatus::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSStatus)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_statusvalue()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::statusvalue(this),
+        _Internal::statusvalue(this).GetCachedSize(), target, stream);
+  }
+
+  // .essmodule.EssStatusZBAT essStatusZBAT = 2;
+  if (this->_internal_has_essstatuszbat()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::essstatuszbat(this),
+        _Internal::essstatuszbat(this).GetCachedSize(), target, stream);
+  }
+
+  // .essmodule.ESSStatusZGEN essStatusZGEN = 3;
+  if (this->_internal_has_essstatuszgen()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::essstatuszgen(this),
+        _Internal::essstatuszgen(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSStatus)
+  return target;
+}
+
+::size_t ESSStatus::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSStatus)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_statusvalue()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.statusvalue_);
+  }
+
+  // .essmodule.EssStatusZBAT essStatusZBAT = 2;
+  if (this->_internal_has_essstatuszbat()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.essstatuszbat_);
+  }
+
+  // .essmodule.ESSStatusZGEN essStatusZGEN = 3;
+  if (this->_internal_has_essstatuszgen()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.essstatuszgen_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSStatus::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSStatus::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSStatus::GetClassData() const { return &_class_data_; }
+
+
+void ESSStatus::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSStatus*>(&to_msg);
+  auto& from = static_cast<const ESSStatus&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSStatus)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_statusvalue()) {
+    _this->_internal_mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(
+        from._internal_statusvalue());
+  }
+  if (from._internal_has_essstatuszbat()) {
+    _this->_internal_mutable_essstatuszbat()->::essmodule::EssStatusZBAT::MergeFrom(
+        from._internal_essstatuszbat());
+  }
+  if (from._internal_has_essstatuszgen()) {
+    _this->_internal_mutable_essstatuszgen()->::essmodule::ESSStatusZGEN::MergeFrom(
+        from._internal_essstatuszgen());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ESSStatus::CopyFrom(const ESSStatus& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSStatus)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ESSStatus::IsInitialized() const {
+  return true;
+}
+
+void ESSStatus::InternalSwap(ESSStatus* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ESSStatus, _impl_.essstatuszgen_)
+      + sizeof(ESSStatus::_impl_.essstatuszgen_)
+      - PROTOBUF_FIELD_OFFSET(ESSStatus, _impl_.statusvalue_)>(
+          reinterpret_cast<char*>(&_impl_.statusvalue_),
+          reinterpret_cast<char*>(&other->_impl_.statusvalue_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ESSStatus::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[35]);
+}
+// ===================================================================
+
+class ESSStatusProfile::_Internal {
+ public:
+  static const ::commonmodule::StatusMessageInfo& statusmessageinfo(const ESSStatusProfile* msg);
+  static const ::commonmodule::ESS& ess(const ESSStatusProfile* msg);
+  static const ::essmodule::ESSStatus& essstatus(const ESSStatusProfile* msg);
+};
+
+const ::commonmodule::StatusMessageInfo&
+ESSStatusProfile::_Internal::statusmessageinfo(const ESSStatusProfile* msg) {
+  return *msg->_impl_.statusmessageinfo_;
+}
+const ::commonmodule::ESS&
+ESSStatusProfile::_Internal::ess(const ESSStatusProfile* msg) {
+  return *msg->_impl_.ess_;
+}
+const ::essmodule::ESSStatus&
+ESSStatusProfile::_Internal::essstatus(const ESSStatusProfile* msg) {
+  return *msg->_impl_.essstatus_;
+}
+void ESSStatusProfile::clear_statusmessageinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.statusmessageinfo_ != nullptr) {
+    delete _impl_.statusmessageinfo_;
+  }
+  _impl_.statusmessageinfo_ = nullptr;
+}
+void ESSStatusProfile::clear_ess() {
+  if (GetArenaForAllocation() == nullptr && _impl_.ess_ != nullptr) {
+    delete _impl_.ess_;
+  }
+  _impl_.ess_ = nullptr;
+}
+ESSStatusProfile::ESSStatusProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:essmodule.ESSStatusProfile)
+}
+ESSStatusProfile::ESSStatusProfile(const ESSStatusProfile& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ESSStatusProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusmessageinfo_){nullptr}
+    , decltype(_impl_.ess_){nullptr}
+    , decltype(_impl_.essstatus_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_statusmessageinfo()) {
+    _this->_impl_.statusmessageinfo_ = new ::commonmodule::StatusMessageInfo(*from._impl_.statusmessageinfo_);
+  }
+  if (from._internal_has_ess()) {
+    _this->_impl_.ess_ = new ::commonmodule::ESS(*from._impl_.ess_);
+  }
+  if (from._internal_has_essstatus()) {
+    _this->_impl_.essstatus_ = new ::essmodule::ESSStatus(*from._impl_.essstatus_);
+  }
+  // @@protoc_insertion_point(copy_constructor:essmodule.ESSStatusProfile)
+}
+
+inline void ESSStatusProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusmessageinfo_){nullptr}
+    , decltype(_impl_.ess_){nullptr}
+    , decltype(_impl_.essstatus_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+ESSStatusProfile::~ESSStatusProfile() {
+  // @@protoc_insertion_point(destructor:essmodule.ESSStatusProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void ESSStatusProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.statusmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.ess_;
+  if (this != internal_default_instance()) delete _impl_.essstatus_;
+}
+
+void ESSStatusProfile::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void ESSStatusProfile::Clear() {
+// @@protoc_insertion_point(message_clear_start:essmodule.ESSStatusProfile)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.statusmessageinfo_ != nullptr) {
+    delete _impl_.statusmessageinfo_;
+  }
+  _impl_.statusmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ess_ != nullptr) {
+    delete _impl_.ess_;
+  }
+  _impl_.ess_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.essstatus_ != nullptr) {
+    delete _impl_.essstatus_;
+  }
+  _impl_.essstatus_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ESSStatusProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_statusmessageinfo(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_ess(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .essmodule.ESSStatus essStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_essstatus(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* ESSStatusProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:essmodule.ESSStatusProfile)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_statusmessageinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::statusmessageinfo(this),
+        _Internal::statusmessageinfo(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_ess()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::ess(this),
+        _Internal::ess(this).GetCachedSize(), target, stream);
+  }
+
+  // .essmodule.ESSStatus essStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_essstatus()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::essstatus(this),
+        _Internal::essstatus(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:essmodule.ESSStatusProfile)
+  return target;
+}
+
+::size_t ESSStatusProfile::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:essmodule.ESSStatusProfile)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_statusmessageinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.statusmessageinfo_);
+  }
+
+  // .commonmodule.ESS ess = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_ess()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.ess_);
+  }
+
+  // .essmodule.ESSStatus essStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_essstatus()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.essstatus_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ESSStatusProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ESSStatusProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ESSStatusProfile::GetClassData() const { return &_class_data_; }
+
+
+void ESSStatusProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ESSStatusProfile*>(&to_msg);
+  auto& from = static_cast<const ESSStatusProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:essmodule.ESSStatusProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_statusmessageinfo()) {
+    _this->_internal_mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(
+        from._internal_statusmessageinfo());
+  }
+  if (from._internal_has_ess()) {
+    _this->_internal_mutable_ess()->::commonmodule::ESS::MergeFrom(
+        from._internal_ess());
+  }
+  if (from._internal_has_essstatus()) {
+    _this->_internal_mutable_essstatus()->::essmodule::ESSStatus::MergeFrom(
+        from._internal_essstatus());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void ESSStatusProfile::CopyFrom(const ESSStatusProfile& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:essmodule.ESSStatusProfile)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ESSStatusProfile::IsInitialized() const {
+  return true;
+}
+
+void ESSStatusProfile::InternalSwap(ESSStatusProfile* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ESSStatusProfile, _impl_.essstatus_)
+      + sizeof(ESSStatusProfile::_impl_.essstatus_)
+      - PROTOBUF_FIELD_OFFSET(ESSStatusProfile, _impl_.statusmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.statusmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.statusmessageinfo_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ESSStatusProfile::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_essmodule_2fessmodule_2eproto_getter, &descriptor_table_essmodule_2fessmodule_2eproto_once,
+      file_level_metadata_essmodule_2fessmodule_2eproto[36]);
+}
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace essmodule
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::essmodule::EssEventZBAT* Arena::CreateMaybeMessage< ::essmodule::EssEventZBAT >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::EssEventZBAT >(arena);
+template<> PROTOBUF_NOINLINE ::essmodule::ESSCapabilityConfiguration*
+Arena::CreateMaybeMessage< ::essmodule::ESSCapabilityConfiguration >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSCapabilityConfiguration >(arena);
 }
-template<> PROTOBUF_NOINLINE ::essmodule::FrequencyRegulation* Arena::CreateMaybeMessage< ::essmodule::FrequencyRegulation >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::essmodule::ESSCapabilityOverride*
+Arena::CreateMaybeMessage< ::essmodule::ESSCapabilityOverride >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSCapabilityOverride >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::ESSCapabilityOverrideProfile*
+Arena::CreateMaybeMessage< ::essmodule::ESSCapabilityOverrideProfile >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSCapabilityOverrideProfile >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::ESSCapabilityRatings*
+Arena::CreateMaybeMessage< ::essmodule::ESSCapabilityRatings >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSCapabilityRatings >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::ESSCapability*
+Arena::CreateMaybeMessage< ::essmodule::ESSCapability >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSCapability >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::ESSCapabilityProfile*
+Arena::CreateMaybeMessage< ::essmodule::ESSCapabilityProfile >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSCapabilityProfile >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::FrequencyRegulation*
+Arena::CreateMaybeMessage< ::essmodule::FrequencyRegulation >(Arena* arena) {
   return Arena::CreateMessageInternal< ::essmodule::FrequencyRegulation >(arena);
 }
-template<> PROTOBUF_NOINLINE ::essmodule::PeakShaving* Arena::CreateMaybeMessage< ::essmodule::PeakShaving >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::essmodule::PeakShaving*
+Arena::CreateMaybeMessage< ::essmodule::PeakShaving >(Arena* arena) {
   return Arena::CreateMessageInternal< ::essmodule::PeakShaving >(arena);
 }
-template<> PROTOBUF_NOINLINE ::essmodule::SocLimit* Arena::CreateMaybeMessage< ::essmodule::SocLimit >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::essmodule::SocLimit*
+Arena::CreateMaybeMessage< ::essmodule::SocLimit >(Arena* arena) {
   return Arena::CreateMessageInternal< ::essmodule::SocLimit >(arena);
 }
-template<> PROTOBUF_NOINLINE ::essmodule::SOCManagement* Arena::CreateMaybeMessage< ::essmodule::SOCManagement >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::essmodule::SOCManagement*
+Arena::CreateMaybeMessage< ::essmodule::SOCManagement >(Arena* arena) {
   return Arena::CreateMessageInternal< ::essmodule::SOCManagement >(arena);
 }
-template<> PROTOBUF_NOINLINE ::essmodule::VoltageRegulation* Arena::CreateMaybeMessage< ::essmodule::VoltageRegulation >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::essmodule::VoltageRegulation*
+Arena::CreateMaybeMessage< ::essmodule::VoltageRegulation >(Arena* arena) {
   return Arena::CreateMessageInternal< ::essmodule::VoltageRegulation >(arena);
 }
-template<> PROTOBUF_NOINLINE ::essmodule::VoltageDroop* Arena::CreateMaybeMessage< ::essmodule::VoltageDroop >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::essmodule::VoltageDroop*
+Arena::CreateMaybeMessage< ::essmodule::VoltageDroop >(Arena* arena) {
   return Arena::CreateMessageInternal< ::essmodule::VoltageDroop >(arena);
 }
-template<> PROTOBUF_NOINLINE ::essmodule::VoltagePI* Arena::CreateMaybeMessage< ::essmodule::VoltagePI >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::essmodule::VoltagePI*
+Arena::CreateMaybeMessage< ::essmodule::VoltagePI >(Arena* arena) {
   return Arena::CreateMessageInternal< ::essmodule::VoltagePI >(arena);
 }
-template<> PROTOBUF_NOINLINE ::essmodule::CapacityFirming* Arena::CreateMaybeMessage< ::essmodule::CapacityFirming >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::essmodule::CapacityFirming*
+Arena::CreateMaybeMessage< ::essmodule::CapacityFirming >(Arena* arena) {
   return Arena::CreateMessageInternal< ::essmodule::CapacityFirming >(arena);
 }
-template<> PROTOBUF_NOINLINE ::essmodule::ESSFunction* Arena::CreateMaybeMessage< ::essmodule::ESSFunction >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::essmodule::ESSFunction*
+Arena::CreateMaybeMessage< ::essmodule::ESSFunction >(Arena* arena) {
   return Arena::CreateMessageInternal< ::essmodule::ESSFunction >(arena);
 }
-template<> PROTOBUF_NOINLINE ::essmodule::ESSPointStatus* Arena::CreateMaybeMessage< ::essmodule::ESSPointStatus >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSPointStatus >(arena);
-}
-template<> PROTOBUF_NOINLINE ::essmodule::ESSEventAndStatusZGEN* Arena::CreateMaybeMessage< ::essmodule::ESSEventAndStatusZGEN >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSEventAndStatusZGEN >(arena);
-}
-template<> PROTOBUF_NOINLINE ::essmodule::ESSEventZGEN* Arena::CreateMaybeMessage< ::essmodule::ESSEventZGEN >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSEventZGEN >(arena);
-}
-template<> PROTOBUF_NOINLINE ::essmodule::ESSEvent* Arena::CreateMaybeMessage< ::essmodule::ESSEvent >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSEvent >(arena);
-}
-template<> PROTOBUF_NOINLINE ::essmodule::ESSEventProfile* Arena::CreateMaybeMessage< ::essmodule::ESSEventProfile >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSEventProfile >(arena);
-}
-template<> PROTOBUF_NOINLINE ::essmodule::ESSReading* Arena::CreateMaybeMessage< ::essmodule::ESSReading >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSReading >(arena);
-}
-template<> PROTOBUF_NOINLINE ::essmodule::ESSReadingProfile* Arena::CreateMaybeMessage< ::essmodule::ESSReadingProfile >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSReadingProfile >(arena);
-}
-template<> PROTOBUF_NOINLINE ::essmodule::EssStatusZBAT* Arena::CreateMaybeMessage< ::essmodule::EssStatusZBAT >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::EssStatusZBAT >(arena);
-}
-template<> PROTOBUF_NOINLINE ::essmodule::ESSStatusZGEN* Arena::CreateMaybeMessage< ::essmodule::ESSStatusZGEN >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSStatusZGEN >(arena);
-}
-template<> PROTOBUF_NOINLINE ::essmodule::ESSStatus* Arena::CreateMaybeMessage< ::essmodule::ESSStatus >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSStatus >(arena);
-}
-template<> PROTOBUF_NOINLINE ::essmodule::ESSStatusProfile* Arena::CreateMaybeMessage< ::essmodule::ESSStatusProfile >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::essmodule::ESSStatusProfile >(arena);
-}
-template<> PROTOBUF_NOINLINE ::essmodule::ESSPoint* Arena::CreateMaybeMessage< ::essmodule::ESSPoint >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::essmodule::ESSPoint*
+Arena::CreateMaybeMessage< ::essmodule::ESSPoint >(Arena* arena) {
   return Arena::CreateMessageInternal< ::essmodule::ESSPoint >(arena);
 }
-template<> PROTOBUF_NOINLINE ::essmodule::ESSCSG* Arena::CreateMaybeMessage< ::essmodule::ESSCSG >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::essmodule::ESSCurvePoint*
+Arena::CreateMaybeMessage< ::essmodule::ESSCurvePoint >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSCurvePoint >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::ESSCSG*
+Arena::CreateMaybeMessage< ::essmodule::ESSCSG >(Arena* arena) {
   return Arena::CreateMessageInternal< ::essmodule::ESSCSG >(arena);
 }
-template<> PROTOBUF_NOINLINE ::essmodule::ESSControlScheduleFSCH* Arena::CreateMaybeMessage< ::essmodule::ESSControlScheduleFSCH >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::essmodule::ESSControlScheduleFSCH*
+Arena::CreateMaybeMessage< ::essmodule::ESSControlScheduleFSCH >(Arena* arena) {
   return Arena::CreateMessageInternal< ::essmodule::ESSControlScheduleFSCH >(arena);
 }
-template<> PROTOBUF_NOINLINE ::essmodule::EssControlFSCC* Arena::CreateMaybeMessage< ::essmodule::EssControlFSCC >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::essmodule::EssControlFSCC*
+Arena::CreateMaybeMessage< ::essmodule::EssControlFSCC >(Arena* arena) {
   return Arena::CreateMessageInternal< ::essmodule::EssControlFSCC >(arena);
 }
-template<> PROTOBUF_NOINLINE ::essmodule::ESSControl* Arena::CreateMaybeMessage< ::essmodule::ESSControl >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::essmodule::ESSControl*
+Arena::CreateMaybeMessage< ::essmodule::ESSControl >(Arena* arena) {
   return Arena::CreateMessageInternal< ::essmodule::ESSControl >(arena);
 }
-template<> PROTOBUF_NOINLINE ::essmodule::ESSControlProfile* Arena::CreateMaybeMessage< ::essmodule::ESSControlProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::essmodule::ESSControlProfile*
+Arena::CreateMaybeMessage< ::essmodule::ESSControlProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::essmodule::ESSControlProfile >(arena);
 }
+template<> PROTOBUF_NOINLINE ::essmodule::ESSDiscreteControlDBAT*
+Arena::CreateMaybeMessage< ::essmodule::ESSDiscreteControlDBAT >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSDiscreteControlDBAT >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::ESSDiscreteControl*
+Arena::CreateMaybeMessage< ::essmodule::ESSDiscreteControl >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSDiscreteControl >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::ESSDiscreteControlProfile*
+Arena::CreateMaybeMessage< ::essmodule::ESSDiscreteControlProfile >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSDiscreteControlProfile >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::EssEventZBAT*
+Arena::CreateMaybeMessage< ::essmodule::EssEventZBAT >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::EssEventZBAT >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::ESSPointStatus*
+Arena::CreateMaybeMessage< ::essmodule::ESSPointStatus >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSPointStatus >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::ESSEventAndStatusZGEN*
+Arena::CreateMaybeMessage< ::essmodule::ESSEventAndStatusZGEN >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSEventAndStatusZGEN >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::ESSEventZGEN*
+Arena::CreateMaybeMessage< ::essmodule::ESSEventZGEN >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSEventZGEN >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::ESSEvent*
+Arena::CreateMaybeMessage< ::essmodule::ESSEvent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSEvent >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::ESSEventProfile*
+Arena::CreateMaybeMessage< ::essmodule::ESSEventProfile >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSEventProfile >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::ESSReading*
+Arena::CreateMaybeMessage< ::essmodule::ESSReading >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSReading >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::ESSReadingProfile*
+Arena::CreateMaybeMessage< ::essmodule::ESSReadingProfile >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSReadingProfile >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::EssStatusZBAT*
+Arena::CreateMaybeMessage< ::essmodule::EssStatusZBAT >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::EssStatusZBAT >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::ESSStatusZGEN*
+Arena::CreateMaybeMessage< ::essmodule::ESSStatusZGEN >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSStatusZGEN >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::ESSStatus*
+Arena::CreateMaybeMessage< ::essmodule::ESSStatus >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSStatus >(arena);
+}
+template<> PROTOBUF_NOINLINE ::essmodule::ESSStatusProfile*
+Arena::CreateMaybeMessage< ::essmodule::ESSStatusProfile >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::essmodule::ESSStatusProfile >(arena);
+}
 PROTOBUF_NAMESPACE_CLOSE
-
 // @@protoc_insertion_point(global_scope)
-#include <google/protobuf/port_undef.inc>
+#include "google/protobuf/port_undef.inc"

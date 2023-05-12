@@ -4,446 +4,532 @@
 #include "resourcemodule/resourcemodule.pb.h"
 
 #include <algorithm>
-
-#include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include "google/protobuf/io/coded_stream.h"
+#include "google/protobuf/extension_set.h"
+#include "google/protobuf/wire_format_lite.h"
+#include "google/protobuf/descriptor.h"
+#include "google/protobuf/generated_message_reflection.h"
+#include "google/protobuf/reflection_ops.h"
+#include "google/protobuf/wire_format.h"
 // @@protoc_insertion_point(includes)
-#include <google/protobuf/port_def.inc>
 
+// Must be included last.
+#include "google/protobuf/port_def.inc"
 PROTOBUF_PRAGMA_INIT_SEG
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = ::PROTOBUF_NAMESPACE_ID::internal;
 namespace resourcemodule {
-constexpr BooleanControlGGIO::BooleanControlGGIO(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnode_(nullptr)
-  , phase_(nullptr)
-  , spcso_(nullptr){}
+PROTOBUF_CONSTEXPR BooleanControlGGIO::BooleanControlGGIO(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.logicalnode_)*/nullptr
+  , /*decltype(_impl_.phase_)*/nullptr
+  , /*decltype(_impl_.spcso_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct BooleanControlGGIODefaultTypeInternal {
-  constexpr BooleanControlGGIODefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR BooleanControlGGIODefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~BooleanControlGGIODefaultTypeInternal() {}
   union {
     BooleanControlGGIO _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT BooleanControlGGIODefaultTypeInternal _BooleanControlGGIO_default_instance_;
-constexpr IntegerControlGGIO::IntegerControlGGIO(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnode_(nullptr)
-  , iscso_(nullptr)
-  , phase_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BooleanControlGGIODefaultTypeInternal _BooleanControlGGIO_default_instance_;
+PROTOBUF_CONSTEXPR IntegerControlGGIO::IntegerControlGGIO(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.logicalnode_)*/nullptr
+  , /*decltype(_impl_.iscso_)*/nullptr
+  , /*decltype(_impl_.phase_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct IntegerControlGGIODefaultTypeInternal {
-  constexpr IntegerControlGGIODefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR IntegerControlGGIODefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~IntegerControlGGIODefaultTypeInternal() {}
   union {
     IntegerControlGGIO _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT IntegerControlGGIODefaultTypeInternal _IntegerControlGGIO_default_instance_;
-constexpr StringControlGGIO::StringControlGGIO(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnode_(nullptr)
-  , phase_(nullptr)
-  , strout_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 IntegerControlGGIODefaultTypeInternal _IntegerControlGGIO_default_instance_;
+PROTOBUF_CONSTEXPR StringControlGGIO::StringControlGGIO(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.logicalnode_)*/nullptr
+  , /*decltype(_impl_.phase_)*/nullptr
+  , /*decltype(_impl_.strout_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct StringControlGGIODefaultTypeInternal {
-  constexpr StringControlGGIODefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR StringControlGGIODefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~StringControlGGIODefaultTypeInternal() {}
   union {
     StringControlGGIO _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT StringControlGGIODefaultTypeInternal _StringControlGGIO_default_instance_;
-constexpr AnalogControlGGIO::AnalogControlGGIO(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnode_(nullptr)
-  , anout_(nullptr)
-  , phase_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StringControlGGIODefaultTypeInternal _StringControlGGIO_default_instance_;
+PROTOBUF_CONSTEXPR AnalogControlGGIO::AnalogControlGGIO(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.logicalnode_)*/nullptr
+  , /*decltype(_impl_.anout_)*/nullptr
+  , /*decltype(_impl_.phase_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct AnalogControlGGIODefaultTypeInternal {
-  constexpr AnalogControlGGIODefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR AnalogControlGGIODefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~AnalogControlGGIODefaultTypeInternal() {}
   union {
     AnalogControlGGIO _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AnalogControlGGIODefaultTypeInternal _AnalogControlGGIO_default_instance_;
-constexpr ResourceDiscreteControl::ResourceDiscreteControl(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : analogcontrolggio_()
-  , booleancontrolggio_()
-  , integercontrolggio_()
-  , stringcontrolggio_()
-  , identifiedobject_(nullptr)
-  , check_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AnalogControlGGIODefaultTypeInternal _AnalogControlGGIO_default_instance_;
+PROTOBUF_CONSTEXPR ResourceDiscreteControl::ResourceDiscreteControl(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.analogcontrolggio_)*/{}
+  , /*decltype(_impl_.booleancontrolggio_)*/{}
+  , /*decltype(_impl_.integercontrolggio_)*/{}
+  , /*decltype(_impl_.stringcontrolggio_)*/{}
+  , /*decltype(_impl_.identifiedobject_)*/nullptr
+  , /*decltype(_impl_.check_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ResourceDiscreteControlDefaultTypeInternal {
-  constexpr ResourceDiscreteControlDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ResourceDiscreteControlDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ResourceDiscreteControlDefaultTypeInternal() {}
   union {
     ResourceDiscreteControl _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ResourceDiscreteControlDefaultTypeInternal _ResourceDiscreteControl_default_instance_;
-constexpr ResourceDiscreteControlProfile::ResourceDiscreteControlProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlmessageinfo_(nullptr)
-  , conductingequipment_(nullptr)
-  , resourcediscretecontrol_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ResourceDiscreteControlDefaultTypeInternal _ResourceDiscreteControl_default_instance_;
+PROTOBUF_CONSTEXPR ResourceDiscreteControlProfile::ResourceDiscreteControlProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlmessageinfo_)*/nullptr
+  , /*decltype(_impl_.conductingequipment_)*/nullptr
+  , /*decltype(_impl_.resourcediscretecontrol_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ResourceDiscreteControlProfileDefaultTypeInternal {
-  constexpr ResourceDiscreteControlProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ResourceDiscreteControlProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ResourceDiscreteControlProfileDefaultTypeInternal() {}
   union {
     ResourceDiscreteControlProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ResourceDiscreteControlProfileDefaultTypeInternal _ResourceDiscreteControlProfile_default_instance_;
-constexpr ResourceReading::ResourceReading(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : conductingequipmentterminalreading_(nullptr)
-  , phasemmtn_(nullptr)
-  , readingmmtr_(nullptr)
-  , readingmmxu_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ResourceDiscreteControlProfileDefaultTypeInternal _ResourceDiscreteControlProfile_default_instance_;
+PROTOBUF_CONSTEXPR ResourceReading::ResourceReading(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.conductingequipmentterminalreading_)*/nullptr
+  , /*decltype(_impl_.phasemmtn_)*/nullptr
+  , /*decltype(_impl_.readingmmtr_)*/nullptr
+  , /*decltype(_impl_.readingmmxu_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ResourceReadingDefaultTypeInternal {
-  constexpr ResourceReadingDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ResourceReadingDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ResourceReadingDefaultTypeInternal() {}
   union {
     ResourceReading _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ResourceReadingDefaultTypeInternal _ResourceReading_default_instance_;
-constexpr ResourceReadingProfile::ResourceReadingProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : readingmessageinfo_(nullptr)
-  , conductingequipment_(nullptr)
-  , resourcereading_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ResourceReadingDefaultTypeInternal _ResourceReading_default_instance_;
+PROTOBUF_CONSTEXPR ResourceReadingProfile::ResourceReadingProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.readingmessageinfo_)*/nullptr
+  , /*decltype(_impl_.conductingequipment_)*/nullptr
+  , /*decltype(_impl_.resourcereading_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ResourceReadingProfileDefaultTypeInternal {
-  constexpr ResourceReadingProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ResourceReadingProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ResourceReadingProfileDefaultTypeInternal() {}
   union {
     ResourceReadingProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ResourceReadingProfileDefaultTypeInternal _ResourceReadingProfile_default_instance_;
-constexpr ResourceEvent::ResourceEvent(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : analogeventandstatusggio_()
-  , booleaneventandstatusggio_()
-  , integereventandstatusggio_()
-  , stringeventandstatusggio_()
-  , identifiedobject_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ResourceReadingProfileDefaultTypeInternal _ResourceReadingProfile_default_instance_;
+PROTOBUF_CONSTEXPR ResourceEvent::ResourceEvent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.analogeventandstatusggio_)*/{}
+  , /*decltype(_impl_.booleaneventandstatusggio_)*/{}
+  , /*decltype(_impl_.integereventandstatusggio_)*/{}
+  , /*decltype(_impl_.stringeventandstatusggio_)*/{}
+  , /*decltype(_impl_.identifiedobject_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ResourceEventDefaultTypeInternal {
-  constexpr ResourceEventDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ResourceEventDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ResourceEventDefaultTypeInternal() {}
   union {
     ResourceEvent _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ResourceEventDefaultTypeInternal _ResourceEvent_default_instance_;
-constexpr ResourceEventProfile::ResourceEventProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : eventmessageinfo_(nullptr)
-  , conductingequipment_(nullptr)
-  , resourceevent_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ResourceEventDefaultTypeInternal _ResourceEvent_default_instance_;
+PROTOBUF_CONSTEXPR ResourceEventProfile::ResourceEventProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.eventmessageinfo_)*/nullptr
+  , /*decltype(_impl_.conductingequipment_)*/nullptr
+  , /*decltype(_impl_.resourceevent_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ResourceEventProfileDefaultTypeInternal {
-  constexpr ResourceEventProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ResourceEventProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ResourceEventProfileDefaultTypeInternal() {}
   union {
     ResourceEventProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ResourceEventProfileDefaultTypeInternal _ResourceEventProfile_default_instance_;
-constexpr ResourceStatus::ResourceStatus(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : analogeventandstatusggio_()
-  , booleaneventandstatusggio_()
-  , integereventandstatusggio_()
-  , stringeventandstatusggio_()
-  , identifiedobject_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ResourceEventProfileDefaultTypeInternal _ResourceEventProfile_default_instance_;
+PROTOBUF_CONSTEXPR ResourceStatus::ResourceStatus(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.analogeventandstatusggio_)*/{}
+  , /*decltype(_impl_.booleaneventandstatusggio_)*/{}
+  , /*decltype(_impl_.integereventandstatusggio_)*/{}
+  , /*decltype(_impl_.stringeventandstatusggio_)*/{}
+  , /*decltype(_impl_.identifiedobject_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ResourceStatusDefaultTypeInternal {
-  constexpr ResourceStatusDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ResourceStatusDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ResourceStatusDefaultTypeInternal() {}
   union {
     ResourceStatus _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ResourceStatusDefaultTypeInternal _ResourceStatus_default_instance_;
-constexpr ResourceStatusProfile::ResourceStatusProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : statusmessageinfo_(nullptr)
-  , conductingequipment_(nullptr)
-  , resourcestatus_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ResourceStatusDefaultTypeInternal _ResourceStatus_default_instance_;
+PROTOBUF_CONSTEXPR ResourceStatusProfile::ResourceStatusProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.statusmessageinfo_)*/nullptr
+  , /*decltype(_impl_.conductingequipment_)*/nullptr
+  , /*decltype(_impl_.resourcestatus_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ResourceStatusProfileDefaultTypeInternal {
-  constexpr ResourceStatusProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR ResourceStatusProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~ResourceStatusProfileDefaultTypeInternal() {}
   union {
     ResourceStatusProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ResourceStatusProfileDefaultTypeInternal _ResourceStatusProfile_default_instance_;
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ResourceStatusProfileDefaultTypeInternal _ResourceStatusProfile_default_instance_;
 }  // namespace resourcemodule
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_resourcemodule_2fresourcemodule_2eproto[12];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_resourcemodule_2fresourcemodule_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_resourcemodule_2fresourcemodule_2eproto = nullptr;
+static ::_pb::Metadata file_level_metadata_resourcemodule_2fresourcemodule_2eproto[12];
+static constexpr const ::_pb::EnumDescriptor**
+    file_level_enum_descriptors_resourcemodule_2fresourcemodule_2eproto = nullptr;
+static constexpr const ::_pb::ServiceDescriptor**
+    file_level_service_descriptors_resourcemodule_2fresourcemodule_2eproto = nullptr;
+const ::uint32_t TableStruct_resourcemodule_2fresourcemodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
+    protodesc_cold) = {
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::BooleanControlGGIO, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::BooleanControlGGIO, _impl_.logicalnode_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::BooleanControlGGIO, _impl_.phase_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::BooleanControlGGIO, _impl_.spcso_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::IntegerControlGGIO, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::IntegerControlGGIO, _impl_.logicalnode_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::IntegerControlGGIO, _impl_.iscso_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::IntegerControlGGIO, _impl_.phase_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::StringControlGGIO, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::StringControlGGIO, _impl_.logicalnode_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::StringControlGGIO, _impl_.phase_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::StringControlGGIO, _impl_.strout_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::AnalogControlGGIO, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::AnalogControlGGIO, _impl_.logicalnode_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::AnalogControlGGIO, _impl_.anout_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::AnalogControlGGIO, _impl_.phase_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControl, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControl, _impl_.identifiedobject_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControl, _impl_.check_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControl, _impl_.analogcontrolggio_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControl, _impl_.booleancontrolggio_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControl, _impl_.integercontrolggio_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControl, _impl_.stringcontrolggio_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControlProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControlProfile, _impl_.controlmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControlProfile, _impl_.conductingequipment_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControlProfile, _impl_.resourcediscretecontrol_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceReading, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceReading, _impl_.conductingequipmentterminalreading_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceReading, _impl_.phasemmtn_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceReading, _impl_.readingmmtr_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceReading, _impl_.readingmmxu_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceReadingProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceReadingProfile, _impl_.readingmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceReadingProfile, _impl_.conductingequipment_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceReadingProfile, _impl_.resourcereading_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEvent, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEvent, _impl_.identifiedobject_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEvent, _impl_.analogeventandstatusggio_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEvent, _impl_.booleaneventandstatusggio_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEvent, _impl_.integereventandstatusggio_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEvent, _impl_.stringeventandstatusggio_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEventProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEventProfile, _impl_.eventmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEventProfile, _impl_.conductingequipment_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEventProfile, _impl_.resourceevent_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatus, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatus, _impl_.identifiedobject_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatus, _impl_.analogeventandstatusggio_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatus, _impl_.booleaneventandstatusggio_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatus, _impl_.integereventandstatusggio_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatus, _impl_.stringeventandstatusggio_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatusProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatusProfile, _impl_.statusmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatusProfile, _impl_.conductingequipment_),
+    PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatusProfile, _impl_.resourcestatus_),
+};
 
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_resourcemodule_2fresourcemodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::BooleanControlGGIO, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::BooleanControlGGIO, logicalnode_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::BooleanControlGGIO, phase_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::BooleanControlGGIO, spcso_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::IntegerControlGGIO, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::IntegerControlGGIO, logicalnode_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::IntegerControlGGIO, iscso_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::IntegerControlGGIO, phase_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::StringControlGGIO, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::StringControlGGIO, logicalnode_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::StringControlGGIO, phase_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::StringControlGGIO, strout_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::AnalogControlGGIO, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::AnalogControlGGIO, logicalnode_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::AnalogControlGGIO, anout_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::AnalogControlGGIO, phase_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControl, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControl, identifiedobject_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControl, check_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControl, analogcontrolggio_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControl, booleancontrolggio_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControl, integercontrolggio_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControl, stringcontrolggio_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControlProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControlProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControlProfile, conductingequipment_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceDiscreteControlProfile, resourcediscretecontrol_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceReading, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceReading, conductingequipmentterminalreading_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceReading, phasemmtn_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceReading, readingmmtr_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceReading, readingmmxu_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceReadingProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceReadingProfile, readingmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceReadingProfile, conductingequipment_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceReadingProfile, resourcereading_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEvent, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEvent, identifiedobject_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEvent, analogeventandstatusggio_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEvent, booleaneventandstatusggio_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEvent, integereventandstatusggio_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEvent, stringeventandstatusggio_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEventProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEventProfile, eventmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEventProfile, conductingequipment_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceEventProfile, resourceevent_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatus, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatus, identifiedobject_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatus, analogeventandstatusggio_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatus, booleaneventandstatusggio_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatus, integereventandstatusggio_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatus, stringeventandstatusggio_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatusProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatusProfile, statusmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatusProfile, conductingequipment_),
-  PROTOBUF_FIELD_OFFSET(::resourcemodule::ResourceStatusProfile, resourcestatus_),
-};
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::resourcemodule::BooleanControlGGIO)},
-  { 8, -1, sizeof(::resourcemodule::IntegerControlGGIO)},
-  { 16, -1, sizeof(::resourcemodule::StringControlGGIO)},
-  { 24, -1, sizeof(::resourcemodule::AnalogControlGGIO)},
-  { 32, -1, sizeof(::resourcemodule::ResourceDiscreteControl)},
-  { 43, -1, sizeof(::resourcemodule::ResourceDiscreteControlProfile)},
-  { 51, -1, sizeof(::resourcemodule::ResourceReading)},
-  { 60, -1, sizeof(::resourcemodule::ResourceReadingProfile)},
-  { 68, -1, sizeof(::resourcemodule::ResourceEvent)},
-  { 78, -1, sizeof(::resourcemodule::ResourceEventProfile)},
-  { 86, -1, sizeof(::resourcemodule::ResourceStatus)},
-  { 96, -1, sizeof(::resourcemodule::ResourceStatusProfile)},
+static const ::_pbi::MigrationSchema
+    schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+        { 0, -1, -1, sizeof(::resourcemodule::BooleanControlGGIO)},
+        { 11, -1, -1, sizeof(::resourcemodule::IntegerControlGGIO)},
+        { 22, -1, -1, sizeof(::resourcemodule::StringControlGGIO)},
+        { 33, -1, -1, sizeof(::resourcemodule::AnalogControlGGIO)},
+        { 44, -1, -1, sizeof(::resourcemodule::ResourceDiscreteControl)},
+        { 58, -1, -1, sizeof(::resourcemodule::ResourceDiscreteControlProfile)},
+        { 69, -1, -1, sizeof(::resourcemodule::ResourceReading)},
+        { 81, -1, -1, sizeof(::resourcemodule::ResourceReadingProfile)},
+        { 92, -1, -1, sizeof(::resourcemodule::ResourceEvent)},
+        { 105, -1, -1, sizeof(::resourcemodule::ResourceEventProfile)},
+        { 116, -1, -1, sizeof(::resourcemodule::ResourceStatus)},
+        { 129, -1, -1, sizeof(::resourcemodule::ResourceStatusProfile)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::resourcemodule::_BooleanControlGGIO_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::resourcemodule::_IntegerControlGGIO_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::resourcemodule::_StringControlGGIO_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::resourcemodule::_AnalogControlGGIO_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::resourcemodule::_ResourceDiscreteControl_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::resourcemodule::_ResourceDiscreteControlProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::resourcemodule::_ResourceReading_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::resourcemodule::_ResourceReadingProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::resourcemodule::_ResourceEvent_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::resourcemodule::_ResourceEventProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::resourcemodule::_ResourceStatus_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::resourcemodule::_ResourceStatusProfile_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+    &::resourcemodule::_BooleanControlGGIO_default_instance_._instance,
+    &::resourcemodule::_IntegerControlGGIO_default_instance_._instance,
+    &::resourcemodule::_StringControlGGIO_default_instance_._instance,
+    &::resourcemodule::_AnalogControlGGIO_default_instance_._instance,
+    &::resourcemodule::_ResourceDiscreteControl_default_instance_._instance,
+    &::resourcemodule::_ResourceDiscreteControlProfile_default_instance_._instance,
+    &::resourcemodule::_ResourceReading_default_instance_._instance,
+    &::resourcemodule::_ResourceReadingProfile_default_instance_._instance,
+    &::resourcemodule::_ResourceEvent_default_instance_._instance,
+    &::resourcemodule::_ResourceEventProfile_default_instance_._instance,
+    &::resourcemodule::_ResourceStatus_default_instance_._instance,
+    &::resourcemodule::_ResourceStatusProfile_default_instance_._instance,
+};
+const char descriptor_table_protodef_resourcemodule_2fresourcemodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+    "\n#resourcemodule/resourcemodule.proto\022\016r"
+    "esourcemodule\032\tuml.proto\032\037commonmodule/c"
+    "ommonmodule.proto\"\262\001\n\022BooleanControlGGIO"
+    "\0224\n\013logicalNode\030\001 \001(\0132\031.commonmodule.Log"
+    "icalNodeB\004\200\265\030\001\0223\n\005Phase\030\002 \001(\0132$.commonmo"
+    "dule.Optional_PhaseCodeKind\0221\n\005SPCSO\030\003 \001"
+    "(\0132\030.commonmodule.ControlSPCB\010\210\265\030\001\220\265\030\001\"\262"
+    "\001\n\022IntegerControlGGIO\0224\n\013logicalNode\030\001 \001"
+    "(\0132\031.commonmodule.LogicalNodeB\004\200\265\030\001\0221\n\005I"
+    "SCSO\030\002 \001(\0132\030.commonmodule.ControlINCB\010\210\265"
+    "\030\001\220\265\030\001\0223\n\005Phase\030\003 \001(\0132$.commonmodule.Opt"
+    "ional_PhaseCodeKind\"\253\001\n\021StringControlGGI"
+    "O\0224\n\013logicalNode\030\001 \001(\0132\031.commonmodule.Lo"
+    "gicalNodeB\004\200\265\030\001\0223\n\005Phase\030\002 \001(\0132$.commonm"
+    "odule.Optional_PhaseCodeKind\022+\n\006StrOut\030\003"
+    " \001(\0132\021.commonmodule.VSCB\010\210\265\030\001\220\265\030\001\"\261\001\n\021An"
+    "alogControlGGIO\0224\n\013logicalNode\030\001 \001(\0132\031.c"
+    "ommonmodule.LogicalNodeB\004\200\265\030\001\0221\n\005AnOut\030\002"
+    " \001(\0132\030.commonmodule.ControlAPCB\010\210\265\030\001\220\265\030\001"
+    "\0223\n\005Phase\030\003 \001(\0132$.commonmodule.Optional_"
+    "PhaseCodeKind\"\233\003\n\027ResourceDiscreteContro"
+    "l\022>\n\020identifiedObject\030\001 \001(\0132\036.commonmodu"
+    "le.IdentifiedObjectB\004\200\265\030\001\022,\n\005check\030\002 \001(\013"
+    "2\035.commonmodule.CheckConditions\022B\n\021analo"
+    "gControlGGIO\030\003 \003(\0132!.resourcemodule.Anal"
+    "ogControlGGIOB\004\220\265\030\000\022D\n\022booleanControlGGI"
+    "O\030\004 \003(\0132\".resourcemodule.BooleanControlG"
+    "GIOB\004\220\265\030\000\022D\n\022integerControlGGIO\030\005 \003(\0132\"."
+    "resourcemodule.IntegerControlGGIOB\004\220\265\030\000\022"
+    "B\n\021stringControlGGIO\030\006 \003(\0132!.resourcemod"
+    "ule.StringControlGGIOB\004\220\265\030\000\"\210\002\n\036Resource"
+    "DiscreteControlProfile\022B\n\022controlMessage"
+    "Info\030\001 \001(\0132 .commonmodule.ControlMessage"
+    "InfoB\004\200\265\030\001\022H\n\023conductingEquipment\030\002 \001(\0132"
+    "!.commonmodule.ConductingEquipmentB\010\210\265\030\001"
+    "\220\265\030\001\022R\n\027resourceDiscreteControl\030\003 \001(\0132\'."
+    "resourcemodule.ResourceDiscreteControlB\010"
+    "\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\201\002\n\017ResourceReading\022b\n\"co"
+    "nductingEquipmentTerminalReading\030\001 \001(\01320"
+    ".commonmodule.ConductingEquipmentTermina"
+    "lReadingB\004\200\265\030\001\022*\n\tphaseMMTN\030\002 \001(\0132\027.comm"
+    "onmodule.PhaseMMTN\022.\n\013readingMMTR\030\003 \001(\0132"
+    "\031.commonmodule.ReadingMMTR\022.\n\013readingMMX"
+    "U\030\004 \001(\0132\031.commonmodule.ReadingMMXU\"\374\001\n\026R"
+    "esourceReadingProfile\022B\n\022readingMessageI"
+    "nfo\030\001 \001(\0132 .commonmodule.ReadingMessageI"
+    "nfoB\004\200\265\030\001\022H\n\023conductingEquipment\030\002 \001(\0132!"
+    ".commonmodule.ConductingEquipmentB\010\210\265\030\001\220"
+    "\265\030\001\022B\n\017resourceReading\030\003 \001(\0132\037.resourcem"
+    "odule.ResourceReadingB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001J\004\010"
+    "\024\020\025J\004\010\026\020\027\"\223\003\n\rResourceEvent\022>\n\020identifie"
+    "dObject\030\001 \001(\0132\036.commonmodule.IdentifiedO"
+    "bjectB\004\200\265\030\001\022N\n\030analogEventAndStatusGGIO\030"
+    "\002 \003(\0132&.commonmodule.AnalogEventAndStatu"
+    "sGGIOB\004\220\265\030\000\022P\n\031booleanEventAndStatusGGIO"
+    "\030\003 \003(\0132\'.commonmodule.BooleanEventAndSta"
+    "tusGGIOB\004\220\265\030\000\022P\n\031integerEventAndStatusGG"
+    "IO\030\004 \003(\0132\'.commonmodule.IntegerEventAndS"
+    "tatusGGIOB\004\220\265\030\000\022N\n\030stringEventAndStatusG"
+    "GIO\030\005 \003(\0132&.commonmodule.StringEventAndS"
+    "tatusGGIOB\004\220\265\030\000\"\346\001\n\024ResourceEventProfile"
+    "\022>\n\020eventMessageInfo\030\001 \001(\0132\036.commonmodul"
+    "e.EventMessageInfoB\004\200\265\030\001\022H\n\023conductingEq"
+    "uipment\030\002 \001(\0132!.commonmodule.ConductingE"
+    "quipmentB\010\210\265\030\001\220\265\030\001\022>\n\rresourceEvent\030\003 \001("
+    "\0132\035.resourcemodule.ResourceEventB\010\210\265\030\001\220\265"
+    "\030\001:\004\300\363\030\001\"\224\003\n\016ResourceStatus\022>\n\020identifie"
+    "dObject\030\001 \001(\0132\036.commonmodule.IdentifiedO"
+    "bjectB\004\200\265\030\001\022N\n\030analogEventAndStatusGGIO\030"
+    "\002 \003(\0132&.commonmodule.AnalogEventAndStatu"
+    "sGGIOB\004\220\265\030\000\022P\n\031booleanEventAndStatusGGIO"
+    "\030\003 \003(\0132\'.commonmodule.BooleanEventAndSta"
+    "tusGGIOB\004\220\265\030\000\022P\n\031integerEventAndStatusGG"
+    "IO\030\004 \003(\0132\'.commonmodule.IntegerEventAndS"
+    "tatusGGIOB\004\220\265\030\000\022N\n\030stringEventAndStatusG"
+    "GIO\030\005 \003(\0132&.commonmodule.StringEventAndS"
+    "tatusGGIOB\004\220\265\030\000\"\353\001\n\025ResourceStatusProfil"
+    "e\022@\n\021statusMessageInfo\030\001 \001(\0132\037.commonmod"
+    "ule.StatusMessageInfoB\004\200\265\030\001\022H\n\023conductin"
+    "gEquipment\030\002 \001(\0132!.commonmodule.Conducti"
+    "ngEquipmentB\010\210\265\030\001\220\265\030\001\022@\n\016resourceStatus\030"
+    "\003 \001(\0132\036.resourcemodule.ResourceStatusB\010\210"
+    "\265\030\001\220\265\030\001:\004\300\363\030\001B\212\001\n\026openfmb.resourcemodule"
+    "P\001ZUgitlab.com/openfmb/psm/ops/protobuf/"
+    "go-openfmb-ops-protobuf/v2/openfmb/resou"
+    "rcemodule\252\002\026openfmb.resourcemoduleb\006prot"
+    "o3"
+};
+static const ::_pbi::DescriptorTable* const descriptor_table_resourcemodule_2fresourcemodule_2eproto_deps[2] =
+    {
+        &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
+        &::descriptor_table_uml_2eproto,
+};
+static ::absl::once_flag descriptor_table_resourcemodule_2fresourcemodule_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_resourcemodule_2fresourcemodule_2eproto = {
+    false,
+    false,
+    3442,
+    descriptor_table_protodef_resourcemodule_2fresourcemodule_2eproto,
+    "resourcemodule/resourcemodule.proto",
+    &descriptor_table_resourcemodule_2fresourcemodule_2eproto_once,
+    descriptor_table_resourcemodule_2fresourcemodule_2eproto_deps,
+    2,
+    12,
+    schemas,
+    file_default_instances,
+    TableStruct_resourcemodule_2fresourcemodule_2eproto::offsets,
+    file_level_metadata_resourcemodule_2fresourcemodule_2eproto,
+    file_level_enum_descriptors_resourcemodule_2fresourcemodule_2eproto,
+    file_level_service_descriptors_resourcemodule_2fresourcemodule_2eproto,
 };
 
-const char descriptor_table_protodef_resourcemodule_2fresourcemodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n#resourcemodule/resourcemodule.proto\022\016r"
-  "esourcemodule\032\tuml.proto\032\037commonmodule/c"
-  "ommonmodule.proto\"\262\001\n\022BooleanControlGGIO"
-  "\0224\n\013logicalNode\030\001 \001(\0132\031.commonmodule.Log"
-  "icalNodeB\004\200\265\030\001\0223\n\005Phase\030\002 \001(\0132$.commonmo"
-  "dule.Optional_PhaseCodeKind\0221\n\005SPCSO\030\003 \001"
-  "(\0132\030.commonmodule.ControlSPCB\010\210\265\030\001\220\265\030\001\"\262"
-  "\001\n\022IntegerControlGGIO\0224\n\013logicalNode\030\001 \001"
-  "(\0132\031.commonmodule.LogicalNodeB\004\200\265\030\001\0221\n\005I"
-  "SCSO\030\002 \001(\0132\030.commonmodule.ControlINCB\010\210\265"
-  "\030\001\220\265\030\001\0223\n\005Phase\030\003 \001(\0132$.commonmodule.Opt"
-  "ional_PhaseCodeKind\"\253\001\n\021StringControlGGI"
-  "O\0224\n\013logicalNode\030\001 \001(\0132\031.commonmodule.Lo"
-  "gicalNodeB\004\200\265\030\001\0223\n\005Phase\030\002 \001(\0132$.commonm"
-  "odule.Optional_PhaseCodeKind\022+\n\006StrOut\030\003"
-  " \001(\0132\021.commonmodule.VSCB\010\210\265\030\001\220\265\030\001\"\261\001\n\021An"
-  "alogControlGGIO\0224\n\013logicalNode\030\001 \001(\0132\031.c"
-  "ommonmodule.LogicalNodeB\004\200\265\030\001\0221\n\005AnOut\030\002"
-  " \001(\0132\030.commonmodule.ControlAPCB\010\210\265\030\001\220\265\030\001"
-  "\0223\n\005Phase\030\003 \001(\0132$.commonmodule.Optional_"
-  "PhaseCodeKind\"\233\003\n\027ResourceDiscreteContro"
-  "l\022>\n\020identifiedObject\030\001 \001(\0132\036.commonmodu"
-  "le.IdentifiedObjectB\004\200\265\030\001\022,\n\005check\030\002 \001(\013"
-  "2\035.commonmodule.CheckConditions\022B\n\021analo"
-  "gControlGGIO\030\003 \003(\0132!.resourcemodule.Anal"
-  "ogControlGGIOB\004\220\265\030\000\022D\n\022booleanControlGGI"
-  "O\030\004 \003(\0132\".resourcemodule.BooleanControlG"
-  "GIOB\004\220\265\030\000\022D\n\022integerControlGGIO\030\005 \003(\0132\"."
-  "resourcemodule.IntegerControlGGIOB\004\220\265\030\000\022"
-  "B\n\021stringControlGGIO\030\006 \003(\0132!.resourcemod"
-  "ule.StringControlGGIOB\004\220\265\030\000\"\210\002\n\036Resource"
-  "DiscreteControlProfile\022B\n\022controlMessage"
-  "Info\030\001 \001(\0132 .commonmodule.ControlMessage"
-  "InfoB\004\200\265\030\001\022H\n\023conductingEquipment\030\002 \001(\0132"
-  "!.commonmodule.ConductingEquipmentB\010\210\265\030\001"
-  "\220\265\030\001\022R\n\027resourceDiscreteControl\030\003 \001(\0132\'."
-  "resourcemodule.ResourceDiscreteControlB\010"
-  "\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\201\002\n\017ResourceReading\022b\n\"co"
-  "nductingEquipmentTerminalReading\030\001 \001(\01320"
-  ".commonmodule.ConductingEquipmentTermina"
-  "lReadingB\004\200\265\030\001\022*\n\tphaseMMTN\030\002 \001(\0132\027.comm"
-  "onmodule.PhaseMMTN\022.\n\013readingMMTR\030\003 \001(\0132"
-  "\031.commonmodule.ReadingMMTR\022.\n\013readingMMX"
-  "U\030\004 \001(\0132\031.commonmodule.ReadingMMXU\"\374\001\n\026R"
-  "esourceReadingProfile\022B\n\022readingMessageI"
-  "nfo\030\001 \001(\0132 .commonmodule.ReadingMessageI"
-  "nfoB\004\200\265\030\001\022H\n\023conductingEquipment\030\002 \001(\0132!"
-  ".commonmodule.ConductingEquipmentB\010\210\265\030\001\220"
-  "\265\030\001\022B\n\017resourceReading\030\003 \001(\0132\037.resourcem"
-  "odule.ResourceReadingB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001J\004\010"
-  "\024\020\025J\004\010\026\020\027\"\223\003\n\rResourceEvent\022>\n\020identifie"
-  "dObject\030\001 \001(\0132\036.commonmodule.IdentifiedO"
-  "bjectB\004\200\265\030\001\022N\n\030analogEventAndStatusGGIO\030"
-  "\002 \003(\0132&.commonmodule.AnalogEventAndStatu"
-  "sGGIOB\004\220\265\030\000\022P\n\031booleanEventAndStatusGGIO"
-  "\030\003 \003(\0132\'.commonmodule.BooleanEventAndSta"
-  "tusGGIOB\004\220\265\030\000\022P\n\031integerEventAndStatusGG"
-  "IO\030\004 \003(\0132\'.commonmodule.IntegerEventAndS"
-  "tatusGGIOB\004\220\265\030\000\022N\n\030stringEventAndStatusG"
-  "GIO\030\005 \003(\0132&.commonmodule.StringEventAndS"
-  "tatusGGIOB\004\220\265\030\000\"\346\001\n\024ResourceEventProfile"
-  "\022>\n\020eventMessageInfo\030\001 \001(\0132\036.commonmodul"
-  "e.EventMessageInfoB\004\200\265\030\001\022H\n\023conductingEq"
-  "uipment\030\002 \001(\0132!.commonmodule.ConductingE"
-  "quipmentB\010\210\265\030\001\220\265\030\001\022>\n\rresourceEvent\030\003 \001("
-  "\0132\035.resourcemodule.ResourceEventB\010\210\265\030\001\220\265"
-  "\030\001:\004\300\363\030\001\"\224\003\n\016ResourceStatus\022>\n\020identifie"
-  "dObject\030\001 \001(\0132\036.commonmodule.IdentifiedO"
-  "bjectB\004\200\265\030\001\022N\n\030analogEventAndStatusGGIO\030"
-  "\002 \003(\0132&.commonmodule.AnalogEventAndStatu"
-  "sGGIOB\004\220\265\030\000\022P\n\031booleanEventAndStatusGGIO"
-  "\030\003 \003(\0132\'.commonmodule.BooleanEventAndSta"
-  "tusGGIOB\004\220\265\030\000\022P\n\031integerEventAndStatusGG"
-  "IO\030\004 \003(\0132\'.commonmodule.IntegerEventAndS"
-  "tatusGGIOB\004\220\265\030\000\022N\n\030stringEventAndStatusG"
-  "GIO\030\005 \003(\0132&.commonmodule.StringEventAndS"
-  "tatusGGIOB\004\220\265\030\000\"\353\001\n\025ResourceStatusProfil"
-  "e\022@\n\021statusMessageInfo\030\001 \001(\0132\037.commonmod"
-  "ule.StatusMessageInfoB\004\200\265\030\001\022H\n\023conductin"
-  "gEquipment\030\002 \001(\0132!.commonmodule.Conducti"
-  "ngEquipmentB\010\210\265\030\001\220\265\030\001\022@\n\016resourceStatus\030"
-  "\003 \001(\0132\036.resourcemodule.ResourceStatusB\010\210"
-  "\265\030\001\220\265\030\001:\004\300\363\030\001B\212\001\n\026openfmb.resourcemodule"
-  "P\001ZUgitlab.com/openfmb/psm/ops/protobuf/"
-  "go-openfmb-ops-protobuf/v2/openfmb/resou"
-  "rcemodule\252\002\026openfmb.resourcemoduleb\006prot"
-  "o3"
-  ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_resourcemodule_2fresourcemodule_2eproto_deps[2] = {
-  &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
-  &::descriptor_table_uml_2eproto,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_resourcemodule_2fresourcemodule_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_resourcemodule_2fresourcemodule_2eproto = {
-  false, false, 3442, descriptor_table_protodef_resourcemodule_2fresourcemodule_2eproto, "resourcemodule/resourcemodule.proto", 
-  &descriptor_table_resourcemodule_2fresourcemodule_2eproto_once, descriptor_table_resourcemodule_2fresourcemodule_2eproto_deps, 2, 12,
-  schemas, file_default_instances, TableStruct_resourcemodule_2fresourcemodule_2eproto::offsets,
-  file_level_metadata_resourcemodule_2fresourcemodule_2eproto, file_level_enum_descriptors_resourcemodule_2fresourcemodule_2eproto, file_level_service_descriptors_resourcemodule_2fresourcemodule_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
-descriptor_table_resourcemodule_2fresourcemodule_2eproto_metadata_getter(int index) {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_resourcemodule_2fresourcemodule_2eproto);
-  return descriptor_table_resourcemodule_2fresourcemodule_2eproto.file_level_metadata[index];
+// This function exists to be marked as weak.
+// It can significantly speed up compilation by breaking up LLVM's SCC
+// in the .pb.cc translation units. Large translation units see a
+// reduction of more than 35% of walltime for optimized builds. Without
+// the weak attribute all the messages in the file, including all the
+// vtables and everything they use become part of the same SCC through
+// a cycle like:
+// GetMetadata -> descriptor table -> default instances ->
+//   vtables -> GetMetadata
+// By adding a weak function here we break the connection from the
+// individual vtables back into the descriptor table.
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_resourcemodule_2fresourcemodule_2eproto_getter() {
+  return &descriptor_table_resourcemodule_2fresourcemodule_2eproto;
 }
-
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_resourcemodule_2fresourcemodule_2eproto(&descriptor_table_resourcemodule_2fresourcemodule_2eproto);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
+static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_resourcemodule_2fresourcemodule_2eproto(&descriptor_table_resourcemodule_2fresourcemodule_2eproto);
 namespace resourcemodule {
-
 // ===================================================================
 
 class BooleanControlGGIO::_Internal {
@@ -455,276 +541,263 @@ class BooleanControlGGIO::_Internal {
 
 const ::commonmodule::LogicalNode&
 BooleanControlGGIO::_Internal::logicalnode(const BooleanControlGGIO* msg) {
-  return *msg->logicalnode_;
+  return *msg->_impl_.logicalnode_;
 }
 const ::commonmodule::Optional_PhaseCodeKind&
 BooleanControlGGIO::_Internal::phase(const BooleanControlGGIO* msg) {
-  return *msg->phase_;
+  return *msg->_impl_.phase_;
 }
 const ::commonmodule::ControlSPC&
 BooleanControlGGIO::_Internal::spcso(const BooleanControlGGIO* msg) {
-  return *msg->spcso_;
+  return *msg->_impl_.spcso_;
 }
 void BooleanControlGGIO::clear_logicalnode() {
-  if (GetArena() == nullptr && logicalnode_ != nullptr) {
-    delete logicalnode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnode_ != nullptr) {
+    delete _impl_.logicalnode_;
   }
-  logicalnode_ = nullptr;
+  _impl_.logicalnode_ = nullptr;
 }
 void BooleanControlGGIO::clear_phase() {
-  if (GetArena() == nullptr && phase_ != nullptr) {
-    delete phase_;
+  if (GetArenaForAllocation() == nullptr && _impl_.phase_ != nullptr) {
+    delete _impl_.phase_;
   }
-  phase_ = nullptr;
+  _impl_.phase_ = nullptr;
 }
 void BooleanControlGGIO::clear_spcso() {
-  if (GetArena() == nullptr && spcso_ != nullptr) {
-    delete spcso_;
+  if (GetArenaForAllocation() == nullptr && _impl_.spcso_ != nullptr) {
+    delete _impl_.spcso_;
   }
-  spcso_ = nullptr;
+  _impl_.spcso_ = nullptr;
 }
 BooleanControlGGIO::BooleanControlGGIO(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:resourcemodule.BooleanControlGGIO)
 }
 BooleanControlGGIO::BooleanControlGGIO(const BooleanControlGGIO& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  BooleanControlGGIO* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnode_){nullptr}
+    , decltype(_impl_.phase_){nullptr}
+    , decltype(_impl_.spcso_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_logicalnode()) {
-    logicalnode_ = new ::commonmodule::LogicalNode(*from.logicalnode_);
-  } else {
-    logicalnode_ = nullptr;
+    _this->_impl_.logicalnode_ = new ::commonmodule::LogicalNode(*from._impl_.logicalnode_);
   }
   if (from._internal_has_phase()) {
-    phase_ = new ::commonmodule::Optional_PhaseCodeKind(*from.phase_);
-  } else {
-    phase_ = nullptr;
+    _this->_impl_.phase_ = new ::commonmodule::Optional_PhaseCodeKind(*from._impl_.phase_);
   }
   if (from._internal_has_spcso()) {
-    spcso_ = new ::commonmodule::ControlSPC(*from.spcso_);
-  } else {
-    spcso_ = nullptr;
+    _this->_impl_.spcso_ = new ::commonmodule::ControlSPC(*from._impl_.spcso_);
   }
   // @@protoc_insertion_point(copy_constructor:resourcemodule.BooleanControlGGIO)
 }
 
-void BooleanControlGGIO::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnode_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&spcso_) -
-    reinterpret_cast<char*>(&logicalnode_)) + sizeof(spcso_));
+inline void BooleanControlGGIO::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnode_){nullptr}
+    , decltype(_impl_.phase_){nullptr}
+    , decltype(_impl_.spcso_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 BooleanControlGGIO::~BooleanControlGGIO() {
   // @@protoc_insertion_point(destructor:resourcemodule.BooleanControlGGIO)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void BooleanControlGGIO::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete logicalnode_;
-  if (this != internal_default_instance()) delete phase_;
-  if (this != internal_default_instance()) delete spcso_;
+inline void BooleanControlGGIO::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.logicalnode_;
+  if (this != internal_default_instance()) delete _impl_.phase_;
+  if (this != internal_default_instance()) delete _impl_.spcso_;
 }
 
-void BooleanControlGGIO::ArenaDtor(void* object) {
-  BooleanControlGGIO* _this = reinterpret_cast< BooleanControlGGIO* >(object);
-  (void)_this;
-}
-void BooleanControlGGIO::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void BooleanControlGGIO::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void BooleanControlGGIO::Clear() {
 // @@protoc_insertion_point(message_clear_start:resourcemodule.BooleanControlGGIO)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && logicalnode_ != nullptr) {
-    delete logicalnode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnode_ != nullptr) {
+    delete _impl_.logicalnode_;
   }
-  logicalnode_ = nullptr;
-  if (GetArena() == nullptr && phase_ != nullptr) {
-    delete phase_;
+  _impl_.logicalnode_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.phase_ != nullptr) {
+    delete _impl_.phase_;
   }
-  phase_ = nullptr;
-  if (GetArena() == nullptr && spcso_ != nullptr) {
-    delete spcso_;
+  _impl_.phase_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.spcso_ != nullptr) {
+    delete _impl_.spcso_;
   }
-  spcso_ = nullptr;
+  _impl_.spcso_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* BooleanControlGGIO::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* BooleanControlGGIO::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_logicalnode(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.Optional_PhaseCodeKind Phase = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_phase(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlSPC SPCSO = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_spcso(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* BooleanControlGGIO::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* BooleanControlGGIO::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:resourcemodule.BooleanControlGGIO)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnode()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_logicalnode()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnode(this), target, stream);
+      InternalWriteMessage(1, _Internal::logicalnode(this),
+        _Internal::logicalnode(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.Optional_PhaseCodeKind Phase = 2;
-  if (this->has_phase()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_phase()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::phase(this), target, stream);
+      InternalWriteMessage(2, _Internal::phase(this),
+        _Internal::phase(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlSPC SPCSO = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_spcso()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_spcso()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::spcso(this), target, stream);
+      InternalWriteMessage(3, _Internal::spcso(this),
+        _Internal::spcso(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:resourcemodule.BooleanControlGGIO)
   return target;
 }
 
-size_t BooleanControlGGIO::ByteSizeLong() const {
+::size_t BooleanControlGGIO::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:resourcemodule.BooleanControlGGIO)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnode()) {
+  if (this->_internal_has_logicalnode()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *logicalnode_);
+        *_impl_.logicalnode_);
   }
 
   // .commonmodule.Optional_PhaseCodeKind Phase = 2;
-  if (this->has_phase()) {
+  if (this->_internal_has_phase()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *phase_);
+        *_impl_.phase_);
   }
 
   // .commonmodule.ControlSPC SPCSO = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_spcso()) {
+  if (this->_internal_has_spcso()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *spcso_);
+        *_impl_.spcso_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void BooleanControlGGIO::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:resourcemodule.BooleanControlGGIO)
-  GOOGLE_DCHECK_NE(&from, this);
-  const BooleanControlGGIO* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BooleanControlGGIO>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:resourcemodule.BooleanControlGGIO)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:resourcemodule.BooleanControlGGIO)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BooleanControlGGIO::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    BooleanControlGGIO::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BooleanControlGGIO::GetClassData() const { return &_class_data_; }
 
-void BooleanControlGGIO::MergeFrom(const BooleanControlGGIO& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.BooleanControlGGIO)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void BooleanControlGGIO::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<BooleanControlGGIO*>(&to_msg);
+  auto& from = static_cast<const BooleanControlGGIO&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.BooleanControlGGIO)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_logicalnode()) {
-    _internal_mutable_logicalnode()->::commonmodule::LogicalNode::MergeFrom(from._internal_logicalnode());
+  if (from._internal_has_logicalnode()) {
+    _this->_internal_mutable_logicalnode()->::commonmodule::LogicalNode::MergeFrom(
+        from._internal_logicalnode());
   }
-  if (from.has_phase()) {
-    _internal_mutable_phase()->::commonmodule::Optional_PhaseCodeKind::MergeFrom(from._internal_phase());
+  if (from._internal_has_phase()) {
+    _this->_internal_mutable_phase()->::commonmodule::Optional_PhaseCodeKind::MergeFrom(
+        from._internal_phase());
   }
-  if (from.has_spcso()) {
-    _internal_mutable_spcso()->::commonmodule::ControlSPC::MergeFrom(from._internal_spcso());
+  if (from._internal_has_spcso()) {
+    _this->_internal_mutable_spcso()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_spcso());
   }
-}
-
-void BooleanControlGGIO::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:resourcemodule.BooleanControlGGIO)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void BooleanControlGGIO::CopyFrom(const BooleanControlGGIO& from) {
@@ -740,20 +813,20 @@ bool BooleanControlGGIO::IsInitialized() const {
 
 void BooleanControlGGIO::InternalSwap(BooleanControlGGIO* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(BooleanControlGGIO, spcso_)
-      + sizeof(BooleanControlGGIO::spcso_)
-      - PROTOBUF_FIELD_OFFSET(BooleanControlGGIO, logicalnode_)>(
-          reinterpret_cast<char*>(&logicalnode_),
-          reinterpret_cast<char*>(&other->logicalnode_));
+      PROTOBUF_FIELD_OFFSET(BooleanControlGGIO, _impl_.spcso_)
+      + sizeof(BooleanControlGGIO::_impl_.spcso_)
+      - PROTOBUF_FIELD_OFFSET(BooleanControlGGIO, _impl_.logicalnode_)>(
+          reinterpret_cast<char*>(&_impl_.logicalnode_),
+          reinterpret_cast<char*>(&other->_impl_.logicalnode_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata BooleanControlGGIO::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_resourcemodule_2fresourcemodule_2eproto_getter, &descriptor_table_resourcemodule_2fresourcemodule_2eproto_once,
+      file_level_metadata_resourcemodule_2fresourcemodule_2eproto[0]);
 }
-
-
 // ===================================================================
 
 class IntegerControlGGIO::_Internal {
@@ -765,276 +838,263 @@ class IntegerControlGGIO::_Internal {
 
 const ::commonmodule::LogicalNode&
 IntegerControlGGIO::_Internal::logicalnode(const IntegerControlGGIO* msg) {
-  return *msg->logicalnode_;
+  return *msg->_impl_.logicalnode_;
 }
 const ::commonmodule::ControlINC&
 IntegerControlGGIO::_Internal::iscso(const IntegerControlGGIO* msg) {
-  return *msg->iscso_;
+  return *msg->_impl_.iscso_;
 }
 const ::commonmodule::Optional_PhaseCodeKind&
 IntegerControlGGIO::_Internal::phase(const IntegerControlGGIO* msg) {
-  return *msg->phase_;
+  return *msg->_impl_.phase_;
 }
 void IntegerControlGGIO::clear_logicalnode() {
-  if (GetArena() == nullptr && logicalnode_ != nullptr) {
-    delete logicalnode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnode_ != nullptr) {
+    delete _impl_.logicalnode_;
   }
-  logicalnode_ = nullptr;
+  _impl_.logicalnode_ = nullptr;
 }
 void IntegerControlGGIO::clear_iscso() {
-  if (GetArena() == nullptr && iscso_ != nullptr) {
-    delete iscso_;
+  if (GetArenaForAllocation() == nullptr && _impl_.iscso_ != nullptr) {
+    delete _impl_.iscso_;
   }
-  iscso_ = nullptr;
+  _impl_.iscso_ = nullptr;
 }
 void IntegerControlGGIO::clear_phase() {
-  if (GetArena() == nullptr && phase_ != nullptr) {
-    delete phase_;
+  if (GetArenaForAllocation() == nullptr && _impl_.phase_ != nullptr) {
+    delete _impl_.phase_;
   }
-  phase_ = nullptr;
+  _impl_.phase_ = nullptr;
 }
 IntegerControlGGIO::IntegerControlGGIO(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:resourcemodule.IntegerControlGGIO)
 }
 IntegerControlGGIO::IntegerControlGGIO(const IntegerControlGGIO& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  IntegerControlGGIO* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnode_){nullptr}
+    , decltype(_impl_.iscso_){nullptr}
+    , decltype(_impl_.phase_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_logicalnode()) {
-    logicalnode_ = new ::commonmodule::LogicalNode(*from.logicalnode_);
-  } else {
-    logicalnode_ = nullptr;
+    _this->_impl_.logicalnode_ = new ::commonmodule::LogicalNode(*from._impl_.logicalnode_);
   }
   if (from._internal_has_iscso()) {
-    iscso_ = new ::commonmodule::ControlINC(*from.iscso_);
-  } else {
-    iscso_ = nullptr;
+    _this->_impl_.iscso_ = new ::commonmodule::ControlINC(*from._impl_.iscso_);
   }
   if (from._internal_has_phase()) {
-    phase_ = new ::commonmodule::Optional_PhaseCodeKind(*from.phase_);
-  } else {
-    phase_ = nullptr;
+    _this->_impl_.phase_ = new ::commonmodule::Optional_PhaseCodeKind(*from._impl_.phase_);
   }
   // @@protoc_insertion_point(copy_constructor:resourcemodule.IntegerControlGGIO)
 }
 
-void IntegerControlGGIO::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnode_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&phase_) -
-    reinterpret_cast<char*>(&logicalnode_)) + sizeof(phase_));
+inline void IntegerControlGGIO::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnode_){nullptr}
+    , decltype(_impl_.iscso_){nullptr}
+    , decltype(_impl_.phase_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 IntegerControlGGIO::~IntegerControlGGIO() {
   // @@protoc_insertion_point(destructor:resourcemodule.IntegerControlGGIO)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void IntegerControlGGIO::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete logicalnode_;
-  if (this != internal_default_instance()) delete iscso_;
-  if (this != internal_default_instance()) delete phase_;
+inline void IntegerControlGGIO::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.logicalnode_;
+  if (this != internal_default_instance()) delete _impl_.iscso_;
+  if (this != internal_default_instance()) delete _impl_.phase_;
 }
 
-void IntegerControlGGIO::ArenaDtor(void* object) {
-  IntegerControlGGIO* _this = reinterpret_cast< IntegerControlGGIO* >(object);
-  (void)_this;
-}
-void IntegerControlGGIO::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void IntegerControlGGIO::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void IntegerControlGGIO::Clear() {
 // @@protoc_insertion_point(message_clear_start:resourcemodule.IntegerControlGGIO)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && logicalnode_ != nullptr) {
-    delete logicalnode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnode_ != nullptr) {
+    delete _impl_.logicalnode_;
   }
-  logicalnode_ = nullptr;
-  if (GetArena() == nullptr && iscso_ != nullptr) {
-    delete iscso_;
+  _impl_.logicalnode_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.iscso_ != nullptr) {
+    delete _impl_.iscso_;
   }
-  iscso_ = nullptr;
-  if (GetArena() == nullptr && phase_ != nullptr) {
-    delete phase_;
+  _impl_.iscso_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.phase_ != nullptr) {
+    delete _impl_.phase_;
   }
-  phase_ = nullptr;
+  _impl_.phase_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* IntegerControlGGIO::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* IntegerControlGGIO::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_logicalnode(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlINC ISCSO = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_iscso(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.Optional_PhaseCodeKind Phase = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_phase(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* IntegerControlGGIO::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* IntegerControlGGIO::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:resourcemodule.IntegerControlGGIO)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnode()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_logicalnode()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnode(this), target, stream);
+      InternalWriteMessage(1, _Internal::logicalnode(this),
+        _Internal::logicalnode(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlINC ISCSO = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_iscso()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_iscso()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::iscso(this), target, stream);
+      InternalWriteMessage(2, _Internal::iscso(this),
+        _Internal::iscso(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.Optional_PhaseCodeKind Phase = 3;
-  if (this->has_phase()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_phase()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::phase(this), target, stream);
+      InternalWriteMessage(3, _Internal::phase(this),
+        _Internal::phase(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:resourcemodule.IntegerControlGGIO)
   return target;
 }
 
-size_t IntegerControlGGIO::ByteSizeLong() const {
+::size_t IntegerControlGGIO::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:resourcemodule.IntegerControlGGIO)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnode()) {
+  if (this->_internal_has_logicalnode()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *logicalnode_);
+        *_impl_.logicalnode_);
   }
 
   // .commonmodule.ControlINC ISCSO = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_iscso()) {
+  if (this->_internal_has_iscso()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *iscso_);
+        *_impl_.iscso_);
   }
 
   // .commonmodule.Optional_PhaseCodeKind Phase = 3;
-  if (this->has_phase()) {
+  if (this->_internal_has_phase()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *phase_);
+        *_impl_.phase_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void IntegerControlGGIO::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:resourcemodule.IntegerControlGGIO)
-  GOOGLE_DCHECK_NE(&from, this);
-  const IntegerControlGGIO* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<IntegerControlGGIO>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:resourcemodule.IntegerControlGGIO)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:resourcemodule.IntegerControlGGIO)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData IntegerControlGGIO::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    IntegerControlGGIO::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*IntegerControlGGIO::GetClassData() const { return &_class_data_; }
 
-void IntegerControlGGIO::MergeFrom(const IntegerControlGGIO& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.IntegerControlGGIO)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void IntegerControlGGIO::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<IntegerControlGGIO*>(&to_msg);
+  auto& from = static_cast<const IntegerControlGGIO&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.IntegerControlGGIO)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_logicalnode()) {
-    _internal_mutable_logicalnode()->::commonmodule::LogicalNode::MergeFrom(from._internal_logicalnode());
+  if (from._internal_has_logicalnode()) {
+    _this->_internal_mutable_logicalnode()->::commonmodule::LogicalNode::MergeFrom(
+        from._internal_logicalnode());
   }
-  if (from.has_iscso()) {
-    _internal_mutable_iscso()->::commonmodule::ControlINC::MergeFrom(from._internal_iscso());
+  if (from._internal_has_iscso()) {
+    _this->_internal_mutable_iscso()->::commonmodule::ControlINC::MergeFrom(
+        from._internal_iscso());
   }
-  if (from.has_phase()) {
-    _internal_mutable_phase()->::commonmodule::Optional_PhaseCodeKind::MergeFrom(from._internal_phase());
+  if (from._internal_has_phase()) {
+    _this->_internal_mutable_phase()->::commonmodule::Optional_PhaseCodeKind::MergeFrom(
+        from._internal_phase());
   }
-}
-
-void IntegerControlGGIO::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:resourcemodule.IntegerControlGGIO)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void IntegerControlGGIO::CopyFrom(const IntegerControlGGIO& from) {
@@ -1050,20 +1110,20 @@ bool IntegerControlGGIO::IsInitialized() const {
 
 void IntegerControlGGIO::InternalSwap(IntegerControlGGIO* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(IntegerControlGGIO, phase_)
-      + sizeof(IntegerControlGGIO::phase_)
-      - PROTOBUF_FIELD_OFFSET(IntegerControlGGIO, logicalnode_)>(
-          reinterpret_cast<char*>(&logicalnode_),
-          reinterpret_cast<char*>(&other->logicalnode_));
+      PROTOBUF_FIELD_OFFSET(IntegerControlGGIO, _impl_.phase_)
+      + sizeof(IntegerControlGGIO::_impl_.phase_)
+      - PROTOBUF_FIELD_OFFSET(IntegerControlGGIO, _impl_.logicalnode_)>(
+          reinterpret_cast<char*>(&_impl_.logicalnode_),
+          reinterpret_cast<char*>(&other->_impl_.logicalnode_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata IntegerControlGGIO::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_resourcemodule_2fresourcemodule_2eproto_getter, &descriptor_table_resourcemodule_2fresourcemodule_2eproto_once,
+      file_level_metadata_resourcemodule_2fresourcemodule_2eproto[1]);
 }
-
-
 // ===================================================================
 
 class StringControlGGIO::_Internal {
@@ -1075,276 +1135,263 @@ class StringControlGGIO::_Internal {
 
 const ::commonmodule::LogicalNode&
 StringControlGGIO::_Internal::logicalnode(const StringControlGGIO* msg) {
-  return *msg->logicalnode_;
+  return *msg->_impl_.logicalnode_;
 }
 const ::commonmodule::Optional_PhaseCodeKind&
 StringControlGGIO::_Internal::phase(const StringControlGGIO* msg) {
-  return *msg->phase_;
+  return *msg->_impl_.phase_;
 }
 const ::commonmodule::VSC&
 StringControlGGIO::_Internal::strout(const StringControlGGIO* msg) {
-  return *msg->strout_;
+  return *msg->_impl_.strout_;
 }
 void StringControlGGIO::clear_logicalnode() {
-  if (GetArena() == nullptr && logicalnode_ != nullptr) {
-    delete logicalnode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnode_ != nullptr) {
+    delete _impl_.logicalnode_;
   }
-  logicalnode_ = nullptr;
+  _impl_.logicalnode_ = nullptr;
 }
 void StringControlGGIO::clear_phase() {
-  if (GetArena() == nullptr && phase_ != nullptr) {
-    delete phase_;
+  if (GetArenaForAllocation() == nullptr && _impl_.phase_ != nullptr) {
+    delete _impl_.phase_;
   }
-  phase_ = nullptr;
+  _impl_.phase_ = nullptr;
 }
 void StringControlGGIO::clear_strout() {
-  if (GetArena() == nullptr && strout_ != nullptr) {
-    delete strout_;
+  if (GetArenaForAllocation() == nullptr && _impl_.strout_ != nullptr) {
+    delete _impl_.strout_;
   }
-  strout_ = nullptr;
+  _impl_.strout_ = nullptr;
 }
 StringControlGGIO::StringControlGGIO(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:resourcemodule.StringControlGGIO)
 }
 StringControlGGIO::StringControlGGIO(const StringControlGGIO& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  StringControlGGIO* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnode_){nullptr}
+    , decltype(_impl_.phase_){nullptr}
+    , decltype(_impl_.strout_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_logicalnode()) {
-    logicalnode_ = new ::commonmodule::LogicalNode(*from.logicalnode_);
-  } else {
-    logicalnode_ = nullptr;
+    _this->_impl_.logicalnode_ = new ::commonmodule::LogicalNode(*from._impl_.logicalnode_);
   }
   if (from._internal_has_phase()) {
-    phase_ = new ::commonmodule::Optional_PhaseCodeKind(*from.phase_);
-  } else {
-    phase_ = nullptr;
+    _this->_impl_.phase_ = new ::commonmodule::Optional_PhaseCodeKind(*from._impl_.phase_);
   }
   if (from._internal_has_strout()) {
-    strout_ = new ::commonmodule::VSC(*from.strout_);
-  } else {
-    strout_ = nullptr;
+    _this->_impl_.strout_ = new ::commonmodule::VSC(*from._impl_.strout_);
   }
   // @@protoc_insertion_point(copy_constructor:resourcemodule.StringControlGGIO)
 }
 
-void StringControlGGIO::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnode_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&strout_) -
-    reinterpret_cast<char*>(&logicalnode_)) + sizeof(strout_));
+inline void StringControlGGIO::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnode_){nullptr}
+    , decltype(_impl_.phase_){nullptr}
+    , decltype(_impl_.strout_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 StringControlGGIO::~StringControlGGIO() {
   // @@protoc_insertion_point(destructor:resourcemodule.StringControlGGIO)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void StringControlGGIO::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete logicalnode_;
-  if (this != internal_default_instance()) delete phase_;
-  if (this != internal_default_instance()) delete strout_;
+inline void StringControlGGIO::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.logicalnode_;
+  if (this != internal_default_instance()) delete _impl_.phase_;
+  if (this != internal_default_instance()) delete _impl_.strout_;
 }
 
-void StringControlGGIO::ArenaDtor(void* object) {
-  StringControlGGIO* _this = reinterpret_cast< StringControlGGIO* >(object);
-  (void)_this;
-}
-void StringControlGGIO::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void StringControlGGIO::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void StringControlGGIO::Clear() {
 // @@protoc_insertion_point(message_clear_start:resourcemodule.StringControlGGIO)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && logicalnode_ != nullptr) {
-    delete logicalnode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnode_ != nullptr) {
+    delete _impl_.logicalnode_;
   }
-  logicalnode_ = nullptr;
-  if (GetArena() == nullptr && phase_ != nullptr) {
-    delete phase_;
+  _impl_.logicalnode_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.phase_ != nullptr) {
+    delete _impl_.phase_;
   }
-  phase_ = nullptr;
-  if (GetArena() == nullptr && strout_ != nullptr) {
-    delete strout_;
+  _impl_.phase_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.strout_ != nullptr) {
+    delete _impl_.strout_;
   }
-  strout_ = nullptr;
+  _impl_.strout_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* StringControlGGIO::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* StringControlGGIO::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_logicalnode(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.Optional_PhaseCodeKind Phase = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_phase(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.VSC StrOut = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_strout(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* StringControlGGIO::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* StringControlGGIO::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:resourcemodule.StringControlGGIO)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnode()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_logicalnode()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnode(this), target, stream);
+      InternalWriteMessage(1, _Internal::logicalnode(this),
+        _Internal::logicalnode(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.Optional_PhaseCodeKind Phase = 2;
-  if (this->has_phase()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_phase()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::phase(this), target, stream);
+      InternalWriteMessage(2, _Internal::phase(this),
+        _Internal::phase(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.VSC StrOut = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_strout()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_strout()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::strout(this), target, stream);
+      InternalWriteMessage(3, _Internal::strout(this),
+        _Internal::strout(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:resourcemodule.StringControlGGIO)
   return target;
 }
 
-size_t StringControlGGIO::ByteSizeLong() const {
+::size_t StringControlGGIO::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:resourcemodule.StringControlGGIO)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnode()) {
+  if (this->_internal_has_logicalnode()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *logicalnode_);
+        *_impl_.logicalnode_);
   }
 
   // .commonmodule.Optional_PhaseCodeKind Phase = 2;
-  if (this->has_phase()) {
+  if (this->_internal_has_phase()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *phase_);
+        *_impl_.phase_);
   }
 
   // .commonmodule.VSC StrOut = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_strout()) {
+  if (this->_internal_has_strout()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *strout_);
+        *_impl_.strout_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void StringControlGGIO::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:resourcemodule.StringControlGGIO)
-  GOOGLE_DCHECK_NE(&from, this);
-  const StringControlGGIO* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<StringControlGGIO>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:resourcemodule.StringControlGGIO)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:resourcemodule.StringControlGGIO)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StringControlGGIO::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    StringControlGGIO::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StringControlGGIO::GetClassData() const { return &_class_data_; }
 
-void StringControlGGIO::MergeFrom(const StringControlGGIO& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.StringControlGGIO)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void StringControlGGIO::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<StringControlGGIO*>(&to_msg);
+  auto& from = static_cast<const StringControlGGIO&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.StringControlGGIO)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_logicalnode()) {
-    _internal_mutable_logicalnode()->::commonmodule::LogicalNode::MergeFrom(from._internal_logicalnode());
+  if (from._internal_has_logicalnode()) {
+    _this->_internal_mutable_logicalnode()->::commonmodule::LogicalNode::MergeFrom(
+        from._internal_logicalnode());
   }
-  if (from.has_phase()) {
-    _internal_mutable_phase()->::commonmodule::Optional_PhaseCodeKind::MergeFrom(from._internal_phase());
+  if (from._internal_has_phase()) {
+    _this->_internal_mutable_phase()->::commonmodule::Optional_PhaseCodeKind::MergeFrom(
+        from._internal_phase());
   }
-  if (from.has_strout()) {
-    _internal_mutable_strout()->::commonmodule::VSC::MergeFrom(from._internal_strout());
+  if (from._internal_has_strout()) {
+    _this->_internal_mutable_strout()->::commonmodule::VSC::MergeFrom(
+        from._internal_strout());
   }
-}
-
-void StringControlGGIO::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:resourcemodule.StringControlGGIO)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void StringControlGGIO::CopyFrom(const StringControlGGIO& from) {
@@ -1360,20 +1407,20 @@ bool StringControlGGIO::IsInitialized() const {
 
 void StringControlGGIO::InternalSwap(StringControlGGIO* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(StringControlGGIO, strout_)
-      + sizeof(StringControlGGIO::strout_)
-      - PROTOBUF_FIELD_OFFSET(StringControlGGIO, logicalnode_)>(
-          reinterpret_cast<char*>(&logicalnode_),
-          reinterpret_cast<char*>(&other->logicalnode_));
+      PROTOBUF_FIELD_OFFSET(StringControlGGIO, _impl_.strout_)
+      + sizeof(StringControlGGIO::_impl_.strout_)
+      - PROTOBUF_FIELD_OFFSET(StringControlGGIO, _impl_.logicalnode_)>(
+          reinterpret_cast<char*>(&_impl_.logicalnode_),
+          reinterpret_cast<char*>(&other->_impl_.logicalnode_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata StringControlGGIO::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_resourcemodule_2fresourcemodule_2eproto_getter, &descriptor_table_resourcemodule_2fresourcemodule_2eproto_once,
+      file_level_metadata_resourcemodule_2fresourcemodule_2eproto[2]);
 }
-
-
 // ===================================================================
 
 class AnalogControlGGIO::_Internal {
@@ -1385,276 +1432,263 @@ class AnalogControlGGIO::_Internal {
 
 const ::commonmodule::LogicalNode&
 AnalogControlGGIO::_Internal::logicalnode(const AnalogControlGGIO* msg) {
-  return *msg->logicalnode_;
+  return *msg->_impl_.logicalnode_;
 }
 const ::commonmodule::ControlAPC&
 AnalogControlGGIO::_Internal::anout(const AnalogControlGGIO* msg) {
-  return *msg->anout_;
+  return *msg->_impl_.anout_;
 }
 const ::commonmodule::Optional_PhaseCodeKind&
 AnalogControlGGIO::_Internal::phase(const AnalogControlGGIO* msg) {
-  return *msg->phase_;
+  return *msg->_impl_.phase_;
 }
 void AnalogControlGGIO::clear_logicalnode() {
-  if (GetArena() == nullptr && logicalnode_ != nullptr) {
-    delete logicalnode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnode_ != nullptr) {
+    delete _impl_.logicalnode_;
   }
-  logicalnode_ = nullptr;
+  _impl_.logicalnode_ = nullptr;
 }
 void AnalogControlGGIO::clear_anout() {
-  if (GetArena() == nullptr && anout_ != nullptr) {
-    delete anout_;
+  if (GetArenaForAllocation() == nullptr && _impl_.anout_ != nullptr) {
+    delete _impl_.anout_;
   }
-  anout_ = nullptr;
+  _impl_.anout_ = nullptr;
 }
 void AnalogControlGGIO::clear_phase() {
-  if (GetArena() == nullptr && phase_ != nullptr) {
-    delete phase_;
+  if (GetArenaForAllocation() == nullptr && _impl_.phase_ != nullptr) {
+    delete _impl_.phase_;
   }
-  phase_ = nullptr;
+  _impl_.phase_ = nullptr;
 }
 AnalogControlGGIO::AnalogControlGGIO(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:resourcemodule.AnalogControlGGIO)
 }
 AnalogControlGGIO::AnalogControlGGIO(const AnalogControlGGIO& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  AnalogControlGGIO* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnode_){nullptr}
+    , decltype(_impl_.anout_){nullptr}
+    , decltype(_impl_.phase_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_logicalnode()) {
-    logicalnode_ = new ::commonmodule::LogicalNode(*from.logicalnode_);
-  } else {
-    logicalnode_ = nullptr;
+    _this->_impl_.logicalnode_ = new ::commonmodule::LogicalNode(*from._impl_.logicalnode_);
   }
   if (from._internal_has_anout()) {
-    anout_ = new ::commonmodule::ControlAPC(*from.anout_);
-  } else {
-    anout_ = nullptr;
+    _this->_impl_.anout_ = new ::commonmodule::ControlAPC(*from._impl_.anout_);
   }
   if (from._internal_has_phase()) {
-    phase_ = new ::commonmodule::Optional_PhaseCodeKind(*from.phase_);
-  } else {
-    phase_ = nullptr;
+    _this->_impl_.phase_ = new ::commonmodule::Optional_PhaseCodeKind(*from._impl_.phase_);
   }
   // @@protoc_insertion_point(copy_constructor:resourcemodule.AnalogControlGGIO)
 }
 
-void AnalogControlGGIO::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnode_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&phase_) -
-    reinterpret_cast<char*>(&logicalnode_)) + sizeof(phase_));
+inline void AnalogControlGGIO::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnode_){nullptr}
+    , decltype(_impl_.anout_){nullptr}
+    , decltype(_impl_.phase_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 AnalogControlGGIO::~AnalogControlGGIO() {
   // @@protoc_insertion_point(destructor:resourcemodule.AnalogControlGGIO)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void AnalogControlGGIO::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete logicalnode_;
-  if (this != internal_default_instance()) delete anout_;
-  if (this != internal_default_instance()) delete phase_;
+inline void AnalogControlGGIO::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.logicalnode_;
+  if (this != internal_default_instance()) delete _impl_.anout_;
+  if (this != internal_default_instance()) delete _impl_.phase_;
 }
 
-void AnalogControlGGIO::ArenaDtor(void* object) {
-  AnalogControlGGIO* _this = reinterpret_cast< AnalogControlGGIO* >(object);
-  (void)_this;
-}
-void AnalogControlGGIO::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void AnalogControlGGIO::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void AnalogControlGGIO::Clear() {
 // @@protoc_insertion_point(message_clear_start:resourcemodule.AnalogControlGGIO)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && logicalnode_ != nullptr) {
-    delete logicalnode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnode_ != nullptr) {
+    delete _impl_.logicalnode_;
   }
-  logicalnode_ = nullptr;
-  if (GetArena() == nullptr && anout_ != nullptr) {
-    delete anout_;
+  _impl_.logicalnode_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.anout_ != nullptr) {
+    delete _impl_.anout_;
   }
-  anout_ = nullptr;
-  if (GetArena() == nullptr && phase_ != nullptr) {
-    delete phase_;
+  _impl_.anout_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.phase_ != nullptr) {
+    delete _impl_.phase_;
   }
-  phase_ = nullptr;
+  _impl_.phase_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* AnalogControlGGIO::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* AnalogControlGGIO::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_logicalnode(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlAPC AnOut = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_anout(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.Optional_PhaseCodeKind Phase = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_phase(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* AnalogControlGGIO::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* AnalogControlGGIO::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:resourcemodule.AnalogControlGGIO)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnode()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_logicalnode()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnode(this), target, stream);
+      InternalWriteMessage(1, _Internal::logicalnode(this),
+        _Internal::logicalnode(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlAPC AnOut = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_anout()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_anout()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::anout(this), target, stream);
+      InternalWriteMessage(2, _Internal::anout(this),
+        _Internal::anout(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.Optional_PhaseCodeKind Phase = 3;
-  if (this->has_phase()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_phase()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::phase(this), target, stream);
+      InternalWriteMessage(3, _Internal::phase(this),
+        _Internal::phase(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:resourcemodule.AnalogControlGGIO)
   return target;
 }
 
-size_t AnalogControlGGIO::ByteSizeLong() const {
+::size_t AnalogControlGGIO::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:resourcemodule.AnalogControlGGIO)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNode logicalNode = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnode()) {
+  if (this->_internal_has_logicalnode()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *logicalnode_);
+        *_impl_.logicalnode_);
   }
 
   // .commonmodule.ControlAPC AnOut = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_anout()) {
+  if (this->_internal_has_anout()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *anout_);
+        *_impl_.anout_);
   }
 
   // .commonmodule.Optional_PhaseCodeKind Phase = 3;
-  if (this->has_phase()) {
+  if (this->_internal_has_phase()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *phase_);
+        *_impl_.phase_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void AnalogControlGGIO::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:resourcemodule.AnalogControlGGIO)
-  GOOGLE_DCHECK_NE(&from, this);
-  const AnalogControlGGIO* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AnalogControlGGIO>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:resourcemodule.AnalogControlGGIO)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:resourcemodule.AnalogControlGGIO)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData AnalogControlGGIO::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    AnalogControlGGIO::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AnalogControlGGIO::GetClassData() const { return &_class_data_; }
 
-void AnalogControlGGIO::MergeFrom(const AnalogControlGGIO& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.AnalogControlGGIO)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void AnalogControlGGIO::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<AnalogControlGGIO*>(&to_msg);
+  auto& from = static_cast<const AnalogControlGGIO&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.AnalogControlGGIO)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_logicalnode()) {
-    _internal_mutable_logicalnode()->::commonmodule::LogicalNode::MergeFrom(from._internal_logicalnode());
+  if (from._internal_has_logicalnode()) {
+    _this->_internal_mutable_logicalnode()->::commonmodule::LogicalNode::MergeFrom(
+        from._internal_logicalnode());
   }
-  if (from.has_anout()) {
-    _internal_mutable_anout()->::commonmodule::ControlAPC::MergeFrom(from._internal_anout());
+  if (from._internal_has_anout()) {
+    _this->_internal_mutable_anout()->::commonmodule::ControlAPC::MergeFrom(
+        from._internal_anout());
   }
-  if (from.has_phase()) {
-    _internal_mutable_phase()->::commonmodule::Optional_PhaseCodeKind::MergeFrom(from._internal_phase());
+  if (from._internal_has_phase()) {
+    _this->_internal_mutable_phase()->::commonmodule::Optional_PhaseCodeKind::MergeFrom(
+        from._internal_phase());
   }
-}
-
-void AnalogControlGGIO::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:resourcemodule.AnalogControlGGIO)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void AnalogControlGGIO::CopyFrom(const AnalogControlGGIO& from) {
@@ -1670,20 +1704,20 @@ bool AnalogControlGGIO::IsInitialized() const {
 
 void AnalogControlGGIO::InternalSwap(AnalogControlGGIO* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(AnalogControlGGIO, phase_)
-      + sizeof(AnalogControlGGIO::phase_)
-      - PROTOBUF_FIELD_OFFSET(AnalogControlGGIO, logicalnode_)>(
-          reinterpret_cast<char*>(&logicalnode_),
-          reinterpret_cast<char*>(&other->logicalnode_));
+      PROTOBUF_FIELD_OFFSET(AnalogControlGGIO, _impl_.phase_)
+      + sizeof(AnalogControlGGIO::_impl_.phase_)
+      - PROTOBUF_FIELD_OFFSET(AnalogControlGGIO, _impl_.logicalnode_)>(
+          reinterpret_cast<char*>(&_impl_.logicalnode_),
+          reinterpret_cast<char*>(&other->_impl_.logicalnode_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AnalogControlGGIO::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_resourcemodule_2fresourcemodule_2eproto_getter, &descriptor_table_resourcemodule_2fresourcemodule_2eproto_once,
+      file_level_metadata_resourcemodule_2fresourcemodule_2eproto[3]);
 }
-
-
 // ===================================================================
 
 class ResourceDiscreteControl::_Internal {
@@ -1694,128 +1728,135 @@ class ResourceDiscreteControl::_Internal {
 
 const ::commonmodule::IdentifiedObject&
 ResourceDiscreteControl::_Internal::identifiedobject(const ResourceDiscreteControl* msg) {
-  return *msg->identifiedobject_;
+  return *msg->_impl_.identifiedobject_;
 }
 const ::commonmodule::CheckConditions&
 ResourceDiscreteControl::_Internal::check(const ResourceDiscreteControl* msg) {
-  return *msg->check_;
+  return *msg->_impl_.check_;
 }
 void ResourceDiscreteControl::clear_identifiedobject() {
-  if (GetArena() == nullptr && identifiedobject_ != nullptr) {
-    delete identifiedobject_;
+  if (GetArenaForAllocation() == nullptr && _impl_.identifiedobject_ != nullptr) {
+    delete _impl_.identifiedobject_;
   }
-  identifiedobject_ = nullptr;
+  _impl_.identifiedobject_ = nullptr;
 }
 void ResourceDiscreteControl::clear_check() {
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
+  _impl_.check_ = nullptr;
 }
 ResourceDiscreteControl::ResourceDiscreteControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  analogcontrolggio_(arena),
-  booleancontrolggio_(arena),
-  integercontrolggio_(arena),
-  stringcontrolggio_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:resourcemodule.ResourceDiscreteControl)
 }
 ResourceDiscreteControl::ResourceDiscreteControl(const ResourceDiscreteControl& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      analogcontrolggio_(from.analogcontrolggio_),
-      booleancontrolggio_(from.booleancontrolggio_),
-      integercontrolggio_(from.integercontrolggio_),
-      stringcontrolggio_(from.stringcontrolggio_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ResourceDiscreteControl* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.analogcontrolggio_){from._impl_.analogcontrolggio_}
+    , decltype(_impl_.booleancontrolggio_){from._impl_.booleancontrolggio_}
+    , decltype(_impl_.integercontrolggio_){from._impl_.integercontrolggio_}
+    , decltype(_impl_.stringcontrolggio_){from._impl_.stringcontrolggio_}
+    , decltype(_impl_.identifiedobject_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_identifiedobject()) {
-    identifiedobject_ = new ::commonmodule::IdentifiedObject(*from.identifiedobject_);
-  } else {
-    identifiedobject_ = nullptr;
+    _this->_impl_.identifiedobject_ = new ::commonmodule::IdentifiedObject(*from._impl_.identifiedobject_);
   }
   if (from._internal_has_check()) {
-    check_ = new ::commonmodule::CheckConditions(*from.check_);
-  } else {
-    check_ = nullptr;
+    _this->_impl_.check_ = new ::commonmodule::CheckConditions(*from._impl_.check_);
   }
   // @@protoc_insertion_point(copy_constructor:resourcemodule.ResourceDiscreteControl)
 }
 
-void ResourceDiscreteControl::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&identifiedobject_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&check_) -
-    reinterpret_cast<char*>(&identifiedobject_)) + sizeof(check_));
+inline void ResourceDiscreteControl::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.analogcontrolggio_){arena}
+    , decltype(_impl_.booleancontrolggio_){arena}
+    , decltype(_impl_.integercontrolggio_){arena}
+    , decltype(_impl_.stringcontrolggio_){arena}
+    , decltype(_impl_.identifiedobject_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ResourceDiscreteControl::~ResourceDiscreteControl() {
   // @@protoc_insertion_point(destructor:resourcemodule.ResourceDiscreteControl)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ResourceDiscreteControl::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete identifiedobject_;
-  if (this != internal_default_instance()) delete check_;
+inline void ResourceDiscreteControl::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.analogcontrolggio_.~RepeatedPtrField();
+  _impl_.booleancontrolggio_.~RepeatedPtrField();
+  _impl_.integercontrolggio_.~RepeatedPtrField();
+  _impl_.stringcontrolggio_.~RepeatedPtrField();
+  if (this != internal_default_instance()) delete _impl_.identifiedobject_;
+  if (this != internal_default_instance()) delete _impl_.check_;
 }
 
-void ResourceDiscreteControl::ArenaDtor(void* object) {
-  ResourceDiscreteControl* _this = reinterpret_cast< ResourceDiscreteControl* >(object);
-  (void)_this;
-}
-void ResourceDiscreteControl::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ResourceDiscreteControl::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ResourceDiscreteControl::Clear() {
 // @@protoc_insertion_point(message_clear_start:resourcemodule.ResourceDiscreteControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  analogcontrolggio_.Clear();
-  booleancontrolggio_.Clear();
-  integercontrolggio_.Clear();
-  stringcontrolggio_.Clear();
-  if (GetArena() == nullptr && identifiedobject_ != nullptr) {
-    delete identifiedobject_;
+  _impl_.analogcontrolggio_.Clear();
+  _impl_.booleancontrolggio_.Clear();
+  _impl_.integercontrolggio_.Clear();
+  _impl_.stringcontrolggio_.Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.identifiedobject_ != nullptr) {
+    delete _impl_.identifiedobject_;
   }
-  identifiedobject_ = nullptr;
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  _impl_.identifiedobject_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
+  _impl_.check_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ResourceDiscreteControl::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ResourceDiscreteControl::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_identifiedobject(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.CheckConditions check = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // repeated .resourcemodule.AnalogControlGGIO analogControlGGIO = 3 [(.uml.option_multiplicity_min) = 0];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -1823,11 +1864,13 @@ const char* ResourceDiscreteControl::_InternalParse(const char* ptr, ::PROTOBUF_
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // repeated .resourcemodule.BooleanControlGGIO booleanControlGGIO = 4 [(.uml.option_multiplicity_min) = 0];
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -1835,11 +1878,13 @@ const char* ResourceDiscreteControl::_InternalParse(const char* ptr, ::PROTOBUF_
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // repeated .resourcemodule.IntegerControlGGIO integerControlGGIO = 5 [(.uml.option_multiplicity_min) = 0];
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -1847,11 +1892,13 @@ const char* ResourceDiscreteControl::_InternalParse(const char* ptr, ::PROTOBUF_
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // repeated .resourcemodule.StringControlGGIO stringControlGGIO = 6 [(.uml.option_multiplicity_min) = 0];
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -1859,190 +1906,174 @@ const char* ResourceDiscreteControl::_InternalParse(const char* ptr, ::PROTOBUF_
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<50>(ptr));
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ResourceDiscreteControl::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ResourceDiscreteControl::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:resourcemodule.ResourceDiscreteControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
-  if (this->has_identifiedobject()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_identifiedobject()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::identifiedobject(this), target, stream);
+      InternalWriteMessage(1, _Internal::identifiedobject(this),
+        _Internal::identifiedobject(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_check()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::check(this), target, stream);
+      InternalWriteMessage(2, _Internal::check(this),
+        _Internal::check(this).GetCachedSize(), target, stream);
   }
 
   // repeated .resourcemodule.AnalogControlGGIO analogControlGGIO = 3 [(.uml.option_multiplicity_min) = 0];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_analogcontrolggio_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_analogcontrolggio_size()); i < n; i++) {
+    const auto& repfield = this->_internal_analogcontrolggio(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, this->_internal_analogcontrolggio(i), target, stream);
+        InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // repeated .resourcemodule.BooleanControlGGIO booleanControlGGIO = 4 [(.uml.option_multiplicity_min) = 0];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_booleancontrolggio_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_booleancontrolggio_size()); i < n; i++) {
+    const auto& repfield = this->_internal_booleancontrolggio(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(4, this->_internal_booleancontrolggio(i), target, stream);
+        InternalWriteMessage(4, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // repeated .resourcemodule.IntegerControlGGIO integerControlGGIO = 5 [(.uml.option_multiplicity_min) = 0];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_integercontrolggio_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_integercontrolggio_size()); i < n; i++) {
+    const auto& repfield = this->_internal_integercontrolggio(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(5, this->_internal_integercontrolggio(i), target, stream);
+        InternalWriteMessage(5, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // repeated .resourcemodule.StringControlGGIO stringControlGGIO = 6 [(.uml.option_multiplicity_min) = 0];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_stringcontrolggio_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_stringcontrolggio_size()); i < n; i++) {
+    const auto& repfield = this->_internal_stringcontrolggio(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(6, this->_internal_stringcontrolggio(i), target, stream);
+        InternalWriteMessage(6, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:resourcemodule.ResourceDiscreteControl)
   return target;
 }
 
-size_t ResourceDiscreteControl::ByteSizeLong() const {
+::size_t ResourceDiscreteControl::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:resourcemodule.ResourceDiscreteControl)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .resourcemodule.AnalogControlGGIO analogControlGGIO = 3 [(.uml.option_multiplicity_min) = 0];
   total_size += 1UL * this->_internal_analogcontrolggio_size();
-  for (const auto& msg : this->analogcontrolggio_) {
+  for (const auto& msg : this->_impl_.analogcontrolggio_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .resourcemodule.BooleanControlGGIO booleanControlGGIO = 4 [(.uml.option_multiplicity_min) = 0];
   total_size += 1UL * this->_internal_booleancontrolggio_size();
-  for (const auto& msg : this->booleancontrolggio_) {
+  for (const auto& msg : this->_impl_.booleancontrolggio_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .resourcemodule.IntegerControlGGIO integerControlGGIO = 5 [(.uml.option_multiplicity_min) = 0];
   total_size += 1UL * this->_internal_integercontrolggio_size();
-  for (const auto& msg : this->integercontrolggio_) {
+  for (const auto& msg : this->_impl_.integercontrolggio_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .resourcemodule.StringControlGGIO stringControlGGIO = 6 [(.uml.option_multiplicity_min) = 0];
   total_size += 1UL * this->_internal_stringcontrolggio_size();
-  for (const auto& msg : this->stringcontrolggio_) {
+  for (const auto& msg : this->_impl_.stringcontrolggio_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
-  if (this->has_identifiedobject()) {
+  if (this->_internal_has_identifiedobject()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *identifiedobject_);
+        *_impl_.identifiedobject_);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
+  if (this->_internal_has_check()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *check_);
+        *_impl_.check_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ResourceDiscreteControl::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:resourcemodule.ResourceDiscreteControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ResourceDiscreteControl* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ResourceDiscreteControl>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:resourcemodule.ResourceDiscreteControl)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:resourcemodule.ResourceDiscreteControl)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ResourceDiscreteControl::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ResourceDiscreteControl::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ResourceDiscreteControl::GetClassData() const { return &_class_data_; }
 
-void ResourceDiscreteControl::MergeFrom(const ResourceDiscreteControl& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.ResourceDiscreteControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ResourceDiscreteControl::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ResourceDiscreteControl*>(&to_msg);
+  auto& from = static_cast<const ResourceDiscreteControl&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.ResourceDiscreteControl)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  analogcontrolggio_.MergeFrom(from.analogcontrolggio_);
-  booleancontrolggio_.MergeFrom(from.booleancontrolggio_);
-  integercontrolggio_.MergeFrom(from.integercontrolggio_);
-  stringcontrolggio_.MergeFrom(from.stringcontrolggio_);
-  if (from.has_identifiedobject()) {
-    _internal_mutable_identifiedobject()->::commonmodule::IdentifiedObject::MergeFrom(from._internal_identifiedobject());
+  _this->_impl_.analogcontrolggio_.MergeFrom(from._impl_.analogcontrolggio_);
+  _this->_impl_.booleancontrolggio_.MergeFrom(from._impl_.booleancontrolggio_);
+  _this->_impl_.integercontrolggio_.MergeFrom(from._impl_.integercontrolggio_);
+  _this->_impl_.stringcontrolggio_.MergeFrom(from._impl_.stringcontrolggio_);
+  if (from._internal_has_identifiedobject()) {
+    _this->_internal_mutable_identifiedobject()->::commonmodule::IdentifiedObject::MergeFrom(
+        from._internal_identifiedobject());
   }
-  if (from.has_check()) {
-    _internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(from._internal_check());
+  if (from._internal_has_check()) {
+    _this->_internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(
+        from._internal_check());
   }
-}
-
-void ResourceDiscreteControl::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:resourcemodule.ResourceDiscreteControl)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ResourceDiscreteControl::CopyFrom(const ResourceDiscreteControl& from) {
@@ -2058,24 +2089,24 @@ bool ResourceDiscreteControl::IsInitialized() const {
 
 void ResourceDiscreteControl::InternalSwap(ResourceDiscreteControl* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  analogcontrolggio_.InternalSwap(&other->analogcontrolggio_);
-  booleancontrolggio_.InternalSwap(&other->booleancontrolggio_);
-  integercontrolggio_.InternalSwap(&other->integercontrolggio_);
-  stringcontrolggio_.InternalSwap(&other->stringcontrolggio_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.analogcontrolggio_.InternalSwap(&other->_impl_.analogcontrolggio_);
+  _impl_.booleancontrolggio_.InternalSwap(&other->_impl_.booleancontrolggio_);
+  _impl_.integercontrolggio_.InternalSwap(&other->_impl_.integercontrolggio_);
+  _impl_.stringcontrolggio_.InternalSwap(&other->_impl_.stringcontrolggio_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ResourceDiscreteControl, check_)
-      + sizeof(ResourceDiscreteControl::check_)
-      - PROTOBUF_FIELD_OFFSET(ResourceDiscreteControl, identifiedobject_)>(
-          reinterpret_cast<char*>(&identifiedobject_),
-          reinterpret_cast<char*>(&other->identifiedobject_));
+      PROTOBUF_FIELD_OFFSET(ResourceDiscreteControl, _impl_.check_)
+      + sizeof(ResourceDiscreteControl::_impl_.check_)
+      - PROTOBUF_FIELD_OFFSET(ResourceDiscreteControl, _impl_.identifiedobject_)>(
+          reinterpret_cast<char*>(&_impl_.identifiedobject_),
+          reinterpret_cast<char*>(&other->_impl_.identifiedobject_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceDiscreteControl::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_resourcemodule_2fresourcemodule_2eproto_getter, &descriptor_table_resourcemodule_2fresourcemodule_2eproto_once,
+      file_level_metadata_resourcemodule_2fresourcemodule_2eproto[4]);
 }
-
-
 // ===================================================================
 
 class ResourceDiscreteControlProfile::_Internal {
@@ -2087,270 +2118,257 @@ class ResourceDiscreteControlProfile::_Internal {
 
 const ::commonmodule::ControlMessageInfo&
 ResourceDiscreteControlProfile::_Internal::controlmessageinfo(const ResourceDiscreteControlProfile* msg) {
-  return *msg->controlmessageinfo_;
+  return *msg->_impl_.controlmessageinfo_;
 }
 const ::commonmodule::ConductingEquipment&
 ResourceDiscreteControlProfile::_Internal::conductingequipment(const ResourceDiscreteControlProfile* msg) {
-  return *msg->conductingequipment_;
+  return *msg->_impl_.conductingequipment_;
 }
 const ::resourcemodule::ResourceDiscreteControl&
 ResourceDiscreteControlProfile::_Internal::resourcediscretecontrol(const ResourceDiscreteControlProfile* msg) {
-  return *msg->resourcediscretecontrol_;
+  return *msg->_impl_.resourcediscretecontrol_;
 }
 void ResourceDiscreteControlProfile::clear_controlmessageinfo() {
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
+  _impl_.controlmessageinfo_ = nullptr;
 }
 void ResourceDiscreteControlProfile::clear_conductingequipment() {
-  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
-    delete conductingequipment_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipment_ != nullptr) {
+    delete _impl_.conductingequipment_;
   }
-  conductingequipment_ = nullptr;
+  _impl_.conductingequipment_ = nullptr;
 }
 ResourceDiscreteControlProfile::ResourceDiscreteControlProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:resourcemodule.ResourceDiscreteControlProfile)
 }
 ResourceDiscreteControlProfile::ResourceDiscreteControlProfile(const ResourceDiscreteControlProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ResourceDiscreteControlProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.conductingequipment_){nullptr}
+    , decltype(_impl_.resourcediscretecontrol_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlmessageinfo()) {
-    controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
-  } else {
-    controlmessageinfo_ = nullptr;
+    _this->_impl_.controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from._impl_.controlmessageinfo_);
   }
   if (from._internal_has_conductingequipment()) {
-    conductingequipment_ = new ::commonmodule::ConductingEquipment(*from.conductingequipment_);
-  } else {
-    conductingequipment_ = nullptr;
+    _this->_impl_.conductingequipment_ = new ::commonmodule::ConductingEquipment(*from._impl_.conductingequipment_);
   }
   if (from._internal_has_resourcediscretecontrol()) {
-    resourcediscretecontrol_ = new ::resourcemodule::ResourceDiscreteControl(*from.resourcediscretecontrol_);
-  } else {
-    resourcediscretecontrol_ = nullptr;
+    _this->_impl_.resourcediscretecontrol_ = new ::resourcemodule::ResourceDiscreteControl(*from._impl_.resourcediscretecontrol_);
   }
   // @@protoc_insertion_point(copy_constructor:resourcemodule.ResourceDiscreteControlProfile)
 }
 
-void ResourceDiscreteControlProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&resourcediscretecontrol_) -
-    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(resourcediscretecontrol_));
+inline void ResourceDiscreteControlProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.conductingequipment_){nullptr}
+    , decltype(_impl_.resourcediscretecontrol_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ResourceDiscreteControlProfile::~ResourceDiscreteControlProfile() {
   // @@protoc_insertion_point(destructor:resourcemodule.ResourceDiscreteControlProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ResourceDiscreteControlProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete conductingequipment_;
-  if (this != internal_default_instance()) delete resourcediscretecontrol_;
+inline void ResourceDiscreteControlProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.conductingequipment_;
+  if (this != internal_default_instance()) delete _impl_.resourcediscretecontrol_;
 }
 
-void ResourceDiscreteControlProfile::ArenaDtor(void* object) {
-  ResourceDiscreteControlProfile* _this = reinterpret_cast< ResourceDiscreteControlProfile* >(object);
-  (void)_this;
-}
-void ResourceDiscreteControlProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ResourceDiscreteControlProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ResourceDiscreteControlProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:resourcemodule.ResourceDiscreteControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
-    delete conductingequipment_;
+  _impl_.controlmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipment_ != nullptr) {
+    delete _impl_.conductingequipment_;
   }
-  conductingequipment_ = nullptr;
-  if (GetArena() == nullptr && resourcediscretecontrol_ != nullptr) {
-    delete resourcediscretecontrol_;
+  _impl_.conductingequipment_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.resourcediscretecontrol_ != nullptr) {
+    delete _impl_.resourcediscretecontrol_;
   }
-  resourcediscretecontrol_ = nullptr;
+  _impl_.resourcediscretecontrol_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ResourceDiscreteControlProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ResourceDiscreteControlProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ConductingEquipment conductingEquipment = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_conductingequipment(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .resourcemodule.ResourceDiscreteControl resourceDiscreteControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_resourcediscretecontrol(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ResourceDiscreteControlProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ResourceDiscreteControlProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:resourcemodule.ResourceDiscreteControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlmessageinfo(this),
+        _Internal::controlmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ConductingEquipment conductingEquipment = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_conductingequipment()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_conductingequipment()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::conductingequipment(this), target, stream);
+      InternalWriteMessage(2, _Internal::conductingequipment(this),
+        _Internal::conductingequipment(this).GetCachedSize(), target, stream);
   }
 
   // .resourcemodule.ResourceDiscreteControl resourceDiscreteControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_resourcediscretecontrol()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_resourcediscretecontrol()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::resourcediscretecontrol(this), target, stream);
+      InternalWriteMessage(3, _Internal::resourcediscretecontrol(this),
+        _Internal::resourcediscretecontrol(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:resourcemodule.ResourceDiscreteControlProfile)
   return target;
 }
 
-size_t ResourceDiscreteControlProfile::ByteSizeLong() const {
+::size_t ResourceDiscreteControlProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:resourcemodule.ResourceDiscreteControlProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
+  if (this->_internal_has_controlmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlmessageinfo_);
+        *_impl_.controlmessageinfo_);
   }
 
   // .commonmodule.ConductingEquipment conductingEquipment = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_conductingequipment()) {
+  if (this->_internal_has_conductingequipment()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *conductingequipment_);
+        *_impl_.conductingequipment_);
   }
 
   // .resourcemodule.ResourceDiscreteControl resourceDiscreteControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_resourcediscretecontrol()) {
+  if (this->_internal_has_resourcediscretecontrol()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *resourcediscretecontrol_);
+        *_impl_.resourcediscretecontrol_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ResourceDiscreteControlProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:resourcemodule.ResourceDiscreteControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ResourceDiscreteControlProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ResourceDiscreteControlProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:resourcemodule.ResourceDiscreteControlProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:resourcemodule.ResourceDiscreteControlProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ResourceDiscreteControlProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ResourceDiscreteControlProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ResourceDiscreteControlProfile::GetClassData() const { return &_class_data_; }
 
-void ResourceDiscreteControlProfile::MergeFrom(const ResourceDiscreteControlProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.ResourceDiscreteControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ResourceDiscreteControlProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ResourceDiscreteControlProfile*>(&to_msg);
+  auto& from = static_cast<const ResourceDiscreteControlProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.ResourceDiscreteControlProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlmessageinfo()) {
-    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
+  if (from._internal_has_controlmessageinfo()) {
+    _this->_internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(
+        from._internal_controlmessageinfo());
   }
-  if (from.has_conductingequipment()) {
-    _internal_mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(from._internal_conductingequipment());
+  if (from._internal_has_conductingequipment()) {
+    _this->_internal_mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(
+        from._internal_conductingequipment());
   }
-  if (from.has_resourcediscretecontrol()) {
-    _internal_mutable_resourcediscretecontrol()->::resourcemodule::ResourceDiscreteControl::MergeFrom(from._internal_resourcediscretecontrol());
+  if (from._internal_has_resourcediscretecontrol()) {
+    _this->_internal_mutable_resourcediscretecontrol()->::resourcemodule::ResourceDiscreteControl::MergeFrom(
+        from._internal_resourcediscretecontrol());
   }
-}
-
-void ResourceDiscreteControlProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:resourcemodule.ResourceDiscreteControlProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ResourceDiscreteControlProfile::CopyFrom(const ResourceDiscreteControlProfile& from) {
@@ -2366,20 +2384,20 @@ bool ResourceDiscreteControlProfile::IsInitialized() const {
 
 void ResourceDiscreteControlProfile::InternalSwap(ResourceDiscreteControlProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ResourceDiscreteControlProfile, resourcediscretecontrol_)
-      + sizeof(ResourceDiscreteControlProfile::resourcediscretecontrol_)
-      - PROTOBUF_FIELD_OFFSET(ResourceDiscreteControlProfile, controlmessageinfo_)>(
-          reinterpret_cast<char*>(&controlmessageinfo_),
-          reinterpret_cast<char*>(&other->controlmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(ResourceDiscreteControlProfile, _impl_.resourcediscretecontrol_)
+      + sizeof(ResourceDiscreteControlProfile::_impl_.resourcediscretecontrol_)
+      - PROTOBUF_FIELD_OFFSET(ResourceDiscreteControlProfile, _impl_.controlmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.controlmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.controlmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceDiscreteControlProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_resourcemodule_2fresourcemodule_2eproto_getter, &descriptor_table_resourcemodule_2fresourcemodule_2eproto_once,
+      file_level_metadata_resourcemodule_2fresourcemodule_2eproto[5]);
 }
-
-
 // ===================================================================
 
 class ResourceReading::_Internal {
@@ -2392,321 +2410,310 @@ class ResourceReading::_Internal {
 
 const ::commonmodule::ConductingEquipmentTerminalReading&
 ResourceReading::_Internal::conductingequipmentterminalreading(const ResourceReading* msg) {
-  return *msg->conductingequipmentterminalreading_;
+  return *msg->_impl_.conductingequipmentterminalreading_;
 }
 const ::commonmodule::PhaseMMTN&
 ResourceReading::_Internal::phasemmtn(const ResourceReading* msg) {
-  return *msg->phasemmtn_;
+  return *msg->_impl_.phasemmtn_;
 }
 const ::commonmodule::ReadingMMTR&
 ResourceReading::_Internal::readingmmtr(const ResourceReading* msg) {
-  return *msg->readingmmtr_;
+  return *msg->_impl_.readingmmtr_;
 }
 const ::commonmodule::ReadingMMXU&
 ResourceReading::_Internal::readingmmxu(const ResourceReading* msg) {
-  return *msg->readingmmxu_;
+  return *msg->_impl_.readingmmxu_;
 }
 void ResourceReading::clear_conductingequipmentterminalreading() {
-  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
-    delete conductingequipmentterminalreading_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipmentterminalreading_ != nullptr) {
+    delete _impl_.conductingequipmentterminalreading_;
   }
-  conductingequipmentterminalreading_ = nullptr;
+  _impl_.conductingequipmentterminalreading_ = nullptr;
 }
 void ResourceReading::clear_phasemmtn() {
-  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
-    delete phasemmtn_;
+  if (GetArenaForAllocation() == nullptr && _impl_.phasemmtn_ != nullptr) {
+    delete _impl_.phasemmtn_;
   }
-  phasemmtn_ = nullptr;
+  _impl_.phasemmtn_ = nullptr;
 }
 void ResourceReading::clear_readingmmtr() {
-  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
-    delete readingmmtr_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmtr_ != nullptr) {
+    delete _impl_.readingmmtr_;
   }
-  readingmmtr_ = nullptr;
+  _impl_.readingmmtr_ = nullptr;
 }
 void ResourceReading::clear_readingmmxu() {
-  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
-    delete readingmmxu_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmxu_ != nullptr) {
+    delete _impl_.readingmmxu_;
   }
-  readingmmxu_ = nullptr;
+  _impl_.readingmmxu_ = nullptr;
 }
 ResourceReading::ResourceReading(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:resourcemodule.ResourceReading)
 }
 ResourceReading::ResourceReading(const ResourceReading& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ResourceReading* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipmentterminalreading_){nullptr}
+    , decltype(_impl_.phasemmtn_){nullptr}
+    , decltype(_impl_.readingmmtr_){nullptr}
+    , decltype(_impl_.readingmmxu_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_conductingequipmentterminalreading()) {
-    conductingequipmentterminalreading_ = new ::commonmodule::ConductingEquipmentTerminalReading(*from.conductingequipmentterminalreading_);
-  } else {
-    conductingequipmentterminalreading_ = nullptr;
+    _this->_impl_.conductingequipmentterminalreading_ = new ::commonmodule::ConductingEquipmentTerminalReading(*from._impl_.conductingequipmentterminalreading_);
   }
   if (from._internal_has_phasemmtn()) {
-    phasemmtn_ = new ::commonmodule::PhaseMMTN(*from.phasemmtn_);
-  } else {
-    phasemmtn_ = nullptr;
+    _this->_impl_.phasemmtn_ = new ::commonmodule::PhaseMMTN(*from._impl_.phasemmtn_);
   }
   if (from._internal_has_readingmmtr()) {
-    readingmmtr_ = new ::commonmodule::ReadingMMTR(*from.readingmmtr_);
-  } else {
-    readingmmtr_ = nullptr;
+    _this->_impl_.readingmmtr_ = new ::commonmodule::ReadingMMTR(*from._impl_.readingmmtr_);
   }
   if (from._internal_has_readingmmxu()) {
-    readingmmxu_ = new ::commonmodule::ReadingMMXU(*from.readingmmxu_);
-  } else {
-    readingmmxu_ = nullptr;
+    _this->_impl_.readingmmxu_ = new ::commonmodule::ReadingMMXU(*from._impl_.readingmmxu_);
   }
   // @@protoc_insertion_point(copy_constructor:resourcemodule.ResourceReading)
 }
 
-void ResourceReading::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&conductingequipmentterminalreading_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&readingmmxu_) -
-    reinterpret_cast<char*>(&conductingequipmentterminalreading_)) + sizeof(readingmmxu_));
+inline void ResourceReading::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipmentterminalreading_){nullptr}
+    , decltype(_impl_.phasemmtn_){nullptr}
+    , decltype(_impl_.readingmmtr_){nullptr}
+    , decltype(_impl_.readingmmxu_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ResourceReading::~ResourceReading() {
   // @@protoc_insertion_point(destructor:resourcemodule.ResourceReading)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ResourceReading::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete conductingequipmentterminalreading_;
-  if (this != internal_default_instance()) delete phasemmtn_;
-  if (this != internal_default_instance()) delete readingmmtr_;
-  if (this != internal_default_instance()) delete readingmmxu_;
+inline void ResourceReading::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.conductingequipmentterminalreading_;
+  if (this != internal_default_instance()) delete _impl_.phasemmtn_;
+  if (this != internal_default_instance()) delete _impl_.readingmmtr_;
+  if (this != internal_default_instance()) delete _impl_.readingmmxu_;
 }
 
-void ResourceReading::ArenaDtor(void* object) {
-  ResourceReading* _this = reinterpret_cast< ResourceReading* >(object);
-  (void)_this;
-}
-void ResourceReading::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ResourceReading::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ResourceReading::Clear() {
 // @@protoc_insertion_point(message_clear_start:resourcemodule.ResourceReading)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
-    delete conductingequipmentterminalreading_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipmentterminalreading_ != nullptr) {
+    delete _impl_.conductingequipmentterminalreading_;
   }
-  conductingequipmentterminalreading_ = nullptr;
-  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
-    delete phasemmtn_;
+  _impl_.conductingequipmentterminalreading_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.phasemmtn_ != nullptr) {
+    delete _impl_.phasemmtn_;
   }
-  phasemmtn_ = nullptr;
-  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
-    delete readingmmtr_;
+  _impl_.phasemmtn_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmtr_ != nullptr) {
+    delete _impl_.readingmmtr_;
   }
-  readingmmtr_ = nullptr;
-  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
-    delete readingmmxu_;
+  _impl_.readingmmtr_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmxu_ != nullptr) {
+    delete _impl_.readingmmxu_;
   }
-  readingmmxu_ = nullptr;
+  _impl_.readingmmxu_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ResourceReading::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ResourceReading::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_conductingequipmentterminalreading(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseMMTN phaseMMTN = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_phasemmtn(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ReadingMMTR readingMMTR = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_readingmmtr(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ReadingMMXU readingMMXU = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_readingmmxu(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ResourceReading::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ResourceReading::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:resourcemodule.ResourceReading)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipmentterminalreading()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_conductingequipmentterminalreading()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::conductingequipmentterminalreading(this), target, stream);
+      InternalWriteMessage(1, _Internal::conductingequipmentterminalreading(this),
+        _Internal::conductingequipmentterminalreading(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 2;
-  if (this->has_phasemmtn()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_phasemmtn()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::phasemmtn(this), target, stream);
+      InternalWriteMessage(2, _Internal::phasemmtn(this),
+        _Internal::phasemmtn(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 3;
-  if (this->has_readingmmtr()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_readingmmtr()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::readingmmtr(this), target, stream);
+      InternalWriteMessage(3, _Internal::readingmmtr(this),
+        _Internal::readingmmtr(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 4;
-  if (this->has_readingmmxu()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_readingmmxu()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::readingmmxu(this), target, stream);
+      InternalWriteMessage(4, _Internal::readingmmxu(this),
+        _Internal::readingmmxu(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:resourcemodule.ResourceReading)
   return target;
 }
 
-size_t ResourceReading::ByteSizeLong() const {
+::size_t ResourceReading::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:resourcemodule.ResourceReading)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipmentterminalreading()) {
+  if (this->_internal_has_conductingequipmentterminalreading()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *conductingequipmentterminalreading_);
+        *_impl_.conductingequipmentterminalreading_);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 2;
-  if (this->has_phasemmtn()) {
+  if (this->_internal_has_phasemmtn()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *phasemmtn_);
+        *_impl_.phasemmtn_);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 3;
-  if (this->has_readingmmtr()) {
+  if (this->_internal_has_readingmmtr()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmmtr_);
+        *_impl_.readingmmtr_);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 4;
-  if (this->has_readingmmxu()) {
+  if (this->_internal_has_readingmmxu()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmmxu_);
+        *_impl_.readingmmxu_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ResourceReading::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:resourcemodule.ResourceReading)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ResourceReading* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ResourceReading>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:resourcemodule.ResourceReading)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:resourcemodule.ResourceReading)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ResourceReading::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ResourceReading::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ResourceReading::GetClassData() const { return &_class_data_; }
 
-void ResourceReading::MergeFrom(const ResourceReading& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.ResourceReading)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ResourceReading::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ResourceReading*>(&to_msg);
+  auto& from = static_cast<const ResourceReading&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.ResourceReading)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_conductingequipmentterminalreading()) {
-    _internal_mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(from._internal_conductingequipmentterminalreading());
+  if (from._internal_has_conductingequipmentterminalreading()) {
+    _this->_internal_mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(
+        from._internal_conductingequipmentterminalreading());
   }
-  if (from.has_phasemmtn()) {
-    _internal_mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(from._internal_phasemmtn());
+  if (from._internal_has_phasemmtn()) {
+    _this->_internal_mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(
+        from._internal_phasemmtn());
   }
-  if (from.has_readingmmtr()) {
-    _internal_mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(from._internal_readingmmtr());
+  if (from._internal_has_readingmmtr()) {
+    _this->_internal_mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(
+        from._internal_readingmmtr());
   }
-  if (from.has_readingmmxu()) {
-    _internal_mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from._internal_readingmmxu());
+  if (from._internal_has_readingmmxu()) {
+    _this->_internal_mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(
+        from._internal_readingmmxu());
   }
-}
-
-void ResourceReading::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:resourcemodule.ResourceReading)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ResourceReading::CopyFrom(const ResourceReading& from) {
@@ -2722,20 +2729,20 @@ bool ResourceReading::IsInitialized() const {
 
 void ResourceReading::InternalSwap(ResourceReading* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ResourceReading, readingmmxu_)
-      + sizeof(ResourceReading::readingmmxu_)
-      - PROTOBUF_FIELD_OFFSET(ResourceReading, conductingequipmentterminalreading_)>(
-          reinterpret_cast<char*>(&conductingequipmentterminalreading_),
-          reinterpret_cast<char*>(&other->conductingequipmentterminalreading_));
+      PROTOBUF_FIELD_OFFSET(ResourceReading, _impl_.readingmmxu_)
+      + sizeof(ResourceReading::_impl_.readingmmxu_)
+      - PROTOBUF_FIELD_OFFSET(ResourceReading, _impl_.conductingequipmentterminalreading_)>(
+          reinterpret_cast<char*>(&_impl_.conductingequipmentterminalreading_),
+          reinterpret_cast<char*>(&other->_impl_.conductingequipmentterminalreading_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceReading::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_resourcemodule_2fresourcemodule_2eproto_getter, &descriptor_table_resourcemodule_2fresourcemodule_2eproto_once,
+      file_level_metadata_resourcemodule_2fresourcemodule_2eproto[6]);
 }
-
-
 // ===================================================================
 
 class ResourceReadingProfile::_Internal {
@@ -2747,270 +2754,257 @@ class ResourceReadingProfile::_Internal {
 
 const ::commonmodule::ReadingMessageInfo&
 ResourceReadingProfile::_Internal::readingmessageinfo(const ResourceReadingProfile* msg) {
-  return *msg->readingmessageinfo_;
+  return *msg->_impl_.readingmessageinfo_;
 }
 const ::commonmodule::ConductingEquipment&
 ResourceReadingProfile::_Internal::conductingequipment(const ResourceReadingProfile* msg) {
-  return *msg->conductingequipment_;
+  return *msg->_impl_.conductingequipment_;
 }
 const ::resourcemodule::ResourceReading&
 ResourceReadingProfile::_Internal::resourcereading(const ResourceReadingProfile* msg) {
-  return *msg->resourcereading_;
+  return *msg->_impl_.resourcereading_;
 }
 void ResourceReadingProfile::clear_readingmessageinfo() {
-  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
-    delete readingmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmessageinfo_ != nullptr) {
+    delete _impl_.readingmessageinfo_;
   }
-  readingmessageinfo_ = nullptr;
+  _impl_.readingmessageinfo_ = nullptr;
 }
 void ResourceReadingProfile::clear_conductingequipment() {
-  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
-    delete conductingequipment_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipment_ != nullptr) {
+    delete _impl_.conductingequipment_;
   }
-  conductingequipment_ = nullptr;
+  _impl_.conductingequipment_ = nullptr;
 }
 ResourceReadingProfile::ResourceReadingProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:resourcemodule.ResourceReadingProfile)
 }
 ResourceReadingProfile::ResourceReadingProfile(const ResourceReadingProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ResourceReadingProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.readingmessageinfo_){nullptr}
+    , decltype(_impl_.conductingequipment_){nullptr}
+    , decltype(_impl_.resourcereading_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_readingmessageinfo()) {
-    readingmessageinfo_ = new ::commonmodule::ReadingMessageInfo(*from.readingmessageinfo_);
-  } else {
-    readingmessageinfo_ = nullptr;
+    _this->_impl_.readingmessageinfo_ = new ::commonmodule::ReadingMessageInfo(*from._impl_.readingmessageinfo_);
   }
   if (from._internal_has_conductingequipment()) {
-    conductingequipment_ = new ::commonmodule::ConductingEquipment(*from.conductingequipment_);
-  } else {
-    conductingequipment_ = nullptr;
+    _this->_impl_.conductingequipment_ = new ::commonmodule::ConductingEquipment(*from._impl_.conductingequipment_);
   }
   if (from._internal_has_resourcereading()) {
-    resourcereading_ = new ::resourcemodule::ResourceReading(*from.resourcereading_);
-  } else {
-    resourcereading_ = nullptr;
+    _this->_impl_.resourcereading_ = new ::resourcemodule::ResourceReading(*from._impl_.resourcereading_);
   }
   // @@protoc_insertion_point(copy_constructor:resourcemodule.ResourceReadingProfile)
 }
 
-void ResourceReadingProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&readingmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&resourcereading_) -
-    reinterpret_cast<char*>(&readingmessageinfo_)) + sizeof(resourcereading_));
+inline void ResourceReadingProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.readingmessageinfo_){nullptr}
+    , decltype(_impl_.conductingequipment_){nullptr}
+    , decltype(_impl_.resourcereading_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ResourceReadingProfile::~ResourceReadingProfile() {
   // @@protoc_insertion_point(destructor:resourcemodule.ResourceReadingProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ResourceReadingProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete readingmessageinfo_;
-  if (this != internal_default_instance()) delete conductingequipment_;
-  if (this != internal_default_instance()) delete resourcereading_;
+inline void ResourceReadingProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.readingmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.conductingequipment_;
+  if (this != internal_default_instance()) delete _impl_.resourcereading_;
 }
 
-void ResourceReadingProfile::ArenaDtor(void* object) {
-  ResourceReadingProfile* _this = reinterpret_cast< ResourceReadingProfile* >(object);
-  (void)_this;
-}
-void ResourceReadingProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ResourceReadingProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ResourceReadingProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:resourcemodule.ResourceReadingProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
-    delete readingmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmessageinfo_ != nullptr) {
+    delete _impl_.readingmessageinfo_;
   }
-  readingmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
-    delete conductingequipment_;
+  _impl_.readingmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipment_ != nullptr) {
+    delete _impl_.conductingequipment_;
   }
-  conductingequipment_ = nullptr;
-  if (GetArena() == nullptr && resourcereading_ != nullptr) {
-    delete resourcereading_;
+  _impl_.conductingequipment_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.resourcereading_ != nullptr) {
+    delete _impl_.resourcereading_;
   }
-  resourcereading_ = nullptr;
+  _impl_.resourcereading_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ResourceReadingProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ResourceReadingProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_readingmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ConductingEquipment conductingEquipment = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_conductingequipment(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .resourcemodule.ResourceReading resourceReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_resourcereading(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ResourceReadingProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ResourceReadingProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:resourcemodule.ResourceReadingProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_readingmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_readingmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::readingmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::readingmessageinfo(this),
+        _Internal::readingmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ConductingEquipment conductingEquipment = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_conductingequipment()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_conductingequipment()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::conductingequipment(this), target, stream);
+      InternalWriteMessage(2, _Internal::conductingequipment(this),
+        _Internal::conductingequipment(this).GetCachedSize(), target, stream);
   }
 
   // .resourcemodule.ResourceReading resourceReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_resourcereading()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_resourcereading()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::resourcereading(this), target, stream);
+      InternalWriteMessage(3, _Internal::resourcereading(this),
+        _Internal::resourcereading(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:resourcemodule.ResourceReadingProfile)
   return target;
 }
 
-size_t ResourceReadingProfile::ByteSizeLong() const {
+::size_t ResourceReadingProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:resourcemodule.ResourceReadingProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_readingmessageinfo()) {
+  if (this->_internal_has_readingmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmessageinfo_);
+        *_impl_.readingmessageinfo_);
   }
 
   // .commonmodule.ConductingEquipment conductingEquipment = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_conductingequipment()) {
+  if (this->_internal_has_conductingequipment()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *conductingequipment_);
+        *_impl_.conductingequipment_);
   }
 
   // .resourcemodule.ResourceReading resourceReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_resourcereading()) {
+  if (this->_internal_has_resourcereading()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *resourcereading_);
+        *_impl_.resourcereading_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ResourceReadingProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:resourcemodule.ResourceReadingProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ResourceReadingProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ResourceReadingProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:resourcemodule.ResourceReadingProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:resourcemodule.ResourceReadingProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ResourceReadingProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ResourceReadingProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ResourceReadingProfile::GetClassData() const { return &_class_data_; }
 
-void ResourceReadingProfile::MergeFrom(const ResourceReadingProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.ResourceReadingProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ResourceReadingProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ResourceReadingProfile*>(&to_msg);
+  auto& from = static_cast<const ResourceReadingProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.ResourceReadingProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_readingmessageinfo()) {
-    _internal_mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(from._internal_readingmessageinfo());
+  if (from._internal_has_readingmessageinfo()) {
+    _this->_internal_mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(
+        from._internal_readingmessageinfo());
   }
-  if (from.has_conductingequipment()) {
-    _internal_mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(from._internal_conductingequipment());
+  if (from._internal_has_conductingequipment()) {
+    _this->_internal_mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(
+        from._internal_conductingequipment());
   }
-  if (from.has_resourcereading()) {
-    _internal_mutable_resourcereading()->::resourcemodule::ResourceReading::MergeFrom(from._internal_resourcereading());
+  if (from._internal_has_resourcereading()) {
+    _this->_internal_mutable_resourcereading()->::resourcemodule::ResourceReading::MergeFrom(
+        from._internal_resourcereading());
   }
-}
-
-void ResourceReadingProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:resourcemodule.ResourceReadingProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ResourceReadingProfile::CopyFrom(const ResourceReadingProfile& from) {
@@ -3026,20 +3020,20 @@ bool ResourceReadingProfile::IsInitialized() const {
 
 void ResourceReadingProfile::InternalSwap(ResourceReadingProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ResourceReadingProfile, resourcereading_)
-      + sizeof(ResourceReadingProfile::resourcereading_)
-      - PROTOBUF_FIELD_OFFSET(ResourceReadingProfile, readingmessageinfo_)>(
-          reinterpret_cast<char*>(&readingmessageinfo_),
-          reinterpret_cast<char*>(&other->readingmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(ResourceReadingProfile, _impl_.resourcereading_)
+      + sizeof(ResourceReadingProfile::_impl_.resourcereading_)
+      - PROTOBUF_FIELD_OFFSET(ResourceReadingProfile, _impl_.readingmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.readingmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.readingmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceReadingProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_resourcemodule_2fresourcemodule_2eproto_getter, &descriptor_table_resourcemodule_2fresourcemodule_2eproto_once,
+      file_level_metadata_resourcemodule_2fresourcemodule_2eproto[7]);
 }
-
-
 // ===================================================================
 
 class ResourceEvent::_Internal {
@@ -3049,110 +3043,118 @@ class ResourceEvent::_Internal {
 
 const ::commonmodule::IdentifiedObject&
 ResourceEvent::_Internal::identifiedobject(const ResourceEvent* msg) {
-  return *msg->identifiedobject_;
+  return *msg->_impl_.identifiedobject_;
 }
 void ResourceEvent::clear_identifiedobject() {
-  if (GetArena() == nullptr && identifiedobject_ != nullptr) {
-    delete identifiedobject_;
+  if (GetArenaForAllocation() == nullptr && _impl_.identifiedobject_ != nullptr) {
+    delete _impl_.identifiedobject_;
   }
-  identifiedobject_ = nullptr;
+  _impl_.identifiedobject_ = nullptr;
 }
 void ResourceEvent::clear_analogeventandstatusggio() {
-  analogeventandstatusggio_.Clear();
+  _impl_.analogeventandstatusggio_.Clear();
 }
 void ResourceEvent::clear_booleaneventandstatusggio() {
-  booleaneventandstatusggio_.Clear();
+  _impl_.booleaneventandstatusggio_.Clear();
 }
 void ResourceEvent::clear_integereventandstatusggio() {
-  integereventandstatusggio_.Clear();
+  _impl_.integereventandstatusggio_.Clear();
 }
 void ResourceEvent::clear_stringeventandstatusggio() {
-  stringeventandstatusggio_.Clear();
+  _impl_.stringeventandstatusggio_.Clear();
 }
 ResourceEvent::ResourceEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  analogeventandstatusggio_(arena),
-  booleaneventandstatusggio_(arena),
-  integereventandstatusggio_(arena),
-  stringeventandstatusggio_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:resourcemodule.ResourceEvent)
 }
 ResourceEvent::ResourceEvent(const ResourceEvent& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      analogeventandstatusggio_(from.analogeventandstatusggio_),
-      booleaneventandstatusggio_(from.booleaneventandstatusggio_),
-      integereventandstatusggio_(from.integereventandstatusggio_),
-      stringeventandstatusggio_(from.stringeventandstatusggio_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ResourceEvent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.analogeventandstatusggio_){from._impl_.analogeventandstatusggio_}
+    , decltype(_impl_.booleaneventandstatusggio_){from._impl_.booleaneventandstatusggio_}
+    , decltype(_impl_.integereventandstatusggio_){from._impl_.integereventandstatusggio_}
+    , decltype(_impl_.stringeventandstatusggio_){from._impl_.stringeventandstatusggio_}
+    , decltype(_impl_.identifiedobject_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_identifiedobject()) {
-    identifiedobject_ = new ::commonmodule::IdentifiedObject(*from.identifiedobject_);
-  } else {
-    identifiedobject_ = nullptr;
+    _this->_impl_.identifiedobject_ = new ::commonmodule::IdentifiedObject(*from._impl_.identifiedobject_);
   }
   // @@protoc_insertion_point(copy_constructor:resourcemodule.ResourceEvent)
 }
 
-void ResourceEvent::SharedCtor() {
-identifiedobject_ = nullptr;
+inline void ResourceEvent::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.analogeventandstatusggio_){arena}
+    , decltype(_impl_.booleaneventandstatusggio_){arena}
+    , decltype(_impl_.integereventandstatusggio_){arena}
+    , decltype(_impl_.stringeventandstatusggio_){arena}
+    , decltype(_impl_.identifiedobject_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ResourceEvent::~ResourceEvent() {
   // @@protoc_insertion_point(destructor:resourcemodule.ResourceEvent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ResourceEvent::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete identifiedobject_;
+inline void ResourceEvent::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.analogeventandstatusggio_.~RepeatedPtrField();
+  _impl_.booleaneventandstatusggio_.~RepeatedPtrField();
+  _impl_.integereventandstatusggio_.~RepeatedPtrField();
+  _impl_.stringeventandstatusggio_.~RepeatedPtrField();
+  if (this != internal_default_instance()) delete _impl_.identifiedobject_;
 }
 
-void ResourceEvent::ArenaDtor(void* object) {
-  ResourceEvent* _this = reinterpret_cast< ResourceEvent* >(object);
-  (void)_this;
-}
-void ResourceEvent::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ResourceEvent::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ResourceEvent::Clear() {
 // @@protoc_insertion_point(message_clear_start:resourcemodule.ResourceEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  analogeventandstatusggio_.Clear();
-  booleaneventandstatusggio_.Clear();
-  integereventandstatusggio_.Clear();
-  stringeventandstatusggio_.Clear();
-  if (GetArena() == nullptr && identifiedobject_ != nullptr) {
-    delete identifiedobject_;
+  _impl_.analogeventandstatusggio_.Clear();
+  _impl_.booleaneventandstatusggio_.Clear();
+  _impl_.integereventandstatusggio_.Clear();
+  _impl_.stringeventandstatusggio_.Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.identifiedobject_ != nullptr) {
+    delete _impl_.identifiedobject_;
   }
-  identifiedobject_ = nullptr;
+  _impl_.identifiedobject_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ResourceEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ResourceEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_identifiedobject(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // repeated .commonmodule.AnalogEventAndStatusGGIO analogEventAndStatusGGIO = 2 [(.uml.option_multiplicity_min) = 0];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -3160,11 +3162,13 @@ const char* ResourceEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // repeated .commonmodule.BooleanEventAndStatusGGIO booleanEventAndStatusGGIO = 3 [(.uml.option_multiplicity_min) = 0];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -3172,11 +3176,13 @@ const char* ResourceEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // repeated .commonmodule.IntegerEventAndStatusGGIO integerEventAndStatusGGIO = 4 [(.uml.option_multiplicity_min) = 0];
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -3184,11 +3190,13 @@ const char* ResourceEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // repeated .commonmodule.StringEventAndStatusGGIO stringEventAndStatusGGIO = 5 [(.uml.option_multiplicity_min) = 0];
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -3196,172 +3204,156 @@ const char* ResourceEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ResourceEvent::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ResourceEvent::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:resourcemodule.ResourceEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
-  if (this->has_identifiedobject()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_identifiedobject()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::identifiedobject(this), target, stream);
+      InternalWriteMessage(1, _Internal::identifiedobject(this),
+        _Internal::identifiedobject(this).GetCachedSize(), target, stream);
   }
 
   // repeated .commonmodule.AnalogEventAndStatusGGIO analogEventAndStatusGGIO = 2 [(.uml.option_multiplicity_min) = 0];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_analogeventandstatusggio_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_analogeventandstatusggio_size()); i < n; i++) {
+    const auto& repfield = this->_internal_analogeventandstatusggio(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, this->_internal_analogeventandstatusggio(i), target, stream);
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // repeated .commonmodule.BooleanEventAndStatusGGIO booleanEventAndStatusGGIO = 3 [(.uml.option_multiplicity_min) = 0];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_booleaneventandstatusggio_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_booleaneventandstatusggio_size()); i < n; i++) {
+    const auto& repfield = this->_internal_booleaneventandstatusggio(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, this->_internal_booleaneventandstatusggio(i), target, stream);
+        InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // repeated .commonmodule.IntegerEventAndStatusGGIO integerEventAndStatusGGIO = 4 [(.uml.option_multiplicity_min) = 0];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_integereventandstatusggio_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_integereventandstatusggio_size()); i < n; i++) {
+    const auto& repfield = this->_internal_integereventandstatusggio(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(4, this->_internal_integereventandstatusggio(i), target, stream);
+        InternalWriteMessage(4, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // repeated .commonmodule.StringEventAndStatusGGIO stringEventAndStatusGGIO = 5 [(.uml.option_multiplicity_min) = 0];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_stringeventandstatusggio_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_stringeventandstatusggio_size()); i < n; i++) {
+    const auto& repfield = this->_internal_stringeventandstatusggio(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(5, this->_internal_stringeventandstatusggio(i), target, stream);
+        InternalWriteMessage(5, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:resourcemodule.ResourceEvent)
   return target;
 }
 
-size_t ResourceEvent::ByteSizeLong() const {
+::size_t ResourceEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:resourcemodule.ResourceEvent)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .commonmodule.AnalogEventAndStatusGGIO analogEventAndStatusGGIO = 2 [(.uml.option_multiplicity_min) = 0];
   total_size += 1UL * this->_internal_analogeventandstatusggio_size();
-  for (const auto& msg : this->analogeventandstatusggio_) {
+  for (const auto& msg : this->_impl_.analogeventandstatusggio_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .commonmodule.BooleanEventAndStatusGGIO booleanEventAndStatusGGIO = 3 [(.uml.option_multiplicity_min) = 0];
   total_size += 1UL * this->_internal_booleaneventandstatusggio_size();
-  for (const auto& msg : this->booleaneventandstatusggio_) {
+  for (const auto& msg : this->_impl_.booleaneventandstatusggio_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .commonmodule.IntegerEventAndStatusGGIO integerEventAndStatusGGIO = 4 [(.uml.option_multiplicity_min) = 0];
   total_size += 1UL * this->_internal_integereventandstatusggio_size();
-  for (const auto& msg : this->integereventandstatusggio_) {
+  for (const auto& msg : this->_impl_.integereventandstatusggio_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .commonmodule.StringEventAndStatusGGIO stringEventAndStatusGGIO = 5 [(.uml.option_multiplicity_min) = 0];
   total_size += 1UL * this->_internal_stringeventandstatusggio_size();
-  for (const auto& msg : this->stringeventandstatusggio_) {
+  for (const auto& msg : this->_impl_.stringeventandstatusggio_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
-  if (this->has_identifiedobject()) {
+  if (this->_internal_has_identifiedobject()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *identifiedobject_);
+        *_impl_.identifiedobject_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ResourceEvent::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:resourcemodule.ResourceEvent)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ResourceEvent* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ResourceEvent>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:resourcemodule.ResourceEvent)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:resourcemodule.ResourceEvent)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ResourceEvent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ResourceEvent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ResourceEvent::GetClassData() const { return &_class_data_; }
 
-void ResourceEvent::MergeFrom(const ResourceEvent& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.ResourceEvent)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ResourceEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ResourceEvent*>(&to_msg);
+  auto& from = static_cast<const ResourceEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.ResourceEvent)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  analogeventandstatusggio_.MergeFrom(from.analogeventandstatusggio_);
-  booleaneventandstatusggio_.MergeFrom(from.booleaneventandstatusggio_);
-  integereventandstatusggio_.MergeFrom(from.integereventandstatusggio_);
-  stringeventandstatusggio_.MergeFrom(from.stringeventandstatusggio_);
-  if (from.has_identifiedobject()) {
-    _internal_mutable_identifiedobject()->::commonmodule::IdentifiedObject::MergeFrom(from._internal_identifiedobject());
+  _this->_impl_.analogeventandstatusggio_.MergeFrom(from._impl_.analogeventandstatusggio_);
+  _this->_impl_.booleaneventandstatusggio_.MergeFrom(from._impl_.booleaneventandstatusggio_);
+  _this->_impl_.integereventandstatusggio_.MergeFrom(from._impl_.integereventandstatusggio_);
+  _this->_impl_.stringeventandstatusggio_.MergeFrom(from._impl_.stringeventandstatusggio_);
+  if (from._internal_has_identifiedobject()) {
+    _this->_internal_mutable_identifiedobject()->::commonmodule::IdentifiedObject::MergeFrom(
+        from._internal_identifiedobject());
   }
-}
-
-void ResourceEvent::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:resourcemodule.ResourceEvent)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ResourceEvent::CopyFrom(const ResourceEvent& from) {
@@ -3377,19 +3369,19 @@ bool ResourceEvent::IsInitialized() const {
 
 void ResourceEvent::InternalSwap(ResourceEvent* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  analogeventandstatusggio_.InternalSwap(&other->analogeventandstatusggio_);
-  booleaneventandstatusggio_.InternalSwap(&other->booleaneventandstatusggio_);
-  integereventandstatusggio_.InternalSwap(&other->integereventandstatusggio_);
-  stringeventandstatusggio_.InternalSwap(&other->stringeventandstatusggio_);
-  swap(identifiedobject_, other->identifiedobject_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.analogeventandstatusggio_.InternalSwap(&other->_impl_.analogeventandstatusggio_);
+  _impl_.booleaneventandstatusggio_.InternalSwap(&other->_impl_.booleaneventandstatusggio_);
+  _impl_.integereventandstatusggio_.InternalSwap(&other->_impl_.integereventandstatusggio_);
+  _impl_.stringeventandstatusggio_.InternalSwap(&other->_impl_.stringeventandstatusggio_);
+  swap(_impl_.identifiedobject_, other->_impl_.identifiedobject_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceEvent::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_resourcemodule_2fresourcemodule_2eproto_getter, &descriptor_table_resourcemodule_2fresourcemodule_2eproto_once,
+      file_level_metadata_resourcemodule_2fresourcemodule_2eproto[8]);
 }
-
-
 // ===================================================================
 
 class ResourceEventProfile::_Internal {
@@ -3401,270 +3393,257 @@ class ResourceEventProfile::_Internal {
 
 const ::commonmodule::EventMessageInfo&
 ResourceEventProfile::_Internal::eventmessageinfo(const ResourceEventProfile* msg) {
-  return *msg->eventmessageinfo_;
+  return *msg->_impl_.eventmessageinfo_;
 }
 const ::commonmodule::ConductingEquipment&
 ResourceEventProfile::_Internal::conductingequipment(const ResourceEventProfile* msg) {
-  return *msg->conductingequipment_;
+  return *msg->_impl_.conductingequipment_;
 }
 const ::resourcemodule::ResourceEvent&
 ResourceEventProfile::_Internal::resourceevent(const ResourceEventProfile* msg) {
-  return *msg->resourceevent_;
+  return *msg->_impl_.resourceevent_;
 }
 void ResourceEventProfile::clear_eventmessageinfo() {
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
-    delete eventmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventmessageinfo_ != nullptr) {
+    delete _impl_.eventmessageinfo_;
   }
-  eventmessageinfo_ = nullptr;
+  _impl_.eventmessageinfo_ = nullptr;
 }
 void ResourceEventProfile::clear_conductingequipment() {
-  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
-    delete conductingequipment_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipment_ != nullptr) {
+    delete _impl_.conductingequipment_;
   }
-  conductingequipment_ = nullptr;
+  _impl_.conductingequipment_ = nullptr;
 }
 ResourceEventProfile::ResourceEventProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:resourcemodule.ResourceEventProfile)
 }
 ResourceEventProfile::ResourceEventProfile(const ResourceEventProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ResourceEventProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventmessageinfo_){nullptr}
+    , decltype(_impl_.conductingequipment_){nullptr}
+    , decltype(_impl_.resourceevent_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_eventmessageinfo()) {
-    eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from.eventmessageinfo_);
-  } else {
-    eventmessageinfo_ = nullptr;
+    _this->_impl_.eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from._impl_.eventmessageinfo_);
   }
   if (from._internal_has_conductingequipment()) {
-    conductingequipment_ = new ::commonmodule::ConductingEquipment(*from.conductingequipment_);
-  } else {
-    conductingequipment_ = nullptr;
+    _this->_impl_.conductingequipment_ = new ::commonmodule::ConductingEquipment(*from._impl_.conductingequipment_);
   }
   if (from._internal_has_resourceevent()) {
-    resourceevent_ = new ::resourcemodule::ResourceEvent(*from.resourceevent_);
-  } else {
-    resourceevent_ = nullptr;
+    _this->_impl_.resourceevent_ = new ::resourcemodule::ResourceEvent(*from._impl_.resourceevent_);
   }
   // @@protoc_insertion_point(copy_constructor:resourcemodule.ResourceEventProfile)
 }
 
-void ResourceEventProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&eventmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&resourceevent_) -
-    reinterpret_cast<char*>(&eventmessageinfo_)) + sizeof(resourceevent_));
+inline void ResourceEventProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventmessageinfo_){nullptr}
+    , decltype(_impl_.conductingequipment_){nullptr}
+    , decltype(_impl_.resourceevent_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ResourceEventProfile::~ResourceEventProfile() {
   // @@protoc_insertion_point(destructor:resourcemodule.ResourceEventProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ResourceEventProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete eventmessageinfo_;
-  if (this != internal_default_instance()) delete conductingequipment_;
-  if (this != internal_default_instance()) delete resourceevent_;
+inline void ResourceEventProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.eventmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.conductingequipment_;
+  if (this != internal_default_instance()) delete _impl_.resourceevent_;
 }
 
-void ResourceEventProfile::ArenaDtor(void* object) {
-  ResourceEventProfile* _this = reinterpret_cast< ResourceEventProfile* >(object);
-  (void)_this;
-}
-void ResourceEventProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ResourceEventProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ResourceEventProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:resourcemodule.ResourceEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
-    delete eventmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventmessageinfo_ != nullptr) {
+    delete _impl_.eventmessageinfo_;
   }
-  eventmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
-    delete conductingequipment_;
+  _impl_.eventmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipment_ != nullptr) {
+    delete _impl_.conductingequipment_;
   }
-  conductingequipment_ = nullptr;
-  if (GetArena() == nullptr && resourceevent_ != nullptr) {
-    delete resourceevent_;
+  _impl_.conductingequipment_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.resourceevent_ != nullptr) {
+    delete _impl_.resourceevent_;
   }
-  resourceevent_ = nullptr;
+  _impl_.resourceevent_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ResourceEventProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ResourceEventProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_eventmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ConductingEquipment conductingEquipment = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_conductingequipment(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .resourcemodule.ResourceEvent resourceEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_resourceevent(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ResourceEventProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ResourceEventProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:resourcemodule.ResourceEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_eventmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::eventmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::eventmessageinfo(this),
+        _Internal::eventmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ConductingEquipment conductingEquipment = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_conductingequipment()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_conductingequipment()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::conductingequipment(this), target, stream);
+      InternalWriteMessage(2, _Internal::conductingequipment(this),
+        _Internal::conductingequipment(this).GetCachedSize(), target, stream);
   }
 
   // .resourcemodule.ResourceEvent resourceEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_resourceevent()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_resourceevent()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::resourceevent(this), target, stream);
+      InternalWriteMessage(3, _Internal::resourceevent(this),
+        _Internal::resourceevent(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:resourcemodule.ResourceEventProfile)
   return target;
 }
 
-size_t ResourceEventProfile::ByteSizeLong() const {
+::size_t ResourceEventProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:resourcemodule.ResourceEventProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
+  if (this->_internal_has_eventmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *eventmessageinfo_);
+        *_impl_.eventmessageinfo_);
   }
 
   // .commonmodule.ConductingEquipment conductingEquipment = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_conductingequipment()) {
+  if (this->_internal_has_conductingequipment()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *conductingequipment_);
+        *_impl_.conductingequipment_);
   }
 
   // .resourcemodule.ResourceEvent resourceEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_resourceevent()) {
+  if (this->_internal_has_resourceevent()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *resourceevent_);
+        *_impl_.resourceevent_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ResourceEventProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:resourcemodule.ResourceEventProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ResourceEventProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ResourceEventProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:resourcemodule.ResourceEventProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:resourcemodule.ResourceEventProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ResourceEventProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ResourceEventProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ResourceEventProfile::GetClassData() const { return &_class_data_; }
 
-void ResourceEventProfile::MergeFrom(const ResourceEventProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.ResourceEventProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ResourceEventProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ResourceEventProfile*>(&to_msg);
+  auto& from = static_cast<const ResourceEventProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.ResourceEventProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_eventmessageinfo()) {
-    _internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(from._internal_eventmessageinfo());
+  if (from._internal_has_eventmessageinfo()) {
+    _this->_internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(
+        from._internal_eventmessageinfo());
   }
-  if (from.has_conductingequipment()) {
-    _internal_mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(from._internal_conductingequipment());
+  if (from._internal_has_conductingequipment()) {
+    _this->_internal_mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(
+        from._internal_conductingequipment());
   }
-  if (from.has_resourceevent()) {
-    _internal_mutable_resourceevent()->::resourcemodule::ResourceEvent::MergeFrom(from._internal_resourceevent());
+  if (from._internal_has_resourceevent()) {
+    _this->_internal_mutable_resourceevent()->::resourcemodule::ResourceEvent::MergeFrom(
+        from._internal_resourceevent());
   }
-}
-
-void ResourceEventProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:resourcemodule.ResourceEventProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ResourceEventProfile::CopyFrom(const ResourceEventProfile& from) {
@@ -3680,20 +3659,20 @@ bool ResourceEventProfile::IsInitialized() const {
 
 void ResourceEventProfile::InternalSwap(ResourceEventProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ResourceEventProfile, resourceevent_)
-      + sizeof(ResourceEventProfile::resourceevent_)
-      - PROTOBUF_FIELD_OFFSET(ResourceEventProfile, eventmessageinfo_)>(
-          reinterpret_cast<char*>(&eventmessageinfo_),
-          reinterpret_cast<char*>(&other->eventmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(ResourceEventProfile, _impl_.resourceevent_)
+      + sizeof(ResourceEventProfile::_impl_.resourceevent_)
+      - PROTOBUF_FIELD_OFFSET(ResourceEventProfile, _impl_.eventmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.eventmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.eventmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceEventProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_resourcemodule_2fresourcemodule_2eproto_getter, &descriptor_table_resourcemodule_2fresourcemodule_2eproto_once,
+      file_level_metadata_resourcemodule_2fresourcemodule_2eproto[9]);
 }
-
-
 // ===================================================================
 
 class ResourceStatus::_Internal {
@@ -3703,110 +3682,118 @@ class ResourceStatus::_Internal {
 
 const ::commonmodule::IdentifiedObject&
 ResourceStatus::_Internal::identifiedobject(const ResourceStatus* msg) {
-  return *msg->identifiedobject_;
+  return *msg->_impl_.identifiedobject_;
 }
 void ResourceStatus::clear_identifiedobject() {
-  if (GetArena() == nullptr && identifiedobject_ != nullptr) {
-    delete identifiedobject_;
+  if (GetArenaForAllocation() == nullptr && _impl_.identifiedobject_ != nullptr) {
+    delete _impl_.identifiedobject_;
   }
-  identifiedobject_ = nullptr;
+  _impl_.identifiedobject_ = nullptr;
 }
 void ResourceStatus::clear_analogeventandstatusggio() {
-  analogeventandstatusggio_.Clear();
+  _impl_.analogeventandstatusggio_.Clear();
 }
 void ResourceStatus::clear_booleaneventandstatusggio() {
-  booleaneventandstatusggio_.Clear();
+  _impl_.booleaneventandstatusggio_.Clear();
 }
 void ResourceStatus::clear_integereventandstatusggio() {
-  integereventandstatusggio_.Clear();
+  _impl_.integereventandstatusggio_.Clear();
 }
 void ResourceStatus::clear_stringeventandstatusggio() {
-  stringeventandstatusggio_.Clear();
+  _impl_.stringeventandstatusggio_.Clear();
 }
 ResourceStatus::ResourceStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  analogeventandstatusggio_(arena),
-  booleaneventandstatusggio_(arena),
-  integereventandstatusggio_(arena),
-  stringeventandstatusggio_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:resourcemodule.ResourceStatus)
 }
 ResourceStatus::ResourceStatus(const ResourceStatus& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      analogeventandstatusggio_(from.analogeventandstatusggio_),
-      booleaneventandstatusggio_(from.booleaneventandstatusggio_),
-      integereventandstatusggio_(from.integereventandstatusggio_),
-      stringeventandstatusggio_(from.stringeventandstatusggio_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ResourceStatus* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.analogeventandstatusggio_){from._impl_.analogeventandstatusggio_}
+    , decltype(_impl_.booleaneventandstatusggio_){from._impl_.booleaneventandstatusggio_}
+    , decltype(_impl_.integereventandstatusggio_){from._impl_.integereventandstatusggio_}
+    , decltype(_impl_.stringeventandstatusggio_){from._impl_.stringeventandstatusggio_}
+    , decltype(_impl_.identifiedobject_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_identifiedobject()) {
-    identifiedobject_ = new ::commonmodule::IdentifiedObject(*from.identifiedobject_);
-  } else {
-    identifiedobject_ = nullptr;
+    _this->_impl_.identifiedobject_ = new ::commonmodule::IdentifiedObject(*from._impl_.identifiedobject_);
   }
   // @@protoc_insertion_point(copy_constructor:resourcemodule.ResourceStatus)
 }
 
-void ResourceStatus::SharedCtor() {
-identifiedobject_ = nullptr;
+inline void ResourceStatus::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.analogeventandstatusggio_){arena}
+    , decltype(_impl_.booleaneventandstatusggio_){arena}
+    , decltype(_impl_.integereventandstatusggio_){arena}
+    , decltype(_impl_.stringeventandstatusggio_){arena}
+    , decltype(_impl_.identifiedobject_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ResourceStatus::~ResourceStatus() {
   // @@protoc_insertion_point(destructor:resourcemodule.ResourceStatus)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ResourceStatus::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete identifiedobject_;
+inline void ResourceStatus::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.analogeventandstatusggio_.~RepeatedPtrField();
+  _impl_.booleaneventandstatusggio_.~RepeatedPtrField();
+  _impl_.integereventandstatusggio_.~RepeatedPtrField();
+  _impl_.stringeventandstatusggio_.~RepeatedPtrField();
+  if (this != internal_default_instance()) delete _impl_.identifiedobject_;
 }
 
-void ResourceStatus::ArenaDtor(void* object) {
-  ResourceStatus* _this = reinterpret_cast< ResourceStatus* >(object);
-  (void)_this;
-}
-void ResourceStatus::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ResourceStatus::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ResourceStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:resourcemodule.ResourceStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  analogeventandstatusggio_.Clear();
-  booleaneventandstatusggio_.Clear();
-  integereventandstatusggio_.Clear();
-  stringeventandstatusggio_.Clear();
-  if (GetArena() == nullptr && identifiedobject_ != nullptr) {
-    delete identifiedobject_;
+  _impl_.analogeventandstatusggio_.Clear();
+  _impl_.booleaneventandstatusggio_.Clear();
+  _impl_.integereventandstatusggio_.Clear();
+  _impl_.stringeventandstatusggio_.Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.identifiedobject_ != nullptr) {
+    delete _impl_.identifiedobject_;
   }
-  identifiedobject_ = nullptr;
+  _impl_.identifiedobject_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ResourceStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ResourceStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_identifiedobject(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // repeated .commonmodule.AnalogEventAndStatusGGIO analogEventAndStatusGGIO = 2 [(.uml.option_multiplicity_min) = 0];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -3814,11 +3801,13 @@ const char* ResourceStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // repeated .commonmodule.BooleanEventAndStatusGGIO booleanEventAndStatusGGIO = 3 [(.uml.option_multiplicity_min) = 0];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -3826,11 +3815,13 @@ const char* ResourceStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // repeated .commonmodule.IntegerEventAndStatusGGIO integerEventAndStatusGGIO = 4 [(.uml.option_multiplicity_min) = 0];
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -3838,11 +3829,13 @@ const char* ResourceStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // repeated .commonmodule.StringEventAndStatusGGIO stringEventAndStatusGGIO = 5 [(.uml.option_multiplicity_min) = 0];
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -3850,172 +3843,156 @@ const char* ResourceStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ResourceStatus::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ResourceStatus::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:resourcemodule.ResourceStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
-  if (this->has_identifiedobject()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_identifiedobject()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::identifiedobject(this), target, stream);
+      InternalWriteMessage(1, _Internal::identifiedobject(this),
+        _Internal::identifiedobject(this).GetCachedSize(), target, stream);
   }
 
   // repeated .commonmodule.AnalogEventAndStatusGGIO analogEventAndStatusGGIO = 2 [(.uml.option_multiplicity_min) = 0];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_analogeventandstatusggio_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_analogeventandstatusggio_size()); i < n; i++) {
+    const auto& repfield = this->_internal_analogeventandstatusggio(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, this->_internal_analogeventandstatusggio(i), target, stream);
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // repeated .commonmodule.BooleanEventAndStatusGGIO booleanEventAndStatusGGIO = 3 [(.uml.option_multiplicity_min) = 0];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_booleaneventandstatusggio_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_booleaneventandstatusggio_size()); i < n; i++) {
+    const auto& repfield = this->_internal_booleaneventandstatusggio(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, this->_internal_booleaneventandstatusggio(i), target, stream);
+        InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // repeated .commonmodule.IntegerEventAndStatusGGIO integerEventAndStatusGGIO = 4 [(.uml.option_multiplicity_min) = 0];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_integereventandstatusggio_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_integereventandstatusggio_size()); i < n; i++) {
+    const auto& repfield = this->_internal_integereventandstatusggio(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(4, this->_internal_integereventandstatusggio(i), target, stream);
+        InternalWriteMessage(4, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // repeated .commonmodule.StringEventAndStatusGGIO stringEventAndStatusGGIO = 5 [(.uml.option_multiplicity_min) = 0];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_stringeventandstatusggio_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_stringeventandstatusggio_size()); i < n; i++) {
+    const auto& repfield = this->_internal_stringeventandstatusggio(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(5, this->_internal_stringeventandstatusggio(i), target, stream);
+        InternalWriteMessage(5, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:resourcemodule.ResourceStatus)
   return target;
 }
 
-size_t ResourceStatus::ByteSizeLong() const {
+::size_t ResourceStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:resourcemodule.ResourceStatus)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .commonmodule.AnalogEventAndStatusGGIO analogEventAndStatusGGIO = 2 [(.uml.option_multiplicity_min) = 0];
   total_size += 1UL * this->_internal_analogeventandstatusggio_size();
-  for (const auto& msg : this->analogeventandstatusggio_) {
+  for (const auto& msg : this->_impl_.analogeventandstatusggio_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .commonmodule.BooleanEventAndStatusGGIO booleanEventAndStatusGGIO = 3 [(.uml.option_multiplicity_min) = 0];
   total_size += 1UL * this->_internal_booleaneventandstatusggio_size();
-  for (const auto& msg : this->booleaneventandstatusggio_) {
+  for (const auto& msg : this->_impl_.booleaneventandstatusggio_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .commonmodule.IntegerEventAndStatusGGIO integerEventAndStatusGGIO = 4 [(.uml.option_multiplicity_min) = 0];
   total_size += 1UL * this->_internal_integereventandstatusggio_size();
-  for (const auto& msg : this->integereventandstatusggio_) {
+  for (const auto& msg : this->_impl_.integereventandstatusggio_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .commonmodule.StringEventAndStatusGGIO stringEventAndStatusGGIO = 5 [(.uml.option_multiplicity_min) = 0];
   total_size += 1UL * this->_internal_stringeventandstatusggio_size();
-  for (const auto& msg : this->stringeventandstatusggio_) {
+  for (const auto& msg : this->_impl_.stringeventandstatusggio_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
-  if (this->has_identifiedobject()) {
+  if (this->_internal_has_identifiedobject()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *identifiedobject_);
+        *_impl_.identifiedobject_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ResourceStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:resourcemodule.ResourceStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ResourceStatus* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ResourceStatus>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:resourcemodule.ResourceStatus)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:resourcemodule.ResourceStatus)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ResourceStatus::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ResourceStatus::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ResourceStatus::GetClassData() const { return &_class_data_; }
 
-void ResourceStatus::MergeFrom(const ResourceStatus& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.ResourceStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ResourceStatus::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ResourceStatus*>(&to_msg);
+  auto& from = static_cast<const ResourceStatus&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.ResourceStatus)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  analogeventandstatusggio_.MergeFrom(from.analogeventandstatusggio_);
-  booleaneventandstatusggio_.MergeFrom(from.booleaneventandstatusggio_);
-  integereventandstatusggio_.MergeFrom(from.integereventandstatusggio_);
-  stringeventandstatusggio_.MergeFrom(from.stringeventandstatusggio_);
-  if (from.has_identifiedobject()) {
-    _internal_mutable_identifiedobject()->::commonmodule::IdentifiedObject::MergeFrom(from._internal_identifiedobject());
+  _this->_impl_.analogeventandstatusggio_.MergeFrom(from._impl_.analogeventandstatusggio_);
+  _this->_impl_.booleaneventandstatusggio_.MergeFrom(from._impl_.booleaneventandstatusggio_);
+  _this->_impl_.integereventandstatusggio_.MergeFrom(from._impl_.integereventandstatusggio_);
+  _this->_impl_.stringeventandstatusggio_.MergeFrom(from._impl_.stringeventandstatusggio_);
+  if (from._internal_has_identifiedobject()) {
+    _this->_internal_mutable_identifiedobject()->::commonmodule::IdentifiedObject::MergeFrom(
+        from._internal_identifiedobject());
   }
-}
-
-void ResourceStatus::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:resourcemodule.ResourceStatus)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ResourceStatus::CopyFrom(const ResourceStatus& from) {
@@ -4031,19 +4008,19 @@ bool ResourceStatus::IsInitialized() const {
 
 void ResourceStatus::InternalSwap(ResourceStatus* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  analogeventandstatusggio_.InternalSwap(&other->analogeventandstatusggio_);
-  booleaneventandstatusggio_.InternalSwap(&other->booleaneventandstatusggio_);
-  integereventandstatusggio_.InternalSwap(&other->integereventandstatusggio_);
-  stringeventandstatusggio_.InternalSwap(&other->stringeventandstatusggio_);
-  swap(identifiedobject_, other->identifiedobject_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.analogeventandstatusggio_.InternalSwap(&other->_impl_.analogeventandstatusggio_);
+  _impl_.booleaneventandstatusggio_.InternalSwap(&other->_impl_.booleaneventandstatusggio_);
+  _impl_.integereventandstatusggio_.InternalSwap(&other->_impl_.integereventandstatusggio_);
+  _impl_.stringeventandstatusggio_.InternalSwap(&other->_impl_.stringeventandstatusggio_);
+  swap(_impl_.identifiedobject_, other->_impl_.identifiedobject_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceStatus::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_resourcemodule_2fresourcemodule_2eproto_getter, &descriptor_table_resourcemodule_2fresourcemodule_2eproto_once,
+      file_level_metadata_resourcemodule_2fresourcemodule_2eproto[10]);
 }
-
-
 // ===================================================================
 
 class ResourceStatusProfile::_Internal {
@@ -4055,270 +4032,257 @@ class ResourceStatusProfile::_Internal {
 
 const ::commonmodule::StatusMessageInfo&
 ResourceStatusProfile::_Internal::statusmessageinfo(const ResourceStatusProfile* msg) {
-  return *msg->statusmessageinfo_;
+  return *msg->_impl_.statusmessageinfo_;
 }
 const ::commonmodule::ConductingEquipment&
 ResourceStatusProfile::_Internal::conductingequipment(const ResourceStatusProfile* msg) {
-  return *msg->conductingequipment_;
+  return *msg->_impl_.conductingequipment_;
 }
 const ::resourcemodule::ResourceStatus&
 ResourceStatusProfile::_Internal::resourcestatus(const ResourceStatusProfile* msg) {
-  return *msg->resourcestatus_;
+  return *msg->_impl_.resourcestatus_;
 }
 void ResourceStatusProfile::clear_statusmessageinfo() {
-  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
-    delete statusmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusmessageinfo_ != nullptr) {
+    delete _impl_.statusmessageinfo_;
   }
-  statusmessageinfo_ = nullptr;
+  _impl_.statusmessageinfo_ = nullptr;
 }
 void ResourceStatusProfile::clear_conductingequipment() {
-  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
-    delete conductingequipment_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipment_ != nullptr) {
+    delete _impl_.conductingequipment_;
   }
-  conductingequipment_ = nullptr;
+  _impl_.conductingequipment_ = nullptr;
 }
 ResourceStatusProfile::ResourceStatusProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:resourcemodule.ResourceStatusProfile)
 }
 ResourceStatusProfile::ResourceStatusProfile(const ResourceStatusProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ResourceStatusProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusmessageinfo_){nullptr}
+    , decltype(_impl_.conductingequipment_){nullptr}
+    , decltype(_impl_.resourcestatus_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_statusmessageinfo()) {
-    statusmessageinfo_ = new ::commonmodule::StatusMessageInfo(*from.statusmessageinfo_);
-  } else {
-    statusmessageinfo_ = nullptr;
+    _this->_impl_.statusmessageinfo_ = new ::commonmodule::StatusMessageInfo(*from._impl_.statusmessageinfo_);
   }
   if (from._internal_has_conductingequipment()) {
-    conductingequipment_ = new ::commonmodule::ConductingEquipment(*from.conductingequipment_);
-  } else {
-    conductingequipment_ = nullptr;
+    _this->_impl_.conductingequipment_ = new ::commonmodule::ConductingEquipment(*from._impl_.conductingequipment_);
   }
   if (from._internal_has_resourcestatus()) {
-    resourcestatus_ = new ::resourcemodule::ResourceStatus(*from.resourcestatus_);
-  } else {
-    resourcestatus_ = nullptr;
+    _this->_impl_.resourcestatus_ = new ::resourcemodule::ResourceStatus(*from._impl_.resourcestatus_);
   }
   // @@protoc_insertion_point(copy_constructor:resourcemodule.ResourceStatusProfile)
 }
 
-void ResourceStatusProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&statusmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&resourcestatus_) -
-    reinterpret_cast<char*>(&statusmessageinfo_)) + sizeof(resourcestatus_));
+inline void ResourceStatusProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusmessageinfo_){nullptr}
+    , decltype(_impl_.conductingequipment_){nullptr}
+    , decltype(_impl_.resourcestatus_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ResourceStatusProfile::~ResourceStatusProfile() {
   // @@protoc_insertion_point(destructor:resourcemodule.ResourceStatusProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ResourceStatusProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete statusmessageinfo_;
-  if (this != internal_default_instance()) delete conductingequipment_;
-  if (this != internal_default_instance()) delete resourcestatus_;
+inline void ResourceStatusProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.statusmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.conductingequipment_;
+  if (this != internal_default_instance()) delete _impl_.resourcestatus_;
 }
 
-void ResourceStatusProfile::ArenaDtor(void* object) {
-  ResourceStatusProfile* _this = reinterpret_cast< ResourceStatusProfile* >(object);
-  (void)_this;
-}
-void ResourceStatusProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ResourceStatusProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void ResourceStatusProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:resourcemodule.ResourceStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
-    delete statusmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusmessageinfo_ != nullptr) {
+    delete _impl_.statusmessageinfo_;
   }
-  statusmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
-    delete conductingequipment_;
+  _impl_.statusmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipment_ != nullptr) {
+    delete _impl_.conductingequipment_;
   }
-  conductingequipment_ = nullptr;
-  if (GetArena() == nullptr && resourcestatus_ != nullptr) {
-    delete resourcestatus_;
+  _impl_.conductingequipment_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.resourcestatus_ != nullptr) {
+    delete _impl_.resourcestatus_;
   }
-  resourcestatus_ = nullptr;
+  _impl_.resourcestatus_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ResourceStatusProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ResourceStatusProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_statusmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ConductingEquipment conductingEquipment = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_conductingequipment(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .resourcemodule.ResourceStatus resourceStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_resourcestatus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ResourceStatusProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* ResourceStatusProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:resourcemodule.ResourceStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_statusmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::statusmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::statusmessageinfo(this),
+        _Internal::statusmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ConductingEquipment conductingEquipment = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_conductingequipment()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_conductingequipment()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::conductingequipment(this), target, stream);
+      InternalWriteMessage(2, _Internal::conductingequipment(this),
+        _Internal::conductingequipment(this).GetCachedSize(), target, stream);
   }
 
   // .resourcemodule.ResourceStatus resourceStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_resourcestatus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_resourcestatus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::resourcestatus(this), target, stream);
+      InternalWriteMessage(3, _Internal::resourcestatus(this),
+        _Internal::resourcestatus(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:resourcemodule.ResourceStatusProfile)
   return target;
 }
 
-size_t ResourceStatusProfile::ByteSizeLong() const {
+::size_t ResourceStatusProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:resourcemodule.ResourceStatusProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusmessageinfo()) {
+  if (this->_internal_has_statusmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *statusmessageinfo_);
+        *_impl_.statusmessageinfo_);
   }
 
   // .commonmodule.ConductingEquipment conductingEquipment = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_conductingequipment()) {
+  if (this->_internal_has_conductingequipment()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *conductingequipment_);
+        *_impl_.conductingequipment_);
   }
 
   // .resourcemodule.ResourceStatus resourceStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_resourcestatus()) {
+  if (this->_internal_has_resourcestatus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *resourcestatus_);
+        *_impl_.resourcestatus_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ResourceStatusProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:resourcemodule.ResourceStatusProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ResourceStatusProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ResourceStatusProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:resourcemodule.ResourceStatusProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:resourcemodule.ResourceStatusProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ResourceStatusProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ResourceStatusProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ResourceStatusProfile::GetClassData() const { return &_class_data_; }
 
-void ResourceStatusProfile::MergeFrom(const ResourceStatusProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.ResourceStatusProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ResourceStatusProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ResourceStatusProfile*>(&to_msg);
+  auto& from = static_cast<const ResourceStatusProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:resourcemodule.ResourceStatusProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_statusmessageinfo()) {
-    _internal_mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(from._internal_statusmessageinfo());
+  if (from._internal_has_statusmessageinfo()) {
+    _this->_internal_mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(
+        from._internal_statusmessageinfo());
   }
-  if (from.has_conductingequipment()) {
-    _internal_mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(from._internal_conductingequipment());
+  if (from._internal_has_conductingequipment()) {
+    _this->_internal_mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(
+        from._internal_conductingequipment());
   }
-  if (from.has_resourcestatus()) {
-    _internal_mutable_resourcestatus()->::resourcemodule::ResourceStatus::MergeFrom(from._internal_resourcestatus());
+  if (from._internal_has_resourcestatus()) {
+    _this->_internal_mutable_resourcestatus()->::resourcemodule::ResourceStatus::MergeFrom(
+        from._internal_resourcestatus());
   }
-}
-
-void ResourceStatusProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:resourcemodule.ResourceStatusProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ResourceStatusProfile::CopyFrom(const ResourceStatusProfile& from) {
@@ -4334,60 +4298,71 @@ bool ResourceStatusProfile::IsInitialized() const {
 
 void ResourceStatusProfile::InternalSwap(ResourceStatusProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ResourceStatusProfile, resourcestatus_)
-      + sizeof(ResourceStatusProfile::resourcestatus_)
-      - PROTOBUF_FIELD_OFFSET(ResourceStatusProfile, statusmessageinfo_)>(
-          reinterpret_cast<char*>(&statusmessageinfo_),
-          reinterpret_cast<char*>(&other->statusmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(ResourceStatusProfile, _impl_.resourcestatus_)
+      + sizeof(ResourceStatusProfile::_impl_.resourcestatus_)
+      - PROTOBUF_FIELD_OFFSET(ResourceStatusProfile, _impl_.statusmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.statusmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.statusmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ResourceStatusProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_resourcemodule_2fresourcemodule_2eproto_getter, &descriptor_table_resourcemodule_2fresourcemodule_2eproto_once,
+      file_level_metadata_resourcemodule_2fresourcemodule_2eproto[11]);
 }
-
-
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace resourcemodule
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::resourcemodule::BooleanControlGGIO* Arena::CreateMaybeMessage< ::resourcemodule::BooleanControlGGIO >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::resourcemodule::BooleanControlGGIO*
+Arena::CreateMaybeMessage< ::resourcemodule::BooleanControlGGIO >(Arena* arena) {
   return Arena::CreateMessageInternal< ::resourcemodule::BooleanControlGGIO >(arena);
 }
-template<> PROTOBUF_NOINLINE ::resourcemodule::IntegerControlGGIO* Arena::CreateMaybeMessage< ::resourcemodule::IntegerControlGGIO >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::resourcemodule::IntegerControlGGIO*
+Arena::CreateMaybeMessage< ::resourcemodule::IntegerControlGGIO >(Arena* arena) {
   return Arena::CreateMessageInternal< ::resourcemodule::IntegerControlGGIO >(arena);
 }
-template<> PROTOBUF_NOINLINE ::resourcemodule::StringControlGGIO* Arena::CreateMaybeMessage< ::resourcemodule::StringControlGGIO >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::resourcemodule::StringControlGGIO*
+Arena::CreateMaybeMessage< ::resourcemodule::StringControlGGIO >(Arena* arena) {
   return Arena::CreateMessageInternal< ::resourcemodule::StringControlGGIO >(arena);
 }
-template<> PROTOBUF_NOINLINE ::resourcemodule::AnalogControlGGIO* Arena::CreateMaybeMessage< ::resourcemodule::AnalogControlGGIO >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::resourcemodule::AnalogControlGGIO*
+Arena::CreateMaybeMessage< ::resourcemodule::AnalogControlGGIO >(Arena* arena) {
   return Arena::CreateMessageInternal< ::resourcemodule::AnalogControlGGIO >(arena);
 }
-template<> PROTOBUF_NOINLINE ::resourcemodule::ResourceDiscreteControl* Arena::CreateMaybeMessage< ::resourcemodule::ResourceDiscreteControl >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::resourcemodule::ResourceDiscreteControl*
+Arena::CreateMaybeMessage< ::resourcemodule::ResourceDiscreteControl >(Arena* arena) {
   return Arena::CreateMessageInternal< ::resourcemodule::ResourceDiscreteControl >(arena);
 }
-template<> PROTOBUF_NOINLINE ::resourcemodule::ResourceDiscreteControlProfile* Arena::CreateMaybeMessage< ::resourcemodule::ResourceDiscreteControlProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::resourcemodule::ResourceDiscreteControlProfile*
+Arena::CreateMaybeMessage< ::resourcemodule::ResourceDiscreteControlProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::resourcemodule::ResourceDiscreteControlProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::resourcemodule::ResourceReading* Arena::CreateMaybeMessage< ::resourcemodule::ResourceReading >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::resourcemodule::ResourceReading*
+Arena::CreateMaybeMessage< ::resourcemodule::ResourceReading >(Arena* arena) {
   return Arena::CreateMessageInternal< ::resourcemodule::ResourceReading >(arena);
 }
-template<> PROTOBUF_NOINLINE ::resourcemodule::ResourceReadingProfile* Arena::CreateMaybeMessage< ::resourcemodule::ResourceReadingProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::resourcemodule::ResourceReadingProfile*
+Arena::CreateMaybeMessage< ::resourcemodule::ResourceReadingProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::resourcemodule::ResourceReadingProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::resourcemodule::ResourceEvent* Arena::CreateMaybeMessage< ::resourcemodule::ResourceEvent >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::resourcemodule::ResourceEvent*
+Arena::CreateMaybeMessage< ::resourcemodule::ResourceEvent >(Arena* arena) {
   return Arena::CreateMessageInternal< ::resourcemodule::ResourceEvent >(arena);
 }
-template<> PROTOBUF_NOINLINE ::resourcemodule::ResourceEventProfile* Arena::CreateMaybeMessage< ::resourcemodule::ResourceEventProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::resourcemodule::ResourceEventProfile*
+Arena::CreateMaybeMessage< ::resourcemodule::ResourceEventProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::resourcemodule::ResourceEventProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::resourcemodule::ResourceStatus* Arena::CreateMaybeMessage< ::resourcemodule::ResourceStatus >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::resourcemodule::ResourceStatus*
+Arena::CreateMaybeMessage< ::resourcemodule::ResourceStatus >(Arena* arena) {
   return Arena::CreateMessageInternal< ::resourcemodule::ResourceStatus >(arena);
 }
-template<> PROTOBUF_NOINLINE ::resourcemodule::ResourceStatusProfile* Arena::CreateMaybeMessage< ::resourcemodule::ResourceStatusProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::resourcemodule::ResourceStatusProfile*
+Arena::CreateMaybeMessage< ::resourcemodule::ResourceStatusProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::resourcemodule::ResourceStatusProfile >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
-
 // @@protoc_insertion_point(global_scope)
-#include <google/protobuf/port_undef.inc>
+#include "google/protobuf/port_undef.inc"

@@ -4,296 +4,357 @@
 #include "interconnectionmodule/interconnectionmodule.pb.h"
 
 #include <algorithm>
-
-#include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include "google/protobuf/io/coded_stream.h"
+#include "google/protobuf/extension_set.h"
+#include "google/protobuf/wire_format_lite.h"
+#include "google/protobuf/descriptor.h"
+#include "google/protobuf/generated_message_reflection.h"
+#include "google/protobuf/reflection_ops.h"
+#include "google/protobuf/wire_format.h"
 // @@protoc_insertion_point(includes)
-#include <google/protobuf/port_def.inc>
 
+// Must be included last.
+#include "google/protobuf/port_def.inc"
 PROTOBUF_PRAGMA_INIT_SEG
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = ::PROTOBUF_NAMESPACE_ID::internal;
 namespace interconnectionmodule {
-constexpr InterconnectionPoint::InterconnectionPoint(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : blackstartenabled_(nullptr)
-  , frequencysetpointenabled_(nullptr)
-  , island_(nullptr)
-  , pcthzdroop_(nullptr)
-  , pctvdroop_(nullptr)
-  , ramprates_(nullptr)
-  , reactivepwrsetpointenabled_(nullptr)
-  , realpwrsetpointenabled_(nullptr)
-  , voltagesetpointenabled_(nullptr)
-  , starttime_(nullptr){}
+PROTOBUF_CONSTEXPR InterconnectionPoint::InterconnectionPoint(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.blackstartenabled_)*/nullptr
+  , /*decltype(_impl_.frequencysetpointenabled_)*/nullptr
+  , /*decltype(_impl_.island_)*/nullptr
+  , /*decltype(_impl_.pcthzdroop_)*/nullptr
+  , /*decltype(_impl_.pctvdroop_)*/nullptr
+  , /*decltype(_impl_.ramprates_)*/nullptr
+  , /*decltype(_impl_.reactivepwrsetpointenabled_)*/nullptr
+  , /*decltype(_impl_.realpwrsetpointenabled_)*/nullptr
+  , /*decltype(_impl_.voltagesetpointenabled_)*/nullptr
+  , /*decltype(_impl_.starttime_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct InterconnectionPointDefaultTypeInternal {
-  constexpr InterconnectionPointDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR InterconnectionPointDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~InterconnectionPointDefaultTypeInternal() {}
   union {
     InterconnectionPoint _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT InterconnectionPointDefaultTypeInternal _InterconnectionPoint_default_instance_;
-constexpr InterconnectionCSG::InterconnectionCSG(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : crvpts_(){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 InterconnectionPointDefaultTypeInternal _InterconnectionPoint_default_instance_;
+PROTOBUF_CONSTEXPR InterconnectionCSG::InterconnectionCSG(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.crvpts_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct InterconnectionCSGDefaultTypeInternal {
-  constexpr InterconnectionCSGDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR InterconnectionCSGDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~InterconnectionCSGDefaultTypeInternal() {}
   union {
     InterconnectionCSG _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT InterconnectionCSGDefaultTypeInternal _InterconnectionCSG_default_instance_;
-constexpr InterconnectionControlScheduleFSCH::InterconnectionControlScheduleFSCH(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : valdcsg_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 InterconnectionCSGDefaultTypeInternal _InterconnectionCSG_default_instance_;
+PROTOBUF_CONSTEXPR InterconnectionControlScheduleFSCH::InterconnectionControlScheduleFSCH(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.valdcsg_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct InterconnectionControlScheduleFSCHDefaultTypeInternal {
-  constexpr InterconnectionControlScheduleFSCHDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR InterconnectionControlScheduleFSCHDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~InterconnectionControlScheduleFSCHDefaultTypeInternal() {}
   union {
     InterconnectionControlScheduleFSCH _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT InterconnectionControlScheduleFSCHDefaultTypeInternal _InterconnectionControlScheduleFSCH_default_instance_;
-constexpr InterconnectionScheduleFSCC::InterconnectionScheduleFSCC(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : interconnectioncontrolschedulefsch_()
-  , controlfscc_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 InterconnectionControlScheduleFSCHDefaultTypeInternal _InterconnectionControlScheduleFSCH_default_instance_;
+PROTOBUF_CONSTEXPR InterconnectionScheduleFSCC::InterconnectionScheduleFSCC(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.interconnectioncontrolschedulefsch_)*/{}
+  , /*decltype(_impl_.controlfscc_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct InterconnectionScheduleFSCCDefaultTypeInternal {
-  constexpr InterconnectionScheduleFSCCDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR InterconnectionScheduleFSCCDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~InterconnectionScheduleFSCCDefaultTypeInternal() {}
   union {
     InterconnectionScheduleFSCC _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT InterconnectionScheduleFSCCDefaultTypeInternal _InterconnectionScheduleFSCC_default_instance_;
-constexpr InterconnectionSchedule::InterconnectionSchedule(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : identifiedobject_(nullptr)
-  , check_(nullptr)
-  , interconnectionschedulefscc_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 InterconnectionScheduleFSCCDefaultTypeInternal _InterconnectionScheduleFSCC_default_instance_;
+PROTOBUF_CONSTEXPR InterconnectionSchedule::InterconnectionSchedule(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.identifiedobject_)*/nullptr
+  , /*decltype(_impl_.check_)*/nullptr
+  , /*decltype(_impl_.interconnectionschedulefscc_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct InterconnectionScheduleDefaultTypeInternal {
-  constexpr InterconnectionScheduleDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR InterconnectionScheduleDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~InterconnectionScheduleDefaultTypeInternal() {}
   union {
     InterconnectionSchedule _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT InterconnectionScheduleDefaultTypeInternal _InterconnectionSchedule_default_instance_;
-constexpr PlannedInterconnectionScheduleProfile::PlannedInterconnectionScheduleProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlmessageinfo_(nullptr)
-  , requestercircuitsegmentservice_(nullptr)
-  , interconnectionschedule_(nullptr)
-  , tiepoint_(nullptr)
-  , respondercircuitsegmentservice_(nullptr){}
-struct PlannedInterconnectionScheduleProfileDefaultTypeInternal {
-  constexpr PlannedInterconnectionScheduleProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~PlannedInterconnectionScheduleProfileDefaultTypeInternal() {}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 InterconnectionScheduleDefaultTypeInternal _InterconnectionSchedule_default_instance_;
+PROTOBUF_CONSTEXPR InterconnectionPlannedScheduleProfile::InterconnectionPlannedScheduleProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlmessageinfo_)*/nullptr
+  , /*decltype(_impl_.requestercircuitsegmentservice_)*/nullptr
+  , /*decltype(_impl_.interconnectionschedule_)*/nullptr
+  , /*decltype(_impl_.tiepoint_)*/nullptr
+  , /*decltype(_impl_.respondercircuitsegmentservice_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct InterconnectionPlannedScheduleProfileDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR InterconnectionPlannedScheduleProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~InterconnectionPlannedScheduleProfileDefaultTypeInternal() {}
   union {
-    PlannedInterconnectionScheduleProfile _instance;
+    InterconnectionPlannedScheduleProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PlannedInterconnectionScheduleProfileDefaultTypeInternal _PlannedInterconnectionScheduleProfile_default_instance_;
-constexpr RequestedInterconnectionScheduleProfile::RequestedInterconnectionScheduleProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlmessageinfo_(nullptr)
-  , requestercircuitsegmentservice_(nullptr)
-  , interconnectionschedule_(nullptr)
-  , tiepoint_(nullptr)
-  , respondercircuitsegmentservice_(nullptr){}
-struct RequestedInterconnectionScheduleProfileDefaultTypeInternal {
-  constexpr RequestedInterconnectionScheduleProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~RequestedInterconnectionScheduleProfileDefaultTypeInternal() {}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 InterconnectionPlannedScheduleProfileDefaultTypeInternal _InterconnectionPlannedScheduleProfile_default_instance_;
+PROTOBUF_CONSTEXPR InterconnectionRequestedScheduleProfile::InterconnectionRequestedScheduleProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlmessageinfo_)*/nullptr
+  , /*decltype(_impl_.requestercircuitsegmentservice_)*/nullptr
+  , /*decltype(_impl_.interconnectionschedule_)*/nullptr
+  , /*decltype(_impl_.tiepoint_)*/nullptr
+  , /*decltype(_impl_.respondercircuitsegmentservice_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct InterconnectionRequestedScheduleProfileDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR InterconnectionRequestedScheduleProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~InterconnectionRequestedScheduleProfileDefaultTypeInternal() {}
   union {
-    RequestedInterconnectionScheduleProfile _instance;
+    InterconnectionRequestedScheduleProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RequestedInterconnectionScheduleProfileDefaultTypeInternal _RequestedInterconnectionScheduleProfile_default_instance_;
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 InterconnectionRequestedScheduleProfileDefaultTypeInternal _InterconnectionRequestedScheduleProfile_default_instance_;
 }  // namespace interconnectionmodule
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto[7];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_interconnectionmodule_2finterconnectionmodule_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_interconnectionmodule_2finterconnectionmodule_2eproto = nullptr;
+static ::_pb::Metadata file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto[7];
+static constexpr const ::_pb::EnumDescriptor**
+    file_level_enum_descriptors_interconnectionmodule_2finterconnectionmodule_2eproto = nullptr;
+static constexpr const ::_pb::ServiceDescriptor**
+    file_level_service_descriptors_interconnectionmodule_2finterconnectionmodule_2eproto = nullptr;
+const ::uint32_t TableStruct_interconnectionmodule_2finterconnectionmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
+    protodesc_cold) = {
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, _impl_.blackstartenabled_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, _impl_.frequencysetpointenabled_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, _impl_.island_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, _impl_.pcthzdroop_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, _impl_.pctvdroop_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, _impl_.ramprates_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, _impl_.reactivepwrsetpointenabled_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, _impl_.realpwrsetpointenabled_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, _impl_.voltagesetpointenabled_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, _impl_.starttime_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionCSG, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionCSG, _impl_.crvpts_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionControlScheduleFSCH, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionControlScheduleFSCH, _impl_.valdcsg_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionScheduleFSCC, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionScheduleFSCC, _impl_.controlfscc_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionScheduleFSCC, _impl_.interconnectioncontrolschedulefsch_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionSchedule, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionSchedule, _impl_.identifiedobject_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionSchedule, _impl_.check_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionSchedule, _impl_.interconnectionschedulefscc_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPlannedScheduleProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPlannedScheduleProfile, _impl_.controlmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPlannedScheduleProfile, _impl_.requestercircuitsegmentservice_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPlannedScheduleProfile, _impl_.interconnectionschedule_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPlannedScheduleProfile, _impl_.tiepoint_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPlannedScheduleProfile, _impl_.respondercircuitsegmentservice_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionRequestedScheduleProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionRequestedScheduleProfile, _impl_.controlmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionRequestedScheduleProfile, _impl_.requestercircuitsegmentservice_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionRequestedScheduleProfile, _impl_.interconnectionschedule_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionRequestedScheduleProfile, _impl_.tiepoint_),
+    PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionRequestedScheduleProfile, _impl_.respondercircuitsegmentservice_),
+};
 
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_interconnectionmodule_2finterconnectionmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, blackstartenabled_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, frequencysetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, island_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, pcthzdroop_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, pctvdroop_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, ramprates_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, reactivepwrsetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, realpwrsetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, voltagesetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionPoint, starttime_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionCSG, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionCSG, crvpts_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionControlScheduleFSCH, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionControlScheduleFSCH, valdcsg_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionScheduleFSCC, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionScheduleFSCC, controlfscc_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionScheduleFSCC, interconnectioncontrolschedulefsch_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionSchedule, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionSchedule, identifiedobject_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionSchedule, check_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::InterconnectionSchedule, interconnectionschedulefscc_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::PlannedInterconnectionScheduleProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::PlannedInterconnectionScheduleProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::PlannedInterconnectionScheduleProfile, requestercircuitsegmentservice_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::PlannedInterconnectionScheduleProfile, interconnectionschedule_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::PlannedInterconnectionScheduleProfile, tiepoint_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::PlannedInterconnectionScheduleProfile, respondercircuitsegmentservice_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::RequestedInterconnectionScheduleProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::RequestedInterconnectionScheduleProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::RequestedInterconnectionScheduleProfile, requestercircuitsegmentservice_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::RequestedInterconnectionScheduleProfile, interconnectionschedule_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::RequestedInterconnectionScheduleProfile, tiepoint_),
-  PROTOBUF_FIELD_OFFSET(::interconnectionmodule::RequestedInterconnectionScheduleProfile, respondercircuitsegmentservice_),
-};
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::interconnectionmodule::InterconnectionPoint)},
-  { 15, -1, sizeof(::interconnectionmodule::InterconnectionCSG)},
-  { 21, -1, sizeof(::interconnectionmodule::InterconnectionControlScheduleFSCH)},
-  { 27, -1, sizeof(::interconnectionmodule::InterconnectionScheduleFSCC)},
-  { 34, -1, sizeof(::interconnectionmodule::InterconnectionSchedule)},
-  { 42, -1, sizeof(::interconnectionmodule::PlannedInterconnectionScheduleProfile)},
-  { 52, -1, sizeof(::interconnectionmodule::RequestedInterconnectionScheduleProfile)},
+static const ::_pbi::MigrationSchema
+    schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+        { 0, -1, -1, sizeof(::interconnectionmodule::InterconnectionPoint)},
+        { 18, -1, -1, sizeof(::interconnectionmodule::InterconnectionCSG)},
+        { 27, -1, -1, sizeof(::interconnectionmodule::InterconnectionControlScheduleFSCH)},
+        { 36, -1, -1, sizeof(::interconnectionmodule::InterconnectionScheduleFSCC)},
+        { 46, -1, -1, sizeof(::interconnectionmodule::InterconnectionSchedule)},
+        { 57, -1, -1, sizeof(::interconnectionmodule::InterconnectionPlannedScheduleProfile)},
+        { 70, -1, -1, sizeof(::interconnectionmodule::InterconnectionRequestedScheduleProfile)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::interconnectionmodule::_InterconnectionPoint_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::interconnectionmodule::_InterconnectionCSG_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::interconnectionmodule::_InterconnectionControlScheduleFSCH_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::interconnectionmodule::_InterconnectionScheduleFSCC_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::interconnectionmodule::_InterconnectionSchedule_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::interconnectionmodule::_PlannedInterconnectionScheduleProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::interconnectionmodule::_RequestedInterconnectionScheduleProfile_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+    &::interconnectionmodule::_InterconnectionPoint_default_instance_._instance,
+    &::interconnectionmodule::_InterconnectionCSG_default_instance_._instance,
+    &::interconnectionmodule::_InterconnectionControlScheduleFSCH_default_instance_._instance,
+    &::interconnectionmodule::_InterconnectionScheduleFSCC_default_instance_._instance,
+    &::interconnectionmodule::_InterconnectionSchedule_default_instance_._instance,
+    &::interconnectionmodule::_InterconnectionPlannedScheduleProfile_default_instance_._instance,
+    &::interconnectionmodule::_InterconnectionRequestedScheduleProfile_default_instance_._instance,
+};
+const char descriptor_table_protodef_interconnectionmodule_2finterconnectionmodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+    "\n1interconnectionmodule/interconnectionm"
+    "odule.proto\022\025interconnectionmodule\032\tuml."
+    "proto\032\036google/protobuf/wrappers.proto\032\037c"
+    "ommonmodule/commonmodule.proto\"\245\004\n\024Inter"
+    "connectionPoint\0223\n\021blackStartEnabled\030\001 \001"
+    "(\0132\030.commonmodule.ControlSPC\022:\n\030frequenc"
+    "ySetPointEnabled\030\002 \001(\0132\030.commonmodule.Co"
+    "ntrolSPC\022(\n\006island\030\003 \001(\0132\030.commonmodule."
+    "ControlSPC\022/\n\npctHzDroop\030\004 \001(\0132\033.google."
+    "protobuf.FloatValue\022.\n\tpctVDroop\030\005 \001(\0132\033"
+    ".google.protobuf.FloatValue\022)\n\trampRates"
+    "\030\006 \001(\0132\026.commonmodule.RampRate\022<\n\032reacti"
+    "vePwrSetPointEnabled\030\007 \001(\0132\030.commonmodul"
+    "e.ControlSPC\0228\n\026realPwrSetPointEnabled\030\010"
+    " \001(\0132\030.commonmodule.ControlSPC\0228\n\026voltag"
+    "eSetPointEnabled\030\t \001(\0132\030.commonmodule.Co"
+    "ntrolSPC\0224\n\tstartTime\030\n \001(\0132\027.commonmodu"
+    "le.TimestampB\010\210\265\030\001\220\265\030\001\"[\n\022Interconnectio"
+    "nCSG\022E\n\006crvPts\030\001 \003(\0132+.interconnectionmo"
+    "dule.InterconnectionPointB\010\210\265\030\001\220\265\030\001\"j\n\"I"
+    "nterconnectionControlScheduleFSCH\022D\n\007Val"
+    "DCSG\030\001 \001(\0132).interconnectionmodule.Inter"
+    "connectionCSGB\010\210\265\030\001\220\265\030\001\"\300\001\n\033Interconnect"
+    "ionScheduleFSCC\0224\n\013controlFSCC\030\001 \001(\0132\031.c"
+    "ommonmodule.ControlFSCCB\004\200\265\030\001\022k\n\"interco"
+    "nnectionControlScheduleFSCH\030\002 \003(\01329.inte"
+    "rconnectionmodule.InterconnectionControl"
+    "ScheduleFSCHB\004\220\265\030\000\"\352\001\n\027InterconnectionSc"
+    "hedule\022>\n\020identifiedObject\030\001 \001(\0132\036.commo"
+    "nmodule.IdentifiedObjectB\004\200\265\030\001\022,\n\005check\030"
+    "\002 \001(\0132\035.commonmodule.CheckConditions\022a\n\033"
+    "interconnectionScheduleFSCC\030\003 \001(\01322.inte"
+    "rconnectionmodule.InterconnectionSchedul"
+    "eFSCCB\010\210\265\030\001\220\265\030\001\"\261\003\n%InterconnectionPlann"
+    "edScheduleProfile\022B\n\022controlMessageInfo\030"
+    "\001 \001(\0132 .commonmodule.ControlMessageInfoB"
+    "\004\200\265\030\001\022Q\n\036requesterCircuitSegmentService\030"
+    "\002 \001(\0132\037.commonmodule.ApplicationSystemB\010"
+    "\210\265\030\001\220\265\030\001\022Y\n\027interconnectionSchedule\030\003 \001("
+    "\0132..interconnectionmodule.Interconnectio"
+    "nScheduleB\010\210\265\030\001\220\265\030\001\022=\n\010tiePoint\030\004 \001(\0132!."
+    "commonmodule.ConductingEquipmentB\010\210\265\030\001\220\265"
+    "\030\001\022Q\n\036responderCircuitSegmentService\030\005 \001"
+    "(\0132\037.commonmodule.ApplicationSystemB\010\210\265\030"
+    "\001\220\265\030\001:\004\300\363\030\001\"\263\003\n\'InterconnectionRequested"
+    "ScheduleProfile\022B\n\022controlMessageInfo\030\001 "
+    "\001(\0132 .commonmodule.ControlMessageInfoB\004\200"
+    "\265\030\001\022Q\n\036requesterCircuitSegmentService\030\002 "
+    "\001(\0132\037.commonmodule.ApplicationSystemB\010\210\265"
+    "\030\001\220\265\030\001\022Y\n\027interconnectionSchedule\030\003 \001(\0132"
+    "..interconnectionmodule.InterconnectionS"
+    "cheduleB\010\210\265\030\001\220\265\030\001\022=\n\010tiePoint\030\004 \001(\0132!.co"
+    "mmonmodule.ConductingEquipmentB\010\210\265\030\001\220\265\030\001"
+    "\022Q\n\036responderCircuitSegmentService\030\005 \001(\013"
+    "2\037.commonmodule.ApplicationSystemB\010\210\265\030\001\220"
+    "\265\030\001:\004\300\363\030\001B\237\001\n\035openfmb.interconnectionmod"
+    "uleP\001Z\\gitlab.com/openfmb/psm/ops/protob"
+    "uf/go-openfmb-ops-protobuf/v2/openfmb/in"
+    "terconnectionmodule\252\002\035openfmb.interconne"
+    "ctionmoduleb\006proto3"
+};
+static const ::_pbi::DescriptorTable* const descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_deps[3] =
+    {
+        &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
+        &::descriptor_table_google_2fprotobuf_2fwrappers_2eproto,
+        &::descriptor_table_uml_2eproto,
+};
+static ::absl::once_flag descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto = {
+    false,
+    false,
+    2379,
+    descriptor_table_protodef_interconnectionmodule_2finterconnectionmodule_2eproto,
+    "interconnectionmodule/interconnectionmodule.proto",
+    &descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_once,
+    descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_deps,
+    3,
+    7,
+    schemas,
+    file_default_instances,
+    TableStruct_interconnectionmodule_2finterconnectionmodule_2eproto::offsets,
+    file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto,
+    file_level_enum_descriptors_interconnectionmodule_2finterconnectionmodule_2eproto,
+    file_level_service_descriptors_interconnectionmodule_2finterconnectionmodule_2eproto,
 };
 
-const char descriptor_table_protodef_interconnectionmodule_2finterconnectionmodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n1interconnectionmodule/interconnectionm"
-  "odule.proto\022\025interconnectionmodule\032\tuml."
-  "proto\032\036google/protobuf/wrappers.proto\032\037c"
-  "ommonmodule/commonmodule.proto\"\245\004\n\024Inter"
-  "connectionPoint\0223\n\021blackStartEnabled\030\001 \001"
-  "(\0132\030.commonmodule.ControlSPC\022:\n\030frequenc"
-  "ySetPointEnabled\030\002 \001(\0132\030.commonmodule.Co"
-  "ntrolSPC\022(\n\006island\030\003 \001(\0132\030.commonmodule."
-  "ControlSPC\022/\n\npctHzDroop\030\004 \001(\0132\033.google."
-  "protobuf.FloatValue\022.\n\tpctVDroop\030\005 \001(\0132\033"
-  ".google.protobuf.FloatValue\022)\n\trampRates"
-  "\030\006 \001(\0132\026.commonmodule.RampRate\022<\n\032reacti"
-  "vePwrSetPointEnabled\030\007 \001(\0132\030.commonmodul"
-  "e.ControlSPC\0228\n\026realPwrSetPointEnabled\030\010"
-  " \001(\0132\030.commonmodule.ControlSPC\0228\n\026voltag"
-  "eSetPointEnabled\030\t \001(\0132\030.commonmodule.Co"
-  "ntrolSPC\0224\n\tstartTime\030\n \001(\0132\027.commonmodu"
-  "le.TimestampB\010\210\265\030\001\220\265\030\001\"[\n\022Interconnectio"
-  "nCSG\022E\n\006crvPts\030\001 \003(\0132+.interconnectionmo"
-  "dule.InterconnectionPointB\010\210\265\030\001\220\265\030\001\"j\n\"I"
-  "nterconnectionControlScheduleFSCH\022D\n\007Val"
-  "DCSG\030\001 \001(\0132).interconnectionmodule.Inter"
-  "connectionCSGB\010\210\265\030\001\220\265\030\001\"\300\001\n\033Interconnect"
-  "ionScheduleFSCC\0224\n\013controlFSCC\030\001 \001(\0132\031.c"
-  "ommonmodule.ControlFSCCB\004\200\265\030\001\022k\n\"interco"
-  "nnectionControlScheduleFSCH\030\002 \003(\01329.inte"
-  "rconnectionmodule.InterconnectionControl"
-  "ScheduleFSCHB\004\220\265\030\000\"\352\001\n\027InterconnectionSc"
-  "hedule\022>\n\020identifiedObject\030\001 \001(\0132\036.commo"
-  "nmodule.IdentifiedObjectB\004\200\265\030\001\022,\n\005check\030"
-  "\002 \001(\0132\035.commonmodule.CheckConditions\022a\n\033"
-  "interconnectionScheduleFSCC\030\003 \001(\01322.inte"
-  "rconnectionmodule.InterconnectionSchedul"
-  "eFSCCB\010\210\265\030\001\220\265\030\001\"\261\003\n%PlannedInterconnecti"
-  "onScheduleProfile\022B\n\022controlMessageInfo\030"
-  "\001 \001(\0132 .commonmodule.ControlMessageInfoB"
-  "\004\200\265\030\001\022Q\n\036requesterCircuitSegmentService\030"
-  "\002 \001(\0132\037.commonmodule.ApplicationSystemB\010"
-  "\210\265\030\001\220\265\030\001\022Y\n\027interconnectionSchedule\030\003 \001("
-  "\0132..interconnectionmodule.Interconnectio"
-  "nScheduleB\010\210\265\030\001\220\265\030\001\022=\n\010tiePoint\030\004 \001(\0132!."
-  "commonmodule.ConductingEquipmentB\010\210\265\030\001\220\265"
-  "\030\001\022Q\n\036responderCircuitSegmentService\030\005 \001"
-  "(\0132\037.commonmodule.ApplicationSystemB\010\210\265\030"
-  "\001\220\265\030\001:\004\300\363\030\001\"\263\003\n\'RequestedInterconnection"
-  "ScheduleProfile\022B\n\022controlMessageInfo\030\001 "
-  "\001(\0132 .commonmodule.ControlMessageInfoB\004\200"
-  "\265\030\001\022Q\n\036requesterCircuitSegmentService\030\002 "
-  "\001(\0132\037.commonmodule.ApplicationSystemB\010\210\265"
-  "\030\001\220\265\030\001\022Y\n\027interconnectionSchedule\030\003 \001(\0132"
-  "..interconnectionmodule.InterconnectionS"
-  "cheduleB\010\210\265\030\001\220\265\030\001\022=\n\010tiePoint\030\004 \001(\0132!.co"
-  "mmonmodule.ConductingEquipmentB\010\210\265\030\001\220\265\030\001"
-  "\022Q\n\036responderCircuitSegmentService\030\005 \001(\013"
-  "2\037.commonmodule.ApplicationSystemB\010\210\265\030\001\220"
-  "\265\030\001:\004\300\363\030\001B\237\001\n\035openfmb.interconnectionmod"
-  "uleP\001Z\\gitlab.com/openfmb/psm/ops/protob"
-  "uf/go-openfmb-ops-protobuf/v2/openfmb/in"
-  "terconnectionmodule\252\002\035openfmb.interconne"
-  "ctionmoduleb\006proto3"
-  ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_deps[3] = {
-  &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
-  &::descriptor_table_google_2fprotobuf_2fwrappers_2eproto,
-  &::descriptor_table_uml_2eproto,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto = {
-  false, false, 2379, descriptor_table_protodef_interconnectionmodule_2finterconnectionmodule_2eproto, "interconnectionmodule/interconnectionmodule.proto", 
-  &descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_once, descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_deps, 3, 7,
-  schemas, file_default_instances, TableStruct_interconnectionmodule_2finterconnectionmodule_2eproto::offsets,
-  file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto, file_level_enum_descriptors_interconnectionmodule_2finterconnectionmodule_2eproto, file_level_service_descriptors_interconnectionmodule_2finterconnectionmodule_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
-descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_metadata_getter(int index) {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto);
-  return descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto.file_level_metadata[index];
+// This function exists to be marked as weak.
+// It can significantly speed up compilation by breaking up LLVM's SCC
+// in the .pb.cc translation units. Large translation units see a
+// reduction of more than 35% of walltime for optimized builds. Without
+// the weak attribute all the messages in the file, including all the
+// vtables and everything they use become part of the same SCC through
+// a cycle like:
+// GetMetadata -> descriptor table -> default instances ->
+//   vtables -> GetMetadata
+// By adding a weak function here we break the connection from the
+// individual vtables back into the descriptor table.
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_getter() {
+  return &descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto;
 }
-
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_interconnectionmodule_2finterconnectionmodule_2eproto(&descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
+static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_interconnectionmodule_2finterconnectionmodule_2eproto(&descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto);
 namespace interconnectionmodule {
-
 // ===================================================================
 
 class InterconnectionPoint::_Internal {
@@ -301,8 +362,8 @@ class InterconnectionPoint::_Internal {
   static const ::commonmodule::ControlSPC& blackstartenabled(const InterconnectionPoint* msg);
   static const ::commonmodule::ControlSPC& frequencysetpointenabled(const InterconnectionPoint* msg);
   static const ::commonmodule::ControlSPC& island(const InterconnectionPoint* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pcthzdroop(const InterconnectionPoint* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pctvdroop(const InterconnectionPoint* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& pcthzdroop(const InterconnectionPoint* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& pctvdroop(const InterconnectionPoint* msg);
   static const ::commonmodule::RampRate& ramprates(const InterconnectionPoint* msg);
   static const ::commonmodule::ControlSPC& reactivepwrsetpointenabled(const InterconnectionPoint* msg);
   static const ::commonmodule::ControlSPC& realpwrsetpointenabled(const InterconnectionPoint* msg);
@@ -312,591 +373,592 @@ class InterconnectionPoint::_Internal {
 
 const ::commonmodule::ControlSPC&
 InterconnectionPoint::_Internal::blackstartenabled(const InterconnectionPoint* msg) {
-  return *msg->blackstartenabled_;
+  return *msg->_impl_.blackstartenabled_;
 }
 const ::commonmodule::ControlSPC&
 InterconnectionPoint::_Internal::frequencysetpointenabled(const InterconnectionPoint* msg) {
-  return *msg->frequencysetpointenabled_;
+  return *msg->_impl_.frequencysetpointenabled_;
 }
 const ::commonmodule::ControlSPC&
 InterconnectionPoint::_Internal::island(const InterconnectionPoint* msg) {
-  return *msg->island_;
+  return *msg->_impl_.island_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 InterconnectionPoint::_Internal::pcthzdroop(const InterconnectionPoint* msg) {
-  return *msg->pcthzdroop_;
+  return *msg->_impl_.pcthzdroop_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 InterconnectionPoint::_Internal::pctvdroop(const InterconnectionPoint* msg) {
-  return *msg->pctvdroop_;
+  return *msg->_impl_.pctvdroop_;
 }
 const ::commonmodule::RampRate&
 InterconnectionPoint::_Internal::ramprates(const InterconnectionPoint* msg) {
-  return *msg->ramprates_;
+  return *msg->_impl_.ramprates_;
 }
 const ::commonmodule::ControlSPC&
 InterconnectionPoint::_Internal::reactivepwrsetpointenabled(const InterconnectionPoint* msg) {
-  return *msg->reactivepwrsetpointenabled_;
+  return *msg->_impl_.reactivepwrsetpointenabled_;
 }
 const ::commonmodule::ControlSPC&
 InterconnectionPoint::_Internal::realpwrsetpointenabled(const InterconnectionPoint* msg) {
-  return *msg->realpwrsetpointenabled_;
+  return *msg->_impl_.realpwrsetpointenabled_;
 }
 const ::commonmodule::ControlSPC&
 InterconnectionPoint::_Internal::voltagesetpointenabled(const InterconnectionPoint* msg) {
-  return *msg->voltagesetpointenabled_;
+  return *msg->_impl_.voltagesetpointenabled_;
 }
 const ::commonmodule::Timestamp&
 InterconnectionPoint::_Internal::starttime(const InterconnectionPoint* msg) {
-  return *msg->starttime_;
+  return *msg->_impl_.starttime_;
 }
 void InterconnectionPoint::clear_blackstartenabled() {
-  if (GetArena() == nullptr && blackstartenabled_ != nullptr) {
-    delete blackstartenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.blackstartenabled_ != nullptr) {
+    delete _impl_.blackstartenabled_;
   }
-  blackstartenabled_ = nullptr;
+  _impl_.blackstartenabled_ = nullptr;
 }
 void InterconnectionPoint::clear_frequencysetpointenabled() {
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
-    delete frequencysetpointenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.frequencysetpointenabled_ != nullptr) {
+    delete _impl_.frequencysetpointenabled_;
   }
-  frequencysetpointenabled_ = nullptr;
+  _impl_.frequencysetpointenabled_ = nullptr;
 }
 void InterconnectionPoint::clear_island() {
-  if (GetArena() == nullptr && island_ != nullptr) {
-    delete island_;
+  if (GetArenaForAllocation() == nullptr && _impl_.island_ != nullptr) {
+    delete _impl_.island_;
   }
-  island_ = nullptr;
+  _impl_.island_ = nullptr;
 }
 void InterconnectionPoint::clear_pcthzdroop() {
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
-    delete pcthzdroop_;
+  if (GetArenaForAllocation() == nullptr && _impl_.pcthzdroop_ != nullptr) {
+    delete _impl_.pcthzdroop_;
   }
-  pcthzdroop_ = nullptr;
+  _impl_.pcthzdroop_ = nullptr;
 }
 void InterconnectionPoint::clear_pctvdroop() {
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
-    delete pctvdroop_;
+  if (GetArenaForAllocation() == nullptr && _impl_.pctvdroop_ != nullptr) {
+    delete _impl_.pctvdroop_;
   }
-  pctvdroop_ = nullptr;
+  _impl_.pctvdroop_ = nullptr;
 }
 void InterconnectionPoint::clear_ramprates() {
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
-    delete ramprates_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ramprates_ != nullptr) {
+    delete _impl_.ramprates_;
   }
-  ramprates_ = nullptr;
+  _impl_.ramprates_ = nullptr;
 }
 void InterconnectionPoint::clear_reactivepwrsetpointenabled() {
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
-    delete reactivepwrsetpointenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.reactivepwrsetpointenabled_ != nullptr) {
+    delete _impl_.reactivepwrsetpointenabled_;
   }
-  reactivepwrsetpointenabled_ = nullptr;
+  _impl_.reactivepwrsetpointenabled_ = nullptr;
 }
 void InterconnectionPoint::clear_realpwrsetpointenabled() {
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
-    delete realpwrsetpointenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.realpwrsetpointenabled_ != nullptr) {
+    delete _impl_.realpwrsetpointenabled_;
   }
-  realpwrsetpointenabled_ = nullptr;
+  _impl_.realpwrsetpointenabled_ = nullptr;
 }
 void InterconnectionPoint::clear_voltagesetpointenabled() {
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
-    delete voltagesetpointenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagesetpointenabled_ != nullptr) {
+    delete _impl_.voltagesetpointenabled_;
   }
-  voltagesetpointenabled_ = nullptr;
+  _impl_.voltagesetpointenabled_ = nullptr;
 }
 void InterconnectionPoint::clear_starttime() {
-  if (GetArena() == nullptr && starttime_ != nullptr) {
-    delete starttime_;
+  if (GetArenaForAllocation() == nullptr && _impl_.starttime_ != nullptr) {
+    delete _impl_.starttime_;
   }
-  starttime_ = nullptr;
+  _impl_.starttime_ = nullptr;
 }
 InterconnectionPoint::InterconnectionPoint(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:interconnectionmodule.InterconnectionPoint)
 }
 InterconnectionPoint::InterconnectionPoint(const InterconnectionPoint& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  InterconnectionPoint* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.blackstartenabled_){nullptr}
+    , decltype(_impl_.frequencysetpointenabled_){nullptr}
+    , decltype(_impl_.island_){nullptr}
+    , decltype(_impl_.pcthzdroop_){nullptr}
+    , decltype(_impl_.pctvdroop_){nullptr}
+    , decltype(_impl_.ramprates_){nullptr}
+    , decltype(_impl_.reactivepwrsetpointenabled_){nullptr}
+    , decltype(_impl_.realpwrsetpointenabled_){nullptr}
+    , decltype(_impl_.voltagesetpointenabled_){nullptr}
+    , decltype(_impl_.starttime_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_blackstartenabled()) {
-    blackstartenabled_ = new ::commonmodule::ControlSPC(*from.blackstartenabled_);
-  } else {
-    blackstartenabled_ = nullptr;
+    _this->_impl_.blackstartenabled_ = new ::commonmodule::ControlSPC(*from._impl_.blackstartenabled_);
   }
   if (from._internal_has_frequencysetpointenabled()) {
-    frequencysetpointenabled_ = new ::commonmodule::ControlSPC(*from.frequencysetpointenabled_);
-  } else {
-    frequencysetpointenabled_ = nullptr;
+    _this->_impl_.frequencysetpointenabled_ = new ::commonmodule::ControlSPC(*from._impl_.frequencysetpointenabled_);
   }
   if (from._internal_has_island()) {
-    island_ = new ::commonmodule::ControlSPC(*from.island_);
-  } else {
-    island_ = nullptr;
+    _this->_impl_.island_ = new ::commonmodule::ControlSPC(*from._impl_.island_);
   }
   if (from._internal_has_pcthzdroop()) {
-    pcthzdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pcthzdroop_);
-  } else {
-    pcthzdroop_ = nullptr;
+    _this->_impl_.pcthzdroop_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.pcthzdroop_);
   }
   if (from._internal_has_pctvdroop()) {
-    pctvdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pctvdroop_);
-  } else {
-    pctvdroop_ = nullptr;
+    _this->_impl_.pctvdroop_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.pctvdroop_);
   }
   if (from._internal_has_ramprates()) {
-    ramprates_ = new ::commonmodule::RampRate(*from.ramprates_);
-  } else {
-    ramprates_ = nullptr;
+    _this->_impl_.ramprates_ = new ::commonmodule::RampRate(*from._impl_.ramprates_);
   }
   if (from._internal_has_reactivepwrsetpointenabled()) {
-    reactivepwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from.reactivepwrsetpointenabled_);
-  } else {
-    reactivepwrsetpointenabled_ = nullptr;
+    _this->_impl_.reactivepwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from._impl_.reactivepwrsetpointenabled_);
   }
   if (from._internal_has_realpwrsetpointenabled()) {
-    realpwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from.realpwrsetpointenabled_);
-  } else {
-    realpwrsetpointenabled_ = nullptr;
+    _this->_impl_.realpwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from._impl_.realpwrsetpointenabled_);
   }
   if (from._internal_has_voltagesetpointenabled()) {
-    voltagesetpointenabled_ = new ::commonmodule::ControlSPC(*from.voltagesetpointenabled_);
-  } else {
-    voltagesetpointenabled_ = nullptr;
+    _this->_impl_.voltagesetpointenabled_ = new ::commonmodule::ControlSPC(*from._impl_.voltagesetpointenabled_);
   }
   if (from._internal_has_starttime()) {
-    starttime_ = new ::commonmodule::Timestamp(*from.starttime_);
-  } else {
-    starttime_ = nullptr;
+    _this->_impl_.starttime_ = new ::commonmodule::Timestamp(*from._impl_.starttime_);
   }
   // @@protoc_insertion_point(copy_constructor:interconnectionmodule.InterconnectionPoint)
 }
 
-void InterconnectionPoint::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&blackstartenabled_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&starttime_) -
-    reinterpret_cast<char*>(&blackstartenabled_)) + sizeof(starttime_));
+inline void InterconnectionPoint::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.blackstartenabled_){nullptr}
+    , decltype(_impl_.frequencysetpointenabled_){nullptr}
+    , decltype(_impl_.island_){nullptr}
+    , decltype(_impl_.pcthzdroop_){nullptr}
+    , decltype(_impl_.pctvdroop_){nullptr}
+    , decltype(_impl_.ramprates_){nullptr}
+    , decltype(_impl_.reactivepwrsetpointenabled_){nullptr}
+    , decltype(_impl_.realpwrsetpointenabled_){nullptr}
+    , decltype(_impl_.voltagesetpointenabled_){nullptr}
+    , decltype(_impl_.starttime_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 InterconnectionPoint::~InterconnectionPoint() {
   // @@protoc_insertion_point(destructor:interconnectionmodule.InterconnectionPoint)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void InterconnectionPoint::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete blackstartenabled_;
-  if (this != internal_default_instance()) delete frequencysetpointenabled_;
-  if (this != internal_default_instance()) delete island_;
-  if (this != internal_default_instance()) delete pcthzdroop_;
-  if (this != internal_default_instance()) delete pctvdroop_;
-  if (this != internal_default_instance()) delete ramprates_;
-  if (this != internal_default_instance()) delete reactivepwrsetpointenabled_;
-  if (this != internal_default_instance()) delete realpwrsetpointenabled_;
-  if (this != internal_default_instance()) delete voltagesetpointenabled_;
-  if (this != internal_default_instance()) delete starttime_;
+inline void InterconnectionPoint::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.blackstartenabled_;
+  if (this != internal_default_instance()) delete _impl_.frequencysetpointenabled_;
+  if (this != internal_default_instance()) delete _impl_.island_;
+  if (this != internal_default_instance()) delete _impl_.pcthzdroop_;
+  if (this != internal_default_instance()) delete _impl_.pctvdroop_;
+  if (this != internal_default_instance()) delete _impl_.ramprates_;
+  if (this != internal_default_instance()) delete _impl_.reactivepwrsetpointenabled_;
+  if (this != internal_default_instance()) delete _impl_.realpwrsetpointenabled_;
+  if (this != internal_default_instance()) delete _impl_.voltagesetpointenabled_;
+  if (this != internal_default_instance()) delete _impl_.starttime_;
 }
 
-void InterconnectionPoint::ArenaDtor(void* object) {
-  InterconnectionPoint* _this = reinterpret_cast< InterconnectionPoint* >(object);
-  (void)_this;
-}
-void InterconnectionPoint::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void InterconnectionPoint::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void InterconnectionPoint::Clear() {
 // @@protoc_insertion_point(message_clear_start:interconnectionmodule.InterconnectionPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && blackstartenabled_ != nullptr) {
-    delete blackstartenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.blackstartenabled_ != nullptr) {
+    delete _impl_.blackstartenabled_;
   }
-  blackstartenabled_ = nullptr;
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
-    delete frequencysetpointenabled_;
+  _impl_.blackstartenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.frequencysetpointenabled_ != nullptr) {
+    delete _impl_.frequencysetpointenabled_;
   }
-  frequencysetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && island_ != nullptr) {
-    delete island_;
+  _impl_.frequencysetpointenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.island_ != nullptr) {
+    delete _impl_.island_;
   }
-  island_ = nullptr;
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
-    delete pcthzdroop_;
+  _impl_.island_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.pcthzdroop_ != nullptr) {
+    delete _impl_.pcthzdroop_;
   }
-  pcthzdroop_ = nullptr;
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
-    delete pctvdroop_;
+  _impl_.pcthzdroop_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.pctvdroop_ != nullptr) {
+    delete _impl_.pctvdroop_;
   }
-  pctvdroop_ = nullptr;
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
-    delete ramprates_;
+  _impl_.pctvdroop_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ramprates_ != nullptr) {
+    delete _impl_.ramprates_;
   }
-  ramprates_ = nullptr;
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
-    delete reactivepwrsetpointenabled_;
+  _impl_.ramprates_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.reactivepwrsetpointenabled_ != nullptr) {
+    delete _impl_.reactivepwrsetpointenabled_;
   }
-  reactivepwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
-    delete realpwrsetpointenabled_;
+  _impl_.reactivepwrsetpointenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.realpwrsetpointenabled_ != nullptr) {
+    delete _impl_.realpwrsetpointenabled_;
   }
-  realpwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
-    delete voltagesetpointenabled_;
+  _impl_.realpwrsetpointenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagesetpointenabled_ != nullptr) {
+    delete _impl_.voltagesetpointenabled_;
   }
-  voltagesetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && starttime_ != nullptr) {
-    delete starttime_;
+  _impl_.voltagesetpointenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.starttime_ != nullptr) {
+    delete _impl_.starttime_;
   }
-  starttime_ = nullptr;
+  _impl_.starttime_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* InterconnectionPoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* InterconnectionPoint::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlSPC blackStartEnabled = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_blackstartenabled(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlSPC frequencySetPointEnabled = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_frequencysetpointenabled(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlSPC island = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_island(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue pctHzDroop = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_pcthzdroop(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue pctVDroop = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_pctvdroop(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.RampRate rampRates = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_ramprates(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_reactivepwrsetpointenabled(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlSPC realPwrSetPointEnabled = 8;
       case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 66)) {
           ptr = ctx->ParseMessage(_internal_mutable_realpwrsetpointenabled(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlSPC voltageSetPointEnabled = 9;
       case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 74)) {
           ptr = ctx->ParseMessage(_internal_mutable_voltagesetpointenabled(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.Timestamp startTime = 10 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 82)) {
           ptr = ctx->ParseMessage(_internal_mutable_starttime(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* InterconnectionPoint::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* InterconnectionPoint::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.InterconnectionPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlSPC blackStartEnabled = 1;
-  if (this->has_blackstartenabled()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_blackstartenabled()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::blackstartenabled(this), target, stream);
+      InternalWriteMessage(1, _Internal::blackstartenabled(this),
+        _Internal::blackstartenabled(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlSPC frequencySetPointEnabled = 2;
-  if (this->has_frequencysetpointenabled()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_frequencysetpointenabled()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::frequencysetpointenabled(this), target, stream);
+      InternalWriteMessage(2, _Internal::frequencysetpointenabled(this),
+        _Internal::frequencysetpointenabled(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlSPC island = 3;
-  if (this->has_island()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_island()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::island(this), target, stream);
+      InternalWriteMessage(3, _Internal::island(this),
+        _Internal::island(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue pctHzDroop = 4;
-  if (this->has_pcthzdroop()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_pcthzdroop()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::pcthzdroop(this), target, stream);
+      InternalWriteMessage(4, _Internal::pcthzdroop(this),
+        _Internal::pcthzdroop(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue pctVDroop = 5;
-  if (this->has_pctvdroop()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_pctvdroop()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::pctvdroop(this), target, stream);
+      InternalWriteMessage(5, _Internal::pctvdroop(this),
+        _Internal::pctvdroop(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.RampRate rampRates = 6;
-  if (this->has_ramprates()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ramprates()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::ramprates(this), target, stream);
+      InternalWriteMessage(6, _Internal::ramprates(this),
+        _Internal::ramprates(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 7;
-  if (this->has_reactivepwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_reactivepwrsetpointenabled()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::reactivepwrsetpointenabled(this), target, stream);
+      InternalWriteMessage(7, _Internal::reactivepwrsetpointenabled(this),
+        _Internal::reactivepwrsetpointenabled(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlSPC realPwrSetPointEnabled = 8;
-  if (this->has_realpwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_realpwrsetpointenabled()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::realpwrsetpointenabled(this), target, stream);
+      InternalWriteMessage(8, _Internal::realpwrsetpointenabled(this),
+        _Internal::realpwrsetpointenabled(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlSPC voltageSetPointEnabled = 9;
-  if (this->has_voltagesetpointenabled()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_voltagesetpointenabled()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        9, _Internal::voltagesetpointenabled(this), target, stream);
+      InternalWriteMessage(9, _Internal::voltagesetpointenabled(this),
+        _Internal::voltagesetpointenabled(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.Timestamp startTime = 10 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_starttime()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_starttime()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        10, _Internal::starttime(this), target, stream);
+      InternalWriteMessage(10, _Internal::starttime(this),
+        _Internal::starttime(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:interconnectionmodule.InterconnectionPoint)
   return target;
 }
 
-size_t InterconnectionPoint::ByteSizeLong() const {
+::size_t InterconnectionPoint::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:interconnectionmodule.InterconnectionPoint)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlSPC blackStartEnabled = 1;
-  if (this->has_blackstartenabled()) {
+  if (this->_internal_has_blackstartenabled()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *blackstartenabled_);
+        *_impl_.blackstartenabled_);
   }
 
   // .commonmodule.ControlSPC frequencySetPointEnabled = 2;
-  if (this->has_frequencysetpointenabled()) {
+  if (this->_internal_has_frequencysetpointenabled()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *frequencysetpointenabled_);
+        *_impl_.frequencysetpointenabled_);
   }
 
   // .commonmodule.ControlSPC island = 3;
-  if (this->has_island()) {
+  if (this->_internal_has_island()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *island_);
+        *_impl_.island_);
   }
 
   // .google.protobuf.FloatValue pctHzDroop = 4;
-  if (this->has_pcthzdroop()) {
+  if (this->_internal_has_pcthzdroop()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *pcthzdroop_);
+        *_impl_.pcthzdroop_);
   }
 
   // .google.protobuf.FloatValue pctVDroop = 5;
-  if (this->has_pctvdroop()) {
+  if (this->_internal_has_pctvdroop()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *pctvdroop_);
+        *_impl_.pctvdroop_);
   }
 
   // .commonmodule.RampRate rampRates = 6;
-  if (this->has_ramprates()) {
+  if (this->_internal_has_ramprates()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ramprates_);
+        *_impl_.ramprates_);
   }
 
   // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 7;
-  if (this->has_reactivepwrsetpointenabled()) {
+  if (this->_internal_has_reactivepwrsetpointenabled()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *reactivepwrsetpointenabled_);
+        *_impl_.reactivepwrsetpointenabled_);
   }
 
   // .commonmodule.ControlSPC realPwrSetPointEnabled = 8;
-  if (this->has_realpwrsetpointenabled()) {
+  if (this->_internal_has_realpwrsetpointenabled()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *realpwrsetpointenabled_);
+        *_impl_.realpwrsetpointenabled_);
   }
 
   // .commonmodule.ControlSPC voltageSetPointEnabled = 9;
-  if (this->has_voltagesetpointenabled()) {
+  if (this->_internal_has_voltagesetpointenabled()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *voltagesetpointenabled_);
+        *_impl_.voltagesetpointenabled_);
   }
 
   // .commonmodule.Timestamp startTime = 10 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_starttime()) {
+  if (this->_internal_has_starttime()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *starttime_);
+        *_impl_.starttime_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void InterconnectionPoint::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:interconnectionmodule.InterconnectionPoint)
-  GOOGLE_DCHECK_NE(&from, this);
-  const InterconnectionPoint* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<InterconnectionPoint>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:interconnectionmodule.InterconnectionPoint)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:interconnectionmodule.InterconnectionPoint)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData InterconnectionPoint::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    InterconnectionPoint::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*InterconnectionPoint::GetClassData() const { return &_class_data_; }
 
-void InterconnectionPoint::MergeFrom(const InterconnectionPoint& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.InterconnectionPoint)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void InterconnectionPoint::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<InterconnectionPoint*>(&to_msg);
+  auto& from = static_cast<const InterconnectionPoint&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.InterconnectionPoint)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_blackstartenabled()) {
-    _internal_mutable_blackstartenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_blackstartenabled());
+  if (from._internal_has_blackstartenabled()) {
+    _this->_internal_mutable_blackstartenabled()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_blackstartenabled());
   }
-  if (from.has_frequencysetpointenabled()) {
-    _internal_mutable_frequencysetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_frequencysetpointenabled());
+  if (from._internal_has_frequencysetpointenabled()) {
+    _this->_internal_mutable_frequencysetpointenabled()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_frequencysetpointenabled());
   }
-  if (from.has_island()) {
-    _internal_mutable_island()->::commonmodule::ControlSPC::MergeFrom(from._internal_island());
+  if (from._internal_has_island()) {
+    _this->_internal_mutable_island()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_island());
   }
-  if (from.has_pcthzdroop()) {
-    _internal_mutable_pcthzdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pcthzdroop());
+  if (from._internal_has_pcthzdroop()) {
+    _this->_internal_mutable_pcthzdroop()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_pcthzdroop());
   }
-  if (from.has_pctvdroop()) {
-    _internal_mutable_pctvdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pctvdroop());
+  if (from._internal_has_pctvdroop()) {
+    _this->_internal_mutable_pctvdroop()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_pctvdroop());
   }
-  if (from.has_ramprates()) {
-    _internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from._internal_ramprates());
+  if (from._internal_has_ramprates()) {
+    _this->_internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(
+        from._internal_ramprates());
   }
-  if (from.has_reactivepwrsetpointenabled()) {
-    _internal_mutable_reactivepwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_reactivepwrsetpointenabled());
+  if (from._internal_has_reactivepwrsetpointenabled()) {
+    _this->_internal_mutable_reactivepwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_reactivepwrsetpointenabled());
   }
-  if (from.has_realpwrsetpointenabled()) {
-    _internal_mutable_realpwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_realpwrsetpointenabled());
+  if (from._internal_has_realpwrsetpointenabled()) {
+    _this->_internal_mutable_realpwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_realpwrsetpointenabled());
   }
-  if (from.has_voltagesetpointenabled()) {
-    _internal_mutable_voltagesetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_voltagesetpointenabled());
+  if (from._internal_has_voltagesetpointenabled()) {
+    _this->_internal_mutable_voltagesetpointenabled()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_voltagesetpointenabled());
   }
-  if (from.has_starttime()) {
-    _internal_mutable_starttime()->::commonmodule::Timestamp::MergeFrom(from._internal_starttime());
+  if (from._internal_has_starttime()) {
+    _this->_internal_mutable_starttime()->::commonmodule::Timestamp::MergeFrom(
+        from._internal_starttime());
   }
-}
-
-void InterconnectionPoint::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:interconnectionmodule.InterconnectionPoint)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void InterconnectionPoint::CopyFrom(const InterconnectionPoint& from) {
@@ -912,20 +974,20 @@ bool InterconnectionPoint::IsInitialized() const {
 
 void InterconnectionPoint::InternalSwap(InterconnectionPoint* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(InterconnectionPoint, starttime_)
-      + sizeof(InterconnectionPoint::starttime_)
-      - PROTOBUF_FIELD_OFFSET(InterconnectionPoint, blackstartenabled_)>(
-          reinterpret_cast<char*>(&blackstartenabled_),
-          reinterpret_cast<char*>(&other->blackstartenabled_));
+      PROTOBUF_FIELD_OFFSET(InterconnectionPoint, _impl_.starttime_)
+      + sizeof(InterconnectionPoint::_impl_.starttime_)
+      - PROTOBUF_FIELD_OFFSET(InterconnectionPoint, _impl_.blackstartenabled_)>(
+          reinterpret_cast<char*>(&_impl_.blackstartenabled_),
+          reinterpret_cast<char*>(&other->_impl_.blackstartenabled_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata InterconnectionPoint::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_getter, &descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_once,
+      file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto[0]);
 }
-
-
 // ===================================================================
 
 class InterconnectionCSG::_Internal {
@@ -933,62 +995,66 @@ class InterconnectionCSG::_Internal {
 };
 
 InterconnectionCSG::InterconnectionCSG(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  crvpts_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:interconnectionmodule.InterconnectionCSG)
 }
 InterconnectionCSG::InterconnectionCSG(const InterconnectionCSG& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      crvpts_(from.crvpts_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  InterconnectionCSG* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.crvpts_){from._impl_.crvpts_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:interconnectionmodule.InterconnectionCSG)
 }
 
-void InterconnectionCSG::SharedCtor() {
+inline void InterconnectionCSG::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.crvpts_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 InterconnectionCSG::~InterconnectionCSG() {
   // @@protoc_insertion_point(destructor:interconnectionmodule.InterconnectionCSG)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void InterconnectionCSG::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void InterconnectionCSG::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.crvpts_.~RepeatedPtrField();
 }
 
-void InterconnectionCSG::ArenaDtor(void* object) {
-  InterconnectionCSG* _this = reinterpret_cast< InterconnectionCSG* >(object);
-  (void)_this;
-}
-void InterconnectionCSG::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void InterconnectionCSG::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void InterconnectionCSG::Clear() {
 // @@protoc_insertion_point(message_clear_start:interconnectionmodule.InterconnectionCSG)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  crvpts_.Clear();
+  _impl_.crvpts_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* InterconnectionCSG::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* InterconnectionCSG::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated .interconnectionmodule.InterconnectionPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -996,106 +1062,90 @@ const char* InterconnectionCSG::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* InterconnectionCSG::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* InterconnectionCSG::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.InterconnectionCSG)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .interconnectionmodule.InterconnectionPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_crvpts_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_crvpts_size()); i < n; i++) {
+    const auto& repfield = this->_internal_crvpts(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_crvpts(i), target, stream);
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:interconnectionmodule.InterconnectionCSG)
   return target;
 }
 
-size_t InterconnectionCSG::ByteSizeLong() const {
+::size_t InterconnectionCSG::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:interconnectionmodule.InterconnectionCSG)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .interconnectionmodule.InterconnectionPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   total_size += 1UL * this->_internal_crvpts_size();
-  for (const auto& msg : this->crvpts_) {
+  for (const auto& msg : this->_impl_.crvpts_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void InterconnectionCSG::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:interconnectionmodule.InterconnectionCSG)
-  GOOGLE_DCHECK_NE(&from, this);
-  const InterconnectionCSG* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<InterconnectionCSG>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:interconnectionmodule.InterconnectionCSG)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:interconnectionmodule.InterconnectionCSG)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData InterconnectionCSG::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    InterconnectionCSG::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*InterconnectionCSG::GetClassData() const { return &_class_data_; }
 
-void InterconnectionCSG::MergeFrom(const InterconnectionCSG& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.InterconnectionCSG)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void InterconnectionCSG::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<InterconnectionCSG*>(&to_msg);
+  auto& from = static_cast<const InterconnectionCSG&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.InterconnectionCSG)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  crvpts_.MergeFrom(from.crvpts_);
-}
-
-void InterconnectionCSG::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:interconnectionmodule.InterconnectionCSG)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_impl_.crvpts_.MergeFrom(from._impl_.crvpts_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void InterconnectionCSG::CopyFrom(const InterconnectionCSG& from) {
@@ -1111,15 +1161,15 @@ bool InterconnectionCSG::IsInitialized() const {
 
 void InterconnectionCSG::InternalSwap(InterconnectionCSG* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  crvpts_.InternalSwap(&other->crvpts_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.crvpts_.InternalSwap(&other->_impl_.crvpts_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata InterconnectionCSG::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_getter, &descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_once,
+      file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto[1]);
 }
-
-
 // ===================================================================
 
 class InterconnectionControlScheduleFSCH::_Internal {
@@ -1129,177 +1179,163 @@ class InterconnectionControlScheduleFSCH::_Internal {
 
 const ::interconnectionmodule::InterconnectionCSG&
 InterconnectionControlScheduleFSCH::_Internal::valdcsg(const InterconnectionControlScheduleFSCH* msg) {
-  return *msg->valdcsg_;
+  return *msg->_impl_.valdcsg_;
 }
 InterconnectionControlScheduleFSCH::InterconnectionControlScheduleFSCH(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:interconnectionmodule.InterconnectionControlScheduleFSCH)
 }
 InterconnectionControlScheduleFSCH::InterconnectionControlScheduleFSCH(const InterconnectionControlScheduleFSCH& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  InterconnectionControlScheduleFSCH* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.valdcsg_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_valdcsg()) {
-    valdcsg_ = new ::interconnectionmodule::InterconnectionCSG(*from.valdcsg_);
-  } else {
-    valdcsg_ = nullptr;
+    _this->_impl_.valdcsg_ = new ::interconnectionmodule::InterconnectionCSG(*from._impl_.valdcsg_);
   }
   // @@protoc_insertion_point(copy_constructor:interconnectionmodule.InterconnectionControlScheduleFSCH)
 }
 
-void InterconnectionControlScheduleFSCH::SharedCtor() {
-valdcsg_ = nullptr;
+inline void InterconnectionControlScheduleFSCH::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.valdcsg_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 InterconnectionControlScheduleFSCH::~InterconnectionControlScheduleFSCH() {
   // @@protoc_insertion_point(destructor:interconnectionmodule.InterconnectionControlScheduleFSCH)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void InterconnectionControlScheduleFSCH::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete valdcsg_;
+inline void InterconnectionControlScheduleFSCH::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.valdcsg_;
 }
 
-void InterconnectionControlScheduleFSCH::ArenaDtor(void* object) {
-  InterconnectionControlScheduleFSCH* _this = reinterpret_cast< InterconnectionControlScheduleFSCH* >(object);
-  (void)_this;
-}
-void InterconnectionControlScheduleFSCH::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void InterconnectionControlScheduleFSCH::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void InterconnectionControlScheduleFSCH::Clear() {
 // @@protoc_insertion_point(message_clear_start:interconnectionmodule.InterconnectionControlScheduleFSCH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && valdcsg_ != nullptr) {
-    delete valdcsg_;
+  if (GetArenaForAllocation() == nullptr && _impl_.valdcsg_ != nullptr) {
+    delete _impl_.valdcsg_;
   }
-  valdcsg_ = nullptr;
+  _impl_.valdcsg_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* InterconnectionControlScheduleFSCH::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* InterconnectionControlScheduleFSCH::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .interconnectionmodule.InterconnectionCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_valdcsg(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* InterconnectionControlScheduleFSCH::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* InterconnectionControlScheduleFSCH::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.InterconnectionControlScheduleFSCH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .interconnectionmodule.InterconnectionCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_valdcsg()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_valdcsg()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::valdcsg(this), target, stream);
+      InternalWriteMessage(1, _Internal::valdcsg(this),
+        _Internal::valdcsg(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:interconnectionmodule.InterconnectionControlScheduleFSCH)
   return target;
 }
 
-size_t InterconnectionControlScheduleFSCH::ByteSizeLong() const {
+::size_t InterconnectionControlScheduleFSCH::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:interconnectionmodule.InterconnectionControlScheduleFSCH)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .interconnectionmodule.InterconnectionCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_valdcsg()) {
+  if (this->_internal_has_valdcsg()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *valdcsg_);
+        *_impl_.valdcsg_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void InterconnectionControlScheduleFSCH::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:interconnectionmodule.InterconnectionControlScheduleFSCH)
-  GOOGLE_DCHECK_NE(&from, this);
-  const InterconnectionControlScheduleFSCH* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<InterconnectionControlScheduleFSCH>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:interconnectionmodule.InterconnectionControlScheduleFSCH)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:interconnectionmodule.InterconnectionControlScheduleFSCH)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData InterconnectionControlScheduleFSCH::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    InterconnectionControlScheduleFSCH::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*InterconnectionControlScheduleFSCH::GetClassData() const { return &_class_data_; }
 
-void InterconnectionControlScheduleFSCH::MergeFrom(const InterconnectionControlScheduleFSCH& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.InterconnectionControlScheduleFSCH)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void InterconnectionControlScheduleFSCH::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<InterconnectionControlScheduleFSCH*>(&to_msg);
+  auto& from = static_cast<const InterconnectionControlScheduleFSCH&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.InterconnectionControlScheduleFSCH)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_valdcsg()) {
-    _internal_mutable_valdcsg()->::interconnectionmodule::InterconnectionCSG::MergeFrom(from._internal_valdcsg());
+  if (from._internal_has_valdcsg()) {
+    _this->_internal_mutable_valdcsg()->::interconnectionmodule::InterconnectionCSG::MergeFrom(
+        from._internal_valdcsg());
   }
-}
-
-void InterconnectionControlScheduleFSCH::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:interconnectionmodule.InterconnectionControlScheduleFSCH)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void InterconnectionControlScheduleFSCH::CopyFrom(const InterconnectionControlScheduleFSCH& from) {
@@ -1315,15 +1351,15 @@ bool InterconnectionControlScheduleFSCH::IsInitialized() const {
 
 void InterconnectionControlScheduleFSCH::InternalSwap(InterconnectionControlScheduleFSCH* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(valdcsg_, other->valdcsg_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.valdcsg_, other->_impl_.valdcsg_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata InterconnectionControlScheduleFSCH::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_getter, &descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_once,
+      file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto[2]);
 }
-
-
 // ===================================================================
 
 class InterconnectionScheduleFSCC::_Internal {
@@ -1333,89 +1369,94 @@ class InterconnectionScheduleFSCC::_Internal {
 
 const ::commonmodule::ControlFSCC&
 InterconnectionScheduleFSCC::_Internal::controlfscc(const InterconnectionScheduleFSCC* msg) {
-  return *msg->controlfscc_;
+  return *msg->_impl_.controlfscc_;
 }
 void InterconnectionScheduleFSCC::clear_controlfscc() {
-  if (GetArena() == nullptr && controlfscc_ != nullptr) {
-    delete controlfscc_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlfscc_ != nullptr) {
+    delete _impl_.controlfscc_;
   }
-  controlfscc_ = nullptr;
+  _impl_.controlfscc_ = nullptr;
 }
 InterconnectionScheduleFSCC::InterconnectionScheduleFSCC(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  interconnectioncontrolschedulefsch_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:interconnectionmodule.InterconnectionScheduleFSCC)
 }
 InterconnectionScheduleFSCC::InterconnectionScheduleFSCC(const InterconnectionScheduleFSCC& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      interconnectioncontrolschedulefsch_(from.interconnectioncontrolschedulefsch_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  InterconnectionScheduleFSCC* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.interconnectioncontrolschedulefsch_){from._impl_.interconnectioncontrolschedulefsch_}
+    , decltype(_impl_.controlfscc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlfscc()) {
-    controlfscc_ = new ::commonmodule::ControlFSCC(*from.controlfscc_);
-  } else {
-    controlfscc_ = nullptr;
+    _this->_impl_.controlfscc_ = new ::commonmodule::ControlFSCC(*from._impl_.controlfscc_);
   }
   // @@protoc_insertion_point(copy_constructor:interconnectionmodule.InterconnectionScheduleFSCC)
 }
 
-void InterconnectionScheduleFSCC::SharedCtor() {
-controlfscc_ = nullptr;
+inline void InterconnectionScheduleFSCC::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.interconnectioncontrolschedulefsch_){arena}
+    , decltype(_impl_.controlfscc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 InterconnectionScheduleFSCC::~InterconnectionScheduleFSCC() {
   // @@protoc_insertion_point(destructor:interconnectionmodule.InterconnectionScheduleFSCC)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void InterconnectionScheduleFSCC::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlfscc_;
+inline void InterconnectionScheduleFSCC::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.interconnectioncontrolschedulefsch_.~RepeatedPtrField();
+  if (this != internal_default_instance()) delete _impl_.controlfscc_;
 }
 
-void InterconnectionScheduleFSCC::ArenaDtor(void* object) {
-  InterconnectionScheduleFSCC* _this = reinterpret_cast< InterconnectionScheduleFSCC* >(object);
-  (void)_this;
-}
-void InterconnectionScheduleFSCC::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void InterconnectionScheduleFSCC::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void InterconnectionScheduleFSCC::Clear() {
 // @@protoc_insertion_point(message_clear_start:interconnectionmodule.InterconnectionScheduleFSCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  interconnectioncontrolschedulefsch_.Clear();
-  if (GetArena() == nullptr && controlfscc_ != nullptr) {
-    delete controlfscc_;
+  _impl_.interconnectioncontrolschedulefsch_.Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.controlfscc_ != nullptr) {
+    delete _impl_.controlfscc_;
   }
-  controlfscc_ = nullptr;
+  _impl_.controlfscc_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* InterconnectionScheduleFSCC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* InterconnectionScheduleFSCC::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlfscc(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // repeated .interconnectionmodule.InterconnectionControlScheduleFSCH interconnectionControlScheduleFSCH = 2 [(.uml.option_multiplicity_min) = 0];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -1423,124 +1464,108 @@ const char* InterconnectionScheduleFSCC::_InternalParse(const char* ptr, ::PROTO
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* InterconnectionScheduleFSCC::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* InterconnectionScheduleFSCC::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.InterconnectionScheduleFSCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlfscc()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlfscc()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlfscc(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlfscc(this),
+        _Internal::controlfscc(this).GetCachedSize(), target, stream);
   }
 
   // repeated .interconnectionmodule.InterconnectionControlScheduleFSCH interconnectionControlScheduleFSCH = 2 [(.uml.option_multiplicity_min) = 0];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_interconnectioncontrolschedulefsch_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_interconnectioncontrolschedulefsch_size()); i < n; i++) {
+    const auto& repfield = this->_internal_interconnectioncontrolschedulefsch(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, this->_internal_interconnectioncontrolschedulefsch(i), target, stream);
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:interconnectionmodule.InterconnectionScheduleFSCC)
   return target;
 }
 
-size_t InterconnectionScheduleFSCC::ByteSizeLong() const {
+::size_t InterconnectionScheduleFSCC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:interconnectionmodule.InterconnectionScheduleFSCC)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .interconnectionmodule.InterconnectionControlScheduleFSCH interconnectionControlScheduleFSCH = 2 [(.uml.option_multiplicity_min) = 0];
   total_size += 1UL * this->_internal_interconnectioncontrolschedulefsch_size();
-  for (const auto& msg : this->interconnectioncontrolschedulefsch_) {
+  for (const auto& msg : this->_impl_.interconnectioncontrolschedulefsch_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlfscc()) {
+  if (this->_internal_has_controlfscc()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlfscc_);
+        *_impl_.controlfscc_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void InterconnectionScheduleFSCC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:interconnectionmodule.InterconnectionScheduleFSCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  const InterconnectionScheduleFSCC* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<InterconnectionScheduleFSCC>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:interconnectionmodule.InterconnectionScheduleFSCC)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:interconnectionmodule.InterconnectionScheduleFSCC)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData InterconnectionScheduleFSCC::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    InterconnectionScheduleFSCC::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*InterconnectionScheduleFSCC::GetClassData() const { return &_class_data_; }
 
-void InterconnectionScheduleFSCC::MergeFrom(const InterconnectionScheduleFSCC& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.InterconnectionScheduleFSCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void InterconnectionScheduleFSCC::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<InterconnectionScheduleFSCC*>(&to_msg);
+  auto& from = static_cast<const InterconnectionScheduleFSCC&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.InterconnectionScheduleFSCC)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  interconnectioncontrolschedulefsch_.MergeFrom(from.interconnectioncontrolschedulefsch_);
-  if (from.has_controlfscc()) {
-    _internal_mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(from._internal_controlfscc());
+  _this->_impl_.interconnectioncontrolschedulefsch_.MergeFrom(from._impl_.interconnectioncontrolschedulefsch_);
+  if (from._internal_has_controlfscc()) {
+    _this->_internal_mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(
+        from._internal_controlfscc());
   }
-}
-
-void InterconnectionScheduleFSCC::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:interconnectionmodule.InterconnectionScheduleFSCC)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void InterconnectionScheduleFSCC::CopyFrom(const InterconnectionScheduleFSCC& from) {
@@ -1556,16 +1581,16 @@ bool InterconnectionScheduleFSCC::IsInitialized() const {
 
 void InterconnectionScheduleFSCC::InternalSwap(InterconnectionScheduleFSCC* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  interconnectioncontrolschedulefsch_.InternalSwap(&other->interconnectioncontrolschedulefsch_);
-  swap(controlfscc_, other->controlfscc_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.interconnectioncontrolschedulefsch_.InternalSwap(&other->_impl_.interconnectioncontrolschedulefsch_);
+  swap(_impl_.controlfscc_, other->_impl_.controlfscc_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata InterconnectionScheduleFSCC::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_getter, &descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_once,
+      file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto[3]);
 }
-
-
 // ===================================================================
 
 class InterconnectionSchedule::_Internal {
@@ -1577,270 +1602,257 @@ class InterconnectionSchedule::_Internal {
 
 const ::commonmodule::IdentifiedObject&
 InterconnectionSchedule::_Internal::identifiedobject(const InterconnectionSchedule* msg) {
-  return *msg->identifiedobject_;
+  return *msg->_impl_.identifiedobject_;
 }
 const ::commonmodule::CheckConditions&
 InterconnectionSchedule::_Internal::check(const InterconnectionSchedule* msg) {
-  return *msg->check_;
+  return *msg->_impl_.check_;
 }
 const ::interconnectionmodule::InterconnectionScheduleFSCC&
 InterconnectionSchedule::_Internal::interconnectionschedulefscc(const InterconnectionSchedule* msg) {
-  return *msg->interconnectionschedulefscc_;
+  return *msg->_impl_.interconnectionschedulefscc_;
 }
 void InterconnectionSchedule::clear_identifiedobject() {
-  if (GetArena() == nullptr && identifiedobject_ != nullptr) {
-    delete identifiedobject_;
+  if (GetArenaForAllocation() == nullptr && _impl_.identifiedobject_ != nullptr) {
+    delete _impl_.identifiedobject_;
   }
-  identifiedobject_ = nullptr;
+  _impl_.identifiedobject_ = nullptr;
 }
 void InterconnectionSchedule::clear_check() {
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
+  _impl_.check_ = nullptr;
 }
 InterconnectionSchedule::InterconnectionSchedule(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:interconnectionmodule.InterconnectionSchedule)
 }
 InterconnectionSchedule::InterconnectionSchedule(const InterconnectionSchedule& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  InterconnectionSchedule* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.identifiedobject_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.interconnectionschedulefscc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_identifiedobject()) {
-    identifiedobject_ = new ::commonmodule::IdentifiedObject(*from.identifiedobject_);
-  } else {
-    identifiedobject_ = nullptr;
+    _this->_impl_.identifiedobject_ = new ::commonmodule::IdentifiedObject(*from._impl_.identifiedobject_);
   }
   if (from._internal_has_check()) {
-    check_ = new ::commonmodule::CheckConditions(*from.check_);
-  } else {
-    check_ = nullptr;
+    _this->_impl_.check_ = new ::commonmodule::CheckConditions(*from._impl_.check_);
   }
   if (from._internal_has_interconnectionschedulefscc()) {
-    interconnectionschedulefscc_ = new ::interconnectionmodule::InterconnectionScheduleFSCC(*from.interconnectionschedulefscc_);
-  } else {
-    interconnectionschedulefscc_ = nullptr;
+    _this->_impl_.interconnectionschedulefscc_ = new ::interconnectionmodule::InterconnectionScheduleFSCC(*from._impl_.interconnectionschedulefscc_);
   }
   // @@protoc_insertion_point(copy_constructor:interconnectionmodule.InterconnectionSchedule)
 }
 
-void InterconnectionSchedule::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&identifiedobject_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&interconnectionschedulefscc_) -
-    reinterpret_cast<char*>(&identifiedobject_)) + sizeof(interconnectionschedulefscc_));
+inline void InterconnectionSchedule::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.identifiedobject_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.interconnectionschedulefscc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 InterconnectionSchedule::~InterconnectionSchedule() {
   // @@protoc_insertion_point(destructor:interconnectionmodule.InterconnectionSchedule)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void InterconnectionSchedule::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete identifiedobject_;
-  if (this != internal_default_instance()) delete check_;
-  if (this != internal_default_instance()) delete interconnectionschedulefscc_;
+inline void InterconnectionSchedule::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.identifiedobject_;
+  if (this != internal_default_instance()) delete _impl_.check_;
+  if (this != internal_default_instance()) delete _impl_.interconnectionschedulefscc_;
 }
 
-void InterconnectionSchedule::ArenaDtor(void* object) {
-  InterconnectionSchedule* _this = reinterpret_cast< InterconnectionSchedule* >(object);
-  (void)_this;
-}
-void InterconnectionSchedule::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void InterconnectionSchedule::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void InterconnectionSchedule::Clear() {
 // @@protoc_insertion_point(message_clear_start:interconnectionmodule.InterconnectionSchedule)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && identifiedobject_ != nullptr) {
-    delete identifiedobject_;
+  if (GetArenaForAllocation() == nullptr && _impl_.identifiedobject_ != nullptr) {
+    delete _impl_.identifiedobject_;
   }
-  identifiedobject_ = nullptr;
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  _impl_.identifiedobject_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
-  if (GetArena() == nullptr && interconnectionschedulefscc_ != nullptr) {
-    delete interconnectionschedulefscc_;
+  _impl_.check_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.interconnectionschedulefscc_ != nullptr) {
+    delete _impl_.interconnectionschedulefscc_;
   }
-  interconnectionschedulefscc_ = nullptr;
+  _impl_.interconnectionschedulefscc_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* InterconnectionSchedule::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* InterconnectionSchedule::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_identifiedobject(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.CheckConditions check = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .interconnectionmodule.InterconnectionScheduleFSCC interconnectionScheduleFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_interconnectionschedulefscc(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* InterconnectionSchedule::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* InterconnectionSchedule::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.InterconnectionSchedule)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
-  if (this->has_identifiedobject()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_identifiedobject()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::identifiedobject(this), target, stream);
+      InternalWriteMessage(1, _Internal::identifiedobject(this),
+        _Internal::identifiedobject(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_check()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::check(this), target, stream);
+      InternalWriteMessage(2, _Internal::check(this),
+        _Internal::check(this).GetCachedSize(), target, stream);
   }
 
   // .interconnectionmodule.InterconnectionScheduleFSCC interconnectionScheduleFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_interconnectionschedulefscc()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_interconnectionschedulefscc()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::interconnectionschedulefscc(this), target, stream);
+      InternalWriteMessage(3, _Internal::interconnectionschedulefscc(this),
+        _Internal::interconnectionschedulefscc(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:interconnectionmodule.InterconnectionSchedule)
   return target;
 }
 
-size_t InterconnectionSchedule::ByteSizeLong() const {
+::size_t InterconnectionSchedule::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:interconnectionmodule.InterconnectionSchedule)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
-  if (this->has_identifiedobject()) {
+  if (this->_internal_has_identifiedobject()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *identifiedobject_);
+        *_impl_.identifiedobject_);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
+  if (this->_internal_has_check()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *check_);
+        *_impl_.check_);
   }
 
   // .interconnectionmodule.InterconnectionScheduleFSCC interconnectionScheduleFSCC = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_interconnectionschedulefscc()) {
+  if (this->_internal_has_interconnectionschedulefscc()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *interconnectionschedulefscc_);
+        *_impl_.interconnectionschedulefscc_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void InterconnectionSchedule::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:interconnectionmodule.InterconnectionSchedule)
-  GOOGLE_DCHECK_NE(&from, this);
-  const InterconnectionSchedule* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<InterconnectionSchedule>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:interconnectionmodule.InterconnectionSchedule)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:interconnectionmodule.InterconnectionSchedule)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData InterconnectionSchedule::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    InterconnectionSchedule::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*InterconnectionSchedule::GetClassData() const { return &_class_data_; }
 
-void InterconnectionSchedule::MergeFrom(const InterconnectionSchedule& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.InterconnectionSchedule)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void InterconnectionSchedule::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<InterconnectionSchedule*>(&to_msg);
+  auto& from = static_cast<const InterconnectionSchedule&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.InterconnectionSchedule)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_identifiedobject()) {
-    _internal_mutable_identifiedobject()->::commonmodule::IdentifiedObject::MergeFrom(from._internal_identifiedobject());
+  if (from._internal_has_identifiedobject()) {
+    _this->_internal_mutable_identifiedobject()->::commonmodule::IdentifiedObject::MergeFrom(
+        from._internal_identifiedobject());
   }
-  if (from.has_check()) {
-    _internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(from._internal_check());
+  if (from._internal_has_check()) {
+    _this->_internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(
+        from._internal_check());
   }
-  if (from.has_interconnectionschedulefscc()) {
-    _internal_mutable_interconnectionschedulefscc()->::interconnectionmodule::InterconnectionScheduleFSCC::MergeFrom(from._internal_interconnectionschedulefscc());
+  if (from._internal_has_interconnectionschedulefscc()) {
+    _this->_internal_mutable_interconnectionschedulefscc()->::interconnectionmodule::InterconnectionScheduleFSCC::MergeFrom(
+        from._internal_interconnectionschedulefscc());
   }
-}
-
-void InterconnectionSchedule::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:interconnectionmodule.InterconnectionSchedule)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void InterconnectionSchedule::CopyFrom(const InterconnectionSchedule& from) {
@@ -1856,837 +1868,825 @@ bool InterconnectionSchedule::IsInitialized() const {
 
 void InterconnectionSchedule::InternalSwap(InterconnectionSchedule* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(InterconnectionSchedule, interconnectionschedulefscc_)
-      + sizeof(InterconnectionSchedule::interconnectionschedulefscc_)
-      - PROTOBUF_FIELD_OFFSET(InterconnectionSchedule, identifiedobject_)>(
-          reinterpret_cast<char*>(&identifiedobject_),
-          reinterpret_cast<char*>(&other->identifiedobject_));
+      PROTOBUF_FIELD_OFFSET(InterconnectionSchedule, _impl_.interconnectionschedulefscc_)
+      + sizeof(InterconnectionSchedule::_impl_.interconnectionschedulefscc_)
+      - PROTOBUF_FIELD_OFFSET(InterconnectionSchedule, _impl_.identifiedobject_)>(
+          reinterpret_cast<char*>(&_impl_.identifiedobject_),
+          reinterpret_cast<char*>(&other->_impl_.identifiedobject_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata InterconnectionSchedule::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_getter, &descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_once,
+      file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto[4]);
 }
-
-
 // ===================================================================
 
-class PlannedInterconnectionScheduleProfile::_Internal {
+class InterconnectionPlannedScheduleProfile::_Internal {
  public:
-  static const ::commonmodule::ControlMessageInfo& controlmessageinfo(const PlannedInterconnectionScheduleProfile* msg);
-  static const ::commonmodule::ApplicationSystem& requestercircuitsegmentservice(const PlannedInterconnectionScheduleProfile* msg);
-  static const ::interconnectionmodule::InterconnectionSchedule& interconnectionschedule(const PlannedInterconnectionScheduleProfile* msg);
-  static const ::commonmodule::ConductingEquipment& tiepoint(const PlannedInterconnectionScheduleProfile* msg);
-  static const ::commonmodule::ApplicationSystem& respondercircuitsegmentservice(const PlannedInterconnectionScheduleProfile* msg);
+  static const ::commonmodule::ControlMessageInfo& controlmessageinfo(const InterconnectionPlannedScheduleProfile* msg);
+  static const ::commonmodule::ApplicationSystem& requestercircuitsegmentservice(const InterconnectionPlannedScheduleProfile* msg);
+  static const ::interconnectionmodule::InterconnectionSchedule& interconnectionschedule(const InterconnectionPlannedScheduleProfile* msg);
+  static const ::commonmodule::ConductingEquipment& tiepoint(const InterconnectionPlannedScheduleProfile* msg);
+  static const ::commonmodule::ApplicationSystem& respondercircuitsegmentservice(const InterconnectionPlannedScheduleProfile* msg);
 };
 
 const ::commonmodule::ControlMessageInfo&
-PlannedInterconnectionScheduleProfile::_Internal::controlmessageinfo(const PlannedInterconnectionScheduleProfile* msg) {
-  return *msg->controlmessageinfo_;
+InterconnectionPlannedScheduleProfile::_Internal::controlmessageinfo(const InterconnectionPlannedScheduleProfile* msg) {
+  return *msg->_impl_.controlmessageinfo_;
 }
 const ::commonmodule::ApplicationSystem&
-PlannedInterconnectionScheduleProfile::_Internal::requestercircuitsegmentservice(const PlannedInterconnectionScheduleProfile* msg) {
-  return *msg->requestercircuitsegmentservice_;
+InterconnectionPlannedScheduleProfile::_Internal::requestercircuitsegmentservice(const InterconnectionPlannedScheduleProfile* msg) {
+  return *msg->_impl_.requestercircuitsegmentservice_;
 }
 const ::interconnectionmodule::InterconnectionSchedule&
-PlannedInterconnectionScheduleProfile::_Internal::interconnectionschedule(const PlannedInterconnectionScheduleProfile* msg) {
-  return *msg->interconnectionschedule_;
+InterconnectionPlannedScheduleProfile::_Internal::interconnectionschedule(const InterconnectionPlannedScheduleProfile* msg) {
+  return *msg->_impl_.interconnectionschedule_;
 }
 const ::commonmodule::ConductingEquipment&
-PlannedInterconnectionScheduleProfile::_Internal::tiepoint(const PlannedInterconnectionScheduleProfile* msg) {
-  return *msg->tiepoint_;
+InterconnectionPlannedScheduleProfile::_Internal::tiepoint(const InterconnectionPlannedScheduleProfile* msg) {
+  return *msg->_impl_.tiepoint_;
 }
 const ::commonmodule::ApplicationSystem&
-PlannedInterconnectionScheduleProfile::_Internal::respondercircuitsegmentservice(const PlannedInterconnectionScheduleProfile* msg) {
-  return *msg->respondercircuitsegmentservice_;
+InterconnectionPlannedScheduleProfile::_Internal::respondercircuitsegmentservice(const InterconnectionPlannedScheduleProfile* msg) {
+  return *msg->_impl_.respondercircuitsegmentservice_;
 }
-void PlannedInterconnectionScheduleProfile::clear_controlmessageinfo() {
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+void InterconnectionPlannedScheduleProfile::clear_controlmessageinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
+  _impl_.controlmessageinfo_ = nullptr;
 }
-void PlannedInterconnectionScheduleProfile::clear_requestercircuitsegmentservice() {
-  if (GetArena() == nullptr && requestercircuitsegmentservice_ != nullptr) {
-    delete requestercircuitsegmentservice_;
+void InterconnectionPlannedScheduleProfile::clear_requestercircuitsegmentservice() {
+  if (GetArenaForAllocation() == nullptr && _impl_.requestercircuitsegmentservice_ != nullptr) {
+    delete _impl_.requestercircuitsegmentservice_;
   }
-  requestercircuitsegmentservice_ = nullptr;
+  _impl_.requestercircuitsegmentservice_ = nullptr;
 }
-void PlannedInterconnectionScheduleProfile::clear_tiepoint() {
-  if (GetArena() == nullptr && tiepoint_ != nullptr) {
-    delete tiepoint_;
+void InterconnectionPlannedScheduleProfile::clear_tiepoint() {
+  if (GetArenaForAllocation() == nullptr && _impl_.tiepoint_ != nullptr) {
+    delete _impl_.tiepoint_;
   }
-  tiepoint_ = nullptr;
+  _impl_.tiepoint_ = nullptr;
 }
-void PlannedInterconnectionScheduleProfile::clear_respondercircuitsegmentservice() {
-  if (GetArena() == nullptr && respondercircuitsegmentservice_ != nullptr) {
-    delete respondercircuitsegmentservice_;
+void InterconnectionPlannedScheduleProfile::clear_respondercircuitsegmentservice() {
+  if (GetArenaForAllocation() == nullptr && _impl_.respondercircuitsegmentservice_ != nullptr) {
+    delete _impl_.respondercircuitsegmentservice_;
   }
-  respondercircuitsegmentservice_ = nullptr;
+  _impl_.respondercircuitsegmentservice_ = nullptr;
 }
-PlannedInterconnectionScheduleProfile::PlannedInterconnectionScheduleProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+InterconnectionPlannedScheduleProfile::InterconnectionPlannedScheduleProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:interconnectionmodule.PlannedInterconnectionScheduleProfile)
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:interconnectionmodule.InterconnectionPlannedScheduleProfile)
 }
-PlannedInterconnectionScheduleProfile::PlannedInterconnectionScheduleProfile(const PlannedInterconnectionScheduleProfile& from)
+InterconnectionPlannedScheduleProfile::InterconnectionPlannedScheduleProfile(const InterconnectionPlannedScheduleProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  InterconnectionPlannedScheduleProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.requestercircuitsegmentservice_){nullptr}
+    , decltype(_impl_.interconnectionschedule_){nullptr}
+    , decltype(_impl_.tiepoint_){nullptr}
+    , decltype(_impl_.respondercircuitsegmentservice_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlmessageinfo()) {
-    controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
-  } else {
-    controlmessageinfo_ = nullptr;
+    _this->_impl_.controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from._impl_.controlmessageinfo_);
   }
   if (from._internal_has_requestercircuitsegmentservice()) {
-    requestercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from.requestercircuitsegmentservice_);
-  } else {
-    requestercircuitsegmentservice_ = nullptr;
+    _this->_impl_.requestercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from._impl_.requestercircuitsegmentservice_);
   }
   if (from._internal_has_interconnectionschedule()) {
-    interconnectionschedule_ = new ::interconnectionmodule::InterconnectionSchedule(*from.interconnectionschedule_);
-  } else {
-    interconnectionschedule_ = nullptr;
+    _this->_impl_.interconnectionschedule_ = new ::interconnectionmodule::InterconnectionSchedule(*from._impl_.interconnectionschedule_);
   }
   if (from._internal_has_tiepoint()) {
-    tiepoint_ = new ::commonmodule::ConductingEquipment(*from.tiepoint_);
-  } else {
-    tiepoint_ = nullptr;
+    _this->_impl_.tiepoint_ = new ::commonmodule::ConductingEquipment(*from._impl_.tiepoint_);
   }
   if (from._internal_has_respondercircuitsegmentservice()) {
-    respondercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from.respondercircuitsegmentservice_);
-  } else {
-    respondercircuitsegmentservice_ = nullptr;
+    _this->_impl_.respondercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from._impl_.respondercircuitsegmentservice_);
   }
-  // @@protoc_insertion_point(copy_constructor:interconnectionmodule.PlannedInterconnectionScheduleProfile)
+  // @@protoc_insertion_point(copy_constructor:interconnectionmodule.InterconnectionPlannedScheduleProfile)
 }
 
-void PlannedInterconnectionScheduleProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&respondercircuitsegmentservice_) -
-    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(respondercircuitsegmentservice_));
+inline void InterconnectionPlannedScheduleProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.requestercircuitsegmentservice_){nullptr}
+    , decltype(_impl_.interconnectionschedule_){nullptr}
+    , decltype(_impl_.tiepoint_){nullptr}
+    , decltype(_impl_.respondercircuitsegmentservice_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
-PlannedInterconnectionScheduleProfile::~PlannedInterconnectionScheduleProfile() {
-  // @@protoc_insertion_point(destructor:interconnectionmodule.PlannedInterconnectionScheduleProfile)
+InterconnectionPlannedScheduleProfile::~InterconnectionPlannedScheduleProfile() {
+  // @@protoc_insertion_point(destructor:interconnectionmodule.InterconnectionPlannedScheduleProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void PlannedInterconnectionScheduleProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete requestercircuitsegmentservice_;
-  if (this != internal_default_instance()) delete interconnectionschedule_;
-  if (this != internal_default_instance()) delete tiepoint_;
-  if (this != internal_default_instance()) delete respondercircuitsegmentservice_;
+inline void InterconnectionPlannedScheduleProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.requestercircuitsegmentservice_;
+  if (this != internal_default_instance()) delete _impl_.interconnectionschedule_;
+  if (this != internal_default_instance()) delete _impl_.tiepoint_;
+  if (this != internal_default_instance()) delete _impl_.respondercircuitsegmentservice_;
 }
 
-void PlannedInterconnectionScheduleProfile::ArenaDtor(void* object) {
-  PlannedInterconnectionScheduleProfile* _this = reinterpret_cast< PlannedInterconnectionScheduleProfile* >(object);
-  (void)_this;
-}
-void PlannedInterconnectionScheduleProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void PlannedInterconnectionScheduleProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+void InterconnectionPlannedScheduleProfile::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
 }
 
-void PlannedInterconnectionScheduleProfile::Clear() {
-// @@protoc_insertion_point(message_clear_start:interconnectionmodule.PlannedInterconnectionScheduleProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+void InterconnectionPlannedScheduleProfile::Clear() {
+// @@protoc_insertion_point(message_clear_start:interconnectionmodule.InterconnectionPlannedScheduleProfile)
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && requestercircuitsegmentservice_ != nullptr) {
-    delete requestercircuitsegmentservice_;
+  _impl_.controlmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.requestercircuitsegmentservice_ != nullptr) {
+    delete _impl_.requestercircuitsegmentservice_;
   }
-  requestercircuitsegmentservice_ = nullptr;
-  if (GetArena() == nullptr && interconnectionschedule_ != nullptr) {
-    delete interconnectionschedule_;
+  _impl_.requestercircuitsegmentservice_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.interconnectionschedule_ != nullptr) {
+    delete _impl_.interconnectionschedule_;
   }
-  interconnectionschedule_ = nullptr;
-  if (GetArena() == nullptr && tiepoint_ != nullptr) {
-    delete tiepoint_;
+  _impl_.interconnectionschedule_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.tiepoint_ != nullptr) {
+    delete _impl_.tiepoint_;
   }
-  tiepoint_ = nullptr;
-  if (GetArena() == nullptr && respondercircuitsegmentservice_ != nullptr) {
-    delete respondercircuitsegmentservice_;
+  _impl_.tiepoint_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.respondercircuitsegmentservice_ != nullptr) {
+    delete _impl_.respondercircuitsegmentservice_;
   }
-  respondercircuitsegmentservice_ = nullptr;
+  _impl_.respondercircuitsegmentservice_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* PlannedInterconnectionScheduleProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* InterconnectionPlannedScheduleProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ApplicationSystem requesterCircuitSegmentService = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_requestercircuitsegmentservice(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .interconnectionmodule.InterconnectionSchedule interconnectionSchedule = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_interconnectionschedule(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ConductingEquipment tiePoint = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_tiepoint(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ApplicationSystem responderCircuitSegmentService = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_respondercircuitsegmentservice(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* PlannedInterconnectionScheduleProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.PlannedInterconnectionScheduleProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+::uint8_t* InterconnectionPlannedScheduleProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.InterconnectionPlannedScheduleProfile)
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlmessageinfo(this),
+        _Internal::controlmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ApplicationSystem requesterCircuitSegmentService = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_requestercircuitsegmentservice()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_requestercircuitsegmentservice()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::requestercircuitsegmentservice(this), target, stream);
+      InternalWriteMessage(2, _Internal::requestercircuitsegmentservice(this),
+        _Internal::requestercircuitsegmentservice(this).GetCachedSize(), target, stream);
   }
 
   // .interconnectionmodule.InterconnectionSchedule interconnectionSchedule = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_interconnectionschedule()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_interconnectionschedule()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::interconnectionschedule(this), target, stream);
+      InternalWriteMessage(3, _Internal::interconnectionschedule(this),
+        _Internal::interconnectionschedule(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ConductingEquipment tiePoint = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_tiepoint()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_tiepoint()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::tiepoint(this), target, stream);
+      InternalWriteMessage(4, _Internal::tiepoint(this),
+        _Internal::tiepoint(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ApplicationSystem responderCircuitSegmentService = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_respondercircuitsegmentservice()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_respondercircuitsegmentservice()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::respondercircuitsegmentservice(this), target, stream);
+      InternalWriteMessage(5, _Internal::respondercircuitsegmentservice(this),
+        _Internal::respondercircuitsegmentservice(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:interconnectionmodule.PlannedInterconnectionScheduleProfile)
+  // @@protoc_insertion_point(serialize_to_array_end:interconnectionmodule.InterconnectionPlannedScheduleProfile)
   return target;
 }
 
-size_t PlannedInterconnectionScheduleProfile::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:interconnectionmodule.PlannedInterconnectionScheduleProfile)
-  size_t total_size = 0;
+::size_t InterconnectionPlannedScheduleProfile::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:interconnectionmodule.InterconnectionPlannedScheduleProfile)
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
+  if (this->_internal_has_controlmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlmessageinfo_);
+        *_impl_.controlmessageinfo_);
   }
 
   // .commonmodule.ApplicationSystem requesterCircuitSegmentService = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_requestercircuitsegmentservice()) {
+  if (this->_internal_has_requestercircuitsegmentservice()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *requestercircuitsegmentservice_);
+        *_impl_.requestercircuitsegmentservice_);
   }
 
   // .interconnectionmodule.InterconnectionSchedule interconnectionSchedule = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_interconnectionschedule()) {
+  if (this->_internal_has_interconnectionschedule()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *interconnectionschedule_);
+        *_impl_.interconnectionschedule_);
   }
 
   // .commonmodule.ConductingEquipment tiePoint = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_tiepoint()) {
+  if (this->_internal_has_tiepoint()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *tiepoint_);
+        *_impl_.tiepoint_);
   }
 
   // .commonmodule.ApplicationSystem responderCircuitSegmentService = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_respondercircuitsegmentservice()) {
+  if (this->_internal_has_respondercircuitsegmentservice()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *respondercircuitsegmentservice_);
+        *_impl_.respondercircuitsegmentservice_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void PlannedInterconnectionScheduleProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:interconnectionmodule.PlannedInterconnectionScheduleProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const PlannedInterconnectionScheduleProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PlannedInterconnectionScheduleProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:interconnectionmodule.PlannedInterconnectionScheduleProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:interconnectionmodule.PlannedInterconnectionScheduleProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData InterconnectionPlannedScheduleProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    InterconnectionPlannedScheduleProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*InterconnectionPlannedScheduleProfile::GetClassData() const { return &_class_data_; }
 
-void PlannedInterconnectionScheduleProfile::MergeFrom(const PlannedInterconnectionScheduleProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.PlannedInterconnectionScheduleProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void InterconnectionPlannedScheduleProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<InterconnectionPlannedScheduleProfile*>(&to_msg);
+  auto& from = static_cast<const InterconnectionPlannedScheduleProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.InterconnectionPlannedScheduleProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlmessageinfo()) {
-    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
+  if (from._internal_has_controlmessageinfo()) {
+    _this->_internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(
+        from._internal_controlmessageinfo());
   }
-  if (from.has_requestercircuitsegmentservice()) {
-    _internal_mutable_requestercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(from._internal_requestercircuitsegmentservice());
+  if (from._internal_has_requestercircuitsegmentservice()) {
+    _this->_internal_mutable_requestercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(
+        from._internal_requestercircuitsegmentservice());
   }
-  if (from.has_interconnectionschedule()) {
-    _internal_mutable_interconnectionschedule()->::interconnectionmodule::InterconnectionSchedule::MergeFrom(from._internal_interconnectionschedule());
+  if (from._internal_has_interconnectionschedule()) {
+    _this->_internal_mutable_interconnectionschedule()->::interconnectionmodule::InterconnectionSchedule::MergeFrom(
+        from._internal_interconnectionschedule());
   }
-  if (from.has_tiepoint()) {
-    _internal_mutable_tiepoint()->::commonmodule::ConductingEquipment::MergeFrom(from._internal_tiepoint());
+  if (from._internal_has_tiepoint()) {
+    _this->_internal_mutable_tiepoint()->::commonmodule::ConductingEquipment::MergeFrom(
+        from._internal_tiepoint());
   }
-  if (from.has_respondercircuitsegmentservice()) {
-    _internal_mutable_respondercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(from._internal_respondercircuitsegmentservice());
+  if (from._internal_has_respondercircuitsegmentservice()) {
+    _this->_internal_mutable_respondercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(
+        from._internal_respondercircuitsegmentservice());
   }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void PlannedInterconnectionScheduleProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:interconnectionmodule.PlannedInterconnectionScheduleProfile)
+void InterconnectionPlannedScheduleProfile::CopyFrom(const InterconnectionPlannedScheduleProfile& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:interconnectionmodule.InterconnectionPlannedScheduleProfile)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void PlannedInterconnectionScheduleProfile::CopyFrom(const PlannedInterconnectionScheduleProfile& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:interconnectionmodule.PlannedInterconnectionScheduleProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool PlannedInterconnectionScheduleProfile::IsInitialized() const {
+bool InterconnectionPlannedScheduleProfile::IsInitialized() const {
   return true;
 }
 
-void PlannedInterconnectionScheduleProfile::InternalSwap(PlannedInterconnectionScheduleProfile* other) {
+void InterconnectionPlannedScheduleProfile::InternalSwap(InterconnectionPlannedScheduleProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(PlannedInterconnectionScheduleProfile, respondercircuitsegmentservice_)
-      + sizeof(PlannedInterconnectionScheduleProfile::respondercircuitsegmentservice_)
-      - PROTOBUF_FIELD_OFFSET(PlannedInterconnectionScheduleProfile, controlmessageinfo_)>(
-          reinterpret_cast<char*>(&controlmessageinfo_),
-          reinterpret_cast<char*>(&other->controlmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(InterconnectionPlannedScheduleProfile, _impl_.respondercircuitsegmentservice_)
+      + sizeof(InterconnectionPlannedScheduleProfile::_impl_.respondercircuitsegmentservice_)
+      - PROTOBUF_FIELD_OFFSET(InterconnectionPlannedScheduleProfile, _impl_.controlmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.controlmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.controlmessageinfo_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata PlannedInterconnectionScheduleProfile::GetMetadata() const {
-  return GetMetadataStatic();
+::PROTOBUF_NAMESPACE_ID::Metadata InterconnectionPlannedScheduleProfile::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_getter, &descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_once,
+      file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto[5]);
 }
-
-
 // ===================================================================
 
-class RequestedInterconnectionScheduleProfile::_Internal {
+class InterconnectionRequestedScheduleProfile::_Internal {
  public:
-  static const ::commonmodule::ControlMessageInfo& controlmessageinfo(const RequestedInterconnectionScheduleProfile* msg);
-  static const ::commonmodule::ApplicationSystem& requestercircuitsegmentservice(const RequestedInterconnectionScheduleProfile* msg);
-  static const ::interconnectionmodule::InterconnectionSchedule& interconnectionschedule(const RequestedInterconnectionScheduleProfile* msg);
-  static const ::commonmodule::ConductingEquipment& tiepoint(const RequestedInterconnectionScheduleProfile* msg);
-  static const ::commonmodule::ApplicationSystem& respondercircuitsegmentservice(const RequestedInterconnectionScheduleProfile* msg);
+  static const ::commonmodule::ControlMessageInfo& controlmessageinfo(const InterconnectionRequestedScheduleProfile* msg);
+  static const ::commonmodule::ApplicationSystem& requestercircuitsegmentservice(const InterconnectionRequestedScheduleProfile* msg);
+  static const ::interconnectionmodule::InterconnectionSchedule& interconnectionschedule(const InterconnectionRequestedScheduleProfile* msg);
+  static const ::commonmodule::ConductingEquipment& tiepoint(const InterconnectionRequestedScheduleProfile* msg);
+  static const ::commonmodule::ApplicationSystem& respondercircuitsegmentservice(const InterconnectionRequestedScheduleProfile* msg);
 };
 
 const ::commonmodule::ControlMessageInfo&
-RequestedInterconnectionScheduleProfile::_Internal::controlmessageinfo(const RequestedInterconnectionScheduleProfile* msg) {
-  return *msg->controlmessageinfo_;
+InterconnectionRequestedScheduleProfile::_Internal::controlmessageinfo(const InterconnectionRequestedScheduleProfile* msg) {
+  return *msg->_impl_.controlmessageinfo_;
 }
 const ::commonmodule::ApplicationSystem&
-RequestedInterconnectionScheduleProfile::_Internal::requestercircuitsegmentservice(const RequestedInterconnectionScheduleProfile* msg) {
-  return *msg->requestercircuitsegmentservice_;
+InterconnectionRequestedScheduleProfile::_Internal::requestercircuitsegmentservice(const InterconnectionRequestedScheduleProfile* msg) {
+  return *msg->_impl_.requestercircuitsegmentservice_;
 }
 const ::interconnectionmodule::InterconnectionSchedule&
-RequestedInterconnectionScheduleProfile::_Internal::interconnectionschedule(const RequestedInterconnectionScheduleProfile* msg) {
-  return *msg->interconnectionschedule_;
+InterconnectionRequestedScheduleProfile::_Internal::interconnectionschedule(const InterconnectionRequestedScheduleProfile* msg) {
+  return *msg->_impl_.interconnectionschedule_;
 }
 const ::commonmodule::ConductingEquipment&
-RequestedInterconnectionScheduleProfile::_Internal::tiepoint(const RequestedInterconnectionScheduleProfile* msg) {
-  return *msg->tiepoint_;
+InterconnectionRequestedScheduleProfile::_Internal::tiepoint(const InterconnectionRequestedScheduleProfile* msg) {
+  return *msg->_impl_.tiepoint_;
 }
 const ::commonmodule::ApplicationSystem&
-RequestedInterconnectionScheduleProfile::_Internal::respondercircuitsegmentservice(const RequestedInterconnectionScheduleProfile* msg) {
-  return *msg->respondercircuitsegmentservice_;
+InterconnectionRequestedScheduleProfile::_Internal::respondercircuitsegmentservice(const InterconnectionRequestedScheduleProfile* msg) {
+  return *msg->_impl_.respondercircuitsegmentservice_;
 }
-void RequestedInterconnectionScheduleProfile::clear_controlmessageinfo() {
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+void InterconnectionRequestedScheduleProfile::clear_controlmessageinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
+  _impl_.controlmessageinfo_ = nullptr;
 }
-void RequestedInterconnectionScheduleProfile::clear_requestercircuitsegmentservice() {
-  if (GetArena() == nullptr && requestercircuitsegmentservice_ != nullptr) {
-    delete requestercircuitsegmentservice_;
+void InterconnectionRequestedScheduleProfile::clear_requestercircuitsegmentservice() {
+  if (GetArenaForAllocation() == nullptr && _impl_.requestercircuitsegmentservice_ != nullptr) {
+    delete _impl_.requestercircuitsegmentservice_;
   }
-  requestercircuitsegmentservice_ = nullptr;
+  _impl_.requestercircuitsegmentservice_ = nullptr;
 }
-void RequestedInterconnectionScheduleProfile::clear_tiepoint() {
-  if (GetArena() == nullptr && tiepoint_ != nullptr) {
-    delete tiepoint_;
+void InterconnectionRequestedScheduleProfile::clear_tiepoint() {
+  if (GetArenaForAllocation() == nullptr && _impl_.tiepoint_ != nullptr) {
+    delete _impl_.tiepoint_;
   }
-  tiepoint_ = nullptr;
+  _impl_.tiepoint_ = nullptr;
 }
-void RequestedInterconnectionScheduleProfile::clear_respondercircuitsegmentservice() {
-  if (GetArena() == nullptr && respondercircuitsegmentservice_ != nullptr) {
-    delete respondercircuitsegmentservice_;
+void InterconnectionRequestedScheduleProfile::clear_respondercircuitsegmentservice() {
+  if (GetArenaForAllocation() == nullptr && _impl_.respondercircuitsegmentservice_ != nullptr) {
+    delete _impl_.respondercircuitsegmentservice_;
   }
-  respondercircuitsegmentservice_ = nullptr;
+  _impl_.respondercircuitsegmentservice_ = nullptr;
 }
-RequestedInterconnectionScheduleProfile::RequestedInterconnectionScheduleProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+InterconnectionRequestedScheduleProfile::InterconnectionRequestedScheduleProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:interconnectionmodule.RequestedInterconnectionScheduleProfile)
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:interconnectionmodule.InterconnectionRequestedScheduleProfile)
 }
-RequestedInterconnectionScheduleProfile::RequestedInterconnectionScheduleProfile(const RequestedInterconnectionScheduleProfile& from)
+InterconnectionRequestedScheduleProfile::InterconnectionRequestedScheduleProfile(const InterconnectionRequestedScheduleProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  InterconnectionRequestedScheduleProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.requestercircuitsegmentservice_){nullptr}
+    , decltype(_impl_.interconnectionschedule_){nullptr}
+    , decltype(_impl_.tiepoint_){nullptr}
+    , decltype(_impl_.respondercircuitsegmentservice_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlmessageinfo()) {
-    controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
-  } else {
-    controlmessageinfo_ = nullptr;
+    _this->_impl_.controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from._impl_.controlmessageinfo_);
   }
   if (from._internal_has_requestercircuitsegmentservice()) {
-    requestercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from.requestercircuitsegmentservice_);
-  } else {
-    requestercircuitsegmentservice_ = nullptr;
+    _this->_impl_.requestercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from._impl_.requestercircuitsegmentservice_);
   }
   if (from._internal_has_interconnectionschedule()) {
-    interconnectionschedule_ = new ::interconnectionmodule::InterconnectionSchedule(*from.interconnectionschedule_);
-  } else {
-    interconnectionschedule_ = nullptr;
+    _this->_impl_.interconnectionschedule_ = new ::interconnectionmodule::InterconnectionSchedule(*from._impl_.interconnectionschedule_);
   }
   if (from._internal_has_tiepoint()) {
-    tiepoint_ = new ::commonmodule::ConductingEquipment(*from.tiepoint_);
-  } else {
-    tiepoint_ = nullptr;
+    _this->_impl_.tiepoint_ = new ::commonmodule::ConductingEquipment(*from._impl_.tiepoint_);
   }
   if (from._internal_has_respondercircuitsegmentservice()) {
-    respondercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from.respondercircuitsegmentservice_);
-  } else {
-    respondercircuitsegmentservice_ = nullptr;
+    _this->_impl_.respondercircuitsegmentservice_ = new ::commonmodule::ApplicationSystem(*from._impl_.respondercircuitsegmentservice_);
   }
-  // @@protoc_insertion_point(copy_constructor:interconnectionmodule.RequestedInterconnectionScheduleProfile)
+  // @@protoc_insertion_point(copy_constructor:interconnectionmodule.InterconnectionRequestedScheduleProfile)
 }
 
-void RequestedInterconnectionScheduleProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&respondercircuitsegmentservice_) -
-    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(respondercircuitsegmentservice_));
+inline void InterconnectionRequestedScheduleProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.requestercircuitsegmentservice_){nullptr}
+    , decltype(_impl_.interconnectionschedule_){nullptr}
+    , decltype(_impl_.tiepoint_){nullptr}
+    , decltype(_impl_.respondercircuitsegmentservice_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
-RequestedInterconnectionScheduleProfile::~RequestedInterconnectionScheduleProfile() {
-  // @@protoc_insertion_point(destructor:interconnectionmodule.RequestedInterconnectionScheduleProfile)
+InterconnectionRequestedScheduleProfile::~InterconnectionRequestedScheduleProfile() {
+  // @@protoc_insertion_point(destructor:interconnectionmodule.InterconnectionRequestedScheduleProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void RequestedInterconnectionScheduleProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete requestercircuitsegmentservice_;
-  if (this != internal_default_instance()) delete interconnectionschedule_;
-  if (this != internal_default_instance()) delete tiepoint_;
-  if (this != internal_default_instance()) delete respondercircuitsegmentservice_;
+inline void InterconnectionRequestedScheduleProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.requestercircuitsegmentservice_;
+  if (this != internal_default_instance()) delete _impl_.interconnectionschedule_;
+  if (this != internal_default_instance()) delete _impl_.tiepoint_;
+  if (this != internal_default_instance()) delete _impl_.respondercircuitsegmentservice_;
 }
 
-void RequestedInterconnectionScheduleProfile::ArenaDtor(void* object) {
-  RequestedInterconnectionScheduleProfile* _this = reinterpret_cast< RequestedInterconnectionScheduleProfile* >(object);
-  (void)_this;
-}
-void RequestedInterconnectionScheduleProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void RequestedInterconnectionScheduleProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+void InterconnectionRequestedScheduleProfile::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
 }
 
-void RequestedInterconnectionScheduleProfile::Clear() {
-// @@protoc_insertion_point(message_clear_start:interconnectionmodule.RequestedInterconnectionScheduleProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+void InterconnectionRequestedScheduleProfile::Clear() {
+// @@protoc_insertion_point(message_clear_start:interconnectionmodule.InterconnectionRequestedScheduleProfile)
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && requestercircuitsegmentservice_ != nullptr) {
-    delete requestercircuitsegmentservice_;
+  _impl_.controlmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.requestercircuitsegmentservice_ != nullptr) {
+    delete _impl_.requestercircuitsegmentservice_;
   }
-  requestercircuitsegmentservice_ = nullptr;
-  if (GetArena() == nullptr && interconnectionschedule_ != nullptr) {
-    delete interconnectionschedule_;
+  _impl_.requestercircuitsegmentservice_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.interconnectionschedule_ != nullptr) {
+    delete _impl_.interconnectionschedule_;
   }
-  interconnectionschedule_ = nullptr;
-  if (GetArena() == nullptr && tiepoint_ != nullptr) {
-    delete tiepoint_;
+  _impl_.interconnectionschedule_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.tiepoint_ != nullptr) {
+    delete _impl_.tiepoint_;
   }
-  tiepoint_ = nullptr;
-  if (GetArena() == nullptr && respondercircuitsegmentservice_ != nullptr) {
-    delete respondercircuitsegmentservice_;
+  _impl_.tiepoint_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.respondercircuitsegmentservice_ != nullptr) {
+    delete _impl_.respondercircuitsegmentservice_;
   }
-  respondercircuitsegmentservice_ = nullptr;
+  _impl_.respondercircuitsegmentservice_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RequestedInterconnectionScheduleProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* InterconnectionRequestedScheduleProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ApplicationSystem requesterCircuitSegmentService = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_requestercircuitsegmentservice(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .interconnectionmodule.InterconnectionSchedule interconnectionSchedule = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_interconnectionschedule(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ConductingEquipment tiePoint = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_tiepoint(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ApplicationSystem responderCircuitSegmentService = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_respondercircuitsegmentservice(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RequestedInterconnectionScheduleProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.RequestedInterconnectionScheduleProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+::uint8_t* InterconnectionRequestedScheduleProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:interconnectionmodule.InterconnectionRequestedScheduleProfile)
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlmessageinfo(this),
+        _Internal::controlmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ApplicationSystem requesterCircuitSegmentService = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_requestercircuitsegmentservice()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_requestercircuitsegmentservice()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::requestercircuitsegmentservice(this), target, stream);
+      InternalWriteMessage(2, _Internal::requestercircuitsegmentservice(this),
+        _Internal::requestercircuitsegmentservice(this).GetCachedSize(), target, stream);
   }
 
   // .interconnectionmodule.InterconnectionSchedule interconnectionSchedule = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_interconnectionschedule()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_interconnectionschedule()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::interconnectionschedule(this), target, stream);
+      InternalWriteMessage(3, _Internal::interconnectionschedule(this),
+        _Internal::interconnectionschedule(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ConductingEquipment tiePoint = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_tiepoint()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_tiepoint()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::tiepoint(this), target, stream);
+      InternalWriteMessage(4, _Internal::tiepoint(this),
+        _Internal::tiepoint(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ApplicationSystem responderCircuitSegmentService = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_respondercircuitsegmentservice()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_respondercircuitsegmentservice()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::respondercircuitsegmentservice(this), target, stream);
+      InternalWriteMessage(5, _Internal::respondercircuitsegmentservice(this),
+        _Internal::respondercircuitsegmentservice(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:interconnectionmodule.RequestedInterconnectionScheduleProfile)
+  // @@protoc_insertion_point(serialize_to_array_end:interconnectionmodule.InterconnectionRequestedScheduleProfile)
   return target;
 }
 
-size_t RequestedInterconnectionScheduleProfile::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:interconnectionmodule.RequestedInterconnectionScheduleProfile)
-  size_t total_size = 0;
+::size_t InterconnectionRequestedScheduleProfile::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:interconnectionmodule.InterconnectionRequestedScheduleProfile)
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
+  if (this->_internal_has_controlmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlmessageinfo_);
+        *_impl_.controlmessageinfo_);
   }
 
   // .commonmodule.ApplicationSystem requesterCircuitSegmentService = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_requestercircuitsegmentservice()) {
+  if (this->_internal_has_requestercircuitsegmentservice()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *requestercircuitsegmentservice_);
+        *_impl_.requestercircuitsegmentservice_);
   }
 
   // .interconnectionmodule.InterconnectionSchedule interconnectionSchedule = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_interconnectionschedule()) {
+  if (this->_internal_has_interconnectionschedule()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *interconnectionschedule_);
+        *_impl_.interconnectionschedule_);
   }
 
   // .commonmodule.ConductingEquipment tiePoint = 4 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_tiepoint()) {
+  if (this->_internal_has_tiepoint()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *tiepoint_);
+        *_impl_.tiepoint_);
   }
 
   // .commonmodule.ApplicationSystem responderCircuitSegmentService = 5 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_respondercircuitsegmentservice()) {
+  if (this->_internal_has_respondercircuitsegmentservice()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *respondercircuitsegmentservice_);
+        *_impl_.respondercircuitsegmentservice_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RequestedInterconnectionScheduleProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:interconnectionmodule.RequestedInterconnectionScheduleProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RequestedInterconnectionScheduleProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RequestedInterconnectionScheduleProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:interconnectionmodule.RequestedInterconnectionScheduleProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:interconnectionmodule.RequestedInterconnectionScheduleProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData InterconnectionRequestedScheduleProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    InterconnectionRequestedScheduleProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*InterconnectionRequestedScheduleProfile::GetClassData() const { return &_class_data_; }
 
-void RequestedInterconnectionScheduleProfile::MergeFrom(const RequestedInterconnectionScheduleProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.RequestedInterconnectionScheduleProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void InterconnectionRequestedScheduleProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<InterconnectionRequestedScheduleProfile*>(&to_msg);
+  auto& from = static_cast<const InterconnectionRequestedScheduleProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:interconnectionmodule.InterconnectionRequestedScheduleProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlmessageinfo()) {
-    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
+  if (from._internal_has_controlmessageinfo()) {
+    _this->_internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(
+        from._internal_controlmessageinfo());
   }
-  if (from.has_requestercircuitsegmentservice()) {
-    _internal_mutable_requestercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(from._internal_requestercircuitsegmentservice());
+  if (from._internal_has_requestercircuitsegmentservice()) {
+    _this->_internal_mutable_requestercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(
+        from._internal_requestercircuitsegmentservice());
   }
-  if (from.has_interconnectionschedule()) {
-    _internal_mutable_interconnectionschedule()->::interconnectionmodule::InterconnectionSchedule::MergeFrom(from._internal_interconnectionschedule());
+  if (from._internal_has_interconnectionschedule()) {
+    _this->_internal_mutable_interconnectionschedule()->::interconnectionmodule::InterconnectionSchedule::MergeFrom(
+        from._internal_interconnectionschedule());
   }
-  if (from.has_tiepoint()) {
-    _internal_mutable_tiepoint()->::commonmodule::ConductingEquipment::MergeFrom(from._internal_tiepoint());
+  if (from._internal_has_tiepoint()) {
+    _this->_internal_mutable_tiepoint()->::commonmodule::ConductingEquipment::MergeFrom(
+        from._internal_tiepoint());
   }
-  if (from.has_respondercircuitsegmentservice()) {
-    _internal_mutable_respondercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(from._internal_respondercircuitsegmentservice());
+  if (from._internal_has_respondercircuitsegmentservice()) {
+    _this->_internal_mutable_respondercircuitsegmentservice()->::commonmodule::ApplicationSystem::MergeFrom(
+        from._internal_respondercircuitsegmentservice());
   }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void RequestedInterconnectionScheduleProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:interconnectionmodule.RequestedInterconnectionScheduleProfile)
+void InterconnectionRequestedScheduleProfile::CopyFrom(const InterconnectionRequestedScheduleProfile& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:interconnectionmodule.InterconnectionRequestedScheduleProfile)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void RequestedInterconnectionScheduleProfile::CopyFrom(const RequestedInterconnectionScheduleProfile& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:interconnectionmodule.RequestedInterconnectionScheduleProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool RequestedInterconnectionScheduleProfile::IsInitialized() const {
+bool InterconnectionRequestedScheduleProfile::IsInitialized() const {
   return true;
 }
 
-void RequestedInterconnectionScheduleProfile::InternalSwap(RequestedInterconnectionScheduleProfile* other) {
+void InterconnectionRequestedScheduleProfile::InternalSwap(InterconnectionRequestedScheduleProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RequestedInterconnectionScheduleProfile, respondercircuitsegmentservice_)
-      + sizeof(RequestedInterconnectionScheduleProfile::respondercircuitsegmentservice_)
-      - PROTOBUF_FIELD_OFFSET(RequestedInterconnectionScheduleProfile, controlmessageinfo_)>(
-          reinterpret_cast<char*>(&controlmessageinfo_),
-          reinterpret_cast<char*>(&other->controlmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(InterconnectionRequestedScheduleProfile, _impl_.respondercircuitsegmentservice_)
+      + sizeof(InterconnectionRequestedScheduleProfile::_impl_.respondercircuitsegmentservice_)
+      - PROTOBUF_FIELD_OFFSET(InterconnectionRequestedScheduleProfile, _impl_.controlmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.controlmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.controlmessageinfo_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata RequestedInterconnectionScheduleProfile::GetMetadata() const {
-  return GetMetadataStatic();
+::PROTOBUF_NAMESPACE_ID::Metadata InterconnectionRequestedScheduleProfile::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_getter, &descriptor_table_interconnectionmodule_2finterconnectionmodule_2eproto_once,
+      file_level_metadata_interconnectionmodule_2finterconnectionmodule_2eproto[6]);
 }
-
-
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace interconnectionmodule
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::interconnectionmodule::InterconnectionPoint* Arena::CreateMaybeMessage< ::interconnectionmodule::InterconnectionPoint >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::interconnectionmodule::InterconnectionPoint*
+Arena::CreateMaybeMessage< ::interconnectionmodule::InterconnectionPoint >(Arena* arena) {
   return Arena::CreateMessageInternal< ::interconnectionmodule::InterconnectionPoint >(arena);
 }
-template<> PROTOBUF_NOINLINE ::interconnectionmodule::InterconnectionCSG* Arena::CreateMaybeMessage< ::interconnectionmodule::InterconnectionCSG >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::interconnectionmodule::InterconnectionCSG*
+Arena::CreateMaybeMessage< ::interconnectionmodule::InterconnectionCSG >(Arena* arena) {
   return Arena::CreateMessageInternal< ::interconnectionmodule::InterconnectionCSG >(arena);
 }
-template<> PROTOBUF_NOINLINE ::interconnectionmodule::InterconnectionControlScheduleFSCH* Arena::CreateMaybeMessage< ::interconnectionmodule::InterconnectionControlScheduleFSCH >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::interconnectionmodule::InterconnectionControlScheduleFSCH*
+Arena::CreateMaybeMessage< ::interconnectionmodule::InterconnectionControlScheduleFSCH >(Arena* arena) {
   return Arena::CreateMessageInternal< ::interconnectionmodule::InterconnectionControlScheduleFSCH >(arena);
 }
-template<> PROTOBUF_NOINLINE ::interconnectionmodule::InterconnectionScheduleFSCC* Arena::CreateMaybeMessage< ::interconnectionmodule::InterconnectionScheduleFSCC >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::interconnectionmodule::InterconnectionScheduleFSCC*
+Arena::CreateMaybeMessage< ::interconnectionmodule::InterconnectionScheduleFSCC >(Arena* arena) {
   return Arena::CreateMessageInternal< ::interconnectionmodule::InterconnectionScheduleFSCC >(arena);
 }
-template<> PROTOBUF_NOINLINE ::interconnectionmodule::InterconnectionSchedule* Arena::CreateMaybeMessage< ::interconnectionmodule::InterconnectionSchedule >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::interconnectionmodule::InterconnectionSchedule*
+Arena::CreateMaybeMessage< ::interconnectionmodule::InterconnectionSchedule >(Arena* arena) {
   return Arena::CreateMessageInternal< ::interconnectionmodule::InterconnectionSchedule >(arena);
 }
-template<> PROTOBUF_NOINLINE ::interconnectionmodule::PlannedInterconnectionScheduleProfile* Arena::CreateMaybeMessage< ::interconnectionmodule::PlannedInterconnectionScheduleProfile >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::interconnectionmodule::PlannedInterconnectionScheduleProfile >(arena);
+template<> PROTOBUF_NOINLINE ::interconnectionmodule::InterconnectionPlannedScheduleProfile*
+Arena::CreateMaybeMessage< ::interconnectionmodule::InterconnectionPlannedScheduleProfile >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::interconnectionmodule::InterconnectionPlannedScheduleProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::interconnectionmodule::RequestedInterconnectionScheduleProfile* Arena::CreateMaybeMessage< ::interconnectionmodule::RequestedInterconnectionScheduleProfile >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::interconnectionmodule::RequestedInterconnectionScheduleProfile >(arena);
+template<> PROTOBUF_NOINLINE ::interconnectionmodule::InterconnectionRequestedScheduleProfile*
+Arena::CreateMaybeMessage< ::interconnectionmodule::InterconnectionRequestedScheduleProfile >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::interconnectionmodule::InterconnectionRequestedScheduleProfile >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
-
 // @@protoc_insertion_point(global_scope)
-#include <google/protobuf/port_undef.inc>
+#include "google/protobuf/port_undef.inc"

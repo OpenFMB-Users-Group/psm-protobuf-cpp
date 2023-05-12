@@ -4,679 +4,800 @@
 #include "regulatormodule/regulatormodule.pb.h"
 
 #include <algorithm>
-
-#include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include "google/protobuf/io/coded_stream.h"
+#include "google/protobuf/extension_set.h"
+#include "google/protobuf/wire_format_lite.h"
+#include "google/protobuf/descriptor.h"
+#include "google/protobuf/generated_message_reflection.h"
+#include "google/protobuf/reflection_ops.h"
+#include "google/protobuf/wire_format.h"
 // @@protoc_insertion_point(includes)
-#include <google/protobuf/port_def.inc>
 
+// Must be included last.
+#include "google/protobuf/port_def.inc"
 PROTOBUF_PRAGMA_INIT_SEG
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = ::PROTOBUF_NAMESPACE_ID::internal;
 namespace regulatormodule {
-constexpr DirectionalATCC::DirectionalATCC(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : bndwid_(nullptr)
-  , ctldltmms_(nullptr)
-  , ldcr_(nullptr)
-  , ldcx_(nullptr)
-  , volspt_(nullptr)
-  , voltagesetpointenabled_(nullptr){}
+PROTOBUF_CONSTEXPR DirectionalATCC::DirectionalATCC(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.bndwid_)*/nullptr
+  , /*decltype(_impl_.ctldltmms_)*/nullptr
+  , /*decltype(_impl_.ldcr_)*/nullptr
+  , /*decltype(_impl_.ldcx_)*/nullptr
+  , /*decltype(_impl_.volspt_)*/nullptr
+  , /*decltype(_impl_.voltagesetpointenabled_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct DirectionalATCCDefaultTypeInternal {
-  constexpr DirectionalATCCDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR DirectionalATCCDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~DirectionalATCCDefaultTypeInternal() {}
   union {
     DirectionalATCC _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT DirectionalATCCDefaultTypeInternal _DirectionalATCC_default_instance_;
-constexpr RegulatorControlATCC::RegulatorControlATCC(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnodeforcontrol_(nullptr)
-  , dirfwd_(nullptr)
-  , dirmode_(nullptr)
-  , dirrev_(nullptr)
-  , dirthd_(nullptr)
-  , parop_(nullptr)
-  , ramprates_(nullptr)
-  , state_(nullptr)
-  , tapopl_(nullptr)
-  , tapopr_(nullptr)
-  , vollmthi_(nullptr)
-  , vollmtlo_(nullptr)
-  , vollmtmode_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DirectionalATCCDefaultTypeInternal _DirectionalATCC_default_instance_;
+PROTOBUF_CONSTEXPR RegulatorControlATCC::RegulatorControlATCC(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.logicalnodeforcontrol_)*/nullptr
+  , /*decltype(_impl_.dirfwd_)*/nullptr
+  , /*decltype(_impl_.dirmode_)*/nullptr
+  , /*decltype(_impl_.dirrev_)*/nullptr
+  , /*decltype(_impl_.dirthd_)*/nullptr
+  , /*decltype(_impl_.parop_)*/nullptr
+  , /*decltype(_impl_.ramprates_)*/nullptr
+  , /*decltype(_impl_.state_)*/nullptr
+  , /*decltype(_impl_.tapopl_)*/nullptr
+  , /*decltype(_impl_.tapopr_)*/nullptr
+  , /*decltype(_impl_.vollmthi_)*/nullptr
+  , /*decltype(_impl_.vollmtlo_)*/nullptr
+  , /*decltype(_impl_.vollmtmode_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RegulatorControlATCCDefaultTypeInternal {
-  constexpr RegulatorControlATCCDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RegulatorControlATCCDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~RegulatorControlATCCDefaultTypeInternal() {}
   union {
     RegulatorControlATCC _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegulatorControlATCCDefaultTypeInternal _RegulatorControlATCC_default_instance_;
-constexpr RegulatorPoint::RegulatorPoint(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : control_(nullptr)
-  , starttime_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegulatorControlATCCDefaultTypeInternal _RegulatorControlATCC_default_instance_;
+PROTOBUF_CONSTEXPR RegulatorPoint::RegulatorPoint(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.control_)*/nullptr
+  , /*decltype(_impl_.starttime_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RegulatorPointDefaultTypeInternal {
-  constexpr RegulatorPointDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RegulatorPointDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~RegulatorPointDefaultTypeInternal() {}
   union {
     RegulatorPoint _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegulatorPointDefaultTypeInternal _RegulatorPoint_default_instance_;
-constexpr RegulatorCSG::RegulatorCSG(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : crvpts_(){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegulatorPointDefaultTypeInternal _RegulatorPoint_default_instance_;
+PROTOBUF_CONSTEXPR RegulatorCSG::RegulatorCSG(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.crvpts_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RegulatorCSGDefaultTypeInternal {
-  constexpr RegulatorCSGDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RegulatorCSGDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~RegulatorCSGDefaultTypeInternal() {}
   union {
     RegulatorCSG _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegulatorCSGDefaultTypeInternal _RegulatorCSG_default_instance_;
-constexpr RegulatorControlScheduleFSCH::RegulatorControlScheduleFSCH(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : valdcsg_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegulatorCSGDefaultTypeInternal _RegulatorCSG_default_instance_;
+PROTOBUF_CONSTEXPR RegulatorControlScheduleFSCH::RegulatorControlScheduleFSCH(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.valdcsg_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RegulatorControlScheduleFSCHDefaultTypeInternal {
-  constexpr RegulatorControlScheduleFSCHDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RegulatorControlScheduleFSCHDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~RegulatorControlScheduleFSCHDefaultTypeInternal() {}
   union {
     RegulatorControlScheduleFSCH _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegulatorControlScheduleFSCHDefaultTypeInternal _RegulatorControlScheduleFSCH_default_instance_;
-constexpr RegulatorControlFSCC::RegulatorControlFSCC(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlfscc_(nullptr)
-  , regulatorcontrolschedulefsch_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegulatorControlScheduleFSCHDefaultTypeInternal _RegulatorControlScheduleFSCH_default_instance_;
+PROTOBUF_CONSTEXPR RegulatorControlFSCC::RegulatorControlFSCC(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlfscc_)*/nullptr
+  , /*decltype(_impl_.regulatorcontrolschedulefsch_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RegulatorControlFSCCDefaultTypeInternal {
-  constexpr RegulatorControlFSCCDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RegulatorControlFSCCDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~RegulatorControlFSCCDefaultTypeInternal() {}
   union {
     RegulatorControlFSCC _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegulatorControlFSCCDefaultTypeInternal _RegulatorControlFSCC_default_instance_;
-constexpr RegulatorControl::RegulatorControl(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlvalue_(nullptr)
-  , check_(nullptr)
-  , regulatorcontrolfscc_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegulatorControlFSCCDefaultTypeInternal _RegulatorControlFSCC_default_instance_;
+PROTOBUF_CONSTEXPR RegulatorControl::RegulatorControl(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlvalue_)*/nullptr
+  , /*decltype(_impl_.check_)*/nullptr
+  , /*decltype(_impl_.regulatorcontrolfscc_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RegulatorControlDefaultTypeInternal {
-  constexpr RegulatorControlDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RegulatorControlDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~RegulatorControlDefaultTypeInternal() {}
   union {
     RegulatorControl _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegulatorControlDefaultTypeInternal _RegulatorControl_default_instance_;
-constexpr RegulatorSystem::RegulatorSystem(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : conductingequipment_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegulatorControlDefaultTypeInternal _RegulatorControl_default_instance_;
+PROTOBUF_CONSTEXPR RegulatorSystem::RegulatorSystem(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.conductingequipment_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RegulatorSystemDefaultTypeInternal {
-  constexpr RegulatorSystemDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RegulatorSystemDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~RegulatorSystemDefaultTypeInternal() {}
   union {
     RegulatorSystem _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegulatorSystemDefaultTypeInternal _RegulatorSystem_default_instance_;
-constexpr RegulatorControlProfile::RegulatorControlProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlmessageinfo_(nullptr)
-  , regulatorcontrol_(nullptr)
-  , regulatorsystem_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegulatorSystemDefaultTypeInternal _RegulatorSystem_default_instance_;
+PROTOBUF_CONSTEXPR RegulatorControlProfile::RegulatorControlProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlmessageinfo_)*/nullptr
+  , /*decltype(_impl_.regulatorcontrol_)*/nullptr
+  , /*decltype(_impl_.regulatorsystem_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RegulatorControlProfileDefaultTypeInternal {
-  constexpr RegulatorControlProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RegulatorControlProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~RegulatorControlProfileDefaultTypeInternal() {}
   union {
     RegulatorControlProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegulatorControlProfileDefaultTypeInternal _RegulatorControlProfile_default_instance_;
-constexpr RegulatorDiscreteControl::RegulatorDiscreteControl(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlvalue_(nullptr)
-  , check_(nullptr)
-  , regulatorcontrolatcc_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegulatorControlProfileDefaultTypeInternal _RegulatorControlProfile_default_instance_;
+PROTOBUF_CONSTEXPR RegulatorDiscreteControl::RegulatorDiscreteControl(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlvalue_)*/nullptr
+  , /*decltype(_impl_.check_)*/nullptr
+  , /*decltype(_impl_.regulatorcontrolatcc_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RegulatorDiscreteControlDefaultTypeInternal {
-  constexpr RegulatorDiscreteControlDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RegulatorDiscreteControlDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~RegulatorDiscreteControlDefaultTypeInternal() {}
   union {
     RegulatorDiscreteControl _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegulatorDiscreteControlDefaultTypeInternal _RegulatorDiscreteControl_default_instance_;
-constexpr RegulatorDiscreteControlProfile::RegulatorDiscreteControlProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlmessageinfo_(nullptr)
-  , regulatordiscretecontrol_(nullptr)
-  , regulatorsystem_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegulatorDiscreteControlDefaultTypeInternal _RegulatorDiscreteControl_default_instance_;
+PROTOBUF_CONSTEXPR RegulatorDiscreteControlProfile::RegulatorDiscreteControlProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlmessageinfo_)*/nullptr
+  , /*decltype(_impl_.regulatordiscretecontrol_)*/nullptr
+  , /*decltype(_impl_.regulatorsystem_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RegulatorDiscreteControlProfileDefaultTypeInternal {
-  constexpr RegulatorDiscreteControlProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RegulatorDiscreteControlProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~RegulatorDiscreteControlProfileDefaultTypeInternal() {}
   union {
     RegulatorDiscreteControlProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegulatorDiscreteControlProfileDefaultTypeInternal _RegulatorDiscreteControlProfile_default_instance_;
-constexpr RegulatorEventAndStatusATCC::RegulatorEventAndStatusATCC(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : bndctr_(nullptr)
-  , bndwid_(nullptr)
-  , bndwidhi_(nullptr)
-  , bndwidlo_(nullptr)
-  , dirctlrev_(nullptr)
-  , dirindt_(nullptr)
-  , dirrev_(nullptr)
-  , ldcr_(nullptr)
-  , ldcx_(nullptr)
-  , parop_(nullptr)
-  , ramprates_(nullptr)
-  , state_(nullptr)
-  , stdltmms_(nullptr)
-  , tapoperr_(nullptr)
-  , tappos_(nullptr)
-  , vollmthi_(nullptr)
-  , vollmtlo_(nullptr)
-  , volspt_(nullptr)
-  , voltagesetpointenabled_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegulatorDiscreteControlProfileDefaultTypeInternal _RegulatorDiscreteControlProfile_default_instance_;
+PROTOBUF_CONSTEXPR RegulatorEventAndStatusATCC::RegulatorEventAndStatusATCC(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.bndctr_)*/nullptr
+  , /*decltype(_impl_.bndwid_)*/nullptr
+  , /*decltype(_impl_.bndwidhi_)*/nullptr
+  , /*decltype(_impl_.bndwidlo_)*/nullptr
+  , /*decltype(_impl_.dirctlrev_)*/nullptr
+  , /*decltype(_impl_.dirindt_)*/nullptr
+  , /*decltype(_impl_.dirrev_)*/nullptr
+  , /*decltype(_impl_.ldcr_)*/nullptr
+  , /*decltype(_impl_.ldcx_)*/nullptr
+  , /*decltype(_impl_.parop_)*/nullptr
+  , /*decltype(_impl_.ramprates_)*/nullptr
+  , /*decltype(_impl_.state_)*/nullptr
+  , /*decltype(_impl_.stdltmms_)*/nullptr
+  , /*decltype(_impl_.tapoperr_)*/nullptr
+  , /*decltype(_impl_.tappos_)*/nullptr
+  , /*decltype(_impl_.vollmthi_)*/nullptr
+  , /*decltype(_impl_.vollmtlo_)*/nullptr
+  , /*decltype(_impl_.volspt_)*/nullptr
+  , /*decltype(_impl_.voltagesetpointenabled_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RegulatorEventAndStatusATCCDefaultTypeInternal {
-  constexpr RegulatorEventAndStatusATCCDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RegulatorEventAndStatusATCCDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~RegulatorEventAndStatusATCCDefaultTypeInternal() {}
   union {
     RegulatorEventAndStatusATCC _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegulatorEventAndStatusATCCDefaultTypeInternal _RegulatorEventAndStatusATCC_default_instance_;
-constexpr RegulatorEventAndStatusANCR::RegulatorEventAndStatusANCR(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnodeforeventandstatus_(nullptr)
-  , dynamictest_(nullptr)
-  , pointstatus_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegulatorEventAndStatusATCCDefaultTypeInternal _RegulatorEventAndStatusATCC_default_instance_;
+PROTOBUF_CONSTEXPR RegulatorEventAndStatusANCR::RegulatorEventAndStatusANCR(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.logicalnodeforeventandstatus_)*/nullptr
+  , /*decltype(_impl_.dynamictest_)*/nullptr
+  , /*decltype(_impl_.pointstatus_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RegulatorEventAndStatusANCRDefaultTypeInternal {
-  constexpr RegulatorEventAndStatusANCRDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RegulatorEventAndStatusANCRDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~RegulatorEventAndStatusANCRDefaultTypeInternal() {}
   union {
     RegulatorEventAndStatusANCR _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegulatorEventAndStatusANCRDefaultTypeInternal _RegulatorEventAndStatusANCR_default_instance_;
-constexpr RegulatorEvent::RegulatorEvent(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : eventvalue_(nullptr)
-  , regulatoreventandstatusancr_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegulatorEventAndStatusANCRDefaultTypeInternal _RegulatorEventAndStatusANCR_default_instance_;
+PROTOBUF_CONSTEXPR RegulatorEvent::RegulatorEvent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.eventvalue_)*/nullptr
+  , /*decltype(_impl_.regulatoreventandstatusancr_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RegulatorEventDefaultTypeInternal {
-  constexpr RegulatorEventDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RegulatorEventDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~RegulatorEventDefaultTypeInternal() {}
   union {
     RegulatorEvent _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegulatorEventDefaultTypeInternal _RegulatorEvent_default_instance_;
-constexpr RegulatorEventProfile::RegulatorEventProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : eventmessageinfo_(nullptr)
-  , regulatorevent_(nullptr)
-  , regulatorsystem_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegulatorEventDefaultTypeInternal _RegulatorEvent_default_instance_;
+PROTOBUF_CONSTEXPR RegulatorEventProfile::RegulatorEventProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.eventmessageinfo_)*/nullptr
+  , /*decltype(_impl_.regulatorevent_)*/nullptr
+  , /*decltype(_impl_.regulatorsystem_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RegulatorEventProfileDefaultTypeInternal {
-  constexpr RegulatorEventProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RegulatorEventProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~RegulatorEventProfileDefaultTypeInternal() {}
   union {
     RegulatorEventProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegulatorEventProfileDefaultTypeInternal _RegulatorEventProfile_default_instance_;
-constexpr RegulatorReading::RegulatorReading(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : conductingequipmentterminalreading_(nullptr)
-  , phasemmtn_(nullptr)
-  , readingmmtr_(nullptr)
-  , readingmmxu_(nullptr)
-  , secondaryreadingmmxu_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegulatorEventProfileDefaultTypeInternal _RegulatorEventProfile_default_instance_;
+PROTOBUF_CONSTEXPR RegulatorReading::RegulatorReading(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.conductingequipmentterminalreading_)*/nullptr
+  , /*decltype(_impl_.phasemmtn_)*/nullptr
+  , /*decltype(_impl_.readingmmtr_)*/nullptr
+  , /*decltype(_impl_.readingmmxu_)*/nullptr
+  , /*decltype(_impl_.secondaryreadingmmxu_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RegulatorReadingDefaultTypeInternal {
-  constexpr RegulatorReadingDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RegulatorReadingDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~RegulatorReadingDefaultTypeInternal() {}
   union {
     RegulatorReading _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegulatorReadingDefaultTypeInternal _RegulatorReading_default_instance_;
-constexpr RegulatorReadingProfile::RegulatorReadingProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : regulatorreading_()
-  , readingmessageinfo_(nullptr)
-  , regulatorsystem_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegulatorReadingDefaultTypeInternal _RegulatorReading_default_instance_;
+PROTOBUF_CONSTEXPR RegulatorReadingProfile::RegulatorReadingProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.regulatorreading_)*/{}
+  , /*decltype(_impl_.readingmessageinfo_)*/nullptr
+  , /*decltype(_impl_.regulatorsystem_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RegulatorReadingProfileDefaultTypeInternal {
-  constexpr RegulatorReadingProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RegulatorReadingProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~RegulatorReadingProfileDefaultTypeInternal() {}
   union {
     RegulatorReadingProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegulatorReadingProfileDefaultTypeInternal _RegulatorReadingProfile_default_instance_;
-constexpr RegulatorStatus::RegulatorStatus(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : statusvalue_(nullptr)
-  , regulatoreventandstatusancr_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegulatorReadingProfileDefaultTypeInternal _RegulatorReadingProfile_default_instance_;
+PROTOBUF_CONSTEXPR RegulatorStatus::RegulatorStatus(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.statusvalue_)*/nullptr
+  , /*decltype(_impl_.regulatoreventandstatusancr_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RegulatorStatusDefaultTypeInternal {
-  constexpr RegulatorStatusDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RegulatorStatusDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~RegulatorStatusDefaultTypeInternal() {}
   union {
     RegulatorStatus _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegulatorStatusDefaultTypeInternal _RegulatorStatus_default_instance_;
-constexpr RegulatorStatusProfile::RegulatorStatusProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : statusmessageinfo_(nullptr)
-  , regulatorstatus_(nullptr)
-  , regulatorsystem_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegulatorStatusDefaultTypeInternal _RegulatorStatus_default_instance_;
+PROTOBUF_CONSTEXPR RegulatorStatusProfile::RegulatorStatusProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.statusmessageinfo_)*/nullptr
+  , /*decltype(_impl_.regulatorstatus_)*/nullptr
+  , /*decltype(_impl_.regulatorsystem_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct RegulatorStatusProfileDefaultTypeInternal {
-  constexpr RegulatorStatusProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR RegulatorStatusProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~RegulatorStatusProfileDefaultTypeInternal() {}
   union {
     RegulatorStatusProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT RegulatorStatusProfileDefaultTypeInternal _RegulatorStatusProfile_default_instance_;
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RegulatorStatusProfileDefaultTypeInternal _RegulatorStatusProfile_default_instance_;
 }  // namespace regulatormodule
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_regulatormodule_2fregulatormodule_2eproto[19];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_regulatormodule_2fregulatormodule_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_regulatormodule_2fregulatormodule_2eproto = nullptr;
+static ::_pb::Metadata file_level_metadata_regulatormodule_2fregulatormodule_2eproto[19];
+static constexpr const ::_pb::EnumDescriptor**
+    file_level_enum_descriptors_regulatormodule_2fregulatormodule_2eproto = nullptr;
+static constexpr const ::_pb::ServiceDescriptor**
+    file_level_service_descriptors_regulatormodule_2fregulatormodule_2eproto = nullptr;
+const ::uint32_t TableStruct_regulatormodule_2fregulatormodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
+    protodesc_cold) = {
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::DirectionalATCC, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::DirectionalATCC, _impl_.bndwid_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::DirectionalATCC, _impl_.ctldltmms_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::DirectionalATCC, _impl_.ldcr_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::DirectionalATCC, _impl_.ldcx_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::DirectionalATCC, _impl_.volspt_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::DirectionalATCC, _impl_.voltagesetpointenabled_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, _impl_.logicalnodeforcontrol_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, _impl_.dirfwd_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, _impl_.dirmode_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, _impl_.dirrev_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, _impl_.dirthd_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, _impl_.parop_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, _impl_.ramprates_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, _impl_.state_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, _impl_.tapopl_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, _impl_.tapopr_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, _impl_.vollmthi_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, _impl_.vollmtlo_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, _impl_.vollmtmode_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorPoint, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorPoint, _impl_.control_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorPoint, _impl_.starttime_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorCSG, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorCSG, _impl_.crvpts_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlScheduleFSCH, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlScheduleFSCH, _impl_.valdcsg_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlFSCC, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlFSCC, _impl_.controlfscc_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlFSCC, _impl_.regulatorcontrolschedulefsch_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControl, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControl, _impl_.controlvalue_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControl, _impl_.check_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControl, _impl_.regulatorcontrolfscc_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorSystem, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorSystem, _impl_.conductingequipment_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlProfile, _impl_.controlmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlProfile, _impl_.regulatorcontrol_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlProfile, _impl_.regulatorsystem_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorDiscreteControl, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorDiscreteControl, _impl_.controlvalue_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorDiscreteControl, _impl_.check_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorDiscreteControl, _impl_.regulatorcontrolatcc_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorDiscreteControlProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorDiscreteControlProfile, _impl_.controlmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorDiscreteControlProfile, _impl_.regulatordiscretecontrol_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorDiscreteControlProfile, _impl_.regulatorsystem_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _impl_.bndctr_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _impl_.bndwid_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _impl_.bndwidhi_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _impl_.bndwidlo_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _impl_.dirctlrev_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _impl_.dirindt_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _impl_.dirrev_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _impl_.ldcr_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _impl_.ldcx_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _impl_.parop_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _impl_.ramprates_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _impl_.state_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _impl_.stdltmms_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _impl_.tapoperr_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _impl_.tappos_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _impl_.vollmthi_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _impl_.vollmtlo_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _impl_.volspt_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _impl_.voltagesetpointenabled_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusANCR, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusANCR, _impl_.logicalnodeforeventandstatus_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusANCR, _impl_.dynamictest_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusANCR, _impl_.pointstatus_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEvent, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEvent, _impl_.eventvalue_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEvent, _impl_.regulatoreventandstatusancr_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventProfile, _impl_.eventmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventProfile, _impl_.regulatorevent_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventProfile, _impl_.regulatorsystem_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReading, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReading, _impl_.conductingequipmentterminalreading_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReading, _impl_.phasemmtn_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReading, _impl_.readingmmtr_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReading, _impl_.readingmmxu_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReading, _impl_.secondaryreadingmmxu_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReadingProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReadingProfile, _impl_.readingmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReadingProfile, _impl_.regulatorreading_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReadingProfile, _impl_.regulatorsystem_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorStatus, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorStatus, _impl_.statusvalue_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorStatus, _impl_.regulatoreventandstatusancr_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorStatusProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorStatusProfile, _impl_.statusmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorStatusProfile, _impl_.regulatorstatus_),
+    PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorStatusProfile, _impl_.regulatorsystem_),
+};
 
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_regulatormodule_2fregulatormodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::DirectionalATCC, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::DirectionalATCC, bndwid_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::DirectionalATCC, ctldltmms_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::DirectionalATCC, ldcr_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::DirectionalATCC, ldcx_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::DirectionalATCC, volspt_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::DirectionalATCC, voltagesetpointenabled_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, logicalnodeforcontrol_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, dirfwd_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, dirmode_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, dirrev_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, dirthd_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, parop_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, ramprates_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, state_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, tapopl_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, tapopr_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, vollmthi_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, vollmtlo_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlATCC, vollmtmode_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorPoint, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorPoint, control_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorPoint, starttime_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorCSG, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorCSG, crvpts_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlScheduleFSCH, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlScheduleFSCH, valdcsg_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlFSCC, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlFSCC, controlfscc_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlFSCC, regulatorcontrolschedulefsch_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControl, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControl, controlvalue_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControl, check_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControl, regulatorcontrolfscc_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorSystem, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorSystem, conductingequipment_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlProfile, regulatorcontrol_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorControlProfile, regulatorsystem_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorDiscreteControl, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorDiscreteControl, controlvalue_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorDiscreteControl, check_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorDiscreteControl, regulatorcontrolatcc_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorDiscreteControlProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorDiscreteControlProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorDiscreteControlProfile, regulatordiscretecontrol_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorDiscreteControlProfile, regulatorsystem_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, bndctr_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, bndwid_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, bndwidhi_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, bndwidlo_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, dirctlrev_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, dirindt_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, dirrev_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, ldcr_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, ldcx_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, parop_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, ramprates_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, state_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, stdltmms_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, tapoperr_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, tappos_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, vollmthi_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, vollmtlo_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, volspt_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusATCC, voltagesetpointenabled_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusANCR, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusANCR, logicalnodeforeventandstatus_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusANCR, dynamictest_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventAndStatusANCR, pointstatus_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEvent, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEvent, eventvalue_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEvent, regulatoreventandstatusancr_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventProfile, eventmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventProfile, regulatorevent_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorEventProfile, regulatorsystem_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReading, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReading, conductingequipmentterminalreading_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReading, phasemmtn_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReading, readingmmtr_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReading, readingmmxu_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReading, secondaryreadingmmxu_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReadingProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReadingProfile, readingmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReadingProfile, regulatorreading_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorReadingProfile, regulatorsystem_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorStatus, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorStatus, statusvalue_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorStatus, regulatoreventandstatusancr_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorStatusProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorStatusProfile, statusmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorStatusProfile, regulatorstatus_),
-  PROTOBUF_FIELD_OFFSET(::regulatormodule::RegulatorStatusProfile, regulatorsystem_),
-};
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::regulatormodule::DirectionalATCC)},
-  { 11, -1, sizeof(::regulatormodule::RegulatorControlATCC)},
-  { 29, -1, sizeof(::regulatormodule::RegulatorPoint)},
-  { 36, -1, sizeof(::regulatormodule::RegulatorCSG)},
-  { 42, -1, sizeof(::regulatormodule::RegulatorControlScheduleFSCH)},
-  { 48, -1, sizeof(::regulatormodule::RegulatorControlFSCC)},
-  { 55, -1, sizeof(::regulatormodule::RegulatorControl)},
-  { 63, -1, sizeof(::regulatormodule::RegulatorSystem)},
-  { 69, -1, sizeof(::regulatormodule::RegulatorControlProfile)},
-  { 77, -1, sizeof(::regulatormodule::RegulatorDiscreteControl)},
-  { 85, -1, sizeof(::regulatormodule::RegulatorDiscreteControlProfile)},
-  { 93, -1, sizeof(::regulatormodule::RegulatorEventAndStatusATCC)},
-  { 117, -1, sizeof(::regulatormodule::RegulatorEventAndStatusANCR)},
-  { 125, -1, sizeof(::regulatormodule::RegulatorEvent)},
-  { 132, -1, sizeof(::regulatormodule::RegulatorEventProfile)},
-  { 140, -1, sizeof(::regulatormodule::RegulatorReading)},
-  { 150, -1, sizeof(::regulatormodule::RegulatorReadingProfile)},
-  { 158, -1, sizeof(::regulatormodule::RegulatorStatus)},
-  { 165, -1, sizeof(::regulatormodule::RegulatorStatusProfile)},
+static const ::_pbi::MigrationSchema
+    schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+        { 0, -1, -1, sizeof(::regulatormodule::DirectionalATCC)},
+        { 14, -1, -1, sizeof(::regulatormodule::RegulatorControlATCC)},
+        { 35, -1, -1, sizeof(::regulatormodule::RegulatorPoint)},
+        { 45, -1, -1, sizeof(::regulatormodule::RegulatorCSG)},
+        { 54, -1, -1, sizeof(::regulatormodule::RegulatorControlScheduleFSCH)},
+        { 63, -1, -1, sizeof(::regulatormodule::RegulatorControlFSCC)},
+        { 73, -1, -1, sizeof(::regulatormodule::RegulatorControl)},
+        { 84, -1, -1, sizeof(::regulatormodule::RegulatorSystem)},
+        { 93, -1, -1, sizeof(::regulatormodule::RegulatorControlProfile)},
+        { 104, -1, -1, sizeof(::regulatormodule::RegulatorDiscreteControl)},
+        { 115, -1, -1, sizeof(::regulatormodule::RegulatorDiscreteControlProfile)},
+        { 126, -1, -1, sizeof(::regulatormodule::RegulatorEventAndStatusATCC)},
+        { 153, -1, -1, sizeof(::regulatormodule::RegulatorEventAndStatusANCR)},
+        { 164, -1, -1, sizeof(::regulatormodule::RegulatorEvent)},
+        { 174, -1, -1, sizeof(::regulatormodule::RegulatorEventProfile)},
+        { 185, -1, -1, sizeof(::regulatormodule::RegulatorReading)},
+        { 198, -1, -1, sizeof(::regulatormodule::RegulatorReadingProfile)},
+        { 209, -1, -1, sizeof(::regulatormodule::RegulatorStatus)},
+        { 219, -1, -1, sizeof(::regulatormodule::RegulatorStatusProfile)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::regulatormodule::_DirectionalATCC_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::regulatormodule::_RegulatorControlATCC_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::regulatormodule::_RegulatorPoint_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::regulatormodule::_RegulatorCSG_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::regulatormodule::_RegulatorControlScheduleFSCH_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::regulatormodule::_RegulatorControlFSCC_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::regulatormodule::_RegulatorControl_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::regulatormodule::_RegulatorSystem_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::regulatormodule::_RegulatorControlProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::regulatormodule::_RegulatorDiscreteControl_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::regulatormodule::_RegulatorDiscreteControlProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::regulatormodule::_RegulatorEventAndStatusATCC_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::regulatormodule::_RegulatorEventAndStatusANCR_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::regulatormodule::_RegulatorEvent_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::regulatormodule::_RegulatorEventProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::regulatormodule::_RegulatorReading_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::regulatormodule::_RegulatorReadingProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::regulatormodule::_RegulatorStatus_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::regulatormodule::_RegulatorStatusProfile_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+    &::regulatormodule::_DirectionalATCC_default_instance_._instance,
+    &::regulatormodule::_RegulatorControlATCC_default_instance_._instance,
+    &::regulatormodule::_RegulatorPoint_default_instance_._instance,
+    &::regulatormodule::_RegulatorCSG_default_instance_._instance,
+    &::regulatormodule::_RegulatorControlScheduleFSCH_default_instance_._instance,
+    &::regulatormodule::_RegulatorControlFSCC_default_instance_._instance,
+    &::regulatormodule::_RegulatorControl_default_instance_._instance,
+    &::regulatormodule::_RegulatorSystem_default_instance_._instance,
+    &::regulatormodule::_RegulatorControlProfile_default_instance_._instance,
+    &::regulatormodule::_RegulatorDiscreteControl_default_instance_._instance,
+    &::regulatormodule::_RegulatorDiscreteControlProfile_default_instance_._instance,
+    &::regulatormodule::_RegulatorEventAndStatusATCC_default_instance_._instance,
+    &::regulatormodule::_RegulatorEventAndStatusANCR_default_instance_._instance,
+    &::regulatormodule::_RegulatorEvent_default_instance_._instance,
+    &::regulatormodule::_RegulatorEventProfile_default_instance_._instance,
+    &::regulatormodule::_RegulatorReading_default_instance_._instance,
+    &::regulatormodule::_RegulatorReadingProfile_default_instance_._instance,
+    &::regulatormodule::_RegulatorStatus_default_instance_._instance,
+    &::regulatormodule::_RegulatorStatusProfile_default_instance_._instance,
+};
+const char descriptor_table_protodef_regulatormodule_2fregulatormodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+    "\n%regulatormodule/regulatormodule.proto\022"
+    "\017regulatormodule\032\tuml.proto\032\037commonmodul"
+    "e/commonmodule.proto\"\220\002\n\017DirectionalATCC"
+    "\022&\n\006BndWid\030\001 \001(\0132\026.commonmodule.PhaseAPC"
+    "\022)\n\tCtlDlTmms\030\002 \001(\0132\026.commonmodule.Phase"
+    "ISC\022$\n\004LDCR\030\003 \001(\0132\026.commonmodule.PhaseAP"
+    "C\022$\n\004LDCX\030\004 \001(\0132\026.commonmodule.PhaseAPC\022"
+    "&\n\006VolSpt\030\005 \001(\0132\026.commonmodule.PhaseAPC\022"
+    "6\n\026voltageSetPointEnabled\030\006 \001(\0132\026.common"
+    "module.PhaseDPC\"\214\005\n\024RegulatorControlATCC"
+    "\022H\n\025logicalNodeForControl\030\001 \001(\0132#.common"
+    "module.LogicalNodeForControlB\004\200\265\030\001\0220\n\006Di"
+    "rFwd\030\002 \001(\0132 .regulatormodule.Directional"
+    "ATCC\0229\n\007DirMode\030\003 \001(\0132(.commonmodule.Opt"
+    "ional_DirectionModeKind\0220\n\006DirRev\030\004 \001(\0132"
+    " .regulatormodule.DirectionalATCC\022&\n\006Dir"
+    "Thd\030\005 \001(\0132\026.commonmodule.PhaseAPC\022%\n\005Par"
+    "Op\030\006 \001(\0132\026.commonmodule.PhaseSPC\022)\n\tramp"
+    "Rates\030\007 \001(\0132\026.commonmodule.RampRate\022/\n\005s"
+    "tate\030\010 \001(\0132 .commonmodule.Optional_State"
+    "Kind\022&\n\006TapOpL\030\t \001(\0132\026.commonmodule.Phas"
+    "eSPC\022&\n\006TapOpR\030\n \001(\0132\026.commonmodule.Phas"
+    "eSPC\022(\n\010VolLmtHi\030\013 \001(\0132\026.commonmodule.Ph"
+    "aseAPC\022(\n\010VolLmtLo\030\014 \001(\0132\026.commonmodule."
+    "PhaseAPC\022<\n\nVolLmtMode\030\r \001(\0132(.commonmod"
+    "ule.Optional_VoltLimitModeKind\"~\n\016Regula"
+    "torPoint\0226\n\007control\030\001 \001(\0132%.regulatormod"
+    "ule.RegulatorControlATCC\0224\n\tstartTime\030\010 "
+    "\001(\0132\027.commonmodule.TimestampB\010\210\265\030\001\220\265\030\001\"I"
+    "\n\014RegulatorCSG\0229\n\006crvPts\030\001 \003(\0132\037.regulat"
+    "ormodule.RegulatorPointB\010\210\265\030\001\220\265\030\001\"X\n\034Reg"
+    "ulatorControlScheduleFSCH\0228\n\007ValDCSG\030\001 \001"
+    "(\0132\035.regulatormodule.RegulatorCSGB\010\210\265\030\001\220"
+    "\265\030\001\"\241\001\n\024RegulatorControlFSCC\0224\n\013controlF"
+    "SCC\030\001 \001(\0132\031.commonmodule.ControlFSCCB\004\200\265"
+    "\030\001\022S\n\034regulatorControlScheduleFSCH\030\002 \001(\013"
+    "2-.regulatormodule.RegulatorControlSched"
+    "uleFSCH\"\275\001\n\020RegulatorControl\0226\n\014controlV"
+    "alue\030\001 \001(\0132\032.commonmodule.ControlValueB\004"
+    "\200\265\030\001\022,\n\005check\030\002 \001(\0132\035.commonmodule.Check"
+    "Conditions\022C\n\024regulatorControlFSCC\030\003 \001(\013"
+    "2%.regulatormodule.RegulatorControlFSCC\""
+    "W\n\017RegulatorSystem\022D\n\023conductingEquipmen"
+    "t\030\001 \001(\0132!.commonmodule.ConductingEquipme"
+    "ntB\004\200\265\030\001\"\357\001\n\027RegulatorControlProfile\022B\n\022"
+    "controlMessageInfo\030\001 \001(\0132 .commonmodule."
+    "ControlMessageInfoB\004\200\265\030\001\022E\n\020regulatorCon"
+    "trol\030\002 \001(\0132!.regulatormodule.RegulatorCo"
+    "ntrolB\010\210\265\030\001\220\265\030\001\022C\n\017regulatorSystem\030\003 \001(\013"
+    "2 .regulatormodule.RegulatorSystemB\010\210\265\030\001"
+    "\220\265\030\001:\004\300\363\030\001\"\305\001\n\030RegulatorDiscreteControl\022"
+    "6\n\014controlValue\030\001 \001(\0132\032.commonmodule.Con"
+    "trolValueB\004\200\265\030\001\022,\n\005check\030\002 \001(\0132\035.commonm"
+    "odule.CheckConditions\022C\n\024regulatorContro"
+    "lATCC\030\003 \001(\0132%.regulatormodule.RegulatorC"
+    "ontrolATCC\"\207\002\n\037RegulatorDiscreteControlP"
+    "rofile\022B\n\022controlMessageInfo\030\001 \001(\0132 .com"
+    "monmodule.ControlMessageInfoB\004\200\265\030\001\022U\n\030re"
+    "gulatorDiscreteControl\030\002 \001(\0132).regulator"
+    "module.RegulatorDiscreteControlB\010\210\265\030\001\220\265\030"
+    "\001\022C\n\017regulatorSystem\030\003 \001(\0132 .regulatormo"
+    "dule.RegulatorSystemB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\254\006\n"
+    "\033RegulatorEventAndStatusATCC\022!\n\006BndCtr\030\001"
+    " \001(\0132\021.commonmodule.ASG\022!\n\006BndWid\030\002 \001(\0132"
+    "\021.commonmodule.ASG\022(\n\010BndWidHi\030\003 \001(\0132\026.c"
+    "ommonmodule.PhaseSPS\022(\n\010BndWidLo\030\004 \001(\0132\026"
+    ".commonmodule.PhaseSPS\022)\n\tDirCtlRev\030\005 \001("
+    "\0132\026.commonmodule.PhaseSPS\022\'\n\007DirIndt\030\006 \001"
+    "(\0132\026.commonmodule.PhaseSPS\022&\n\006DirRev\030\007 \001"
+    "(\0132\026.commonmodule.PhaseSPS\022\037\n\004LDCR\030\010 \001(\013"
+    "2\021.commonmodule.ASG\022\037\n\004LDCX\030\t \001(\0132\021.comm"
+    "onmodule.ASG\022&\n\005ParOp\030\n \001(\0132\027.commonmodu"
+    "le.StatusSPS\022)\n\trampRates\030\013 \001(\0132\026.common"
+    "module.RampRate\022/\n\005state\030\014 \001(\0132 .commonm"
+    "odule.Optional_StateKind\022)\n\010StDlTmms\030\r \001"
+    "(\0132\027.commonmodule.StatusINC\022)\n\010TapOpErr\030"
+    "\016 \001(\0132\027.commonmodule.StatusSPS\022&\n\006TapPos"
+    "\030\017 \001(\0132\026.commonmodule.PhaseINS\022(\n\010VolLmt"
+    "Hi\030\020 \001(\0132\026.commonmodule.PhaseSPS\022(\n\010VolL"
+    "mtLo\030\021 \001(\0132\026.commonmodule.PhaseSPS\022&\n\006Vo"
+    "lSpt\030\022 \001(\0132\026.commonmodule.PhaseAPC\0227\n\026vo"
+    "ltageSetPointEnabled\030\023 \001(\0132\027.commonmodul"
+    "e.StatusSPS\"\360\001\n\033RegulatorEventAndStatusA"
+    "NCR\022V\n\034logicalNodeForEventAndStatus\030\001 \001("
+    "\0132*.commonmodule.LogicalNodeForEventAndS"
+    "tatusB\004\200\265\030\001\0226\n\013DynamicTest\030\002 \001(\0132!.commo"
+    "nmodule.ENS_DynamicTestKind\022A\n\013PointStat"
+    "us\030\003 \001(\0132,.regulatormodule.RegulatorEven"
+    "tAndStatusATCC\"\227\001\n\016RegulatorEvent\0222\n\neve"
+    "ntValue\030\001 \001(\0132\030.commonmodule.EventValueB"
+    "\004\200\265\030\001\022Q\n\033regulatorEventAndStatusANCR\030\002 \001"
+    "(\0132,.regulatormodule.RegulatorEventAndSt"
+    "atusANCR\"\345\001\n\025RegulatorEventProfile\022>\n\020ev"
+    "entMessageInfo\030\001 \001(\0132\036.commonmodule.Even"
+    "tMessageInfoB\004\200\265\030\001\022A\n\016regulatorEvent\030\002 \001"
+    "(\0132\037.regulatormodule.RegulatorEventB\010\210\265\030"
+    "\001\220\265\030\001\022C\n\017regulatorSystem\030\003 \001(\0132 .regulat"
+    "ormodule.RegulatorSystemB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001"
+    "\"\273\002\n\020RegulatorReading\022b\n\"conductingEquip"
+    "mentTerminalReading\030\001 \001(\01320.commonmodule"
+    ".ConductingEquipmentTerminalReadingB\004\200\265\030"
+    "\001\022*\n\tphaseMMTN\030\002 \001(\0132\027.commonmodule.Phas"
+    "eMMTN\022.\n\013readingMMTR\030\003 \001(\0132\031.commonmodul"
+    "e.ReadingMMTR\022.\n\013readingMMXU\030\004 \001(\0132\031.com"
+    "monmodule.ReadingMMXU\0227\n\024secondaryReadin"
+    "gMMXU\030\005 \001(\0132\031.commonmodule.ReadingMMXU\"\363"
+    "\001\n\027RegulatorReadingProfile\022B\n\022readingMes"
+    "sageInfo\030\001 \001(\0132 .commonmodule.ReadingMes"
+    "sageInfoB\004\200\265\030\001\022I\n\020regulatorReading\030\002 \003(\013"
+    "2!.regulatormodule.RegulatorReadingB\014\210\265\030"
+    "\001\220\265\030\001\230\265\030\002\022C\n\017regulatorSystem\030\003 \001(\0132 .reg"
+    "ulatormodule.RegulatorSystemB\010\210\265\030\001\220\265\030\001:\004"
+    "\300\363\030\001\"\232\001\n\017RegulatorStatus\0224\n\013statusValue\030"
+    "\001 \001(\0132\031.commonmodule.StatusValueB\004\200\265\030\001\022Q"
+    "\n\033regulatorEventAndStatusANCR\030\002 \001(\0132,.re"
+    "gulatormodule.RegulatorEventAndStatusANC"
+    "R\"\352\001\n\026RegulatorStatusProfile\022@\n\021statusMe"
+    "ssageInfo\030\001 \001(\0132\037.commonmodule.StatusMes"
+    "sageInfoB\004\200\265\030\001\022C\n\017regulatorStatus\030\002 \001(\0132"
+    " .regulatormodule.RegulatorStatusB\010\210\265\030\001\220"
+    "\265\030\001\022C\n\017regulatorSystem\030\003 \001(\0132 .regulator"
+    "module.RegulatorSystemB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001B\215"
+    "\001\n\027openfmb.regulatormoduleP\001ZVgitlab.com"
+    "/openfmb/psm/ops/protobuf/go-openfmb-ops"
+    "-protobuf/v2/openfmb/regulatormodule\252\002\027o"
+    "penfmb.regulatormoduleb\006proto3"
+};
+static const ::_pbi::DescriptorTable* const descriptor_table_regulatormodule_2fregulatormodule_2eproto_deps[2] =
+    {
+        &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
+        &::descriptor_table_uml_2eproto,
+};
+static ::absl::once_flag descriptor_table_regulatormodule_2fregulatormodule_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_regulatormodule_2fregulatormodule_2eproto = {
+    false,
+    false,
+    5030,
+    descriptor_table_protodef_regulatormodule_2fregulatormodule_2eproto,
+    "regulatormodule/regulatormodule.proto",
+    &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+    descriptor_table_regulatormodule_2fregulatormodule_2eproto_deps,
+    2,
+    19,
+    schemas,
+    file_default_instances,
+    TableStruct_regulatormodule_2fregulatormodule_2eproto::offsets,
+    file_level_metadata_regulatormodule_2fregulatormodule_2eproto,
+    file_level_enum_descriptors_regulatormodule_2fregulatormodule_2eproto,
+    file_level_service_descriptors_regulatormodule_2fregulatormodule_2eproto,
 };
 
-const char descriptor_table_protodef_regulatormodule_2fregulatormodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n%regulatormodule/regulatormodule.proto\022"
-  "\017regulatormodule\032\tuml.proto\032\037commonmodul"
-  "e/commonmodule.proto\"\220\002\n\017DirectionalATCC"
-  "\022&\n\006BndWid\030\001 \001(\0132\026.commonmodule.PhaseAPC"
-  "\022)\n\tCtlDlTmms\030\002 \001(\0132\026.commonmodule.Phase"
-  "ISC\022$\n\004LDCR\030\003 \001(\0132\026.commonmodule.PhaseAP"
-  "C\022$\n\004LDCX\030\004 \001(\0132\026.commonmodule.PhaseAPC\022"
-  "&\n\006VolSpt\030\005 \001(\0132\026.commonmodule.PhaseAPC\022"
-  "6\n\026voltageSetPointEnabled\030\006 \001(\0132\026.common"
-  "module.PhaseDPC\"\214\005\n\024RegulatorControlATCC"
-  "\022H\n\025logicalNodeForControl\030\001 \001(\0132#.common"
-  "module.LogicalNodeForControlB\004\200\265\030\001\0220\n\006Di"
-  "rFwd\030\002 \001(\0132 .regulatormodule.Directional"
-  "ATCC\0229\n\007DirMode\030\003 \001(\0132(.commonmodule.Opt"
-  "ional_DirectionModeKind\0220\n\006DirRev\030\004 \001(\0132"
-  " .regulatormodule.DirectionalATCC\022&\n\006Dir"
-  "Thd\030\005 \001(\0132\026.commonmodule.PhaseAPC\022%\n\005Par"
-  "Op\030\006 \001(\0132\026.commonmodule.PhaseSPC\022)\n\tramp"
-  "Rates\030\007 \001(\0132\026.commonmodule.RampRate\022/\n\005s"
-  "tate\030\010 \001(\0132 .commonmodule.Optional_State"
-  "Kind\022&\n\006TapOpL\030\t \001(\0132\026.commonmodule.Phas"
-  "eSPC\022&\n\006TapOpR\030\n \001(\0132\026.commonmodule.Phas"
-  "eSPC\022(\n\010VolLmtHi\030\013 \001(\0132\026.commonmodule.Ph"
-  "aseAPC\022(\n\010VolLmtLo\030\014 \001(\0132\026.commonmodule."
-  "PhaseAPC\022<\n\nVolLmtMode\030\r \001(\0132(.commonmod"
-  "ule.Optional_VoltLimitModeKind\"~\n\016Regula"
-  "torPoint\0226\n\007control\030\001 \001(\0132%.regulatormod"
-  "ule.RegulatorControlATCC\0224\n\tstartTime\030\010 "
-  "\001(\0132\027.commonmodule.TimestampB\010\210\265\030\001\220\265\030\001\"I"
-  "\n\014RegulatorCSG\0229\n\006crvPts\030\001 \003(\0132\037.regulat"
-  "ormodule.RegulatorPointB\010\210\265\030\001\220\265\030\001\"X\n\034Reg"
-  "ulatorControlScheduleFSCH\0228\n\007ValDCSG\030\001 \001"
-  "(\0132\035.regulatormodule.RegulatorCSGB\010\210\265\030\001\220"
-  "\265\030\001\"\241\001\n\024RegulatorControlFSCC\0224\n\013controlF"
-  "SCC\030\001 \001(\0132\031.commonmodule.ControlFSCCB\004\200\265"
-  "\030\001\022S\n\034regulatorControlScheduleFSCH\030\002 \001(\013"
-  "2-.regulatormodule.RegulatorControlSched"
-  "uleFSCH\"\275\001\n\020RegulatorControl\0226\n\014controlV"
-  "alue\030\001 \001(\0132\032.commonmodule.ControlValueB\004"
-  "\200\265\030\001\022,\n\005check\030\002 \001(\0132\035.commonmodule.Check"
-  "Conditions\022C\n\024regulatorControlFSCC\030\003 \001(\013"
-  "2%.regulatormodule.RegulatorControlFSCC\""
-  "W\n\017RegulatorSystem\022D\n\023conductingEquipmen"
-  "t\030\001 \001(\0132!.commonmodule.ConductingEquipme"
-  "ntB\004\200\265\030\001\"\357\001\n\027RegulatorControlProfile\022B\n\022"
-  "controlMessageInfo\030\001 \001(\0132 .commonmodule."
-  "ControlMessageInfoB\004\200\265\030\001\022E\n\020regulatorCon"
-  "trol\030\002 \001(\0132!.regulatormodule.RegulatorCo"
-  "ntrolB\010\210\265\030\001\220\265\030\001\022C\n\017regulatorSystem\030\003 \001(\013"
-  "2 .regulatormodule.RegulatorSystemB\010\210\265\030\001"
-  "\220\265\030\001:\004\300\363\030\001\"\305\001\n\030RegulatorDiscreteControl\022"
-  "6\n\014controlValue\030\001 \001(\0132\032.commonmodule.Con"
-  "trolValueB\004\200\265\030\001\022,\n\005check\030\002 \001(\0132\035.commonm"
-  "odule.CheckConditions\022C\n\024regulatorContro"
-  "lATCC\030\003 \001(\0132%.regulatormodule.RegulatorC"
-  "ontrolATCC\"\207\002\n\037RegulatorDiscreteControlP"
-  "rofile\022B\n\022controlMessageInfo\030\001 \001(\0132 .com"
-  "monmodule.ControlMessageInfoB\004\200\265\030\001\022U\n\030re"
-  "gulatorDiscreteControl\030\002 \001(\0132).regulator"
-  "module.RegulatorDiscreteControlB\010\210\265\030\001\220\265\030"
-  "\001\022C\n\017regulatorSystem\030\003 \001(\0132 .regulatormo"
-  "dule.RegulatorSystemB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\254\006\n"
-  "\033RegulatorEventAndStatusATCC\022!\n\006BndCtr\030\001"
-  " \001(\0132\021.commonmodule.ASG\022!\n\006BndWid\030\002 \001(\0132"
-  "\021.commonmodule.ASG\022(\n\010BndWidHi\030\003 \001(\0132\026.c"
-  "ommonmodule.PhaseSPS\022(\n\010BndWidLo\030\004 \001(\0132\026"
-  ".commonmodule.PhaseSPS\022)\n\tDirCtlRev\030\005 \001("
-  "\0132\026.commonmodule.PhaseSPS\022\'\n\007DirIndt\030\006 \001"
-  "(\0132\026.commonmodule.PhaseSPS\022&\n\006DirRev\030\007 \001"
-  "(\0132\026.commonmodule.PhaseSPS\022\037\n\004LDCR\030\010 \001(\013"
-  "2\021.commonmodule.ASG\022\037\n\004LDCX\030\t \001(\0132\021.comm"
-  "onmodule.ASG\022&\n\005ParOp\030\n \001(\0132\027.commonmodu"
-  "le.StatusSPS\022)\n\trampRates\030\013 \001(\0132\026.common"
-  "module.RampRate\022/\n\005state\030\014 \001(\0132 .commonm"
-  "odule.Optional_StateKind\022)\n\010StDlTmms\030\r \001"
-  "(\0132\027.commonmodule.StatusINC\022)\n\010TapOpErr\030"
-  "\016 \001(\0132\027.commonmodule.StatusSPS\022&\n\006TapPos"
-  "\030\017 \001(\0132\026.commonmodule.PhaseINS\022(\n\010VolLmt"
-  "Hi\030\020 \001(\0132\026.commonmodule.PhaseSPS\022(\n\010VolL"
-  "mtLo\030\021 \001(\0132\026.commonmodule.PhaseSPS\022&\n\006Vo"
-  "lSpt\030\022 \001(\0132\026.commonmodule.PhaseAPC\0227\n\026vo"
-  "ltageSetPointEnabled\030\023 \001(\0132\027.commonmodul"
-  "e.StatusSPS\"\360\001\n\033RegulatorEventAndStatusA"
-  "NCR\022V\n\034logicalNodeForEventAndStatus\030\001 \001("
-  "\0132*.commonmodule.LogicalNodeForEventAndS"
-  "tatusB\004\200\265\030\001\0226\n\013DynamicTest\030\002 \001(\0132!.commo"
-  "nmodule.ENS_DynamicTestKind\022A\n\013PointStat"
-  "us\030\003 \001(\0132,.regulatormodule.RegulatorEven"
-  "tAndStatusATCC\"\227\001\n\016RegulatorEvent\0222\n\neve"
-  "ntValue\030\001 \001(\0132\030.commonmodule.EventValueB"
-  "\004\200\265\030\001\022Q\n\033regulatorEventAndStatusANCR\030\002 \001"
-  "(\0132,.regulatormodule.RegulatorEventAndSt"
-  "atusANCR\"\345\001\n\025RegulatorEventProfile\022>\n\020ev"
-  "entMessageInfo\030\001 \001(\0132\036.commonmodule.Even"
-  "tMessageInfoB\004\200\265\030\001\022A\n\016regulatorEvent\030\002 \001"
-  "(\0132\037.regulatormodule.RegulatorEventB\010\210\265\030"
-  "\001\220\265\030\001\022C\n\017regulatorSystem\030\003 \001(\0132 .regulat"
-  "ormodule.RegulatorSystemB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001"
-  "\"\273\002\n\020RegulatorReading\022b\n\"conductingEquip"
-  "mentTerminalReading\030\001 \001(\01320.commonmodule"
-  ".ConductingEquipmentTerminalReadingB\004\200\265\030"
-  "\001\022*\n\tphaseMMTN\030\002 \001(\0132\027.commonmodule.Phas"
-  "eMMTN\022.\n\013readingMMTR\030\003 \001(\0132\031.commonmodul"
-  "e.ReadingMMTR\022.\n\013readingMMXU\030\004 \001(\0132\031.com"
-  "monmodule.ReadingMMXU\0227\n\024secondaryReadin"
-  "gMMXU\030\005 \001(\0132\031.commonmodule.ReadingMMXU\"\363"
-  "\001\n\027RegulatorReadingProfile\022B\n\022readingMes"
-  "sageInfo\030\001 \001(\0132 .commonmodule.ReadingMes"
-  "sageInfoB\004\200\265\030\001\022I\n\020regulatorReading\030\002 \003(\013"
-  "2!.regulatormodule.RegulatorReadingB\014\210\265\030"
-  "\001\220\265\030\001\230\265\030\002\022C\n\017regulatorSystem\030\003 \001(\0132 .reg"
-  "ulatormodule.RegulatorSystemB\010\210\265\030\001\220\265\030\001:\004"
-  "\300\363\030\001\"\232\001\n\017RegulatorStatus\0224\n\013statusValue\030"
-  "\001 \001(\0132\031.commonmodule.StatusValueB\004\200\265\030\001\022Q"
-  "\n\033regulatorEventAndStatusANCR\030\002 \001(\0132,.re"
-  "gulatormodule.RegulatorEventAndStatusANC"
-  "R\"\352\001\n\026RegulatorStatusProfile\022@\n\021statusMe"
-  "ssageInfo\030\001 \001(\0132\037.commonmodule.StatusMes"
-  "sageInfoB\004\200\265\030\001\022C\n\017regulatorStatus\030\002 \001(\0132"
-  " .regulatormodule.RegulatorStatusB\010\210\265\030\001\220"
-  "\265\030\001\022C\n\017regulatorSystem\030\003 \001(\0132 .regulator"
-  "module.RegulatorSystemB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001B\215"
-  "\001\n\027openfmb.regulatormoduleP\001ZVgitlab.com"
-  "/openfmb/psm/ops/protobuf/go-openfmb-ops"
-  "-protobuf/v2/openfmb/regulatormodule\252\002\027o"
-  "penfmb.regulatormoduleb\006proto3"
-  ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_regulatormodule_2fregulatormodule_2eproto_deps[2] = {
-  &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
-  &::descriptor_table_uml_2eproto,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_regulatormodule_2fregulatormodule_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_regulatormodule_2fregulatormodule_2eproto = {
-  false, false, 5030, descriptor_table_protodef_regulatormodule_2fregulatormodule_2eproto, "regulatormodule/regulatormodule.proto", 
-  &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once, descriptor_table_regulatormodule_2fregulatormodule_2eproto_deps, 2, 19,
-  schemas, file_default_instances, TableStruct_regulatormodule_2fregulatormodule_2eproto::offsets,
-  file_level_metadata_regulatormodule_2fregulatormodule_2eproto, file_level_enum_descriptors_regulatormodule_2fregulatormodule_2eproto, file_level_service_descriptors_regulatormodule_2fregulatormodule_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
-descriptor_table_regulatormodule_2fregulatormodule_2eproto_metadata_getter(int index) {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_regulatormodule_2fregulatormodule_2eproto);
-  return descriptor_table_regulatormodule_2fregulatormodule_2eproto.file_level_metadata[index];
+// This function exists to be marked as weak.
+// It can significantly speed up compilation by breaking up LLVM's SCC
+// in the .pb.cc translation units. Large translation units see a
+// reduction of more than 35% of walltime for optimized builds. Without
+// the weak attribute all the messages in the file, including all the
+// vtables and everything they use become part of the same SCC through
+// a cycle like:
+// GetMetadata -> descriptor table -> default instances ->
+//   vtables -> GetMetadata
+// By adding a weak function here we break the connection from the
+// individual vtables back into the descriptor table.
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter() {
+  return &descriptor_table_regulatormodule_2fregulatormodule_2eproto;
 }
-
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_regulatormodule_2fregulatormodule_2eproto(&descriptor_table_regulatormodule_2fregulatormodule_2eproto);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
+static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_regulatormodule_2fregulatormodule_2eproto(&descriptor_table_regulatormodule_2fregulatormodule_2eproto);
 namespace regulatormodule {
-
 // ===================================================================
 
 class DirectionalATCC::_Internal {
@@ -691,411 +812,404 @@ class DirectionalATCC::_Internal {
 
 const ::commonmodule::PhaseAPC&
 DirectionalATCC::_Internal::bndwid(const DirectionalATCC* msg) {
-  return *msg->bndwid_;
+  return *msg->_impl_.bndwid_;
 }
 const ::commonmodule::PhaseISC&
 DirectionalATCC::_Internal::ctldltmms(const DirectionalATCC* msg) {
-  return *msg->ctldltmms_;
+  return *msg->_impl_.ctldltmms_;
 }
 const ::commonmodule::PhaseAPC&
 DirectionalATCC::_Internal::ldcr(const DirectionalATCC* msg) {
-  return *msg->ldcr_;
+  return *msg->_impl_.ldcr_;
 }
 const ::commonmodule::PhaseAPC&
 DirectionalATCC::_Internal::ldcx(const DirectionalATCC* msg) {
-  return *msg->ldcx_;
+  return *msg->_impl_.ldcx_;
 }
 const ::commonmodule::PhaseAPC&
 DirectionalATCC::_Internal::volspt(const DirectionalATCC* msg) {
-  return *msg->volspt_;
+  return *msg->_impl_.volspt_;
 }
 const ::commonmodule::PhaseDPC&
 DirectionalATCC::_Internal::voltagesetpointenabled(const DirectionalATCC* msg) {
-  return *msg->voltagesetpointenabled_;
+  return *msg->_impl_.voltagesetpointenabled_;
 }
 void DirectionalATCC::clear_bndwid() {
-  if (GetArena() == nullptr && bndwid_ != nullptr) {
-    delete bndwid_;
+  if (GetArenaForAllocation() == nullptr && _impl_.bndwid_ != nullptr) {
+    delete _impl_.bndwid_;
   }
-  bndwid_ = nullptr;
+  _impl_.bndwid_ = nullptr;
 }
 void DirectionalATCC::clear_ctldltmms() {
-  if (GetArena() == nullptr && ctldltmms_ != nullptr) {
-    delete ctldltmms_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ctldltmms_ != nullptr) {
+    delete _impl_.ctldltmms_;
   }
-  ctldltmms_ = nullptr;
+  _impl_.ctldltmms_ = nullptr;
 }
 void DirectionalATCC::clear_ldcr() {
-  if (GetArena() == nullptr && ldcr_ != nullptr) {
-    delete ldcr_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ldcr_ != nullptr) {
+    delete _impl_.ldcr_;
   }
-  ldcr_ = nullptr;
+  _impl_.ldcr_ = nullptr;
 }
 void DirectionalATCC::clear_ldcx() {
-  if (GetArena() == nullptr && ldcx_ != nullptr) {
-    delete ldcx_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ldcx_ != nullptr) {
+    delete _impl_.ldcx_;
   }
-  ldcx_ = nullptr;
+  _impl_.ldcx_ = nullptr;
 }
 void DirectionalATCC::clear_volspt() {
-  if (GetArena() == nullptr && volspt_ != nullptr) {
-    delete volspt_;
+  if (GetArenaForAllocation() == nullptr && _impl_.volspt_ != nullptr) {
+    delete _impl_.volspt_;
   }
-  volspt_ = nullptr;
+  _impl_.volspt_ = nullptr;
 }
 void DirectionalATCC::clear_voltagesetpointenabled() {
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
-    delete voltagesetpointenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagesetpointenabled_ != nullptr) {
+    delete _impl_.voltagesetpointenabled_;
   }
-  voltagesetpointenabled_ = nullptr;
+  _impl_.voltagesetpointenabled_ = nullptr;
 }
 DirectionalATCC::DirectionalATCC(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:regulatormodule.DirectionalATCC)
 }
 DirectionalATCC::DirectionalATCC(const DirectionalATCC& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  DirectionalATCC* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.bndwid_){nullptr}
+    , decltype(_impl_.ctldltmms_){nullptr}
+    , decltype(_impl_.ldcr_){nullptr}
+    , decltype(_impl_.ldcx_){nullptr}
+    , decltype(_impl_.volspt_){nullptr}
+    , decltype(_impl_.voltagesetpointenabled_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_bndwid()) {
-    bndwid_ = new ::commonmodule::PhaseAPC(*from.bndwid_);
-  } else {
-    bndwid_ = nullptr;
+    _this->_impl_.bndwid_ = new ::commonmodule::PhaseAPC(*from._impl_.bndwid_);
   }
   if (from._internal_has_ctldltmms()) {
-    ctldltmms_ = new ::commonmodule::PhaseISC(*from.ctldltmms_);
-  } else {
-    ctldltmms_ = nullptr;
+    _this->_impl_.ctldltmms_ = new ::commonmodule::PhaseISC(*from._impl_.ctldltmms_);
   }
   if (from._internal_has_ldcr()) {
-    ldcr_ = new ::commonmodule::PhaseAPC(*from.ldcr_);
-  } else {
-    ldcr_ = nullptr;
+    _this->_impl_.ldcr_ = new ::commonmodule::PhaseAPC(*from._impl_.ldcr_);
   }
   if (from._internal_has_ldcx()) {
-    ldcx_ = new ::commonmodule::PhaseAPC(*from.ldcx_);
-  } else {
-    ldcx_ = nullptr;
+    _this->_impl_.ldcx_ = new ::commonmodule::PhaseAPC(*from._impl_.ldcx_);
   }
   if (from._internal_has_volspt()) {
-    volspt_ = new ::commonmodule::PhaseAPC(*from.volspt_);
-  } else {
-    volspt_ = nullptr;
+    _this->_impl_.volspt_ = new ::commonmodule::PhaseAPC(*from._impl_.volspt_);
   }
   if (from._internal_has_voltagesetpointenabled()) {
-    voltagesetpointenabled_ = new ::commonmodule::PhaseDPC(*from.voltagesetpointenabled_);
-  } else {
-    voltagesetpointenabled_ = nullptr;
+    _this->_impl_.voltagesetpointenabled_ = new ::commonmodule::PhaseDPC(*from._impl_.voltagesetpointenabled_);
   }
   // @@protoc_insertion_point(copy_constructor:regulatormodule.DirectionalATCC)
 }
 
-void DirectionalATCC::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&bndwid_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&voltagesetpointenabled_) -
-    reinterpret_cast<char*>(&bndwid_)) + sizeof(voltagesetpointenabled_));
+inline void DirectionalATCC::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.bndwid_){nullptr}
+    , decltype(_impl_.ctldltmms_){nullptr}
+    , decltype(_impl_.ldcr_){nullptr}
+    , decltype(_impl_.ldcx_){nullptr}
+    , decltype(_impl_.volspt_){nullptr}
+    , decltype(_impl_.voltagesetpointenabled_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 DirectionalATCC::~DirectionalATCC() {
   // @@protoc_insertion_point(destructor:regulatormodule.DirectionalATCC)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void DirectionalATCC::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete bndwid_;
-  if (this != internal_default_instance()) delete ctldltmms_;
-  if (this != internal_default_instance()) delete ldcr_;
-  if (this != internal_default_instance()) delete ldcx_;
-  if (this != internal_default_instance()) delete volspt_;
-  if (this != internal_default_instance()) delete voltagesetpointenabled_;
+inline void DirectionalATCC::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.bndwid_;
+  if (this != internal_default_instance()) delete _impl_.ctldltmms_;
+  if (this != internal_default_instance()) delete _impl_.ldcr_;
+  if (this != internal_default_instance()) delete _impl_.ldcx_;
+  if (this != internal_default_instance()) delete _impl_.volspt_;
+  if (this != internal_default_instance()) delete _impl_.voltagesetpointenabled_;
 }
 
-void DirectionalATCC::ArenaDtor(void* object) {
-  DirectionalATCC* _this = reinterpret_cast< DirectionalATCC* >(object);
-  (void)_this;
-}
-void DirectionalATCC::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void DirectionalATCC::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void DirectionalATCC::Clear() {
 // @@protoc_insertion_point(message_clear_start:regulatormodule.DirectionalATCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && bndwid_ != nullptr) {
-    delete bndwid_;
+  if (GetArenaForAllocation() == nullptr && _impl_.bndwid_ != nullptr) {
+    delete _impl_.bndwid_;
   }
-  bndwid_ = nullptr;
-  if (GetArena() == nullptr && ctldltmms_ != nullptr) {
-    delete ctldltmms_;
+  _impl_.bndwid_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ctldltmms_ != nullptr) {
+    delete _impl_.ctldltmms_;
   }
-  ctldltmms_ = nullptr;
-  if (GetArena() == nullptr && ldcr_ != nullptr) {
-    delete ldcr_;
+  _impl_.ctldltmms_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ldcr_ != nullptr) {
+    delete _impl_.ldcr_;
   }
-  ldcr_ = nullptr;
-  if (GetArena() == nullptr && ldcx_ != nullptr) {
-    delete ldcx_;
+  _impl_.ldcr_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ldcx_ != nullptr) {
+    delete _impl_.ldcx_;
   }
-  ldcx_ = nullptr;
-  if (GetArena() == nullptr && volspt_ != nullptr) {
-    delete volspt_;
+  _impl_.ldcx_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.volspt_ != nullptr) {
+    delete _impl_.volspt_;
   }
-  volspt_ = nullptr;
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
-    delete voltagesetpointenabled_;
+  _impl_.volspt_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagesetpointenabled_ != nullptr) {
+    delete _impl_.voltagesetpointenabled_;
   }
-  voltagesetpointenabled_ = nullptr;
+  _impl_.voltagesetpointenabled_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* DirectionalATCC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* DirectionalATCC::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.PhaseAPC BndWid = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_bndwid(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseISC CtlDlTmms = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_ctldltmms(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseAPC LDCR = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_ldcr(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseAPC LDCX = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_ldcx(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseAPC VolSpt = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_volspt(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseDPC voltageSetPointEnabled = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_voltagesetpointenabled(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* DirectionalATCC::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* DirectionalATCC::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:regulatormodule.DirectionalATCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.PhaseAPC BndWid = 1;
-  if (this->has_bndwid()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_bndwid()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::bndwid(this), target, stream);
+      InternalWriteMessage(1, _Internal::bndwid(this),
+        _Internal::bndwid(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseISC CtlDlTmms = 2;
-  if (this->has_ctldltmms()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ctldltmms()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::ctldltmms(this), target, stream);
+      InternalWriteMessage(2, _Internal::ctldltmms(this),
+        _Internal::ctldltmms(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseAPC LDCR = 3;
-  if (this->has_ldcr()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ldcr()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::ldcr(this), target, stream);
+      InternalWriteMessage(3, _Internal::ldcr(this),
+        _Internal::ldcr(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseAPC LDCX = 4;
-  if (this->has_ldcx()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ldcx()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::ldcx(this), target, stream);
+      InternalWriteMessage(4, _Internal::ldcx(this),
+        _Internal::ldcx(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseAPC VolSpt = 5;
-  if (this->has_volspt()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_volspt()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::volspt(this), target, stream);
+      InternalWriteMessage(5, _Internal::volspt(this),
+        _Internal::volspt(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseDPC voltageSetPointEnabled = 6;
-  if (this->has_voltagesetpointenabled()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_voltagesetpointenabled()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::voltagesetpointenabled(this), target, stream);
+      InternalWriteMessage(6, _Internal::voltagesetpointenabled(this),
+        _Internal::voltagesetpointenabled(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:regulatormodule.DirectionalATCC)
   return target;
 }
 
-size_t DirectionalATCC::ByteSizeLong() const {
+::size_t DirectionalATCC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:regulatormodule.DirectionalATCC)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.PhaseAPC BndWid = 1;
-  if (this->has_bndwid()) {
+  if (this->_internal_has_bndwid()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *bndwid_);
+        *_impl_.bndwid_);
   }
 
   // .commonmodule.PhaseISC CtlDlTmms = 2;
-  if (this->has_ctldltmms()) {
+  if (this->_internal_has_ctldltmms()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ctldltmms_);
+        *_impl_.ctldltmms_);
   }
 
   // .commonmodule.PhaseAPC LDCR = 3;
-  if (this->has_ldcr()) {
+  if (this->_internal_has_ldcr()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ldcr_);
+        *_impl_.ldcr_);
   }
 
   // .commonmodule.PhaseAPC LDCX = 4;
-  if (this->has_ldcx()) {
+  if (this->_internal_has_ldcx()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ldcx_);
+        *_impl_.ldcx_);
   }
 
   // .commonmodule.PhaseAPC VolSpt = 5;
-  if (this->has_volspt()) {
+  if (this->_internal_has_volspt()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *volspt_);
+        *_impl_.volspt_);
   }
 
   // .commonmodule.PhaseDPC voltageSetPointEnabled = 6;
-  if (this->has_voltagesetpointenabled()) {
+  if (this->_internal_has_voltagesetpointenabled()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *voltagesetpointenabled_);
+        *_impl_.voltagesetpointenabled_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void DirectionalATCC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:regulatormodule.DirectionalATCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  const DirectionalATCC* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<DirectionalATCC>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:regulatormodule.DirectionalATCC)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:regulatormodule.DirectionalATCC)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData DirectionalATCC::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    DirectionalATCC::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*DirectionalATCC::GetClassData() const { return &_class_data_; }
 
-void DirectionalATCC::MergeFrom(const DirectionalATCC& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.DirectionalATCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void DirectionalATCC::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<DirectionalATCC*>(&to_msg);
+  auto& from = static_cast<const DirectionalATCC&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.DirectionalATCC)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_bndwid()) {
-    _internal_mutable_bndwid()->::commonmodule::PhaseAPC::MergeFrom(from._internal_bndwid());
+  if (from._internal_has_bndwid()) {
+    _this->_internal_mutable_bndwid()->::commonmodule::PhaseAPC::MergeFrom(
+        from._internal_bndwid());
   }
-  if (from.has_ctldltmms()) {
-    _internal_mutable_ctldltmms()->::commonmodule::PhaseISC::MergeFrom(from._internal_ctldltmms());
+  if (from._internal_has_ctldltmms()) {
+    _this->_internal_mutable_ctldltmms()->::commonmodule::PhaseISC::MergeFrom(
+        from._internal_ctldltmms());
   }
-  if (from.has_ldcr()) {
-    _internal_mutable_ldcr()->::commonmodule::PhaseAPC::MergeFrom(from._internal_ldcr());
+  if (from._internal_has_ldcr()) {
+    _this->_internal_mutable_ldcr()->::commonmodule::PhaseAPC::MergeFrom(
+        from._internal_ldcr());
   }
-  if (from.has_ldcx()) {
-    _internal_mutable_ldcx()->::commonmodule::PhaseAPC::MergeFrom(from._internal_ldcx());
+  if (from._internal_has_ldcx()) {
+    _this->_internal_mutable_ldcx()->::commonmodule::PhaseAPC::MergeFrom(
+        from._internal_ldcx());
   }
-  if (from.has_volspt()) {
-    _internal_mutable_volspt()->::commonmodule::PhaseAPC::MergeFrom(from._internal_volspt());
+  if (from._internal_has_volspt()) {
+    _this->_internal_mutable_volspt()->::commonmodule::PhaseAPC::MergeFrom(
+        from._internal_volspt());
   }
-  if (from.has_voltagesetpointenabled()) {
-    _internal_mutable_voltagesetpointenabled()->::commonmodule::PhaseDPC::MergeFrom(from._internal_voltagesetpointenabled());
+  if (from._internal_has_voltagesetpointenabled()) {
+    _this->_internal_mutable_voltagesetpointenabled()->::commonmodule::PhaseDPC::MergeFrom(
+        from._internal_voltagesetpointenabled());
   }
-}
-
-void DirectionalATCC::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:regulatormodule.DirectionalATCC)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void DirectionalATCC::CopyFrom(const DirectionalATCC& from) {
@@ -1111,20 +1225,20 @@ bool DirectionalATCC::IsInitialized() const {
 
 void DirectionalATCC::InternalSwap(DirectionalATCC* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(DirectionalATCC, voltagesetpointenabled_)
-      + sizeof(DirectionalATCC::voltagesetpointenabled_)
-      - PROTOBUF_FIELD_OFFSET(DirectionalATCC, bndwid_)>(
-          reinterpret_cast<char*>(&bndwid_),
-          reinterpret_cast<char*>(&other->bndwid_));
+      PROTOBUF_FIELD_OFFSET(DirectionalATCC, _impl_.voltagesetpointenabled_)
+      + sizeof(DirectionalATCC::_impl_.voltagesetpointenabled_)
+      - PROTOBUF_FIELD_OFFSET(DirectionalATCC, _impl_.bndwid_)>(
+          reinterpret_cast<char*>(&_impl_.bndwid_),
+          reinterpret_cast<char*>(&other->_impl_.bndwid_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DirectionalATCC::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter, &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+      file_level_metadata_regulatormodule_2fregulatormodule_2eproto[0]);
 }
-
-
 // ===================================================================
 
 class RegulatorControlATCC::_Internal {
@@ -1146,714 +1260,721 @@ class RegulatorControlATCC::_Internal {
 
 const ::commonmodule::LogicalNodeForControl&
 RegulatorControlATCC::_Internal::logicalnodeforcontrol(const RegulatorControlATCC* msg) {
-  return *msg->logicalnodeforcontrol_;
+  return *msg->_impl_.logicalnodeforcontrol_;
 }
 const ::regulatormodule::DirectionalATCC&
 RegulatorControlATCC::_Internal::dirfwd(const RegulatorControlATCC* msg) {
-  return *msg->dirfwd_;
+  return *msg->_impl_.dirfwd_;
 }
 const ::commonmodule::Optional_DirectionModeKind&
 RegulatorControlATCC::_Internal::dirmode(const RegulatorControlATCC* msg) {
-  return *msg->dirmode_;
+  return *msg->_impl_.dirmode_;
 }
 const ::regulatormodule::DirectionalATCC&
 RegulatorControlATCC::_Internal::dirrev(const RegulatorControlATCC* msg) {
-  return *msg->dirrev_;
+  return *msg->_impl_.dirrev_;
 }
 const ::commonmodule::PhaseAPC&
 RegulatorControlATCC::_Internal::dirthd(const RegulatorControlATCC* msg) {
-  return *msg->dirthd_;
+  return *msg->_impl_.dirthd_;
 }
 const ::commonmodule::PhaseSPC&
 RegulatorControlATCC::_Internal::parop(const RegulatorControlATCC* msg) {
-  return *msg->parop_;
+  return *msg->_impl_.parop_;
 }
 const ::commonmodule::RampRate&
 RegulatorControlATCC::_Internal::ramprates(const RegulatorControlATCC* msg) {
-  return *msg->ramprates_;
+  return *msg->_impl_.ramprates_;
 }
 const ::commonmodule::Optional_StateKind&
 RegulatorControlATCC::_Internal::state(const RegulatorControlATCC* msg) {
-  return *msg->state_;
+  return *msg->_impl_.state_;
 }
 const ::commonmodule::PhaseSPC&
 RegulatorControlATCC::_Internal::tapopl(const RegulatorControlATCC* msg) {
-  return *msg->tapopl_;
+  return *msg->_impl_.tapopl_;
 }
 const ::commonmodule::PhaseSPC&
 RegulatorControlATCC::_Internal::tapopr(const RegulatorControlATCC* msg) {
-  return *msg->tapopr_;
+  return *msg->_impl_.tapopr_;
 }
 const ::commonmodule::PhaseAPC&
 RegulatorControlATCC::_Internal::vollmthi(const RegulatorControlATCC* msg) {
-  return *msg->vollmthi_;
+  return *msg->_impl_.vollmthi_;
 }
 const ::commonmodule::PhaseAPC&
 RegulatorControlATCC::_Internal::vollmtlo(const RegulatorControlATCC* msg) {
-  return *msg->vollmtlo_;
+  return *msg->_impl_.vollmtlo_;
 }
 const ::commonmodule::Optional_VoltLimitModeKind&
 RegulatorControlATCC::_Internal::vollmtmode(const RegulatorControlATCC* msg) {
-  return *msg->vollmtmode_;
+  return *msg->_impl_.vollmtmode_;
 }
 void RegulatorControlATCC::clear_logicalnodeforcontrol() {
-  if (GetArena() == nullptr && logicalnodeforcontrol_ != nullptr) {
-    delete logicalnodeforcontrol_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforcontrol_ != nullptr) {
+    delete _impl_.logicalnodeforcontrol_;
   }
-  logicalnodeforcontrol_ = nullptr;
+  _impl_.logicalnodeforcontrol_ = nullptr;
 }
 void RegulatorControlATCC::clear_dirmode() {
-  if (GetArena() == nullptr && dirmode_ != nullptr) {
-    delete dirmode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.dirmode_ != nullptr) {
+    delete _impl_.dirmode_;
   }
-  dirmode_ = nullptr;
+  _impl_.dirmode_ = nullptr;
 }
 void RegulatorControlATCC::clear_dirthd() {
-  if (GetArena() == nullptr && dirthd_ != nullptr) {
-    delete dirthd_;
+  if (GetArenaForAllocation() == nullptr && _impl_.dirthd_ != nullptr) {
+    delete _impl_.dirthd_;
   }
-  dirthd_ = nullptr;
+  _impl_.dirthd_ = nullptr;
 }
 void RegulatorControlATCC::clear_parop() {
-  if (GetArena() == nullptr && parop_ != nullptr) {
-    delete parop_;
+  if (GetArenaForAllocation() == nullptr && _impl_.parop_ != nullptr) {
+    delete _impl_.parop_;
   }
-  parop_ = nullptr;
+  _impl_.parop_ = nullptr;
 }
 void RegulatorControlATCC::clear_ramprates() {
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
-    delete ramprates_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ramprates_ != nullptr) {
+    delete _impl_.ramprates_;
   }
-  ramprates_ = nullptr;
+  _impl_.ramprates_ = nullptr;
 }
 void RegulatorControlATCC::clear_state() {
-  if (GetArena() == nullptr && state_ != nullptr) {
-    delete state_;
+  if (GetArenaForAllocation() == nullptr && _impl_.state_ != nullptr) {
+    delete _impl_.state_;
   }
-  state_ = nullptr;
+  _impl_.state_ = nullptr;
 }
 void RegulatorControlATCC::clear_tapopl() {
-  if (GetArena() == nullptr && tapopl_ != nullptr) {
-    delete tapopl_;
+  if (GetArenaForAllocation() == nullptr && _impl_.tapopl_ != nullptr) {
+    delete _impl_.tapopl_;
   }
-  tapopl_ = nullptr;
+  _impl_.tapopl_ = nullptr;
 }
 void RegulatorControlATCC::clear_tapopr() {
-  if (GetArena() == nullptr && tapopr_ != nullptr) {
-    delete tapopr_;
+  if (GetArenaForAllocation() == nullptr && _impl_.tapopr_ != nullptr) {
+    delete _impl_.tapopr_;
   }
-  tapopr_ = nullptr;
+  _impl_.tapopr_ = nullptr;
 }
 void RegulatorControlATCC::clear_vollmthi() {
-  if (GetArena() == nullptr && vollmthi_ != nullptr) {
-    delete vollmthi_;
+  if (GetArenaForAllocation() == nullptr && _impl_.vollmthi_ != nullptr) {
+    delete _impl_.vollmthi_;
   }
-  vollmthi_ = nullptr;
+  _impl_.vollmthi_ = nullptr;
 }
 void RegulatorControlATCC::clear_vollmtlo() {
-  if (GetArena() == nullptr && vollmtlo_ != nullptr) {
-    delete vollmtlo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.vollmtlo_ != nullptr) {
+    delete _impl_.vollmtlo_;
   }
-  vollmtlo_ = nullptr;
+  _impl_.vollmtlo_ = nullptr;
 }
 void RegulatorControlATCC::clear_vollmtmode() {
-  if (GetArena() == nullptr && vollmtmode_ != nullptr) {
-    delete vollmtmode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.vollmtmode_ != nullptr) {
+    delete _impl_.vollmtmode_;
   }
-  vollmtmode_ = nullptr;
+  _impl_.vollmtmode_ = nullptr;
 }
 RegulatorControlATCC::RegulatorControlATCC(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:regulatormodule.RegulatorControlATCC)
 }
 RegulatorControlATCC::RegulatorControlATCC(const RegulatorControlATCC& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RegulatorControlATCC* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforcontrol_){nullptr}
+    , decltype(_impl_.dirfwd_){nullptr}
+    , decltype(_impl_.dirmode_){nullptr}
+    , decltype(_impl_.dirrev_){nullptr}
+    , decltype(_impl_.dirthd_){nullptr}
+    , decltype(_impl_.parop_){nullptr}
+    , decltype(_impl_.ramprates_){nullptr}
+    , decltype(_impl_.state_){nullptr}
+    , decltype(_impl_.tapopl_){nullptr}
+    , decltype(_impl_.tapopr_){nullptr}
+    , decltype(_impl_.vollmthi_){nullptr}
+    , decltype(_impl_.vollmtlo_){nullptr}
+    , decltype(_impl_.vollmtmode_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_logicalnodeforcontrol()) {
-    logicalnodeforcontrol_ = new ::commonmodule::LogicalNodeForControl(*from.logicalnodeforcontrol_);
-  } else {
-    logicalnodeforcontrol_ = nullptr;
+    _this->_impl_.logicalnodeforcontrol_ = new ::commonmodule::LogicalNodeForControl(*from._impl_.logicalnodeforcontrol_);
   }
   if (from._internal_has_dirfwd()) {
-    dirfwd_ = new ::regulatormodule::DirectionalATCC(*from.dirfwd_);
-  } else {
-    dirfwd_ = nullptr;
+    _this->_impl_.dirfwd_ = new ::regulatormodule::DirectionalATCC(*from._impl_.dirfwd_);
   }
   if (from._internal_has_dirmode()) {
-    dirmode_ = new ::commonmodule::Optional_DirectionModeKind(*from.dirmode_);
-  } else {
-    dirmode_ = nullptr;
+    _this->_impl_.dirmode_ = new ::commonmodule::Optional_DirectionModeKind(*from._impl_.dirmode_);
   }
   if (from._internal_has_dirrev()) {
-    dirrev_ = new ::regulatormodule::DirectionalATCC(*from.dirrev_);
-  } else {
-    dirrev_ = nullptr;
+    _this->_impl_.dirrev_ = new ::regulatormodule::DirectionalATCC(*from._impl_.dirrev_);
   }
   if (from._internal_has_dirthd()) {
-    dirthd_ = new ::commonmodule::PhaseAPC(*from.dirthd_);
-  } else {
-    dirthd_ = nullptr;
+    _this->_impl_.dirthd_ = new ::commonmodule::PhaseAPC(*from._impl_.dirthd_);
   }
   if (from._internal_has_parop()) {
-    parop_ = new ::commonmodule::PhaseSPC(*from.parop_);
-  } else {
-    parop_ = nullptr;
+    _this->_impl_.parop_ = new ::commonmodule::PhaseSPC(*from._impl_.parop_);
   }
   if (from._internal_has_ramprates()) {
-    ramprates_ = new ::commonmodule::RampRate(*from.ramprates_);
-  } else {
-    ramprates_ = nullptr;
+    _this->_impl_.ramprates_ = new ::commonmodule::RampRate(*from._impl_.ramprates_);
   }
   if (from._internal_has_state()) {
-    state_ = new ::commonmodule::Optional_StateKind(*from.state_);
-  } else {
-    state_ = nullptr;
+    _this->_impl_.state_ = new ::commonmodule::Optional_StateKind(*from._impl_.state_);
   }
   if (from._internal_has_tapopl()) {
-    tapopl_ = new ::commonmodule::PhaseSPC(*from.tapopl_);
-  } else {
-    tapopl_ = nullptr;
+    _this->_impl_.tapopl_ = new ::commonmodule::PhaseSPC(*from._impl_.tapopl_);
   }
   if (from._internal_has_tapopr()) {
-    tapopr_ = new ::commonmodule::PhaseSPC(*from.tapopr_);
-  } else {
-    tapopr_ = nullptr;
+    _this->_impl_.tapopr_ = new ::commonmodule::PhaseSPC(*from._impl_.tapopr_);
   }
   if (from._internal_has_vollmthi()) {
-    vollmthi_ = new ::commonmodule::PhaseAPC(*from.vollmthi_);
-  } else {
-    vollmthi_ = nullptr;
+    _this->_impl_.vollmthi_ = new ::commonmodule::PhaseAPC(*from._impl_.vollmthi_);
   }
   if (from._internal_has_vollmtlo()) {
-    vollmtlo_ = new ::commonmodule::PhaseAPC(*from.vollmtlo_);
-  } else {
-    vollmtlo_ = nullptr;
+    _this->_impl_.vollmtlo_ = new ::commonmodule::PhaseAPC(*from._impl_.vollmtlo_);
   }
   if (from._internal_has_vollmtmode()) {
-    vollmtmode_ = new ::commonmodule::Optional_VoltLimitModeKind(*from.vollmtmode_);
-  } else {
-    vollmtmode_ = nullptr;
+    _this->_impl_.vollmtmode_ = new ::commonmodule::Optional_VoltLimitModeKind(*from._impl_.vollmtmode_);
   }
   // @@protoc_insertion_point(copy_constructor:regulatormodule.RegulatorControlATCC)
 }
 
-void RegulatorControlATCC::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnodeforcontrol_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&vollmtmode_) -
-    reinterpret_cast<char*>(&logicalnodeforcontrol_)) + sizeof(vollmtmode_));
+inline void RegulatorControlATCC::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforcontrol_){nullptr}
+    , decltype(_impl_.dirfwd_){nullptr}
+    , decltype(_impl_.dirmode_){nullptr}
+    , decltype(_impl_.dirrev_){nullptr}
+    , decltype(_impl_.dirthd_){nullptr}
+    , decltype(_impl_.parop_){nullptr}
+    , decltype(_impl_.ramprates_){nullptr}
+    , decltype(_impl_.state_){nullptr}
+    , decltype(_impl_.tapopl_){nullptr}
+    , decltype(_impl_.tapopr_){nullptr}
+    , decltype(_impl_.vollmthi_){nullptr}
+    , decltype(_impl_.vollmtlo_){nullptr}
+    , decltype(_impl_.vollmtmode_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 RegulatorControlATCC::~RegulatorControlATCC() {
   // @@protoc_insertion_point(destructor:regulatormodule.RegulatorControlATCC)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void RegulatorControlATCC::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete logicalnodeforcontrol_;
-  if (this != internal_default_instance()) delete dirfwd_;
-  if (this != internal_default_instance()) delete dirmode_;
-  if (this != internal_default_instance()) delete dirrev_;
-  if (this != internal_default_instance()) delete dirthd_;
-  if (this != internal_default_instance()) delete parop_;
-  if (this != internal_default_instance()) delete ramprates_;
-  if (this != internal_default_instance()) delete state_;
-  if (this != internal_default_instance()) delete tapopl_;
-  if (this != internal_default_instance()) delete tapopr_;
-  if (this != internal_default_instance()) delete vollmthi_;
-  if (this != internal_default_instance()) delete vollmtlo_;
-  if (this != internal_default_instance()) delete vollmtmode_;
+inline void RegulatorControlATCC::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.logicalnodeforcontrol_;
+  if (this != internal_default_instance()) delete _impl_.dirfwd_;
+  if (this != internal_default_instance()) delete _impl_.dirmode_;
+  if (this != internal_default_instance()) delete _impl_.dirrev_;
+  if (this != internal_default_instance()) delete _impl_.dirthd_;
+  if (this != internal_default_instance()) delete _impl_.parop_;
+  if (this != internal_default_instance()) delete _impl_.ramprates_;
+  if (this != internal_default_instance()) delete _impl_.state_;
+  if (this != internal_default_instance()) delete _impl_.tapopl_;
+  if (this != internal_default_instance()) delete _impl_.tapopr_;
+  if (this != internal_default_instance()) delete _impl_.vollmthi_;
+  if (this != internal_default_instance()) delete _impl_.vollmtlo_;
+  if (this != internal_default_instance()) delete _impl_.vollmtmode_;
 }
 
-void RegulatorControlATCC::ArenaDtor(void* object) {
-  RegulatorControlATCC* _this = reinterpret_cast< RegulatorControlATCC* >(object);
-  (void)_this;
-}
-void RegulatorControlATCC::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void RegulatorControlATCC::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void RegulatorControlATCC::Clear() {
 // @@protoc_insertion_point(message_clear_start:regulatormodule.RegulatorControlATCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && logicalnodeforcontrol_ != nullptr) {
-    delete logicalnodeforcontrol_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforcontrol_ != nullptr) {
+    delete _impl_.logicalnodeforcontrol_;
   }
-  logicalnodeforcontrol_ = nullptr;
-  if (GetArena() == nullptr && dirfwd_ != nullptr) {
-    delete dirfwd_;
+  _impl_.logicalnodeforcontrol_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.dirfwd_ != nullptr) {
+    delete _impl_.dirfwd_;
   }
-  dirfwd_ = nullptr;
-  if (GetArena() == nullptr && dirmode_ != nullptr) {
-    delete dirmode_;
+  _impl_.dirfwd_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.dirmode_ != nullptr) {
+    delete _impl_.dirmode_;
   }
-  dirmode_ = nullptr;
-  if (GetArena() == nullptr && dirrev_ != nullptr) {
-    delete dirrev_;
+  _impl_.dirmode_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.dirrev_ != nullptr) {
+    delete _impl_.dirrev_;
   }
-  dirrev_ = nullptr;
-  if (GetArena() == nullptr && dirthd_ != nullptr) {
-    delete dirthd_;
+  _impl_.dirrev_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.dirthd_ != nullptr) {
+    delete _impl_.dirthd_;
   }
-  dirthd_ = nullptr;
-  if (GetArena() == nullptr && parop_ != nullptr) {
-    delete parop_;
+  _impl_.dirthd_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.parop_ != nullptr) {
+    delete _impl_.parop_;
   }
-  parop_ = nullptr;
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
-    delete ramprates_;
+  _impl_.parop_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ramprates_ != nullptr) {
+    delete _impl_.ramprates_;
   }
-  ramprates_ = nullptr;
-  if (GetArena() == nullptr && state_ != nullptr) {
-    delete state_;
+  _impl_.ramprates_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.state_ != nullptr) {
+    delete _impl_.state_;
   }
-  state_ = nullptr;
-  if (GetArena() == nullptr && tapopl_ != nullptr) {
-    delete tapopl_;
+  _impl_.state_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.tapopl_ != nullptr) {
+    delete _impl_.tapopl_;
   }
-  tapopl_ = nullptr;
-  if (GetArena() == nullptr && tapopr_ != nullptr) {
-    delete tapopr_;
+  _impl_.tapopl_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.tapopr_ != nullptr) {
+    delete _impl_.tapopr_;
   }
-  tapopr_ = nullptr;
-  if (GetArena() == nullptr && vollmthi_ != nullptr) {
-    delete vollmthi_;
+  _impl_.tapopr_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.vollmthi_ != nullptr) {
+    delete _impl_.vollmthi_;
   }
-  vollmthi_ = nullptr;
-  if (GetArena() == nullptr && vollmtlo_ != nullptr) {
-    delete vollmtlo_;
+  _impl_.vollmthi_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.vollmtlo_ != nullptr) {
+    delete _impl_.vollmtlo_;
   }
-  vollmtlo_ = nullptr;
-  if (GetArena() == nullptr && vollmtmode_ != nullptr) {
-    delete vollmtmode_;
+  _impl_.vollmtlo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.vollmtmode_ != nullptr) {
+    delete _impl_.vollmtmode_;
   }
-  vollmtmode_ = nullptr;
+  _impl_.vollmtmode_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RegulatorControlATCC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* RegulatorControlATCC::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforcontrol(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .regulatormodule.DirectionalATCC DirFwd = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_dirfwd(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.Optional_DirectionModeKind DirMode = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_dirmode(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .regulatormodule.DirectionalATCC DirRev = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_dirrev(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseAPC DirThd = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_dirthd(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseSPC ParOp = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_parop(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.RampRate rampRates = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_ramprates(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.Optional_StateKind state = 8;
       case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 66)) {
           ptr = ctx->ParseMessage(_internal_mutable_state(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseSPC TapOpL = 9;
       case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 74)) {
           ptr = ctx->ParseMessage(_internal_mutable_tapopl(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseSPC TapOpR = 10;
       case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 82)) {
           ptr = ctx->ParseMessage(_internal_mutable_tapopr(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseAPC VolLmtHi = 11;
       case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 90)) {
           ptr = ctx->ParseMessage(_internal_mutable_vollmthi(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseAPC VolLmtLo = 12;
       case 12:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 98)) {
           ptr = ctx->ParseMessage(_internal_mutable_vollmtlo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.Optional_VoltLimitModeKind VolLmtMode = 13;
       case 13:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 106)) {
           ptr = ctx->ParseMessage(_internal_mutable_vollmtmode(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RegulatorControlATCC::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* RegulatorControlATCC::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:regulatormodule.RegulatorControlATCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforcontrol()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_logicalnodeforcontrol()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnodeforcontrol(this), target, stream);
+      InternalWriteMessage(1, _Internal::logicalnodeforcontrol(this),
+        _Internal::logicalnodeforcontrol(this).GetCachedSize(), target, stream);
   }
 
   // .regulatormodule.DirectionalATCC DirFwd = 2;
-  if (this->has_dirfwd()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_dirfwd()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::dirfwd(this), target, stream);
+      InternalWriteMessage(2, _Internal::dirfwd(this),
+        _Internal::dirfwd(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.Optional_DirectionModeKind DirMode = 3;
-  if (this->has_dirmode()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_dirmode()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::dirmode(this), target, stream);
+      InternalWriteMessage(3, _Internal::dirmode(this),
+        _Internal::dirmode(this).GetCachedSize(), target, stream);
   }
 
   // .regulatormodule.DirectionalATCC DirRev = 4;
-  if (this->has_dirrev()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_dirrev()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::dirrev(this), target, stream);
+      InternalWriteMessage(4, _Internal::dirrev(this),
+        _Internal::dirrev(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseAPC DirThd = 5;
-  if (this->has_dirthd()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_dirthd()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::dirthd(this), target, stream);
+      InternalWriteMessage(5, _Internal::dirthd(this),
+        _Internal::dirthd(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseSPC ParOp = 6;
-  if (this->has_parop()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_parop()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::parop(this), target, stream);
+      InternalWriteMessage(6, _Internal::parop(this),
+        _Internal::parop(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.RampRate rampRates = 7;
-  if (this->has_ramprates()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ramprates()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::ramprates(this), target, stream);
+      InternalWriteMessage(7, _Internal::ramprates(this),
+        _Internal::ramprates(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.Optional_StateKind state = 8;
-  if (this->has_state()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_state()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::state(this), target, stream);
+      InternalWriteMessage(8, _Internal::state(this),
+        _Internal::state(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseSPC TapOpL = 9;
-  if (this->has_tapopl()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_tapopl()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        9, _Internal::tapopl(this), target, stream);
+      InternalWriteMessage(9, _Internal::tapopl(this),
+        _Internal::tapopl(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseSPC TapOpR = 10;
-  if (this->has_tapopr()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_tapopr()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        10, _Internal::tapopr(this), target, stream);
+      InternalWriteMessage(10, _Internal::tapopr(this),
+        _Internal::tapopr(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseAPC VolLmtHi = 11;
-  if (this->has_vollmthi()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_vollmthi()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        11, _Internal::vollmthi(this), target, stream);
+      InternalWriteMessage(11, _Internal::vollmthi(this),
+        _Internal::vollmthi(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseAPC VolLmtLo = 12;
-  if (this->has_vollmtlo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_vollmtlo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        12, _Internal::vollmtlo(this), target, stream);
+      InternalWriteMessage(12, _Internal::vollmtlo(this),
+        _Internal::vollmtlo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.Optional_VoltLimitModeKind VolLmtMode = 13;
-  if (this->has_vollmtmode()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_vollmtmode()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        13, _Internal::vollmtmode(this), target, stream);
+      InternalWriteMessage(13, _Internal::vollmtmode(this),
+        _Internal::vollmtmode(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:regulatormodule.RegulatorControlATCC)
   return target;
 }
 
-size_t RegulatorControlATCC::ByteSizeLong() const {
+::size_t RegulatorControlATCC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:regulatormodule.RegulatorControlATCC)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforcontrol()) {
+  if (this->_internal_has_logicalnodeforcontrol()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *logicalnodeforcontrol_);
+        *_impl_.logicalnodeforcontrol_);
   }
 
   // .regulatormodule.DirectionalATCC DirFwd = 2;
-  if (this->has_dirfwd()) {
+  if (this->_internal_has_dirfwd()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *dirfwd_);
+        *_impl_.dirfwd_);
   }
 
   // .commonmodule.Optional_DirectionModeKind DirMode = 3;
-  if (this->has_dirmode()) {
+  if (this->_internal_has_dirmode()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *dirmode_);
+        *_impl_.dirmode_);
   }
 
   // .regulatormodule.DirectionalATCC DirRev = 4;
-  if (this->has_dirrev()) {
+  if (this->_internal_has_dirrev()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *dirrev_);
+        *_impl_.dirrev_);
   }
 
   // .commonmodule.PhaseAPC DirThd = 5;
-  if (this->has_dirthd()) {
+  if (this->_internal_has_dirthd()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *dirthd_);
+        *_impl_.dirthd_);
   }
 
   // .commonmodule.PhaseSPC ParOp = 6;
-  if (this->has_parop()) {
+  if (this->_internal_has_parop()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *parop_);
+        *_impl_.parop_);
   }
 
   // .commonmodule.RampRate rampRates = 7;
-  if (this->has_ramprates()) {
+  if (this->_internal_has_ramprates()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ramprates_);
+        *_impl_.ramprates_);
   }
 
   // .commonmodule.Optional_StateKind state = 8;
-  if (this->has_state()) {
+  if (this->_internal_has_state()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *state_);
+        *_impl_.state_);
   }
 
   // .commonmodule.PhaseSPC TapOpL = 9;
-  if (this->has_tapopl()) {
+  if (this->_internal_has_tapopl()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *tapopl_);
+        *_impl_.tapopl_);
   }
 
   // .commonmodule.PhaseSPC TapOpR = 10;
-  if (this->has_tapopr()) {
+  if (this->_internal_has_tapopr()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *tapopr_);
+        *_impl_.tapopr_);
   }
 
   // .commonmodule.PhaseAPC VolLmtHi = 11;
-  if (this->has_vollmthi()) {
+  if (this->_internal_has_vollmthi()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *vollmthi_);
+        *_impl_.vollmthi_);
   }
 
   // .commonmodule.PhaseAPC VolLmtLo = 12;
-  if (this->has_vollmtlo()) {
+  if (this->_internal_has_vollmtlo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *vollmtlo_);
+        *_impl_.vollmtlo_);
   }
 
   // .commonmodule.Optional_VoltLimitModeKind VolLmtMode = 13;
-  if (this->has_vollmtmode()) {
+  if (this->_internal_has_vollmtmode()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *vollmtmode_);
+        *_impl_.vollmtmode_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RegulatorControlATCC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:regulatormodule.RegulatorControlATCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RegulatorControlATCC* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RegulatorControlATCC>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:regulatormodule.RegulatorControlATCC)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:regulatormodule.RegulatorControlATCC)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RegulatorControlATCC::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RegulatorControlATCC::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RegulatorControlATCC::GetClassData() const { return &_class_data_; }
 
-void RegulatorControlATCC::MergeFrom(const RegulatorControlATCC& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorControlATCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void RegulatorControlATCC::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RegulatorControlATCC*>(&to_msg);
+  auto& from = static_cast<const RegulatorControlATCC&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorControlATCC)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_logicalnodeforcontrol()) {
-    _internal_mutable_logicalnodeforcontrol()->::commonmodule::LogicalNodeForControl::MergeFrom(from._internal_logicalnodeforcontrol());
+  if (from._internal_has_logicalnodeforcontrol()) {
+    _this->_internal_mutable_logicalnodeforcontrol()->::commonmodule::LogicalNodeForControl::MergeFrom(
+        from._internal_logicalnodeforcontrol());
   }
-  if (from.has_dirfwd()) {
-    _internal_mutable_dirfwd()->::regulatormodule::DirectionalATCC::MergeFrom(from._internal_dirfwd());
+  if (from._internal_has_dirfwd()) {
+    _this->_internal_mutable_dirfwd()->::regulatormodule::DirectionalATCC::MergeFrom(
+        from._internal_dirfwd());
   }
-  if (from.has_dirmode()) {
-    _internal_mutable_dirmode()->::commonmodule::Optional_DirectionModeKind::MergeFrom(from._internal_dirmode());
+  if (from._internal_has_dirmode()) {
+    _this->_internal_mutable_dirmode()->::commonmodule::Optional_DirectionModeKind::MergeFrom(
+        from._internal_dirmode());
   }
-  if (from.has_dirrev()) {
-    _internal_mutable_dirrev()->::regulatormodule::DirectionalATCC::MergeFrom(from._internal_dirrev());
+  if (from._internal_has_dirrev()) {
+    _this->_internal_mutable_dirrev()->::regulatormodule::DirectionalATCC::MergeFrom(
+        from._internal_dirrev());
   }
-  if (from.has_dirthd()) {
-    _internal_mutable_dirthd()->::commonmodule::PhaseAPC::MergeFrom(from._internal_dirthd());
+  if (from._internal_has_dirthd()) {
+    _this->_internal_mutable_dirthd()->::commonmodule::PhaseAPC::MergeFrom(
+        from._internal_dirthd());
   }
-  if (from.has_parop()) {
-    _internal_mutable_parop()->::commonmodule::PhaseSPC::MergeFrom(from._internal_parop());
+  if (from._internal_has_parop()) {
+    _this->_internal_mutable_parop()->::commonmodule::PhaseSPC::MergeFrom(
+        from._internal_parop());
   }
-  if (from.has_ramprates()) {
-    _internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from._internal_ramprates());
+  if (from._internal_has_ramprates()) {
+    _this->_internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(
+        from._internal_ramprates());
   }
-  if (from.has_state()) {
-    _internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from._internal_state());
+  if (from._internal_has_state()) {
+    _this->_internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(
+        from._internal_state());
   }
-  if (from.has_tapopl()) {
-    _internal_mutable_tapopl()->::commonmodule::PhaseSPC::MergeFrom(from._internal_tapopl());
+  if (from._internal_has_tapopl()) {
+    _this->_internal_mutable_tapopl()->::commonmodule::PhaseSPC::MergeFrom(
+        from._internal_tapopl());
   }
-  if (from.has_tapopr()) {
-    _internal_mutable_tapopr()->::commonmodule::PhaseSPC::MergeFrom(from._internal_tapopr());
+  if (from._internal_has_tapopr()) {
+    _this->_internal_mutable_tapopr()->::commonmodule::PhaseSPC::MergeFrom(
+        from._internal_tapopr());
   }
-  if (from.has_vollmthi()) {
-    _internal_mutable_vollmthi()->::commonmodule::PhaseAPC::MergeFrom(from._internal_vollmthi());
+  if (from._internal_has_vollmthi()) {
+    _this->_internal_mutable_vollmthi()->::commonmodule::PhaseAPC::MergeFrom(
+        from._internal_vollmthi());
   }
-  if (from.has_vollmtlo()) {
-    _internal_mutable_vollmtlo()->::commonmodule::PhaseAPC::MergeFrom(from._internal_vollmtlo());
+  if (from._internal_has_vollmtlo()) {
+    _this->_internal_mutable_vollmtlo()->::commonmodule::PhaseAPC::MergeFrom(
+        from._internal_vollmtlo());
   }
-  if (from.has_vollmtmode()) {
-    _internal_mutable_vollmtmode()->::commonmodule::Optional_VoltLimitModeKind::MergeFrom(from._internal_vollmtmode());
+  if (from._internal_has_vollmtmode()) {
+    _this->_internal_mutable_vollmtmode()->::commonmodule::Optional_VoltLimitModeKind::MergeFrom(
+        from._internal_vollmtmode());
   }
-}
-
-void RegulatorControlATCC::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:regulatormodule.RegulatorControlATCC)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RegulatorControlATCC::CopyFrom(const RegulatorControlATCC& from) {
@@ -1869,20 +1990,20 @@ bool RegulatorControlATCC::IsInitialized() const {
 
 void RegulatorControlATCC::InternalSwap(RegulatorControlATCC* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RegulatorControlATCC, vollmtmode_)
-      + sizeof(RegulatorControlATCC::vollmtmode_)
-      - PROTOBUF_FIELD_OFFSET(RegulatorControlATCC, logicalnodeforcontrol_)>(
-          reinterpret_cast<char*>(&logicalnodeforcontrol_),
-          reinterpret_cast<char*>(&other->logicalnodeforcontrol_));
+      PROTOBUF_FIELD_OFFSET(RegulatorControlATCC, _impl_.vollmtmode_)
+      + sizeof(RegulatorControlATCC::_impl_.vollmtmode_)
+      - PROTOBUF_FIELD_OFFSET(RegulatorControlATCC, _impl_.logicalnodeforcontrol_)>(
+          reinterpret_cast<char*>(&_impl_.logicalnodeforcontrol_),
+          reinterpret_cast<char*>(&other->_impl_.logicalnodeforcontrol_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegulatorControlATCC::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter, &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+      file_level_metadata_regulatormodule_2fregulatormodule_2eproto[1]);
 }
-
-
 // ===================================================================
 
 class RegulatorPoint::_Internal {
@@ -1893,225 +2014,210 @@ class RegulatorPoint::_Internal {
 
 const ::regulatormodule::RegulatorControlATCC&
 RegulatorPoint::_Internal::control(const RegulatorPoint* msg) {
-  return *msg->control_;
+  return *msg->_impl_.control_;
 }
 const ::commonmodule::Timestamp&
 RegulatorPoint::_Internal::starttime(const RegulatorPoint* msg) {
-  return *msg->starttime_;
+  return *msg->_impl_.starttime_;
 }
 void RegulatorPoint::clear_starttime() {
-  if (GetArena() == nullptr && starttime_ != nullptr) {
-    delete starttime_;
+  if (GetArenaForAllocation() == nullptr && _impl_.starttime_ != nullptr) {
+    delete _impl_.starttime_;
   }
-  starttime_ = nullptr;
+  _impl_.starttime_ = nullptr;
 }
 RegulatorPoint::RegulatorPoint(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:regulatormodule.RegulatorPoint)
 }
 RegulatorPoint::RegulatorPoint(const RegulatorPoint& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RegulatorPoint* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.control_){nullptr}
+    , decltype(_impl_.starttime_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_control()) {
-    control_ = new ::regulatormodule::RegulatorControlATCC(*from.control_);
-  } else {
-    control_ = nullptr;
+    _this->_impl_.control_ = new ::regulatormodule::RegulatorControlATCC(*from._impl_.control_);
   }
   if (from._internal_has_starttime()) {
-    starttime_ = new ::commonmodule::Timestamp(*from.starttime_);
-  } else {
-    starttime_ = nullptr;
+    _this->_impl_.starttime_ = new ::commonmodule::Timestamp(*from._impl_.starttime_);
   }
   // @@protoc_insertion_point(copy_constructor:regulatormodule.RegulatorPoint)
 }
 
-void RegulatorPoint::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&control_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&starttime_) -
-    reinterpret_cast<char*>(&control_)) + sizeof(starttime_));
+inline void RegulatorPoint::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.control_){nullptr}
+    , decltype(_impl_.starttime_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 RegulatorPoint::~RegulatorPoint() {
   // @@protoc_insertion_point(destructor:regulatormodule.RegulatorPoint)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void RegulatorPoint::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete control_;
-  if (this != internal_default_instance()) delete starttime_;
+inline void RegulatorPoint::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.control_;
+  if (this != internal_default_instance()) delete _impl_.starttime_;
 }
 
-void RegulatorPoint::ArenaDtor(void* object) {
-  RegulatorPoint* _this = reinterpret_cast< RegulatorPoint* >(object);
-  (void)_this;
-}
-void RegulatorPoint::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void RegulatorPoint::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void RegulatorPoint::Clear() {
 // @@protoc_insertion_point(message_clear_start:regulatormodule.RegulatorPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && control_ != nullptr) {
-    delete control_;
+  if (GetArenaForAllocation() == nullptr && _impl_.control_ != nullptr) {
+    delete _impl_.control_;
   }
-  control_ = nullptr;
-  if (GetArena() == nullptr && starttime_ != nullptr) {
-    delete starttime_;
+  _impl_.control_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.starttime_ != nullptr) {
+    delete _impl_.starttime_;
   }
-  starttime_ = nullptr;
+  _impl_.starttime_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RegulatorPoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* RegulatorPoint::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .regulatormodule.RegulatorControlATCC control = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_control(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.Timestamp startTime = 8 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 66)) {
           ptr = ctx->ParseMessage(_internal_mutable_starttime(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RegulatorPoint::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* RegulatorPoint::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:regulatormodule.RegulatorPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .regulatormodule.RegulatorControlATCC control = 1;
-  if (this->has_control()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_control()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::control(this), target, stream);
+      InternalWriteMessage(1, _Internal::control(this),
+        _Internal::control(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.Timestamp startTime = 8 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_starttime()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_starttime()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::starttime(this), target, stream);
+      InternalWriteMessage(8, _Internal::starttime(this),
+        _Internal::starttime(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:regulatormodule.RegulatorPoint)
   return target;
 }
 
-size_t RegulatorPoint::ByteSizeLong() const {
+::size_t RegulatorPoint::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:regulatormodule.RegulatorPoint)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .regulatormodule.RegulatorControlATCC control = 1;
-  if (this->has_control()) {
+  if (this->_internal_has_control()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *control_);
+        *_impl_.control_);
   }
 
   // .commonmodule.Timestamp startTime = 8 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_starttime()) {
+  if (this->_internal_has_starttime()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *starttime_);
+        *_impl_.starttime_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RegulatorPoint::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:regulatormodule.RegulatorPoint)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RegulatorPoint* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RegulatorPoint>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:regulatormodule.RegulatorPoint)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:regulatormodule.RegulatorPoint)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RegulatorPoint::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RegulatorPoint::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RegulatorPoint::GetClassData() const { return &_class_data_; }
 
-void RegulatorPoint::MergeFrom(const RegulatorPoint& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorPoint)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void RegulatorPoint::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RegulatorPoint*>(&to_msg);
+  auto& from = static_cast<const RegulatorPoint&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorPoint)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_control()) {
-    _internal_mutable_control()->::regulatormodule::RegulatorControlATCC::MergeFrom(from._internal_control());
+  if (from._internal_has_control()) {
+    _this->_internal_mutable_control()->::regulatormodule::RegulatorControlATCC::MergeFrom(
+        from._internal_control());
   }
-  if (from.has_starttime()) {
-    _internal_mutable_starttime()->::commonmodule::Timestamp::MergeFrom(from._internal_starttime());
+  if (from._internal_has_starttime()) {
+    _this->_internal_mutable_starttime()->::commonmodule::Timestamp::MergeFrom(
+        from._internal_starttime());
   }
-}
-
-void RegulatorPoint::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:regulatormodule.RegulatorPoint)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RegulatorPoint::CopyFrom(const RegulatorPoint& from) {
@@ -2127,20 +2233,20 @@ bool RegulatorPoint::IsInitialized() const {
 
 void RegulatorPoint::InternalSwap(RegulatorPoint* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RegulatorPoint, starttime_)
-      + sizeof(RegulatorPoint::starttime_)
-      - PROTOBUF_FIELD_OFFSET(RegulatorPoint, control_)>(
-          reinterpret_cast<char*>(&control_),
-          reinterpret_cast<char*>(&other->control_));
+      PROTOBUF_FIELD_OFFSET(RegulatorPoint, _impl_.starttime_)
+      + sizeof(RegulatorPoint::_impl_.starttime_)
+      - PROTOBUF_FIELD_OFFSET(RegulatorPoint, _impl_.control_)>(
+          reinterpret_cast<char*>(&_impl_.control_),
+          reinterpret_cast<char*>(&other->_impl_.control_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegulatorPoint::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter, &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+      file_level_metadata_regulatormodule_2fregulatormodule_2eproto[2]);
 }
-
-
 // ===================================================================
 
 class RegulatorCSG::_Internal {
@@ -2148,62 +2254,66 @@ class RegulatorCSG::_Internal {
 };
 
 RegulatorCSG::RegulatorCSG(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  crvpts_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:regulatormodule.RegulatorCSG)
 }
 RegulatorCSG::RegulatorCSG(const RegulatorCSG& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      crvpts_(from.crvpts_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RegulatorCSG* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.crvpts_){from._impl_.crvpts_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:regulatormodule.RegulatorCSG)
 }
 
-void RegulatorCSG::SharedCtor() {
+inline void RegulatorCSG::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.crvpts_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 RegulatorCSG::~RegulatorCSG() {
   // @@protoc_insertion_point(destructor:regulatormodule.RegulatorCSG)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void RegulatorCSG::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void RegulatorCSG::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.crvpts_.~RepeatedPtrField();
 }
 
-void RegulatorCSG::ArenaDtor(void* object) {
-  RegulatorCSG* _this = reinterpret_cast< RegulatorCSG* >(object);
-  (void)_this;
-}
-void RegulatorCSG::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void RegulatorCSG::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void RegulatorCSG::Clear() {
 // @@protoc_insertion_point(message_clear_start:regulatormodule.RegulatorCSG)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  crvpts_.Clear();
+  _impl_.crvpts_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RegulatorCSG::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* RegulatorCSG::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated .regulatormodule.RegulatorPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -2211,106 +2321,90 @@ const char* RegulatorCSG::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RegulatorCSG::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* RegulatorCSG::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:regulatormodule.RegulatorCSG)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .regulatormodule.RegulatorPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_crvpts_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_crvpts_size()); i < n; i++) {
+    const auto& repfield = this->_internal_crvpts(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_crvpts(i), target, stream);
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:regulatormodule.RegulatorCSG)
   return target;
 }
 
-size_t RegulatorCSG::ByteSizeLong() const {
+::size_t RegulatorCSG::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:regulatormodule.RegulatorCSG)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .regulatormodule.RegulatorPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   total_size += 1UL * this->_internal_crvpts_size();
-  for (const auto& msg : this->crvpts_) {
+  for (const auto& msg : this->_impl_.crvpts_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RegulatorCSG::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:regulatormodule.RegulatorCSG)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RegulatorCSG* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RegulatorCSG>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:regulatormodule.RegulatorCSG)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:regulatormodule.RegulatorCSG)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RegulatorCSG::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RegulatorCSG::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RegulatorCSG::GetClassData() const { return &_class_data_; }
 
-void RegulatorCSG::MergeFrom(const RegulatorCSG& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorCSG)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void RegulatorCSG::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RegulatorCSG*>(&to_msg);
+  auto& from = static_cast<const RegulatorCSG&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorCSG)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  crvpts_.MergeFrom(from.crvpts_);
-}
-
-void RegulatorCSG::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:regulatormodule.RegulatorCSG)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_impl_.crvpts_.MergeFrom(from._impl_.crvpts_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RegulatorCSG::CopyFrom(const RegulatorCSG& from) {
@@ -2326,15 +2420,15 @@ bool RegulatorCSG::IsInitialized() const {
 
 void RegulatorCSG::InternalSwap(RegulatorCSG* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  crvpts_.InternalSwap(&other->crvpts_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.crvpts_.InternalSwap(&other->_impl_.crvpts_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegulatorCSG::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter, &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+      file_level_metadata_regulatormodule_2fregulatormodule_2eproto[3]);
 }
-
-
 // ===================================================================
 
 class RegulatorControlScheduleFSCH::_Internal {
@@ -2344,177 +2438,163 @@ class RegulatorControlScheduleFSCH::_Internal {
 
 const ::regulatormodule::RegulatorCSG&
 RegulatorControlScheduleFSCH::_Internal::valdcsg(const RegulatorControlScheduleFSCH* msg) {
-  return *msg->valdcsg_;
+  return *msg->_impl_.valdcsg_;
 }
 RegulatorControlScheduleFSCH::RegulatorControlScheduleFSCH(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:regulatormodule.RegulatorControlScheduleFSCH)
 }
 RegulatorControlScheduleFSCH::RegulatorControlScheduleFSCH(const RegulatorControlScheduleFSCH& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RegulatorControlScheduleFSCH* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.valdcsg_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_valdcsg()) {
-    valdcsg_ = new ::regulatormodule::RegulatorCSG(*from.valdcsg_);
-  } else {
-    valdcsg_ = nullptr;
+    _this->_impl_.valdcsg_ = new ::regulatormodule::RegulatorCSG(*from._impl_.valdcsg_);
   }
   // @@protoc_insertion_point(copy_constructor:regulatormodule.RegulatorControlScheduleFSCH)
 }
 
-void RegulatorControlScheduleFSCH::SharedCtor() {
-valdcsg_ = nullptr;
+inline void RegulatorControlScheduleFSCH::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.valdcsg_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 RegulatorControlScheduleFSCH::~RegulatorControlScheduleFSCH() {
   // @@protoc_insertion_point(destructor:regulatormodule.RegulatorControlScheduleFSCH)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void RegulatorControlScheduleFSCH::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete valdcsg_;
+inline void RegulatorControlScheduleFSCH::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.valdcsg_;
 }
 
-void RegulatorControlScheduleFSCH::ArenaDtor(void* object) {
-  RegulatorControlScheduleFSCH* _this = reinterpret_cast< RegulatorControlScheduleFSCH* >(object);
-  (void)_this;
-}
-void RegulatorControlScheduleFSCH::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void RegulatorControlScheduleFSCH::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void RegulatorControlScheduleFSCH::Clear() {
 // @@protoc_insertion_point(message_clear_start:regulatormodule.RegulatorControlScheduleFSCH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && valdcsg_ != nullptr) {
-    delete valdcsg_;
+  if (GetArenaForAllocation() == nullptr && _impl_.valdcsg_ != nullptr) {
+    delete _impl_.valdcsg_;
   }
-  valdcsg_ = nullptr;
+  _impl_.valdcsg_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RegulatorControlScheduleFSCH::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* RegulatorControlScheduleFSCH::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .regulatormodule.RegulatorCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_valdcsg(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RegulatorControlScheduleFSCH::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* RegulatorControlScheduleFSCH::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:regulatormodule.RegulatorControlScheduleFSCH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .regulatormodule.RegulatorCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_valdcsg()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_valdcsg()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::valdcsg(this), target, stream);
+      InternalWriteMessage(1, _Internal::valdcsg(this),
+        _Internal::valdcsg(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:regulatormodule.RegulatorControlScheduleFSCH)
   return target;
 }
 
-size_t RegulatorControlScheduleFSCH::ByteSizeLong() const {
+::size_t RegulatorControlScheduleFSCH::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:regulatormodule.RegulatorControlScheduleFSCH)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .regulatormodule.RegulatorCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_valdcsg()) {
+  if (this->_internal_has_valdcsg()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *valdcsg_);
+        *_impl_.valdcsg_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RegulatorControlScheduleFSCH::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:regulatormodule.RegulatorControlScheduleFSCH)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RegulatorControlScheduleFSCH* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RegulatorControlScheduleFSCH>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:regulatormodule.RegulatorControlScheduleFSCH)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:regulatormodule.RegulatorControlScheduleFSCH)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RegulatorControlScheduleFSCH::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RegulatorControlScheduleFSCH::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RegulatorControlScheduleFSCH::GetClassData() const { return &_class_data_; }
 
-void RegulatorControlScheduleFSCH::MergeFrom(const RegulatorControlScheduleFSCH& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorControlScheduleFSCH)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void RegulatorControlScheduleFSCH::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RegulatorControlScheduleFSCH*>(&to_msg);
+  auto& from = static_cast<const RegulatorControlScheduleFSCH&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorControlScheduleFSCH)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_valdcsg()) {
-    _internal_mutable_valdcsg()->::regulatormodule::RegulatorCSG::MergeFrom(from._internal_valdcsg());
+  if (from._internal_has_valdcsg()) {
+    _this->_internal_mutable_valdcsg()->::regulatormodule::RegulatorCSG::MergeFrom(
+        from._internal_valdcsg());
   }
-}
-
-void RegulatorControlScheduleFSCH::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:regulatormodule.RegulatorControlScheduleFSCH)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RegulatorControlScheduleFSCH::CopyFrom(const RegulatorControlScheduleFSCH& from) {
@@ -2530,15 +2610,15 @@ bool RegulatorControlScheduleFSCH::IsInitialized() const {
 
 void RegulatorControlScheduleFSCH::InternalSwap(RegulatorControlScheduleFSCH* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(valdcsg_, other->valdcsg_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.valdcsg_, other->_impl_.valdcsg_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegulatorControlScheduleFSCH::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter, &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+      file_level_metadata_regulatormodule_2fregulatormodule_2eproto[4]);
 }
-
-
 // ===================================================================
 
 class RegulatorControlFSCC::_Internal {
@@ -2549,225 +2629,210 @@ class RegulatorControlFSCC::_Internal {
 
 const ::commonmodule::ControlFSCC&
 RegulatorControlFSCC::_Internal::controlfscc(const RegulatorControlFSCC* msg) {
-  return *msg->controlfscc_;
+  return *msg->_impl_.controlfscc_;
 }
 const ::regulatormodule::RegulatorControlScheduleFSCH&
 RegulatorControlFSCC::_Internal::regulatorcontrolschedulefsch(const RegulatorControlFSCC* msg) {
-  return *msg->regulatorcontrolschedulefsch_;
+  return *msg->_impl_.regulatorcontrolschedulefsch_;
 }
 void RegulatorControlFSCC::clear_controlfscc() {
-  if (GetArena() == nullptr && controlfscc_ != nullptr) {
-    delete controlfscc_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlfscc_ != nullptr) {
+    delete _impl_.controlfscc_;
   }
-  controlfscc_ = nullptr;
+  _impl_.controlfscc_ = nullptr;
 }
 RegulatorControlFSCC::RegulatorControlFSCC(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:regulatormodule.RegulatorControlFSCC)
 }
 RegulatorControlFSCC::RegulatorControlFSCC(const RegulatorControlFSCC& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RegulatorControlFSCC* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlfscc_){nullptr}
+    , decltype(_impl_.regulatorcontrolschedulefsch_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlfscc()) {
-    controlfscc_ = new ::commonmodule::ControlFSCC(*from.controlfscc_);
-  } else {
-    controlfscc_ = nullptr;
+    _this->_impl_.controlfscc_ = new ::commonmodule::ControlFSCC(*from._impl_.controlfscc_);
   }
   if (from._internal_has_regulatorcontrolschedulefsch()) {
-    regulatorcontrolschedulefsch_ = new ::regulatormodule::RegulatorControlScheduleFSCH(*from.regulatorcontrolschedulefsch_);
-  } else {
-    regulatorcontrolschedulefsch_ = nullptr;
+    _this->_impl_.regulatorcontrolschedulefsch_ = new ::regulatormodule::RegulatorControlScheduleFSCH(*from._impl_.regulatorcontrolschedulefsch_);
   }
   // @@protoc_insertion_point(copy_constructor:regulatormodule.RegulatorControlFSCC)
 }
 
-void RegulatorControlFSCC::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlfscc_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&regulatorcontrolschedulefsch_) -
-    reinterpret_cast<char*>(&controlfscc_)) + sizeof(regulatorcontrolschedulefsch_));
+inline void RegulatorControlFSCC::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlfscc_){nullptr}
+    , decltype(_impl_.regulatorcontrolschedulefsch_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 RegulatorControlFSCC::~RegulatorControlFSCC() {
   // @@protoc_insertion_point(destructor:regulatormodule.RegulatorControlFSCC)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void RegulatorControlFSCC::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlfscc_;
-  if (this != internal_default_instance()) delete regulatorcontrolschedulefsch_;
+inline void RegulatorControlFSCC::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlfscc_;
+  if (this != internal_default_instance()) delete _impl_.regulatorcontrolschedulefsch_;
 }
 
-void RegulatorControlFSCC::ArenaDtor(void* object) {
-  RegulatorControlFSCC* _this = reinterpret_cast< RegulatorControlFSCC* >(object);
-  (void)_this;
-}
-void RegulatorControlFSCC::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void RegulatorControlFSCC::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void RegulatorControlFSCC::Clear() {
 // @@protoc_insertion_point(message_clear_start:regulatormodule.RegulatorControlFSCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlfscc_ != nullptr) {
-    delete controlfscc_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlfscc_ != nullptr) {
+    delete _impl_.controlfscc_;
   }
-  controlfscc_ = nullptr;
-  if (GetArena() == nullptr && regulatorcontrolschedulefsch_ != nullptr) {
-    delete regulatorcontrolschedulefsch_;
+  _impl_.controlfscc_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.regulatorcontrolschedulefsch_ != nullptr) {
+    delete _impl_.regulatorcontrolschedulefsch_;
   }
-  regulatorcontrolschedulefsch_ = nullptr;
+  _impl_.regulatorcontrolschedulefsch_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RegulatorControlFSCC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* RegulatorControlFSCC::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlfscc(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .regulatormodule.RegulatorControlScheduleFSCH regulatorControlScheduleFSCH = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_regulatorcontrolschedulefsch(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RegulatorControlFSCC::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* RegulatorControlFSCC::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:regulatormodule.RegulatorControlFSCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlfscc()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlfscc()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlfscc(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlfscc(this),
+        _Internal::controlfscc(this).GetCachedSize(), target, stream);
   }
 
   // .regulatormodule.RegulatorControlScheduleFSCH regulatorControlScheduleFSCH = 2;
-  if (this->has_regulatorcontrolschedulefsch()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_regulatorcontrolschedulefsch()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::regulatorcontrolschedulefsch(this), target, stream);
+      InternalWriteMessage(2, _Internal::regulatorcontrolschedulefsch(this),
+        _Internal::regulatorcontrolschedulefsch(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:regulatormodule.RegulatorControlFSCC)
   return target;
 }
 
-size_t RegulatorControlFSCC::ByteSizeLong() const {
+::size_t RegulatorControlFSCC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:regulatormodule.RegulatorControlFSCC)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlfscc()) {
+  if (this->_internal_has_controlfscc()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlfscc_);
+        *_impl_.controlfscc_);
   }
 
   // .regulatormodule.RegulatorControlScheduleFSCH regulatorControlScheduleFSCH = 2;
-  if (this->has_regulatorcontrolschedulefsch()) {
+  if (this->_internal_has_regulatorcontrolschedulefsch()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *regulatorcontrolschedulefsch_);
+        *_impl_.regulatorcontrolschedulefsch_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RegulatorControlFSCC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:regulatormodule.RegulatorControlFSCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RegulatorControlFSCC* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RegulatorControlFSCC>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:regulatormodule.RegulatorControlFSCC)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:regulatormodule.RegulatorControlFSCC)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RegulatorControlFSCC::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RegulatorControlFSCC::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RegulatorControlFSCC::GetClassData() const { return &_class_data_; }
 
-void RegulatorControlFSCC::MergeFrom(const RegulatorControlFSCC& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorControlFSCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void RegulatorControlFSCC::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RegulatorControlFSCC*>(&to_msg);
+  auto& from = static_cast<const RegulatorControlFSCC&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorControlFSCC)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlfscc()) {
-    _internal_mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(from._internal_controlfscc());
+  if (from._internal_has_controlfscc()) {
+    _this->_internal_mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(
+        from._internal_controlfscc());
   }
-  if (from.has_regulatorcontrolschedulefsch()) {
-    _internal_mutable_regulatorcontrolschedulefsch()->::regulatormodule::RegulatorControlScheduleFSCH::MergeFrom(from._internal_regulatorcontrolschedulefsch());
+  if (from._internal_has_regulatorcontrolschedulefsch()) {
+    _this->_internal_mutable_regulatorcontrolschedulefsch()->::regulatormodule::RegulatorControlScheduleFSCH::MergeFrom(
+        from._internal_regulatorcontrolschedulefsch());
   }
-}
-
-void RegulatorControlFSCC::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:regulatormodule.RegulatorControlFSCC)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RegulatorControlFSCC::CopyFrom(const RegulatorControlFSCC& from) {
@@ -2783,20 +2848,20 @@ bool RegulatorControlFSCC::IsInitialized() const {
 
 void RegulatorControlFSCC::InternalSwap(RegulatorControlFSCC* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RegulatorControlFSCC, regulatorcontrolschedulefsch_)
-      + sizeof(RegulatorControlFSCC::regulatorcontrolschedulefsch_)
-      - PROTOBUF_FIELD_OFFSET(RegulatorControlFSCC, controlfscc_)>(
-          reinterpret_cast<char*>(&controlfscc_),
-          reinterpret_cast<char*>(&other->controlfscc_));
+      PROTOBUF_FIELD_OFFSET(RegulatorControlFSCC, _impl_.regulatorcontrolschedulefsch_)
+      + sizeof(RegulatorControlFSCC::_impl_.regulatorcontrolschedulefsch_)
+      - PROTOBUF_FIELD_OFFSET(RegulatorControlFSCC, _impl_.controlfscc_)>(
+          reinterpret_cast<char*>(&_impl_.controlfscc_),
+          reinterpret_cast<char*>(&other->_impl_.controlfscc_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegulatorControlFSCC::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter, &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+      file_level_metadata_regulatormodule_2fregulatormodule_2eproto[5]);
 }
-
-
 // ===================================================================
 
 class RegulatorControl::_Internal {
@@ -2808,270 +2873,257 @@ class RegulatorControl::_Internal {
 
 const ::commonmodule::ControlValue&
 RegulatorControl::_Internal::controlvalue(const RegulatorControl* msg) {
-  return *msg->controlvalue_;
+  return *msg->_impl_.controlvalue_;
 }
 const ::commonmodule::CheckConditions&
 RegulatorControl::_Internal::check(const RegulatorControl* msg) {
-  return *msg->check_;
+  return *msg->_impl_.check_;
 }
 const ::regulatormodule::RegulatorControlFSCC&
 RegulatorControl::_Internal::regulatorcontrolfscc(const RegulatorControl* msg) {
-  return *msg->regulatorcontrolfscc_;
+  return *msg->_impl_.regulatorcontrolfscc_;
 }
 void RegulatorControl::clear_controlvalue() {
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
   }
-  controlvalue_ = nullptr;
+  _impl_.controlvalue_ = nullptr;
 }
 void RegulatorControl::clear_check() {
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
+  _impl_.check_ = nullptr;
 }
 RegulatorControl::RegulatorControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:regulatormodule.RegulatorControl)
 }
 RegulatorControl::RegulatorControl(const RegulatorControl& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RegulatorControl* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.regulatorcontrolfscc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlvalue()) {
-    controlvalue_ = new ::commonmodule::ControlValue(*from.controlvalue_);
-  } else {
-    controlvalue_ = nullptr;
+    _this->_impl_.controlvalue_ = new ::commonmodule::ControlValue(*from._impl_.controlvalue_);
   }
   if (from._internal_has_check()) {
-    check_ = new ::commonmodule::CheckConditions(*from.check_);
-  } else {
-    check_ = nullptr;
+    _this->_impl_.check_ = new ::commonmodule::CheckConditions(*from._impl_.check_);
   }
   if (from._internal_has_regulatorcontrolfscc()) {
-    regulatorcontrolfscc_ = new ::regulatormodule::RegulatorControlFSCC(*from.regulatorcontrolfscc_);
-  } else {
-    regulatorcontrolfscc_ = nullptr;
+    _this->_impl_.regulatorcontrolfscc_ = new ::regulatormodule::RegulatorControlFSCC(*from._impl_.regulatorcontrolfscc_);
   }
   // @@protoc_insertion_point(copy_constructor:regulatormodule.RegulatorControl)
 }
 
-void RegulatorControl::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&regulatorcontrolfscc_) -
-    reinterpret_cast<char*>(&controlvalue_)) + sizeof(regulatorcontrolfscc_));
+inline void RegulatorControl::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.regulatorcontrolfscc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 RegulatorControl::~RegulatorControl() {
   // @@protoc_insertion_point(destructor:regulatormodule.RegulatorControl)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void RegulatorControl::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlvalue_;
-  if (this != internal_default_instance()) delete check_;
-  if (this != internal_default_instance()) delete regulatorcontrolfscc_;
+inline void RegulatorControl::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlvalue_;
+  if (this != internal_default_instance()) delete _impl_.check_;
+  if (this != internal_default_instance()) delete _impl_.regulatorcontrolfscc_;
 }
 
-void RegulatorControl::ArenaDtor(void* object) {
-  RegulatorControl* _this = reinterpret_cast< RegulatorControl* >(object);
-  (void)_this;
-}
-void RegulatorControl::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void RegulatorControl::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void RegulatorControl::Clear() {
 // @@protoc_insertion_point(message_clear_start:regulatormodule.RegulatorControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
   }
-  controlvalue_ = nullptr;
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  _impl_.controlvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
-  if (GetArena() == nullptr && regulatorcontrolfscc_ != nullptr) {
-    delete regulatorcontrolfscc_;
+  _impl_.check_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.regulatorcontrolfscc_ != nullptr) {
+    delete _impl_.regulatorcontrolfscc_;
   }
-  regulatorcontrolfscc_ = nullptr;
+  _impl_.regulatorcontrolfscc_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RegulatorControl::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* RegulatorControl::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlvalue(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.CheckConditions check = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .regulatormodule.RegulatorControlFSCC regulatorControlFSCC = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_regulatorcontrolfscc(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RegulatorControl::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* RegulatorControl::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:regulatormodule.RegulatorControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlvalue()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlvalue(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlvalue(this),
+        _Internal::controlvalue(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_check()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::check(this), target, stream);
+      InternalWriteMessage(2, _Internal::check(this),
+        _Internal::check(this).GetCachedSize(), target, stream);
   }
 
   // .regulatormodule.RegulatorControlFSCC regulatorControlFSCC = 3;
-  if (this->has_regulatorcontrolfscc()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_regulatorcontrolfscc()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::regulatorcontrolfscc(this), target, stream);
+      InternalWriteMessage(3, _Internal::regulatorcontrolfscc(this),
+        _Internal::regulatorcontrolfscc(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:regulatormodule.RegulatorControl)
   return target;
 }
 
-size_t RegulatorControl::ByteSizeLong() const {
+::size_t RegulatorControl::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:regulatormodule.RegulatorControl)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
+  if (this->_internal_has_controlvalue()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlvalue_);
+        *_impl_.controlvalue_);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
+  if (this->_internal_has_check()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *check_);
+        *_impl_.check_);
   }
 
   // .regulatormodule.RegulatorControlFSCC regulatorControlFSCC = 3;
-  if (this->has_regulatorcontrolfscc()) {
+  if (this->_internal_has_regulatorcontrolfscc()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *regulatorcontrolfscc_);
+        *_impl_.regulatorcontrolfscc_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RegulatorControl::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:regulatormodule.RegulatorControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RegulatorControl* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RegulatorControl>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:regulatormodule.RegulatorControl)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:regulatormodule.RegulatorControl)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RegulatorControl::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RegulatorControl::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RegulatorControl::GetClassData() const { return &_class_data_; }
 
-void RegulatorControl::MergeFrom(const RegulatorControl& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void RegulatorControl::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RegulatorControl*>(&to_msg);
+  auto& from = static_cast<const RegulatorControl&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorControl)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlvalue()) {
-    _internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(from._internal_controlvalue());
+  if (from._internal_has_controlvalue()) {
+    _this->_internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(
+        from._internal_controlvalue());
   }
-  if (from.has_check()) {
-    _internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(from._internal_check());
+  if (from._internal_has_check()) {
+    _this->_internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(
+        from._internal_check());
   }
-  if (from.has_regulatorcontrolfscc()) {
-    _internal_mutable_regulatorcontrolfscc()->::regulatormodule::RegulatorControlFSCC::MergeFrom(from._internal_regulatorcontrolfscc());
+  if (from._internal_has_regulatorcontrolfscc()) {
+    _this->_internal_mutable_regulatorcontrolfscc()->::regulatormodule::RegulatorControlFSCC::MergeFrom(
+        from._internal_regulatorcontrolfscc());
   }
-}
-
-void RegulatorControl::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:regulatormodule.RegulatorControl)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RegulatorControl::CopyFrom(const RegulatorControl& from) {
@@ -3087,20 +3139,20 @@ bool RegulatorControl::IsInitialized() const {
 
 void RegulatorControl::InternalSwap(RegulatorControl* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RegulatorControl, regulatorcontrolfscc_)
-      + sizeof(RegulatorControl::regulatorcontrolfscc_)
-      - PROTOBUF_FIELD_OFFSET(RegulatorControl, controlvalue_)>(
-          reinterpret_cast<char*>(&controlvalue_),
-          reinterpret_cast<char*>(&other->controlvalue_));
+      PROTOBUF_FIELD_OFFSET(RegulatorControl, _impl_.regulatorcontrolfscc_)
+      + sizeof(RegulatorControl::_impl_.regulatorcontrolfscc_)
+      - PROTOBUF_FIELD_OFFSET(RegulatorControl, _impl_.controlvalue_)>(
+          reinterpret_cast<char*>(&_impl_.controlvalue_),
+          reinterpret_cast<char*>(&other->_impl_.controlvalue_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegulatorControl::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter, &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+      file_level_metadata_regulatormodule_2fregulatormodule_2eproto[6]);
 }
-
-
 // ===================================================================
 
 class RegulatorSystem::_Internal {
@@ -3110,183 +3162,169 @@ class RegulatorSystem::_Internal {
 
 const ::commonmodule::ConductingEquipment&
 RegulatorSystem::_Internal::conductingequipment(const RegulatorSystem* msg) {
-  return *msg->conductingequipment_;
+  return *msg->_impl_.conductingequipment_;
 }
 void RegulatorSystem::clear_conductingequipment() {
-  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
-    delete conductingequipment_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipment_ != nullptr) {
+    delete _impl_.conductingequipment_;
   }
-  conductingequipment_ = nullptr;
+  _impl_.conductingequipment_ = nullptr;
 }
 RegulatorSystem::RegulatorSystem(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:regulatormodule.RegulatorSystem)
 }
 RegulatorSystem::RegulatorSystem(const RegulatorSystem& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RegulatorSystem* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipment_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_conductingequipment()) {
-    conductingequipment_ = new ::commonmodule::ConductingEquipment(*from.conductingequipment_);
-  } else {
-    conductingequipment_ = nullptr;
+    _this->_impl_.conductingequipment_ = new ::commonmodule::ConductingEquipment(*from._impl_.conductingequipment_);
   }
   // @@protoc_insertion_point(copy_constructor:regulatormodule.RegulatorSystem)
 }
 
-void RegulatorSystem::SharedCtor() {
-conductingequipment_ = nullptr;
+inline void RegulatorSystem::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipment_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 RegulatorSystem::~RegulatorSystem() {
   // @@protoc_insertion_point(destructor:regulatormodule.RegulatorSystem)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void RegulatorSystem::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete conductingequipment_;
+inline void RegulatorSystem::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.conductingequipment_;
 }
 
-void RegulatorSystem::ArenaDtor(void* object) {
-  RegulatorSystem* _this = reinterpret_cast< RegulatorSystem* >(object);
-  (void)_this;
-}
-void RegulatorSystem::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void RegulatorSystem::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void RegulatorSystem::Clear() {
 // @@protoc_insertion_point(message_clear_start:regulatormodule.RegulatorSystem)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
-    delete conductingequipment_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipment_ != nullptr) {
+    delete _impl_.conductingequipment_;
   }
-  conductingequipment_ = nullptr;
+  _impl_.conductingequipment_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RegulatorSystem::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* RegulatorSystem::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_conductingequipment(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RegulatorSystem::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* RegulatorSystem::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:regulatormodule.RegulatorSystem)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipment()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_conductingequipment()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::conductingequipment(this), target, stream);
+      InternalWriteMessage(1, _Internal::conductingequipment(this),
+        _Internal::conductingequipment(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:regulatormodule.RegulatorSystem)
   return target;
 }
 
-size_t RegulatorSystem::ByteSizeLong() const {
+::size_t RegulatorSystem::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:regulatormodule.RegulatorSystem)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipment()) {
+  if (this->_internal_has_conductingequipment()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *conductingequipment_);
+        *_impl_.conductingequipment_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RegulatorSystem::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:regulatormodule.RegulatorSystem)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RegulatorSystem* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RegulatorSystem>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:regulatormodule.RegulatorSystem)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:regulatormodule.RegulatorSystem)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RegulatorSystem::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RegulatorSystem::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RegulatorSystem::GetClassData() const { return &_class_data_; }
 
-void RegulatorSystem::MergeFrom(const RegulatorSystem& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorSystem)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void RegulatorSystem::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RegulatorSystem*>(&to_msg);
+  auto& from = static_cast<const RegulatorSystem&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorSystem)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_conductingequipment()) {
-    _internal_mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(from._internal_conductingequipment());
+  if (from._internal_has_conductingequipment()) {
+    _this->_internal_mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(
+        from._internal_conductingequipment());
   }
-}
-
-void RegulatorSystem::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:regulatormodule.RegulatorSystem)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RegulatorSystem::CopyFrom(const RegulatorSystem& from) {
@@ -3302,15 +3340,15 @@ bool RegulatorSystem::IsInitialized() const {
 
 void RegulatorSystem::InternalSwap(RegulatorSystem* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(conductingequipment_, other->conductingequipment_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.conductingequipment_, other->_impl_.conductingequipment_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegulatorSystem::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter, &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+      file_level_metadata_regulatormodule_2fregulatormodule_2eproto[7]);
 }
-
-
 // ===================================================================
 
 class RegulatorControlProfile::_Internal {
@@ -3322,264 +3360,251 @@ class RegulatorControlProfile::_Internal {
 
 const ::commonmodule::ControlMessageInfo&
 RegulatorControlProfile::_Internal::controlmessageinfo(const RegulatorControlProfile* msg) {
-  return *msg->controlmessageinfo_;
+  return *msg->_impl_.controlmessageinfo_;
 }
 const ::regulatormodule::RegulatorControl&
 RegulatorControlProfile::_Internal::regulatorcontrol(const RegulatorControlProfile* msg) {
-  return *msg->regulatorcontrol_;
+  return *msg->_impl_.regulatorcontrol_;
 }
 const ::regulatormodule::RegulatorSystem&
 RegulatorControlProfile::_Internal::regulatorsystem(const RegulatorControlProfile* msg) {
-  return *msg->regulatorsystem_;
+  return *msg->_impl_.regulatorsystem_;
 }
 void RegulatorControlProfile::clear_controlmessageinfo() {
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
+  _impl_.controlmessageinfo_ = nullptr;
 }
 RegulatorControlProfile::RegulatorControlProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:regulatormodule.RegulatorControlProfile)
 }
 RegulatorControlProfile::RegulatorControlProfile(const RegulatorControlProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RegulatorControlProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.regulatorcontrol_){nullptr}
+    , decltype(_impl_.regulatorsystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlmessageinfo()) {
-    controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
-  } else {
-    controlmessageinfo_ = nullptr;
+    _this->_impl_.controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from._impl_.controlmessageinfo_);
   }
   if (from._internal_has_regulatorcontrol()) {
-    regulatorcontrol_ = new ::regulatormodule::RegulatorControl(*from.regulatorcontrol_);
-  } else {
-    regulatorcontrol_ = nullptr;
+    _this->_impl_.regulatorcontrol_ = new ::regulatormodule::RegulatorControl(*from._impl_.regulatorcontrol_);
   }
   if (from._internal_has_regulatorsystem()) {
-    regulatorsystem_ = new ::regulatormodule::RegulatorSystem(*from.regulatorsystem_);
-  } else {
-    regulatorsystem_ = nullptr;
+    _this->_impl_.regulatorsystem_ = new ::regulatormodule::RegulatorSystem(*from._impl_.regulatorsystem_);
   }
   // @@protoc_insertion_point(copy_constructor:regulatormodule.RegulatorControlProfile)
 }
 
-void RegulatorControlProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&regulatorsystem_) -
-    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(regulatorsystem_));
+inline void RegulatorControlProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.regulatorcontrol_){nullptr}
+    , decltype(_impl_.regulatorsystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 RegulatorControlProfile::~RegulatorControlProfile() {
   // @@protoc_insertion_point(destructor:regulatormodule.RegulatorControlProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void RegulatorControlProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete regulatorcontrol_;
-  if (this != internal_default_instance()) delete regulatorsystem_;
+inline void RegulatorControlProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.regulatorcontrol_;
+  if (this != internal_default_instance()) delete _impl_.regulatorsystem_;
 }
 
-void RegulatorControlProfile::ArenaDtor(void* object) {
-  RegulatorControlProfile* _this = reinterpret_cast< RegulatorControlProfile* >(object);
-  (void)_this;
-}
-void RegulatorControlProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void RegulatorControlProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void RegulatorControlProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:regulatormodule.RegulatorControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && regulatorcontrol_ != nullptr) {
-    delete regulatorcontrol_;
+  _impl_.controlmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.regulatorcontrol_ != nullptr) {
+    delete _impl_.regulatorcontrol_;
   }
-  regulatorcontrol_ = nullptr;
-  if (GetArena() == nullptr && regulatorsystem_ != nullptr) {
-    delete regulatorsystem_;
+  _impl_.regulatorcontrol_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.regulatorsystem_ != nullptr) {
+    delete _impl_.regulatorsystem_;
   }
-  regulatorsystem_ = nullptr;
+  _impl_.regulatorsystem_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RegulatorControlProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* RegulatorControlProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .regulatormodule.RegulatorControl regulatorControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_regulatorcontrol(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .regulatormodule.RegulatorSystem regulatorSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_regulatorsystem(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RegulatorControlProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* RegulatorControlProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:regulatormodule.RegulatorControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlmessageinfo(this),
+        _Internal::controlmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .regulatormodule.RegulatorControl regulatorControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_regulatorcontrol()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_regulatorcontrol()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::regulatorcontrol(this), target, stream);
+      InternalWriteMessage(2, _Internal::regulatorcontrol(this),
+        _Internal::regulatorcontrol(this).GetCachedSize(), target, stream);
   }
 
   // .regulatormodule.RegulatorSystem regulatorSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_regulatorsystem()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_regulatorsystem()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::regulatorsystem(this), target, stream);
+      InternalWriteMessage(3, _Internal::regulatorsystem(this),
+        _Internal::regulatorsystem(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:regulatormodule.RegulatorControlProfile)
   return target;
 }
 
-size_t RegulatorControlProfile::ByteSizeLong() const {
+::size_t RegulatorControlProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:regulatormodule.RegulatorControlProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
+  if (this->_internal_has_controlmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlmessageinfo_);
+        *_impl_.controlmessageinfo_);
   }
 
   // .regulatormodule.RegulatorControl regulatorControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_regulatorcontrol()) {
+  if (this->_internal_has_regulatorcontrol()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *regulatorcontrol_);
+        *_impl_.regulatorcontrol_);
   }
 
   // .regulatormodule.RegulatorSystem regulatorSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_regulatorsystem()) {
+  if (this->_internal_has_regulatorsystem()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *regulatorsystem_);
+        *_impl_.regulatorsystem_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RegulatorControlProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:regulatormodule.RegulatorControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RegulatorControlProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RegulatorControlProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:regulatormodule.RegulatorControlProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:regulatormodule.RegulatorControlProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RegulatorControlProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RegulatorControlProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RegulatorControlProfile::GetClassData() const { return &_class_data_; }
 
-void RegulatorControlProfile::MergeFrom(const RegulatorControlProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void RegulatorControlProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RegulatorControlProfile*>(&to_msg);
+  auto& from = static_cast<const RegulatorControlProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorControlProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlmessageinfo()) {
-    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
+  if (from._internal_has_controlmessageinfo()) {
+    _this->_internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(
+        from._internal_controlmessageinfo());
   }
-  if (from.has_regulatorcontrol()) {
-    _internal_mutable_regulatorcontrol()->::regulatormodule::RegulatorControl::MergeFrom(from._internal_regulatorcontrol());
+  if (from._internal_has_regulatorcontrol()) {
+    _this->_internal_mutable_regulatorcontrol()->::regulatormodule::RegulatorControl::MergeFrom(
+        from._internal_regulatorcontrol());
   }
-  if (from.has_regulatorsystem()) {
-    _internal_mutable_regulatorsystem()->::regulatormodule::RegulatorSystem::MergeFrom(from._internal_regulatorsystem());
+  if (from._internal_has_regulatorsystem()) {
+    _this->_internal_mutable_regulatorsystem()->::regulatormodule::RegulatorSystem::MergeFrom(
+        from._internal_regulatorsystem());
   }
-}
-
-void RegulatorControlProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:regulatormodule.RegulatorControlProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RegulatorControlProfile::CopyFrom(const RegulatorControlProfile& from) {
@@ -3595,20 +3620,20 @@ bool RegulatorControlProfile::IsInitialized() const {
 
 void RegulatorControlProfile::InternalSwap(RegulatorControlProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RegulatorControlProfile, regulatorsystem_)
-      + sizeof(RegulatorControlProfile::regulatorsystem_)
-      - PROTOBUF_FIELD_OFFSET(RegulatorControlProfile, controlmessageinfo_)>(
-          reinterpret_cast<char*>(&controlmessageinfo_),
-          reinterpret_cast<char*>(&other->controlmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(RegulatorControlProfile, _impl_.regulatorsystem_)
+      + sizeof(RegulatorControlProfile::_impl_.regulatorsystem_)
+      - PROTOBUF_FIELD_OFFSET(RegulatorControlProfile, _impl_.controlmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.controlmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.controlmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegulatorControlProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter, &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+      file_level_metadata_regulatormodule_2fregulatormodule_2eproto[8]);
 }
-
-
 // ===================================================================
 
 class RegulatorDiscreteControl::_Internal {
@@ -3620,270 +3645,257 @@ class RegulatorDiscreteControl::_Internal {
 
 const ::commonmodule::ControlValue&
 RegulatorDiscreteControl::_Internal::controlvalue(const RegulatorDiscreteControl* msg) {
-  return *msg->controlvalue_;
+  return *msg->_impl_.controlvalue_;
 }
 const ::commonmodule::CheckConditions&
 RegulatorDiscreteControl::_Internal::check(const RegulatorDiscreteControl* msg) {
-  return *msg->check_;
+  return *msg->_impl_.check_;
 }
 const ::regulatormodule::RegulatorControlATCC&
 RegulatorDiscreteControl::_Internal::regulatorcontrolatcc(const RegulatorDiscreteControl* msg) {
-  return *msg->regulatorcontrolatcc_;
+  return *msg->_impl_.regulatorcontrolatcc_;
 }
 void RegulatorDiscreteControl::clear_controlvalue() {
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
   }
-  controlvalue_ = nullptr;
+  _impl_.controlvalue_ = nullptr;
 }
 void RegulatorDiscreteControl::clear_check() {
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
+  _impl_.check_ = nullptr;
 }
 RegulatorDiscreteControl::RegulatorDiscreteControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:regulatormodule.RegulatorDiscreteControl)
 }
 RegulatorDiscreteControl::RegulatorDiscreteControl(const RegulatorDiscreteControl& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RegulatorDiscreteControl* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.regulatorcontrolatcc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlvalue()) {
-    controlvalue_ = new ::commonmodule::ControlValue(*from.controlvalue_);
-  } else {
-    controlvalue_ = nullptr;
+    _this->_impl_.controlvalue_ = new ::commonmodule::ControlValue(*from._impl_.controlvalue_);
   }
   if (from._internal_has_check()) {
-    check_ = new ::commonmodule::CheckConditions(*from.check_);
-  } else {
-    check_ = nullptr;
+    _this->_impl_.check_ = new ::commonmodule::CheckConditions(*from._impl_.check_);
   }
   if (from._internal_has_regulatorcontrolatcc()) {
-    regulatorcontrolatcc_ = new ::regulatormodule::RegulatorControlATCC(*from.regulatorcontrolatcc_);
-  } else {
-    regulatorcontrolatcc_ = nullptr;
+    _this->_impl_.regulatorcontrolatcc_ = new ::regulatormodule::RegulatorControlATCC(*from._impl_.regulatorcontrolatcc_);
   }
   // @@protoc_insertion_point(copy_constructor:regulatormodule.RegulatorDiscreteControl)
 }
 
-void RegulatorDiscreteControl::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&regulatorcontrolatcc_) -
-    reinterpret_cast<char*>(&controlvalue_)) + sizeof(regulatorcontrolatcc_));
+inline void RegulatorDiscreteControl::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.regulatorcontrolatcc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 RegulatorDiscreteControl::~RegulatorDiscreteControl() {
   // @@protoc_insertion_point(destructor:regulatormodule.RegulatorDiscreteControl)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void RegulatorDiscreteControl::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlvalue_;
-  if (this != internal_default_instance()) delete check_;
-  if (this != internal_default_instance()) delete regulatorcontrolatcc_;
+inline void RegulatorDiscreteControl::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlvalue_;
+  if (this != internal_default_instance()) delete _impl_.check_;
+  if (this != internal_default_instance()) delete _impl_.regulatorcontrolatcc_;
 }
 
-void RegulatorDiscreteControl::ArenaDtor(void* object) {
-  RegulatorDiscreteControl* _this = reinterpret_cast< RegulatorDiscreteControl* >(object);
-  (void)_this;
-}
-void RegulatorDiscreteControl::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void RegulatorDiscreteControl::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void RegulatorDiscreteControl::Clear() {
 // @@protoc_insertion_point(message_clear_start:regulatormodule.RegulatorDiscreteControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
   }
-  controlvalue_ = nullptr;
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  _impl_.controlvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
-  if (GetArena() == nullptr && regulatorcontrolatcc_ != nullptr) {
-    delete regulatorcontrolatcc_;
+  _impl_.check_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.regulatorcontrolatcc_ != nullptr) {
+    delete _impl_.regulatorcontrolatcc_;
   }
-  regulatorcontrolatcc_ = nullptr;
+  _impl_.regulatorcontrolatcc_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RegulatorDiscreteControl::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* RegulatorDiscreteControl::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlvalue(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.CheckConditions check = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .regulatormodule.RegulatorControlATCC regulatorControlATCC = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_regulatorcontrolatcc(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RegulatorDiscreteControl::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* RegulatorDiscreteControl::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:regulatormodule.RegulatorDiscreteControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlvalue()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlvalue(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlvalue(this),
+        _Internal::controlvalue(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_check()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::check(this), target, stream);
+      InternalWriteMessage(2, _Internal::check(this),
+        _Internal::check(this).GetCachedSize(), target, stream);
   }
 
   // .regulatormodule.RegulatorControlATCC regulatorControlATCC = 3;
-  if (this->has_regulatorcontrolatcc()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_regulatorcontrolatcc()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::regulatorcontrolatcc(this), target, stream);
+      InternalWriteMessage(3, _Internal::regulatorcontrolatcc(this),
+        _Internal::regulatorcontrolatcc(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:regulatormodule.RegulatorDiscreteControl)
   return target;
 }
 
-size_t RegulatorDiscreteControl::ByteSizeLong() const {
+::size_t RegulatorDiscreteControl::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:regulatormodule.RegulatorDiscreteControl)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
+  if (this->_internal_has_controlvalue()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlvalue_);
+        *_impl_.controlvalue_);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
+  if (this->_internal_has_check()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *check_);
+        *_impl_.check_);
   }
 
   // .regulatormodule.RegulatorControlATCC regulatorControlATCC = 3;
-  if (this->has_regulatorcontrolatcc()) {
+  if (this->_internal_has_regulatorcontrolatcc()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *regulatorcontrolatcc_);
+        *_impl_.regulatorcontrolatcc_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RegulatorDiscreteControl::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:regulatormodule.RegulatorDiscreteControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RegulatorDiscreteControl* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RegulatorDiscreteControl>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:regulatormodule.RegulatorDiscreteControl)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:regulatormodule.RegulatorDiscreteControl)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RegulatorDiscreteControl::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RegulatorDiscreteControl::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RegulatorDiscreteControl::GetClassData() const { return &_class_data_; }
 
-void RegulatorDiscreteControl::MergeFrom(const RegulatorDiscreteControl& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorDiscreteControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void RegulatorDiscreteControl::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RegulatorDiscreteControl*>(&to_msg);
+  auto& from = static_cast<const RegulatorDiscreteControl&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorDiscreteControl)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlvalue()) {
-    _internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(from._internal_controlvalue());
+  if (from._internal_has_controlvalue()) {
+    _this->_internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(
+        from._internal_controlvalue());
   }
-  if (from.has_check()) {
-    _internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(from._internal_check());
+  if (from._internal_has_check()) {
+    _this->_internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(
+        from._internal_check());
   }
-  if (from.has_regulatorcontrolatcc()) {
-    _internal_mutable_regulatorcontrolatcc()->::regulatormodule::RegulatorControlATCC::MergeFrom(from._internal_regulatorcontrolatcc());
+  if (from._internal_has_regulatorcontrolatcc()) {
+    _this->_internal_mutable_regulatorcontrolatcc()->::regulatormodule::RegulatorControlATCC::MergeFrom(
+        from._internal_regulatorcontrolatcc());
   }
-}
-
-void RegulatorDiscreteControl::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:regulatormodule.RegulatorDiscreteControl)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RegulatorDiscreteControl::CopyFrom(const RegulatorDiscreteControl& from) {
@@ -3899,20 +3911,20 @@ bool RegulatorDiscreteControl::IsInitialized() const {
 
 void RegulatorDiscreteControl::InternalSwap(RegulatorDiscreteControl* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RegulatorDiscreteControl, regulatorcontrolatcc_)
-      + sizeof(RegulatorDiscreteControl::regulatorcontrolatcc_)
-      - PROTOBUF_FIELD_OFFSET(RegulatorDiscreteControl, controlvalue_)>(
-          reinterpret_cast<char*>(&controlvalue_),
-          reinterpret_cast<char*>(&other->controlvalue_));
+      PROTOBUF_FIELD_OFFSET(RegulatorDiscreteControl, _impl_.regulatorcontrolatcc_)
+      + sizeof(RegulatorDiscreteControl::_impl_.regulatorcontrolatcc_)
+      - PROTOBUF_FIELD_OFFSET(RegulatorDiscreteControl, _impl_.controlvalue_)>(
+          reinterpret_cast<char*>(&_impl_.controlvalue_),
+          reinterpret_cast<char*>(&other->_impl_.controlvalue_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegulatorDiscreteControl::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter, &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+      file_level_metadata_regulatormodule_2fregulatormodule_2eproto[9]);
 }
-
-
 // ===================================================================
 
 class RegulatorDiscreteControlProfile::_Internal {
@@ -3924,264 +3936,251 @@ class RegulatorDiscreteControlProfile::_Internal {
 
 const ::commonmodule::ControlMessageInfo&
 RegulatorDiscreteControlProfile::_Internal::controlmessageinfo(const RegulatorDiscreteControlProfile* msg) {
-  return *msg->controlmessageinfo_;
+  return *msg->_impl_.controlmessageinfo_;
 }
 const ::regulatormodule::RegulatorDiscreteControl&
 RegulatorDiscreteControlProfile::_Internal::regulatordiscretecontrol(const RegulatorDiscreteControlProfile* msg) {
-  return *msg->regulatordiscretecontrol_;
+  return *msg->_impl_.regulatordiscretecontrol_;
 }
 const ::regulatormodule::RegulatorSystem&
 RegulatorDiscreteControlProfile::_Internal::regulatorsystem(const RegulatorDiscreteControlProfile* msg) {
-  return *msg->regulatorsystem_;
+  return *msg->_impl_.regulatorsystem_;
 }
 void RegulatorDiscreteControlProfile::clear_controlmessageinfo() {
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
+  _impl_.controlmessageinfo_ = nullptr;
 }
 RegulatorDiscreteControlProfile::RegulatorDiscreteControlProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:regulatormodule.RegulatorDiscreteControlProfile)
 }
 RegulatorDiscreteControlProfile::RegulatorDiscreteControlProfile(const RegulatorDiscreteControlProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RegulatorDiscreteControlProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.regulatordiscretecontrol_){nullptr}
+    , decltype(_impl_.regulatorsystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlmessageinfo()) {
-    controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
-  } else {
-    controlmessageinfo_ = nullptr;
+    _this->_impl_.controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from._impl_.controlmessageinfo_);
   }
   if (from._internal_has_regulatordiscretecontrol()) {
-    regulatordiscretecontrol_ = new ::regulatormodule::RegulatorDiscreteControl(*from.regulatordiscretecontrol_);
-  } else {
-    regulatordiscretecontrol_ = nullptr;
+    _this->_impl_.regulatordiscretecontrol_ = new ::regulatormodule::RegulatorDiscreteControl(*from._impl_.regulatordiscretecontrol_);
   }
   if (from._internal_has_regulatorsystem()) {
-    regulatorsystem_ = new ::regulatormodule::RegulatorSystem(*from.regulatorsystem_);
-  } else {
-    regulatorsystem_ = nullptr;
+    _this->_impl_.regulatorsystem_ = new ::regulatormodule::RegulatorSystem(*from._impl_.regulatorsystem_);
   }
   // @@protoc_insertion_point(copy_constructor:regulatormodule.RegulatorDiscreteControlProfile)
 }
 
-void RegulatorDiscreteControlProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&regulatorsystem_) -
-    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(regulatorsystem_));
+inline void RegulatorDiscreteControlProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.regulatordiscretecontrol_){nullptr}
+    , decltype(_impl_.regulatorsystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 RegulatorDiscreteControlProfile::~RegulatorDiscreteControlProfile() {
   // @@protoc_insertion_point(destructor:regulatormodule.RegulatorDiscreteControlProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void RegulatorDiscreteControlProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete regulatordiscretecontrol_;
-  if (this != internal_default_instance()) delete regulatorsystem_;
+inline void RegulatorDiscreteControlProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.regulatordiscretecontrol_;
+  if (this != internal_default_instance()) delete _impl_.regulatorsystem_;
 }
 
-void RegulatorDiscreteControlProfile::ArenaDtor(void* object) {
-  RegulatorDiscreteControlProfile* _this = reinterpret_cast< RegulatorDiscreteControlProfile* >(object);
-  (void)_this;
-}
-void RegulatorDiscreteControlProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void RegulatorDiscreteControlProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void RegulatorDiscreteControlProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:regulatormodule.RegulatorDiscreteControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && regulatordiscretecontrol_ != nullptr) {
-    delete regulatordiscretecontrol_;
+  _impl_.controlmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.regulatordiscretecontrol_ != nullptr) {
+    delete _impl_.regulatordiscretecontrol_;
   }
-  regulatordiscretecontrol_ = nullptr;
-  if (GetArena() == nullptr && regulatorsystem_ != nullptr) {
-    delete regulatorsystem_;
+  _impl_.regulatordiscretecontrol_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.regulatorsystem_ != nullptr) {
+    delete _impl_.regulatorsystem_;
   }
-  regulatorsystem_ = nullptr;
+  _impl_.regulatorsystem_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RegulatorDiscreteControlProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* RegulatorDiscreteControlProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .regulatormodule.RegulatorDiscreteControl regulatorDiscreteControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_regulatordiscretecontrol(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .regulatormodule.RegulatorSystem regulatorSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_regulatorsystem(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RegulatorDiscreteControlProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* RegulatorDiscreteControlProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:regulatormodule.RegulatorDiscreteControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlmessageinfo(this),
+        _Internal::controlmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .regulatormodule.RegulatorDiscreteControl regulatorDiscreteControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_regulatordiscretecontrol()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_regulatordiscretecontrol()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::regulatordiscretecontrol(this), target, stream);
+      InternalWriteMessage(2, _Internal::regulatordiscretecontrol(this),
+        _Internal::regulatordiscretecontrol(this).GetCachedSize(), target, stream);
   }
 
   // .regulatormodule.RegulatorSystem regulatorSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_regulatorsystem()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_regulatorsystem()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::regulatorsystem(this), target, stream);
+      InternalWriteMessage(3, _Internal::regulatorsystem(this),
+        _Internal::regulatorsystem(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:regulatormodule.RegulatorDiscreteControlProfile)
   return target;
 }
 
-size_t RegulatorDiscreteControlProfile::ByteSizeLong() const {
+::size_t RegulatorDiscreteControlProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:regulatormodule.RegulatorDiscreteControlProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
+  if (this->_internal_has_controlmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlmessageinfo_);
+        *_impl_.controlmessageinfo_);
   }
 
   // .regulatormodule.RegulatorDiscreteControl regulatorDiscreteControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_regulatordiscretecontrol()) {
+  if (this->_internal_has_regulatordiscretecontrol()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *regulatordiscretecontrol_);
+        *_impl_.regulatordiscretecontrol_);
   }
 
   // .regulatormodule.RegulatorSystem regulatorSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_regulatorsystem()) {
+  if (this->_internal_has_regulatorsystem()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *regulatorsystem_);
+        *_impl_.regulatorsystem_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RegulatorDiscreteControlProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:regulatormodule.RegulatorDiscreteControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RegulatorDiscreteControlProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RegulatorDiscreteControlProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:regulatormodule.RegulatorDiscreteControlProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:regulatormodule.RegulatorDiscreteControlProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RegulatorDiscreteControlProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RegulatorDiscreteControlProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RegulatorDiscreteControlProfile::GetClassData() const { return &_class_data_; }
 
-void RegulatorDiscreteControlProfile::MergeFrom(const RegulatorDiscreteControlProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorDiscreteControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void RegulatorDiscreteControlProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RegulatorDiscreteControlProfile*>(&to_msg);
+  auto& from = static_cast<const RegulatorDiscreteControlProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorDiscreteControlProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlmessageinfo()) {
-    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
+  if (from._internal_has_controlmessageinfo()) {
+    _this->_internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(
+        from._internal_controlmessageinfo());
   }
-  if (from.has_regulatordiscretecontrol()) {
-    _internal_mutable_regulatordiscretecontrol()->::regulatormodule::RegulatorDiscreteControl::MergeFrom(from._internal_regulatordiscretecontrol());
+  if (from._internal_has_regulatordiscretecontrol()) {
+    _this->_internal_mutable_regulatordiscretecontrol()->::regulatormodule::RegulatorDiscreteControl::MergeFrom(
+        from._internal_regulatordiscretecontrol());
   }
-  if (from.has_regulatorsystem()) {
-    _internal_mutable_regulatorsystem()->::regulatormodule::RegulatorSystem::MergeFrom(from._internal_regulatorsystem());
+  if (from._internal_has_regulatorsystem()) {
+    _this->_internal_mutable_regulatorsystem()->::regulatormodule::RegulatorSystem::MergeFrom(
+        from._internal_regulatorsystem());
   }
-}
-
-void RegulatorDiscreteControlProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:regulatormodule.RegulatorDiscreteControlProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RegulatorDiscreteControlProfile::CopyFrom(const RegulatorDiscreteControlProfile& from) {
@@ -4197,20 +4196,20 @@ bool RegulatorDiscreteControlProfile::IsInitialized() const {
 
 void RegulatorDiscreteControlProfile::InternalSwap(RegulatorDiscreteControlProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RegulatorDiscreteControlProfile, regulatorsystem_)
-      + sizeof(RegulatorDiscreteControlProfile::regulatorsystem_)
-      - PROTOBUF_FIELD_OFFSET(RegulatorDiscreteControlProfile, controlmessageinfo_)>(
-          reinterpret_cast<char*>(&controlmessageinfo_),
-          reinterpret_cast<char*>(&other->controlmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(RegulatorDiscreteControlProfile, _impl_.regulatorsystem_)
+      + sizeof(RegulatorDiscreteControlProfile::_impl_.regulatorsystem_)
+      - PROTOBUF_FIELD_OFFSET(RegulatorDiscreteControlProfile, _impl_.controlmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.controlmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.controlmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegulatorDiscreteControlProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter, &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+      file_level_metadata_regulatormodule_2fregulatormodule_2eproto[10]);
 }
-
-
 // ===================================================================
 
 class RegulatorEventAndStatusATCC::_Internal {
@@ -4238,996 +4237,1015 @@ class RegulatorEventAndStatusATCC::_Internal {
 
 const ::commonmodule::ASG&
 RegulatorEventAndStatusATCC::_Internal::bndctr(const RegulatorEventAndStatusATCC* msg) {
-  return *msg->bndctr_;
+  return *msg->_impl_.bndctr_;
 }
 const ::commonmodule::ASG&
 RegulatorEventAndStatusATCC::_Internal::bndwid(const RegulatorEventAndStatusATCC* msg) {
-  return *msg->bndwid_;
+  return *msg->_impl_.bndwid_;
 }
 const ::commonmodule::PhaseSPS&
 RegulatorEventAndStatusATCC::_Internal::bndwidhi(const RegulatorEventAndStatusATCC* msg) {
-  return *msg->bndwidhi_;
+  return *msg->_impl_.bndwidhi_;
 }
 const ::commonmodule::PhaseSPS&
 RegulatorEventAndStatusATCC::_Internal::bndwidlo(const RegulatorEventAndStatusATCC* msg) {
-  return *msg->bndwidlo_;
+  return *msg->_impl_.bndwidlo_;
 }
 const ::commonmodule::PhaseSPS&
 RegulatorEventAndStatusATCC::_Internal::dirctlrev(const RegulatorEventAndStatusATCC* msg) {
-  return *msg->dirctlrev_;
+  return *msg->_impl_.dirctlrev_;
 }
 const ::commonmodule::PhaseSPS&
 RegulatorEventAndStatusATCC::_Internal::dirindt(const RegulatorEventAndStatusATCC* msg) {
-  return *msg->dirindt_;
+  return *msg->_impl_.dirindt_;
 }
 const ::commonmodule::PhaseSPS&
 RegulatorEventAndStatusATCC::_Internal::dirrev(const RegulatorEventAndStatusATCC* msg) {
-  return *msg->dirrev_;
+  return *msg->_impl_.dirrev_;
 }
 const ::commonmodule::ASG&
 RegulatorEventAndStatusATCC::_Internal::ldcr(const RegulatorEventAndStatusATCC* msg) {
-  return *msg->ldcr_;
+  return *msg->_impl_.ldcr_;
 }
 const ::commonmodule::ASG&
 RegulatorEventAndStatusATCC::_Internal::ldcx(const RegulatorEventAndStatusATCC* msg) {
-  return *msg->ldcx_;
+  return *msg->_impl_.ldcx_;
 }
 const ::commonmodule::StatusSPS&
 RegulatorEventAndStatusATCC::_Internal::parop(const RegulatorEventAndStatusATCC* msg) {
-  return *msg->parop_;
+  return *msg->_impl_.parop_;
 }
 const ::commonmodule::RampRate&
 RegulatorEventAndStatusATCC::_Internal::ramprates(const RegulatorEventAndStatusATCC* msg) {
-  return *msg->ramprates_;
+  return *msg->_impl_.ramprates_;
 }
 const ::commonmodule::Optional_StateKind&
 RegulatorEventAndStatusATCC::_Internal::state(const RegulatorEventAndStatusATCC* msg) {
-  return *msg->state_;
+  return *msg->_impl_.state_;
 }
 const ::commonmodule::StatusINC&
 RegulatorEventAndStatusATCC::_Internal::stdltmms(const RegulatorEventAndStatusATCC* msg) {
-  return *msg->stdltmms_;
+  return *msg->_impl_.stdltmms_;
 }
 const ::commonmodule::StatusSPS&
 RegulatorEventAndStatusATCC::_Internal::tapoperr(const RegulatorEventAndStatusATCC* msg) {
-  return *msg->tapoperr_;
+  return *msg->_impl_.tapoperr_;
 }
 const ::commonmodule::PhaseINS&
 RegulatorEventAndStatusATCC::_Internal::tappos(const RegulatorEventAndStatusATCC* msg) {
-  return *msg->tappos_;
+  return *msg->_impl_.tappos_;
 }
 const ::commonmodule::PhaseSPS&
 RegulatorEventAndStatusATCC::_Internal::vollmthi(const RegulatorEventAndStatusATCC* msg) {
-  return *msg->vollmthi_;
+  return *msg->_impl_.vollmthi_;
 }
 const ::commonmodule::PhaseSPS&
 RegulatorEventAndStatusATCC::_Internal::vollmtlo(const RegulatorEventAndStatusATCC* msg) {
-  return *msg->vollmtlo_;
+  return *msg->_impl_.vollmtlo_;
 }
 const ::commonmodule::PhaseAPC&
 RegulatorEventAndStatusATCC::_Internal::volspt(const RegulatorEventAndStatusATCC* msg) {
-  return *msg->volspt_;
+  return *msg->_impl_.volspt_;
 }
 const ::commonmodule::StatusSPS&
 RegulatorEventAndStatusATCC::_Internal::voltagesetpointenabled(const RegulatorEventAndStatusATCC* msg) {
-  return *msg->voltagesetpointenabled_;
+  return *msg->_impl_.voltagesetpointenabled_;
 }
 void RegulatorEventAndStatusATCC::clear_bndctr() {
-  if (GetArena() == nullptr && bndctr_ != nullptr) {
-    delete bndctr_;
+  if (GetArenaForAllocation() == nullptr && _impl_.bndctr_ != nullptr) {
+    delete _impl_.bndctr_;
   }
-  bndctr_ = nullptr;
+  _impl_.bndctr_ = nullptr;
 }
 void RegulatorEventAndStatusATCC::clear_bndwid() {
-  if (GetArena() == nullptr && bndwid_ != nullptr) {
-    delete bndwid_;
+  if (GetArenaForAllocation() == nullptr && _impl_.bndwid_ != nullptr) {
+    delete _impl_.bndwid_;
   }
-  bndwid_ = nullptr;
+  _impl_.bndwid_ = nullptr;
 }
 void RegulatorEventAndStatusATCC::clear_bndwidhi() {
-  if (GetArena() == nullptr && bndwidhi_ != nullptr) {
-    delete bndwidhi_;
+  if (GetArenaForAllocation() == nullptr && _impl_.bndwidhi_ != nullptr) {
+    delete _impl_.bndwidhi_;
   }
-  bndwidhi_ = nullptr;
+  _impl_.bndwidhi_ = nullptr;
 }
 void RegulatorEventAndStatusATCC::clear_bndwidlo() {
-  if (GetArena() == nullptr && bndwidlo_ != nullptr) {
-    delete bndwidlo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.bndwidlo_ != nullptr) {
+    delete _impl_.bndwidlo_;
   }
-  bndwidlo_ = nullptr;
+  _impl_.bndwidlo_ = nullptr;
 }
 void RegulatorEventAndStatusATCC::clear_dirctlrev() {
-  if (GetArena() == nullptr && dirctlrev_ != nullptr) {
-    delete dirctlrev_;
+  if (GetArenaForAllocation() == nullptr && _impl_.dirctlrev_ != nullptr) {
+    delete _impl_.dirctlrev_;
   }
-  dirctlrev_ = nullptr;
+  _impl_.dirctlrev_ = nullptr;
 }
 void RegulatorEventAndStatusATCC::clear_dirindt() {
-  if (GetArena() == nullptr && dirindt_ != nullptr) {
-    delete dirindt_;
+  if (GetArenaForAllocation() == nullptr && _impl_.dirindt_ != nullptr) {
+    delete _impl_.dirindt_;
   }
-  dirindt_ = nullptr;
+  _impl_.dirindt_ = nullptr;
 }
 void RegulatorEventAndStatusATCC::clear_dirrev() {
-  if (GetArena() == nullptr && dirrev_ != nullptr) {
-    delete dirrev_;
+  if (GetArenaForAllocation() == nullptr && _impl_.dirrev_ != nullptr) {
+    delete _impl_.dirrev_;
   }
-  dirrev_ = nullptr;
+  _impl_.dirrev_ = nullptr;
 }
 void RegulatorEventAndStatusATCC::clear_ldcr() {
-  if (GetArena() == nullptr && ldcr_ != nullptr) {
-    delete ldcr_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ldcr_ != nullptr) {
+    delete _impl_.ldcr_;
   }
-  ldcr_ = nullptr;
+  _impl_.ldcr_ = nullptr;
 }
 void RegulatorEventAndStatusATCC::clear_ldcx() {
-  if (GetArena() == nullptr && ldcx_ != nullptr) {
-    delete ldcx_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ldcx_ != nullptr) {
+    delete _impl_.ldcx_;
   }
-  ldcx_ = nullptr;
+  _impl_.ldcx_ = nullptr;
 }
 void RegulatorEventAndStatusATCC::clear_parop() {
-  if (GetArena() == nullptr && parop_ != nullptr) {
-    delete parop_;
+  if (GetArenaForAllocation() == nullptr && _impl_.parop_ != nullptr) {
+    delete _impl_.parop_;
   }
-  parop_ = nullptr;
+  _impl_.parop_ = nullptr;
 }
 void RegulatorEventAndStatusATCC::clear_ramprates() {
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
-    delete ramprates_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ramprates_ != nullptr) {
+    delete _impl_.ramprates_;
   }
-  ramprates_ = nullptr;
+  _impl_.ramprates_ = nullptr;
 }
 void RegulatorEventAndStatusATCC::clear_state() {
-  if (GetArena() == nullptr && state_ != nullptr) {
-    delete state_;
+  if (GetArenaForAllocation() == nullptr && _impl_.state_ != nullptr) {
+    delete _impl_.state_;
   }
-  state_ = nullptr;
+  _impl_.state_ = nullptr;
 }
 void RegulatorEventAndStatusATCC::clear_stdltmms() {
-  if (GetArena() == nullptr && stdltmms_ != nullptr) {
-    delete stdltmms_;
+  if (GetArenaForAllocation() == nullptr && _impl_.stdltmms_ != nullptr) {
+    delete _impl_.stdltmms_;
   }
-  stdltmms_ = nullptr;
+  _impl_.stdltmms_ = nullptr;
 }
 void RegulatorEventAndStatusATCC::clear_tapoperr() {
-  if (GetArena() == nullptr && tapoperr_ != nullptr) {
-    delete tapoperr_;
+  if (GetArenaForAllocation() == nullptr && _impl_.tapoperr_ != nullptr) {
+    delete _impl_.tapoperr_;
   }
-  tapoperr_ = nullptr;
+  _impl_.tapoperr_ = nullptr;
 }
 void RegulatorEventAndStatusATCC::clear_tappos() {
-  if (GetArena() == nullptr && tappos_ != nullptr) {
-    delete tappos_;
+  if (GetArenaForAllocation() == nullptr && _impl_.tappos_ != nullptr) {
+    delete _impl_.tappos_;
   }
-  tappos_ = nullptr;
+  _impl_.tappos_ = nullptr;
 }
 void RegulatorEventAndStatusATCC::clear_vollmthi() {
-  if (GetArena() == nullptr && vollmthi_ != nullptr) {
-    delete vollmthi_;
+  if (GetArenaForAllocation() == nullptr && _impl_.vollmthi_ != nullptr) {
+    delete _impl_.vollmthi_;
   }
-  vollmthi_ = nullptr;
+  _impl_.vollmthi_ = nullptr;
 }
 void RegulatorEventAndStatusATCC::clear_vollmtlo() {
-  if (GetArena() == nullptr && vollmtlo_ != nullptr) {
-    delete vollmtlo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.vollmtlo_ != nullptr) {
+    delete _impl_.vollmtlo_;
   }
-  vollmtlo_ = nullptr;
+  _impl_.vollmtlo_ = nullptr;
 }
 void RegulatorEventAndStatusATCC::clear_volspt() {
-  if (GetArena() == nullptr && volspt_ != nullptr) {
-    delete volspt_;
+  if (GetArenaForAllocation() == nullptr && _impl_.volspt_ != nullptr) {
+    delete _impl_.volspt_;
   }
-  volspt_ = nullptr;
+  _impl_.volspt_ = nullptr;
 }
 void RegulatorEventAndStatusATCC::clear_voltagesetpointenabled() {
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
-    delete voltagesetpointenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagesetpointenabled_ != nullptr) {
+    delete _impl_.voltagesetpointenabled_;
   }
-  voltagesetpointenabled_ = nullptr;
+  _impl_.voltagesetpointenabled_ = nullptr;
 }
 RegulatorEventAndStatusATCC::RegulatorEventAndStatusATCC(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:regulatormodule.RegulatorEventAndStatusATCC)
 }
 RegulatorEventAndStatusATCC::RegulatorEventAndStatusATCC(const RegulatorEventAndStatusATCC& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RegulatorEventAndStatusATCC* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.bndctr_){nullptr}
+    , decltype(_impl_.bndwid_){nullptr}
+    , decltype(_impl_.bndwidhi_){nullptr}
+    , decltype(_impl_.bndwidlo_){nullptr}
+    , decltype(_impl_.dirctlrev_){nullptr}
+    , decltype(_impl_.dirindt_){nullptr}
+    , decltype(_impl_.dirrev_){nullptr}
+    , decltype(_impl_.ldcr_){nullptr}
+    , decltype(_impl_.ldcx_){nullptr}
+    , decltype(_impl_.parop_){nullptr}
+    , decltype(_impl_.ramprates_){nullptr}
+    , decltype(_impl_.state_){nullptr}
+    , decltype(_impl_.stdltmms_){nullptr}
+    , decltype(_impl_.tapoperr_){nullptr}
+    , decltype(_impl_.tappos_){nullptr}
+    , decltype(_impl_.vollmthi_){nullptr}
+    , decltype(_impl_.vollmtlo_){nullptr}
+    , decltype(_impl_.volspt_){nullptr}
+    , decltype(_impl_.voltagesetpointenabled_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_bndctr()) {
-    bndctr_ = new ::commonmodule::ASG(*from.bndctr_);
-  } else {
-    bndctr_ = nullptr;
+    _this->_impl_.bndctr_ = new ::commonmodule::ASG(*from._impl_.bndctr_);
   }
   if (from._internal_has_bndwid()) {
-    bndwid_ = new ::commonmodule::ASG(*from.bndwid_);
-  } else {
-    bndwid_ = nullptr;
+    _this->_impl_.bndwid_ = new ::commonmodule::ASG(*from._impl_.bndwid_);
   }
   if (from._internal_has_bndwidhi()) {
-    bndwidhi_ = new ::commonmodule::PhaseSPS(*from.bndwidhi_);
-  } else {
-    bndwidhi_ = nullptr;
+    _this->_impl_.bndwidhi_ = new ::commonmodule::PhaseSPS(*from._impl_.bndwidhi_);
   }
   if (from._internal_has_bndwidlo()) {
-    bndwidlo_ = new ::commonmodule::PhaseSPS(*from.bndwidlo_);
-  } else {
-    bndwidlo_ = nullptr;
+    _this->_impl_.bndwidlo_ = new ::commonmodule::PhaseSPS(*from._impl_.bndwidlo_);
   }
   if (from._internal_has_dirctlrev()) {
-    dirctlrev_ = new ::commonmodule::PhaseSPS(*from.dirctlrev_);
-  } else {
-    dirctlrev_ = nullptr;
+    _this->_impl_.dirctlrev_ = new ::commonmodule::PhaseSPS(*from._impl_.dirctlrev_);
   }
   if (from._internal_has_dirindt()) {
-    dirindt_ = new ::commonmodule::PhaseSPS(*from.dirindt_);
-  } else {
-    dirindt_ = nullptr;
+    _this->_impl_.dirindt_ = new ::commonmodule::PhaseSPS(*from._impl_.dirindt_);
   }
   if (from._internal_has_dirrev()) {
-    dirrev_ = new ::commonmodule::PhaseSPS(*from.dirrev_);
-  } else {
-    dirrev_ = nullptr;
+    _this->_impl_.dirrev_ = new ::commonmodule::PhaseSPS(*from._impl_.dirrev_);
   }
   if (from._internal_has_ldcr()) {
-    ldcr_ = new ::commonmodule::ASG(*from.ldcr_);
-  } else {
-    ldcr_ = nullptr;
+    _this->_impl_.ldcr_ = new ::commonmodule::ASG(*from._impl_.ldcr_);
   }
   if (from._internal_has_ldcx()) {
-    ldcx_ = new ::commonmodule::ASG(*from.ldcx_);
-  } else {
-    ldcx_ = nullptr;
+    _this->_impl_.ldcx_ = new ::commonmodule::ASG(*from._impl_.ldcx_);
   }
   if (from._internal_has_parop()) {
-    parop_ = new ::commonmodule::StatusSPS(*from.parop_);
-  } else {
-    parop_ = nullptr;
+    _this->_impl_.parop_ = new ::commonmodule::StatusSPS(*from._impl_.parop_);
   }
   if (from._internal_has_ramprates()) {
-    ramprates_ = new ::commonmodule::RampRate(*from.ramprates_);
-  } else {
-    ramprates_ = nullptr;
+    _this->_impl_.ramprates_ = new ::commonmodule::RampRate(*from._impl_.ramprates_);
   }
   if (from._internal_has_state()) {
-    state_ = new ::commonmodule::Optional_StateKind(*from.state_);
-  } else {
-    state_ = nullptr;
+    _this->_impl_.state_ = new ::commonmodule::Optional_StateKind(*from._impl_.state_);
   }
   if (from._internal_has_stdltmms()) {
-    stdltmms_ = new ::commonmodule::StatusINC(*from.stdltmms_);
-  } else {
-    stdltmms_ = nullptr;
+    _this->_impl_.stdltmms_ = new ::commonmodule::StatusINC(*from._impl_.stdltmms_);
   }
   if (from._internal_has_tapoperr()) {
-    tapoperr_ = new ::commonmodule::StatusSPS(*from.tapoperr_);
-  } else {
-    tapoperr_ = nullptr;
+    _this->_impl_.tapoperr_ = new ::commonmodule::StatusSPS(*from._impl_.tapoperr_);
   }
   if (from._internal_has_tappos()) {
-    tappos_ = new ::commonmodule::PhaseINS(*from.tappos_);
-  } else {
-    tappos_ = nullptr;
+    _this->_impl_.tappos_ = new ::commonmodule::PhaseINS(*from._impl_.tappos_);
   }
   if (from._internal_has_vollmthi()) {
-    vollmthi_ = new ::commonmodule::PhaseSPS(*from.vollmthi_);
-  } else {
-    vollmthi_ = nullptr;
+    _this->_impl_.vollmthi_ = new ::commonmodule::PhaseSPS(*from._impl_.vollmthi_);
   }
   if (from._internal_has_vollmtlo()) {
-    vollmtlo_ = new ::commonmodule::PhaseSPS(*from.vollmtlo_);
-  } else {
-    vollmtlo_ = nullptr;
+    _this->_impl_.vollmtlo_ = new ::commonmodule::PhaseSPS(*from._impl_.vollmtlo_);
   }
   if (from._internal_has_volspt()) {
-    volspt_ = new ::commonmodule::PhaseAPC(*from.volspt_);
-  } else {
-    volspt_ = nullptr;
+    _this->_impl_.volspt_ = new ::commonmodule::PhaseAPC(*from._impl_.volspt_);
   }
   if (from._internal_has_voltagesetpointenabled()) {
-    voltagesetpointenabled_ = new ::commonmodule::StatusSPS(*from.voltagesetpointenabled_);
-  } else {
-    voltagesetpointenabled_ = nullptr;
+    _this->_impl_.voltagesetpointenabled_ = new ::commonmodule::StatusSPS(*from._impl_.voltagesetpointenabled_);
   }
   // @@protoc_insertion_point(copy_constructor:regulatormodule.RegulatorEventAndStatusATCC)
 }
 
-void RegulatorEventAndStatusATCC::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&bndctr_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&voltagesetpointenabled_) -
-    reinterpret_cast<char*>(&bndctr_)) + sizeof(voltagesetpointenabled_));
+inline void RegulatorEventAndStatusATCC::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.bndctr_){nullptr}
+    , decltype(_impl_.bndwid_){nullptr}
+    , decltype(_impl_.bndwidhi_){nullptr}
+    , decltype(_impl_.bndwidlo_){nullptr}
+    , decltype(_impl_.dirctlrev_){nullptr}
+    , decltype(_impl_.dirindt_){nullptr}
+    , decltype(_impl_.dirrev_){nullptr}
+    , decltype(_impl_.ldcr_){nullptr}
+    , decltype(_impl_.ldcx_){nullptr}
+    , decltype(_impl_.parop_){nullptr}
+    , decltype(_impl_.ramprates_){nullptr}
+    , decltype(_impl_.state_){nullptr}
+    , decltype(_impl_.stdltmms_){nullptr}
+    , decltype(_impl_.tapoperr_){nullptr}
+    , decltype(_impl_.tappos_){nullptr}
+    , decltype(_impl_.vollmthi_){nullptr}
+    , decltype(_impl_.vollmtlo_){nullptr}
+    , decltype(_impl_.volspt_){nullptr}
+    , decltype(_impl_.voltagesetpointenabled_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 RegulatorEventAndStatusATCC::~RegulatorEventAndStatusATCC() {
   // @@protoc_insertion_point(destructor:regulatormodule.RegulatorEventAndStatusATCC)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void RegulatorEventAndStatusATCC::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete bndctr_;
-  if (this != internal_default_instance()) delete bndwid_;
-  if (this != internal_default_instance()) delete bndwidhi_;
-  if (this != internal_default_instance()) delete bndwidlo_;
-  if (this != internal_default_instance()) delete dirctlrev_;
-  if (this != internal_default_instance()) delete dirindt_;
-  if (this != internal_default_instance()) delete dirrev_;
-  if (this != internal_default_instance()) delete ldcr_;
-  if (this != internal_default_instance()) delete ldcx_;
-  if (this != internal_default_instance()) delete parop_;
-  if (this != internal_default_instance()) delete ramprates_;
-  if (this != internal_default_instance()) delete state_;
-  if (this != internal_default_instance()) delete stdltmms_;
-  if (this != internal_default_instance()) delete tapoperr_;
-  if (this != internal_default_instance()) delete tappos_;
-  if (this != internal_default_instance()) delete vollmthi_;
-  if (this != internal_default_instance()) delete vollmtlo_;
-  if (this != internal_default_instance()) delete volspt_;
-  if (this != internal_default_instance()) delete voltagesetpointenabled_;
+inline void RegulatorEventAndStatusATCC::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.bndctr_;
+  if (this != internal_default_instance()) delete _impl_.bndwid_;
+  if (this != internal_default_instance()) delete _impl_.bndwidhi_;
+  if (this != internal_default_instance()) delete _impl_.bndwidlo_;
+  if (this != internal_default_instance()) delete _impl_.dirctlrev_;
+  if (this != internal_default_instance()) delete _impl_.dirindt_;
+  if (this != internal_default_instance()) delete _impl_.dirrev_;
+  if (this != internal_default_instance()) delete _impl_.ldcr_;
+  if (this != internal_default_instance()) delete _impl_.ldcx_;
+  if (this != internal_default_instance()) delete _impl_.parop_;
+  if (this != internal_default_instance()) delete _impl_.ramprates_;
+  if (this != internal_default_instance()) delete _impl_.state_;
+  if (this != internal_default_instance()) delete _impl_.stdltmms_;
+  if (this != internal_default_instance()) delete _impl_.tapoperr_;
+  if (this != internal_default_instance()) delete _impl_.tappos_;
+  if (this != internal_default_instance()) delete _impl_.vollmthi_;
+  if (this != internal_default_instance()) delete _impl_.vollmtlo_;
+  if (this != internal_default_instance()) delete _impl_.volspt_;
+  if (this != internal_default_instance()) delete _impl_.voltagesetpointenabled_;
 }
 
-void RegulatorEventAndStatusATCC::ArenaDtor(void* object) {
-  RegulatorEventAndStatusATCC* _this = reinterpret_cast< RegulatorEventAndStatusATCC* >(object);
-  (void)_this;
-}
-void RegulatorEventAndStatusATCC::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void RegulatorEventAndStatusATCC::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void RegulatorEventAndStatusATCC::Clear() {
 // @@protoc_insertion_point(message_clear_start:regulatormodule.RegulatorEventAndStatusATCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && bndctr_ != nullptr) {
-    delete bndctr_;
+  if (GetArenaForAllocation() == nullptr && _impl_.bndctr_ != nullptr) {
+    delete _impl_.bndctr_;
   }
-  bndctr_ = nullptr;
-  if (GetArena() == nullptr && bndwid_ != nullptr) {
-    delete bndwid_;
+  _impl_.bndctr_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.bndwid_ != nullptr) {
+    delete _impl_.bndwid_;
   }
-  bndwid_ = nullptr;
-  if (GetArena() == nullptr && bndwidhi_ != nullptr) {
-    delete bndwidhi_;
+  _impl_.bndwid_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.bndwidhi_ != nullptr) {
+    delete _impl_.bndwidhi_;
   }
-  bndwidhi_ = nullptr;
-  if (GetArena() == nullptr && bndwidlo_ != nullptr) {
-    delete bndwidlo_;
+  _impl_.bndwidhi_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.bndwidlo_ != nullptr) {
+    delete _impl_.bndwidlo_;
   }
-  bndwidlo_ = nullptr;
-  if (GetArena() == nullptr && dirctlrev_ != nullptr) {
-    delete dirctlrev_;
+  _impl_.bndwidlo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.dirctlrev_ != nullptr) {
+    delete _impl_.dirctlrev_;
   }
-  dirctlrev_ = nullptr;
-  if (GetArena() == nullptr && dirindt_ != nullptr) {
-    delete dirindt_;
+  _impl_.dirctlrev_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.dirindt_ != nullptr) {
+    delete _impl_.dirindt_;
   }
-  dirindt_ = nullptr;
-  if (GetArena() == nullptr && dirrev_ != nullptr) {
-    delete dirrev_;
+  _impl_.dirindt_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.dirrev_ != nullptr) {
+    delete _impl_.dirrev_;
   }
-  dirrev_ = nullptr;
-  if (GetArena() == nullptr && ldcr_ != nullptr) {
-    delete ldcr_;
+  _impl_.dirrev_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ldcr_ != nullptr) {
+    delete _impl_.ldcr_;
   }
-  ldcr_ = nullptr;
-  if (GetArena() == nullptr && ldcx_ != nullptr) {
-    delete ldcx_;
+  _impl_.ldcr_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ldcx_ != nullptr) {
+    delete _impl_.ldcx_;
   }
-  ldcx_ = nullptr;
-  if (GetArena() == nullptr && parop_ != nullptr) {
-    delete parop_;
+  _impl_.ldcx_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.parop_ != nullptr) {
+    delete _impl_.parop_;
   }
-  parop_ = nullptr;
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
-    delete ramprates_;
+  _impl_.parop_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ramprates_ != nullptr) {
+    delete _impl_.ramprates_;
   }
-  ramprates_ = nullptr;
-  if (GetArena() == nullptr && state_ != nullptr) {
-    delete state_;
+  _impl_.ramprates_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.state_ != nullptr) {
+    delete _impl_.state_;
   }
-  state_ = nullptr;
-  if (GetArena() == nullptr && stdltmms_ != nullptr) {
-    delete stdltmms_;
+  _impl_.state_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.stdltmms_ != nullptr) {
+    delete _impl_.stdltmms_;
   }
-  stdltmms_ = nullptr;
-  if (GetArena() == nullptr && tapoperr_ != nullptr) {
-    delete tapoperr_;
+  _impl_.stdltmms_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.tapoperr_ != nullptr) {
+    delete _impl_.tapoperr_;
   }
-  tapoperr_ = nullptr;
-  if (GetArena() == nullptr && tappos_ != nullptr) {
-    delete tappos_;
+  _impl_.tapoperr_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.tappos_ != nullptr) {
+    delete _impl_.tappos_;
   }
-  tappos_ = nullptr;
-  if (GetArena() == nullptr && vollmthi_ != nullptr) {
-    delete vollmthi_;
+  _impl_.tappos_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.vollmthi_ != nullptr) {
+    delete _impl_.vollmthi_;
   }
-  vollmthi_ = nullptr;
-  if (GetArena() == nullptr && vollmtlo_ != nullptr) {
-    delete vollmtlo_;
+  _impl_.vollmthi_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.vollmtlo_ != nullptr) {
+    delete _impl_.vollmtlo_;
   }
-  vollmtlo_ = nullptr;
-  if (GetArena() == nullptr && volspt_ != nullptr) {
-    delete volspt_;
+  _impl_.vollmtlo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.volspt_ != nullptr) {
+    delete _impl_.volspt_;
   }
-  volspt_ = nullptr;
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
-    delete voltagesetpointenabled_;
+  _impl_.volspt_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagesetpointenabled_ != nullptr) {
+    delete _impl_.voltagesetpointenabled_;
   }
-  voltagesetpointenabled_ = nullptr;
+  _impl_.voltagesetpointenabled_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RegulatorEventAndStatusATCC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* RegulatorEventAndStatusATCC::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ASG BndCtr = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_bndctr(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ASG BndWid = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_bndwid(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseSPS BndWidHi = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_bndwidhi(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseSPS BndWidLo = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_bndwidlo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseSPS DirCtlRev = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_dirctlrev(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseSPS DirIndt = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_dirindt(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseSPS DirRev = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_dirrev(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ASG LDCR = 8;
       case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 66)) {
           ptr = ctx->ParseMessage(_internal_mutable_ldcr(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ASG LDCX = 9;
       case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 74)) {
           ptr = ctx->ParseMessage(_internal_mutable_ldcx(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS ParOp = 10;
       case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 82)) {
           ptr = ctx->ParseMessage(_internal_mutable_parop(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.RampRate rampRates = 11;
       case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 90)) {
           ptr = ctx->ParseMessage(_internal_mutable_ramprates(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.Optional_StateKind state = 12;
       case 12:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 98)) {
           ptr = ctx->ParseMessage(_internal_mutable_state(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusINC StDlTmms = 13;
       case 13:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 106)) {
           ptr = ctx->ParseMessage(_internal_mutable_stdltmms(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS TapOpErr = 14;
       case 14:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 114)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 114)) {
           ptr = ctx->ParseMessage(_internal_mutable_tapoperr(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseINS TapPos = 15;
       case 15:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 122)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 122)) {
           ptr = ctx->ParseMessage(_internal_mutable_tappos(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseSPS VolLmtHi = 16;
       case 16:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 130)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 130)) {
           ptr = ctx->ParseMessage(_internal_mutable_vollmthi(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseSPS VolLmtLo = 17;
       case 17:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 138)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 138)) {
           ptr = ctx->ParseMessage(_internal_mutable_vollmtlo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseAPC VolSpt = 18;
       case 18:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 146)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 146)) {
           ptr = ctx->ParseMessage(_internal_mutable_volspt(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS voltageSetPointEnabled = 19;
       case 19:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 154)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 154)) {
           ptr = ctx->ParseMessage(_internal_mutable_voltagesetpointenabled(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RegulatorEventAndStatusATCC::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* RegulatorEventAndStatusATCC::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:regulatormodule.RegulatorEventAndStatusATCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ASG BndCtr = 1;
-  if (this->has_bndctr()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_bndctr()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::bndctr(this), target, stream);
+      InternalWriteMessage(1, _Internal::bndctr(this),
+        _Internal::bndctr(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ASG BndWid = 2;
-  if (this->has_bndwid()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_bndwid()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::bndwid(this), target, stream);
+      InternalWriteMessage(2, _Internal::bndwid(this),
+        _Internal::bndwid(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseSPS BndWidHi = 3;
-  if (this->has_bndwidhi()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_bndwidhi()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::bndwidhi(this), target, stream);
+      InternalWriteMessage(3, _Internal::bndwidhi(this),
+        _Internal::bndwidhi(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseSPS BndWidLo = 4;
-  if (this->has_bndwidlo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_bndwidlo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::bndwidlo(this), target, stream);
+      InternalWriteMessage(4, _Internal::bndwidlo(this),
+        _Internal::bndwidlo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseSPS DirCtlRev = 5;
-  if (this->has_dirctlrev()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_dirctlrev()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::dirctlrev(this), target, stream);
+      InternalWriteMessage(5, _Internal::dirctlrev(this),
+        _Internal::dirctlrev(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseSPS DirIndt = 6;
-  if (this->has_dirindt()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_dirindt()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::dirindt(this), target, stream);
+      InternalWriteMessage(6, _Internal::dirindt(this),
+        _Internal::dirindt(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseSPS DirRev = 7;
-  if (this->has_dirrev()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_dirrev()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::dirrev(this), target, stream);
+      InternalWriteMessage(7, _Internal::dirrev(this),
+        _Internal::dirrev(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ASG LDCR = 8;
-  if (this->has_ldcr()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ldcr()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::ldcr(this), target, stream);
+      InternalWriteMessage(8, _Internal::ldcr(this),
+        _Internal::ldcr(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ASG LDCX = 9;
-  if (this->has_ldcx()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ldcx()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        9, _Internal::ldcx(this), target, stream);
+      InternalWriteMessage(9, _Internal::ldcx(this),
+        _Internal::ldcx(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS ParOp = 10;
-  if (this->has_parop()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_parop()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        10, _Internal::parop(this), target, stream);
+      InternalWriteMessage(10, _Internal::parop(this),
+        _Internal::parop(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.RampRate rampRates = 11;
-  if (this->has_ramprates()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ramprates()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        11, _Internal::ramprates(this), target, stream);
+      InternalWriteMessage(11, _Internal::ramprates(this),
+        _Internal::ramprates(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.Optional_StateKind state = 12;
-  if (this->has_state()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_state()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        12, _Internal::state(this), target, stream);
+      InternalWriteMessage(12, _Internal::state(this),
+        _Internal::state(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusINC StDlTmms = 13;
-  if (this->has_stdltmms()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_stdltmms()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        13, _Internal::stdltmms(this), target, stream);
+      InternalWriteMessage(13, _Internal::stdltmms(this),
+        _Internal::stdltmms(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS TapOpErr = 14;
-  if (this->has_tapoperr()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_tapoperr()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        14, _Internal::tapoperr(this), target, stream);
+      InternalWriteMessage(14, _Internal::tapoperr(this),
+        _Internal::tapoperr(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseINS TapPos = 15;
-  if (this->has_tappos()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_tappos()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        15, _Internal::tappos(this), target, stream);
+      InternalWriteMessage(15, _Internal::tappos(this),
+        _Internal::tappos(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseSPS VolLmtHi = 16;
-  if (this->has_vollmthi()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_vollmthi()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        16, _Internal::vollmthi(this), target, stream);
+      InternalWriteMessage(16, _Internal::vollmthi(this),
+        _Internal::vollmthi(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseSPS VolLmtLo = 17;
-  if (this->has_vollmtlo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_vollmtlo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        17, _Internal::vollmtlo(this), target, stream);
+      InternalWriteMessage(17, _Internal::vollmtlo(this),
+        _Internal::vollmtlo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseAPC VolSpt = 18;
-  if (this->has_volspt()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_volspt()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        18, _Internal::volspt(this), target, stream);
+      InternalWriteMessage(18, _Internal::volspt(this),
+        _Internal::volspt(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS voltageSetPointEnabled = 19;
-  if (this->has_voltagesetpointenabled()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_voltagesetpointenabled()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        19, _Internal::voltagesetpointenabled(this), target, stream);
+      InternalWriteMessage(19, _Internal::voltagesetpointenabled(this),
+        _Internal::voltagesetpointenabled(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:regulatormodule.RegulatorEventAndStatusATCC)
   return target;
 }
 
-size_t RegulatorEventAndStatusATCC::ByteSizeLong() const {
+::size_t RegulatorEventAndStatusATCC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:regulatormodule.RegulatorEventAndStatusATCC)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ASG BndCtr = 1;
-  if (this->has_bndctr()) {
+  if (this->_internal_has_bndctr()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *bndctr_);
+        *_impl_.bndctr_);
   }
 
   // .commonmodule.ASG BndWid = 2;
-  if (this->has_bndwid()) {
+  if (this->_internal_has_bndwid()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *bndwid_);
+        *_impl_.bndwid_);
   }
 
   // .commonmodule.PhaseSPS BndWidHi = 3;
-  if (this->has_bndwidhi()) {
+  if (this->_internal_has_bndwidhi()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *bndwidhi_);
+        *_impl_.bndwidhi_);
   }
 
   // .commonmodule.PhaseSPS BndWidLo = 4;
-  if (this->has_bndwidlo()) {
+  if (this->_internal_has_bndwidlo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *bndwidlo_);
+        *_impl_.bndwidlo_);
   }
 
   // .commonmodule.PhaseSPS DirCtlRev = 5;
-  if (this->has_dirctlrev()) {
+  if (this->_internal_has_dirctlrev()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *dirctlrev_);
+        *_impl_.dirctlrev_);
   }
 
   // .commonmodule.PhaseSPS DirIndt = 6;
-  if (this->has_dirindt()) {
+  if (this->_internal_has_dirindt()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *dirindt_);
+        *_impl_.dirindt_);
   }
 
   // .commonmodule.PhaseSPS DirRev = 7;
-  if (this->has_dirrev()) {
+  if (this->_internal_has_dirrev()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *dirrev_);
+        *_impl_.dirrev_);
   }
 
   // .commonmodule.ASG LDCR = 8;
-  if (this->has_ldcr()) {
+  if (this->_internal_has_ldcr()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ldcr_);
+        *_impl_.ldcr_);
   }
 
   // .commonmodule.ASG LDCX = 9;
-  if (this->has_ldcx()) {
+  if (this->_internal_has_ldcx()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ldcx_);
+        *_impl_.ldcx_);
   }
 
   // .commonmodule.StatusSPS ParOp = 10;
-  if (this->has_parop()) {
+  if (this->_internal_has_parop()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *parop_);
+        *_impl_.parop_);
   }
 
   // .commonmodule.RampRate rampRates = 11;
-  if (this->has_ramprates()) {
+  if (this->_internal_has_ramprates()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ramprates_);
+        *_impl_.ramprates_);
   }
 
   // .commonmodule.Optional_StateKind state = 12;
-  if (this->has_state()) {
+  if (this->_internal_has_state()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *state_);
+        *_impl_.state_);
   }
 
   // .commonmodule.StatusINC StDlTmms = 13;
-  if (this->has_stdltmms()) {
+  if (this->_internal_has_stdltmms()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *stdltmms_);
+        *_impl_.stdltmms_);
   }
 
   // .commonmodule.StatusSPS TapOpErr = 14;
-  if (this->has_tapoperr()) {
+  if (this->_internal_has_tapoperr()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *tapoperr_);
+        *_impl_.tapoperr_);
   }
 
   // .commonmodule.PhaseINS TapPos = 15;
-  if (this->has_tappos()) {
+  if (this->_internal_has_tappos()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *tappos_);
+        *_impl_.tappos_);
   }
 
   // .commonmodule.PhaseSPS VolLmtHi = 16;
-  if (this->has_vollmthi()) {
+  if (this->_internal_has_vollmthi()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *vollmthi_);
+        *_impl_.vollmthi_);
   }
 
   // .commonmodule.PhaseSPS VolLmtLo = 17;
-  if (this->has_vollmtlo()) {
+  if (this->_internal_has_vollmtlo()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *vollmtlo_);
+        *_impl_.vollmtlo_);
   }
 
   // .commonmodule.PhaseAPC VolSpt = 18;
-  if (this->has_volspt()) {
+  if (this->_internal_has_volspt()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *volspt_);
+        *_impl_.volspt_);
   }
 
   // .commonmodule.StatusSPS voltageSetPointEnabled = 19;
-  if (this->has_voltagesetpointenabled()) {
+  if (this->_internal_has_voltagesetpointenabled()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *voltagesetpointenabled_);
+        *_impl_.voltagesetpointenabled_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RegulatorEventAndStatusATCC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:regulatormodule.RegulatorEventAndStatusATCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RegulatorEventAndStatusATCC* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RegulatorEventAndStatusATCC>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:regulatormodule.RegulatorEventAndStatusATCC)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:regulatormodule.RegulatorEventAndStatusATCC)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RegulatorEventAndStatusATCC::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RegulatorEventAndStatusATCC::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RegulatorEventAndStatusATCC::GetClassData() const { return &_class_data_; }
 
-void RegulatorEventAndStatusATCC::MergeFrom(const RegulatorEventAndStatusATCC& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorEventAndStatusATCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void RegulatorEventAndStatusATCC::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RegulatorEventAndStatusATCC*>(&to_msg);
+  auto& from = static_cast<const RegulatorEventAndStatusATCC&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorEventAndStatusATCC)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_bndctr()) {
-    _internal_mutable_bndctr()->::commonmodule::ASG::MergeFrom(from._internal_bndctr());
+  if (from._internal_has_bndctr()) {
+    _this->_internal_mutable_bndctr()->::commonmodule::ASG::MergeFrom(
+        from._internal_bndctr());
   }
-  if (from.has_bndwid()) {
-    _internal_mutable_bndwid()->::commonmodule::ASG::MergeFrom(from._internal_bndwid());
+  if (from._internal_has_bndwid()) {
+    _this->_internal_mutable_bndwid()->::commonmodule::ASG::MergeFrom(
+        from._internal_bndwid());
   }
-  if (from.has_bndwidhi()) {
-    _internal_mutable_bndwidhi()->::commonmodule::PhaseSPS::MergeFrom(from._internal_bndwidhi());
+  if (from._internal_has_bndwidhi()) {
+    _this->_internal_mutable_bndwidhi()->::commonmodule::PhaseSPS::MergeFrom(
+        from._internal_bndwidhi());
   }
-  if (from.has_bndwidlo()) {
-    _internal_mutable_bndwidlo()->::commonmodule::PhaseSPS::MergeFrom(from._internal_bndwidlo());
+  if (from._internal_has_bndwidlo()) {
+    _this->_internal_mutable_bndwidlo()->::commonmodule::PhaseSPS::MergeFrom(
+        from._internal_bndwidlo());
   }
-  if (from.has_dirctlrev()) {
-    _internal_mutable_dirctlrev()->::commonmodule::PhaseSPS::MergeFrom(from._internal_dirctlrev());
+  if (from._internal_has_dirctlrev()) {
+    _this->_internal_mutable_dirctlrev()->::commonmodule::PhaseSPS::MergeFrom(
+        from._internal_dirctlrev());
   }
-  if (from.has_dirindt()) {
-    _internal_mutable_dirindt()->::commonmodule::PhaseSPS::MergeFrom(from._internal_dirindt());
+  if (from._internal_has_dirindt()) {
+    _this->_internal_mutable_dirindt()->::commonmodule::PhaseSPS::MergeFrom(
+        from._internal_dirindt());
   }
-  if (from.has_dirrev()) {
-    _internal_mutable_dirrev()->::commonmodule::PhaseSPS::MergeFrom(from._internal_dirrev());
+  if (from._internal_has_dirrev()) {
+    _this->_internal_mutable_dirrev()->::commonmodule::PhaseSPS::MergeFrom(
+        from._internal_dirrev());
   }
-  if (from.has_ldcr()) {
-    _internal_mutable_ldcr()->::commonmodule::ASG::MergeFrom(from._internal_ldcr());
+  if (from._internal_has_ldcr()) {
+    _this->_internal_mutable_ldcr()->::commonmodule::ASG::MergeFrom(
+        from._internal_ldcr());
   }
-  if (from.has_ldcx()) {
-    _internal_mutable_ldcx()->::commonmodule::ASG::MergeFrom(from._internal_ldcx());
+  if (from._internal_has_ldcx()) {
+    _this->_internal_mutable_ldcx()->::commonmodule::ASG::MergeFrom(
+        from._internal_ldcx());
   }
-  if (from.has_parop()) {
-    _internal_mutable_parop()->::commonmodule::StatusSPS::MergeFrom(from._internal_parop());
+  if (from._internal_has_parop()) {
+    _this->_internal_mutable_parop()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_parop());
   }
-  if (from.has_ramprates()) {
-    _internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from._internal_ramprates());
+  if (from._internal_has_ramprates()) {
+    _this->_internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(
+        from._internal_ramprates());
   }
-  if (from.has_state()) {
-    _internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from._internal_state());
+  if (from._internal_has_state()) {
+    _this->_internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(
+        from._internal_state());
   }
-  if (from.has_stdltmms()) {
-    _internal_mutable_stdltmms()->::commonmodule::StatusINC::MergeFrom(from._internal_stdltmms());
+  if (from._internal_has_stdltmms()) {
+    _this->_internal_mutable_stdltmms()->::commonmodule::StatusINC::MergeFrom(
+        from._internal_stdltmms());
   }
-  if (from.has_tapoperr()) {
-    _internal_mutable_tapoperr()->::commonmodule::StatusSPS::MergeFrom(from._internal_tapoperr());
+  if (from._internal_has_tapoperr()) {
+    _this->_internal_mutable_tapoperr()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_tapoperr());
   }
-  if (from.has_tappos()) {
-    _internal_mutable_tappos()->::commonmodule::PhaseINS::MergeFrom(from._internal_tappos());
+  if (from._internal_has_tappos()) {
+    _this->_internal_mutable_tappos()->::commonmodule::PhaseINS::MergeFrom(
+        from._internal_tappos());
   }
-  if (from.has_vollmthi()) {
-    _internal_mutable_vollmthi()->::commonmodule::PhaseSPS::MergeFrom(from._internal_vollmthi());
+  if (from._internal_has_vollmthi()) {
+    _this->_internal_mutable_vollmthi()->::commonmodule::PhaseSPS::MergeFrom(
+        from._internal_vollmthi());
   }
-  if (from.has_vollmtlo()) {
-    _internal_mutable_vollmtlo()->::commonmodule::PhaseSPS::MergeFrom(from._internal_vollmtlo());
+  if (from._internal_has_vollmtlo()) {
+    _this->_internal_mutable_vollmtlo()->::commonmodule::PhaseSPS::MergeFrom(
+        from._internal_vollmtlo());
   }
-  if (from.has_volspt()) {
-    _internal_mutable_volspt()->::commonmodule::PhaseAPC::MergeFrom(from._internal_volspt());
+  if (from._internal_has_volspt()) {
+    _this->_internal_mutable_volspt()->::commonmodule::PhaseAPC::MergeFrom(
+        from._internal_volspt());
   }
-  if (from.has_voltagesetpointenabled()) {
-    _internal_mutable_voltagesetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_voltagesetpointenabled());
+  if (from._internal_has_voltagesetpointenabled()) {
+    _this->_internal_mutable_voltagesetpointenabled()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_voltagesetpointenabled());
   }
-}
-
-void RegulatorEventAndStatusATCC::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:regulatormodule.RegulatorEventAndStatusATCC)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RegulatorEventAndStatusATCC::CopyFrom(const RegulatorEventAndStatusATCC& from) {
@@ -5243,20 +5261,20 @@ bool RegulatorEventAndStatusATCC::IsInitialized() const {
 
 void RegulatorEventAndStatusATCC::InternalSwap(RegulatorEventAndStatusATCC* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RegulatorEventAndStatusATCC, voltagesetpointenabled_)
-      + sizeof(RegulatorEventAndStatusATCC::voltagesetpointenabled_)
-      - PROTOBUF_FIELD_OFFSET(RegulatorEventAndStatusATCC, bndctr_)>(
-          reinterpret_cast<char*>(&bndctr_),
-          reinterpret_cast<char*>(&other->bndctr_));
+      PROTOBUF_FIELD_OFFSET(RegulatorEventAndStatusATCC, _impl_.voltagesetpointenabled_)
+      + sizeof(RegulatorEventAndStatusATCC::_impl_.voltagesetpointenabled_)
+      - PROTOBUF_FIELD_OFFSET(RegulatorEventAndStatusATCC, _impl_.bndctr_)>(
+          reinterpret_cast<char*>(&_impl_.bndctr_),
+          reinterpret_cast<char*>(&other->_impl_.bndctr_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegulatorEventAndStatusATCC::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter, &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+      file_level_metadata_regulatormodule_2fregulatormodule_2eproto[11]);
 }
-
-
 // ===================================================================
 
 class RegulatorEventAndStatusANCR::_Internal {
@@ -5268,270 +5286,257 @@ class RegulatorEventAndStatusANCR::_Internal {
 
 const ::commonmodule::LogicalNodeForEventAndStatus&
 RegulatorEventAndStatusANCR::_Internal::logicalnodeforeventandstatus(const RegulatorEventAndStatusANCR* msg) {
-  return *msg->logicalnodeforeventandstatus_;
+  return *msg->_impl_.logicalnodeforeventandstatus_;
 }
 const ::commonmodule::ENS_DynamicTestKind&
 RegulatorEventAndStatusANCR::_Internal::dynamictest(const RegulatorEventAndStatusANCR* msg) {
-  return *msg->dynamictest_;
+  return *msg->_impl_.dynamictest_;
 }
 const ::regulatormodule::RegulatorEventAndStatusATCC&
 RegulatorEventAndStatusANCR::_Internal::pointstatus(const RegulatorEventAndStatusANCR* msg) {
-  return *msg->pointstatus_;
+  return *msg->_impl_.pointstatus_;
 }
 void RegulatorEventAndStatusANCR::clear_logicalnodeforeventandstatus() {
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
-    delete logicalnodeforeventandstatus_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforeventandstatus_ != nullptr) {
+    delete _impl_.logicalnodeforeventandstatus_;
   }
-  logicalnodeforeventandstatus_ = nullptr;
+  _impl_.logicalnodeforeventandstatus_ = nullptr;
 }
 void RegulatorEventAndStatusANCR::clear_dynamictest() {
-  if (GetArena() == nullptr && dynamictest_ != nullptr) {
-    delete dynamictest_;
+  if (GetArenaForAllocation() == nullptr && _impl_.dynamictest_ != nullptr) {
+    delete _impl_.dynamictest_;
   }
-  dynamictest_ = nullptr;
+  _impl_.dynamictest_ = nullptr;
 }
 RegulatorEventAndStatusANCR::RegulatorEventAndStatusANCR(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:regulatormodule.RegulatorEventAndStatusANCR)
 }
 RegulatorEventAndStatusANCR::RegulatorEventAndStatusANCR(const RegulatorEventAndStatusANCR& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RegulatorEventAndStatusANCR* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforeventandstatus_){nullptr}
+    , decltype(_impl_.dynamictest_){nullptr}
+    , decltype(_impl_.pointstatus_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_logicalnodeforeventandstatus()) {
-    logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from.logicalnodeforeventandstatus_);
-  } else {
-    logicalnodeforeventandstatus_ = nullptr;
+    _this->_impl_.logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from._impl_.logicalnodeforeventandstatus_);
   }
   if (from._internal_has_dynamictest()) {
-    dynamictest_ = new ::commonmodule::ENS_DynamicTestKind(*from.dynamictest_);
-  } else {
-    dynamictest_ = nullptr;
+    _this->_impl_.dynamictest_ = new ::commonmodule::ENS_DynamicTestKind(*from._impl_.dynamictest_);
   }
   if (from._internal_has_pointstatus()) {
-    pointstatus_ = new ::regulatormodule::RegulatorEventAndStatusATCC(*from.pointstatus_);
-  } else {
-    pointstatus_ = nullptr;
+    _this->_impl_.pointstatus_ = new ::regulatormodule::RegulatorEventAndStatusATCC(*from._impl_.pointstatus_);
   }
   // @@protoc_insertion_point(copy_constructor:regulatormodule.RegulatorEventAndStatusANCR)
 }
 
-void RegulatorEventAndStatusANCR::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&pointstatus_) -
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(pointstatus_));
+inline void RegulatorEventAndStatusANCR::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforeventandstatus_){nullptr}
+    , decltype(_impl_.dynamictest_){nullptr}
+    , decltype(_impl_.pointstatus_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 RegulatorEventAndStatusANCR::~RegulatorEventAndStatusANCR() {
   // @@protoc_insertion_point(destructor:regulatormodule.RegulatorEventAndStatusANCR)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void RegulatorEventAndStatusANCR::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete logicalnodeforeventandstatus_;
-  if (this != internal_default_instance()) delete dynamictest_;
-  if (this != internal_default_instance()) delete pointstatus_;
+inline void RegulatorEventAndStatusANCR::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.logicalnodeforeventandstatus_;
+  if (this != internal_default_instance()) delete _impl_.dynamictest_;
+  if (this != internal_default_instance()) delete _impl_.pointstatus_;
 }
 
-void RegulatorEventAndStatusANCR::ArenaDtor(void* object) {
-  RegulatorEventAndStatusANCR* _this = reinterpret_cast< RegulatorEventAndStatusANCR* >(object);
-  (void)_this;
-}
-void RegulatorEventAndStatusANCR::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void RegulatorEventAndStatusANCR::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void RegulatorEventAndStatusANCR::Clear() {
 // @@protoc_insertion_point(message_clear_start:regulatormodule.RegulatorEventAndStatusANCR)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
-    delete logicalnodeforeventandstatus_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforeventandstatus_ != nullptr) {
+    delete _impl_.logicalnodeforeventandstatus_;
   }
-  logicalnodeforeventandstatus_ = nullptr;
-  if (GetArena() == nullptr && dynamictest_ != nullptr) {
-    delete dynamictest_;
+  _impl_.logicalnodeforeventandstatus_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.dynamictest_ != nullptr) {
+    delete _impl_.dynamictest_;
   }
-  dynamictest_ = nullptr;
-  if (GetArena() == nullptr && pointstatus_ != nullptr) {
-    delete pointstatus_;
+  _impl_.dynamictest_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.pointstatus_ != nullptr) {
+    delete _impl_.pointstatus_;
   }
-  pointstatus_ = nullptr;
+  _impl_.pointstatus_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RegulatorEventAndStatusANCR::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* RegulatorEventAndStatusANCR::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforeventandstatus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ENS_DynamicTestKind DynamicTest = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_dynamictest(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .regulatormodule.RegulatorEventAndStatusATCC PointStatus = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_pointstatus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RegulatorEventAndStatusANCR::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* RegulatorEventAndStatusANCR::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:regulatormodule.RegulatorEventAndStatusANCR)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforeventandstatus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_logicalnodeforeventandstatus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnodeforeventandstatus(this), target, stream);
+      InternalWriteMessage(1, _Internal::logicalnodeforeventandstatus(this),
+        _Internal::logicalnodeforeventandstatus(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ENS_DynamicTestKind DynamicTest = 2;
-  if (this->has_dynamictest()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_dynamictest()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::dynamictest(this), target, stream);
+      InternalWriteMessage(2, _Internal::dynamictest(this),
+        _Internal::dynamictest(this).GetCachedSize(), target, stream);
   }
 
   // .regulatormodule.RegulatorEventAndStatusATCC PointStatus = 3;
-  if (this->has_pointstatus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_pointstatus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::pointstatus(this), target, stream);
+      InternalWriteMessage(3, _Internal::pointstatus(this),
+        _Internal::pointstatus(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:regulatormodule.RegulatorEventAndStatusANCR)
   return target;
 }
 
-size_t RegulatorEventAndStatusANCR::ByteSizeLong() const {
+::size_t RegulatorEventAndStatusANCR::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:regulatormodule.RegulatorEventAndStatusANCR)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforeventandstatus()) {
+  if (this->_internal_has_logicalnodeforeventandstatus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *logicalnodeforeventandstatus_);
+        *_impl_.logicalnodeforeventandstatus_);
   }
 
   // .commonmodule.ENS_DynamicTestKind DynamicTest = 2;
-  if (this->has_dynamictest()) {
+  if (this->_internal_has_dynamictest()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *dynamictest_);
+        *_impl_.dynamictest_);
   }
 
   // .regulatormodule.RegulatorEventAndStatusATCC PointStatus = 3;
-  if (this->has_pointstatus()) {
+  if (this->_internal_has_pointstatus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *pointstatus_);
+        *_impl_.pointstatus_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RegulatorEventAndStatusANCR::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:regulatormodule.RegulatorEventAndStatusANCR)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RegulatorEventAndStatusANCR* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RegulatorEventAndStatusANCR>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:regulatormodule.RegulatorEventAndStatusANCR)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:regulatormodule.RegulatorEventAndStatusANCR)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RegulatorEventAndStatusANCR::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RegulatorEventAndStatusANCR::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RegulatorEventAndStatusANCR::GetClassData() const { return &_class_data_; }
 
-void RegulatorEventAndStatusANCR::MergeFrom(const RegulatorEventAndStatusANCR& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorEventAndStatusANCR)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void RegulatorEventAndStatusANCR::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RegulatorEventAndStatusANCR*>(&to_msg);
+  auto& from = static_cast<const RegulatorEventAndStatusANCR&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorEventAndStatusANCR)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_logicalnodeforeventandstatus()) {
-    _internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from._internal_logicalnodeforeventandstatus());
+  if (from._internal_has_logicalnodeforeventandstatus()) {
+    _this->_internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(
+        from._internal_logicalnodeforeventandstatus());
   }
-  if (from.has_dynamictest()) {
-    _internal_mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(from._internal_dynamictest());
+  if (from._internal_has_dynamictest()) {
+    _this->_internal_mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(
+        from._internal_dynamictest());
   }
-  if (from.has_pointstatus()) {
-    _internal_mutable_pointstatus()->::regulatormodule::RegulatorEventAndStatusATCC::MergeFrom(from._internal_pointstatus());
+  if (from._internal_has_pointstatus()) {
+    _this->_internal_mutable_pointstatus()->::regulatormodule::RegulatorEventAndStatusATCC::MergeFrom(
+        from._internal_pointstatus());
   }
-}
-
-void RegulatorEventAndStatusANCR::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:regulatormodule.RegulatorEventAndStatusANCR)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RegulatorEventAndStatusANCR::CopyFrom(const RegulatorEventAndStatusANCR& from) {
@@ -5547,20 +5552,20 @@ bool RegulatorEventAndStatusANCR::IsInitialized() const {
 
 void RegulatorEventAndStatusANCR::InternalSwap(RegulatorEventAndStatusANCR* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RegulatorEventAndStatusANCR, pointstatus_)
-      + sizeof(RegulatorEventAndStatusANCR::pointstatus_)
-      - PROTOBUF_FIELD_OFFSET(RegulatorEventAndStatusANCR, logicalnodeforeventandstatus_)>(
-          reinterpret_cast<char*>(&logicalnodeforeventandstatus_),
-          reinterpret_cast<char*>(&other->logicalnodeforeventandstatus_));
+      PROTOBUF_FIELD_OFFSET(RegulatorEventAndStatusANCR, _impl_.pointstatus_)
+      + sizeof(RegulatorEventAndStatusANCR::_impl_.pointstatus_)
+      - PROTOBUF_FIELD_OFFSET(RegulatorEventAndStatusANCR, _impl_.logicalnodeforeventandstatus_)>(
+          reinterpret_cast<char*>(&_impl_.logicalnodeforeventandstatus_),
+          reinterpret_cast<char*>(&other->_impl_.logicalnodeforeventandstatus_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegulatorEventAndStatusANCR::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter, &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+      file_level_metadata_regulatormodule_2fregulatormodule_2eproto[12]);
 }
-
-
 // ===================================================================
 
 class RegulatorEvent::_Internal {
@@ -5571,225 +5576,210 @@ class RegulatorEvent::_Internal {
 
 const ::commonmodule::EventValue&
 RegulatorEvent::_Internal::eventvalue(const RegulatorEvent* msg) {
-  return *msg->eventvalue_;
+  return *msg->_impl_.eventvalue_;
 }
 const ::regulatormodule::RegulatorEventAndStatusANCR&
 RegulatorEvent::_Internal::regulatoreventandstatusancr(const RegulatorEvent* msg) {
-  return *msg->regulatoreventandstatusancr_;
+  return *msg->_impl_.regulatoreventandstatusancr_;
 }
 void RegulatorEvent::clear_eventvalue() {
-  if (GetArena() == nullptr && eventvalue_ != nullptr) {
-    delete eventvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventvalue_ != nullptr) {
+    delete _impl_.eventvalue_;
   }
-  eventvalue_ = nullptr;
+  _impl_.eventvalue_ = nullptr;
 }
 RegulatorEvent::RegulatorEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:regulatormodule.RegulatorEvent)
 }
 RegulatorEvent::RegulatorEvent(const RegulatorEvent& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RegulatorEvent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventvalue_){nullptr}
+    , decltype(_impl_.regulatoreventandstatusancr_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_eventvalue()) {
-    eventvalue_ = new ::commonmodule::EventValue(*from.eventvalue_);
-  } else {
-    eventvalue_ = nullptr;
+    _this->_impl_.eventvalue_ = new ::commonmodule::EventValue(*from._impl_.eventvalue_);
   }
   if (from._internal_has_regulatoreventandstatusancr()) {
-    regulatoreventandstatusancr_ = new ::regulatormodule::RegulatorEventAndStatusANCR(*from.regulatoreventandstatusancr_);
-  } else {
-    regulatoreventandstatusancr_ = nullptr;
+    _this->_impl_.regulatoreventandstatusancr_ = new ::regulatormodule::RegulatorEventAndStatusANCR(*from._impl_.regulatoreventandstatusancr_);
   }
   // @@protoc_insertion_point(copy_constructor:regulatormodule.RegulatorEvent)
 }
 
-void RegulatorEvent::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&eventvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&regulatoreventandstatusancr_) -
-    reinterpret_cast<char*>(&eventvalue_)) + sizeof(regulatoreventandstatusancr_));
+inline void RegulatorEvent::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventvalue_){nullptr}
+    , decltype(_impl_.regulatoreventandstatusancr_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 RegulatorEvent::~RegulatorEvent() {
   // @@protoc_insertion_point(destructor:regulatormodule.RegulatorEvent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void RegulatorEvent::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete eventvalue_;
-  if (this != internal_default_instance()) delete regulatoreventandstatusancr_;
+inline void RegulatorEvent::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.eventvalue_;
+  if (this != internal_default_instance()) delete _impl_.regulatoreventandstatusancr_;
 }
 
-void RegulatorEvent::ArenaDtor(void* object) {
-  RegulatorEvent* _this = reinterpret_cast< RegulatorEvent* >(object);
-  (void)_this;
-}
-void RegulatorEvent::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void RegulatorEvent::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void RegulatorEvent::Clear() {
 // @@protoc_insertion_point(message_clear_start:regulatormodule.RegulatorEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && eventvalue_ != nullptr) {
-    delete eventvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventvalue_ != nullptr) {
+    delete _impl_.eventvalue_;
   }
-  eventvalue_ = nullptr;
-  if (GetArena() == nullptr && regulatoreventandstatusancr_ != nullptr) {
-    delete regulatoreventandstatusancr_;
+  _impl_.eventvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.regulatoreventandstatusancr_ != nullptr) {
+    delete _impl_.regulatoreventandstatusancr_;
   }
-  regulatoreventandstatusancr_ = nullptr;
+  _impl_.regulatoreventandstatusancr_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RegulatorEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* RegulatorEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_eventvalue(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .regulatormodule.RegulatorEventAndStatusANCR regulatorEventAndStatusANCR = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_regulatoreventandstatusancr(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RegulatorEvent::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* RegulatorEvent::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:regulatormodule.RegulatorEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventvalue()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_eventvalue()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::eventvalue(this), target, stream);
+      InternalWriteMessage(1, _Internal::eventvalue(this),
+        _Internal::eventvalue(this).GetCachedSize(), target, stream);
   }
 
   // .regulatormodule.RegulatorEventAndStatusANCR regulatorEventAndStatusANCR = 2;
-  if (this->has_regulatoreventandstatusancr()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_regulatoreventandstatusancr()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::regulatoreventandstatusancr(this), target, stream);
+      InternalWriteMessage(2, _Internal::regulatoreventandstatusancr(this),
+        _Internal::regulatoreventandstatusancr(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:regulatormodule.RegulatorEvent)
   return target;
 }
 
-size_t RegulatorEvent::ByteSizeLong() const {
+::size_t RegulatorEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:regulatormodule.RegulatorEvent)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventvalue()) {
+  if (this->_internal_has_eventvalue()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *eventvalue_);
+        *_impl_.eventvalue_);
   }
 
   // .regulatormodule.RegulatorEventAndStatusANCR regulatorEventAndStatusANCR = 2;
-  if (this->has_regulatoreventandstatusancr()) {
+  if (this->_internal_has_regulatoreventandstatusancr()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *regulatoreventandstatusancr_);
+        *_impl_.regulatoreventandstatusancr_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RegulatorEvent::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:regulatormodule.RegulatorEvent)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RegulatorEvent* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RegulatorEvent>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:regulatormodule.RegulatorEvent)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:regulatormodule.RegulatorEvent)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RegulatorEvent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RegulatorEvent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RegulatorEvent::GetClassData() const { return &_class_data_; }
 
-void RegulatorEvent::MergeFrom(const RegulatorEvent& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorEvent)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void RegulatorEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RegulatorEvent*>(&to_msg);
+  auto& from = static_cast<const RegulatorEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorEvent)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_eventvalue()) {
-    _internal_mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(from._internal_eventvalue());
+  if (from._internal_has_eventvalue()) {
+    _this->_internal_mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(
+        from._internal_eventvalue());
   }
-  if (from.has_regulatoreventandstatusancr()) {
-    _internal_mutable_regulatoreventandstatusancr()->::regulatormodule::RegulatorEventAndStatusANCR::MergeFrom(from._internal_regulatoreventandstatusancr());
+  if (from._internal_has_regulatoreventandstatusancr()) {
+    _this->_internal_mutable_regulatoreventandstatusancr()->::regulatormodule::RegulatorEventAndStatusANCR::MergeFrom(
+        from._internal_regulatoreventandstatusancr());
   }
-}
-
-void RegulatorEvent::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:regulatormodule.RegulatorEvent)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RegulatorEvent::CopyFrom(const RegulatorEvent& from) {
@@ -5805,20 +5795,20 @@ bool RegulatorEvent::IsInitialized() const {
 
 void RegulatorEvent::InternalSwap(RegulatorEvent* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RegulatorEvent, regulatoreventandstatusancr_)
-      + sizeof(RegulatorEvent::regulatoreventandstatusancr_)
-      - PROTOBUF_FIELD_OFFSET(RegulatorEvent, eventvalue_)>(
-          reinterpret_cast<char*>(&eventvalue_),
-          reinterpret_cast<char*>(&other->eventvalue_));
+      PROTOBUF_FIELD_OFFSET(RegulatorEvent, _impl_.regulatoreventandstatusancr_)
+      + sizeof(RegulatorEvent::_impl_.regulatoreventandstatusancr_)
+      - PROTOBUF_FIELD_OFFSET(RegulatorEvent, _impl_.eventvalue_)>(
+          reinterpret_cast<char*>(&_impl_.eventvalue_),
+          reinterpret_cast<char*>(&other->_impl_.eventvalue_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegulatorEvent::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter, &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+      file_level_metadata_regulatormodule_2fregulatormodule_2eproto[13]);
 }
-
-
 // ===================================================================
 
 class RegulatorEventProfile::_Internal {
@@ -5830,264 +5820,251 @@ class RegulatorEventProfile::_Internal {
 
 const ::commonmodule::EventMessageInfo&
 RegulatorEventProfile::_Internal::eventmessageinfo(const RegulatorEventProfile* msg) {
-  return *msg->eventmessageinfo_;
+  return *msg->_impl_.eventmessageinfo_;
 }
 const ::regulatormodule::RegulatorEvent&
 RegulatorEventProfile::_Internal::regulatorevent(const RegulatorEventProfile* msg) {
-  return *msg->regulatorevent_;
+  return *msg->_impl_.regulatorevent_;
 }
 const ::regulatormodule::RegulatorSystem&
 RegulatorEventProfile::_Internal::regulatorsystem(const RegulatorEventProfile* msg) {
-  return *msg->regulatorsystem_;
+  return *msg->_impl_.regulatorsystem_;
 }
 void RegulatorEventProfile::clear_eventmessageinfo() {
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
-    delete eventmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventmessageinfo_ != nullptr) {
+    delete _impl_.eventmessageinfo_;
   }
-  eventmessageinfo_ = nullptr;
+  _impl_.eventmessageinfo_ = nullptr;
 }
 RegulatorEventProfile::RegulatorEventProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:regulatormodule.RegulatorEventProfile)
 }
 RegulatorEventProfile::RegulatorEventProfile(const RegulatorEventProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RegulatorEventProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventmessageinfo_){nullptr}
+    , decltype(_impl_.regulatorevent_){nullptr}
+    , decltype(_impl_.regulatorsystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_eventmessageinfo()) {
-    eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from.eventmessageinfo_);
-  } else {
-    eventmessageinfo_ = nullptr;
+    _this->_impl_.eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from._impl_.eventmessageinfo_);
   }
   if (from._internal_has_regulatorevent()) {
-    regulatorevent_ = new ::regulatormodule::RegulatorEvent(*from.regulatorevent_);
-  } else {
-    regulatorevent_ = nullptr;
+    _this->_impl_.regulatorevent_ = new ::regulatormodule::RegulatorEvent(*from._impl_.regulatorevent_);
   }
   if (from._internal_has_regulatorsystem()) {
-    regulatorsystem_ = new ::regulatormodule::RegulatorSystem(*from.regulatorsystem_);
-  } else {
-    regulatorsystem_ = nullptr;
+    _this->_impl_.regulatorsystem_ = new ::regulatormodule::RegulatorSystem(*from._impl_.regulatorsystem_);
   }
   // @@protoc_insertion_point(copy_constructor:regulatormodule.RegulatorEventProfile)
 }
 
-void RegulatorEventProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&eventmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&regulatorsystem_) -
-    reinterpret_cast<char*>(&eventmessageinfo_)) + sizeof(regulatorsystem_));
+inline void RegulatorEventProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventmessageinfo_){nullptr}
+    , decltype(_impl_.regulatorevent_){nullptr}
+    , decltype(_impl_.regulatorsystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 RegulatorEventProfile::~RegulatorEventProfile() {
   // @@protoc_insertion_point(destructor:regulatormodule.RegulatorEventProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void RegulatorEventProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete eventmessageinfo_;
-  if (this != internal_default_instance()) delete regulatorevent_;
-  if (this != internal_default_instance()) delete regulatorsystem_;
+inline void RegulatorEventProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.eventmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.regulatorevent_;
+  if (this != internal_default_instance()) delete _impl_.regulatorsystem_;
 }
 
-void RegulatorEventProfile::ArenaDtor(void* object) {
-  RegulatorEventProfile* _this = reinterpret_cast< RegulatorEventProfile* >(object);
-  (void)_this;
-}
-void RegulatorEventProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void RegulatorEventProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void RegulatorEventProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:regulatormodule.RegulatorEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
-    delete eventmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventmessageinfo_ != nullptr) {
+    delete _impl_.eventmessageinfo_;
   }
-  eventmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && regulatorevent_ != nullptr) {
-    delete regulatorevent_;
+  _impl_.eventmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.regulatorevent_ != nullptr) {
+    delete _impl_.regulatorevent_;
   }
-  regulatorevent_ = nullptr;
-  if (GetArena() == nullptr && regulatorsystem_ != nullptr) {
-    delete regulatorsystem_;
+  _impl_.regulatorevent_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.regulatorsystem_ != nullptr) {
+    delete _impl_.regulatorsystem_;
   }
-  regulatorsystem_ = nullptr;
+  _impl_.regulatorsystem_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RegulatorEventProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* RegulatorEventProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_eventmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .regulatormodule.RegulatorEvent regulatorEvent = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_regulatorevent(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .regulatormodule.RegulatorSystem regulatorSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_regulatorsystem(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RegulatorEventProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* RegulatorEventProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:regulatormodule.RegulatorEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_eventmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::eventmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::eventmessageinfo(this),
+        _Internal::eventmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .regulatormodule.RegulatorEvent regulatorEvent = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_regulatorevent()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_regulatorevent()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::regulatorevent(this), target, stream);
+      InternalWriteMessage(2, _Internal::regulatorevent(this),
+        _Internal::regulatorevent(this).GetCachedSize(), target, stream);
   }
 
   // .regulatormodule.RegulatorSystem regulatorSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_regulatorsystem()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_regulatorsystem()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::regulatorsystem(this), target, stream);
+      InternalWriteMessage(3, _Internal::regulatorsystem(this),
+        _Internal::regulatorsystem(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:regulatormodule.RegulatorEventProfile)
   return target;
 }
 
-size_t RegulatorEventProfile::ByteSizeLong() const {
+::size_t RegulatorEventProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:regulatormodule.RegulatorEventProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
+  if (this->_internal_has_eventmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *eventmessageinfo_);
+        *_impl_.eventmessageinfo_);
   }
 
   // .regulatormodule.RegulatorEvent regulatorEvent = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_regulatorevent()) {
+  if (this->_internal_has_regulatorevent()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *regulatorevent_);
+        *_impl_.regulatorevent_);
   }
 
   // .regulatormodule.RegulatorSystem regulatorSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_regulatorsystem()) {
+  if (this->_internal_has_regulatorsystem()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *regulatorsystem_);
+        *_impl_.regulatorsystem_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RegulatorEventProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:regulatormodule.RegulatorEventProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RegulatorEventProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RegulatorEventProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:regulatormodule.RegulatorEventProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:regulatormodule.RegulatorEventProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RegulatorEventProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RegulatorEventProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RegulatorEventProfile::GetClassData() const { return &_class_data_; }
 
-void RegulatorEventProfile::MergeFrom(const RegulatorEventProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorEventProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void RegulatorEventProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RegulatorEventProfile*>(&to_msg);
+  auto& from = static_cast<const RegulatorEventProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorEventProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_eventmessageinfo()) {
-    _internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(from._internal_eventmessageinfo());
+  if (from._internal_has_eventmessageinfo()) {
+    _this->_internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(
+        from._internal_eventmessageinfo());
   }
-  if (from.has_regulatorevent()) {
-    _internal_mutable_regulatorevent()->::regulatormodule::RegulatorEvent::MergeFrom(from._internal_regulatorevent());
+  if (from._internal_has_regulatorevent()) {
+    _this->_internal_mutable_regulatorevent()->::regulatormodule::RegulatorEvent::MergeFrom(
+        from._internal_regulatorevent());
   }
-  if (from.has_regulatorsystem()) {
-    _internal_mutable_regulatorsystem()->::regulatormodule::RegulatorSystem::MergeFrom(from._internal_regulatorsystem());
+  if (from._internal_has_regulatorsystem()) {
+    _this->_internal_mutable_regulatorsystem()->::regulatormodule::RegulatorSystem::MergeFrom(
+        from._internal_regulatorsystem());
   }
-}
-
-void RegulatorEventProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:regulatormodule.RegulatorEventProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RegulatorEventProfile::CopyFrom(const RegulatorEventProfile& from) {
@@ -6103,20 +6080,20 @@ bool RegulatorEventProfile::IsInitialized() const {
 
 void RegulatorEventProfile::InternalSwap(RegulatorEventProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RegulatorEventProfile, regulatorsystem_)
-      + sizeof(RegulatorEventProfile::regulatorsystem_)
-      - PROTOBUF_FIELD_OFFSET(RegulatorEventProfile, eventmessageinfo_)>(
-          reinterpret_cast<char*>(&eventmessageinfo_),
-          reinterpret_cast<char*>(&other->eventmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(RegulatorEventProfile, _impl_.regulatorsystem_)
+      + sizeof(RegulatorEventProfile::_impl_.regulatorsystem_)
+      - PROTOBUF_FIELD_OFFSET(RegulatorEventProfile, _impl_.eventmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.eventmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.eventmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegulatorEventProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter, &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+      file_level_metadata_regulatormodule_2fregulatormodule_2eproto[14]);
 }
-
-
 // ===================================================================
 
 class RegulatorReading::_Internal {
@@ -6130,366 +6107,357 @@ class RegulatorReading::_Internal {
 
 const ::commonmodule::ConductingEquipmentTerminalReading&
 RegulatorReading::_Internal::conductingequipmentterminalreading(const RegulatorReading* msg) {
-  return *msg->conductingequipmentterminalreading_;
+  return *msg->_impl_.conductingequipmentterminalreading_;
 }
 const ::commonmodule::PhaseMMTN&
 RegulatorReading::_Internal::phasemmtn(const RegulatorReading* msg) {
-  return *msg->phasemmtn_;
+  return *msg->_impl_.phasemmtn_;
 }
 const ::commonmodule::ReadingMMTR&
 RegulatorReading::_Internal::readingmmtr(const RegulatorReading* msg) {
-  return *msg->readingmmtr_;
+  return *msg->_impl_.readingmmtr_;
 }
 const ::commonmodule::ReadingMMXU&
 RegulatorReading::_Internal::readingmmxu(const RegulatorReading* msg) {
-  return *msg->readingmmxu_;
+  return *msg->_impl_.readingmmxu_;
 }
 const ::commonmodule::ReadingMMXU&
 RegulatorReading::_Internal::secondaryreadingmmxu(const RegulatorReading* msg) {
-  return *msg->secondaryreadingmmxu_;
+  return *msg->_impl_.secondaryreadingmmxu_;
 }
 void RegulatorReading::clear_conductingequipmentterminalreading() {
-  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
-    delete conductingequipmentterminalreading_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipmentterminalreading_ != nullptr) {
+    delete _impl_.conductingequipmentterminalreading_;
   }
-  conductingequipmentterminalreading_ = nullptr;
+  _impl_.conductingequipmentterminalreading_ = nullptr;
 }
 void RegulatorReading::clear_phasemmtn() {
-  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
-    delete phasemmtn_;
+  if (GetArenaForAllocation() == nullptr && _impl_.phasemmtn_ != nullptr) {
+    delete _impl_.phasemmtn_;
   }
-  phasemmtn_ = nullptr;
+  _impl_.phasemmtn_ = nullptr;
 }
 void RegulatorReading::clear_readingmmtr() {
-  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
-    delete readingmmtr_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmtr_ != nullptr) {
+    delete _impl_.readingmmtr_;
   }
-  readingmmtr_ = nullptr;
+  _impl_.readingmmtr_ = nullptr;
 }
 void RegulatorReading::clear_readingmmxu() {
-  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
-    delete readingmmxu_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmxu_ != nullptr) {
+    delete _impl_.readingmmxu_;
   }
-  readingmmxu_ = nullptr;
+  _impl_.readingmmxu_ = nullptr;
 }
 void RegulatorReading::clear_secondaryreadingmmxu() {
-  if (GetArena() == nullptr && secondaryreadingmmxu_ != nullptr) {
-    delete secondaryreadingmmxu_;
+  if (GetArenaForAllocation() == nullptr && _impl_.secondaryreadingmmxu_ != nullptr) {
+    delete _impl_.secondaryreadingmmxu_;
   }
-  secondaryreadingmmxu_ = nullptr;
+  _impl_.secondaryreadingmmxu_ = nullptr;
 }
 RegulatorReading::RegulatorReading(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:regulatormodule.RegulatorReading)
 }
 RegulatorReading::RegulatorReading(const RegulatorReading& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RegulatorReading* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipmentterminalreading_){nullptr}
+    , decltype(_impl_.phasemmtn_){nullptr}
+    , decltype(_impl_.readingmmtr_){nullptr}
+    , decltype(_impl_.readingmmxu_){nullptr}
+    , decltype(_impl_.secondaryreadingmmxu_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_conductingequipmentterminalreading()) {
-    conductingequipmentterminalreading_ = new ::commonmodule::ConductingEquipmentTerminalReading(*from.conductingequipmentterminalreading_);
-  } else {
-    conductingequipmentterminalreading_ = nullptr;
+    _this->_impl_.conductingequipmentterminalreading_ = new ::commonmodule::ConductingEquipmentTerminalReading(*from._impl_.conductingequipmentterminalreading_);
   }
   if (from._internal_has_phasemmtn()) {
-    phasemmtn_ = new ::commonmodule::PhaseMMTN(*from.phasemmtn_);
-  } else {
-    phasemmtn_ = nullptr;
+    _this->_impl_.phasemmtn_ = new ::commonmodule::PhaseMMTN(*from._impl_.phasemmtn_);
   }
   if (from._internal_has_readingmmtr()) {
-    readingmmtr_ = new ::commonmodule::ReadingMMTR(*from.readingmmtr_);
-  } else {
-    readingmmtr_ = nullptr;
+    _this->_impl_.readingmmtr_ = new ::commonmodule::ReadingMMTR(*from._impl_.readingmmtr_);
   }
   if (from._internal_has_readingmmxu()) {
-    readingmmxu_ = new ::commonmodule::ReadingMMXU(*from.readingmmxu_);
-  } else {
-    readingmmxu_ = nullptr;
+    _this->_impl_.readingmmxu_ = new ::commonmodule::ReadingMMXU(*from._impl_.readingmmxu_);
   }
   if (from._internal_has_secondaryreadingmmxu()) {
-    secondaryreadingmmxu_ = new ::commonmodule::ReadingMMXU(*from.secondaryreadingmmxu_);
-  } else {
-    secondaryreadingmmxu_ = nullptr;
+    _this->_impl_.secondaryreadingmmxu_ = new ::commonmodule::ReadingMMXU(*from._impl_.secondaryreadingmmxu_);
   }
   // @@protoc_insertion_point(copy_constructor:regulatormodule.RegulatorReading)
 }
 
-void RegulatorReading::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&conductingequipmentterminalreading_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&secondaryreadingmmxu_) -
-    reinterpret_cast<char*>(&conductingequipmentterminalreading_)) + sizeof(secondaryreadingmmxu_));
+inline void RegulatorReading::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipmentterminalreading_){nullptr}
+    , decltype(_impl_.phasemmtn_){nullptr}
+    , decltype(_impl_.readingmmtr_){nullptr}
+    , decltype(_impl_.readingmmxu_){nullptr}
+    , decltype(_impl_.secondaryreadingmmxu_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 RegulatorReading::~RegulatorReading() {
   // @@protoc_insertion_point(destructor:regulatormodule.RegulatorReading)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void RegulatorReading::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete conductingequipmentterminalreading_;
-  if (this != internal_default_instance()) delete phasemmtn_;
-  if (this != internal_default_instance()) delete readingmmtr_;
-  if (this != internal_default_instance()) delete readingmmxu_;
-  if (this != internal_default_instance()) delete secondaryreadingmmxu_;
+inline void RegulatorReading::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.conductingequipmentterminalreading_;
+  if (this != internal_default_instance()) delete _impl_.phasemmtn_;
+  if (this != internal_default_instance()) delete _impl_.readingmmtr_;
+  if (this != internal_default_instance()) delete _impl_.readingmmxu_;
+  if (this != internal_default_instance()) delete _impl_.secondaryreadingmmxu_;
 }
 
-void RegulatorReading::ArenaDtor(void* object) {
-  RegulatorReading* _this = reinterpret_cast< RegulatorReading* >(object);
-  (void)_this;
-}
-void RegulatorReading::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void RegulatorReading::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void RegulatorReading::Clear() {
 // @@protoc_insertion_point(message_clear_start:regulatormodule.RegulatorReading)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
-    delete conductingequipmentterminalreading_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipmentterminalreading_ != nullptr) {
+    delete _impl_.conductingequipmentterminalreading_;
   }
-  conductingequipmentterminalreading_ = nullptr;
-  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
-    delete phasemmtn_;
+  _impl_.conductingequipmentterminalreading_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.phasemmtn_ != nullptr) {
+    delete _impl_.phasemmtn_;
   }
-  phasemmtn_ = nullptr;
-  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
-    delete readingmmtr_;
+  _impl_.phasemmtn_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmtr_ != nullptr) {
+    delete _impl_.readingmmtr_;
   }
-  readingmmtr_ = nullptr;
-  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
-    delete readingmmxu_;
+  _impl_.readingmmtr_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmxu_ != nullptr) {
+    delete _impl_.readingmmxu_;
   }
-  readingmmxu_ = nullptr;
-  if (GetArena() == nullptr && secondaryreadingmmxu_ != nullptr) {
-    delete secondaryreadingmmxu_;
+  _impl_.readingmmxu_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.secondaryreadingmmxu_ != nullptr) {
+    delete _impl_.secondaryreadingmmxu_;
   }
-  secondaryreadingmmxu_ = nullptr;
+  _impl_.secondaryreadingmmxu_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RegulatorReading::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* RegulatorReading::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_conductingequipmentterminalreading(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseMMTN phaseMMTN = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_phasemmtn(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ReadingMMTR readingMMTR = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_readingmmtr(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ReadingMMXU readingMMXU = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_readingmmxu(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ReadingMMXU secondaryReadingMMXU = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_secondaryreadingmmxu(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RegulatorReading::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* RegulatorReading::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:regulatormodule.RegulatorReading)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipmentterminalreading()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_conductingequipmentterminalreading()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::conductingequipmentterminalreading(this), target, stream);
+      InternalWriteMessage(1, _Internal::conductingequipmentterminalreading(this),
+        _Internal::conductingequipmentterminalreading(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 2;
-  if (this->has_phasemmtn()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_phasemmtn()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::phasemmtn(this), target, stream);
+      InternalWriteMessage(2, _Internal::phasemmtn(this),
+        _Internal::phasemmtn(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 3;
-  if (this->has_readingmmtr()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_readingmmtr()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::readingmmtr(this), target, stream);
+      InternalWriteMessage(3, _Internal::readingmmtr(this),
+        _Internal::readingmmtr(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 4;
-  if (this->has_readingmmxu()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_readingmmxu()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::readingmmxu(this), target, stream);
+      InternalWriteMessage(4, _Internal::readingmmxu(this),
+        _Internal::readingmmxu(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ReadingMMXU secondaryReadingMMXU = 5;
-  if (this->has_secondaryreadingmmxu()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_secondaryreadingmmxu()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::secondaryreadingmmxu(this), target, stream);
+      InternalWriteMessage(5, _Internal::secondaryreadingmmxu(this),
+        _Internal::secondaryreadingmmxu(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:regulatormodule.RegulatorReading)
   return target;
 }
 
-size_t RegulatorReading::ByteSizeLong() const {
+::size_t RegulatorReading::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:regulatormodule.RegulatorReading)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipmentterminalreading()) {
+  if (this->_internal_has_conductingequipmentterminalreading()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *conductingequipmentterminalreading_);
+        *_impl_.conductingequipmentterminalreading_);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 2;
-  if (this->has_phasemmtn()) {
+  if (this->_internal_has_phasemmtn()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *phasemmtn_);
+        *_impl_.phasemmtn_);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 3;
-  if (this->has_readingmmtr()) {
+  if (this->_internal_has_readingmmtr()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmmtr_);
+        *_impl_.readingmmtr_);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 4;
-  if (this->has_readingmmxu()) {
+  if (this->_internal_has_readingmmxu()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmmxu_);
+        *_impl_.readingmmxu_);
   }
 
   // .commonmodule.ReadingMMXU secondaryReadingMMXU = 5;
-  if (this->has_secondaryreadingmmxu()) {
+  if (this->_internal_has_secondaryreadingmmxu()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *secondaryreadingmmxu_);
+        *_impl_.secondaryreadingmmxu_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RegulatorReading::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:regulatormodule.RegulatorReading)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RegulatorReading* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RegulatorReading>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:regulatormodule.RegulatorReading)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:regulatormodule.RegulatorReading)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RegulatorReading::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RegulatorReading::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RegulatorReading::GetClassData() const { return &_class_data_; }
 
-void RegulatorReading::MergeFrom(const RegulatorReading& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorReading)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void RegulatorReading::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RegulatorReading*>(&to_msg);
+  auto& from = static_cast<const RegulatorReading&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorReading)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_conductingequipmentterminalreading()) {
-    _internal_mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(from._internal_conductingequipmentterminalreading());
+  if (from._internal_has_conductingequipmentterminalreading()) {
+    _this->_internal_mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(
+        from._internal_conductingequipmentterminalreading());
   }
-  if (from.has_phasemmtn()) {
-    _internal_mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(from._internal_phasemmtn());
+  if (from._internal_has_phasemmtn()) {
+    _this->_internal_mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(
+        from._internal_phasemmtn());
   }
-  if (from.has_readingmmtr()) {
-    _internal_mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(from._internal_readingmmtr());
+  if (from._internal_has_readingmmtr()) {
+    _this->_internal_mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(
+        from._internal_readingmmtr());
   }
-  if (from.has_readingmmxu()) {
-    _internal_mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from._internal_readingmmxu());
+  if (from._internal_has_readingmmxu()) {
+    _this->_internal_mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(
+        from._internal_readingmmxu());
   }
-  if (from.has_secondaryreadingmmxu()) {
-    _internal_mutable_secondaryreadingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from._internal_secondaryreadingmmxu());
+  if (from._internal_has_secondaryreadingmmxu()) {
+    _this->_internal_mutable_secondaryreadingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(
+        from._internal_secondaryreadingmmxu());
   }
-}
-
-void RegulatorReading::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:regulatormodule.RegulatorReading)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RegulatorReading::CopyFrom(const RegulatorReading& from) {
@@ -6505,20 +6473,20 @@ bool RegulatorReading::IsInitialized() const {
 
 void RegulatorReading::InternalSwap(RegulatorReading* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RegulatorReading, secondaryreadingmmxu_)
-      + sizeof(RegulatorReading::secondaryreadingmmxu_)
-      - PROTOBUF_FIELD_OFFSET(RegulatorReading, conductingequipmentterminalreading_)>(
-          reinterpret_cast<char*>(&conductingequipmentterminalreading_),
-          reinterpret_cast<char*>(&other->conductingequipmentterminalreading_));
+      PROTOBUF_FIELD_OFFSET(RegulatorReading, _impl_.secondaryreadingmmxu_)
+      + sizeof(RegulatorReading::_impl_.secondaryreadingmmxu_)
+      - PROTOBUF_FIELD_OFFSET(RegulatorReading, _impl_.conductingequipmentterminalreading_)>(
+          reinterpret_cast<char*>(&_impl_.conductingequipmentterminalreading_),
+          reinterpret_cast<char*>(&other->_impl_.conductingequipmentterminalreading_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegulatorReading::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter, &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+      file_level_metadata_regulatormodule_2fregulatormodule_2eproto[15]);
 }
-
-
 // ===================================================================
 
 class RegulatorReadingProfile::_Internal {
@@ -6529,106 +6497,108 @@ class RegulatorReadingProfile::_Internal {
 
 const ::commonmodule::ReadingMessageInfo&
 RegulatorReadingProfile::_Internal::readingmessageinfo(const RegulatorReadingProfile* msg) {
-  return *msg->readingmessageinfo_;
+  return *msg->_impl_.readingmessageinfo_;
 }
 const ::regulatormodule::RegulatorSystem&
 RegulatorReadingProfile::_Internal::regulatorsystem(const RegulatorReadingProfile* msg) {
-  return *msg->regulatorsystem_;
+  return *msg->_impl_.regulatorsystem_;
 }
 void RegulatorReadingProfile::clear_readingmessageinfo() {
-  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
-    delete readingmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmessageinfo_ != nullptr) {
+    delete _impl_.readingmessageinfo_;
   }
-  readingmessageinfo_ = nullptr;
+  _impl_.readingmessageinfo_ = nullptr;
 }
 RegulatorReadingProfile::RegulatorReadingProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  regulatorreading_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:regulatormodule.RegulatorReadingProfile)
 }
 RegulatorReadingProfile::RegulatorReadingProfile(const RegulatorReadingProfile& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      regulatorreading_(from.regulatorreading_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RegulatorReadingProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.regulatorreading_){from._impl_.regulatorreading_}
+    , decltype(_impl_.readingmessageinfo_){nullptr}
+    , decltype(_impl_.regulatorsystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_readingmessageinfo()) {
-    readingmessageinfo_ = new ::commonmodule::ReadingMessageInfo(*from.readingmessageinfo_);
-  } else {
-    readingmessageinfo_ = nullptr;
+    _this->_impl_.readingmessageinfo_ = new ::commonmodule::ReadingMessageInfo(*from._impl_.readingmessageinfo_);
   }
   if (from._internal_has_regulatorsystem()) {
-    regulatorsystem_ = new ::regulatormodule::RegulatorSystem(*from.regulatorsystem_);
-  } else {
-    regulatorsystem_ = nullptr;
+    _this->_impl_.regulatorsystem_ = new ::regulatormodule::RegulatorSystem(*from._impl_.regulatorsystem_);
   }
   // @@protoc_insertion_point(copy_constructor:regulatormodule.RegulatorReadingProfile)
 }
 
-void RegulatorReadingProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&readingmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&regulatorsystem_) -
-    reinterpret_cast<char*>(&readingmessageinfo_)) + sizeof(regulatorsystem_));
+inline void RegulatorReadingProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.regulatorreading_){arena}
+    , decltype(_impl_.readingmessageinfo_){nullptr}
+    , decltype(_impl_.regulatorsystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 RegulatorReadingProfile::~RegulatorReadingProfile() {
   // @@protoc_insertion_point(destructor:regulatormodule.RegulatorReadingProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void RegulatorReadingProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete readingmessageinfo_;
-  if (this != internal_default_instance()) delete regulatorsystem_;
+inline void RegulatorReadingProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.regulatorreading_.~RepeatedPtrField();
+  if (this != internal_default_instance()) delete _impl_.readingmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.regulatorsystem_;
 }
 
-void RegulatorReadingProfile::ArenaDtor(void* object) {
-  RegulatorReadingProfile* _this = reinterpret_cast< RegulatorReadingProfile* >(object);
-  (void)_this;
-}
-void RegulatorReadingProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void RegulatorReadingProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void RegulatorReadingProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:regulatormodule.RegulatorReadingProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  regulatorreading_.Clear();
-  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
-    delete readingmessageinfo_;
+  _impl_.regulatorreading_.Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmessageinfo_ != nullptr) {
+    delete _impl_.readingmessageinfo_;
   }
-  readingmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && regulatorsystem_ != nullptr) {
-    delete regulatorsystem_;
+  _impl_.readingmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.regulatorsystem_ != nullptr) {
+    delete _impl_.regulatorsystem_;
   }
-  regulatorsystem_ = nullptr;
+  _impl_.regulatorsystem_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RegulatorReadingProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* RegulatorReadingProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_readingmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // repeated .regulatormodule.RegulatorReading regulatorReading = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1, (.uml.option_multiplicity_max) = 2];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -6636,149 +6606,135 @@ const char* RegulatorReadingProfile::_InternalParse(const char* ptr, ::PROTOBUF_
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .regulatormodule.RegulatorSystem regulatorSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_regulatorsystem(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RegulatorReadingProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* RegulatorReadingProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:regulatormodule.RegulatorReadingProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_readingmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_readingmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::readingmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::readingmessageinfo(this),
+        _Internal::readingmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // repeated .regulatormodule.RegulatorReading regulatorReading = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1, (.uml.option_multiplicity_max) = 2];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_regulatorreading_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_regulatorreading_size()); i < n; i++) {
+    const auto& repfield = this->_internal_regulatorreading(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(2, this->_internal_regulatorreading(i), target, stream);
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // .regulatormodule.RegulatorSystem regulatorSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_regulatorsystem()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_regulatorsystem()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::regulatorsystem(this), target, stream);
+      InternalWriteMessage(3, _Internal::regulatorsystem(this),
+        _Internal::regulatorsystem(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:regulatormodule.RegulatorReadingProfile)
   return target;
 }
 
-size_t RegulatorReadingProfile::ByteSizeLong() const {
+::size_t RegulatorReadingProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:regulatormodule.RegulatorReadingProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .regulatormodule.RegulatorReading regulatorReading = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1, (.uml.option_multiplicity_max) = 2];
   total_size += 1UL * this->_internal_regulatorreading_size();
-  for (const auto& msg : this->regulatorreading_) {
+  for (const auto& msg : this->_impl_.regulatorreading_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_readingmessageinfo()) {
+  if (this->_internal_has_readingmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmessageinfo_);
+        *_impl_.readingmessageinfo_);
   }
 
   // .regulatormodule.RegulatorSystem regulatorSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_regulatorsystem()) {
+  if (this->_internal_has_regulatorsystem()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *regulatorsystem_);
+        *_impl_.regulatorsystem_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RegulatorReadingProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:regulatormodule.RegulatorReadingProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RegulatorReadingProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RegulatorReadingProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:regulatormodule.RegulatorReadingProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:regulatormodule.RegulatorReadingProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RegulatorReadingProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RegulatorReadingProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RegulatorReadingProfile::GetClassData() const { return &_class_data_; }
 
-void RegulatorReadingProfile::MergeFrom(const RegulatorReadingProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorReadingProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void RegulatorReadingProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RegulatorReadingProfile*>(&to_msg);
+  auto& from = static_cast<const RegulatorReadingProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorReadingProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  regulatorreading_.MergeFrom(from.regulatorreading_);
-  if (from.has_readingmessageinfo()) {
-    _internal_mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(from._internal_readingmessageinfo());
+  _this->_impl_.regulatorreading_.MergeFrom(from._impl_.regulatorreading_);
+  if (from._internal_has_readingmessageinfo()) {
+    _this->_internal_mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(
+        from._internal_readingmessageinfo());
   }
-  if (from.has_regulatorsystem()) {
-    _internal_mutable_regulatorsystem()->::regulatormodule::RegulatorSystem::MergeFrom(from._internal_regulatorsystem());
+  if (from._internal_has_regulatorsystem()) {
+    _this->_internal_mutable_regulatorsystem()->::regulatormodule::RegulatorSystem::MergeFrom(
+        from._internal_regulatorsystem());
   }
-}
-
-void RegulatorReadingProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:regulatormodule.RegulatorReadingProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RegulatorReadingProfile::CopyFrom(const RegulatorReadingProfile& from) {
@@ -6794,21 +6750,21 @@ bool RegulatorReadingProfile::IsInitialized() const {
 
 void RegulatorReadingProfile::InternalSwap(RegulatorReadingProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  regulatorreading_.InternalSwap(&other->regulatorreading_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.regulatorreading_.InternalSwap(&other->_impl_.regulatorreading_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RegulatorReadingProfile, regulatorsystem_)
-      + sizeof(RegulatorReadingProfile::regulatorsystem_)
-      - PROTOBUF_FIELD_OFFSET(RegulatorReadingProfile, readingmessageinfo_)>(
-          reinterpret_cast<char*>(&readingmessageinfo_),
-          reinterpret_cast<char*>(&other->readingmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(RegulatorReadingProfile, _impl_.regulatorsystem_)
+      + sizeof(RegulatorReadingProfile::_impl_.regulatorsystem_)
+      - PROTOBUF_FIELD_OFFSET(RegulatorReadingProfile, _impl_.readingmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.readingmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.readingmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegulatorReadingProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter, &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+      file_level_metadata_regulatormodule_2fregulatormodule_2eproto[16]);
 }
-
-
 // ===================================================================
 
 class RegulatorStatus::_Internal {
@@ -6819,225 +6775,210 @@ class RegulatorStatus::_Internal {
 
 const ::commonmodule::StatusValue&
 RegulatorStatus::_Internal::statusvalue(const RegulatorStatus* msg) {
-  return *msg->statusvalue_;
+  return *msg->_impl_.statusvalue_;
 }
 const ::regulatormodule::RegulatorEventAndStatusANCR&
 RegulatorStatus::_Internal::regulatoreventandstatusancr(const RegulatorStatus* msg) {
-  return *msg->regulatoreventandstatusancr_;
+  return *msg->_impl_.regulatoreventandstatusancr_;
 }
 void RegulatorStatus::clear_statusvalue() {
-  if (GetArena() == nullptr && statusvalue_ != nullptr) {
-    delete statusvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusvalue_ != nullptr) {
+    delete _impl_.statusvalue_;
   }
-  statusvalue_ = nullptr;
+  _impl_.statusvalue_ = nullptr;
 }
 RegulatorStatus::RegulatorStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:regulatormodule.RegulatorStatus)
 }
 RegulatorStatus::RegulatorStatus(const RegulatorStatus& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RegulatorStatus* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusvalue_){nullptr}
+    , decltype(_impl_.regulatoreventandstatusancr_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_statusvalue()) {
-    statusvalue_ = new ::commonmodule::StatusValue(*from.statusvalue_);
-  } else {
-    statusvalue_ = nullptr;
+    _this->_impl_.statusvalue_ = new ::commonmodule::StatusValue(*from._impl_.statusvalue_);
   }
   if (from._internal_has_regulatoreventandstatusancr()) {
-    regulatoreventandstatusancr_ = new ::regulatormodule::RegulatorEventAndStatusANCR(*from.regulatoreventandstatusancr_);
-  } else {
-    regulatoreventandstatusancr_ = nullptr;
+    _this->_impl_.regulatoreventandstatusancr_ = new ::regulatormodule::RegulatorEventAndStatusANCR(*from._impl_.regulatoreventandstatusancr_);
   }
   // @@protoc_insertion_point(copy_constructor:regulatormodule.RegulatorStatus)
 }
 
-void RegulatorStatus::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&statusvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&regulatoreventandstatusancr_) -
-    reinterpret_cast<char*>(&statusvalue_)) + sizeof(regulatoreventandstatusancr_));
+inline void RegulatorStatus::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusvalue_){nullptr}
+    , decltype(_impl_.regulatoreventandstatusancr_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 RegulatorStatus::~RegulatorStatus() {
   // @@protoc_insertion_point(destructor:regulatormodule.RegulatorStatus)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void RegulatorStatus::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete statusvalue_;
-  if (this != internal_default_instance()) delete regulatoreventandstatusancr_;
+inline void RegulatorStatus::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.statusvalue_;
+  if (this != internal_default_instance()) delete _impl_.regulatoreventandstatusancr_;
 }
 
-void RegulatorStatus::ArenaDtor(void* object) {
-  RegulatorStatus* _this = reinterpret_cast< RegulatorStatus* >(object);
-  (void)_this;
-}
-void RegulatorStatus::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void RegulatorStatus::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void RegulatorStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:regulatormodule.RegulatorStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && statusvalue_ != nullptr) {
-    delete statusvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusvalue_ != nullptr) {
+    delete _impl_.statusvalue_;
   }
-  statusvalue_ = nullptr;
-  if (GetArena() == nullptr && regulatoreventandstatusancr_ != nullptr) {
-    delete regulatoreventandstatusancr_;
+  _impl_.statusvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.regulatoreventandstatusancr_ != nullptr) {
+    delete _impl_.regulatoreventandstatusancr_;
   }
-  regulatoreventandstatusancr_ = nullptr;
+  _impl_.regulatoreventandstatusancr_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RegulatorStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* RegulatorStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_statusvalue(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .regulatormodule.RegulatorEventAndStatusANCR regulatorEventAndStatusANCR = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_regulatoreventandstatusancr(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RegulatorStatus::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* RegulatorStatus::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:regulatormodule.RegulatorStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusvalue()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_statusvalue()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::statusvalue(this), target, stream);
+      InternalWriteMessage(1, _Internal::statusvalue(this),
+        _Internal::statusvalue(this).GetCachedSize(), target, stream);
   }
 
   // .regulatormodule.RegulatorEventAndStatusANCR regulatorEventAndStatusANCR = 2;
-  if (this->has_regulatoreventandstatusancr()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_regulatoreventandstatusancr()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::regulatoreventandstatusancr(this), target, stream);
+      InternalWriteMessage(2, _Internal::regulatoreventandstatusancr(this),
+        _Internal::regulatoreventandstatusancr(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:regulatormodule.RegulatorStatus)
   return target;
 }
 
-size_t RegulatorStatus::ByteSizeLong() const {
+::size_t RegulatorStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:regulatormodule.RegulatorStatus)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusvalue()) {
+  if (this->_internal_has_statusvalue()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *statusvalue_);
+        *_impl_.statusvalue_);
   }
 
   // .regulatormodule.RegulatorEventAndStatusANCR regulatorEventAndStatusANCR = 2;
-  if (this->has_regulatoreventandstatusancr()) {
+  if (this->_internal_has_regulatoreventandstatusancr()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *regulatoreventandstatusancr_);
+        *_impl_.regulatoreventandstatusancr_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RegulatorStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:regulatormodule.RegulatorStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RegulatorStatus* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RegulatorStatus>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:regulatormodule.RegulatorStatus)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:regulatormodule.RegulatorStatus)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RegulatorStatus::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RegulatorStatus::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RegulatorStatus::GetClassData() const { return &_class_data_; }
 
-void RegulatorStatus::MergeFrom(const RegulatorStatus& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void RegulatorStatus::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RegulatorStatus*>(&to_msg);
+  auto& from = static_cast<const RegulatorStatus&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorStatus)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_statusvalue()) {
-    _internal_mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(from._internal_statusvalue());
+  if (from._internal_has_statusvalue()) {
+    _this->_internal_mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(
+        from._internal_statusvalue());
   }
-  if (from.has_regulatoreventandstatusancr()) {
-    _internal_mutable_regulatoreventandstatusancr()->::regulatormodule::RegulatorEventAndStatusANCR::MergeFrom(from._internal_regulatoreventandstatusancr());
+  if (from._internal_has_regulatoreventandstatusancr()) {
+    _this->_internal_mutable_regulatoreventandstatusancr()->::regulatormodule::RegulatorEventAndStatusANCR::MergeFrom(
+        from._internal_regulatoreventandstatusancr());
   }
-}
-
-void RegulatorStatus::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:regulatormodule.RegulatorStatus)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RegulatorStatus::CopyFrom(const RegulatorStatus& from) {
@@ -7053,20 +6994,20 @@ bool RegulatorStatus::IsInitialized() const {
 
 void RegulatorStatus::InternalSwap(RegulatorStatus* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RegulatorStatus, regulatoreventandstatusancr_)
-      + sizeof(RegulatorStatus::regulatoreventandstatusancr_)
-      - PROTOBUF_FIELD_OFFSET(RegulatorStatus, statusvalue_)>(
-          reinterpret_cast<char*>(&statusvalue_),
-          reinterpret_cast<char*>(&other->statusvalue_));
+      PROTOBUF_FIELD_OFFSET(RegulatorStatus, _impl_.regulatoreventandstatusancr_)
+      + sizeof(RegulatorStatus::_impl_.regulatoreventandstatusancr_)
+      - PROTOBUF_FIELD_OFFSET(RegulatorStatus, _impl_.statusvalue_)>(
+          reinterpret_cast<char*>(&_impl_.statusvalue_),
+          reinterpret_cast<char*>(&other->_impl_.statusvalue_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegulatorStatus::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter, &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+      file_level_metadata_regulatormodule_2fregulatormodule_2eproto[17]);
 }
-
-
 // ===================================================================
 
 class RegulatorStatusProfile::_Internal {
@@ -7078,264 +7019,251 @@ class RegulatorStatusProfile::_Internal {
 
 const ::commonmodule::StatusMessageInfo&
 RegulatorStatusProfile::_Internal::statusmessageinfo(const RegulatorStatusProfile* msg) {
-  return *msg->statusmessageinfo_;
+  return *msg->_impl_.statusmessageinfo_;
 }
 const ::regulatormodule::RegulatorStatus&
 RegulatorStatusProfile::_Internal::regulatorstatus(const RegulatorStatusProfile* msg) {
-  return *msg->regulatorstatus_;
+  return *msg->_impl_.regulatorstatus_;
 }
 const ::regulatormodule::RegulatorSystem&
 RegulatorStatusProfile::_Internal::regulatorsystem(const RegulatorStatusProfile* msg) {
-  return *msg->regulatorsystem_;
+  return *msg->_impl_.regulatorsystem_;
 }
 void RegulatorStatusProfile::clear_statusmessageinfo() {
-  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
-    delete statusmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusmessageinfo_ != nullptr) {
+    delete _impl_.statusmessageinfo_;
   }
-  statusmessageinfo_ = nullptr;
+  _impl_.statusmessageinfo_ = nullptr;
 }
 RegulatorStatusProfile::RegulatorStatusProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:regulatormodule.RegulatorStatusProfile)
 }
 RegulatorStatusProfile::RegulatorStatusProfile(const RegulatorStatusProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  RegulatorStatusProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusmessageinfo_){nullptr}
+    , decltype(_impl_.regulatorstatus_){nullptr}
+    , decltype(_impl_.regulatorsystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_statusmessageinfo()) {
-    statusmessageinfo_ = new ::commonmodule::StatusMessageInfo(*from.statusmessageinfo_);
-  } else {
-    statusmessageinfo_ = nullptr;
+    _this->_impl_.statusmessageinfo_ = new ::commonmodule::StatusMessageInfo(*from._impl_.statusmessageinfo_);
   }
   if (from._internal_has_regulatorstatus()) {
-    regulatorstatus_ = new ::regulatormodule::RegulatorStatus(*from.regulatorstatus_);
-  } else {
-    regulatorstatus_ = nullptr;
+    _this->_impl_.regulatorstatus_ = new ::regulatormodule::RegulatorStatus(*from._impl_.regulatorstatus_);
   }
   if (from._internal_has_regulatorsystem()) {
-    regulatorsystem_ = new ::regulatormodule::RegulatorSystem(*from.regulatorsystem_);
-  } else {
-    regulatorsystem_ = nullptr;
+    _this->_impl_.regulatorsystem_ = new ::regulatormodule::RegulatorSystem(*from._impl_.regulatorsystem_);
   }
   // @@protoc_insertion_point(copy_constructor:regulatormodule.RegulatorStatusProfile)
 }
 
-void RegulatorStatusProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&statusmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&regulatorsystem_) -
-    reinterpret_cast<char*>(&statusmessageinfo_)) + sizeof(regulatorsystem_));
+inline void RegulatorStatusProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusmessageinfo_){nullptr}
+    , decltype(_impl_.regulatorstatus_){nullptr}
+    , decltype(_impl_.regulatorsystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 RegulatorStatusProfile::~RegulatorStatusProfile() {
   // @@protoc_insertion_point(destructor:regulatormodule.RegulatorStatusProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void RegulatorStatusProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete statusmessageinfo_;
-  if (this != internal_default_instance()) delete regulatorstatus_;
-  if (this != internal_default_instance()) delete regulatorsystem_;
+inline void RegulatorStatusProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.statusmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.regulatorstatus_;
+  if (this != internal_default_instance()) delete _impl_.regulatorsystem_;
 }
 
-void RegulatorStatusProfile::ArenaDtor(void* object) {
-  RegulatorStatusProfile* _this = reinterpret_cast< RegulatorStatusProfile* >(object);
-  (void)_this;
-}
-void RegulatorStatusProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void RegulatorStatusProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void RegulatorStatusProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:regulatormodule.RegulatorStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
-    delete statusmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusmessageinfo_ != nullptr) {
+    delete _impl_.statusmessageinfo_;
   }
-  statusmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && regulatorstatus_ != nullptr) {
-    delete regulatorstatus_;
+  _impl_.statusmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.regulatorstatus_ != nullptr) {
+    delete _impl_.regulatorstatus_;
   }
-  regulatorstatus_ = nullptr;
-  if (GetArena() == nullptr && regulatorsystem_ != nullptr) {
-    delete regulatorsystem_;
+  _impl_.regulatorstatus_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.regulatorsystem_ != nullptr) {
+    delete _impl_.regulatorsystem_;
   }
-  regulatorsystem_ = nullptr;
+  _impl_.regulatorsystem_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RegulatorStatusProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* RegulatorStatusProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_statusmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .regulatormodule.RegulatorStatus regulatorStatus = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_regulatorstatus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .regulatormodule.RegulatorSystem regulatorSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_regulatorsystem(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* RegulatorStatusProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* RegulatorStatusProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:regulatormodule.RegulatorStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_statusmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::statusmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::statusmessageinfo(this),
+        _Internal::statusmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .regulatormodule.RegulatorStatus regulatorStatus = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_regulatorstatus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_regulatorstatus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::regulatorstatus(this), target, stream);
+      InternalWriteMessage(2, _Internal::regulatorstatus(this),
+        _Internal::regulatorstatus(this).GetCachedSize(), target, stream);
   }
 
   // .regulatormodule.RegulatorSystem regulatorSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_regulatorsystem()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_regulatorsystem()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::regulatorsystem(this), target, stream);
+      InternalWriteMessage(3, _Internal::regulatorsystem(this),
+        _Internal::regulatorsystem(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:regulatormodule.RegulatorStatusProfile)
   return target;
 }
 
-size_t RegulatorStatusProfile::ByteSizeLong() const {
+::size_t RegulatorStatusProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:regulatormodule.RegulatorStatusProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusmessageinfo()) {
+  if (this->_internal_has_statusmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *statusmessageinfo_);
+        *_impl_.statusmessageinfo_);
   }
 
   // .regulatormodule.RegulatorStatus regulatorStatus = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_regulatorstatus()) {
+  if (this->_internal_has_regulatorstatus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *regulatorstatus_);
+        *_impl_.regulatorstatus_);
   }
 
   // .regulatormodule.RegulatorSystem regulatorSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_regulatorsystem()) {
+  if (this->_internal_has_regulatorsystem()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *regulatorsystem_);
+        *_impl_.regulatorsystem_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void RegulatorStatusProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:regulatormodule.RegulatorStatusProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const RegulatorStatusProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RegulatorStatusProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:regulatormodule.RegulatorStatusProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:regulatormodule.RegulatorStatusProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RegulatorStatusProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    RegulatorStatusProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RegulatorStatusProfile::GetClassData() const { return &_class_data_; }
 
-void RegulatorStatusProfile::MergeFrom(const RegulatorStatusProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorStatusProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void RegulatorStatusProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<RegulatorStatusProfile*>(&to_msg);
+  auto& from = static_cast<const RegulatorStatusProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:regulatormodule.RegulatorStatusProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_statusmessageinfo()) {
-    _internal_mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(from._internal_statusmessageinfo());
+  if (from._internal_has_statusmessageinfo()) {
+    _this->_internal_mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(
+        from._internal_statusmessageinfo());
   }
-  if (from.has_regulatorstatus()) {
-    _internal_mutable_regulatorstatus()->::regulatormodule::RegulatorStatus::MergeFrom(from._internal_regulatorstatus());
+  if (from._internal_has_regulatorstatus()) {
+    _this->_internal_mutable_regulatorstatus()->::regulatormodule::RegulatorStatus::MergeFrom(
+        from._internal_regulatorstatus());
   }
-  if (from.has_regulatorsystem()) {
-    _internal_mutable_regulatorsystem()->::regulatormodule::RegulatorSystem::MergeFrom(from._internal_regulatorsystem());
+  if (from._internal_has_regulatorsystem()) {
+    _this->_internal_mutable_regulatorsystem()->::regulatormodule::RegulatorSystem::MergeFrom(
+        from._internal_regulatorsystem());
   }
-}
-
-void RegulatorStatusProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:regulatormodule.RegulatorStatusProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void RegulatorStatusProfile::CopyFrom(const RegulatorStatusProfile& from) {
@@ -7351,81 +7279,99 @@ bool RegulatorStatusProfile::IsInitialized() const {
 
 void RegulatorStatusProfile::InternalSwap(RegulatorStatusProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RegulatorStatusProfile, regulatorsystem_)
-      + sizeof(RegulatorStatusProfile::regulatorsystem_)
-      - PROTOBUF_FIELD_OFFSET(RegulatorStatusProfile, statusmessageinfo_)>(
-          reinterpret_cast<char*>(&statusmessageinfo_),
-          reinterpret_cast<char*>(&other->statusmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(RegulatorStatusProfile, _impl_.regulatorsystem_)
+      + sizeof(RegulatorStatusProfile::_impl_.regulatorsystem_)
+      - PROTOBUF_FIELD_OFFSET(RegulatorStatusProfile, _impl_.statusmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.statusmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.statusmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RegulatorStatusProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_regulatormodule_2fregulatormodule_2eproto_getter, &descriptor_table_regulatormodule_2fregulatormodule_2eproto_once,
+      file_level_metadata_regulatormodule_2fregulatormodule_2eproto[18]);
 }
-
-
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace regulatormodule
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::regulatormodule::DirectionalATCC* Arena::CreateMaybeMessage< ::regulatormodule::DirectionalATCC >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::regulatormodule::DirectionalATCC*
+Arena::CreateMaybeMessage< ::regulatormodule::DirectionalATCC >(Arena* arena) {
   return Arena::CreateMessageInternal< ::regulatormodule::DirectionalATCC >(arena);
 }
-template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorControlATCC* Arena::CreateMaybeMessage< ::regulatormodule::RegulatorControlATCC >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorControlATCC*
+Arena::CreateMaybeMessage< ::regulatormodule::RegulatorControlATCC >(Arena* arena) {
   return Arena::CreateMessageInternal< ::regulatormodule::RegulatorControlATCC >(arena);
 }
-template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorPoint* Arena::CreateMaybeMessage< ::regulatormodule::RegulatorPoint >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorPoint*
+Arena::CreateMaybeMessage< ::regulatormodule::RegulatorPoint >(Arena* arena) {
   return Arena::CreateMessageInternal< ::regulatormodule::RegulatorPoint >(arena);
 }
-template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorCSG* Arena::CreateMaybeMessage< ::regulatormodule::RegulatorCSG >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorCSG*
+Arena::CreateMaybeMessage< ::regulatormodule::RegulatorCSG >(Arena* arena) {
   return Arena::CreateMessageInternal< ::regulatormodule::RegulatorCSG >(arena);
 }
-template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorControlScheduleFSCH* Arena::CreateMaybeMessage< ::regulatormodule::RegulatorControlScheduleFSCH >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorControlScheduleFSCH*
+Arena::CreateMaybeMessage< ::regulatormodule::RegulatorControlScheduleFSCH >(Arena* arena) {
   return Arena::CreateMessageInternal< ::regulatormodule::RegulatorControlScheduleFSCH >(arena);
 }
-template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorControlFSCC* Arena::CreateMaybeMessage< ::regulatormodule::RegulatorControlFSCC >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorControlFSCC*
+Arena::CreateMaybeMessage< ::regulatormodule::RegulatorControlFSCC >(Arena* arena) {
   return Arena::CreateMessageInternal< ::regulatormodule::RegulatorControlFSCC >(arena);
 }
-template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorControl* Arena::CreateMaybeMessage< ::regulatormodule::RegulatorControl >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorControl*
+Arena::CreateMaybeMessage< ::regulatormodule::RegulatorControl >(Arena* arena) {
   return Arena::CreateMessageInternal< ::regulatormodule::RegulatorControl >(arena);
 }
-template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorSystem* Arena::CreateMaybeMessage< ::regulatormodule::RegulatorSystem >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorSystem*
+Arena::CreateMaybeMessage< ::regulatormodule::RegulatorSystem >(Arena* arena) {
   return Arena::CreateMessageInternal< ::regulatormodule::RegulatorSystem >(arena);
 }
-template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorControlProfile* Arena::CreateMaybeMessage< ::regulatormodule::RegulatorControlProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorControlProfile*
+Arena::CreateMaybeMessage< ::regulatormodule::RegulatorControlProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::regulatormodule::RegulatorControlProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorDiscreteControl* Arena::CreateMaybeMessage< ::regulatormodule::RegulatorDiscreteControl >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorDiscreteControl*
+Arena::CreateMaybeMessage< ::regulatormodule::RegulatorDiscreteControl >(Arena* arena) {
   return Arena::CreateMessageInternal< ::regulatormodule::RegulatorDiscreteControl >(arena);
 }
-template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorDiscreteControlProfile* Arena::CreateMaybeMessage< ::regulatormodule::RegulatorDiscreteControlProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorDiscreteControlProfile*
+Arena::CreateMaybeMessage< ::regulatormodule::RegulatorDiscreteControlProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::regulatormodule::RegulatorDiscreteControlProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorEventAndStatusATCC* Arena::CreateMaybeMessage< ::regulatormodule::RegulatorEventAndStatusATCC >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorEventAndStatusATCC*
+Arena::CreateMaybeMessage< ::regulatormodule::RegulatorEventAndStatusATCC >(Arena* arena) {
   return Arena::CreateMessageInternal< ::regulatormodule::RegulatorEventAndStatusATCC >(arena);
 }
-template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorEventAndStatusANCR* Arena::CreateMaybeMessage< ::regulatormodule::RegulatorEventAndStatusANCR >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorEventAndStatusANCR*
+Arena::CreateMaybeMessage< ::regulatormodule::RegulatorEventAndStatusANCR >(Arena* arena) {
   return Arena::CreateMessageInternal< ::regulatormodule::RegulatorEventAndStatusANCR >(arena);
 }
-template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorEvent* Arena::CreateMaybeMessage< ::regulatormodule::RegulatorEvent >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorEvent*
+Arena::CreateMaybeMessage< ::regulatormodule::RegulatorEvent >(Arena* arena) {
   return Arena::CreateMessageInternal< ::regulatormodule::RegulatorEvent >(arena);
 }
-template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorEventProfile* Arena::CreateMaybeMessage< ::regulatormodule::RegulatorEventProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorEventProfile*
+Arena::CreateMaybeMessage< ::regulatormodule::RegulatorEventProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::regulatormodule::RegulatorEventProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorReading* Arena::CreateMaybeMessage< ::regulatormodule::RegulatorReading >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorReading*
+Arena::CreateMaybeMessage< ::regulatormodule::RegulatorReading >(Arena* arena) {
   return Arena::CreateMessageInternal< ::regulatormodule::RegulatorReading >(arena);
 }
-template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorReadingProfile* Arena::CreateMaybeMessage< ::regulatormodule::RegulatorReadingProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorReadingProfile*
+Arena::CreateMaybeMessage< ::regulatormodule::RegulatorReadingProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::regulatormodule::RegulatorReadingProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorStatus* Arena::CreateMaybeMessage< ::regulatormodule::RegulatorStatus >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorStatus*
+Arena::CreateMaybeMessage< ::regulatormodule::RegulatorStatus >(Arena* arena) {
   return Arena::CreateMessageInternal< ::regulatormodule::RegulatorStatus >(arena);
 }
-template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorStatusProfile* Arena::CreateMaybeMessage< ::regulatormodule::RegulatorStatusProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::regulatormodule::RegulatorStatusProfile*
+Arena::CreateMaybeMessage< ::regulatormodule::RegulatorStatusProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::regulatormodule::RegulatorStatusProfile >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
-
 // @@protoc_insertion_point(global_scope)
-#include <google/protobuf/port_undef.inc>
+#include "google/protobuf/port_undef.inc"

@@ -4,513 +4,619 @@
 #include "loadmodule/loadmodule.pb.h"
 
 #include <algorithm>
-
-#include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include "google/protobuf/io/coded_stream.h"
+#include "google/protobuf/extension_set.h"
+#include "google/protobuf/wire_format_lite.h"
+#include "google/protobuf/descriptor.h"
+#include "google/protobuf/generated_message_reflection.h"
+#include "google/protobuf/reflection_ops.h"
+#include "google/protobuf/wire_format.h"
 // @@protoc_insertion_point(includes)
-#include <google/protobuf/port_def.inc>
 
+// Must be included last.
+#include "google/protobuf/port_def.inc"
 PROTOBUF_PRAGMA_INIT_SEG
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = ::PROTOBUF_NAMESPACE_ID::internal;
 namespace loadmodule {
-constexpr LoadPoint::LoadPoint(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : ramprates_(nullptr)
-  , reactivepwrsetpointenabled_(nullptr)
-  , realpwrsetpointenabled_(nullptr)
-  , reset_(nullptr)
-  , state_(nullptr)
-  , starttime_(nullptr){}
+PROTOBUF_CONSTEXPR LoadPoint::LoadPoint(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.ramprates_)*/nullptr
+  , /*decltype(_impl_.reactivepwrsetpointenabled_)*/nullptr
+  , /*decltype(_impl_.realpwrsetpointenabled_)*/nullptr
+  , /*decltype(_impl_.reset_)*/nullptr
+  , /*decltype(_impl_.state_)*/nullptr
+  , /*decltype(_impl_.starttime_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LoadPointDefaultTypeInternal {
-  constexpr LoadPointDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR LoadPointDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~LoadPointDefaultTypeInternal() {}
   union {
     LoadPoint _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LoadPointDefaultTypeInternal _LoadPoint_default_instance_;
-constexpr LoadCSG::LoadCSG(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : crvpts_(){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadPointDefaultTypeInternal _LoadPoint_default_instance_;
+PROTOBUF_CONSTEXPR LoadCSG::LoadCSG(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.crvpts_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LoadCSGDefaultTypeInternal {
-  constexpr LoadCSGDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR LoadCSGDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~LoadCSGDefaultTypeInternal() {}
   union {
     LoadCSG _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LoadCSGDefaultTypeInternal _LoadCSG_default_instance_;
-constexpr LoadControlScheduleFSCH::LoadControlScheduleFSCH(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : valdcsg_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadCSGDefaultTypeInternal _LoadCSG_default_instance_;
+PROTOBUF_CONSTEXPR LoadControlScheduleFSCH::LoadControlScheduleFSCH(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.valdcsg_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LoadControlScheduleFSCHDefaultTypeInternal {
-  constexpr LoadControlScheduleFSCHDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR LoadControlScheduleFSCHDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~LoadControlScheduleFSCHDefaultTypeInternal() {}
   union {
     LoadControlScheduleFSCH _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LoadControlScheduleFSCHDefaultTypeInternal _LoadControlScheduleFSCH_default_instance_;
-constexpr LoadControlFSCC::LoadControlFSCC(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlfscc_(nullptr)
-  , loadcontrolschedulefsch_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadControlScheduleFSCHDefaultTypeInternal _LoadControlScheduleFSCH_default_instance_;
+PROTOBUF_CONSTEXPR LoadControlFSCC::LoadControlFSCC(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlfscc_)*/nullptr
+  , /*decltype(_impl_.loadcontrolschedulefsch_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LoadControlFSCCDefaultTypeInternal {
-  constexpr LoadControlFSCCDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR LoadControlFSCCDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~LoadControlFSCCDefaultTypeInternal() {}
   union {
     LoadControlFSCC _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LoadControlFSCCDefaultTypeInternal _LoadControlFSCC_default_instance_;
-constexpr LoadControl::LoadControl(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlvalue_(nullptr)
-  , check_(nullptr)
-  , loadcontrolfscc_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadControlFSCCDefaultTypeInternal _LoadControlFSCC_default_instance_;
+PROTOBUF_CONSTEXPR LoadControl::LoadControl(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlvalue_)*/nullptr
+  , /*decltype(_impl_.check_)*/nullptr
+  , /*decltype(_impl_.loadcontrolfscc_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LoadControlDefaultTypeInternal {
-  constexpr LoadControlDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR LoadControlDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~LoadControlDefaultTypeInternal() {}
   union {
     LoadControl _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LoadControlDefaultTypeInternal _LoadControl_default_instance_;
-constexpr LoadControlProfile::LoadControlProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlmessageinfo_(nullptr)
-  , energyconsumer_(nullptr)
-  , loadcontrol_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadControlDefaultTypeInternal _LoadControl_default_instance_;
+PROTOBUF_CONSTEXPR LoadControlProfile::LoadControlProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlmessageinfo_)*/nullptr
+  , /*decltype(_impl_.energyconsumer_)*/nullptr
+  , /*decltype(_impl_.loadcontrol_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LoadControlProfileDefaultTypeInternal {
-  constexpr LoadControlProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR LoadControlProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~LoadControlProfileDefaultTypeInternal() {}
   union {
     LoadControlProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LoadControlProfileDefaultTypeInternal _LoadControlProfile_default_instance_;
-constexpr LoadPointStatus::LoadPointStatus(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : ramprates_(nullptr)
-  , reactivepwrsetpointenabled_(nullptr)
-  , realpwrsetpointenabled_(nullptr)
-  , reset_(nullptr)
-  , state_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadControlProfileDefaultTypeInternal _LoadControlProfile_default_instance_;
+PROTOBUF_CONSTEXPR LoadPointStatus::LoadPointStatus(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.ramprates_)*/nullptr
+  , /*decltype(_impl_.reactivepwrsetpointenabled_)*/nullptr
+  , /*decltype(_impl_.realpwrsetpointenabled_)*/nullptr
+  , /*decltype(_impl_.reset_)*/nullptr
+  , /*decltype(_impl_.state_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LoadPointStatusDefaultTypeInternal {
-  constexpr LoadPointStatusDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR LoadPointStatusDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~LoadPointStatusDefaultTypeInternal() {}
   union {
     LoadPointStatus _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LoadPointStatusDefaultTypeInternal _LoadPointStatus_default_instance_;
-constexpr LoadEventAndStatusZGLD::LoadEventAndStatusZGLD(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnodeforeventandstatus_(nullptr)
-  , dynamictest_(nullptr)
-  , emgstop_(nullptr)
-  , pointstatus_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadPointStatusDefaultTypeInternal _LoadPointStatus_default_instance_;
+PROTOBUF_CONSTEXPR LoadEventAndStatusZGLD::LoadEventAndStatusZGLD(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.logicalnodeforeventandstatus_)*/nullptr
+  , /*decltype(_impl_.dynamictest_)*/nullptr
+  , /*decltype(_impl_.emgstop_)*/nullptr
+  , /*decltype(_impl_.pointstatus_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LoadEventAndStatusZGLDDefaultTypeInternal {
-  constexpr LoadEventAndStatusZGLDDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR LoadEventAndStatusZGLDDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~LoadEventAndStatusZGLDDefaultTypeInternal() {}
   union {
     LoadEventAndStatusZGLD _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LoadEventAndStatusZGLDDefaultTypeInternal _LoadEventAndStatusZGLD_default_instance_;
-constexpr LoadEventZGLD::LoadEventZGLD(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : loadeventandstatuszgld_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadEventAndStatusZGLDDefaultTypeInternal _LoadEventAndStatusZGLD_default_instance_;
+PROTOBUF_CONSTEXPR LoadEventZGLD::LoadEventZGLD(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.loadeventandstatuszgld_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LoadEventZGLDDefaultTypeInternal {
-  constexpr LoadEventZGLDDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR LoadEventZGLDDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~LoadEventZGLDDefaultTypeInternal() {}
   union {
     LoadEventZGLD _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LoadEventZGLDDefaultTypeInternal _LoadEventZGLD_default_instance_;
-constexpr LoadEvent::LoadEvent(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : eventvalue_(nullptr)
-  , loadeventzgld_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadEventZGLDDefaultTypeInternal _LoadEventZGLD_default_instance_;
+PROTOBUF_CONSTEXPR LoadEvent::LoadEvent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.eventvalue_)*/nullptr
+  , /*decltype(_impl_.loadeventzgld_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LoadEventDefaultTypeInternal {
-  constexpr LoadEventDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR LoadEventDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~LoadEventDefaultTypeInternal() {}
   union {
     LoadEvent _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LoadEventDefaultTypeInternal _LoadEvent_default_instance_;
-constexpr LoadEventProfile::LoadEventProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : eventmessageinfo_(nullptr)
-  , energyconsumer_(nullptr)
-  , loadevent_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadEventDefaultTypeInternal _LoadEvent_default_instance_;
+PROTOBUF_CONSTEXPR LoadEventProfile::LoadEventProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.eventmessageinfo_)*/nullptr
+  , /*decltype(_impl_.energyconsumer_)*/nullptr
+  , /*decltype(_impl_.loadevent_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LoadEventProfileDefaultTypeInternal {
-  constexpr LoadEventProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR LoadEventProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~LoadEventProfileDefaultTypeInternal() {}
   union {
     LoadEventProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LoadEventProfileDefaultTypeInternal _LoadEventProfile_default_instance_;
-constexpr LoadReading::LoadReading(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : conductingequipmentterminalreading_(nullptr)
-  , phasemmtn_(nullptr)
-  , readingmmtr_(nullptr)
-  , readingmmxu_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadEventProfileDefaultTypeInternal _LoadEventProfile_default_instance_;
+PROTOBUF_CONSTEXPR LoadReading::LoadReading(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.conductingequipmentterminalreading_)*/nullptr
+  , /*decltype(_impl_.phasemmtn_)*/nullptr
+  , /*decltype(_impl_.readingmmtr_)*/nullptr
+  , /*decltype(_impl_.readingmmxu_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LoadReadingDefaultTypeInternal {
-  constexpr LoadReadingDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR LoadReadingDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~LoadReadingDefaultTypeInternal() {}
   union {
     LoadReading _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LoadReadingDefaultTypeInternal _LoadReading_default_instance_;
-constexpr LoadReadingProfile::LoadReadingProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : readingmessageinfo_(nullptr)
-  , energyconsumer_(nullptr)
-  , loadreading_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadReadingDefaultTypeInternal _LoadReading_default_instance_;
+PROTOBUF_CONSTEXPR LoadReadingProfile::LoadReadingProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.readingmessageinfo_)*/nullptr
+  , /*decltype(_impl_.energyconsumer_)*/nullptr
+  , /*decltype(_impl_.loadreading_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LoadReadingProfileDefaultTypeInternal {
-  constexpr LoadReadingProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR LoadReadingProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~LoadReadingProfileDefaultTypeInternal() {}
   union {
     LoadReadingProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LoadReadingProfileDefaultTypeInternal _LoadReadingProfile_default_instance_;
-constexpr LoadStatusZGLD::LoadStatusZGLD(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : loadeventandstatuszgld_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadReadingProfileDefaultTypeInternal _LoadReadingProfile_default_instance_;
+PROTOBUF_CONSTEXPR LoadStatusZGLD::LoadStatusZGLD(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.loadeventandstatuszgld_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LoadStatusZGLDDefaultTypeInternal {
-  constexpr LoadStatusZGLDDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR LoadStatusZGLDDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~LoadStatusZGLDDefaultTypeInternal() {}
   union {
     LoadStatusZGLD _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LoadStatusZGLDDefaultTypeInternal _LoadStatusZGLD_default_instance_;
-constexpr LoadStatus::LoadStatus(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : statusvalue_(nullptr)
-  , isuncontrollable_(nullptr)
-  , loadstatuszgld_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadStatusZGLDDefaultTypeInternal _LoadStatusZGLD_default_instance_;
+PROTOBUF_CONSTEXPR LoadStatus::LoadStatus(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.statusvalue_)*/nullptr
+  , /*decltype(_impl_.isuncontrollable_)*/nullptr
+  , /*decltype(_impl_.loadstatuszgld_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LoadStatusDefaultTypeInternal {
-  constexpr LoadStatusDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR LoadStatusDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~LoadStatusDefaultTypeInternal() {}
   union {
     LoadStatus _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LoadStatusDefaultTypeInternal _LoadStatus_default_instance_;
-constexpr LoadStatusProfile::LoadStatusProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : statusmessageinfo_(nullptr)
-  , energyconsumer_(nullptr)
-  , loadstatus_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadStatusDefaultTypeInternal _LoadStatus_default_instance_;
+PROTOBUF_CONSTEXPR LoadStatusProfile::LoadStatusProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.statusmessageinfo_)*/nullptr
+  , /*decltype(_impl_.energyconsumer_)*/nullptr
+  , /*decltype(_impl_.loadstatus_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct LoadStatusProfileDefaultTypeInternal {
-  constexpr LoadStatusProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR LoadStatusProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~LoadStatusProfileDefaultTypeInternal() {}
   union {
     LoadStatusProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT LoadStatusProfileDefaultTypeInternal _LoadStatusProfile_default_instance_;
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadStatusProfileDefaultTypeInternal _LoadStatusProfile_default_instance_;
 }  // namespace loadmodule
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_loadmodule_2floadmodule_2eproto[16];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_loadmodule_2floadmodule_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_loadmodule_2floadmodule_2eproto = nullptr;
+static ::_pb::Metadata file_level_metadata_loadmodule_2floadmodule_2eproto[16];
+static constexpr const ::_pb::EnumDescriptor**
+    file_level_enum_descriptors_loadmodule_2floadmodule_2eproto = nullptr;
+static constexpr const ::_pb::ServiceDescriptor**
+    file_level_service_descriptors_loadmodule_2floadmodule_2eproto = nullptr;
+const ::uint32_t TableStruct_loadmodule_2floadmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
+    protodesc_cold) = {
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPoint, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPoint, _impl_.ramprates_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPoint, _impl_.reactivepwrsetpointenabled_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPoint, _impl_.realpwrsetpointenabled_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPoint, _impl_.reset_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPoint, _impl_.state_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPoint, _impl_.starttime_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadCSG, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadCSG, _impl_.crvpts_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControlScheduleFSCH, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControlScheduleFSCH, _impl_.valdcsg_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControlFSCC, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControlFSCC, _impl_.controlfscc_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControlFSCC, _impl_.loadcontrolschedulefsch_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControl, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControl, _impl_.controlvalue_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControl, _impl_.check_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControl, _impl_.loadcontrolfscc_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControlProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControlProfile, _impl_.controlmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControlProfile, _impl_.energyconsumer_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControlProfile, _impl_.loadcontrol_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPointStatus, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPointStatus, _impl_.ramprates_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPointStatus, _impl_.reactivepwrsetpointenabled_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPointStatus, _impl_.realpwrsetpointenabled_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPointStatus, _impl_.reset_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPointStatus, _impl_.state_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventAndStatusZGLD, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventAndStatusZGLD, _impl_.logicalnodeforeventandstatus_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventAndStatusZGLD, _impl_.dynamictest_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventAndStatusZGLD, _impl_.emgstop_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventAndStatusZGLD, _impl_.pointstatus_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventZGLD, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventZGLD, _impl_.loadeventandstatuszgld_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEvent, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEvent, _impl_.eventvalue_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEvent, _impl_.loadeventzgld_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventProfile, _impl_.eventmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventProfile, _impl_.energyconsumer_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventProfile, _impl_.loadevent_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadReading, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadReading, _impl_.conductingequipmentterminalreading_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadReading, _impl_.phasemmtn_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadReading, _impl_.readingmmtr_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadReading, _impl_.readingmmxu_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadReadingProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadReadingProfile, _impl_.readingmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadReadingProfile, _impl_.energyconsumer_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadReadingProfile, _impl_.loadreading_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatusZGLD, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatusZGLD, _impl_.loadeventandstatuszgld_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatus, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatus, _impl_.statusvalue_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatus, _impl_.isuncontrollable_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatus, _impl_.loadstatuszgld_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatusProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatusProfile, _impl_.statusmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatusProfile, _impl_.energyconsumer_),
+    PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatusProfile, _impl_.loadstatus_),
+};
 
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_loadmodule_2floadmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPoint, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPoint, ramprates_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPoint, reactivepwrsetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPoint, realpwrsetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPoint, reset_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPoint, state_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPoint, starttime_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadCSG, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadCSG, crvpts_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControlScheduleFSCH, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControlScheduleFSCH, valdcsg_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControlFSCC, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControlFSCC, controlfscc_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControlFSCC, loadcontrolschedulefsch_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControl, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControl, controlvalue_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControl, check_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControl, loadcontrolfscc_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControlProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControlProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControlProfile, energyconsumer_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadControlProfile, loadcontrol_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPointStatus, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPointStatus, ramprates_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPointStatus, reactivepwrsetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPointStatus, realpwrsetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPointStatus, reset_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadPointStatus, state_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventAndStatusZGLD, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventAndStatusZGLD, logicalnodeforeventandstatus_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventAndStatusZGLD, dynamictest_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventAndStatusZGLD, emgstop_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventAndStatusZGLD, pointstatus_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventZGLD, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventZGLD, loadeventandstatuszgld_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEvent, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEvent, eventvalue_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEvent, loadeventzgld_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventProfile, eventmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventProfile, energyconsumer_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadEventProfile, loadevent_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadReading, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadReading, conductingequipmentterminalreading_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadReading, phasemmtn_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadReading, readingmmtr_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadReading, readingmmxu_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadReadingProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadReadingProfile, readingmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadReadingProfile, energyconsumer_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadReadingProfile, loadreading_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatusZGLD, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatusZGLD, loadeventandstatuszgld_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatus, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatus, statusvalue_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatus, isuncontrollable_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatus, loadstatuszgld_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatusProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatusProfile, statusmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatusProfile, energyconsumer_),
-  PROTOBUF_FIELD_OFFSET(::loadmodule::LoadStatusProfile, loadstatus_),
-};
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::loadmodule::LoadPoint)},
-  { 11, -1, sizeof(::loadmodule::LoadCSG)},
-  { 17, -1, sizeof(::loadmodule::LoadControlScheduleFSCH)},
-  { 23, -1, sizeof(::loadmodule::LoadControlFSCC)},
-  { 30, -1, sizeof(::loadmodule::LoadControl)},
-  { 38, -1, sizeof(::loadmodule::LoadControlProfile)},
-  { 46, -1, sizeof(::loadmodule::LoadPointStatus)},
-  { 56, -1, sizeof(::loadmodule::LoadEventAndStatusZGLD)},
-  { 65, -1, sizeof(::loadmodule::LoadEventZGLD)},
-  { 71, -1, sizeof(::loadmodule::LoadEvent)},
-  { 78, -1, sizeof(::loadmodule::LoadEventProfile)},
-  { 86, -1, sizeof(::loadmodule::LoadReading)},
-  { 95, -1, sizeof(::loadmodule::LoadReadingProfile)},
-  { 103, -1, sizeof(::loadmodule::LoadStatusZGLD)},
-  { 109, -1, sizeof(::loadmodule::LoadStatus)},
-  { 117, -1, sizeof(::loadmodule::LoadStatusProfile)},
+static const ::_pbi::MigrationSchema
+    schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+        { 0, -1, -1, sizeof(::loadmodule::LoadPoint)},
+        { 14, -1, -1, sizeof(::loadmodule::LoadCSG)},
+        { 23, -1, -1, sizeof(::loadmodule::LoadControlScheduleFSCH)},
+        { 32, -1, -1, sizeof(::loadmodule::LoadControlFSCC)},
+        { 42, -1, -1, sizeof(::loadmodule::LoadControl)},
+        { 53, -1, -1, sizeof(::loadmodule::LoadControlProfile)},
+        { 64, -1, -1, sizeof(::loadmodule::LoadPointStatus)},
+        { 77, -1, -1, sizeof(::loadmodule::LoadEventAndStatusZGLD)},
+        { 89, -1, -1, sizeof(::loadmodule::LoadEventZGLD)},
+        { 98, -1, -1, sizeof(::loadmodule::LoadEvent)},
+        { 108, -1, -1, sizeof(::loadmodule::LoadEventProfile)},
+        { 119, -1, -1, sizeof(::loadmodule::LoadReading)},
+        { 131, -1, -1, sizeof(::loadmodule::LoadReadingProfile)},
+        { 142, -1, -1, sizeof(::loadmodule::LoadStatusZGLD)},
+        { 151, -1, -1, sizeof(::loadmodule::LoadStatus)},
+        { 162, -1, -1, sizeof(::loadmodule::LoadStatusProfile)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::loadmodule::_LoadPoint_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::loadmodule::_LoadCSG_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::loadmodule::_LoadControlScheduleFSCH_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::loadmodule::_LoadControlFSCC_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::loadmodule::_LoadControl_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::loadmodule::_LoadControlProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::loadmodule::_LoadPointStatus_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::loadmodule::_LoadEventAndStatusZGLD_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::loadmodule::_LoadEventZGLD_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::loadmodule::_LoadEvent_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::loadmodule::_LoadEventProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::loadmodule::_LoadReading_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::loadmodule::_LoadReadingProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::loadmodule::_LoadStatusZGLD_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::loadmodule::_LoadStatus_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::loadmodule::_LoadStatusProfile_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+    &::loadmodule::_LoadPoint_default_instance_._instance,
+    &::loadmodule::_LoadCSG_default_instance_._instance,
+    &::loadmodule::_LoadControlScheduleFSCH_default_instance_._instance,
+    &::loadmodule::_LoadControlFSCC_default_instance_._instance,
+    &::loadmodule::_LoadControl_default_instance_._instance,
+    &::loadmodule::_LoadControlProfile_default_instance_._instance,
+    &::loadmodule::_LoadPointStatus_default_instance_._instance,
+    &::loadmodule::_LoadEventAndStatusZGLD_default_instance_._instance,
+    &::loadmodule::_LoadEventZGLD_default_instance_._instance,
+    &::loadmodule::_LoadEvent_default_instance_._instance,
+    &::loadmodule::_LoadEventProfile_default_instance_._instance,
+    &::loadmodule::_LoadReading_default_instance_._instance,
+    &::loadmodule::_LoadReadingProfile_default_instance_._instance,
+    &::loadmodule::_LoadStatusZGLD_default_instance_._instance,
+    &::loadmodule::_LoadStatus_default_instance_._instance,
+    &::loadmodule::_LoadStatusProfile_default_instance_._instance,
+};
+const char descriptor_table_protodef_loadmodule_2floadmodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+    "\n\033loadmodule/loadmodule.proto\022\nloadmodul"
+    "e\032\tuml.proto\032\036google/protobuf/wrappers.p"
+    "roto\032\037commonmodule/commonmodule.proto\"\305\002"
+    "\n\tLoadPoint\022)\n\trampRates\030\001 \001(\0132\026.commonm"
+    "odule.RampRate\022<\n\032reactivePwrSetPointEna"
+    "bled\030\002 \001(\0132\030.commonmodule.ControlSPC\0228\n\026"
+    "realPwrSetPointEnabled\030\003 \001(\0132\030.commonmod"
+    "ule.ControlSPC\022\'\n\005reset\030\004 \001(\0132\030.commonmo"
+    "dule.ControlSPC\022/\n\005state\030\005 \001(\0132 .commonm"
+    "odule.Optional_StateKind\022;\n\tstartTime\030\006 "
+    "\001(\0132\036.commonmodule.ControlTimestampB\010\210\265\030"
+    "\001\220\265\030\001\":\n\007LoadCSG\022/\n\006crvPts\030\001 \003(\0132\025.loadm"
+    "odule.LoadPointB\010\210\265\030\001\220\265\030\001\"I\n\027LoadControl"
+    "ScheduleFSCH\022.\n\007ValDCSG\030\001 \001(\0132\023.loadmodu"
+    "le.LoadCSGB\010\210\265\030\001\220\265\030\001\"\215\001\n\017LoadControlFSCC"
+    "\0224\n\013controlFSCC\030\001 \001(\0132\031.commonmodule.Con"
+    "trolFSCCB\004\200\265\030\001\022D\n\027loadControlScheduleFSC"
+    "H\030\002 \001(\0132#.loadmodule.LoadControlSchedule"
+    "FSCH\"\251\001\n\013LoadControl\0226\n\014controlValue\030\001 \001"
+    "(\0132\032.commonmodule.ControlValueB\004\200\265\030\001\022,\n\005"
+    "check\030\002 \001(\0132\035.commonmodule.CheckConditio"
+    "ns\0224\n\017loadControlFSCC\030\003 \001(\0132\033.loadmodule"
+    ".LoadControlFSCC\"\326\001\n\022LoadControlProfile\022"
+    "B\n\022controlMessageInfo\030\001 \001(\0132 .commonmodu"
+    "le.ControlMessageInfoB\004\200\265\030\001\022>\n\016energyCon"
+    "sumer\030\002 \001(\0132\034.commonmodule.EnergyConsume"
+    "rB\010\210\265\030\001\220\265\030\001\0226\n\013loadControl\030\003 \001(\0132\027.loadm"
+    "odule.LoadControlB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\213\002\n\017Lo"
+    "adPointStatus\022)\n\trampRates\030\001 \001(\0132\026.commo"
+    "nmodule.RampRate\022;\n\032reactivePwrSetPointE"
+    "nabled\030\002 \001(\0132\027.commonmodule.StatusSPS\0227\n"
+    "\026realPwrSetPointEnabled\030\003 \001(\0132\027.commonmo"
+    "dule.StatusSPS\022&\n\005reset\030\004 \001(\0132\027.commonmo"
+    "dule.StatusSPS\022/\n\005state\030\005 \001(\0132 .commonmo"
+    "dule.Optional_StateKind\"\204\002\n\026LoadEventAnd"
+    "StatusZGLD\022V\n\034logicalNodeForEventAndStat"
+    "us\030\001 \001(\0132*.commonmodule.LogicalNodeForEv"
+    "entAndStatusB\004\200\265\030\001\0226\n\013DynamicTest\030\002 \001(\0132"
+    "!.commonmodule.ENS_DynamicTestKind\022(\n\007Em"
+    "gStop\030\003 \001(\0132\027.commonmodule.StatusSPS\0220\n\013"
+    "PointStatus\030\004 \001(\0132\033.loadmodule.LoadPoint"
+    "Status\"Y\n\rLoadEventZGLD\022H\n\026loadEventAndS"
+    "tatusZGLD\030\001 \001(\0132\".loadmodule.LoadEventAn"
+    "dStatusZGLDB\004\200\265\030\001\"q\n\tLoadEvent\0222\n\neventV"
+    "alue\030\001 \001(\0132\030.commonmodule.EventValueB\004\200\265"
+    "\030\001\0220\n\rloadEventZGLD\030\002 \001(\0132\031.loadmodule.L"
+    "oadEventZGLD\"\314\001\n\020LoadEventProfile\022>\n\020eve"
+    "ntMessageInfo\030\001 \001(\0132\036.commonmodule.Event"
+    "MessageInfoB\004\200\265\030\001\022>\n\016energyConsumer\030\002 \001("
+    "\0132\034.commonmodule.EnergyConsumerB\010\210\265\030\001\220\265\030"
+    "\001\0222\n\tloadEvent\030\003 \001(\0132\025.loadmodule.LoadEv"
+    "entB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\375\001\n\013LoadReading\022b\n\"c"
+    "onductingEquipmentTerminalReading\030\001 \001(\0132"
+    "0.commonmodule.ConductingEquipmentTermin"
+    "alReadingB\004\200\265\030\001\022*\n\tphaseMMTN\030\002 \001(\0132\027.com"
+    "monmodule.PhaseMMTN\022.\n\013readingMMTR\030\003 \001(\013"
+    "2\031.commonmodule.ReadingMMTR\022.\n\013readingMM"
+    "XU\030\004 \001(\0132\031.commonmodule.ReadingMMXU\"\326\001\n\022"
+    "LoadReadingProfile\022B\n\022readingMessageInfo"
+    "\030\001 \001(\0132 .commonmodule.ReadingMessageInfo"
+    "B\004\200\265\030\001\022>\n\016energyConsumer\030\002 \001(\0132\034.commonm"
+    "odule.EnergyConsumerB\010\210\265\030\001\220\265\030\001\0226\n\013loadRe"
+    "ading\030\003 \001(\0132\027.loadmodule.LoadReadingB\010\210\265"
+    "\030\001\220\265\030\001:\004\300\363\030\001\"Z\n\016LoadStatusZGLD\022H\n\026loadEv"
+    "entAndStatusZGLD\030\001 \001(\0132\".loadmodule.Load"
+    "EventAndStatusZGLDB\004\200\265\030\001\"\254\001\n\nLoadStatus\022"
+    "4\n\013statusValue\030\001 \001(\0132\031.commonmodule.Stat"
+    "usValueB\004\200\265\030\001\0224\n\020isUncontrollable\030\002 \001(\0132"
+    "\032.google.protobuf.BoolValue\0222\n\016loadStatu"
+    "sZGLD\030\003 \001(\0132\032.loadmodule.LoadStatusZGLD\""
+    "\321\001\n\021LoadStatusProfile\022@\n\021statusMessageIn"
+    "fo\030\001 \001(\0132\037.commonmodule.StatusMessageInf"
+    "oB\004\200\265\030\001\022>\n\016energyConsumer\030\002 \001(\0132\034.common"
+    "module.EnergyConsumerB\010\210\265\030\001\220\265\030\001\0224\n\nloadS"
+    "tatus\030\003 \001(\0132\026.loadmodule.LoadStatusB\010\210\265\030"
+    "\001\220\265\030\001:\004\300\363\030\001B~\n\022openfmb.loadmoduleP\001ZQgit"
+    "lab.com/openfmb/psm/ops/protobuf/go-open"
+    "fmb-ops-protobuf/v2/openfmb/loadmodule\252\002"
+    "\022openfmb.loadmoduleb\006proto3"
+};
+static const ::_pbi::DescriptorTable* const descriptor_table_loadmodule_2floadmodule_2eproto_deps[3] =
+    {
+        &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
+        &::descriptor_table_google_2fprotobuf_2fwrappers_2eproto,
+        &::descriptor_table_uml_2eproto,
+};
+static ::absl::once_flag descriptor_table_loadmodule_2floadmodule_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_loadmodule_2floadmodule_2eproto = {
+    false,
+    false,
+    3147,
+    descriptor_table_protodef_loadmodule_2floadmodule_2eproto,
+    "loadmodule/loadmodule.proto",
+    &descriptor_table_loadmodule_2floadmodule_2eproto_once,
+    descriptor_table_loadmodule_2floadmodule_2eproto_deps,
+    3,
+    16,
+    schemas,
+    file_default_instances,
+    TableStruct_loadmodule_2floadmodule_2eproto::offsets,
+    file_level_metadata_loadmodule_2floadmodule_2eproto,
+    file_level_enum_descriptors_loadmodule_2floadmodule_2eproto,
+    file_level_service_descriptors_loadmodule_2floadmodule_2eproto,
 };
 
-const char descriptor_table_protodef_loadmodule_2floadmodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\033loadmodule/loadmodule.proto\022\nloadmodul"
-  "e\032\tuml.proto\032\036google/protobuf/wrappers.p"
-  "roto\032\037commonmodule/commonmodule.proto\"\305\002"
-  "\n\tLoadPoint\022)\n\trampRates\030\001 \001(\0132\026.commonm"
-  "odule.RampRate\022<\n\032reactivePwrSetPointEna"
-  "bled\030\002 \001(\0132\030.commonmodule.ControlSPC\0228\n\026"
-  "realPwrSetPointEnabled\030\003 \001(\0132\030.commonmod"
-  "ule.ControlSPC\022\'\n\005reset\030\004 \001(\0132\030.commonmo"
-  "dule.ControlSPC\022/\n\005state\030\005 \001(\0132 .commonm"
-  "odule.Optional_StateKind\022;\n\tstartTime\030\006 "
-  "\001(\0132\036.commonmodule.ControlTimestampB\010\210\265\030"
-  "\001\220\265\030\001\":\n\007LoadCSG\022/\n\006crvPts\030\001 \003(\0132\025.loadm"
-  "odule.LoadPointB\010\210\265\030\001\220\265\030\001\"I\n\027LoadControl"
-  "ScheduleFSCH\022.\n\007ValDCSG\030\001 \001(\0132\023.loadmodu"
-  "le.LoadCSGB\010\210\265\030\001\220\265\030\001\"\215\001\n\017LoadControlFSCC"
-  "\0224\n\013controlFSCC\030\001 \001(\0132\031.commonmodule.Con"
-  "trolFSCCB\004\200\265\030\001\022D\n\027loadControlScheduleFSC"
-  "H\030\002 \001(\0132#.loadmodule.LoadControlSchedule"
-  "FSCH\"\251\001\n\013LoadControl\0226\n\014controlValue\030\001 \001"
-  "(\0132\032.commonmodule.ControlValueB\004\200\265\030\001\022,\n\005"
-  "check\030\002 \001(\0132\035.commonmodule.CheckConditio"
-  "ns\0224\n\017loadControlFSCC\030\003 \001(\0132\033.loadmodule"
-  ".LoadControlFSCC\"\326\001\n\022LoadControlProfile\022"
-  "B\n\022controlMessageInfo\030\001 \001(\0132 .commonmodu"
-  "le.ControlMessageInfoB\004\200\265\030\001\022>\n\016energyCon"
-  "sumer\030\002 \001(\0132\034.commonmodule.EnergyConsume"
-  "rB\010\210\265\030\001\220\265\030\001\0226\n\013loadControl\030\003 \001(\0132\027.loadm"
-  "odule.LoadControlB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\213\002\n\017Lo"
-  "adPointStatus\022)\n\trampRates\030\001 \001(\0132\026.commo"
-  "nmodule.RampRate\022;\n\032reactivePwrSetPointE"
-  "nabled\030\002 \001(\0132\027.commonmodule.StatusSPS\0227\n"
-  "\026realPwrSetPointEnabled\030\003 \001(\0132\027.commonmo"
-  "dule.StatusSPS\022&\n\005reset\030\004 \001(\0132\027.commonmo"
-  "dule.StatusSPS\022/\n\005state\030\005 \001(\0132 .commonmo"
-  "dule.Optional_StateKind\"\204\002\n\026LoadEventAnd"
-  "StatusZGLD\022V\n\034logicalNodeForEventAndStat"
-  "us\030\001 \001(\0132*.commonmodule.LogicalNodeForEv"
-  "entAndStatusB\004\200\265\030\001\0226\n\013DynamicTest\030\002 \001(\0132"
-  "!.commonmodule.ENS_DynamicTestKind\022(\n\007Em"
-  "gStop\030\003 \001(\0132\027.commonmodule.StatusSPS\0220\n\013"
-  "PointStatus\030\004 \001(\0132\033.loadmodule.LoadPoint"
-  "Status\"Y\n\rLoadEventZGLD\022H\n\026loadEventAndS"
-  "tatusZGLD\030\001 \001(\0132\".loadmodule.LoadEventAn"
-  "dStatusZGLDB\004\200\265\030\001\"q\n\tLoadEvent\0222\n\neventV"
-  "alue\030\001 \001(\0132\030.commonmodule.EventValueB\004\200\265"
-  "\030\001\0220\n\rloadEventZGLD\030\002 \001(\0132\031.loadmodule.L"
-  "oadEventZGLD\"\314\001\n\020LoadEventProfile\022>\n\020eve"
-  "ntMessageInfo\030\001 \001(\0132\036.commonmodule.Event"
-  "MessageInfoB\004\200\265\030\001\022>\n\016energyConsumer\030\002 \001("
-  "\0132\034.commonmodule.EnergyConsumerB\010\210\265\030\001\220\265\030"
-  "\001\0222\n\tloadEvent\030\003 \001(\0132\025.loadmodule.LoadEv"
-  "entB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\375\001\n\013LoadReading\022b\n\"c"
-  "onductingEquipmentTerminalReading\030\001 \001(\0132"
-  "0.commonmodule.ConductingEquipmentTermin"
-  "alReadingB\004\200\265\030\001\022*\n\tphaseMMTN\030\002 \001(\0132\027.com"
-  "monmodule.PhaseMMTN\022.\n\013readingMMTR\030\003 \001(\013"
-  "2\031.commonmodule.ReadingMMTR\022.\n\013readingMM"
-  "XU\030\004 \001(\0132\031.commonmodule.ReadingMMXU\"\326\001\n\022"
-  "LoadReadingProfile\022B\n\022readingMessageInfo"
-  "\030\001 \001(\0132 .commonmodule.ReadingMessageInfo"
-  "B\004\200\265\030\001\022>\n\016energyConsumer\030\002 \001(\0132\034.commonm"
-  "odule.EnergyConsumerB\010\210\265\030\001\220\265\030\001\0226\n\013loadRe"
-  "ading\030\003 \001(\0132\027.loadmodule.LoadReadingB\010\210\265"
-  "\030\001\220\265\030\001:\004\300\363\030\001\"Z\n\016LoadStatusZGLD\022H\n\026loadEv"
-  "entAndStatusZGLD\030\001 \001(\0132\".loadmodule.Load"
-  "EventAndStatusZGLDB\004\200\265\030\001\"\254\001\n\nLoadStatus\022"
-  "4\n\013statusValue\030\001 \001(\0132\031.commonmodule.Stat"
-  "usValueB\004\200\265\030\001\0224\n\020isUncontrollable\030\002 \001(\0132"
-  "\032.google.protobuf.BoolValue\0222\n\016loadStatu"
-  "sZGLD\030\003 \001(\0132\032.loadmodule.LoadStatusZGLD\""
-  "\321\001\n\021LoadStatusProfile\022@\n\021statusMessageIn"
-  "fo\030\001 \001(\0132\037.commonmodule.StatusMessageInf"
-  "oB\004\200\265\030\001\022>\n\016energyConsumer\030\002 \001(\0132\034.common"
-  "module.EnergyConsumerB\010\210\265\030\001\220\265\030\001\0224\n\nloadS"
-  "tatus\030\003 \001(\0132\026.loadmodule.LoadStatusB\010\210\265\030"
-  "\001\220\265\030\001:\004\300\363\030\001B~\n\022openfmb.loadmoduleP\001ZQgit"
-  "lab.com/openfmb/psm/ops/protobuf/go-open"
-  "fmb-ops-protobuf/v2/openfmb/loadmodule\252\002"
-  "\022openfmb.loadmoduleb\006proto3"
-  ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_loadmodule_2floadmodule_2eproto_deps[3] = {
-  &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
-  &::descriptor_table_google_2fprotobuf_2fwrappers_2eproto,
-  &::descriptor_table_uml_2eproto,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_loadmodule_2floadmodule_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_loadmodule_2floadmodule_2eproto = {
-  false, false, 3147, descriptor_table_protodef_loadmodule_2floadmodule_2eproto, "loadmodule/loadmodule.proto", 
-  &descriptor_table_loadmodule_2floadmodule_2eproto_once, descriptor_table_loadmodule_2floadmodule_2eproto_deps, 3, 16,
-  schemas, file_default_instances, TableStruct_loadmodule_2floadmodule_2eproto::offsets,
-  file_level_metadata_loadmodule_2floadmodule_2eproto, file_level_enum_descriptors_loadmodule_2floadmodule_2eproto, file_level_service_descriptors_loadmodule_2floadmodule_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
-descriptor_table_loadmodule_2floadmodule_2eproto_metadata_getter(int index) {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_loadmodule_2floadmodule_2eproto);
-  return descriptor_table_loadmodule_2floadmodule_2eproto.file_level_metadata[index];
+// This function exists to be marked as weak.
+// It can significantly speed up compilation by breaking up LLVM's SCC
+// in the .pb.cc translation units. Large translation units see a
+// reduction of more than 35% of walltime for optimized builds. Without
+// the weak attribute all the messages in the file, including all the
+// vtables and everything they use become part of the same SCC through
+// a cycle like:
+// GetMetadata -> descriptor table -> default instances ->
+//   vtables -> GetMetadata
+// By adding a weak function here we break the connection from the
+// individual vtables back into the descriptor table.
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_loadmodule_2floadmodule_2eproto_getter() {
+  return &descriptor_table_loadmodule_2floadmodule_2eproto;
 }
-
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_loadmodule_2floadmodule_2eproto(&descriptor_table_loadmodule_2floadmodule_2eproto);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
+static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_loadmodule_2floadmodule_2eproto(&descriptor_table_loadmodule_2floadmodule_2eproto);
 namespace loadmodule {
-
 // ===================================================================
 
 class LoadPoint::_Internal {
@@ -525,411 +631,404 @@ class LoadPoint::_Internal {
 
 const ::commonmodule::RampRate&
 LoadPoint::_Internal::ramprates(const LoadPoint* msg) {
-  return *msg->ramprates_;
+  return *msg->_impl_.ramprates_;
 }
 const ::commonmodule::ControlSPC&
 LoadPoint::_Internal::reactivepwrsetpointenabled(const LoadPoint* msg) {
-  return *msg->reactivepwrsetpointenabled_;
+  return *msg->_impl_.reactivepwrsetpointenabled_;
 }
 const ::commonmodule::ControlSPC&
 LoadPoint::_Internal::realpwrsetpointenabled(const LoadPoint* msg) {
-  return *msg->realpwrsetpointenabled_;
+  return *msg->_impl_.realpwrsetpointenabled_;
 }
 const ::commonmodule::ControlSPC&
 LoadPoint::_Internal::reset(const LoadPoint* msg) {
-  return *msg->reset_;
+  return *msg->_impl_.reset_;
 }
 const ::commonmodule::Optional_StateKind&
 LoadPoint::_Internal::state(const LoadPoint* msg) {
-  return *msg->state_;
+  return *msg->_impl_.state_;
 }
 const ::commonmodule::ControlTimestamp&
 LoadPoint::_Internal::starttime(const LoadPoint* msg) {
-  return *msg->starttime_;
+  return *msg->_impl_.starttime_;
 }
 void LoadPoint::clear_ramprates() {
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
-    delete ramprates_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ramprates_ != nullptr) {
+    delete _impl_.ramprates_;
   }
-  ramprates_ = nullptr;
+  _impl_.ramprates_ = nullptr;
 }
 void LoadPoint::clear_reactivepwrsetpointenabled() {
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
-    delete reactivepwrsetpointenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.reactivepwrsetpointenabled_ != nullptr) {
+    delete _impl_.reactivepwrsetpointenabled_;
   }
-  reactivepwrsetpointenabled_ = nullptr;
+  _impl_.reactivepwrsetpointenabled_ = nullptr;
 }
 void LoadPoint::clear_realpwrsetpointenabled() {
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
-    delete realpwrsetpointenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.realpwrsetpointenabled_ != nullptr) {
+    delete _impl_.realpwrsetpointenabled_;
   }
-  realpwrsetpointenabled_ = nullptr;
+  _impl_.realpwrsetpointenabled_ = nullptr;
 }
 void LoadPoint::clear_reset() {
-  if (GetArena() == nullptr && reset_ != nullptr) {
-    delete reset_;
+  if (GetArenaForAllocation() == nullptr && _impl_.reset_ != nullptr) {
+    delete _impl_.reset_;
   }
-  reset_ = nullptr;
+  _impl_.reset_ = nullptr;
 }
 void LoadPoint::clear_state() {
-  if (GetArena() == nullptr && state_ != nullptr) {
-    delete state_;
+  if (GetArenaForAllocation() == nullptr && _impl_.state_ != nullptr) {
+    delete _impl_.state_;
   }
-  state_ = nullptr;
+  _impl_.state_ = nullptr;
 }
 void LoadPoint::clear_starttime() {
-  if (GetArena() == nullptr && starttime_ != nullptr) {
-    delete starttime_;
+  if (GetArenaForAllocation() == nullptr && _impl_.starttime_ != nullptr) {
+    delete _impl_.starttime_;
   }
-  starttime_ = nullptr;
+  _impl_.starttime_ = nullptr;
 }
 LoadPoint::LoadPoint(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:loadmodule.LoadPoint)
 }
 LoadPoint::LoadPoint(const LoadPoint& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LoadPoint* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.ramprates_){nullptr}
+    , decltype(_impl_.reactivepwrsetpointenabled_){nullptr}
+    , decltype(_impl_.realpwrsetpointenabled_){nullptr}
+    , decltype(_impl_.reset_){nullptr}
+    , decltype(_impl_.state_){nullptr}
+    , decltype(_impl_.starttime_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_ramprates()) {
-    ramprates_ = new ::commonmodule::RampRate(*from.ramprates_);
-  } else {
-    ramprates_ = nullptr;
+    _this->_impl_.ramprates_ = new ::commonmodule::RampRate(*from._impl_.ramprates_);
   }
   if (from._internal_has_reactivepwrsetpointenabled()) {
-    reactivepwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from.reactivepwrsetpointenabled_);
-  } else {
-    reactivepwrsetpointenabled_ = nullptr;
+    _this->_impl_.reactivepwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from._impl_.reactivepwrsetpointenabled_);
   }
   if (from._internal_has_realpwrsetpointenabled()) {
-    realpwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from.realpwrsetpointenabled_);
-  } else {
-    realpwrsetpointenabled_ = nullptr;
+    _this->_impl_.realpwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from._impl_.realpwrsetpointenabled_);
   }
   if (from._internal_has_reset()) {
-    reset_ = new ::commonmodule::ControlSPC(*from.reset_);
-  } else {
-    reset_ = nullptr;
+    _this->_impl_.reset_ = new ::commonmodule::ControlSPC(*from._impl_.reset_);
   }
   if (from._internal_has_state()) {
-    state_ = new ::commonmodule::Optional_StateKind(*from.state_);
-  } else {
-    state_ = nullptr;
+    _this->_impl_.state_ = new ::commonmodule::Optional_StateKind(*from._impl_.state_);
   }
   if (from._internal_has_starttime()) {
-    starttime_ = new ::commonmodule::ControlTimestamp(*from.starttime_);
-  } else {
-    starttime_ = nullptr;
+    _this->_impl_.starttime_ = new ::commonmodule::ControlTimestamp(*from._impl_.starttime_);
   }
   // @@protoc_insertion_point(copy_constructor:loadmodule.LoadPoint)
 }
 
-void LoadPoint::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&ramprates_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&starttime_) -
-    reinterpret_cast<char*>(&ramprates_)) + sizeof(starttime_));
+inline void LoadPoint::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.ramprates_){nullptr}
+    , decltype(_impl_.reactivepwrsetpointenabled_){nullptr}
+    , decltype(_impl_.realpwrsetpointenabled_){nullptr}
+    , decltype(_impl_.reset_){nullptr}
+    , decltype(_impl_.state_){nullptr}
+    , decltype(_impl_.starttime_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 LoadPoint::~LoadPoint() {
   // @@protoc_insertion_point(destructor:loadmodule.LoadPoint)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void LoadPoint::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete ramprates_;
-  if (this != internal_default_instance()) delete reactivepwrsetpointenabled_;
-  if (this != internal_default_instance()) delete realpwrsetpointenabled_;
-  if (this != internal_default_instance()) delete reset_;
-  if (this != internal_default_instance()) delete state_;
-  if (this != internal_default_instance()) delete starttime_;
+inline void LoadPoint::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.ramprates_;
+  if (this != internal_default_instance()) delete _impl_.reactivepwrsetpointenabled_;
+  if (this != internal_default_instance()) delete _impl_.realpwrsetpointenabled_;
+  if (this != internal_default_instance()) delete _impl_.reset_;
+  if (this != internal_default_instance()) delete _impl_.state_;
+  if (this != internal_default_instance()) delete _impl_.starttime_;
 }
 
-void LoadPoint::ArenaDtor(void* object) {
-  LoadPoint* _this = reinterpret_cast< LoadPoint* >(object);
-  (void)_this;
-}
-void LoadPoint::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void LoadPoint::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void LoadPoint::Clear() {
 // @@protoc_insertion_point(message_clear_start:loadmodule.LoadPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
-    delete ramprates_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ramprates_ != nullptr) {
+    delete _impl_.ramprates_;
   }
-  ramprates_ = nullptr;
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
-    delete reactivepwrsetpointenabled_;
+  _impl_.ramprates_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.reactivepwrsetpointenabled_ != nullptr) {
+    delete _impl_.reactivepwrsetpointenabled_;
   }
-  reactivepwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
-    delete realpwrsetpointenabled_;
+  _impl_.reactivepwrsetpointenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.realpwrsetpointenabled_ != nullptr) {
+    delete _impl_.realpwrsetpointenabled_;
   }
-  realpwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && reset_ != nullptr) {
-    delete reset_;
+  _impl_.realpwrsetpointenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.reset_ != nullptr) {
+    delete _impl_.reset_;
   }
-  reset_ = nullptr;
-  if (GetArena() == nullptr && state_ != nullptr) {
-    delete state_;
+  _impl_.reset_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.state_ != nullptr) {
+    delete _impl_.state_;
   }
-  state_ = nullptr;
-  if (GetArena() == nullptr && starttime_ != nullptr) {
-    delete starttime_;
+  _impl_.state_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.starttime_ != nullptr) {
+    delete _impl_.starttime_;
   }
-  starttime_ = nullptr;
+  _impl_.starttime_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* LoadPoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* LoadPoint::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.RampRate rampRates = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_ramprates(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_reactivepwrsetpointenabled(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlSPC realPwrSetPointEnabled = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_realpwrsetpointenabled(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlSPC reset = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_reset(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.Optional_StateKind state = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_state(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlTimestamp startTime = 6 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_starttime(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* LoadPoint::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* LoadPoint::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:loadmodule.LoadPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.RampRate rampRates = 1;
-  if (this->has_ramprates()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ramprates()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::ramprates(this), target, stream);
+      InternalWriteMessage(1, _Internal::ramprates(this),
+        _Internal::ramprates(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 2;
-  if (this->has_reactivepwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_reactivepwrsetpointenabled()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::reactivepwrsetpointenabled(this), target, stream);
+      InternalWriteMessage(2, _Internal::reactivepwrsetpointenabled(this),
+        _Internal::reactivepwrsetpointenabled(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlSPC realPwrSetPointEnabled = 3;
-  if (this->has_realpwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_realpwrsetpointenabled()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::realpwrsetpointenabled(this), target, stream);
+      InternalWriteMessage(3, _Internal::realpwrsetpointenabled(this),
+        _Internal::realpwrsetpointenabled(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlSPC reset = 4;
-  if (this->has_reset()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_reset()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::reset(this), target, stream);
+      InternalWriteMessage(4, _Internal::reset(this),
+        _Internal::reset(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.Optional_StateKind state = 5;
-  if (this->has_state()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_state()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::state(this), target, stream);
+      InternalWriteMessage(5, _Internal::state(this),
+        _Internal::state(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlTimestamp startTime = 6 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_starttime()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_starttime()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::starttime(this), target, stream);
+      InternalWriteMessage(6, _Internal::starttime(this),
+        _Internal::starttime(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:loadmodule.LoadPoint)
   return target;
 }
 
-size_t LoadPoint::ByteSizeLong() const {
+::size_t LoadPoint::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:loadmodule.LoadPoint)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.RampRate rampRates = 1;
-  if (this->has_ramprates()) {
+  if (this->_internal_has_ramprates()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ramprates_);
+        *_impl_.ramprates_);
   }
 
   // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 2;
-  if (this->has_reactivepwrsetpointenabled()) {
+  if (this->_internal_has_reactivepwrsetpointenabled()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *reactivepwrsetpointenabled_);
+        *_impl_.reactivepwrsetpointenabled_);
   }
 
   // .commonmodule.ControlSPC realPwrSetPointEnabled = 3;
-  if (this->has_realpwrsetpointenabled()) {
+  if (this->_internal_has_realpwrsetpointenabled()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *realpwrsetpointenabled_);
+        *_impl_.realpwrsetpointenabled_);
   }
 
   // .commonmodule.ControlSPC reset = 4;
-  if (this->has_reset()) {
+  if (this->_internal_has_reset()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *reset_);
+        *_impl_.reset_);
   }
 
   // .commonmodule.Optional_StateKind state = 5;
-  if (this->has_state()) {
+  if (this->_internal_has_state()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *state_);
+        *_impl_.state_);
   }
 
   // .commonmodule.ControlTimestamp startTime = 6 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_starttime()) {
+  if (this->_internal_has_starttime()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *starttime_);
+        *_impl_.starttime_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LoadPoint::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:loadmodule.LoadPoint)
-  GOOGLE_DCHECK_NE(&from, this);
-  const LoadPoint* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoadPoint>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:loadmodule.LoadPoint)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:loadmodule.LoadPoint)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadPoint::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LoadPoint::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadPoint::GetClassData() const { return &_class_data_; }
 
-void LoadPoint::MergeFrom(const LoadPoint& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadPoint)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void LoadPoint::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LoadPoint*>(&to_msg);
+  auto& from = static_cast<const LoadPoint&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadPoint)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_ramprates()) {
-    _internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from._internal_ramprates());
+  if (from._internal_has_ramprates()) {
+    _this->_internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(
+        from._internal_ramprates());
   }
-  if (from.has_reactivepwrsetpointenabled()) {
-    _internal_mutable_reactivepwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_reactivepwrsetpointenabled());
+  if (from._internal_has_reactivepwrsetpointenabled()) {
+    _this->_internal_mutable_reactivepwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_reactivepwrsetpointenabled());
   }
-  if (from.has_realpwrsetpointenabled()) {
-    _internal_mutable_realpwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_realpwrsetpointenabled());
+  if (from._internal_has_realpwrsetpointenabled()) {
+    _this->_internal_mutable_realpwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_realpwrsetpointenabled());
   }
-  if (from.has_reset()) {
-    _internal_mutable_reset()->::commonmodule::ControlSPC::MergeFrom(from._internal_reset());
+  if (from._internal_has_reset()) {
+    _this->_internal_mutable_reset()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_reset());
   }
-  if (from.has_state()) {
-    _internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from._internal_state());
+  if (from._internal_has_state()) {
+    _this->_internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(
+        from._internal_state());
   }
-  if (from.has_starttime()) {
-    _internal_mutable_starttime()->::commonmodule::ControlTimestamp::MergeFrom(from._internal_starttime());
+  if (from._internal_has_starttime()) {
+    _this->_internal_mutable_starttime()->::commonmodule::ControlTimestamp::MergeFrom(
+        from._internal_starttime());
   }
-}
-
-void LoadPoint::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:loadmodule.LoadPoint)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LoadPoint::CopyFrom(const LoadPoint& from) {
@@ -945,20 +1044,20 @@ bool LoadPoint::IsInitialized() const {
 
 void LoadPoint::InternalSwap(LoadPoint* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(LoadPoint, starttime_)
-      + sizeof(LoadPoint::starttime_)
-      - PROTOBUF_FIELD_OFFSET(LoadPoint, ramprates_)>(
-          reinterpret_cast<char*>(&ramprates_),
-          reinterpret_cast<char*>(&other->ramprates_));
+      PROTOBUF_FIELD_OFFSET(LoadPoint, _impl_.starttime_)
+      + sizeof(LoadPoint::_impl_.starttime_)
+      - PROTOBUF_FIELD_OFFSET(LoadPoint, _impl_.ramprates_)>(
+          reinterpret_cast<char*>(&_impl_.ramprates_),
+          reinterpret_cast<char*>(&other->_impl_.ramprates_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadPoint::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_loadmodule_2floadmodule_2eproto_getter, &descriptor_table_loadmodule_2floadmodule_2eproto_once,
+      file_level_metadata_loadmodule_2floadmodule_2eproto[0]);
 }
-
-
 // ===================================================================
 
 class LoadCSG::_Internal {
@@ -966,62 +1065,66 @@ class LoadCSG::_Internal {
 };
 
 LoadCSG::LoadCSG(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  crvpts_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:loadmodule.LoadCSG)
 }
 LoadCSG::LoadCSG(const LoadCSG& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      crvpts_(from.crvpts_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LoadCSG* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.crvpts_){from._impl_.crvpts_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:loadmodule.LoadCSG)
 }
 
-void LoadCSG::SharedCtor() {
+inline void LoadCSG::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.crvpts_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 LoadCSG::~LoadCSG() {
   // @@protoc_insertion_point(destructor:loadmodule.LoadCSG)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void LoadCSG::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void LoadCSG::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.crvpts_.~RepeatedPtrField();
 }
 
-void LoadCSG::ArenaDtor(void* object) {
-  LoadCSG* _this = reinterpret_cast< LoadCSG* >(object);
-  (void)_this;
-}
-void LoadCSG::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void LoadCSG::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void LoadCSG::Clear() {
 // @@protoc_insertion_point(message_clear_start:loadmodule.LoadCSG)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  crvpts_.Clear();
+  _impl_.crvpts_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* LoadCSG::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* LoadCSG::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated .loadmodule.LoadPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -1029,106 +1132,90 @@ const char* LoadCSG::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* LoadCSG::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* LoadCSG::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:loadmodule.LoadCSG)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .loadmodule.LoadPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_crvpts_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_crvpts_size()); i < n; i++) {
+    const auto& repfield = this->_internal_crvpts(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_crvpts(i), target, stream);
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:loadmodule.LoadCSG)
   return target;
 }
 
-size_t LoadCSG::ByteSizeLong() const {
+::size_t LoadCSG::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:loadmodule.LoadCSG)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .loadmodule.LoadPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   total_size += 1UL * this->_internal_crvpts_size();
-  for (const auto& msg : this->crvpts_) {
+  for (const auto& msg : this->_impl_.crvpts_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LoadCSG::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:loadmodule.LoadCSG)
-  GOOGLE_DCHECK_NE(&from, this);
-  const LoadCSG* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoadCSG>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:loadmodule.LoadCSG)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:loadmodule.LoadCSG)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadCSG::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LoadCSG::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadCSG::GetClassData() const { return &_class_data_; }
 
-void LoadCSG::MergeFrom(const LoadCSG& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadCSG)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void LoadCSG::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LoadCSG*>(&to_msg);
+  auto& from = static_cast<const LoadCSG&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadCSG)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  crvpts_.MergeFrom(from.crvpts_);
-}
-
-void LoadCSG::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:loadmodule.LoadCSG)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_impl_.crvpts_.MergeFrom(from._impl_.crvpts_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LoadCSG::CopyFrom(const LoadCSG& from) {
@@ -1144,15 +1231,15 @@ bool LoadCSG::IsInitialized() const {
 
 void LoadCSG::InternalSwap(LoadCSG* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  crvpts_.InternalSwap(&other->crvpts_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.crvpts_.InternalSwap(&other->_impl_.crvpts_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadCSG::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_loadmodule_2floadmodule_2eproto_getter, &descriptor_table_loadmodule_2floadmodule_2eproto_once,
+      file_level_metadata_loadmodule_2floadmodule_2eproto[1]);
 }
-
-
 // ===================================================================
 
 class LoadControlScheduleFSCH::_Internal {
@@ -1162,177 +1249,163 @@ class LoadControlScheduleFSCH::_Internal {
 
 const ::loadmodule::LoadCSG&
 LoadControlScheduleFSCH::_Internal::valdcsg(const LoadControlScheduleFSCH* msg) {
-  return *msg->valdcsg_;
+  return *msg->_impl_.valdcsg_;
 }
 LoadControlScheduleFSCH::LoadControlScheduleFSCH(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:loadmodule.LoadControlScheduleFSCH)
 }
 LoadControlScheduleFSCH::LoadControlScheduleFSCH(const LoadControlScheduleFSCH& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LoadControlScheduleFSCH* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.valdcsg_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_valdcsg()) {
-    valdcsg_ = new ::loadmodule::LoadCSG(*from.valdcsg_);
-  } else {
-    valdcsg_ = nullptr;
+    _this->_impl_.valdcsg_ = new ::loadmodule::LoadCSG(*from._impl_.valdcsg_);
   }
   // @@protoc_insertion_point(copy_constructor:loadmodule.LoadControlScheduleFSCH)
 }
 
-void LoadControlScheduleFSCH::SharedCtor() {
-valdcsg_ = nullptr;
+inline void LoadControlScheduleFSCH::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.valdcsg_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 LoadControlScheduleFSCH::~LoadControlScheduleFSCH() {
   // @@protoc_insertion_point(destructor:loadmodule.LoadControlScheduleFSCH)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void LoadControlScheduleFSCH::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete valdcsg_;
+inline void LoadControlScheduleFSCH::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.valdcsg_;
 }
 
-void LoadControlScheduleFSCH::ArenaDtor(void* object) {
-  LoadControlScheduleFSCH* _this = reinterpret_cast< LoadControlScheduleFSCH* >(object);
-  (void)_this;
-}
-void LoadControlScheduleFSCH::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void LoadControlScheduleFSCH::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void LoadControlScheduleFSCH::Clear() {
 // @@protoc_insertion_point(message_clear_start:loadmodule.LoadControlScheduleFSCH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && valdcsg_ != nullptr) {
-    delete valdcsg_;
+  if (GetArenaForAllocation() == nullptr && _impl_.valdcsg_ != nullptr) {
+    delete _impl_.valdcsg_;
   }
-  valdcsg_ = nullptr;
+  _impl_.valdcsg_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* LoadControlScheduleFSCH::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* LoadControlScheduleFSCH::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .loadmodule.LoadCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_valdcsg(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* LoadControlScheduleFSCH::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* LoadControlScheduleFSCH::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:loadmodule.LoadControlScheduleFSCH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .loadmodule.LoadCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_valdcsg()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_valdcsg()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::valdcsg(this), target, stream);
+      InternalWriteMessage(1, _Internal::valdcsg(this),
+        _Internal::valdcsg(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:loadmodule.LoadControlScheduleFSCH)
   return target;
 }
 
-size_t LoadControlScheduleFSCH::ByteSizeLong() const {
+::size_t LoadControlScheduleFSCH::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:loadmodule.LoadControlScheduleFSCH)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .loadmodule.LoadCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_valdcsg()) {
+  if (this->_internal_has_valdcsg()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *valdcsg_);
+        *_impl_.valdcsg_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LoadControlScheduleFSCH::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:loadmodule.LoadControlScheduleFSCH)
-  GOOGLE_DCHECK_NE(&from, this);
-  const LoadControlScheduleFSCH* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoadControlScheduleFSCH>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:loadmodule.LoadControlScheduleFSCH)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:loadmodule.LoadControlScheduleFSCH)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadControlScheduleFSCH::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LoadControlScheduleFSCH::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadControlScheduleFSCH::GetClassData() const { return &_class_data_; }
 
-void LoadControlScheduleFSCH::MergeFrom(const LoadControlScheduleFSCH& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadControlScheduleFSCH)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void LoadControlScheduleFSCH::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LoadControlScheduleFSCH*>(&to_msg);
+  auto& from = static_cast<const LoadControlScheduleFSCH&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadControlScheduleFSCH)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_valdcsg()) {
-    _internal_mutable_valdcsg()->::loadmodule::LoadCSG::MergeFrom(from._internal_valdcsg());
+  if (from._internal_has_valdcsg()) {
+    _this->_internal_mutable_valdcsg()->::loadmodule::LoadCSG::MergeFrom(
+        from._internal_valdcsg());
   }
-}
-
-void LoadControlScheduleFSCH::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:loadmodule.LoadControlScheduleFSCH)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LoadControlScheduleFSCH::CopyFrom(const LoadControlScheduleFSCH& from) {
@@ -1348,15 +1421,15 @@ bool LoadControlScheduleFSCH::IsInitialized() const {
 
 void LoadControlScheduleFSCH::InternalSwap(LoadControlScheduleFSCH* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(valdcsg_, other->valdcsg_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.valdcsg_, other->_impl_.valdcsg_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadControlScheduleFSCH::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_loadmodule_2floadmodule_2eproto_getter, &descriptor_table_loadmodule_2floadmodule_2eproto_once,
+      file_level_metadata_loadmodule_2floadmodule_2eproto[2]);
 }
-
-
 // ===================================================================
 
 class LoadControlFSCC::_Internal {
@@ -1367,225 +1440,210 @@ class LoadControlFSCC::_Internal {
 
 const ::commonmodule::ControlFSCC&
 LoadControlFSCC::_Internal::controlfscc(const LoadControlFSCC* msg) {
-  return *msg->controlfscc_;
+  return *msg->_impl_.controlfscc_;
 }
 const ::loadmodule::LoadControlScheduleFSCH&
 LoadControlFSCC::_Internal::loadcontrolschedulefsch(const LoadControlFSCC* msg) {
-  return *msg->loadcontrolschedulefsch_;
+  return *msg->_impl_.loadcontrolschedulefsch_;
 }
 void LoadControlFSCC::clear_controlfscc() {
-  if (GetArena() == nullptr && controlfscc_ != nullptr) {
-    delete controlfscc_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlfscc_ != nullptr) {
+    delete _impl_.controlfscc_;
   }
-  controlfscc_ = nullptr;
+  _impl_.controlfscc_ = nullptr;
 }
 LoadControlFSCC::LoadControlFSCC(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:loadmodule.LoadControlFSCC)
 }
 LoadControlFSCC::LoadControlFSCC(const LoadControlFSCC& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LoadControlFSCC* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlfscc_){nullptr}
+    , decltype(_impl_.loadcontrolschedulefsch_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlfscc()) {
-    controlfscc_ = new ::commonmodule::ControlFSCC(*from.controlfscc_);
-  } else {
-    controlfscc_ = nullptr;
+    _this->_impl_.controlfscc_ = new ::commonmodule::ControlFSCC(*from._impl_.controlfscc_);
   }
   if (from._internal_has_loadcontrolschedulefsch()) {
-    loadcontrolschedulefsch_ = new ::loadmodule::LoadControlScheduleFSCH(*from.loadcontrolschedulefsch_);
-  } else {
-    loadcontrolschedulefsch_ = nullptr;
+    _this->_impl_.loadcontrolschedulefsch_ = new ::loadmodule::LoadControlScheduleFSCH(*from._impl_.loadcontrolschedulefsch_);
   }
   // @@protoc_insertion_point(copy_constructor:loadmodule.LoadControlFSCC)
 }
 
-void LoadControlFSCC::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlfscc_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&loadcontrolschedulefsch_) -
-    reinterpret_cast<char*>(&controlfscc_)) + sizeof(loadcontrolschedulefsch_));
+inline void LoadControlFSCC::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlfscc_){nullptr}
+    , decltype(_impl_.loadcontrolschedulefsch_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 LoadControlFSCC::~LoadControlFSCC() {
   // @@protoc_insertion_point(destructor:loadmodule.LoadControlFSCC)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void LoadControlFSCC::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlfscc_;
-  if (this != internal_default_instance()) delete loadcontrolschedulefsch_;
+inline void LoadControlFSCC::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlfscc_;
+  if (this != internal_default_instance()) delete _impl_.loadcontrolschedulefsch_;
 }
 
-void LoadControlFSCC::ArenaDtor(void* object) {
-  LoadControlFSCC* _this = reinterpret_cast< LoadControlFSCC* >(object);
-  (void)_this;
-}
-void LoadControlFSCC::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void LoadControlFSCC::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void LoadControlFSCC::Clear() {
 // @@protoc_insertion_point(message_clear_start:loadmodule.LoadControlFSCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlfscc_ != nullptr) {
-    delete controlfscc_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlfscc_ != nullptr) {
+    delete _impl_.controlfscc_;
   }
-  controlfscc_ = nullptr;
-  if (GetArena() == nullptr && loadcontrolschedulefsch_ != nullptr) {
-    delete loadcontrolschedulefsch_;
+  _impl_.controlfscc_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.loadcontrolschedulefsch_ != nullptr) {
+    delete _impl_.loadcontrolschedulefsch_;
   }
-  loadcontrolschedulefsch_ = nullptr;
+  _impl_.loadcontrolschedulefsch_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* LoadControlFSCC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* LoadControlFSCC::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlfscc(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .loadmodule.LoadControlScheduleFSCH loadControlScheduleFSCH = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_loadcontrolschedulefsch(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* LoadControlFSCC::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* LoadControlFSCC::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:loadmodule.LoadControlFSCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlfscc()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlfscc()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlfscc(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlfscc(this),
+        _Internal::controlfscc(this).GetCachedSize(), target, stream);
   }
 
   // .loadmodule.LoadControlScheduleFSCH loadControlScheduleFSCH = 2;
-  if (this->has_loadcontrolschedulefsch()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_loadcontrolschedulefsch()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::loadcontrolschedulefsch(this), target, stream);
+      InternalWriteMessage(2, _Internal::loadcontrolschedulefsch(this),
+        _Internal::loadcontrolschedulefsch(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:loadmodule.LoadControlFSCC)
   return target;
 }
 
-size_t LoadControlFSCC::ByteSizeLong() const {
+::size_t LoadControlFSCC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:loadmodule.LoadControlFSCC)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlfscc()) {
+  if (this->_internal_has_controlfscc()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlfscc_);
+        *_impl_.controlfscc_);
   }
 
   // .loadmodule.LoadControlScheduleFSCH loadControlScheduleFSCH = 2;
-  if (this->has_loadcontrolschedulefsch()) {
+  if (this->_internal_has_loadcontrolschedulefsch()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *loadcontrolschedulefsch_);
+        *_impl_.loadcontrolschedulefsch_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LoadControlFSCC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:loadmodule.LoadControlFSCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  const LoadControlFSCC* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoadControlFSCC>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:loadmodule.LoadControlFSCC)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:loadmodule.LoadControlFSCC)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadControlFSCC::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LoadControlFSCC::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadControlFSCC::GetClassData() const { return &_class_data_; }
 
-void LoadControlFSCC::MergeFrom(const LoadControlFSCC& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadControlFSCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void LoadControlFSCC::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LoadControlFSCC*>(&to_msg);
+  auto& from = static_cast<const LoadControlFSCC&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadControlFSCC)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlfscc()) {
-    _internal_mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(from._internal_controlfscc());
+  if (from._internal_has_controlfscc()) {
+    _this->_internal_mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(
+        from._internal_controlfscc());
   }
-  if (from.has_loadcontrolschedulefsch()) {
-    _internal_mutable_loadcontrolschedulefsch()->::loadmodule::LoadControlScheduleFSCH::MergeFrom(from._internal_loadcontrolschedulefsch());
+  if (from._internal_has_loadcontrolschedulefsch()) {
+    _this->_internal_mutable_loadcontrolschedulefsch()->::loadmodule::LoadControlScheduleFSCH::MergeFrom(
+        from._internal_loadcontrolschedulefsch());
   }
-}
-
-void LoadControlFSCC::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:loadmodule.LoadControlFSCC)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LoadControlFSCC::CopyFrom(const LoadControlFSCC& from) {
@@ -1601,20 +1659,20 @@ bool LoadControlFSCC::IsInitialized() const {
 
 void LoadControlFSCC::InternalSwap(LoadControlFSCC* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(LoadControlFSCC, loadcontrolschedulefsch_)
-      + sizeof(LoadControlFSCC::loadcontrolschedulefsch_)
-      - PROTOBUF_FIELD_OFFSET(LoadControlFSCC, controlfscc_)>(
-          reinterpret_cast<char*>(&controlfscc_),
-          reinterpret_cast<char*>(&other->controlfscc_));
+      PROTOBUF_FIELD_OFFSET(LoadControlFSCC, _impl_.loadcontrolschedulefsch_)
+      + sizeof(LoadControlFSCC::_impl_.loadcontrolschedulefsch_)
+      - PROTOBUF_FIELD_OFFSET(LoadControlFSCC, _impl_.controlfscc_)>(
+          reinterpret_cast<char*>(&_impl_.controlfscc_),
+          reinterpret_cast<char*>(&other->_impl_.controlfscc_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadControlFSCC::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_loadmodule_2floadmodule_2eproto_getter, &descriptor_table_loadmodule_2floadmodule_2eproto_once,
+      file_level_metadata_loadmodule_2floadmodule_2eproto[3]);
 }
-
-
 // ===================================================================
 
 class LoadControl::_Internal {
@@ -1626,270 +1684,257 @@ class LoadControl::_Internal {
 
 const ::commonmodule::ControlValue&
 LoadControl::_Internal::controlvalue(const LoadControl* msg) {
-  return *msg->controlvalue_;
+  return *msg->_impl_.controlvalue_;
 }
 const ::commonmodule::CheckConditions&
 LoadControl::_Internal::check(const LoadControl* msg) {
-  return *msg->check_;
+  return *msg->_impl_.check_;
 }
 const ::loadmodule::LoadControlFSCC&
 LoadControl::_Internal::loadcontrolfscc(const LoadControl* msg) {
-  return *msg->loadcontrolfscc_;
+  return *msg->_impl_.loadcontrolfscc_;
 }
 void LoadControl::clear_controlvalue() {
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
   }
-  controlvalue_ = nullptr;
+  _impl_.controlvalue_ = nullptr;
 }
 void LoadControl::clear_check() {
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
+  _impl_.check_ = nullptr;
 }
 LoadControl::LoadControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:loadmodule.LoadControl)
 }
 LoadControl::LoadControl(const LoadControl& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LoadControl* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.loadcontrolfscc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlvalue()) {
-    controlvalue_ = new ::commonmodule::ControlValue(*from.controlvalue_);
-  } else {
-    controlvalue_ = nullptr;
+    _this->_impl_.controlvalue_ = new ::commonmodule::ControlValue(*from._impl_.controlvalue_);
   }
   if (from._internal_has_check()) {
-    check_ = new ::commonmodule::CheckConditions(*from.check_);
-  } else {
-    check_ = nullptr;
+    _this->_impl_.check_ = new ::commonmodule::CheckConditions(*from._impl_.check_);
   }
   if (from._internal_has_loadcontrolfscc()) {
-    loadcontrolfscc_ = new ::loadmodule::LoadControlFSCC(*from.loadcontrolfscc_);
-  } else {
-    loadcontrolfscc_ = nullptr;
+    _this->_impl_.loadcontrolfscc_ = new ::loadmodule::LoadControlFSCC(*from._impl_.loadcontrolfscc_);
   }
   // @@protoc_insertion_point(copy_constructor:loadmodule.LoadControl)
 }
 
-void LoadControl::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&loadcontrolfscc_) -
-    reinterpret_cast<char*>(&controlvalue_)) + sizeof(loadcontrolfscc_));
+inline void LoadControl::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.loadcontrolfscc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 LoadControl::~LoadControl() {
   // @@protoc_insertion_point(destructor:loadmodule.LoadControl)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void LoadControl::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlvalue_;
-  if (this != internal_default_instance()) delete check_;
-  if (this != internal_default_instance()) delete loadcontrolfscc_;
+inline void LoadControl::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlvalue_;
+  if (this != internal_default_instance()) delete _impl_.check_;
+  if (this != internal_default_instance()) delete _impl_.loadcontrolfscc_;
 }
 
-void LoadControl::ArenaDtor(void* object) {
-  LoadControl* _this = reinterpret_cast< LoadControl* >(object);
-  (void)_this;
-}
-void LoadControl::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void LoadControl::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void LoadControl::Clear() {
 // @@protoc_insertion_point(message_clear_start:loadmodule.LoadControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
   }
-  controlvalue_ = nullptr;
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  _impl_.controlvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
-  if (GetArena() == nullptr && loadcontrolfscc_ != nullptr) {
-    delete loadcontrolfscc_;
+  _impl_.check_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.loadcontrolfscc_ != nullptr) {
+    delete _impl_.loadcontrolfscc_;
   }
-  loadcontrolfscc_ = nullptr;
+  _impl_.loadcontrolfscc_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* LoadControl::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* LoadControl::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlvalue(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.CheckConditions check = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .loadmodule.LoadControlFSCC loadControlFSCC = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_loadcontrolfscc(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* LoadControl::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* LoadControl::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:loadmodule.LoadControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlvalue()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlvalue(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlvalue(this),
+        _Internal::controlvalue(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_check()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::check(this), target, stream);
+      InternalWriteMessage(2, _Internal::check(this),
+        _Internal::check(this).GetCachedSize(), target, stream);
   }
 
   // .loadmodule.LoadControlFSCC loadControlFSCC = 3;
-  if (this->has_loadcontrolfscc()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_loadcontrolfscc()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::loadcontrolfscc(this), target, stream);
+      InternalWriteMessage(3, _Internal::loadcontrolfscc(this),
+        _Internal::loadcontrolfscc(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:loadmodule.LoadControl)
   return target;
 }
 
-size_t LoadControl::ByteSizeLong() const {
+::size_t LoadControl::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:loadmodule.LoadControl)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
+  if (this->_internal_has_controlvalue()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlvalue_);
+        *_impl_.controlvalue_);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
+  if (this->_internal_has_check()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *check_);
+        *_impl_.check_);
   }
 
   // .loadmodule.LoadControlFSCC loadControlFSCC = 3;
-  if (this->has_loadcontrolfscc()) {
+  if (this->_internal_has_loadcontrolfscc()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *loadcontrolfscc_);
+        *_impl_.loadcontrolfscc_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LoadControl::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:loadmodule.LoadControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  const LoadControl* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoadControl>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:loadmodule.LoadControl)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:loadmodule.LoadControl)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadControl::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LoadControl::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadControl::GetClassData() const { return &_class_data_; }
 
-void LoadControl::MergeFrom(const LoadControl& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void LoadControl::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LoadControl*>(&to_msg);
+  auto& from = static_cast<const LoadControl&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadControl)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlvalue()) {
-    _internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(from._internal_controlvalue());
+  if (from._internal_has_controlvalue()) {
+    _this->_internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(
+        from._internal_controlvalue());
   }
-  if (from.has_check()) {
-    _internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(from._internal_check());
+  if (from._internal_has_check()) {
+    _this->_internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(
+        from._internal_check());
   }
-  if (from.has_loadcontrolfscc()) {
-    _internal_mutable_loadcontrolfscc()->::loadmodule::LoadControlFSCC::MergeFrom(from._internal_loadcontrolfscc());
+  if (from._internal_has_loadcontrolfscc()) {
+    _this->_internal_mutable_loadcontrolfscc()->::loadmodule::LoadControlFSCC::MergeFrom(
+        from._internal_loadcontrolfscc());
   }
-}
-
-void LoadControl::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:loadmodule.LoadControl)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LoadControl::CopyFrom(const LoadControl& from) {
@@ -1905,20 +1950,20 @@ bool LoadControl::IsInitialized() const {
 
 void LoadControl::InternalSwap(LoadControl* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(LoadControl, loadcontrolfscc_)
-      + sizeof(LoadControl::loadcontrolfscc_)
-      - PROTOBUF_FIELD_OFFSET(LoadControl, controlvalue_)>(
-          reinterpret_cast<char*>(&controlvalue_),
-          reinterpret_cast<char*>(&other->controlvalue_));
+      PROTOBUF_FIELD_OFFSET(LoadControl, _impl_.loadcontrolfscc_)
+      + sizeof(LoadControl::_impl_.loadcontrolfscc_)
+      - PROTOBUF_FIELD_OFFSET(LoadControl, _impl_.controlvalue_)>(
+          reinterpret_cast<char*>(&_impl_.controlvalue_),
+          reinterpret_cast<char*>(&other->_impl_.controlvalue_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadControl::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_loadmodule_2floadmodule_2eproto_getter, &descriptor_table_loadmodule_2floadmodule_2eproto_once,
+      file_level_metadata_loadmodule_2floadmodule_2eproto[4]);
 }
-
-
 // ===================================================================
 
 class LoadControlProfile::_Internal {
@@ -1930,270 +1975,257 @@ class LoadControlProfile::_Internal {
 
 const ::commonmodule::ControlMessageInfo&
 LoadControlProfile::_Internal::controlmessageinfo(const LoadControlProfile* msg) {
-  return *msg->controlmessageinfo_;
+  return *msg->_impl_.controlmessageinfo_;
 }
 const ::commonmodule::EnergyConsumer&
 LoadControlProfile::_Internal::energyconsumer(const LoadControlProfile* msg) {
-  return *msg->energyconsumer_;
+  return *msg->_impl_.energyconsumer_;
 }
 const ::loadmodule::LoadControl&
 LoadControlProfile::_Internal::loadcontrol(const LoadControlProfile* msg) {
-  return *msg->loadcontrol_;
+  return *msg->_impl_.loadcontrol_;
 }
 void LoadControlProfile::clear_controlmessageinfo() {
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
+  _impl_.controlmessageinfo_ = nullptr;
 }
 void LoadControlProfile::clear_energyconsumer() {
-  if (GetArena() == nullptr && energyconsumer_ != nullptr) {
-    delete energyconsumer_;
+  if (GetArenaForAllocation() == nullptr && _impl_.energyconsumer_ != nullptr) {
+    delete _impl_.energyconsumer_;
   }
-  energyconsumer_ = nullptr;
+  _impl_.energyconsumer_ = nullptr;
 }
 LoadControlProfile::LoadControlProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:loadmodule.LoadControlProfile)
 }
 LoadControlProfile::LoadControlProfile(const LoadControlProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LoadControlProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.energyconsumer_){nullptr}
+    , decltype(_impl_.loadcontrol_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlmessageinfo()) {
-    controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
-  } else {
-    controlmessageinfo_ = nullptr;
+    _this->_impl_.controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from._impl_.controlmessageinfo_);
   }
   if (from._internal_has_energyconsumer()) {
-    energyconsumer_ = new ::commonmodule::EnergyConsumer(*from.energyconsumer_);
-  } else {
-    energyconsumer_ = nullptr;
+    _this->_impl_.energyconsumer_ = new ::commonmodule::EnergyConsumer(*from._impl_.energyconsumer_);
   }
   if (from._internal_has_loadcontrol()) {
-    loadcontrol_ = new ::loadmodule::LoadControl(*from.loadcontrol_);
-  } else {
-    loadcontrol_ = nullptr;
+    _this->_impl_.loadcontrol_ = new ::loadmodule::LoadControl(*from._impl_.loadcontrol_);
   }
   // @@protoc_insertion_point(copy_constructor:loadmodule.LoadControlProfile)
 }
 
-void LoadControlProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&loadcontrol_) -
-    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(loadcontrol_));
+inline void LoadControlProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.energyconsumer_){nullptr}
+    , decltype(_impl_.loadcontrol_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 LoadControlProfile::~LoadControlProfile() {
   // @@protoc_insertion_point(destructor:loadmodule.LoadControlProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void LoadControlProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete energyconsumer_;
-  if (this != internal_default_instance()) delete loadcontrol_;
+inline void LoadControlProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.energyconsumer_;
+  if (this != internal_default_instance()) delete _impl_.loadcontrol_;
 }
 
-void LoadControlProfile::ArenaDtor(void* object) {
-  LoadControlProfile* _this = reinterpret_cast< LoadControlProfile* >(object);
-  (void)_this;
-}
-void LoadControlProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void LoadControlProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void LoadControlProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:loadmodule.LoadControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && energyconsumer_ != nullptr) {
-    delete energyconsumer_;
+  _impl_.controlmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.energyconsumer_ != nullptr) {
+    delete _impl_.energyconsumer_;
   }
-  energyconsumer_ = nullptr;
-  if (GetArena() == nullptr && loadcontrol_ != nullptr) {
-    delete loadcontrol_;
+  _impl_.energyconsumer_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.loadcontrol_ != nullptr) {
+    delete _impl_.loadcontrol_;
   }
-  loadcontrol_ = nullptr;
+  _impl_.loadcontrol_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* LoadControlProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* LoadControlProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.EnergyConsumer energyConsumer = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_energyconsumer(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .loadmodule.LoadControl loadControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_loadcontrol(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* LoadControlProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* LoadControlProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:loadmodule.LoadControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlmessageinfo(this),
+        _Internal::controlmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.EnergyConsumer energyConsumer = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_energyconsumer()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_energyconsumer()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::energyconsumer(this), target, stream);
+      InternalWriteMessage(2, _Internal::energyconsumer(this),
+        _Internal::energyconsumer(this).GetCachedSize(), target, stream);
   }
 
   // .loadmodule.LoadControl loadControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_loadcontrol()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_loadcontrol()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::loadcontrol(this), target, stream);
+      InternalWriteMessage(3, _Internal::loadcontrol(this),
+        _Internal::loadcontrol(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:loadmodule.LoadControlProfile)
   return target;
 }
 
-size_t LoadControlProfile::ByteSizeLong() const {
+::size_t LoadControlProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:loadmodule.LoadControlProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
+  if (this->_internal_has_controlmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlmessageinfo_);
+        *_impl_.controlmessageinfo_);
   }
 
   // .commonmodule.EnergyConsumer energyConsumer = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_energyconsumer()) {
+  if (this->_internal_has_energyconsumer()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *energyconsumer_);
+        *_impl_.energyconsumer_);
   }
 
   // .loadmodule.LoadControl loadControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_loadcontrol()) {
+  if (this->_internal_has_loadcontrol()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *loadcontrol_);
+        *_impl_.loadcontrol_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LoadControlProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:loadmodule.LoadControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const LoadControlProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoadControlProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:loadmodule.LoadControlProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:loadmodule.LoadControlProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadControlProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LoadControlProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadControlProfile::GetClassData() const { return &_class_data_; }
 
-void LoadControlProfile::MergeFrom(const LoadControlProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void LoadControlProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LoadControlProfile*>(&to_msg);
+  auto& from = static_cast<const LoadControlProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadControlProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlmessageinfo()) {
-    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
+  if (from._internal_has_controlmessageinfo()) {
+    _this->_internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(
+        from._internal_controlmessageinfo());
   }
-  if (from.has_energyconsumer()) {
-    _internal_mutable_energyconsumer()->::commonmodule::EnergyConsumer::MergeFrom(from._internal_energyconsumer());
+  if (from._internal_has_energyconsumer()) {
+    _this->_internal_mutable_energyconsumer()->::commonmodule::EnergyConsumer::MergeFrom(
+        from._internal_energyconsumer());
   }
-  if (from.has_loadcontrol()) {
-    _internal_mutable_loadcontrol()->::loadmodule::LoadControl::MergeFrom(from._internal_loadcontrol());
+  if (from._internal_has_loadcontrol()) {
+    _this->_internal_mutable_loadcontrol()->::loadmodule::LoadControl::MergeFrom(
+        from._internal_loadcontrol());
   }
-}
-
-void LoadControlProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:loadmodule.LoadControlProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LoadControlProfile::CopyFrom(const LoadControlProfile& from) {
@@ -2209,20 +2241,20 @@ bool LoadControlProfile::IsInitialized() const {
 
 void LoadControlProfile::InternalSwap(LoadControlProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(LoadControlProfile, loadcontrol_)
-      + sizeof(LoadControlProfile::loadcontrol_)
-      - PROTOBUF_FIELD_OFFSET(LoadControlProfile, controlmessageinfo_)>(
-          reinterpret_cast<char*>(&controlmessageinfo_),
-          reinterpret_cast<char*>(&other->controlmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(LoadControlProfile, _impl_.loadcontrol_)
+      + sizeof(LoadControlProfile::_impl_.loadcontrol_)
+      - PROTOBUF_FIELD_OFFSET(LoadControlProfile, _impl_.controlmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.controlmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.controlmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadControlProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_loadmodule_2floadmodule_2eproto_getter, &descriptor_table_loadmodule_2floadmodule_2eproto_once,
+      file_level_metadata_loadmodule_2floadmodule_2eproto[5]);
 }
-
-
 // ===================================================================
 
 class LoadPointStatus::_Internal {
@@ -2236,366 +2268,357 @@ class LoadPointStatus::_Internal {
 
 const ::commonmodule::RampRate&
 LoadPointStatus::_Internal::ramprates(const LoadPointStatus* msg) {
-  return *msg->ramprates_;
+  return *msg->_impl_.ramprates_;
 }
 const ::commonmodule::StatusSPS&
 LoadPointStatus::_Internal::reactivepwrsetpointenabled(const LoadPointStatus* msg) {
-  return *msg->reactivepwrsetpointenabled_;
+  return *msg->_impl_.reactivepwrsetpointenabled_;
 }
 const ::commonmodule::StatusSPS&
 LoadPointStatus::_Internal::realpwrsetpointenabled(const LoadPointStatus* msg) {
-  return *msg->realpwrsetpointenabled_;
+  return *msg->_impl_.realpwrsetpointenabled_;
 }
 const ::commonmodule::StatusSPS&
 LoadPointStatus::_Internal::reset(const LoadPointStatus* msg) {
-  return *msg->reset_;
+  return *msg->_impl_.reset_;
 }
 const ::commonmodule::Optional_StateKind&
 LoadPointStatus::_Internal::state(const LoadPointStatus* msg) {
-  return *msg->state_;
+  return *msg->_impl_.state_;
 }
 void LoadPointStatus::clear_ramprates() {
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
-    delete ramprates_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ramprates_ != nullptr) {
+    delete _impl_.ramprates_;
   }
-  ramprates_ = nullptr;
+  _impl_.ramprates_ = nullptr;
 }
 void LoadPointStatus::clear_reactivepwrsetpointenabled() {
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
-    delete reactivepwrsetpointenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.reactivepwrsetpointenabled_ != nullptr) {
+    delete _impl_.reactivepwrsetpointenabled_;
   }
-  reactivepwrsetpointenabled_ = nullptr;
+  _impl_.reactivepwrsetpointenabled_ = nullptr;
 }
 void LoadPointStatus::clear_realpwrsetpointenabled() {
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
-    delete realpwrsetpointenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.realpwrsetpointenabled_ != nullptr) {
+    delete _impl_.realpwrsetpointenabled_;
   }
-  realpwrsetpointenabled_ = nullptr;
+  _impl_.realpwrsetpointenabled_ = nullptr;
 }
 void LoadPointStatus::clear_reset() {
-  if (GetArena() == nullptr && reset_ != nullptr) {
-    delete reset_;
+  if (GetArenaForAllocation() == nullptr && _impl_.reset_ != nullptr) {
+    delete _impl_.reset_;
   }
-  reset_ = nullptr;
+  _impl_.reset_ = nullptr;
 }
 void LoadPointStatus::clear_state() {
-  if (GetArena() == nullptr && state_ != nullptr) {
-    delete state_;
+  if (GetArenaForAllocation() == nullptr && _impl_.state_ != nullptr) {
+    delete _impl_.state_;
   }
-  state_ = nullptr;
+  _impl_.state_ = nullptr;
 }
 LoadPointStatus::LoadPointStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:loadmodule.LoadPointStatus)
 }
 LoadPointStatus::LoadPointStatus(const LoadPointStatus& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LoadPointStatus* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.ramprates_){nullptr}
+    , decltype(_impl_.reactivepwrsetpointenabled_){nullptr}
+    , decltype(_impl_.realpwrsetpointenabled_){nullptr}
+    , decltype(_impl_.reset_){nullptr}
+    , decltype(_impl_.state_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_ramprates()) {
-    ramprates_ = new ::commonmodule::RampRate(*from.ramprates_);
-  } else {
-    ramprates_ = nullptr;
+    _this->_impl_.ramprates_ = new ::commonmodule::RampRate(*from._impl_.ramprates_);
   }
   if (from._internal_has_reactivepwrsetpointenabled()) {
-    reactivepwrsetpointenabled_ = new ::commonmodule::StatusSPS(*from.reactivepwrsetpointenabled_);
-  } else {
-    reactivepwrsetpointenabled_ = nullptr;
+    _this->_impl_.reactivepwrsetpointenabled_ = new ::commonmodule::StatusSPS(*from._impl_.reactivepwrsetpointenabled_);
   }
   if (from._internal_has_realpwrsetpointenabled()) {
-    realpwrsetpointenabled_ = new ::commonmodule::StatusSPS(*from.realpwrsetpointenabled_);
-  } else {
-    realpwrsetpointenabled_ = nullptr;
+    _this->_impl_.realpwrsetpointenabled_ = new ::commonmodule::StatusSPS(*from._impl_.realpwrsetpointenabled_);
   }
   if (from._internal_has_reset()) {
-    reset_ = new ::commonmodule::StatusSPS(*from.reset_);
-  } else {
-    reset_ = nullptr;
+    _this->_impl_.reset_ = new ::commonmodule::StatusSPS(*from._impl_.reset_);
   }
   if (from._internal_has_state()) {
-    state_ = new ::commonmodule::Optional_StateKind(*from.state_);
-  } else {
-    state_ = nullptr;
+    _this->_impl_.state_ = new ::commonmodule::Optional_StateKind(*from._impl_.state_);
   }
   // @@protoc_insertion_point(copy_constructor:loadmodule.LoadPointStatus)
 }
 
-void LoadPointStatus::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&ramprates_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&state_) -
-    reinterpret_cast<char*>(&ramprates_)) + sizeof(state_));
+inline void LoadPointStatus::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.ramprates_){nullptr}
+    , decltype(_impl_.reactivepwrsetpointenabled_){nullptr}
+    , decltype(_impl_.realpwrsetpointenabled_){nullptr}
+    , decltype(_impl_.reset_){nullptr}
+    , decltype(_impl_.state_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 LoadPointStatus::~LoadPointStatus() {
   // @@protoc_insertion_point(destructor:loadmodule.LoadPointStatus)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void LoadPointStatus::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete ramprates_;
-  if (this != internal_default_instance()) delete reactivepwrsetpointenabled_;
-  if (this != internal_default_instance()) delete realpwrsetpointenabled_;
-  if (this != internal_default_instance()) delete reset_;
-  if (this != internal_default_instance()) delete state_;
+inline void LoadPointStatus::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.ramprates_;
+  if (this != internal_default_instance()) delete _impl_.reactivepwrsetpointenabled_;
+  if (this != internal_default_instance()) delete _impl_.realpwrsetpointenabled_;
+  if (this != internal_default_instance()) delete _impl_.reset_;
+  if (this != internal_default_instance()) delete _impl_.state_;
 }
 
-void LoadPointStatus::ArenaDtor(void* object) {
-  LoadPointStatus* _this = reinterpret_cast< LoadPointStatus* >(object);
-  (void)_this;
-}
-void LoadPointStatus::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void LoadPointStatus::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void LoadPointStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:loadmodule.LoadPointStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
-    delete ramprates_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ramprates_ != nullptr) {
+    delete _impl_.ramprates_;
   }
-  ramprates_ = nullptr;
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
-    delete reactivepwrsetpointenabled_;
+  _impl_.ramprates_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.reactivepwrsetpointenabled_ != nullptr) {
+    delete _impl_.reactivepwrsetpointenabled_;
   }
-  reactivepwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
-    delete realpwrsetpointenabled_;
+  _impl_.reactivepwrsetpointenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.realpwrsetpointenabled_ != nullptr) {
+    delete _impl_.realpwrsetpointenabled_;
   }
-  realpwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && reset_ != nullptr) {
-    delete reset_;
+  _impl_.realpwrsetpointenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.reset_ != nullptr) {
+    delete _impl_.reset_;
   }
-  reset_ = nullptr;
-  if (GetArena() == nullptr && state_ != nullptr) {
-    delete state_;
+  _impl_.reset_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.state_ != nullptr) {
+    delete _impl_.state_;
   }
-  state_ = nullptr;
+  _impl_.state_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* LoadPointStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* LoadPointStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.RampRate rampRates = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_ramprates(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_reactivepwrsetpointenabled(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS realPwrSetPointEnabled = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_realpwrsetpointenabled(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS reset = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_reset(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.Optional_StateKind state = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_state(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* LoadPointStatus::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* LoadPointStatus::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:loadmodule.LoadPointStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.RampRate rampRates = 1;
-  if (this->has_ramprates()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ramprates()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::ramprates(this), target, stream);
+      InternalWriteMessage(1, _Internal::ramprates(this),
+        _Internal::ramprates(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 2;
-  if (this->has_reactivepwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_reactivepwrsetpointenabled()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::reactivepwrsetpointenabled(this), target, stream);
+      InternalWriteMessage(2, _Internal::reactivepwrsetpointenabled(this),
+        _Internal::reactivepwrsetpointenabled(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS realPwrSetPointEnabled = 3;
-  if (this->has_realpwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_realpwrsetpointenabled()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::realpwrsetpointenabled(this), target, stream);
+      InternalWriteMessage(3, _Internal::realpwrsetpointenabled(this),
+        _Internal::realpwrsetpointenabled(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS reset = 4;
-  if (this->has_reset()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_reset()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::reset(this), target, stream);
+      InternalWriteMessage(4, _Internal::reset(this),
+        _Internal::reset(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.Optional_StateKind state = 5;
-  if (this->has_state()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_state()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::state(this), target, stream);
+      InternalWriteMessage(5, _Internal::state(this),
+        _Internal::state(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:loadmodule.LoadPointStatus)
   return target;
 }
 
-size_t LoadPointStatus::ByteSizeLong() const {
+::size_t LoadPointStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:loadmodule.LoadPointStatus)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.RampRate rampRates = 1;
-  if (this->has_ramprates()) {
+  if (this->_internal_has_ramprates()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ramprates_);
+        *_impl_.ramprates_);
   }
 
   // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 2;
-  if (this->has_reactivepwrsetpointenabled()) {
+  if (this->_internal_has_reactivepwrsetpointenabled()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *reactivepwrsetpointenabled_);
+        *_impl_.reactivepwrsetpointenabled_);
   }
 
   // .commonmodule.StatusSPS realPwrSetPointEnabled = 3;
-  if (this->has_realpwrsetpointenabled()) {
+  if (this->_internal_has_realpwrsetpointenabled()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *realpwrsetpointenabled_);
+        *_impl_.realpwrsetpointenabled_);
   }
 
   // .commonmodule.StatusSPS reset = 4;
-  if (this->has_reset()) {
+  if (this->_internal_has_reset()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *reset_);
+        *_impl_.reset_);
   }
 
   // .commonmodule.Optional_StateKind state = 5;
-  if (this->has_state()) {
+  if (this->_internal_has_state()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *state_);
+        *_impl_.state_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LoadPointStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:loadmodule.LoadPointStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  const LoadPointStatus* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoadPointStatus>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:loadmodule.LoadPointStatus)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:loadmodule.LoadPointStatus)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadPointStatus::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LoadPointStatus::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadPointStatus::GetClassData() const { return &_class_data_; }
 
-void LoadPointStatus::MergeFrom(const LoadPointStatus& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadPointStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void LoadPointStatus::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LoadPointStatus*>(&to_msg);
+  auto& from = static_cast<const LoadPointStatus&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadPointStatus)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_ramprates()) {
-    _internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from._internal_ramprates());
+  if (from._internal_has_ramprates()) {
+    _this->_internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(
+        from._internal_ramprates());
   }
-  if (from.has_reactivepwrsetpointenabled()) {
-    _internal_mutable_reactivepwrsetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_reactivepwrsetpointenabled());
+  if (from._internal_has_reactivepwrsetpointenabled()) {
+    _this->_internal_mutable_reactivepwrsetpointenabled()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_reactivepwrsetpointenabled());
   }
-  if (from.has_realpwrsetpointenabled()) {
-    _internal_mutable_realpwrsetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_realpwrsetpointenabled());
+  if (from._internal_has_realpwrsetpointenabled()) {
+    _this->_internal_mutable_realpwrsetpointenabled()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_realpwrsetpointenabled());
   }
-  if (from.has_reset()) {
-    _internal_mutable_reset()->::commonmodule::StatusSPS::MergeFrom(from._internal_reset());
+  if (from._internal_has_reset()) {
+    _this->_internal_mutable_reset()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_reset());
   }
-  if (from.has_state()) {
-    _internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from._internal_state());
+  if (from._internal_has_state()) {
+    _this->_internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(
+        from._internal_state());
   }
-}
-
-void LoadPointStatus::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:loadmodule.LoadPointStatus)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LoadPointStatus::CopyFrom(const LoadPointStatus& from) {
@@ -2611,20 +2634,20 @@ bool LoadPointStatus::IsInitialized() const {
 
 void LoadPointStatus::InternalSwap(LoadPointStatus* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(LoadPointStatus, state_)
-      + sizeof(LoadPointStatus::state_)
-      - PROTOBUF_FIELD_OFFSET(LoadPointStatus, ramprates_)>(
-          reinterpret_cast<char*>(&ramprates_),
-          reinterpret_cast<char*>(&other->ramprates_));
+      PROTOBUF_FIELD_OFFSET(LoadPointStatus, _impl_.state_)
+      + sizeof(LoadPointStatus::_impl_.state_)
+      - PROTOBUF_FIELD_OFFSET(LoadPointStatus, _impl_.ramprates_)>(
+          reinterpret_cast<char*>(&_impl_.ramprates_),
+          reinterpret_cast<char*>(&other->_impl_.ramprates_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadPointStatus::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_loadmodule_2floadmodule_2eproto_getter, &descriptor_table_loadmodule_2floadmodule_2eproto_once,
+      file_level_metadata_loadmodule_2floadmodule_2eproto[6]);
 }
-
-
 // ===================================================================
 
 class LoadEventAndStatusZGLD::_Internal {
@@ -2637,315 +2660,304 @@ class LoadEventAndStatusZGLD::_Internal {
 
 const ::commonmodule::LogicalNodeForEventAndStatus&
 LoadEventAndStatusZGLD::_Internal::logicalnodeforeventandstatus(const LoadEventAndStatusZGLD* msg) {
-  return *msg->logicalnodeforeventandstatus_;
+  return *msg->_impl_.logicalnodeforeventandstatus_;
 }
 const ::commonmodule::ENS_DynamicTestKind&
 LoadEventAndStatusZGLD::_Internal::dynamictest(const LoadEventAndStatusZGLD* msg) {
-  return *msg->dynamictest_;
+  return *msg->_impl_.dynamictest_;
 }
 const ::commonmodule::StatusSPS&
 LoadEventAndStatusZGLD::_Internal::emgstop(const LoadEventAndStatusZGLD* msg) {
-  return *msg->emgstop_;
+  return *msg->_impl_.emgstop_;
 }
 const ::loadmodule::LoadPointStatus&
 LoadEventAndStatusZGLD::_Internal::pointstatus(const LoadEventAndStatusZGLD* msg) {
-  return *msg->pointstatus_;
+  return *msg->_impl_.pointstatus_;
 }
 void LoadEventAndStatusZGLD::clear_logicalnodeforeventandstatus() {
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
-    delete logicalnodeforeventandstatus_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforeventandstatus_ != nullptr) {
+    delete _impl_.logicalnodeforeventandstatus_;
   }
-  logicalnodeforeventandstatus_ = nullptr;
+  _impl_.logicalnodeforeventandstatus_ = nullptr;
 }
 void LoadEventAndStatusZGLD::clear_dynamictest() {
-  if (GetArena() == nullptr && dynamictest_ != nullptr) {
-    delete dynamictest_;
+  if (GetArenaForAllocation() == nullptr && _impl_.dynamictest_ != nullptr) {
+    delete _impl_.dynamictest_;
   }
-  dynamictest_ = nullptr;
+  _impl_.dynamictest_ = nullptr;
 }
 void LoadEventAndStatusZGLD::clear_emgstop() {
-  if (GetArena() == nullptr && emgstop_ != nullptr) {
-    delete emgstop_;
+  if (GetArenaForAllocation() == nullptr && _impl_.emgstop_ != nullptr) {
+    delete _impl_.emgstop_;
   }
-  emgstop_ = nullptr;
+  _impl_.emgstop_ = nullptr;
 }
 LoadEventAndStatusZGLD::LoadEventAndStatusZGLD(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:loadmodule.LoadEventAndStatusZGLD)
 }
 LoadEventAndStatusZGLD::LoadEventAndStatusZGLD(const LoadEventAndStatusZGLD& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LoadEventAndStatusZGLD* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforeventandstatus_){nullptr}
+    , decltype(_impl_.dynamictest_){nullptr}
+    , decltype(_impl_.emgstop_){nullptr}
+    , decltype(_impl_.pointstatus_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_logicalnodeforeventandstatus()) {
-    logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from.logicalnodeforeventandstatus_);
-  } else {
-    logicalnodeforeventandstatus_ = nullptr;
+    _this->_impl_.logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from._impl_.logicalnodeforeventandstatus_);
   }
   if (from._internal_has_dynamictest()) {
-    dynamictest_ = new ::commonmodule::ENS_DynamicTestKind(*from.dynamictest_);
-  } else {
-    dynamictest_ = nullptr;
+    _this->_impl_.dynamictest_ = new ::commonmodule::ENS_DynamicTestKind(*from._impl_.dynamictest_);
   }
   if (from._internal_has_emgstop()) {
-    emgstop_ = new ::commonmodule::StatusSPS(*from.emgstop_);
-  } else {
-    emgstop_ = nullptr;
+    _this->_impl_.emgstop_ = new ::commonmodule::StatusSPS(*from._impl_.emgstop_);
   }
   if (from._internal_has_pointstatus()) {
-    pointstatus_ = new ::loadmodule::LoadPointStatus(*from.pointstatus_);
-  } else {
-    pointstatus_ = nullptr;
+    _this->_impl_.pointstatus_ = new ::loadmodule::LoadPointStatus(*from._impl_.pointstatus_);
   }
   // @@protoc_insertion_point(copy_constructor:loadmodule.LoadEventAndStatusZGLD)
 }
 
-void LoadEventAndStatusZGLD::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&pointstatus_) -
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(pointstatus_));
+inline void LoadEventAndStatusZGLD::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforeventandstatus_){nullptr}
+    , decltype(_impl_.dynamictest_){nullptr}
+    , decltype(_impl_.emgstop_){nullptr}
+    , decltype(_impl_.pointstatus_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 LoadEventAndStatusZGLD::~LoadEventAndStatusZGLD() {
   // @@protoc_insertion_point(destructor:loadmodule.LoadEventAndStatusZGLD)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void LoadEventAndStatusZGLD::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete logicalnodeforeventandstatus_;
-  if (this != internal_default_instance()) delete dynamictest_;
-  if (this != internal_default_instance()) delete emgstop_;
-  if (this != internal_default_instance()) delete pointstatus_;
+inline void LoadEventAndStatusZGLD::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.logicalnodeforeventandstatus_;
+  if (this != internal_default_instance()) delete _impl_.dynamictest_;
+  if (this != internal_default_instance()) delete _impl_.emgstop_;
+  if (this != internal_default_instance()) delete _impl_.pointstatus_;
 }
 
-void LoadEventAndStatusZGLD::ArenaDtor(void* object) {
-  LoadEventAndStatusZGLD* _this = reinterpret_cast< LoadEventAndStatusZGLD* >(object);
-  (void)_this;
-}
-void LoadEventAndStatusZGLD::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void LoadEventAndStatusZGLD::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void LoadEventAndStatusZGLD::Clear() {
 // @@protoc_insertion_point(message_clear_start:loadmodule.LoadEventAndStatusZGLD)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
-    delete logicalnodeforeventandstatus_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforeventandstatus_ != nullptr) {
+    delete _impl_.logicalnodeforeventandstatus_;
   }
-  logicalnodeforeventandstatus_ = nullptr;
-  if (GetArena() == nullptr && dynamictest_ != nullptr) {
-    delete dynamictest_;
+  _impl_.logicalnodeforeventandstatus_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.dynamictest_ != nullptr) {
+    delete _impl_.dynamictest_;
   }
-  dynamictest_ = nullptr;
-  if (GetArena() == nullptr && emgstop_ != nullptr) {
-    delete emgstop_;
+  _impl_.dynamictest_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.emgstop_ != nullptr) {
+    delete _impl_.emgstop_;
   }
-  emgstop_ = nullptr;
-  if (GetArena() == nullptr && pointstatus_ != nullptr) {
-    delete pointstatus_;
+  _impl_.emgstop_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.pointstatus_ != nullptr) {
+    delete _impl_.pointstatus_;
   }
-  pointstatus_ = nullptr;
+  _impl_.pointstatus_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* LoadEventAndStatusZGLD::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* LoadEventAndStatusZGLD::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforeventandstatus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ENS_DynamicTestKind DynamicTest = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_dynamictest(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS EmgStop = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_emgstop(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .loadmodule.LoadPointStatus PointStatus = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_pointstatus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* LoadEventAndStatusZGLD::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* LoadEventAndStatusZGLD::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:loadmodule.LoadEventAndStatusZGLD)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforeventandstatus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_logicalnodeforeventandstatus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnodeforeventandstatus(this), target, stream);
+      InternalWriteMessage(1, _Internal::logicalnodeforeventandstatus(this),
+        _Internal::logicalnodeforeventandstatus(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ENS_DynamicTestKind DynamicTest = 2;
-  if (this->has_dynamictest()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_dynamictest()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::dynamictest(this), target, stream);
+      InternalWriteMessage(2, _Internal::dynamictest(this),
+        _Internal::dynamictest(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS EmgStop = 3;
-  if (this->has_emgstop()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_emgstop()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::emgstop(this), target, stream);
+      InternalWriteMessage(3, _Internal::emgstop(this),
+        _Internal::emgstop(this).GetCachedSize(), target, stream);
   }
 
   // .loadmodule.LoadPointStatus PointStatus = 4;
-  if (this->has_pointstatus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_pointstatus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::pointstatus(this), target, stream);
+      InternalWriteMessage(4, _Internal::pointstatus(this),
+        _Internal::pointstatus(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:loadmodule.LoadEventAndStatusZGLD)
   return target;
 }
 
-size_t LoadEventAndStatusZGLD::ByteSizeLong() const {
+::size_t LoadEventAndStatusZGLD::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:loadmodule.LoadEventAndStatusZGLD)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforeventandstatus()) {
+  if (this->_internal_has_logicalnodeforeventandstatus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *logicalnodeforeventandstatus_);
+        *_impl_.logicalnodeforeventandstatus_);
   }
 
   // .commonmodule.ENS_DynamicTestKind DynamicTest = 2;
-  if (this->has_dynamictest()) {
+  if (this->_internal_has_dynamictest()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *dynamictest_);
+        *_impl_.dynamictest_);
   }
 
   // .commonmodule.StatusSPS EmgStop = 3;
-  if (this->has_emgstop()) {
+  if (this->_internal_has_emgstop()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *emgstop_);
+        *_impl_.emgstop_);
   }
 
   // .loadmodule.LoadPointStatus PointStatus = 4;
-  if (this->has_pointstatus()) {
+  if (this->_internal_has_pointstatus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *pointstatus_);
+        *_impl_.pointstatus_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LoadEventAndStatusZGLD::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:loadmodule.LoadEventAndStatusZGLD)
-  GOOGLE_DCHECK_NE(&from, this);
-  const LoadEventAndStatusZGLD* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoadEventAndStatusZGLD>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:loadmodule.LoadEventAndStatusZGLD)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:loadmodule.LoadEventAndStatusZGLD)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadEventAndStatusZGLD::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LoadEventAndStatusZGLD::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadEventAndStatusZGLD::GetClassData() const { return &_class_data_; }
 
-void LoadEventAndStatusZGLD::MergeFrom(const LoadEventAndStatusZGLD& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadEventAndStatusZGLD)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void LoadEventAndStatusZGLD::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LoadEventAndStatusZGLD*>(&to_msg);
+  auto& from = static_cast<const LoadEventAndStatusZGLD&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadEventAndStatusZGLD)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_logicalnodeforeventandstatus()) {
-    _internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from._internal_logicalnodeforeventandstatus());
+  if (from._internal_has_logicalnodeforeventandstatus()) {
+    _this->_internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(
+        from._internal_logicalnodeforeventandstatus());
   }
-  if (from.has_dynamictest()) {
-    _internal_mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(from._internal_dynamictest());
+  if (from._internal_has_dynamictest()) {
+    _this->_internal_mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(
+        from._internal_dynamictest());
   }
-  if (from.has_emgstop()) {
-    _internal_mutable_emgstop()->::commonmodule::StatusSPS::MergeFrom(from._internal_emgstop());
+  if (from._internal_has_emgstop()) {
+    _this->_internal_mutable_emgstop()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_emgstop());
   }
-  if (from.has_pointstatus()) {
-    _internal_mutable_pointstatus()->::loadmodule::LoadPointStatus::MergeFrom(from._internal_pointstatus());
+  if (from._internal_has_pointstatus()) {
+    _this->_internal_mutable_pointstatus()->::loadmodule::LoadPointStatus::MergeFrom(
+        from._internal_pointstatus());
   }
-}
-
-void LoadEventAndStatusZGLD::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:loadmodule.LoadEventAndStatusZGLD)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LoadEventAndStatusZGLD::CopyFrom(const LoadEventAndStatusZGLD& from) {
@@ -2961,20 +2973,20 @@ bool LoadEventAndStatusZGLD::IsInitialized() const {
 
 void LoadEventAndStatusZGLD::InternalSwap(LoadEventAndStatusZGLD* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(LoadEventAndStatusZGLD, pointstatus_)
-      + sizeof(LoadEventAndStatusZGLD::pointstatus_)
-      - PROTOBUF_FIELD_OFFSET(LoadEventAndStatusZGLD, logicalnodeforeventandstatus_)>(
-          reinterpret_cast<char*>(&logicalnodeforeventandstatus_),
-          reinterpret_cast<char*>(&other->logicalnodeforeventandstatus_));
+      PROTOBUF_FIELD_OFFSET(LoadEventAndStatusZGLD, _impl_.pointstatus_)
+      + sizeof(LoadEventAndStatusZGLD::_impl_.pointstatus_)
+      - PROTOBUF_FIELD_OFFSET(LoadEventAndStatusZGLD, _impl_.logicalnodeforeventandstatus_)>(
+          reinterpret_cast<char*>(&_impl_.logicalnodeforeventandstatus_),
+          reinterpret_cast<char*>(&other->_impl_.logicalnodeforeventandstatus_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadEventAndStatusZGLD::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_loadmodule_2floadmodule_2eproto_getter, &descriptor_table_loadmodule_2floadmodule_2eproto_once,
+      file_level_metadata_loadmodule_2floadmodule_2eproto[7]);
 }
-
-
 // ===================================================================
 
 class LoadEventZGLD::_Internal {
@@ -2984,177 +2996,163 @@ class LoadEventZGLD::_Internal {
 
 const ::loadmodule::LoadEventAndStatusZGLD&
 LoadEventZGLD::_Internal::loadeventandstatuszgld(const LoadEventZGLD* msg) {
-  return *msg->loadeventandstatuszgld_;
+  return *msg->_impl_.loadeventandstatuszgld_;
 }
 LoadEventZGLD::LoadEventZGLD(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:loadmodule.LoadEventZGLD)
 }
 LoadEventZGLD::LoadEventZGLD(const LoadEventZGLD& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LoadEventZGLD* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.loadeventandstatuszgld_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_loadeventandstatuszgld()) {
-    loadeventandstatuszgld_ = new ::loadmodule::LoadEventAndStatusZGLD(*from.loadeventandstatuszgld_);
-  } else {
-    loadeventandstatuszgld_ = nullptr;
+    _this->_impl_.loadeventandstatuszgld_ = new ::loadmodule::LoadEventAndStatusZGLD(*from._impl_.loadeventandstatuszgld_);
   }
   // @@protoc_insertion_point(copy_constructor:loadmodule.LoadEventZGLD)
 }
 
-void LoadEventZGLD::SharedCtor() {
-loadeventandstatuszgld_ = nullptr;
+inline void LoadEventZGLD::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.loadeventandstatuszgld_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 LoadEventZGLD::~LoadEventZGLD() {
   // @@protoc_insertion_point(destructor:loadmodule.LoadEventZGLD)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void LoadEventZGLD::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete loadeventandstatuszgld_;
+inline void LoadEventZGLD::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.loadeventandstatuszgld_;
 }
 
-void LoadEventZGLD::ArenaDtor(void* object) {
-  LoadEventZGLD* _this = reinterpret_cast< LoadEventZGLD* >(object);
-  (void)_this;
-}
-void LoadEventZGLD::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void LoadEventZGLD::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void LoadEventZGLD::Clear() {
 // @@protoc_insertion_point(message_clear_start:loadmodule.LoadEventZGLD)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && loadeventandstatuszgld_ != nullptr) {
-    delete loadeventandstatuszgld_;
+  if (GetArenaForAllocation() == nullptr && _impl_.loadeventandstatuszgld_ != nullptr) {
+    delete _impl_.loadeventandstatuszgld_;
   }
-  loadeventandstatuszgld_ = nullptr;
+  _impl_.loadeventandstatuszgld_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* LoadEventZGLD::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* LoadEventZGLD::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .loadmodule.LoadEventAndStatusZGLD loadEventAndStatusZGLD = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_loadeventandstatuszgld(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* LoadEventZGLD::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* LoadEventZGLD::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:loadmodule.LoadEventZGLD)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .loadmodule.LoadEventAndStatusZGLD loadEventAndStatusZGLD = 1 [(.uml.option_parent_message) = true];
-  if (this->has_loadeventandstatuszgld()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_loadeventandstatuszgld()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::loadeventandstatuszgld(this), target, stream);
+      InternalWriteMessage(1, _Internal::loadeventandstatuszgld(this),
+        _Internal::loadeventandstatuszgld(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:loadmodule.LoadEventZGLD)
   return target;
 }
 
-size_t LoadEventZGLD::ByteSizeLong() const {
+::size_t LoadEventZGLD::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:loadmodule.LoadEventZGLD)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .loadmodule.LoadEventAndStatusZGLD loadEventAndStatusZGLD = 1 [(.uml.option_parent_message) = true];
-  if (this->has_loadeventandstatuszgld()) {
+  if (this->_internal_has_loadeventandstatuszgld()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *loadeventandstatuszgld_);
+        *_impl_.loadeventandstatuszgld_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LoadEventZGLD::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:loadmodule.LoadEventZGLD)
-  GOOGLE_DCHECK_NE(&from, this);
-  const LoadEventZGLD* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoadEventZGLD>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:loadmodule.LoadEventZGLD)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:loadmodule.LoadEventZGLD)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadEventZGLD::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LoadEventZGLD::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadEventZGLD::GetClassData() const { return &_class_data_; }
 
-void LoadEventZGLD::MergeFrom(const LoadEventZGLD& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadEventZGLD)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void LoadEventZGLD::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LoadEventZGLD*>(&to_msg);
+  auto& from = static_cast<const LoadEventZGLD&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadEventZGLD)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_loadeventandstatuszgld()) {
-    _internal_mutable_loadeventandstatuszgld()->::loadmodule::LoadEventAndStatusZGLD::MergeFrom(from._internal_loadeventandstatuszgld());
+  if (from._internal_has_loadeventandstatuszgld()) {
+    _this->_internal_mutable_loadeventandstatuszgld()->::loadmodule::LoadEventAndStatusZGLD::MergeFrom(
+        from._internal_loadeventandstatuszgld());
   }
-}
-
-void LoadEventZGLD::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:loadmodule.LoadEventZGLD)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LoadEventZGLD::CopyFrom(const LoadEventZGLD& from) {
@@ -3170,15 +3168,15 @@ bool LoadEventZGLD::IsInitialized() const {
 
 void LoadEventZGLD::InternalSwap(LoadEventZGLD* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(loadeventandstatuszgld_, other->loadeventandstatuszgld_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.loadeventandstatuszgld_, other->_impl_.loadeventandstatuszgld_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadEventZGLD::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_loadmodule_2floadmodule_2eproto_getter, &descriptor_table_loadmodule_2floadmodule_2eproto_once,
+      file_level_metadata_loadmodule_2floadmodule_2eproto[8]);
 }
-
-
 // ===================================================================
 
 class LoadEvent::_Internal {
@@ -3189,225 +3187,210 @@ class LoadEvent::_Internal {
 
 const ::commonmodule::EventValue&
 LoadEvent::_Internal::eventvalue(const LoadEvent* msg) {
-  return *msg->eventvalue_;
+  return *msg->_impl_.eventvalue_;
 }
 const ::loadmodule::LoadEventZGLD&
 LoadEvent::_Internal::loadeventzgld(const LoadEvent* msg) {
-  return *msg->loadeventzgld_;
+  return *msg->_impl_.loadeventzgld_;
 }
 void LoadEvent::clear_eventvalue() {
-  if (GetArena() == nullptr && eventvalue_ != nullptr) {
-    delete eventvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventvalue_ != nullptr) {
+    delete _impl_.eventvalue_;
   }
-  eventvalue_ = nullptr;
+  _impl_.eventvalue_ = nullptr;
 }
 LoadEvent::LoadEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:loadmodule.LoadEvent)
 }
 LoadEvent::LoadEvent(const LoadEvent& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LoadEvent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventvalue_){nullptr}
+    , decltype(_impl_.loadeventzgld_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_eventvalue()) {
-    eventvalue_ = new ::commonmodule::EventValue(*from.eventvalue_);
-  } else {
-    eventvalue_ = nullptr;
+    _this->_impl_.eventvalue_ = new ::commonmodule::EventValue(*from._impl_.eventvalue_);
   }
   if (from._internal_has_loadeventzgld()) {
-    loadeventzgld_ = new ::loadmodule::LoadEventZGLD(*from.loadeventzgld_);
-  } else {
-    loadeventzgld_ = nullptr;
+    _this->_impl_.loadeventzgld_ = new ::loadmodule::LoadEventZGLD(*from._impl_.loadeventzgld_);
   }
   // @@protoc_insertion_point(copy_constructor:loadmodule.LoadEvent)
 }
 
-void LoadEvent::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&eventvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&loadeventzgld_) -
-    reinterpret_cast<char*>(&eventvalue_)) + sizeof(loadeventzgld_));
+inline void LoadEvent::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventvalue_){nullptr}
+    , decltype(_impl_.loadeventzgld_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 LoadEvent::~LoadEvent() {
   // @@protoc_insertion_point(destructor:loadmodule.LoadEvent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void LoadEvent::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete eventvalue_;
-  if (this != internal_default_instance()) delete loadeventzgld_;
+inline void LoadEvent::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.eventvalue_;
+  if (this != internal_default_instance()) delete _impl_.loadeventzgld_;
 }
 
-void LoadEvent::ArenaDtor(void* object) {
-  LoadEvent* _this = reinterpret_cast< LoadEvent* >(object);
-  (void)_this;
-}
-void LoadEvent::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void LoadEvent::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void LoadEvent::Clear() {
 // @@protoc_insertion_point(message_clear_start:loadmodule.LoadEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && eventvalue_ != nullptr) {
-    delete eventvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventvalue_ != nullptr) {
+    delete _impl_.eventvalue_;
   }
-  eventvalue_ = nullptr;
-  if (GetArena() == nullptr && loadeventzgld_ != nullptr) {
-    delete loadeventzgld_;
+  _impl_.eventvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.loadeventzgld_ != nullptr) {
+    delete _impl_.loadeventzgld_;
   }
-  loadeventzgld_ = nullptr;
+  _impl_.loadeventzgld_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* LoadEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* LoadEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_eventvalue(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .loadmodule.LoadEventZGLD loadEventZGLD = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_loadeventzgld(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* LoadEvent::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* LoadEvent::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:loadmodule.LoadEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventvalue()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_eventvalue()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::eventvalue(this), target, stream);
+      InternalWriteMessage(1, _Internal::eventvalue(this),
+        _Internal::eventvalue(this).GetCachedSize(), target, stream);
   }
 
   // .loadmodule.LoadEventZGLD loadEventZGLD = 2;
-  if (this->has_loadeventzgld()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_loadeventzgld()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::loadeventzgld(this), target, stream);
+      InternalWriteMessage(2, _Internal::loadeventzgld(this),
+        _Internal::loadeventzgld(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:loadmodule.LoadEvent)
   return target;
 }
 
-size_t LoadEvent::ByteSizeLong() const {
+::size_t LoadEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:loadmodule.LoadEvent)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventvalue()) {
+  if (this->_internal_has_eventvalue()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *eventvalue_);
+        *_impl_.eventvalue_);
   }
 
   // .loadmodule.LoadEventZGLD loadEventZGLD = 2;
-  if (this->has_loadeventzgld()) {
+  if (this->_internal_has_loadeventzgld()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *loadeventzgld_);
+        *_impl_.loadeventzgld_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LoadEvent::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:loadmodule.LoadEvent)
-  GOOGLE_DCHECK_NE(&from, this);
-  const LoadEvent* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoadEvent>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:loadmodule.LoadEvent)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:loadmodule.LoadEvent)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadEvent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LoadEvent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadEvent::GetClassData() const { return &_class_data_; }
 
-void LoadEvent::MergeFrom(const LoadEvent& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadEvent)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void LoadEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LoadEvent*>(&to_msg);
+  auto& from = static_cast<const LoadEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadEvent)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_eventvalue()) {
-    _internal_mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(from._internal_eventvalue());
+  if (from._internal_has_eventvalue()) {
+    _this->_internal_mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(
+        from._internal_eventvalue());
   }
-  if (from.has_loadeventzgld()) {
-    _internal_mutable_loadeventzgld()->::loadmodule::LoadEventZGLD::MergeFrom(from._internal_loadeventzgld());
+  if (from._internal_has_loadeventzgld()) {
+    _this->_internal_mutable_loadeventzgld()->::loadmodule::LoadEventZGLD::MergeFrom(
+        from._internal_loadeventzgld());
   }
-}
-
-void LoadEvent::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:loadmodule.LoadEvent)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LoadEvent::CopyFrom(const LoadEvent& from) {
@@ -3423,20 +3406,20 @@ bool LoadEvent::IsInitialized() const {
 
 void LoadEvent::InternalSwap(LoadEvent* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(LoadEvent, loadeventzgld_)
-      + sizeof(LoadEvent::loadeventzgld_)
-      - PROTOBUF_FIELD_OFFSET(LoadEvent, eventvalue_)>(
-          reinterpret_cast<char*>(&eventvalue_),
-          reinterpret_cast<char*>(&other->eventvalue_));
+      PROTOBUF_FIELD_OFFSET(LoadEvent, _impl_.loadeventzgld_)
+      + sizeof(LoadEvent::_impl_.loadeventzgld_)
+      - PROTOBUF_FIELD_OFFSET(LoadEvent, _impl_.eventvalue_)>(
+          reinterpret_cast<char*>(&_impl_.eventvalue_),
+          reinterpret_cast<char*>(&other->_impl_.eventvalue_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadEvent::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_loadmodule_2floadmodule_2eproto_getter, &descriptor_table_loadmodule_2floadmodule_2eproto_once,
+      file_level_metadata_loadmodule_2floadmodule_2eproto[9]);
 }
-
-
 // ===================================================================
 
 class LoadEventProfile::_Internal {
@@ -3448,270 +3431,257 @@ class LoadEventProfile::_Internal {
 
 const ::commonmodule::EventMessageInfo&
 LoadEventProfile::_Internal::eventmessageinfo(const LoadEventProfile* msg) {
-  return *msg->eventmessageinfo_;
+  return *msg->_impl_.eventmessageinfo_;
 }
 const ::commonmodule::EnergyConsumer&
 LoadEventProfile::_Internal::energyconsumer(const LoadEventProfile* msg) {
-  return *msg->energyconsumer_;
+  return *msg->_impl_.energyconsumer_;
 }
 const ::loadmodule::LoadEvent&
 LoadEventProfile::_Internal::loadevent(const LoadEventProfile* msg) {
-  return *msg->loadevent_;
+  return *msg->_impl_.loadevent_;
 }
 void LoadEventProfile::clear_eventmessageinfo() {
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
-    delete eventmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventmessageinfo_ != nullptr) {
+    delete _impl_.eventmessageinfo_;
   }
-  eventmessageinfo_ = nullptr;
+  _impl_.eventmessageinfo_ = nullptr;
 }
 void LoadEventProfile::clear_energyconsumer() {
-  if (GetArena() == nullptr && energyconsumer_ != nullptr) {
-    delete energyconsumer_;
+  if (GetArenaForAllocation() == nullptr && _impl_.energyconsumer_ != nullptr) {
+    delete _impl_.energyconsumer_;
   }
-  energyconsumer_ = nullptr;
+  _impl_.energyconsumer_ = nullptr;
 }
 LoadEventProfile::LoadEventProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:loadmodule.LoadEventProfile)
 }
 LoadEventProfile::LoadEventProfile(const LoadEventProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LoadEventProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventmessageinfo_){nullptr}
+    , decltype(_impl_.energyconsumer_){nullptr}
+    , decltype(_impl_.loadevent_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_eventmessageinfo()) {
-    eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from.eventmessageinfo_);
-  } else {
-    eventmessageinfo_ = nullptr;
+    _this->_impl_.eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from._impl_.eventmessageinfo_);
   }
   if (from._internal_has_energyconsumer()) {
-    energyconsumer_ = new ::commonmodule::EnergyConsumer(*from.energyconsumer_);
-  } else {
-    energyconsumer_ = nullptr;
+    _this->_impl_.energyconsumer_ = new ::commonmodule::EnergyConsumer(*from._impl_.energyconsumer_);
   }
   if (from._internal_has_loadevent()) {
-    loadevent_ = new ::loadmodule::LoadEvent(*from.loadevent_);
-  } else {
-    loadevent_ = nullptr;
+    _this->_impl_.loadevent_ = new ::loadmodule::LoadEvent(*from._impl_.loadevent_);
   }
   // @@protoc_insertion_point(copy_constructor:loadmodule.LoadEventProfile)
 }
 
-void LoadEventProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&eventmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&loadevent_) -
-    reinterpret_cast<char*>(&eventmessageinfo_)) + sizeof(loadevent_));
+inline void LoadEventProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventmessageinfo_){nullptr}
+    , decltype(_impl_.energyconsumer_){nullptr}
+    , decltype(_impl_.loadevent_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 LoadEventProfile::~LoadEventProfile() {
   // @@protoc_insertion_point(destructor:loadmodule.LoadEventProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void LoadEventProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete eventmessageinfo_;
-  if (this != internal_default_instance()) delete energyconsumer_;
-  if (this != internal_default_instance()) delete loadevent_;
+inline void LoadEventProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.eventmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.energyconsumer_;
+  if (this != internal_default_instance()) delete _impl_.loadevent_;
 }
 
-void LoadEventProfile::ArenaDtor(void* object) {
-  LoadEventProfile* _this = reinterpret_cast< LoadEventProfile* >(object);
-  (void)_this;
-}
-void LoadEventProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void LoadEventProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void LoadEventProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:loadmodule.LoadEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
-    delete eventmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventmessageinfo_ != nullptr) {
+    delete _impl_.eventmessageinfo_;
   }
-  eventmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && energyconsumer_ != nullptr) {
-    delete energyconsumer_;
+  _impl_.eventmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.energyconsumer_ != nullptr) {
+    delete _impl_.energyconsumer_;
   }
-  energyconsumer_ = nullptr;
-  if (GetArena() == nullptr && loadevent_ != nullptr) {
-    delete loadevent_;
+  _impl_.energyconsumer_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.loadevent_ != nullptr) {
+    delete _impl_.loadevent_;
   }
-  loadevent_ = nullptr;
+  _impl_.loadevent_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* LoadEventProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* LoadEventProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_eventmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.EnergyConsumer energyConsumer = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_energyconsumer(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .loadmodule.LoadEvent loadEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_loadevent(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* LoadEventProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* LoadEventProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:loadmodule.LoadEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_eventmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::eventmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::eventmessageinfo(this),
+        _Internal::eventmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.EnergyConsumer energyConsumer = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_energyconsumer()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_energyconsumer()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::energyconsumer(this), target, stream);
+      InternalWriteMessage(2, _Internal::energyconsumer(this),
+        _Internal::energyconsumer(this).GetCachedSize(), target, stream);
   }
 
   // .loadmodule.LoadEvent loadEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_loadevent()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_loadevent()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::loadevent(this), target, stream);
+      InternalWriteMessage(3, _Internal::loadevent(this),
+        _Internal::loadevent(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:loadmodule.LoadEventProfile)
   return target;
 }
 
-size_t LoadEventProfile::ByteSizeLong() const {
+::size_t LoadEventProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:loadmodule.LoadEventProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
+  if (this->_internal_has_eventmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *eventmessageinfo_);
+        *_impl_.eventmessageinfo_);
   }
 
   // .commonmodule.EnergyConsumer energyConsumer = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_energyconsumer()) {
+  if (this->_internal_has_energyconsumer()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *energyconsumer_);
+        *_impl_.energyconsumer_);
   }
 
   // .loadmodule.LoadEvent loadEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_loadevent()) {
+  if (this->_internal_has_loadevent()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *loadevent_);
+        *_impl_.loadevent_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LoadEventProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:loadmodule.LoadEventProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const LoadEventProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoadEventProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:loadmodule.LoadEventProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:loadmodule.LoadEventProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadEventProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LoadEventProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadEventProfile::GetClassData() const { return &_class_data_; }
 
-void LoadEventProfile::MergeFrom(const LoadEventProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadEventProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void LoadEventProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LoadEventProfile*>(&to_msg);
+  auto& from = static_cast<const LoadEventProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadEventProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_eventmessageinfo()) {
-    _internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(from._internal_eventmessageinfo());
+  if (from._internal_has_eventmessageinfo()) {
+    _this->_internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(
+        from._internal_eventmessageinfo());
   }
-  if (from.has_energyconsumer()) {
-    _internal_mutable_energyconsumer()->::commonmodule::EnergyConsumer::MergeFrom(from._internal_energyconsumer());
+  if (from._internal_has_energyconsumer()) {
+    _this->_internal_mutable_energyconsumer()->::commonmodule::EnergyConsumer::MergeFrom(
+        from._internal_energyconsumer());
   }
-  if (from.has_loadevent()) {
-    _internal_mutable_loadevent()->::loadmodule::LoadEvent::MergeFrom(from._internal_loadevent());
+  if (from._internal_has_loadevent()) {
+    _this->_internal_mutable_loadevent()->::loadmodule::LoadEvent::MergeFrom(
+        from._internal_loadevent());
   }
-}
-
-void LoadEventProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:loadmodule.LoadEventProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LoadEventProfile::CopyFrom(const LoadEventProfile& from) {
@@ -3727,20 +3697,20 @@ bool LoadEventProfile::IsInitialized() const {
 
 void LoadEventProfile::InternalSwap(LoadEventProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(LoadEventProfile, loadevent_)
-      + sizeof(LoadEventProfile::loadevent_)
-      - PROTOBUF_FIELD_OFFSET(LoadEventProfile, eventmessageinfo_)>(
-          reinterpret_cast<char*>(&eventmessageinfo_),
-          reinterpret_cast<char*>(&other->eventmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(LoadEventProfile, _impl_.loadevent_)
+      + sizeof(LoadEventProfile::_impl_.loadevent_)
+      - PROTOBUF_FIELD_OFFSET(LoadEventProfile, _impl_.eventmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.eventmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.eventmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadEventProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_loadmodule_2floadmodule_2eproto_getter, &descriptor_table_loadmodule_2floadmodule_2eproto_once,
+      file_level_metadata_loadmodule_2floadmodule_2eproto[10]);
 }
-
-
 // ===================================================================
 
 class LoadReading::_Internal {
@@ -3753,321 +3723,310 @@ class LoadReading::_Internal {
 
 const ::commonmodule::ConductingEquipmentTerminalReading&
 LoadReading::_Internal::conductingequipmentterminalreading(const LoadReading* msg) {
-  return *msg->conductingequipmentterminalreading_;
+  return *msg->_impl_.conductingequipmentterminalreading_;
 }
 const ::commonmodule::PhaseMMTN&
 LoadReading::_Internal::phasemmtn(const LoadReading* msg) {
-  return *msg->phasemmtn_;
+  return *msg->_impl_.phasemmtn_;
 }
 const ::commonmodule::ReadingMMTR&
 LoadReading::_Internal::readingmmtr(const LoadReading* msg) {
-  return *msg->readingmmtr_;
+  return *msg->_impl_.readingmmtr_;
 }
 const ::commonmodule::ReadingMMXU&
 LoadReading::_Internal::readingmmxu(const LoadReading* msg) {
-  return *msg->readingmmxu_;
+  return *msg->_impl_.readingmmxu_;
 }
 void LoadReading::clear_conductingequipmentterminalreading() {
-  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
-    delete conductingequipmentterminalreading_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipmentterminalreading_ != nullptr) {
+    delete _impl_.conductingequipmentterminalreading_;
   }
-  conductingequipmentterminalreading_ = nullptr;
+  _impl_.conductingequipmentterminalreading_ = nullptr;
 }
 void LoadReading::clear_phasemmtn() {
-  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
-    delete phasemmtn_;
+  if (GetArenaForAllocation() == nullptr && _impl_.phasemmtn_ != nullptr) {
+    delete _impl_.phasemmtn_;
   }
-  phasemmtn_ = nullptr;
+  _impl_.phasemmtn_ = nullptr;
 }
 void LoadReading::clear_readingmmtr() {
-  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
-    delete readingmmtr_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmtr_ != nullptr) {
+    delete _impl_.readingmmtr_;
   }
-  readingmmtr_ = nullptr;
+  _impl_.readingmmtr_ = nullptr;
 }
 void LoadReading::clear_readingmmxu() {
-  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
-    delete readingmmxu_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmxu_ != nullptr) {
+    delete _impl_.readingmmxu_;
   }
-  readingmmxu_ = nullptr;
+  _impl_.readingmmxu_ = nullptr;
 }
 LoadReading::LoadReading(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:loadmodule.LoadReading)
 }
 LoadReading::LoadReading(const LoadReading& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LoadReading* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipmentterminalreading_){nullptr}
+    , decltype(_impl_.phasemmtn_){nullptr}
+    , decltype(_impl_.readingmmtr_){nullptr}
+    , decltype(_impl_.readingmmxu_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_conductingequipmentterminalreading()) {
-    conductingequipmentterminalreading_ = new ::commonmodule::ConductingEquipmentTerminalReading(*from.conductingequipmentterminalreading_);
-  } else {
-    conductingequipmentterminalreading_ = nullptr;
+    _this->_impl_.conductingequipmentterminalreading_ = new ::commonmodule::ConductingEquipmentTerminalReading(*from._impl_.conductingequipmentterminalreading_);
   }
   if (from._internal_has_phasemmtn()) {
-    phasemmtn_ = new ::commonmodule::PhaseMMTN(*from.phasemmtn_);
-  } else {
-    phasemmtn_ = nullptr;
+    _this->_impl_.phasemmtn_ = new ::commonmodule::PhaseMMTN(*from._impl_.phasemmtn_);
   }
   if (from._internal_has_readingmmtr()) {
-    readingmmtr_ = new ::commonmodule::ReadingMMTR(*from.readingmmtr_);
-  } else {
-    readingmmtr_ = nullptr;
+    _this->_impl_.readingmmtr_ = new ::commonmodule::ReadingMMTR(*from._impl_.readingmmtr_);
   }
   if (from._internal_has_readingmmxu()) {
-    readingmmxu_ = new ::commonmodule::ReadingMMXU(*from.readingmmxu_);
-  } else {
-    readingmmxu_ = nullptr;
+    _this->_impl_.readingmmxu_ = new ::commonmodule::ReadingMMXU(*from._impl_.readingmmxu_);
   }
   // @@protoc_insertion_point(copy_constructor:loadmodule.LoadReading)
 }
 
-void LoadReading::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&conductingequipmentterminalreading_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&readingmmxu_) -
-    reinterpret_cast<char*>(&conductingequipmentterminalreading_)) + sizeof(readingmmxu_));
+inline void LoadReading::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipmentterminalreading_){nullptr}
+    , decltype(_impl_.phasemmtn_){nullptr}
+    , decltype(_impl_.readingmmtr_){nullptr}
+    , decltype(_impl_.readingmmxu_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 LoadReading::~LoadReading() {
   // @@protoc_insertion_point(destructor:loadmodule.LoadReading)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void LoadReading::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete conductingequipmentterminalreading_;
-  if (this != internal_default_instance()) delete phasemmtn_;
-  if (this != internal_default_instance()) delete readingmmtr_;
-  if (this != internal_default_instance()) delete readingmmxu_;
+inline void LoadReading::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.conductingequipmentterminalreading_;
+  if (this != internal_default_instance()) delete _impl_.phasemmtn_;
+  if (this != internal_default_instance()) delete _impl_.readingmmtr_;
+  if (this != internal_default_instance()) delete _impl_.readingmmxu_;
 }
 
-void LoadReading::ArenaDtor(void* object) {
-  LoadReading* _this = reinterpret_cast< LoadReading* >(object);
-  (void)_this;
-}
-void LoadReading::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void LoadReading::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void LoadReading::Clear() {
 // @@protoc_insertion_point(message_clear_start:loadmodule.LoadReading)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
-    delete conductingequipmentterminalreading_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipmentterminalreading_ != nullptr) {
+    delete _impl_.conductingequipmentterminalreading_;
   }
-  conductingequipmentterminalreading_ = nullptr;
-  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
-    delete phasemmtn_;
+  _impl_.conductingequipmentterminalreading_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.phasemmtn_ != nullptr) {
+    delete _impl_.phasemmtn_;
   }
-  phasemmtn_ = nullptr;
-  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
-    delete readingmmtr_;
+  _impl_.phasemmtn_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmtr_ != nullptr) {
+    delete _impl_.readingmmtr_;
   }
-  readingmmtr_ = nullptr;
-  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
-    delete readingmmxu_;
+  _impl_.readingmmtr_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmxu_ != nullptr) {
+    delete _impl_.readingmmxu_;
   }
-  readingmmxu_ = nullptr;
+  _impl_.readingmmxu_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* LoadReading::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* LoadReading::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_conductingequipmentterminalreading(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseMMTN phaseMMTN = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_phasemmtn(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ReadingMMTR readingMMTR = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_readingmmtr(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ReadingMMXU readingMMXU = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_readingmmxu(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* LoadReading::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* LoadReading::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:loadmodule.LoadReading)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipmentterminalreading()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_conductingequipmentterminalreading()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::conductingequipmentterminalreading(this), target, stream);
+      InternalWriteMessage(1, _Internal::conductingequipmentterminalreading(this),
+        _Internal::conductingequipmentterminalreading(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 2;
-  if (this->has_phasemmtn()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_phasemmtn()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::phasemmtn(this), target, stream);
+      InternalWriteMessage(2, _Internal::phasemmtn(this),
+        _Internal::phasemmtn(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 3;
-  if (this->has_readingmmtr()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_readingmmtr()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::readingmmtr(this), target, stream);
+      InternalWriteMessage(3, _Internal::readingmmtr(this),
+        _Internal::readingmmtr(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 4;
-  if (this->has_readingmmxu()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_readingmmxu()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::readingmmxu(this), target, stream);
+      InternalWriteMessage(4, _Internal::readingmmxu(this),
+        _Internal::readingmmxu(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:loadmodule.LoadReading)
   return target;
 }
 
-size_t LoadReading::ByteSizeLong() const {
+::size_t LoadReading::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:loadmodule.LoadReading)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipmentterminalreading()) {
+  if (this->_internal_has_conductingequipmentterminalreading()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *conductingequipmentterminalreading_);
+        *_impl_.conductingequipmentterminalreading_);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 2;
-  if (this->has_phasemmtn()) {
+  if (this->_internal_has_phasemmtn()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *phasemmtn_);
+        *_impl_.phasemmtn_);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 3;
-  if (this->has_readingmmtr()) {
+  if (this->_internal_has_readingmmtr()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmmtr_);
+        *_impl_.readingmmtr_);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 4;
-  if (this->has_readingmmxu()) {
+  if (this->_internal_has_readingmmxu()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmmxu_);
+        *_impl_.readingmmxu_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LoadReading::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:loadmodule.LoadReading)
-  GOOGLE_DCHECK_NE(&from, this);
-  const LoadReading* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoadReading>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:loadmodule.LoadReading)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:loadmodule.LoadReading)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadReading::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LoadReading::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadReading::GetClassData() const { return &_class_data_; }
 
-void LoadReading::MergeFrom(const LoadReading& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadReading)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void LoadReading::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LoadReading*>(&to_msg);
+  auto& from = static_cast<const LoadReading&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadReading)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_conductingequipmentterminalreading()) {
-    _internal_mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(from._internal_conductingequipmentterminalreading());
+  if (from._internal_has_conductingequipmentterminalreading()) {
+    _this->_internal_mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(
+        from._internal_conductingequipmentterminalreading());
   }
-  if (from.has_phasemmtn()) {
-    _internal_mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(from._internal_phasemmtn());
+  if (from._internal_has_phasemmtn()) {
+    _this->_internal_mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(
+        from._internal_phasemmtn());
   }
-  if (from.has_readingmmtr()) {
-    _internal_mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(from._internal_readingmmtr());
+  if (from._internal_has_readingmmtr()) {
+    _this->_internal_mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(
+        from._internal_readingmmtr());
   }
-  if (from.has_readingmmxu()) {
-    _internal_mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from._internal_readingmmxu());
+  if (from._internal_has_readingmmxu()) {
+    _this->_internal_mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(
+        from._internal_readingmmxu());
   }
-}
-
-void LoadReading::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:loadmodule.LoadReading)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LoadReading::CopyFrom(const LoadReading& from) {
@@ -4083,20 +4042,20 @@ bool LoadReading::IsInitialized() const {
 
 void LoadReading::InternalSwap(LoadReading* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(LoadReading, readingmmxu_)
-      + sizeof(LoadReading::readingmmxu_)
-      - PROTOBUF_FIELD_OFFSET(LoadReading, conductingequipmentterminalreading_)>(
-          reinterpret_cast<char*>(&conductingequipmentterminalreading_),
-          reinterpret_cast<char*>(&other->conductingequipmentterminalreading_));
+      PROTOBUF_FIELD_OFFSET(LoadReading, _impl_.readingmmxu_)
+      + sizeof(LoadReading::_impl_.readingmmxu_)
+      - PROTOBUF_FIELD_OFFSET(LoadReading, _impl_.conductingequipmentterminalreading_)>(
+          reinterpret_cast<char*>(&_impl_.conductingequipmentterminalreading_),
+          reinterpret_cast<char*>(&other->_impl_.conductingequipmentterminalreading_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadReading::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_loadmodule_2floadmodule_2eproto_getter, &descriptor_table_loadmodule_2floadmodule_2eproto_once,
+      file_level_metadata_loadmodule_2floadmodule_2eproto[11]);
 }
-
-
 // ===================================================================
 
 class LoadReadingProfile::_Internal {
@@ -4108,270 +4067,257 @@ class LoadReadingProfile::_Internal {
 
 const ::commonmodule::ReadingMessageInfo&
 LoadReadingProfile::_Internal::readingmessageinfo(const LoadReadingProfile* msg) {
-  return *msg->readingmessageinfo_;
+  return *msg->_impl_.readingmessageinfo_;
 }
 const ::commonmodule::EnergyConsumer&
 LoadReadingProfile::_Internal::energyconsumer(const LoadReadingProfile* msg) {
-  return *msg->energyconsumer_;
+  return *msg->_impl_.energyconsumer_;
 }
 const ::loadmodule::LoadReading&
 LoadReadingProfile::_Internal::loadreading(const LoadReadingProfile* msg) {
-  return *msg->loadreading_;
+  return *msg->_impl_.loadreading_;
 }
 void LoadReadingProfile::clear_readingmessageinfo() {
-  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
-    delete readingmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmessageinfo_ != nullptr) {
+    delete _impl_.readingmessageinfo_;
   }
-  readingmessageinfo_ = nullptr;
+  _impl_.readingmessageinfo_ = nullptr;
 }
 void LoadReadingProfile::clear_energyconsumer() {
-  if (GetArena() == nullptr && energyconsumer_ != nullptr) {
-    delete energyconsumer_;
+  if (GetArenaForAllocation() == nullptr && _impl_.energyconsumer_ != nullptr) {
+    delete _impl_.energyconsumer_;
   }
-  energyconsumer_ = nullptr;
+  _impl_.energyconsumer_ = nullptr;
 }
 LoadReadingProfile::LoadReadingProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:loadmodule.LoadReadingProfile)
 }
 LoadReadingProfile::LoadReadingProfile(const LoadReadingProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LoadReadingProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.readingmessageinfo_){nullptr}
+    , decltype(_impl_.energyconsumer_){nullptr}
+    , decltype(_impl_.loadreading_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_readingmessageinfo()) {
-    readingmessageinfo_ = new ::commonmodule::ReadingMessageInfo(*from.readingmessageinfo_);
-  } else {
-    readingmessageinfo_ = nullptr;
+    _this->_impl_.readingmessageinfo_ = new ::commonmodule::ReadingMessageInfo(*from._impl_.readingmessageinfo_);
   }
   if (from._internal_has_energyconsumer()) {
-    energyconsumer_ = new ::commonmodule::EnergyConsumer(*from.energyconsumer_);
-  } else {
-    energyconsumer_ = nullptr;
+    _this->_impl_.energyconsumer_ = new ::commonmodule::EnergyConsumer(*from._impl_.energyconsumer_);
   }
   if (from._internal_has_loadreading()) {
-    loadreading_ = new ::loadmodule::LoadReading(*from.loadreading_);
-  } else {
-    loadreading_ = nullptr;
+    _this->_impl_.loadreading_ = new ::loadmodule::LoadReading(*from._impl_.loadreading_);
   }
   // @@protoc_insertion_point(copy_constructor:loadmodule.LoadReadingProfile)
 }
 
-void LoadReadingProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&readingmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&loadreading_) -
-    reinterpret_cast<char*>(&readingmessageinfo_)) + sizeof(loadreading_));
+inline void LoadReadingProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.readingmessageinfo_){nullptr}
+    , decltype(_impl_.energyconsumer_){nullptr}
+    , decltype(_impl_.loadreading_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 LoadReadingProfile::~LoadReadingProfile() {
   // @@protoc_insertion_point(destructor:loadmodule.LoadReadingProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void LoadReadingProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete readingmessageinfo_;
-  if (this != internal_default_instance()) delete energyconsumer_;
-  if (this != internal_default_instance()) delete loadreading_;
+inline void LoadReadingProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.readingmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.energyconsumer_;
+  if (this != internal_default_instance()) delete _impl_.loadreading_;
 }
 
-void LoadReadingProfile::ArenaDtor(void* object) {
-  LoadReadingProfile* _this = reinterpret_cast< LoadReadingProfile* >(object);
-  (void)_this;
-}
-void LoadReadingProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void LoadReadingProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void LoadReadingProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:loadmodule.LoadReadingProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
-    delete readingmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmessageinfo_ != nullptr) {
+    delete _impl_.readingmessageinfo_;
   }
-  readingmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && energyconsumer_ != nullptr) {
-    delete energyconsumer_;
+  _impl_.readingmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.energyconsumer_ != nullptr) {
+    delete _impl_.energyconsumer_;
   }
-  energyconsumer_ = nullptr;
-  if (GetArena() == nullptr && loadreading_ != nullptr) {
-    delete loadreading_;
+  _impl_.energyconsumer_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.loadreading_ != nullptr) {
+    delete _impl_.loadreading_;
   }
-  loadreading_ = nullptr;
+  _impl_.loadreading_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* LoadReadingProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* LoadReadingProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_readingmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.EnergyConsumer energyConsumer = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_energyconsumer(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .loadmodule.LoadReading loadReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_loadreading(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* LoadReadingProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* LoadReadingProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:loadmodule.LoadReadingProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_readingmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_readingmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::readingmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::readingmessageinfo(this),
+        _Internal::readingmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.EnergyConsumer energyConsumer = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_energyconsumer()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_energyconsumer()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::energyconsumer(this), target, stream);
+      InternalWriteMessage(2, _Internal::energyconsumer(this),
+        _Internal::energyconsumer(this).GetCachedSize(), target, stream);
   }
 
   // .loadmodule.LoadReading loadReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_loadreading()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_loadreading()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::loadreading(this), target, stream);
+      InternalWriteMessage(3, _Internal::loadreading(this),
+        _Internal::loadreading(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:loadmodule.LoadReadingProfile)
   return target;
 }
 
-size_t LoadReadingProfile::ByteSizeLong() const {
+::size_t LoadReadingProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:loadmodule.LoadReadingProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_readingmessageinfo()) {
+  if (this->_internal_has_readingmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmessageinfo_);
+        *_impl_.readingmessageinfo_);
   }
 
   // .commonmodule.EnergyConsumer energyConsumer = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_energyconsumer()) {
+  if (this->_internal_has_energyconsumer()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *energyconsumer_);
+        *_impl_.energyconsumer_);
   }
 
   // .loadmodule.LoadReading loadReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_loadreading()) {
+  if (this->_internal_has_loadreading()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *loadreading_);
+        *_impl_.loadreading_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LoadReadingProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:loadmodule.LoadReadingProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const LoadReadingProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoadReadingProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:loadmodule.LoadReadingProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:loadmodule.LoadReadingProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadReadingProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LoadReadingProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadReadingProfile::GetClassData() const { return &_class_data_; }
 
-void LoadReadingProfile::MergeFrom(const LoadReadingProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadReadingProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void LoadReadingProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LoadReadingProfile*>(&to_msg);
+  auto& from = static_cast<const LoadReadingProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadReadingProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_readingmessageinfo()) {
-    _internal_mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(from._internal_readingmessageinfo());
+  if (from._internal_has_readingmessageinfo()) {
+    _this->_internal_mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(
+        from._internal_readingmessageinfo());
   }
-  if (from.has_energyconsumer()) {
-    _internal_mutable_energyconsumer()->::commonmodule::EnergyConsumer::MergeFrom(from._internal_energyconsumer());
+  if (from._internal_has_energyconsumer()) {
+    _this->_internal_mutable_energyconsumer()->::commonmodule::EnergyConsumer::MergeFrom(
+        from._internal_energyconsumer());
   }
-  if (from.has_loadreading()) {
-    _internal_mutable_loadreading()->::loadmodule::LoadReading::MergeFrom(from._internal_loadreading());
+  if (from._internal_has_loadreading()) {
+    _this->_internal_mutable_loadreading()->::loadmodule::LoadReading::MergeFrom(
+        from._internal_loadreading());
   }
-}
-
-void LoadReadingProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:loadmodule.LoadReadingProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LoadReadingProfile::CopyFrom(const LoadReadingProfile& from) {
@@ -4387,20 +4333,20 @@ bool LoadReadingProfile::IsInitialized() const {
 
 void LoadReadingProfile::InternalSwap(LoadReadingProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(LoadReadingProfile, loadreading_)
-      + sizeof(LoadReadingProfile::loadreading_)
-      - PROTOBUF_FIELD_OFFSET(LoadReadingProfile, readingmessageinfo_)>(
-          reinterpret_cast<char*>(&readingmessageinfo_),
-          reinterpret_cast<char*>(&other->readingmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(LoadReadingProfile, _impl_.loadreading_)
+      + sizeof(LoadReadingProfile::_impl_.loadreading_)
+      - PROTOBUF_FIELD_OFFSET(LoadReadingProfile, _impl_.readingmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.readingmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.readingmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadReadingProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_loadmodule_2floadmodule_2eproto_getter, &descriptor_table_loadmodule_2floadmodule_2eproto_once,
+      file_level_metadata_loadmodule_2floadmodule_2eproto[12]);
 }
-
-
 // ===================================================================
 
 class LoadStatusZGLD::_Internal {
@@ -4410,177 +4356,163 @@ class LoadStatusZGLD::_Internal {
 
 const ::loadmodule::LoadEventAndStatusZGLD&
 LoadStatusZGLD::_Internal::loadeventandstatuszgld(const LoadStatusZGLD* msg) {
-  return *msg->loadeventandstatuszgld_;
+  return *msg->_impl_.loadeventandstatuszgld_;
 }
 LoadStatusZGLD::LoadStatusZGLD(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:loadmodule.LoadStatusZGLD)
 }
 LoadStatusZGLD::LoadStatusZGLD(const LoadStatusZGLD& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LoadStatusZGLD* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.loadeventandstatuszgld_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_loadeventandstatuszgld()) {
-    loadeventandstatuszgld_ = new ::loadmodule::LoadEventAndStatusZGLD(*from.loadeventandstatuszgld_);
-  } else {
-    loadeventandstatuszgld_ = nullptr;
+    _this->_impl_.loadeventandstatuszgld_ = new ::loadmodule::LoadEventAndStatusZGLD(*from._impl_.loadeventandstatuszgld_);
   }
   // @@protoc_insertion_point(copy_constructor:loadmodule.LoadStatusZGLD)
 }
 
-void LoadStatusZGLD::SharedCtor() {
-loadeventandstatuszgld_ = nullptr;
+inline void LoadStatusZGLD::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.loadeventandstatuszgld_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 LoadStatusZGLD::~LoadStatusZGLD() {
   // @@protoc_insertion_point(destructor:loadmodule.LoadStatusZGLD)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void LoadStatusZGLD::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete loadeventandstatuszgld_;
+inline void LoadStatusZGLD::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.loadeventandstatuszgld_;
 }
 
-void LoadStatusZGLD::ArenaDtor(void* object) {
-  LoadStatusZGLD* _this = reinterpret_cast< LoadStatusZGLD* >(object);
-  (void)_this;
-}
-void LoadStatusZGLD::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void LoadStatusZGLD::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void LoadStatusZGLD::Clear() {
 // @@protoc_insertion_point(message_clear_start:loadmodule.LoadStatusZGLD)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && loadeventandstatuszgld_ != nullptr) {
-    delete loadeventandstatuszgld_;
+  if (GetArenaForAllocation() == nullptr && _impl_.loadeventandstatuszgld_ != nullptr) {
+    delete _impl_.loadeventandstatuszgld_;
   }
-  loadeventandstatuszgld_ = nullptr;
+  _impl_.loadeventandstatuszgld_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* LoadStatusZGLD::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* LoadStatusZGLD::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .loadmodule.LoadEventAndStatusZGLD loadEventAndStatusZGLD = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_loadeventandstatuszgld(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* LoadStatusZGLD::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* LoadStatusZGLD::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:loadmodule.LoadStatusZGLD)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .loadmodule.LoadEventAndStatusZGLD loadEventAndStatusZGLD = 1 [(.uml.option_parent_message) = true];
-  if (this->has_loadeventandstatuszgld()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_loadeventandstatuszgld()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::loadeventandstatuszgld(this), target, stream);
+      InternalWriteMessage(1, _Internal::loadeventandstatuszgld(this),
+        _Internal::loadeventandstatuszgld(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:loadmodule.LoadStatusZGLD)
   return target;
 }
 
-size_t LoadStatusZGLD::ByteSizeLong() const {
+::size_t LoadStatusZGLD::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:loadmodule.LoadStatusZGLD)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .loadmodule.LoadEventAndStatusZGLD loadEventAndStatusZGLD = 1 [(.uml.option_parent_message) = true];
-  if (this->has_loadeventandstatuszgld()) {
+  if (this->_internal_has_loadeventandstatuszgld()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *loadeventandstatuszgld_);
+        *_impl_.loadeventandstatuszgld_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LoadStatusZGLD::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:loadmodule.LoadStatusZGLD)
-  GOOGLE_DCHECK_NE(&from, this);
-  const LoadStatusZGLD* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoadStatusZGLD>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:loadmodule.LoadStatusZGLD)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:loadmodule.LoadStatusZGLD)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadStatusZGLD::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LoadStatusZGLD::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadStatusZGLD::GetClassData() const { return &_class_data_; }
 
-void LoadStatusZGLD::MergeFrom(const LoadStatusZGLD& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadStatusZGLD)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void LoadStatusZGLD::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LoadStatusZGLD*>(&to_msg);
+  auto& from = static_cast<const LoadStatusZGLD&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadStatusZGLD)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_loadeventandstatuszgld()) {
-    _internal_mutable_loadeventandstatuszgld()->::loadmodule::LoadEventAndStatusZGLD::MergeFrom(from._internal_loadeventandstatuszgld());
+  if (from._internal_has_loadeventandstatuszgld()) {
+    _this->_internal_mutable_loadeventandstatuszgld()->::loadmodule::LoadEventAndStatusZGLD::MergeFrom(
+        from._internal_loadeventandstatuszgld());
   }
-}
-
-void LoadStatusZGLD::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:loadmodule.LoadStatusZGLD)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LoadStatusZGLD::CopyFrom(const LoadStatusZGLD& from) {
@@ -4596,290 +4528,277 @@ bool LoadStatusZGLD::IsInitialized() const {
 
 void LoadStatusZGLD::InternalSwap(LoadStatusZGLD* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(loadeventandstatuszgld_, other->loadeventandstatuszgld_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.loadeventandstatuszgld_, other->_impl_.loadeventandstatuszgld_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadStatusZGLD::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_loadmodule_2floadmodule_2eproto_getter, &descriptor_table_loadmodule_2floadmodule_2eproto_once,
+      file_level_metadata_loadmodule_2floadmodule_2eproto[13]);
 }
-
-
 // ===================================================================
 
 class LoadStatus::_Internal {
  public:
   static const ::commonmodule::StatusValue& statusvalue(const LoadStatus* msg);
-  static const PROTOBUF_NAMESPACE_ID::BoolValue& isuncontrollable(const LoadStatus* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::BoolValue& isuncontrollable(const LoadStatus* msg);
   static const ::loadmodule::LoadStatusZGLD& loadstatuszgld(const LoadStatus* msg);
 };
 
 const ::commonmodule::StatusValue&
 LoadStatus::_Internal::statusvalue(const LoadStatus* msg) {
-  return *msg->statusvalue_;
+  return *msg->_impl_.statusvalue_;
 }
-const PROTOBUF_NAMESPACE_ID::BoolValue&
+const ::PROTOBUF_NAMESPACE_ID::BoolValue&
 LoadStatus::_Internal::isuncontrollable(const LoadStatus* msg) {
-  return *msg->isuncontrollable_;
+  return *msg->_impl_.isuncontrollable_;
 }
 const ::loadmodule::LoadStatusZGLD&
 LoadStatus::_Internal::loadstatuszgld(const LoadStatus* msg) {
-  return *msg->loadstatuszgld_;
+  return *msg->_impl_.loadstatuszgld_;
 }
 void LoadStatus::clear_statusvalue() {
-  if (GetArena() == nullptr && statusvalue_ != nullptr) {
-    delete statusvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusvalue_ != nullptr) {
+    delete _impl_.statusvalue_;
   }
-  statusvalue_ = nullptr;
+  _impl_.statusvalue_ = nullptr;
 }
 void LoadStatus::clear_isuncontrollable() {
-  if (GetArena() == nullptr && isuncontrollable_ != nullptr) {
-    delete isuncontrollable_;
+  if (GetArenaForAllocation() == nullptr && _impl_.isuncontrollable_ != nullptr) {
+    delete _impl_.isuncontrollable_;
   }
-  isuncontrollable_ = nullptr;
+  _impl_.isuncontrollable_ = nullptr;
 }
 LoadStatus::LoadStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:loadmodule.LoadStatus)
 }
 LoadStatus::LoadStatus(const LoadStatus& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LoadStatus* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusvalue_){nullptr}
+    , decltype(_impl_.isuncontrollable_){nullptr}
+    , decltype(_impl_.loadstatuszgld_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_statusvalue()) {
-    statusvalue_ = new ::commonmodule::StatusValue(*from.statusvalue_);
-  } else {
-    statusvalue_ = nullptr;
+    _this->_impl_.statusvalue_ = new ::commonmodule::StatusValue(*from._impl_.statusvalue_);
   }
   if (from._internal_has_isuncontrollable()) {
-    isuncontrollable_ = new PROTOBUF_NAMESPACE_ID::BoolValue(*from.isuncontrollable_);
-  } else {
-    isuncontrollable_ = nullptr;
+    _this->_impl_.isuncontrollable_ = new ::PROTOBUF_NAMESPACE_ID::BoolValue(*from._impl_.isuncontrollable_);
   }
   if (from._internal_has_loadstatuszgld()) {
-    loadstatuszgld_ = new ::loadmodule::LoadStatusZGLD(*from.loadstatuszgld_);
-  } else {
-    loadstatuszgld_ = nullptr;
+    _this->_impl_.loadstatuszgld_ = new ::loadmodule::LoadStatusZGLD(*from._impl_.loadstatuszgld_);
   }
   // @@protoc_insertion_point(copy_constructor:loadmodule.LoadStatus)
 }
 
-void LoadStatus::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&statusvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&loadstatuszgld_) -
-    reinterpret_cast<char*>(&statusvalue_)) + sizeof(loadstatuszgld_));
+inline void LoadStatus::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusvalue_){nullptr}
+    , decltype(_impl_.isuncontrollable_){nullptr}
+    , decltype(_impl_.loadstatuszgld_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 LoadStatus::~LoadStatus() {
   // @@protoc_insertion_point(destructor:loadmodule.LoadStatus)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void LoadStatus::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete statusvalue_;
-  if (this != internal_default_instance()) delete isuncontrollable_;
-  if (this != internal_default_instance()) delete loadstatuszgld_;
+inline void LoadStatus::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.statusvalue_;
+  if (this != internal_default_instance()) delete _impl_.isuncontrollable_;
+  if (this != internal_default_instance()) delete _impl_.loadstatuszgld_;
 }
 
-void LoadStatus::ArenaDtor(void* object) {
-  LoadStatus* _this = reinterpret_cast< LoadStatus* >(object);
-  (void)_this;
-}
-void LoadStatus::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void LoadStatus::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void LoadStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:loadmodule.LoadStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && statusvalue_ != nullptr) {
-    delete statusvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusvalue_ != nullptr) {
+    delete _impl_.statusvalue_;
   }
-  statusvalue_ = nullptr;
-  if (GetArena() == nullptr && isuncontrollable_ != nullptr) {
-    delete isuncontrollable_;
+  _impl_.statusvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.isuncontrollable_ != nullptr) {
+    delete _impl_.isuncontrollable_;
   }
-  isuncontrollable_ = nullptr;
-  if (GetArena() == nullptr && loadstatuszgld_ != nullptr) {
-    delete loadstatuszgld_;
+  _impl_.isuncontrollable_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.loadstatuszgld_ != nullptr) {
+    delete _impl_.loadstatuszgld_;
   }
-  loadstatuszgld_ = nullptr;
+  _impl_.loadstatuszgld_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* LoadStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* LoadStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_statusvalue(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.BoolValue isUncontrollable = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_isuncontrollable(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .loadmodule.LoadStatusZGLD loadStatusZGLD = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_loadstatuszgld(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* LoadStatus::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* LoadStatus::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:loadmodule.LoadStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusvalue()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_statusvalue()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::statusvalue(this), target, stream);
+      InternalWriteMessage(1, _Internal::statusvalue(this),
+        _Internal::statusvalue(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.BoolValue isUncontrollable = 2;
-  if (this->has_isuncontrollable()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_isuncontrollable()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::isuncontrollable(this), target, stream);
+      InternalWriteMessage(2, _Internal::isuncontrollable(this),
+        _Internal::isuncontrollable(this).GetCachedSize(), target, stream);
   }
 
   // .loadmodule.LoadStatusZGLD loadStatusZGLD = 3;
-  if (this->has_loadstatuszgld()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_loadstatuszgld()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::loadstatuszgld(this), target, stream);
+      InternalWriteMessage(3, _Internal::loadstatuszgld(this),
+        _Internal::loadstatuszgld(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:loadmodule.LoadStatus)
   return target;
 }
 
-size_t LoadStatus::ByteSizeLong() const {
+::size_t LoadStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:loadmodule.LoadStatus)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusvalue()) {
+  if (this->_internal_has_statusvalue()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *statusvalue_);
+        *_impl_.statusvalue_);
   }
 
   // .google.protobuf.BoolValue isUncontrollable = 2;
-  if (this->has_isuncontrollable()) {
+  if (this->_internal_has_isuncontrollable()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *isuncontrollable_);
+        *_impl_.isuncontrollable_);
   }
 
   // .loadmodule.LoadStatusZGLD loadStatusZGLD = 3;
-  if (this->has_loadstatuszgld()) {
+  if (this->_internal_has_loadstatuszgld()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *loadstatuszgld_);
+        *_impl_.loadstatuszgld_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LoadStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:loadmodule.LoadStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  const LoadStatus* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoadStatus>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:loadmodule.LoadStatus)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:loadmodule.LoadStatus)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadStatus::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LoadStatus::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadStatus::GetClassData() const { return &_class_data_; }
 
-void LoadStatus::MergeFrom(const LoadStatus& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void LoadStatus::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LoadStatus*>(&to_msg);
+  auto& from = static_cast<const LoadStatus&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadStatus)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_statusvalue()) {
-    _internal_mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(from._internal_statusvalue());
+  if (from._internal_has_statusvalue()) {
+    _this->_internal_mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(
+        from._internal_statusvalue());
   }
-  if (from.has_isuncontrollable()) {
-    _internal_mutable_isuncontrollable()->PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(from._internal_isuncontrollable());
+  if (from._internal_has_isuncontrollable()) {
+    _this->_internal_mutable_isuncontrollable()->::PROTOBUF_NAMESPACE_ID::BoolValue::MergeFrom(
+        from._internal_isuncontrollable());
   }
-  if (from.has_loadstatuszgld()) {
-    _internal_mutable_loadstatuszgld()->::loadmodule::LoadStatusZGLD::MergeFrom(from._internal_loadstatuszgld());
+  if (from._internal_has_loadstatuszgld()) {
+    _this->_internal_mutable_loadstatuszgld()->::loadmodule::LoadStatusZGLD::MergeFrom(
+        from._internal_loadstatuszgld());
   }
-}
-
-void LoadStatus::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:loadmodule.LoadStatus)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LoadStatus::CopyFrom(const LoadStatus& from) {
@@ -4895,20 +4814,20 @@ bool LoadStatus::IsInitialized() const {
 
 void LoadStatus::InternalSwap(LoadStatus* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(LoadStatus, loadstatuszgld_)
-      + sizeof(LoadStatus::loadstatuszgld_)
-      - PROTOBUF_FIELD_OFFSET(LoadStatus, statusvalue_)>(
-          reinterpret_cast<char*>(&statusvalue_),
-          reinterpret_cast<char*>(&other->statusvalue_));
+      PROTOBUF_FIELD_OFFSET(LoadStatus, _impl_.loadstatuszgld_)
+      + sizeof(LoadStatus::_impl_.loadstatuszgld_)
+      - PROTOBUF_FIELD_OFFSET(LoadStatus, _impl_.statusvalue_)>(
+          reinterpret_cast<char*>(&_impl_.statusvalue_),
+          reinterpret_cast<char*>(&other->_impl_.statusvalue_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadStatus::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_loadmodule_2floadmodule_2eproto_getter, &descriptor_table_loadmodule_2floadmodule_2eproto_once,
+      file_level_metadata_loadmodule_2floadmodule_2eproto[14]);
 }
-
-
 // ===================================================================
 
 class LoadStatusProfile::_Internal {
@@ -4920,270 +4839,257 @@ class LoadStatusProfile::_Internal {
 
 const ::commonmodule::StatusMessageInfo&
 LoadStatusProfile::_Internal::statusmessageinfo(const LoadStatusProfile* msg) {
-  return *msg->statusmessageinfo_;
+  return *msg->_impl_.statusmessageinfo_;
 }
 const ::commonmodule::EnergyConsumer&
 LoadStatusProfile::_Internal::energyconsumer(const LoadStatusProfile* msg) {
-  return *msg->energyconsumer_;
+  return *msg->_impl_.energyconsumer_;
 }
 const ::loadmodule::LoadStatus&
 LoadStatusProfile::_Internal::loadstatus(const LoadStatusProfile* msg) {
-  return *msg->loadstatus_;
+  return *msg->_impl_.loadstatus_;
 }
 void LoadStatusProfile::clear_statusmessageinfo() {
-  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
-    delete statusmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusmessageinfo_ != nullptr) {
+    delete _impl_.statusmessageinfo_;
   }
-  statusmessageinfo_ = nullptr;
+  _impl_.statusmessageinfo_ = nullptr;
 }
 void LoadStatusProfile::clear_energyconsumer() {
-  if (GetArena() == nullptr && energyconsumer_ != nullptr) {
-    delete energyconsumer_;
+  if (GetArenaForAllocation() == nullptr && _impl_.energyconsumer_ != nullptr) {
+    delete _impl_.energyconsumer_;
   }
-  energyconsumer_ = nullptr;
+  _impl_.energyconsumer_ = nullptr;
 }
 LoadStatusProfile::LoadStatusProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:loadmodule.LoadStatusProfile)
 }
 LoadStatusProfile::LoadStatusProfile(const LoadStatusProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LoadStatusProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusmessageinfo_){nullptr}
+    , decltype(_impl_.energyconsumer_){nullptr}
+    , decltype(_impl_.loadstatus_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_statusmessageinfo()) {
-    statusmessageinfo_ = new ::commonmodule::StatusMessageInfo(*from.statusmessageinfo_);
-  } else {
-    statusmessageinfo_ = nullptr;
+    _this->_impl_.statusmessageinfo_ = new ::commonmodule::StatusMessageInfo(*from._impl_.statusmessageinfo_);
   }
   if (from._internal_has_energyconsumer()) {
-    energyconsumer_ = new ::commonmodule::EnergyConsumer(*from.energyconsumer_);
-  } else {
-    energyconsumer_ = nullptr;
+    _this->_impl_.energyconsumer_ = new ::commonmodule::EnergyConsumer(*from._impl_.energyconsumer_);
   }
   if (from._internal_has_loadstatus()) {
-    loadstatus_ = new ::loadmodule::LoadStatus(*from.loadstatus_);
-  } else {
-    loadstatus_ = nullptr;
+    _this->_impl_.loadstatus_ = new ::loadmodule::LoadStatus(*from._impl_.loadstatus_);
   }
   // @@protoc_insertion_point(copy_constructor:loadmodule.LoadStatusProfile)
 }
 
-void LoadStatusProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&statusmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&loadstatus_) -
-    reinterpret_cast<char*>(&statusmessageinfo_)) + sizeof(loadstatus_));
+inline void LoadStatusProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusmessageinfo_){nullptr}
+    , decltype(_impl_.energyconsumer_){nullptr}
+    , decltype(_impl_.loadstatus_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 LoadStatusProfile::~LoadStatusProfile() {
   // @@protoc_insertion_point(destructor:loadmodule.LoadStatusProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void LoadStatusProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete statusmessageinfo_;
-  if (this != internal_default_instance()) delete energyconsumer_;
-  if (this != internal_default_instance()) delete loadstatus_;
+inline void LoadStatusProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.statusmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.energyconsumer_;
+  if (this != internal_default_instance()) delete _impl_.loadstatus_;
 }
 
-void LoadStatusProfile::ArenaDtor(void* object) {
-  LoadStatusProfile* _this = reinterpret_cast< LoadStatusProfile* >(object);
-  (void)_this;
-}
-void LoadStatusProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void LoadStatusProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void LoadStatusProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:loadmodule.LoadStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
-    delete statusmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusmessageinfo_ != nullptr) {
+    delete _impl_.statusmessageinfo_;
   }
-  statusmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && energyconsumer_ != nullptr) {
-    delete energyconsumer_;
+  _impl_.statusmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.energyconsumer_ != nullptr) {
+    delete _impl_.energyconsumer_;
   }
-  energyconsumer_ = nullptr;
-  if (GetArena() == nullptr && loadstatus_ != nullptr) {
-    delete loadstatus_;
+  _impl_.energyconsumer_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.loadstatus_ != nullptr) {
+    delete _impl_.loadstatus_;
   }
-  loadstatus_ = nullptr;
+  _impl_.loadstatus_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* LoadStatusProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* LoadStatusProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_statusmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.EnergyConsumer energyConsumer = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_energyconsumer(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .loadmodule.LoadStatus loadStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_loadstatus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* LoadStatusProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* LoadStatusProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:loadmodule.LoadStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_statusmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::statusmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::statusmessageinfo(this),
+        _Internal::statusmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.EnergyConsumer energyConsumer = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_energyconsumer()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_energyconsumer()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::energyconsumer(this), target, stream);
+      InternalWriteMessage(2, _Internal::energyconsumer(this),
+        _Internal::energyconsumer(this).GetCachedSize(), target, stream);
   }
 
   // .loadmodule.LoadStatus loadStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_loadstatus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_loadstatus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::loadstatus(this), target, stream);
+      InternalWriteMessage(3, _Internal::loadstatus(this),
+        _Internal::loadstatus(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:loadmodule.LoadStatusProfile)
   return target;
 }
 
-size_t LoadStatusProfile::ByteSizeLong() const {
+::size_t LoadStatusProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:loadmodule.LoadStatusProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusmessageinfo()) {
+  if (this->_internal_has_statusmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *statusmessageinfo_);
+        *_impl_.statusmessageinfo_);
   }
 
   // .commonmodule.EnergyConsumer energyConsumer = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_energyconsumer()) {
+  if (this->_internal_has_energyconsumer()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *energyconsumer_);
+        *_impl_.energyconsumer_);
   }
 
   // .loadmodule.LoadStatus loadStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_loadstatus()) {
+  if (this->_internal_has_loadstatus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *loadstatus_);
+        *_impl_.loadstatus_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LoadStatusProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:loadmodule.LoadStatusProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const LoadStatusProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoadStatusProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:loadmodule.LoadStatusProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:loadmodule.LoadStatusProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadStatusProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LoadStatusProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadStatusProfile::GetClassData() const { return &_class_data_; }
 
-void LoadStatusProfile::MergeFrom(const LoadStatusProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadStatusProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void LoadStatusProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LoadStatusProfile*>(&to_msg);
+  auto& from = static_cast<const LoadStatusProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:loadmodule.LoadStatusProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_statusmessageinfo()) {
-    _internal_mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(from._internal_statusmessageinfo());
+  if (from._internal_has_statusmessageinfo()) {
+    _this->_internal_mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(
+        from._internal_statusmessageinfo());
   }
-  if (from.has_energyconsumer()) {
-    _internal_mutable_energyconsumer()->::commonmodule::EnergyConsumer::MergeFrom(from._internal_energyconsumer());
+  if (from._internal_has_energyconsumer()) {
+    _this->_internal_mutable_energyconsumer()->::commonmodule::EnergyConsumer::MergeFrom(
+        from._internal_energyconsumer());
   }
-  if (from.has_loadstatus()) {
-    _internal_mutable_loadstatus()->::loadmodule::LoadStatus::MergeFrom(from._internal_loadstatus());
+  if (from._internal_has_loadstatus()) {
+    _this->_internal_mutable_loadstatus()->::loadmodule::LoadStatus::MergeFrom(
+        from._internal_loadstatus());
   }
-}
-
-void LoadStatusProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:loadmodule.LoadStatusProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LoadStatusProfile::CopyFrom(const LoadStatusProfile& from) {
@@ -5199,72 +5105,87 @@ bool LoadStatusProfile::IsInitialized() const {
 
 void LoadStatusProfile::InternalSwap(LoadStatusProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(LoadStatusProfile, loadstatus_)
-      + sizeof(LoadStatusProfile::loadstatus_)
-      - PROTOBUF_FIELD_OFFSET(LoadStatusProfile, statusmessageinfo_)>(
-          reinterpret_cast<char*>(&statusmessageinfo_),
-          reinterpret_cast<char*>(&other->statusmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(LoadStatusProfile, _impl_.loadstatus_)
+      + sizeof(LoadStatusProfile::_impl_.loadstatus_)
+      - PROTOBUF_FIELD_OFFSET(LoadStatusProfile, _impl_.statusmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.statusmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.statusmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadStatusProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_loadmodule_2floadmodule_2eproto_getter, &descriptor_table_loadmodule_2floadmodule_2eproto_once,
+      file_level_metadata_loadmodule_2floadmodule_2eproto[15]);
 }
-
-
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace loadmodule
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::loadmodule::LoadPoint* Arena::CreateMaybeMessage< ::loadmodule::LoadPoint >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::loadmodule::LoadPoint*
+Arena::CreateMaybeMessage< ::loadmodule::LoadPoint >(Arena* arena) {
   return Arena::CreateMessageInternal< ::loadmodule::LoadPoint >(arena);
 }
-template<> PROTOBUF_NOINLINE ::loadmodule::LoadCSG* Arena::CreateMaybeMessage< ::loadmodule::LoadCSG >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::loadmodule::LoadCSG*
+Arena::CreateMaybeMessage< ::loadmodule::LoadCSG >(Arena* arena) {
   return Arena::CreateMessageInternal< ::loadmodule::LoadCSG >(arena);
 }
-template<> PROTOBUF_NOINLINE ::loadmodule::LoadControlScheduleFSCH* Arena::CreateMaybeMessage< ::loadmodule::LoadControlScheduleFSCH >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::loadmodule::LoadControlScheduleFSCH*
+Arena::CreateMaybeMessage< ::loadmodule::LoadControlScheduleFSCH >(Arena* arena) {
   return Arena::CreateMessageInternal< ::loadmodule::LoadControlScheduleFSCH >(arena);
 }
-template<> PROTOBUF_NOINLINE ::loadmodule::LoadControlFSCC* Arena::CreateMaybeMessage< ::loadmodule::LoadControlFSCC >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::loadmodule::LoadControlFSCC*
+Arena::CreateMaybeMessage< ::loadmodule::LoadControlFSCC >(Arena* arena) {
   return Arena::CreateMessageInternal< ::loadmodule::LoadControlFSCC >(arena);
 }
-template<> PROTOBUF_NOINLINE ::loadmodule::LoadControl* Arena::CreateMaybeMessage< ::loadmodule::LoadControl >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::loadmodule::LoadControl*
+Arena::CreateMaybeMessage< ::loadmodule::LoadControl >(Arena* arena) {
   return Arena::CreateMessageInternal< ::loadmodule::LoadControl >(arena);
 }
-template<> PROTOBUF_NOINLINE ::loadmodule::LoadControlProfile* Arena::CreateMaybeMessage< ::loadmodule::LoadControlProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::loadmodule::LoadControlProfile*
+Arena::CreateMaybeMessage< ::loadmodule::LoadControlProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::loadmodule::LoadControlProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::loadmodule::LoadPointStatus* Arena::CreateMaybeMessage< ::loadmodule::LoadPointStatus >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::loadmodule::LoadPointStatus*
+Arena::CreateMaybeMessage< ::loadmodule::LoadPointStatus >(Arena* arena) {
   return Arena::CreateMessageInternal< ::loadmodule::LoadPointStatus >(arena);
 }
-template<> PROTOBUF_NOINLINE ::loadmodule::LoadEventAndStatusZGLD* Arena::CreateMaybeMessage< ::loadmodule::LoadEventAndStatusZGLD >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::loadmodule::LoadEventAndStatusZGLD*
+Arena::CreateMaybeMessage< ::loadmodule::LoadEventAndStatusZGLD >(Arena* arena) {
   return Arena::CreateMessageInternal< ::loadmodule::LoadEventAndStatusZGLD >(arena);
 }
-template<> PROTOBUF_NOINLINE ::loadmodule::LoadEventZGLD* Arena::CreateMaybeMessage< ::loadmodule::LoadEventZGLD >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::loadmodule::LoadEventZGLD*
+Arena::CreateMaybeMessage< ::loadmodule::LoadEventZGLD >(Arena* arena) {
   return Arena::CreateMessageInternal< ::loadmodule::LoadEventZGLD >(arena);
 }
-template<> PROTOBUF_NOINLINE ::loadmodule::LoadEvent* Arena::CreateMaybeMessage< ::loadmodule::LoadEvent >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::loadmodule::LoadEvent*
+Arena::CreateMaybeMessage< ::loadmodule::LoadEvent >(Arena* arena) {
   return Arena::CreateMessageInternal< ::loadmodule::LoadEvent >(arena);
 }
-template<> PROTOBUF_NOINLINE ::loadmodule::LoadEventProfile* Arena::CreateMaybeMessage< ::loadmodule::LoadEventProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::loadmodule::LoadEventProfile*
+Arena::CreateMaybeMessage< ::loadmodule::LoadEventProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::loadmodule::LoadEventProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::loadmodule::LoadReading* Arena::CreateMaybeMessage< ::loadmodule::LoadReading >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::loadmodule::LoadReading*
+Arena::CreateMaybeMessage< ::loadmodule::LoadReading >(Arena* arena) {
   return Arena::CreateMessageInternal< ::loadmodule::LoadReading >(arena);
 }
-template<> PROTOBUF_NOINLINE ::loadmodule::LoadReadingProfile* Arena::CreateMaybeMessage< ::loadmodule::LoadReadingProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::loadmodule::LoadReadingProfile*
+Arena::CreateMaybeMessage< ::loadmodule::LoadReadingProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::loadmodule::LoadReadingProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::loadmodule::LoadStatusZGLD* Arena::CreateMaybeMessage< ::loadmodule::LoadStatusZGLD >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::loadmodule::LoadStatusZGLD*
+Arena::CreateMaybeMessage< ::loadmodule::LoadStatusZGLD >(Arena* arena) {
   return Arena::CreateMessageInternal< ::loadmodule::LoadStatusZGLD >(arena);
 }
-template<> PROTOBUF_NOINLINE ::loadmodule::LoadStatus* Arena::CreateMaybeMessage< ::loadmodule::LoadStatus >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::loadmodule::LoadStatus*
+Arena::CreateMaybeMessage< ::loadmodule::LoadStatus >(Arena* arena) {
   return Arena::CreateMessageInternal< ::loadmodule::LoadStatus >(arena);
 }
-template<> PROTOBUF_NOINLINE ::loadmodule::LoadStatusProfile* Arena::CreateMaybeMessage< ::loadmodule::LoadStatusProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::loadmodule::LoadStatusProfile*
+Arena::CreateMaybeMessage< ::loadmodule::LoadStatusProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::loadmodule::LoadStatusProfile >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
-
 // @@protoc_insertion_point(global_scope)
-#include <google/protobuf/port_undef.inc>
+#include "google/protobuf/port_undef.inc"

@@ -4,340 +4,416 @@
 #include "breakermodule/breakermodule.pb.h"
 
 #include <algorithm>
-
-#include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include "google/protobuf/io/coded_stream.h"
+#include "google/protobuf/extension_set.h"
+#include "google/protobuf/wire_format_lite.h"
+#include "google/protobuf/descriptor.h"
+#include "google/protobuf/generated_message_reflection.h"
+#include "google/protobuf/reflection_ops.h"
+#include "google/protobuf/wire_format.h"
 // @@protoc_insertion_point(includes)
-#include <google/protobuf/port_def.inc>
 
+// Must be included last.
+#include "google/protobuf/port_def.inc"
 PROTOBUF_PRAGMA_INIT_SEG
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = ::PROTOBUF_NAMESPACE_ID::internal;
 namespace breakermodule {
-constexpr BreakerDiscreteControlXCBR::BreakerDiscreteControlXCBR(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : discretecontrolxcbr_(nullptr){}
+PROTOBUF_CONSTEXPR BreakerDiscreteControlXCBR::BreakerDiscreteControlXCBR(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.discretecontrolxcbr_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct BreakerDiscreteControlXCBRDefaultTypeInternal {
-  constexpr BreakerDiscreteControlXCBRDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR BreakerDiscreteControlXCBRDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~BreakerDiscreteControlXCBRDefaultTypeInternal() {}
   union {
     BreakerDiscreteControlXCBR _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT BreakerDiscreteControlXCBRDefaultTypeInternal _BreakerDiscreteControlXCBR_default_instance_;
-constexpr BreakerDiscreteControl::BreakerDiscreteControl(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlvalue_(nullptr)
-  , check_(nullptr)
-  , breakerdiscretecontrolxcbr_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BreakerDiscreteControlXCBRDefaultTypeInternal _BreakerDiscreteControlXCBR_default_instance_;
+PROTOBUF_CONSTEXPR BreakerDiscreteControl::BreakerDiscreteControl(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlvalue_)*/nullptr
+  , /*decltype(_impl_.check_)*/nullptr
+  , /*decltype(_impl_.breakerdiscretecontrolxcbr_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct BreakerDiscreteControlDefaultTypeInternal {
-  constexpr BreakerDiscreteControlDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR BreakerDiscreteControlDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~BreakerDiscreteControlDefaultTypeInternal() {}
   union {
     BreakerDiscreteControl _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT BreakerDiscreteControlDefaultTypeInternal _BreakerDiscreteControl_default_instance_;
-constexpr Breaker::Breaker(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : conductingequipment_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BreakerDiscreteControlDefaultTypeInternal _BreakerDiscreteControl_default_instance_;
+PROTOBUF_CONSTEXPR Breaker::Breaker(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.conductingequipment_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct BreakerDefaultTypeInternal {
-  constexpr BreakerDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR BreakerDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~BreakerDefaultTypeInternal() {}
   union {
     Breaker _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT BreakerDefaultTypeInternal _Breaker_default_instance_;
-constexpr BreakerDiscreteControlProfile::BreakerDiscreteControlProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlmessageinfo_(nullptr)
-  , breaker_(nullptr)
-  , breakerdiscretecontrol_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BreakerDefaultTypeInternal _Breaker_default_instance_;
+PROTOBUF_CONSTEXPR BreakerDiscreteControlProfile::BreakerDiscreteControlProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlmessageinfo_)*/nullptr
+  , /*decltype(_impl_.breaker_)*/nullptr
+  , /*decltype(_impl_.breakerdiscretecontrol_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct BreakerDiscreteControlProfileDefaultTypeInternal {
-  constexpr BreakerDiscreteControlProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR BreakerDiscreteControlProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~BreakerDiscreteControlProfileDefaultTypeInternal() {}
   union {
     BreakerDiscreteControlProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT BreakerDiscreteControlProfileDefaultTypeInternal _BreakerDiscreteControlProfile_default_instance_;
-constexpr BreakerEvent::BreakerEvent(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : eventvalue_(nullptr)
-  , statusandeventxcbr_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BreakerDiscreteControlProfileDefaultTypeInternal _BreakerDiscreteControlProfile_default_instance_;
+PROTOBUF_CONSTEXPR BreakerEvent::BreakerEvent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.eventvalue_)*/nullptr
+  , /*decltype(_impl_.statusandeventxcbr_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct BreakerEventDefaultTypeInternal {
-  constexpr BreakerEventDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR BreakerEventDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~BreakerEventDefaultTypeInternal() {}
   union {
     BreakerEvent _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT BreakerEventDefaultTypeInternal _BreakerEvent_default_instance_;
-constexpr BreakerEventProfile::BreakerEventProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : eventmessageinfo_(nullptr)
-  , breaker_(nullptr)
-  , breakerevent_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BreakerEventDefaultTypeInternal _BreakerEvent_default_instance_;
+PROTOBUF_CONSTEXPR BreakerEventProfile::BreakerEventProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.eventmessageinfo_)*/nullptr
+  , /*decltype(_impl_.breaker_)*/nullptr
+  , /*decltype(_impl_.breakerevent_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct BreakerEventProfileDefaultTypeInternal {
-  constexpr BreakerEventProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR BreakerEventProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~BreakerEventProfileDefaultTypeInternal() {}
   union {
     BreakerEventProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT BreakerEventProfileDefaultTypeInternal _BreakerEventProfile_default_instance_;
-constexpr BreakerReading::BreakerReading(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : conductingequipmentterminalreading_(nullptr)
-  , diffreadingmmxu_(nullptr)
-  , phasemmtn_(nullptr)
-  , readingmmtr_(nullptr)
-  , readingmmxu_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BreakerEventProfileDefaultTypeInternal _BreakerEventProfile_default_instance_;
+PROTOBUF_CONSTEXPR BreakerReading::BreakerReading(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.conductingequipmentterminalreading_)*/nullptr
+  , /*decltype(_impl_.diffreadingmmxu_)*/nullptr
+  , /*decltype(_impl_.phasemmtn_)*/nullptr
+  , /*decltype(_impl_.readingmmtr_)*/nullptr
+  , /*decltype(_impl_.readingmmxu_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct BreakerReadingDefaultTypeInternal {
-  constexpr BreakerReadingDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR BreakerReadingDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~BreakerReadingDefaultTypeInternal() {}
   union {
     BreakerReading _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT BreakerReadingDefaultTypeInternal _BreakerReading_default_instance_;
-constexpr BreakerReadingProfile::BreakerReadingProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : breakerreading_()
-  , readingmessageinfo_(nullptr)
-  , breaker_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BreakerReadingDefaultTypeInternal _BreakerReading_default_instance_;
+PROTOBUF_CONSTEXPR BreakerReadingProfile::BreakerReadingProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.breakerreading_)*/{}
+  , /*decltype(_impl_.readingmessageinfo_)*/nullptr
+  , /*decltype(_impl_.breaker_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct BreakerReadingProfileDefaultTypeInternal {
-  constexpr BreakerReadingProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR BreakerReadingProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~BreakerReadingProfileDefaultTypeInternal() {}
   union {
     BreakerReadingProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT BreakerReadingProfileDefaultTypeInternal _BreakerReadingProfile_default_instance_;
-constexpr BreakerStatus::BreakerStatus(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : statusvalue_(nullptr)
-  , statusandeventxcbr_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BreakerReadingProfileDefaultTypeInternal _BreakerReadingProfile_default_instance_;
+PROTOBUF_CONSTEXPR BreakerStatus::BreakerStatus(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.statusvalue_)*/nullptr
+  , /*decltype(_impl_.statusandeventxcbr_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct BreakerStatusDefaultTypeInternal {
-  constexpr BreakerStatusDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR BreakerStatusDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~BreakerStatusDefaultTypeInternal() {}
   union {
     BreakerStatus _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT BreakerStatusDefaultTypeInternal _BreakerStatus_default_instance_;
-constexpr BreakerStatusProfile::BreakerStatusProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : statusmessageinfo_(nullptr)
-  , breaker_(nullptr)
-  , breakerstatus_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BreakerStatusDefaultTypeInternal _BreakerStatus_default_instance_;
+PROTOBUF_CONSTEXPR BreakerStatusProfile::BreakerStatusProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.statusmessageinfo_)*/nullptr
+  , /*decltype(_impl_.breaker_)*/nullptr
+  , /*decltype(_impl_.breakerstatus_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct BreakerStatusProfileDefaultTypeInternal {
-  constexpr BreakerStatusProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR BreakerStatusProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~BreakerStatusProfileDefaultTypeInternal() {}
   union {
     BreakerStatusProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT BreakerStatusProfileDefaultTypeInternal _BreakerStatusProfile_default_instance_;
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BreakerStatusProfileDefaultTypeInternal _BreakerStatusProfile_default_instance_;
 }  // namespace breakermodule
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_breakermodule_2fbreakermodule_2eproto[10];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_breakermodule_2fbreakermodule_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_breakermodule_2fbreakermodule_2eproto = nullptr;
+static ::_pb::Metadata file_level_metadata_breakermodule_2fbreakermodule_2eproto[10];
+static constexpr const ::_pb::EnumDescriptor**
+    file_level_enum_descriptors_breakermodule_2fbreakermodule_2eproto = nullptr;
+static constexpr const ::_pb::ServiceDescriptor**
+    file_level_service_descriptors_breakermodule_2fbreakermodule_2eproto = nullptr;
+const ::uint32_t TableStruct_breakermodule_2fbreakermodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
+    protodesc_cold) = {
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControlXCBR, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControlXCBR, _impl_.discretecontrolxcbr_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControl, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControl, _impl_.controlvalue_),
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControl, _impl_.check_),
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControl, _impl_.breakerdiscretecontrolxcbr_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::breakermodule::Breaker, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::breakermodule::Breaker, _impl_.conductingequipment_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControlProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControlProfile, _impl_.controlmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControlProfile, _impl_.breaker_),
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControlProfile, _impl_.breakerdiscretecontrol_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerEvent, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerEvent, _impl_.eventvalue_),
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerEvent, _impl_.statusandeventxcbr_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerEventProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerEventProfile, _impl_.eventmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerEventProfile, _impl_.breaker_),
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerEventProfile, _impl_.breakerevent_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReading, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReading, _impl_.conductingequipmentterminalreading_),
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReading, _impl_.diffreadingmmxu_),
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReading, _impl_.phasemmtn_),
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReading, _impl_.readingmmtr_),
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReading, _impl_.readingmmxu_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReadingProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReadingProfile, _impl_.readingmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReadingProfile, _impl_.breaker_),
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReadingProfile, _impl_.breakerreading_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerStatus, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerStatus, _impl_.statusvalue_),
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerStatus, _impl_.statusandeventxcbr_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerStatusProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerStatusProfile, _impl_.statusmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerStatusProfile, _impl_.breaker_),
+    PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerStatusProfile, _impl_.breakerstatus_),
+};
 
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_breakermodule_2fbreakermodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControlXCBR, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControlXCBR, discretecontrolxcbr_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControl, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControl, controlvalue_),
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControl, check_),
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControl, breakerdiscretecontrolxcbr_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::Breaker, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::Breaker, conductingequipment_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControlProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControlProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControlProfile, breaker_),
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerDiscreteControlProfile, breakerdiscretecontrol_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerEvent, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerEvent, eventvalue_),
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerEvent, statusandeventxcbr_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerEventProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerEventProfile, eventmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerEventProfile, breaker_),
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerEventProfile, breakerevent_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReading, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReading, conductingequipmentterminalreading_),
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReading, diffreadingmmxu_),
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReading, phasemmtn_),
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReading, readingmmtr_),
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReading, readingmmxu_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReadingProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReadingProfile, readingmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReadingProfile, breaker_),
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerReadingProfile, breakerreading_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerStatus, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerStatus, statusvalue_),
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerStatus, statusandeventxcbr_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerStatusProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerStatusProfile, statusmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerStatusProfile, breaker_),
-  PROTOBUF_FIELD_OFFSET(::breakermodule::BreakerStatusProfile, breakerstatus_),
-};
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::breakermodule::BreakerDiscreteControlXCBR)},
-  { 6, -1, sizeof(::breakermodule::BreakerDiscreteControl)},
-  { 14, -1, sizeof(::breakermodule::Breaker)},
-  { 20, -1, sizeof(::breakermodule::BreakerDiscreteControlProfile)},
-  { 28, -1, sizeof(::breakermodule::BreakerEvent)},
-  { 35, -1, sizeof(::breakermodule::BreakerEventProfile)},
-  { 43, -1, sizeof(::breakermodule::BreakerReading)},
-  { 53, -1, sizeof(::breakermodule::BreakerReadingProfile)},
-  { 61, -1, sizeof(::breakermodule::BreakerStatus)},
-  { 68, -1, sizeof(::breakermodule::BreakerStatusProfile)},
+static const ::_pbi::MigrationSchema
+    schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+        { 0, -1, -1, sizeof(::breakermodule::BreakerDiscreteControlXCBR)},
+        { 9, -1, -1, sizeof(::breakermodule::BreakerDiscreteControl)},
+        { 20, -1, -1, sizeof(::breakermodule::Breaker)},
+        { 29, -1, -1, sizeof(::breakermodule::BreakerDiscreteControlProfile)},
+        { 40, -1, -1, sizeof(::breakermodule::BreakerEvent)},
+        { 50, -1, -1, sizeof(::breakermodule::BreakerEventProfile)},
+        { 61, -1, -1, sizeof(::breakermodule::BreakerReading)},
+        { 74, -1, -1, sizeof(::breakermodule::BreakerReadingProfile)},
+        { 85, -1, -1, sizeof(::breakermodule::BreakerStatus)},
+        { 95, -1, -1, sizeof(::breakermodule::BreakerStatusProfile)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::breakermodule::_BreakerDiscreteControlXCBR_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::breakermodule::_BreakerDiscreteControl_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::breakermodule::_Breaker_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::breakermodule::_BreakerDiscreteControlProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::breakermodule::_BreakerEvent_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::breakermodule::_BreakerEventProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::breakermodule::_BreakerReading_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::breakermodule::_BreakerReadingProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::breakermodule::_BreakerStatus_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::breakermodule::_BreakerStatusProfile_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+    &::breakermodule::_BreakerDiscreteControlXCBR_default_instance_._instance,
+    &::breakermodule::_BreakerDiscreteControl_default_instance_._instance,
+    &::breakermodule::_Breaker_default_instance_._instance,
+    &::breakermodule::_BreakerDiscreteControlProfile_default_instance_._instance,
+    &::breakermodule::_BreakerEvent_default_instance_._instance,
+    &::breakermodule::_BreakerEventProfile_default_instance_._instance,
+    &::breakermodule::_BreakerReading_default_instance_._instance,
+    &::breakermodule::_BreakerReadingProfile_default_instance_._instance,
+    &::breakermodule::_BreakerStatus_default_instance_._instance,
+    &::breakermodule::_BreakerStatusProfile_default_instance_._instance,
+};
+const char descriptor_table_protodef_breakermodule_2fbreakermodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+    "\n!breakermodule/breakermodule.proto\022\rbre"
+    "akermodule\032\tuml.proto\032\037commonmodule/comm"
+    "onmodule.proto\"b\n\032BreakerDiscreteControl"
+    "XCBR\022D\n\023discreteControlXCBR\030\001 \001(\0132!.comm"
+    "onmodule.DiscreteControlXCBRB\004\200\265\030\001\"\315\001\n\026B"
+    "reakerDiscreteControl\0226\n\014controlValue\030\001 "
+    "\001(\0132\032.commonmodule.ControlValueB\004\200\265\030\001\022,\n"
+    "\005check\030\002 \001(\0132\035.commonmodule.CheckConditi"
+    "ons\022M\n\032breakerDiscreteControlXCBR\030\003 \001(\0132"
+    ").breakermodule.BreakerDiscreteControlXC"
+    "BR\"O\n\007Breaker\022D\n\023conductingEquipment\030\001 \001"
+    "(\0132!.commonmodule.ConductingEquipmentB\004\200"
+    "\265\030\001\"\355\001\n\035BreakerDiscreteControlProfile\022B\n"
+    "\022controlMessageInfo\030\001 \001(\0132 .commonmodule"
+    ".ControlMessageInfoB\004\200\265\030\001\0221\n\007breaker\030\002 \001"
+    "(\0132\026.breakermodule.BreakerB\010\210\265\030\001\220\265\030\001\022O\n\026"
+    "breakerDiscreteControl\030\003 \001(\0132%.breakermo"
+    "dule.BreakerDiscreteControlB\010\210\265\030\001\220\265\030\001:\004\300"
+    "\363\030\001\"\200\001\n\014BreakerEvent\0222\n\neventValue\030\001 \001(\013"
+    "2\030.commonmodule.EventValueB\004\200\265\030\001\022<\n\022stat"
+    "usAndEventXCBR\030\002 \001(\0132 .commonmodule.Stat"
+    "usAndEventXCBR\"\313\001\n\023BreakerEventProfile\022>"
+    "\n\020eventMessageInfo\030\001 \001(\0132\036.commonmodule."
+    "EventMessageInfoB\004\200\265\030\001\0221\n\007breaker\030\002 \001(\0132"
+    "\026.breakermodule.BreakerB\010\210\265\030\001\220\265\030\001\022;\n\014bre"
+    "akerEvent\030\003 \001(\0132\033.breakermodule.BreakerE"
+    "ventB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\264\002\n\016BreakerReading\022"
+    "b\n\"conductingEquipmentTerminalReading\030\001 "
+    "\001(\01320.commonmodule.ConductingEquipmentTe"
+    "rminalReadingB\004\200\265\030\001\0222\n\017diffReadingMMXU\030\002"
+    " \001(\0132\031.commonmodule.ReadingMMXU\022*\n\tphase"
+    "MMTN\030\003 \001(\0132\027.commonmodule.PhaseMMTN\022.\n\013r"
+    "eadingMMTR\030\004 \001(\0132\031.commonmodule.ReadingM"
+    "MTR\022.\n\013readingMMXU\030\005 \001(\0132\031.commonmodule."
+    "ReadingMMXU\"\331\001\n\025BreakerReadingProfile\022B\n"
+    "\022readingMessageInfo\030\001 \001(\0132 .commonmodule"
+    ".ReadingMessageInfoB\004\200\265\030\001\0221\n\007breaker\030\002 \001"
+    "(\0132\026.breakermodule.BreakerB\010\210\265\030\001\220\265\030\001\022C\n\016"
+    "breakerReading\030\003 \003(\0132\035.breakermodule.Bre"
+    "akerReadingB\014\210\265\030\001\220\265\030\001\230\265\030\002:\004\300\363\030\001\"\203\001\n\rBrea"
+    "kerStatus\0224\n\013statusValue\030\001 \001(\0132\031.commonm"
+    "odule.StatusValueB\004\200\265\030\001\022<\n\022statusAndEven"
+    "tXCBR\030\002 \001(\0132 .commonmodule.StatusAndEven"
+    "tXCBR\"\320\001\n\024BreakerStatusProfile\022@\n\021status"
+    "MessageInfo\030\001 \001(\0132\037.commonmodule.StatusM"
+    "essageInfoB\004\200\265\030\001\0221\n\007breaker\030\002 \001(\0132\026.brea"
+    "kermodule.BreakerB\010\210\265\030\001\220\265\030\001\022=\n\rbreakerSt"
+    "atus\030\003 \001(\0132\034.breakermodule.BreakerStatus"
+    "B\010\210\265\030\001\220\265\030\001:\004\300\363\030\001B\207\001\n\025openfmb.breakermodu"
+    "leP\001ZTgitlab.com/openfmb/psm/ops/protobu"
+    "f/go-openfmb-ops-protobuf/v2/openfmb/bre"
+    "akermodule\252\002\025openfmb.breakermoduleb\006prot"
+    "o3"
+};
+static const ::_pbi::DescriptorTable* const descriptor_table_breakermodule_2fbreakermodule_2eproto_deps[2] =
+    {
+        &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
+        &::descriptor_table_uml_2eproto,
+};
+static ::absl::once_flag descriptor_table_breakermodule_2fbreakermodule_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_breakermodule_2fbreakermodule_2eproto = {
+    false,
+    false,
+    2082,
+    descriptor_table_protodef_breakermodule_2fbreakermodule_2eproto,
+    "breakermodule/breakermodule.proto",
+    &descriptor_table_breakermodule_2fbreakermodule_2eproto_once,
+    descriptor_table_breakermodule_2fbreakermodule_2eproto_deps,
+    2,
+    10,
+    schemas,
+    file_default_instances,
+    TableStruct_breakermodule_2fbreakermodule_2eproto::offsets,
+    file_level_metadata_breakermodule_2fbreakermodule_2eproto,
+    file_level_enum_descriptors_breakermodule_2fbreakermodule_2eproto,
+    file_level_service_descriptors_breakermodule_2fbreakermodule_2eproto,
 };
 
-const char descriptor_table_protodef_breakermodule_2fbreakermodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n!breakermodule/breakermodule.proto\022\rbre"
-  "akermodule\032\tuml.proto\032\037commonmodule/comm"
-  "onmodule.proto\"b\n\032BreakerDiscreteControl"
-  "XCBR\022D\n\023discreteControlXCBR\030\001 \001(\0132!.comm"
-  "onmodule.DiscreteControlXCBRB\004\200\265\030\001\"\315\001\n\026B"
-  "reakerDiscreteControl\0226\n\014controlValue\030\001 "
-  "\001(\0132\032.commonmodule.ControlValueB\004\200\265\030\001\022,\n"
-  "\005check\030\002 \001(\0132\035.commonmodule.CheckConditi"
-  "ons\022M\n\032breakerDiscreteControlXCBR\030\003 \001(\0132"
-  ").breakermodule.BreakerDiscreteControlXC"
-  "BR\"O\n\007Breaker\022D\n\023conductingEquipment\030\001 \001"
-  "(\0132!.commonmodule.ConductingEquipmentB\004\200"
-  "\265\030\001\"\355\001\n\035BreakerDiscreteControlProfile\022B\n"
-  "\022controlMessageInfo\030\001 \001(\0132 .commonmodule"
-  ".ControlMessageInfoB\004\200\265\030\001\0221\n\007breaker\030\002 \001"
-  "(\0132\026.breakermodule.BreakerB\010\210\265\030\001\220\265\030\001\022O\n\026"
-  "breakerDiscreteControl\030\003 \001(\0132%.breakermo"
-  "dule.BreakerDiscreteControlB\010\210\265\030\001\220\265\030\001:\004\300"
-  "\363\030\001\"\200\001\n\014BreakerEvent\0222\n\neventValue\030\001 \001(\013"
-  "2\030.commonmodule.EventValueB\004\200\265\030\001\022<\n\022stat"
-  "usAndEventXCBR\030\002 \001(\0132 .commonmodule.Stat"
-  "usAndEventXCBR\"\313\001\n\023BreakerEventProfile\022>"
-  "\n\020eventMessageInfo\030\001 \001(\0132\036.commonmodule."
-  "EventMessageInfoB\004\200\265\030\001\0221\n\007breaker\030\002 \001(\0132"
-  "\026.breakermodule.BreakerB\010\210\265\030\001\220\265\030\001\022;\n\014bre"
-  "akerEvent\030\003 \001(\0132\033.breakermodule.BreakerE"
-  "ventB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\264\002\n\016BreakerReading\022"
-  "b\n\"conductingEquipmentTerminalReading\030\001 "
-  "\001(\01320.commonmodule.ConductingEquipmentTe"
-  "rminalReadingB\004\200\265\030\001\0222\n\017diffReadingMMXU\030\002"
-  " \001(\0132\031.commonmodule.ReadingMMXU\022*\n\tphase"
-  "MMTN\030\003 \001(\0132\027.commonmodule.PhaseMMTN\022.\n\013r"
-  "eadingMMTR\030\004 \001(\0132\031.commonmodule.ReadingM"
-  "MTR\022.\n\013readingMMXU\030\005 \001(\0132\031.commonmodule."
-  "ReadingMMXU\"\331\001\n\025BreakerReadingProfile\022B\n"
-  "\022readingMessageInfo\030\001 \001(\0132 .commonmodule"
-  ".ReadingMessageInfoB\004\200\265\030\001\0221\n\007breaker\030\002 \001"
-  "(\0132\026.breakermodule.BreakerB\010\210\265\030\001\220\265\030\001\022C\n\016"
-  "breakerReading\030\003 \003(\0132\035.breakermodule.Bre"
-  "akerReadingB\014\210\265\030\001\220\265\030\001\230\265\030\002:\004\300\363\030\001\"\203\001\n\rBrea"
-  "kerStatus\0224\n\013statusValue\030\001 \001(\0132\031.commonm"
-  "odule.StatusValueB\004\200\265\030\001\022<\n\022statusAndEven"
-  "tXCBR\030\002 \001(\0132 .commonmodule.StatusAndEven"
-  "tXCBR\"\320\001\n\024BreakerStatusProfile\022@\n\021status"
-  "MessageInfo\030\001 \001(\0132\037.commonmodule.StatusM"
-  "essageInfoB\004\200\265\030\001\0221\n\007breaker\030\002 \001(\0132\026.brea"
-  "kermodule.BreakerB\010\210\265\030\001\220\265\030\001\022=\n\rbreakerSt"
-  "atus\030\003 \001(\0132\034.breakermodule.BreakerStatus"
-  "B\010\210\265\030\001\220\265\030\001:\004\300\363\030\001B\207\001\n\025openfmb.breakermodu"
-  "leP\001ZTgitlab.com/openfmb/psm/ops/protobu"
-  "f/go-openfmb-ops-protobuf/v2/openfmb/bre"
-  "akermodule\252\002\025openfmb.breakermoduleb\006prot"
-  "o3"
-  ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_breakermodule_2fbreakermodule_2eproto_deps[2] = {
-  &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
-  &::descriptor_table_uml_2eproto,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_breakermodule_2fbreakermodule_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_breakermodule_2fbreakermodule_2eproto = {
-  false, false, 2082, descriptor_table_protodef_breakermodule_2fbreakermodule_2eproto, "breakermodule/breakermodule.proto", 
-  &descriptor_table_breakermodule_2fbreakermodule_2eproto_once, descriptor_table_breakermodule_2fbreakermodule_2eproto_deps, 2, 10,
-  schemas, file_default_instances, TableStruct_breakermodule_2fbreakermodule_2eproto::offsets,
-  file_level_metadata_breakermodule_2fbreakermodule_2eproto, file_level_enum_descriptors_breakermodule_2fbreakermodule_2eproto, file_level_service_descriptors_breakermodule_2fbreakermodule_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
-descriptor_table_breakermodule_2fbreakermodule_2eproto_metadata_getter(int index) {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_breakermodule_2fbreakermodule_2eproto);
-  return descriptor_table_breakermodule_2fbreakermodule_2eproto.file_level_metadata[index];
+// This function exists to be marked as weak.
+// It can significantly speed up compilation by breaking up LLVM's SCC
+// in the .pb.cc translation units. Large translation units see a
+// reduction of more than 35% of walltime for optimized builds. Without
+// the weak attribute all the messages in the file, including all the
+// vtables and everything they use become part of the same SCC through
+// a cycle like:
+// GetMetadata -> descriptor table -> default instances ->
+//   vtables -> GetMetadata
+// By adding a weak function here we break the connection from the
+// individual vtables back into the descriptor table.
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_breakermodule_2fbreakermodule_2eproto_getter() {
+  return &descriptor_table_breakermodule_2fbreakermodule_2eproto;
 }
-
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_breakermodule_2fbreakermodule_2eproto(&descriptor_table_breakermodule_2fbreakermodule_2eproto);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
+static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_breakermodule_2fbreakermodule_2eproto(&descriptor_table_breakermodule_2fbreakermodule_2eproto);
 namespace breakermodule {
-
 // ===================================================================
 
 class BreakerDiscreteControlXCBR::_Internal {
@@ -347,183 +423,169 @@ class BreakerDiscreteControlXCBR::_Internal {
 
 const ::commonmodule::DiscreteControlXCBR&
 BreakerDiscreteControlXCBR::_Internal::discretecontrolxcbr(const BreakerDiscreteControlXCBR* msg) {
-  return *msg->discretecontrolxcbr_;
+  return *msg->_impl_.discretecontrolxcbr_;
 }
 void BreakerDiscreteControlXCBR::clear_discretecontrolxcbr() {
-  if (GetArena() == nullptr && discretecontrolxcbr_ != nullptr) {
-    delete discretecontrolxcbr_;
+  if (GetArenaForAllocation() == nullptr && _impl_.discretecontrolxcbr_ != nullptr) {
+    delete _impl_.discretecontrolxcbr_;
   }
-  discretecontrolxcbr_ = nullptr;
+  _impl_.discretecontrolxcbr_ = nullptr;
 }
 BreakerDiscreteControlXCBR::BreakerDiscreteControlXCBR(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:breakermodule.BreakerDiscreteControlXCBR)
 }
 BreakerDiscreteControlXCBR::BreakerDiscreteControlXCBR(const BreakerDiscreteControlXCBR& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  BreakerDiscreteControlXCBR* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.discretecontrolxcbr_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_discretecontrolxcbr()) {
-    discretecontrolxcbr_ = new ::commonmodule::DiscreteControlXCBR(*from.discretecontrolxcbr_);
-  } else {
-    discretecontrolxcbr_ = nullptr;
+    _this->_impl_.discretecontrolxcbr_ = new ::commonmodule::DiscreteControlXCBR(*from._impl_.discretecontrolxcbr_);
   }
   // @@protoc_insertion_point(copy_constructor:breakermodule.BreakerDiscreteControlXCBR)
 }
 
-void BreakerDiscreteControlXCBR::SharedCtor() {
-discretecontrolxcbr_ = nullptr;
+inline void BreakerDiscreteControlXCBR::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.discretecontrolxcbr_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 BreakerDiscreteControlXCBR::~BreakerDiscreteControlXCBR() {
   // @@protoc_insertion_point(destructor:breakermodule.BreakerDiscreteControlXCBR)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void BreakerDiscreteControlXCBR::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete discretecontrolxcbr_;
+inline void BreakerDiscreteControlXCBR::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.discretecontrolxcbr_;
 }
 
-void BreakerDiscreteControlXCBR::ArenaDtor(void* object) {
-  BreakerDiscreteControlXCBR* _this = reinterpret_cast< BreakerDiscreteControlXCBR* >(object);
-  (void)_this;
-}
-void BreakerDiscreteControlXCBR::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void BreakerDiscreteControlXCBR::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void BreakerDiscreteControlXCBR::Clear() {
 // @@protoc_insertion_point(message_clear_start:breakermodule.BreakerDiscreteControlXCBR)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && discretecontrolxcbr_ != nullptr) {
-    delete discretecontrolxcbr_;
+  if (GetArenaForAllocation() == nullptr && _impl_.discretecontrolxcbr_ != nullptr) {
+    delete _impl_.discretecontrolxcbr_;
   }
-  discretecontrolxcbr_ = nullptr;
+  _impl_.discretecontrolxcbr_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* BreakerDiscreteControlXCBR::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* BreakerDiscreteControlXCBR::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.DiscreteControlXCBR discreteControlXCBR = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_discretecontrolxcbr(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* BreakerDiscreteControlXCBR::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* BreakerDiscreteControlXCBR::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:breakermodule.BreakerDiscreteControlXCBR)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.DiscreteControlXCBR discreteControlXCBR = 1 [(.uml.option_parent_message) = true];
-  if (this->has_discretecontrolxcbr()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_discretecontrolxcbr()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::discretecontrolxcbr(this), target, stream);
+      InternalWriteMessage(1, _Internal::discretecontrolxcbr(this),
+        _Internal::discretecontrolxcbr(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:breakermodule.BreakerDiscreteControlXCBR)
   return target;
 }
 
-size_t BreakerDiscreteControlXCBR::ByteSizeLong() const {
+::size_t BreakerDiscreteControlXCBR::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:breakermodule.BreakerDiscreteControlXCBR)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.DiscreteControlXCBR discreteControlXCBR = 1 [(.uml.option_parent_message) = true];
-  if (this->has_discretecontrolxcbr()) {
+  if (this->_internal_has_discretecontrolxcbr()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *discretecontrolxcbr_);
+        *_impl_.discretecontrolxcbr_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void BreakerDiscreteControlXCBR::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:breakermodule.BreakerDiscreteControlXCBR)
-  GOOGLE_DCHECK_NE(&from, this);
-  const BreakerDiscreteControlXCBR* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BreakerDiscreteControlXCBR>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:breakermodule.BreakerDiscreteControlXCBR)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:breakermodule.BreakerDiscreteControlXCBR)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BreakerDiscreteControlXCBR::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    BreakerDiscreteControlXCBR::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BreakerDiscreteControlXCBR::GetClassData() const { return &_class_data_; }
 
-void BreakerDiscreteControlXCBR::MergeFrom(const BreakerDiscreteControlXCBR& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.BreakerDiscreteControlXCBR)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void BreakerDiscreteControlXCBR::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<BreakerDiscreteControlXCBR*>(&to_msg);
+  auto& from = static_cast<const BreakerDiscreteControlXCBR&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.BreakerDiscreteControlXCBR)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_discretecontrolxcbr()) {
-    _internal_mutable_discretecontrolxcbr()->::commonmodule::DiscreteControlXCBR::MergeFrom(from._internal_discretecontrolxcbr());
+  if (from._internal_has_discretecontrolxcbr()) {
+    _this->_internal_mutable_discretecontrolxcbr()->::commonmodule::DiscreteControlXCBR::MergeFrom(
+        from._internal_discretecontrolxcbr());
   }
-}
-
-void BreakerDiscreteControlXCBR::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:breakermodule.BreakerDiscreteControlXCBR)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void BreakerDiscreteControlXCBR::CopyFrom(const BreakerDiscreteControlXCBR& from) {
@@ -539,15 +601,15 @@ bool BreakerDiscreteControlXCBR::IsInitialized() const {
 
 void BreakerDiscreteControlXCBR::InternalSwap(BreakerDiscreteControlXCBR* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(discretecontrolxcbr_, other->discretecontrolxcbr_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.discretecontrolxcbr_, other->_impl_.discretecontrolxcbr_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata BreakerDiscreteControlXCBR::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_breakermodule_2fbreakermodule_2eproto_getter, &descriptor_table_breakermodule_2fbreakermodule_2eproto_once,
+      file_level_metadata_breakermodule_2fbreakermodule_2eproto[0]);
 }
-
-
 // ===================================================================
 
 class BreakerDiscreteControl::_Internal {
@@ -559,270 +621,257 @@ class BreakerDiscreteControl::_Internal {
 
 const ::commonmodule::ControlValue&
 BreakerDiscreteControl::_Internal::controlvalue(const BreakerDiscreteControl* msg) {
-  return *msg->controlvalue_;
+  return *msg->_impl_.controlvalue_;
 }
 const ::commonmodule::CheckConditions&
 BreakerDiscreteControl::_Internal::check(const BreakerDiscreteControl* msg) {
-  return *msg->check_;
+  return *msg->_impl_.check_;
 }
 const ::breakermodule::BreakerDiscreteControlXCBR&
 BreakerDiscreteControl::_Internal::breakerdiscretecontrolxcbr(const BreakerDiscreteControl* msg) {
-  return *msg->breakerdiscretecontrolxcbr_;
+  return *msg->_impl_.breakerdiscretecontrolxcbr_;
 }
 void BreakerDiscreteControl::clear_controlvalue() {
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
   }
-  controlvalue_ = nullptr;
+  _impl_.controlvalue_ = nullptr;
 }
 void BreakerDiscreteControl::clear_check() {
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
+  _impl_.check_ = nullptr;
 }
 BreakerDiscreteControl::BreakerDiscreteControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:breakermodule.BreakerDiscreteControl)
 }
 BreakerDiscreteControl::BreakerDiscreteControl(const BreakerDiscreteControl& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  BreakerDiscreteControl* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.breakerdiscretecontrolxcbr_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlvalue()) {
-    controlvalue_ = new ::commonmodule::ControlValue(*from.controlvalue_);
-  } else {
-    controlvalue_ = nullptr;
+    _this->_impl_.controlvalue_ = new ::commonmodule::ControlValue(*from._impl_.controlvalue_);
   }
   if (from._internal_has_check()) {
-    check_ = new ::commonmodule::CheckConditions(*from.check_);
-  } else {
-    check_ = nullptr;
+    _this->_impl_.check_ = new ::commonmodule::CheckConditions(*from._impl_.check_);
   }
   if (from._internal_has_breakerdiscretecontrolxcbr()) {
-    breakerdiscretecontrolxcbr_ = new ::breakermodule::BreakerDiscreteControlXCBR(*from.breakerdiscretecontrolxcbr_);
-  } else {
-    breakerdiscretecontrolxcbr_ = nullptr;
+    _this->_impl_.breakerdiscretecontrolxcbr_ = new ::breakermodule::BreakerDiscreteControlXCBR(*from._impl_.breakerdiscretecontrolxcbr_);
   }
   // @@protoc_insertion_point(copy_constructor:breakermodule.BreakerDiscreteControl)
 }
 
-void BreakerDiscreteControl::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&breakerdiscretecontrolxcbr_) -
-    reinterpret_cast<char*>(&controlvalue_)) + sizeof(breakerdiscretecontrolxcbr_));
+inline void BreakerDiscreteControl::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.breakerdiscretecontrolxcbr_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 BreakerDiscreteControl::~BreakerDiscreteControl() {
   // @@protoc_insertion_point(destructor:breakermodule.BreakerDiscreteControl)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void BreakerDiscreteControl::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlvalue_;
-  if (this != internal_default_instance()) delete check_;
-  if (this != internal_default_instance()) delete breakerdiscretecontrolxcbr_;
+inline void BreakerDiscreteControl::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlvalue_;
+  if (this != internal_default_instance()) delete _impl_.check_;
+  if (this != internal_default_instance()) delete _impl_.breakerdiscretecontrolxcbr_;
 }
 
-void BreakerDiscreteControl::ArenaDtor(void* object) {
-  BreakerDiscreteControl* _this = reinterpret_cast< BreakerDiscreteControl* >(object);
-  (void)_this;
-}
-void BreakerDiscreteControl::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void BreakerDiscreteControl::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void BreakerDiscreteControl::Clear() {
 // @@protoc_insertion_point(message_clear_start:breakermodule.BreakerDiscreteControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
   }
-  controlvalue_ = nullptr;
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  _impl_.controlvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
-  if (GetArena() == nullptr && breakerdiscretecontrolxcbr_ != nullptr) {
-    delete breakerdiscretecontrolxcbr_;
+  _impl_.check_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.breakerdiscretecontrolxcbr_ != nullptr) {
+    delete _impl_.breakerdiscretecontrolxcbr_;
   }
-  breakerdiscretecontrolxcbr_ = nullptr;
+  _impl_.breakerdiscretecontrolxcbr_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* BreakerDiscreteControl::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* BreakerDiscreteControl::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlvalue(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.CheckConditions check = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .breakermodule.BreakerDiscreteControlXCBR breakerDiscreteControlXCBR = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_breakerdiscretecontrolxcbr(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* BreakerDiscreteControl::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* BreakerDiscreteControl::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:breakermodule.BreakerDiscreteControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlvalue()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlvalue(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlvalue(this),
+        _Internal::controlvalue(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_check()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::check(this), target, stream);
+      InternalWriteMessage(2, _Internal::check(this),
+        _Internal::check(this).GetCachedSize(), target, stream);
   }
 
   // .breakermodule.BreakerDiscreteControlXCBR breakerDiscreteControlXCBR = 3;
-  if (this->has_breakerdiscretecontrolxcbr()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_breakerdiscretecontrolxcbr()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::breakerdiscretecontrolxcbr(this), target, stream);
+      InternalWriteMessage(3, _Internal::breakerdiscretecontrolxcbr(this),
+        _Internal::breakerdiscretecontrolxcbr(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:breakermodule.BreakerDiscreteControl)
   return target;
 }
 
-size_t BreakerDiscreteControl::ByteSizeLong() const {
+::size_t BreakerDiscreteControl::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:breakermodule.BreakerDiscreteControl)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
+  if (this->_internal_has_controlvalue()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlvalue_);
+        *_impl_.controlvalue_);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
+  if (this->_internal_has_check()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *check_);
+        *_impl_.check_);
   }
 
   // .breakermodule.BreakerDiscreteControlXCBR breakerDiscreteControlXCBR = 3;
-  if (this->has_breakerdiscretecontrolxcbr()) {
+  if (this->_internal_has_breakerdiscretecontrolxcbr()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *breakerdiscretecontrolxcbr_);
+        *_impl_.breakerdiscretecontrolxcbr_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void BreakerDiscreteControl::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:breakermodule.BreakerDiscreteControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  const BreakerDiscreteControl* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BreakerDiscreteControl>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:breakermodule.BreakerDiscreteControl)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:breakermodule.BreakerDiscreteControl)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BreakerDiscreteControl::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    BreakerDiscreteControl::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BreakerDiscreteControl::GetClassData() const { return &_class_data_; }
 
-void BreakerDiscreteControl::MergeFrom(const BreakerDiscreteControl& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.BreakerDiscreteControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void BreakerDiscreteControl::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<BreakerDiscreteControl*>(&to_msg);
+  auto& from = static_cast<const BreakerDiscreteControl&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.BreakerDiscreteControl)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlvalue()) {
-    _internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(from._internal_controlvalue());
+  if (from._internal_has_controlvalue()) {
+    _this->_internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(
+        from._internal_controlvalue());
   }
-  if (from.has_check()) {
-    _internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(from._internal_check());
+  if (from._internal_has_check()) {
+    _this->_internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(
+        from._internal_check());
   }
-  if (from.has_breakerdiscretecontrolxcbr()) {
-    _internal_mutable_breakerdiscretecontrolxcbr()->::breakermodule::BreakerDiscreteControlXCBR::MergeFrom(from._internal_breakerdiscretecontrolxcbr());
+  if (from._internal_has_breakerdiscretecontrolxcbr()) {
+    _this->_internal_mutable_breakerdiscretecontrolxcbr()->::breakermodule::BreakerDiscreteControlXCBR::MergeFrom(
+        from._internal_breakerdiscretecontrolxcbr());
   }
-}
-
-void BreakerDiscreteControl::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:breakermodule.BreakerDiscreteControl)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void BreakerDiscreteControl::CopyFrom(const BreakerDiscreteControl& from) {
@@ -838,20 +887,20 @@ bool BreakerDiscreteControl::IsInitialized() const {
 
 void BreakerDiscreteControl::InternalSwap(BreakerDiscreteControl* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(BreakerDiscreteControl, breakerdiscretecontrolxcbr_)
-      + sizeof(BreakerDiscreteControl::breakerdiscretecontrolxcbr_)
-      - PROTOBUF_FIELD_OFFSET(BreakerDiscreteControl, controlvalue_)>(
-          reinterpret_cast<char*>(&controlvalue_),
-          reinterpret_cast<char*>(&other->controlvalue_));
+      PROTOBUF_FIELD_OFFSET(BreakerDiscreteControl, _impl_.breakerdiscretecontrolxcbr_)
+      + sizeof(BreakerDiscreteControl::_impl_.breakerdiscretecontrolxcbr_)
+      - PROTOBUF_FIELD_OFFSET(BreakerDiscreteControl, _impl_.controlvalue_)>(
+          reinterpret_cast<char*>(&_impl_.controlvalue_),
+          reinterpret_cast<char*>(&other->_impl_.controlvalue_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata BreakerDiscreteControl::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_breakermodule_2fbreakermodule_2eproto_getter, &descriptor_table_breakermodule_2fbreakermodule_2eproto_once,
+      file_level_metadata_breakermodule_2fbreakermodule_2eproto[1]);
 }
-
-
 // ===================================================================
 
 class Breaker::_Internal {
@@ -861,183 +910,169 @@ class Breaker::_Internal {
 
 const ::commonmodule::ConductingEquipment&
 Breaker::_Internal::conductingequipment(const Breaker* msg) {
-  return *msg->conductingequipment_;
+  return *msg->_impl_.conductingequipment_;
 }
 void Breaker::clear_conductingequipment() {
-  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
-    delete conductingequipment_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipment_ != nullptr) {
+    delete _impl_.conductingequipment_;
   }
-  conductingequipment_ = nullptr;
+  _impl_.conductingequipment_ = nullptr;
 }
 Breaker::Breaker(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:breakermodule.Breaker)
 }
 Breaker::Breaker(const Breaker& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  Breaker* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipment_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_conductingequipment()) {
-    conductingequipment_ = new ::commonmodule::ConductingEquipment(*from.conductingequipment_);
-  } else {
-    conductingequipment_ = nullptr;
+    _this->_impl_.conductingequipment_ = new ::commonmodule::ConductingEquipment(*from._impl_.conductingequipment_);
   }
   // @@protoc_insertion_point(copy_constructor:breakermodule.Breaker)
 }
 
-void Breaker::SharedCtor() {
-conductingequipment_ = nullptr;
+inline void Breaker::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipment_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 Breaker::~Breaker() {
   // @@protoc_insertion_point(destructor:breakermodule.Breaker)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void Breaker::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete conductingequipment_;
+inline void Breaker::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.conductingequipment_;
 }
 
-void Breaker::ArenaDtor(void* object) {
-  Breaker* _this = reinterpret_cast< Breaker* >(object);
-  (void)_this;
-}
-void Breaker::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void Breaker::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void Breaker::Clear() {
 // @@protoc_insertion_point(message_clear_start:breakermodule.Breaker)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
-    delete conductingequipment_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipment_ != nullptr) {
+    delete _impl_.conductingequipment_;
   }
-  conductingequipment_ = nullptr;
+  _impl_.conductingequipment_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* Breaker::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Breaker::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_conductingequipment(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* Breaker::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* Breaker::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:breakermodule.Breaker)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipment()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_conductingequipment()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::conductingequipment(this), target, stream);
+      InternalWriteMessage(1, _Internal::conductingequipment(this),
+        _Internal::conductingequipment(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:breakermodule.Breaker)
   return target;
 }
 
-size_t Breaker::ByteSizeLong() const {
+::size_t Breaker::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:breakermodule.Breaker)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipment()) {
+  if (this->_internal_has_conductingequipment()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *conductingequipment_);
+        *_impl_.conductingequipment_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Breaker::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:breakermodule.Breaker)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Breaker* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Breaker>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:breakermodule.Breaker)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:breakermodule.Breaker)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Breaker::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Breaker::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Breaker::GetClassData() const { return &_class_data_; }
 
-void Breaker::MergeFrom(const Breaker& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.Breaker)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void Breaker::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Breaker*>(&to_msg);
+  auto& from = static_cast<const Breaker&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.Breaker)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_conductingequipment()) {
-    _internal_mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(from._internal_conductingequipment());
+  if (from._internal_has_conductingequipment()) {
+    _this->_internal_mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(
+        from._internal_conductingequipment());
   }
-}
-
-void Breaker::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:breakermodule.Breaker)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Breaker::CopyFrom(const Breaker& from) {
@@ -1053,15 +1088,15 @@ bool Breaker::IsInitialized() const {
 
 void Breaker::InternalSwap(Breaker* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(conductingequipment_, other->conductingequipment_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.conductingequipment_, other->_impl_.conductingequipment_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Breaker::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_breakermodule_2fbreakermodule_2eproto_getter, &descriptor_table_breakermodule_2fbreakermodule_2eproto_once,
+      file_level_metadata_breakermodule_2fbreakermodule_2eproto[2]);
 }
-
-
 // ===================================================================
 
 class BreakerDiscreteControlProfile::_Internal {
@@ -1073,264 +1108,251 @@ class BreakerDiscreteControlProfile::_Internal {
 
 const ::commonmodule::ControlMessageInfo&
 BreakerDiscreteControlProfile::_Internal::controlmessageinfo(const BreakerDiscreteControlProfile* msg) {
-  return *msg->controlmessageinfo_;
+  return *msg->_impl_.controlmessageinfo_;
 }
 const ::breakermodule::Breaker&
 BreakerDiscreteControlProfile::_Internal::breaker(const BreakerDiscreteControlProfile* msg) {
-  return *msg->breaker_;
+  return *msg->_impl_.breaker_;
 }
 const ::breakermodule::BreakerDiscreteControl&
 BreakerDiscreteControlProfile::_Internal::breakerdiscretecontrol(const BreakerDiscreteControlProfile* msg) {
-  return *msg->breakerdiscretecontrol_;
+  return *msg->_impl_.breakerdiscretecontrol_;
 }
 void BreakerDiscreteControlProfile::clear_controlmessageinfo() {
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
+  _impl_.controlmessageinfo_ = nullptr;
 }
 BreakerDiscreteControlProfile::BreakerDiscreteControlProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:breakermodule.BreakerDiscreteControlProfile)
 }
 BreakerDiscreteControlProfile::BreakerDiscreteControlProfile(const BreakerDiscreteControlProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  BreakerDiscreteControlProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.breaker_){nullptr}
+    , decltype(_impl_.breakerdiscretecontrol_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlmessageinfo()) {
-    controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
-  } else {
-    controlmessageinfo_ = nullptr;
+    _this->_impl_.controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from._impl_.controlmessageinfo_);
   }
   if (from._internal_has_breaker()) {
-    breaker_ = new ::breakermodule::Breaker(*from.breaker_);
-  } else {
-    breaker_ = nullptr;
+    _this->_impl_.breaker_ = new ::breakermodule::Breaker(*from._impl_.breaker_);
   }
   if (from._internal_has_breakerdiscretecontrol()) {
-    breakerdiscretecontrol_ = new ::breakermodule::BreakerDiscreteControl(*from.breakerdiscretecontrol_);
-  } else {
-    breakerdiscretecontrol_ = nullptr;
+    _this->_impl_.breakerdiscretecontrol_ = new ::breakermodule::BreakerDiscreteControl(*from._impl_.breakerdiscretecontrol_);
   }
   // @@protoc_insertion_point(copy_constructor:breakermodule.BreakerDiscreteControlProfile)
 }
 
-void BreakerDiscreteControlProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&breakerdiscretecontrol_) -
-    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(breakerdiscretecontrol_));
+inline void BreakerDiscreteControlProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.breaker_){nullptr}
+    , decltype(_impl_.breakerdiscretecontrol_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 BreakerDiscreteControlProfile::~BreakerDiscreteControlProfile() {
   // @@protoc_insertion_point(destructor:breakermodule.BreakerDiscreteControlProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void BreakerDiscreteControlProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete breaker_;
-  if (this != internal_default_instance()) delete breakerdiscretecontrol_;
+inline void BreakerDiscreteControlProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.breaker_;
+  if (this != internal_default_instance()) delete _impl_.breakerdiscretecontrol_;
 }
 
-void BreakerDiscreteControlProfile::ArenaDtor(void* object) {
-  BreakerDiscreteControlProfile* _this = reinterpret_cast< BreakerDiscreteControlProfile* >(object);
-  (void)_this;
-}
-void BreakerDiscreteControlProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void BreakerDiscreteControlProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void BreakerDiscreteControlProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:breakermodule.BreakerDiscreteControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && breaker_ != nullptr) {
-    delete breaker_;
+  _impl_.controlmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.breaker_ != nullptr) {
+    delete _impl_.breaker_;
   }
-  breaker_ = nullptr;
-  if (GetArena() == nullptr && breakerdiscretecontrol_ != nullptr) {
-    delete breakerdiscretecontrol_;
+  _impl_.breaker_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.breakerdiscretecontrol_ != nullptr) {
+    delete _impl_.breakerdiscretecontrol_;
   }
-  breakerdiscretecontrol_ = nullptr;
+  _impl_.breakerdiscretecontrol_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* BreakerDiscreteControlProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* BreakerDiscreteControlProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .breakermodule.Breaker breaker = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_breaker(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .breakermodule.BreakerDiscreteControl breakerDiscreteControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_breakerdiscretecontrol(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* BreakerDiscreteControlProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* BreakerDiscreteControlProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:breakermodule.BreakerDiscreteControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlmessageinfo(this),
+        _Internal::controlmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .breakermodule.Breaker breaker = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_breaker()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_breaker()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::breaker(this), target, stream);
+      InternalWriteMessage(2, _Internal::breaker(this),
+        _Internal::breaker(this).GetCachedSize(), target, stream);
   }
 
   // .breakermodule.BreakerDiscreteControl breakerDiscreteControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_breakerdiscretecontrol()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_breakerdiscretecontrol()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::breakerdiscretecontrol(this), target, stream);
+      InternalWriteMessage(3, _Internal::breakerdiscretecontrol(this),
+        _Internal::breakerdiscretecontrol(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:breakermodule.BreakerDiscreteControlProfile)
   return target;
 }
 
-size_t BreakerDiscreteControlProfile::ByteSizeLong() const {
+::size_t BreakerDiscreteControlProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:breakermodule.BreakerDiscreteControlProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
+  if (this->_internal_has_controlmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlmessageinfo_);
+        *_impl_.controlmessageinfo_);
   }
 
   // .breakermodule.Breaker breaker = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_breaker()) {
+  if (this->_internal_has_breaker()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *breaker_);
+        *_impl_.breaker_);
   }
 
   // .breakermodule.BreakerDiscreteControl breakerDiscreteControl = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_breakerdiscretecontrol()) {
+  if (this->_internal_has_breakerdiscretecontrol()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *breakerdiscretecontrol_);
+        *_impl_.breakerdiscretecontrol_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void BreakerDiscreteControlProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:breakermodule.BreakerDiscreteControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const BreakerDiscreteControlProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BreakerDiscreteControlProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:breakermodule.BreakerDiscreteControlProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:breakermodule.BreakerDiscreteControlProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BreakerDiscreteControlProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    BreakerDiscreteControlProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BreakerDiscreteControlProfile::GetClassData() const { return &_class_data_; }
 
-void BreakerDiscreteControlProfile::MergeFrom(const BreakerDiscreteControlProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.BreakerDiscreteControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void BreakerDiscreteControlProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<BreakerDiscreteControlProfile*>(&to_msg);
+  auto& from = static_cast<const BreakerDiscreteControlProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.BreakerDiscreteControlProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlmessageinfo()) {
-    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
+  if (from._internal_has_controlmessageinfo()) {
+    _this->_internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(
+        from._internal_controlmessageinfo());
   }
-  if (from.has_breaker()) {
-    _internal_mutable_breaker()->::breakermodule::Breaker::MergeFrom(from._internal_breaker());
+  if (from._internal_has_breaker()) {
+    _this->_internal_mutable_breaker()->::breakermodule::Breaker::MergeFrom(
+        from._internal_breaker());
   }
-  if (from.has_breakerdiscretecontrol()) {
-    _internal_mutable_breakerdiscretecontrol()->::breakermodule::BreakerDiscreteControl::MergeFrom(from._internal_breakerdiscretecontrol());
+  if (from._internal_has_breakerdiscretecontrol()) {
+    _this->_internal_mutable_breakerdiscretecontrol()->::breakermodule::BreakerDiscreteControl::MergeFrom(
+        from._internal_breakerdiscretecontrol());
   }
-}
-
-void BreakerDiscreteControlProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:breakermodule.BreakerDiscreteControlProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void BreakerDiscreteControlProfile::CopyFrom(const BreakerDiscreteControlProfile& from) {
@@ -1346,20 +1368,20 @@ bool BreakerDiscreteControlProfile::IsInitialized() const {
 
 void BreakerDiscreteControlProfile::InternalSwap(BreakerDiscreteControlProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(BreakerDiscreteControlProfile, breakerdiscretecontrol_)
-      + sizeof(BreakerDiscreteControlProfile::breakerdiscretecontrol_)
-      - PROTOBUF_FIELD_OFFSET(BreakerDiscreteControlProfile, controlmessageinfo_)>(
-          reinterpret_cast<char*>(&controlmessageinfo_),
-          reinterpret_cast<char*>(&other->controlmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(BreakerDiscreteControlProfile, _impl_.breakerdiscretecontrol_)
+      + sizeof(BreakerDiscreteControlProfile::_impl_.breakerdiscretecontrol_)
+      - PROTOBUF_FIELD_OFFSET(BreakerDiscreteControlProfile, _impl_.controlmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.controlmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.controlmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata BreakerDiscreteControlProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_breakermodule_2fbreakermodule_2eproto_getter, &descriptor_table_breakermodule_2fbreakermodule_2eproto_once,
+      file_level_metadata_breakermodule_2fbreakermodule_2eproto[3]);
 }
-
-
 // ===================================================================
 
 class BreakerEvent::_Internal {
@@ -1370,231 +1392,216 @@ class BreakerEvent::_Internal {
 
 const ::commonmodule::EventValue&
 BreakerEvent::_Internal::eventvalue(const BreakerEvent* msg) {
-  return *msg->eventvalue_;
+  return *msg->_impl_.eventvalue_;
 }
 const ::commonmodule::StatusAndEventXCBR&
 BreakerEvent::_Internal::statusandeventxcbr(const BreakerEvent* msg) {
-  return *msg->statusandeventxcbr_;
+  return *msg->_impl_.statusandeventxcbr_;
 }
 void BreakerEvent::clear_eventvalue() {
-  if (GetArena() == nullptr && eventvalue_ != nullptr) {
-    delete eventvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventvalue_ != nullptr) {
+    delete _impl_.eventvalue_;
   }
-  eventvalue_ = nullptr;
+  _impl_.eventvalue_ = nullptr;
 }
 void BreakerEvent::clear_statusandeventxcbr() {
-  if (GetArena() == nullptr && statusandeventxcbr_ != nullptr) {
-    delete statusandeventxcbr_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusandeventxcbr_ != nullptr) {
+    delete _impl_.statusandeventxcbr_;
   }
-  statusandeventxcbr_ = nullptr;
+  _impl_.statusandeventxcbr_ = nullptr;
 }
 BreakerEvent::BreakerEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:breakermodule.BreakerEvent)
 }
 BreakerEvent::BreakerEvent(const BreakerEvent& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  BreakerEvent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventvalue_){nullptr}
+    , decltype(_impl_.statusandeventxcbr_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_eventvalue()) {
-    eventvalue_ = new ::commonmodule::EventValue(*from.eventvalue_);
-  } else {
-    eventvalue_ = nullptr;
+    _this->_impl_.eventvalue_ = new ::commonmodule::EventValue(*from._impl_.eventvalue_);
   }
   if (from._internal_has_statusandeventxcbr()) {
-    statusandeventxcbr_ = new ::commonmodule::StatusAndEventXCBR(*from.statusandeventxcbr_);
-  } else {
-    statusandeventxcbr_ = nullptr;
+    _this->_impl_.statusandeventxcbr_ = new ::commonmodule::StatusAndEventXCBR(*from._impl_.statusandeventxcbr_);
   }
   // @@protoc_insertion_point(copy_constructor:breakermodule.BreakerEvent)
 }
 
-void BreakerEvent::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&eventvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&statusandeventxcbr_) -
-    reinterpret_cast<char*>(&eventvalue_)) + sizeof(statusandeventxcbr_));
+inline void BreakerEvent::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventvalue_){nullptr}
+    , decltype(_impl_.statusandeventxcbr_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 BreakerEvent::~BreakerEvent() {
   // @@protoc_insertion_point(destructor:breakermodule.BreakerEvent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void BreakerEvent::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete eventvalue_;
-  if (this != internal_default_instance()) delete statusandeventxcbr_;
+inline void BreakerEvent::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.eventvalue_;
+  if (this != internal_default_instance()) delete _impl_.statusandeventxcbr_;
 }
 
-void BreakerEvent::ArenaDtor(void* object) {
-  BreakerEvent* _this = reinterpret_cast< BreakerEvent* >(object);
-  (void)_this;
-}
-void BreakerEvent::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void BreakerEvent::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void BreakerEvent::Clear() {
 // @@protoc_insertion_point(message_clear_start:breakermodule.BreakerEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && eventvalue_ != nullptr) {
-    delete eventvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventvalue_ != nullptr) {
+    delete _impl_.eventvalue_;
   }
-  eventvalue_ = nullptr;
-  if (GetArena() == nullptr && statusandeventxcbr_ != nullptr) {
-    delete statusandeventxcbr_;
+  _impl_.eventvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusandeventxcbr_ != nullptr) {
+    delete _impl_.statusandeventxcbr_;
   }
-  statusandeventxcbr_ = nullptr;
+  _impl_.statusandeventxcbr_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* BreakerEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* BreakerEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_eventvalue(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusAndEventXCBR statusAndEventXCBR = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_statusandeventxcbr(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* BreakerEvent::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* BreakerEvent::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:breakermodule.BreakerEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventvalue()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_eventvalue()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::eventvalue(this), target, stream);
+      InternalWriteMessage(1, _Internal::eventvalue(this),
+        _Internal::eventvalue(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusAndEventXCBR statusAndEventXCBR = 2;
-  if (this->has_statusandeventxcbr()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_statusandeventxcbr()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::statusandeventxcbr(this), target, stream);
+      InternalWriteMessage(2, _Internal::statusandeventxcbr(this),
+        _Internal::statusandeventxcbr(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:breakermodule.BreakerEvent)
   return target;
 }
 
-size_t BreakerEvent::ByteSizeLong() const {
+::size_t BreakerEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:breakermodule.BreakerEvent)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventvalue()) {
+  if (this->_internal_has_eventvalue()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *eventvalue_);
+        *_impl_.eventvalue_);
   }
 
   // .commonmodule.StatusAndEventXCBR statusAndEventXCBR = 2;
-  if (this->has_statusandeventxcbr()) {
+  if (this->_internal_has_statusandeventxcbr()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *statusandeventxcbr_);
+        *_impl_.statusandeventxcbr_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void BreakerEvent::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:breakermodule.BreakerEvent)
-  GOOGLE_DCHECK_NE(&from, this);
-  const BreakerEvent* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BreakerEvent>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:breakermodule.BreakerEvent)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:breakermodule.BreakerEvent)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BreakerEvent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    BreakerEvent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BreakerEvent::GetClassData() const { return &_class_data_; }
 
-void BreakerEvent::MergeFrom(const BreakerEvent& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.BreakerEvent)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void BreakerEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<BreakerEvent*>(&to_msg);
+  auto& from = static_cast<const BreakerEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.BreakerEvent)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_eventvalue()) {
-    _internal_mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(from._internal_eventvalue());
+  if (from._internal_has_eventvalue()) {
+    _this->_internal_mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(
+        from._internal_eventvalue());
   }
-  if (from.has_statusandeventxcbr()) {
-    _internal_mutable_statusandeventxcbr()->::commonmodule::StatusAndEventXCBR::MergeFrom(from._internal_statusandeventxcbr());
+  if (from._internal_has_statusandeventxcbr()) {
+    _this->_internal_mutable_statusandeventxcbr()->::commonmodule::StatusAndEventXCBR::MergeFrom(
+        from._internal_statusandeventxcbr());
   }
-}
-
-void BreakerEvent::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:breakermodule.BreakerEvent)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void BreakerEvent::CopyFrom(const BreakerEvent& from) {
@@ -1610,20 +1617,20 @@ bool BreakerEvent::IsInitialized() const {
 
 void BreakerEvent::InternalSwap(BreakerEvent* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(BreakerEvent, statusandeventxcbr_)
-      + sizeof(BreakerEvent::statusandeventxcbr_)
-      - PROTOBUF_FIELD_OFFSET(BreakerEvent, eventvalue_)>(
-          reinterpret_cast<char*>(&eventvalue_),
-          reinterpret_cast<char*>(&other->eventvalue_));
+      PROTOBUF_FIELD_OFFSET(BreakerEvent, _impl_.statusandeventxcbr_)
+      + sizeof(BreakerEvent::_impl_.statusandeventxcbr_)
+      - PROTOBUF_FIELD_OFFSET(BreakerEvent, _impl_.eventvalue_)>(
+          reinterpret_cast<char*>(&_impl_.eventvalue_),
+          reinterpret_cast<char*>(&other->_impl_.eventvalue_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata BreakerEvent::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_breakermodule_2fbreakermodule_2eproto_getter, &descriptor_table_breakermodule_2fbreakermodule_2eproto_once,
+      file_level_metadata_breakermodule_2fbreakermodule_2eproto[4]);
 }
-
-
 // ===================================================================
 
 class BreakerEventProfile::_Internal {
@@ -1635,264 +1642,251 @@ class BreakerEventProfile::_Internal {
 
 const ::commonmodule::EventMessageInfo&
 BreakerEventProfile::_Internal::eventmessageinfo(const BreakerEventProfile* msg) {
-  return *msg->eventmessageinfo_;
+  return *msg->_impl_.eventmessageinfo_;
 }
 const ::breakermodule::Breaker&
 BreakerEventProfile::_Internal::breaker(const BreakerEventProfile* msg) {
-  return *msg->breaker_;
+  return *msg->_impl_.breaker_;
 }
 const ::breakermodule::BreakerEvent&
 BreakerEventProfile::_Internal::breakerevent(const BreakerEventProfile* msg) {
-  return *msg->breakerevent_;
+  return *msg->_impl_.breakerevent_;
 }
 void BreakerEventProfile::clear_eventmessageinfo() {
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
-    delete eventmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventmessageinfo_ != nullptr) {
+    delete _impl_.eventmessageinfo_;
   }
-  eventmessageinfo_ = nullptr;
+  _impl_.eventmessageinfo_ = nullptr;
 }
 BreakerEventProfile::BreakerEventProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:breakermodule.BreakerEventProfile)
 }
 BreakerEventProfile::BreakerEventProfile(const BreakerEventProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  BreakerEventProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventmessageinfo_){nullptr}
+    , decltype(_impl_.breaker_){nullptr}
+    , decltype(_impl_.breakerevent_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_eventmessageinfo()) {
-    eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from.eventmessageinfo_);
-  } else {
-    eventmessageinfo_ = nullptr;
+    _this->_impl_.eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from._impl_.eventmessageinfo_);
   }
   if (from._internal_has_breaker()) {
-    breaker_ = new ::breakermodule::Breaker(*from.breaker_);
-  } else {
-    breaker_ = nullptr;
+    _this->_impl_.breaker_ = new ::breakermodule::Breaker(*from._impl_.breaker_);
   }
   if (from._internal_has_breakerevent()) {
-    breakerevent_ = new ::breakermodule::BreakerEvent(*from.breakerevent_);
-  } else {
-    breakerevent_ = nullptr;
+    _this->_impl_.breakerevent_ = new ::breakermodule::BreakerEvent(*from._impl_.breakerevent_);
   }
   // @@protoc_insertion_point(copy_constructor:breakermodule.BreakerEventProfile)
 }
 
-void BreakerEventProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&eventmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&breakerevent_) -
-    reinterpret_cast<char*>(&eventmessageinfo_)) + sizeof(breakerevent_));
+inline void BreakerEventProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventmessageinfo_){nullptr}
+    , decltype(_impl_.breaker_){nullptr}
+    , decltype(_impl_.breakerevent_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 BreakerEventProfile::~BreakerEventProfile() {
   // @@protoc_insertion_point(destructor:breakermodule.BreakerEventProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void BreakerEventProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete eventmessageinfo_;
-  if (this != internal_default_instance()) delete breaker_;
-  if (this != internal_default_instance()) delete breakerevent_;
+inline void BreakerEventProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.eventmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.breaker_;
+  if (this != internal_default_instance()) delete _impl_.breakerevent_;
 }
 
-void BreakerEventProfile::ArenaDtor(void* object) {
-  BreakerEventProfile* _this = reinterpret_cast< BreakerEventProfile* >(object);
-  (void)_this;
-}
-void BreakerEventProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void BreakerEventProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void BreakerEventProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:breakermodule.BreakerEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
-    delete eventmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventmessageinfo_ != nullptr) {
+    delete _impl_.eventmessageinfo_;
   }
-  eventmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && breaker_ != nullptr) {
-    delete breaker_;
+  _impl_.eventmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.breaker_ != nullptr) {
+    delete _impl_.breaker_;
   }
-  breaker_ = nullptr;
-  if (GetArena() == nullptr && breakerevent_ != nullptr) {
-    delete breakerevent_;
+  _impl_.breaker_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.breakerevent_ != nullptr) {
+    delete _impl_.breakerevent_;
   }
-  breakerevent_ = nullptr;
+  _impl_.breakerevent_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* BreakerEventProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* BreakerEventProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_eventmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .breakermodule.Breaker breaker = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_breaker(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .breakermodule.BreakerEvent breakerEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_breakerevent(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* BreakerEventProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* BreakerEventProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:breakermodule.BreakerEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_eventmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::eventmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::eventmessageinfo(this),
+        _Internal::eventmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .breakermodule.Breaker breaker = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_breaker()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_breaker()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::breaker(this), target, stream);
+      InternalWriteMessage(2, _Internal::breaker(this),
+        _Internal::breaker(this).GetCachedSize(), target, stream);
   }
 
   // .breakermodule.BreakerEvent breakerEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_breakerevent()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_breakerevent()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::breakerevent(this), target, stream);
+      InternalWriteMessage(3, _Internal::breakerevent(this),
+        _Internal::breakerevent(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:breakermodule.BreakerEventProfile)
   return target;
 }
 
-size_t BreakerEventProfile::ByteSizeLong() const {
+::size_t BreakerEventProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:breakermodule.BreakerEventProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
+  if (this->_internal_has_eventmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *eventmessageinfo_);
+        *_impl_.eventmessageinfo_);
   }
 
   // .breakermodule.Breaker breaker = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_breaker()) {
+  if (this->_internal_has_breaker()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *breaker_);
+        *_impl_.breaker_);
   }
 
   // .breakermodule.BreakerEvent breakerEvent = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_breakerevent()) {
+  if (this->_internal_has_breakerevent()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *breakerevent_);
+        *_impl_.breakerevent_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void BreakerEventProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:breakermodule.BreakerEventProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const BreakerEventProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BreakerEventProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:breakermodule.BreakerEventProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:breakermodule.BreakerEventProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BreakerEventProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    BreakerEventProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BreakerEventProfile::GetClassData() const { return &_class_data_; }
 
-void BreakerEventProfile::MergeFrom(const BreakerEventProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.BreakerEventProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void BreakerEventProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<BreakerEventProfile*>(&to_msg);
+  auto& from = static_cast<const BreakerEventProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.BreakerEventProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_eventmessageinfo()) {
-    _internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(from._internal_eventmessageinfo());
+  if (from._internal_has_eventmessageinfo()) {
+    _this->_internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(
+        from._internal_eventmessageinfo());
   }
-  if (from.has_breaker()) {
-    _internal_mutable_breaker()->::breakermodule::Breaker::MergeFrom(from._internal_breaker());
+  if (from._internal_has_breaker()) {
+    _this->_internal_mutable_breaker()->::breakermodule::Breaker::MergeFrom(
+        from._internal_breaker());
   }
-  if (from.has_breakerevent()) {
-    _internal_mutable_breakerevent()->::breakermodule::BreakerEvent::MergeFrom(from._internal_breakerevent());
+  if (from._internal_has_breakerevent()) {
+    _this->_internal_mutable_breakerevent()->::breakermodule::BreakerEvent::MergeFrom(
+        from._internal_breakerevent());
   }
-}
-
-void BreakerEventProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:breakermodule.BreakerEventProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void BreakerEventProfile::CopyFrom(const BreakerEventProfile& from) {
@@ -1908,20 +1902,20 @@ bool BreakerEventProfile::IsInitialized() const {
 
 void BreakerEventProfile::InternalSwap(BreakerEventProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(BreakerEventProfile, breakerevent_)
-      + sizeof(BreakerEventProfile::breakerevent_)
-      - PROTOBUF_FIELD_OFFSET(BreakerEventProfile, eventmessageinfo_)>(
-          reinterpret_cast<char*>(&eventmessageinfo_),
-          reinterpret_cast<char*>(&other->eventmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(BreakerEventProfile, _impl_.breakerevent_)
+      + sizeof(BreakerEventProfile::_impl_.breakerevent_)
+      - PROTOBUF_FIELD_OFFSET(BreakerEventProfile, _impl_.eventmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.eventmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.eventmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata BreakerEventProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_breakermodule_2fbreakermodule_2eproto_getter, &descriptor_table_breakermodule_2fbreakermodule_2eproto_once,
+      file_level_metadata_breakermodule_2fbreakermodule_2eproto[5]);
 }
-
-
 // ===================================================================
 
 class BreakerReading::_Internal {
@@ -1935,366 +1929,357 @@ class BreakerReading::_Internal {
 
 const ::commonmodule::ConductingEquipmentTerminalReading&
 BreakerReading::_Internal::conductingequipmentterminalreading(const BreakerReading* msg) {
-  return *msg->conductingequipmentterminalreading_;
+  return *msg->_impl_.conductingequipmentterminalreading_;
 }
 const ::commonmodule::ReadingMMXU&
 BreakerReading::_Internal::diffreadingmmxu(const BreakerReading* msg) {
-  return *msg->diffreadingmmxu_;
+  return *msg->_impl_.diffreadingmmxu_;
 }
 const ::commonmodule::PhaseMMTN&
 BreakerReading::_Internal::phasemmtn(const BreakerReading* msg) {
-  return *msg->phasemmtn_;
+  return *msg->_impl_.phasemmtn_;
 }
 const ::commonmodule::ReadingMMTR&
 BreakerReading::_Internal::readingmmtr(const BreakerReading* msg) {
-  return *msg->readingmmtr_;
+  return *msg->_impl_.readingmmtr_;
 }
 const ::commonmodule::ReadingMMXU&
 BreakerReading::_Internal::readingmmxu(const BreakerReading* msg) {
-  return *msg->readingmmxu_;
+  return *msg->_impl_.readingmmxu_;
 }
 void BreakerReading::clear_conductingequipmentterminalreading() {
-  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
-    delete conductingequipmentterminalreading_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipmentterminalreading_ != nullptr) {
+    delete _impl_.conductingequipmentterminalreading_;
   }
-  conductingequipmentterminalreading_ = nullptr;
+  _impl_.conductingequipmentterminalreading_ = nullptr;
 }
 void BreakerReading::clear_diffreadingmmxu() {
-  if (GetArena() == nullptr && diffreadingmmxu_ != nullptr) {
-    delete diffreadingmmxu_;
+  if (GetArenaForAllocation() == nullptr && _impl_.diffreadingmmxu_ != nullptr) {
+    delete _impl_.diffreadingmmxu_;
   }
-  diffreadingmmxu_ = nullptr;
+  _impl_.diffreadingmmxu_ = nullptr;
 }
 void BreakerReading::clear_phasemmtn() {
-  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
-    delete phasemmtn_;
+  if (GetArenaForAllocation() == nullptr && _impl_.phasemmtn_ != nullptr) {
+    delete _impl_.phasemmtn_;
   }
-  phasemmtn_ = nullptr;
+  _impl_.phasemmtn_ = nullptr;
 }
 void BreakerReading::clear_readingmmtr() {
-  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
-    delete readingmmtr_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmtr_ != nullptr) {
+    delete _impl_.readingmmtr_;
   }
-  readingmmtr_ = nullptr;
+  _impl_.readingmmtr_ = nullptr;
 }
 void BreakerReading::clear_readingmmxu() {
-  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
-    delete readingmmxu_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmxu_ != nullptr) {
+    delete _impl_.readingmmxu_;
   }
-  readingmmxu_ = nullptr;
+  _impl_.readingmmxu_ = nullptr;
 }
 BreakerReading::BreakerReading(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:breakermodule.BreakerReading)
 }
 BreakerReading::BreakerReading(const BreakerReading& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  BreakerReading* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipmentterminalreading_){nullptr}
+    , decltype(_impl_.diffreadingmmxu_){nullptr}
+    , decltype(_impl_.phasemmtn_){nullptr}
+    , decltype(_impl_.readingmmtr_){nullptr}
+    , decltype(_impl_.readingmmxu_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_conductingequipmentterminalreading()) {
-    conductingequipmentterminalreading_ = new ::commonmodule::ConductingEquipmentTerminalReading(*from.conductingequipmentterminalreading_);
-  } else {
-    conductingequipmentterminalreading_ = nullptr;
+    _this->_impl_.conductingequipmentterminalreading_ = new ::commonmodule::ConductingEquipmentTerminalReading(*from._impl_.conductingequipmentterminalreading_);
   }
   if (from._internal_has_diffreadingmmxu()) {
-    diffreadingmmxu_ = new ::commonmodule::ReadingMMXU(*from.diffreadingmmxu_);
-  } else {
-    diffreadingmmxu_ = nullptr;
+    _this->_impl_.diffreadingmmxu_ = new ::commonmodule::ReadingMMXU(*from._impl_.diffreadingmmxu_);
   }
   if (from._internal_has_phasemmtn()) {
-    phasemmtn_ = new ::commonmodule::PhaseMMTN(*from.phasemmtn_);
-  } else {
-    phasemmtn_ = nullptr;
+    _this->_impl_.phasemmtn_ = new ::commonmodule::PhaseMMTN(*from._impl_.phasemmtn_);
   }
   if (from._internal_has_readingmmtr()) {
-    readingmmtr_ = new ::commonmodule::ReadingMMTR(*from.readingmmtr_);
-  } else {
-    readingmmtr_ = nullptr;
+    _this->_impl_.readingmmtr_ = new ::commonmodule::ReadingMMTR(*from._impl_.readingmmtr_);
   }
   if (from._internal_has_readingmmxu()) {
-    readingmmxu_ = new ::commonmodule::ReadingMMXU(*from.readingmmxu_);
-  } else {
-    readingmmxu_ = nullptr;
+    _this->_impl_.readingmmxu_ = new ::commonmodule::ReadingMMXU(*from._impl_.readingmmxu_);
   }
   // @@protoc_insertion_point(copy_constructor:breakermodule.BreakerReading)
 }
 
-void BreakerReading::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&conductingequipmentterminalreading_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&readingmmxu_) -
-    reinterpret_cast<char*>(&conductingequipmentterminalreading_)) + sizeof(readingmmxu_));
+inline void BreakerReading::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipmentterminalreading_){nullptr}
+    , decltype(_impl_.diffreadingmmxu_){nullptr}
+    , decltype(_impl_.phasemmtn_){nullptr}
+    , decltype(_impl_.readingmmtr_){nullptr}
+    , decltype(_impl_.readingmmxu_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 BreakerReading::~BreakerReading() {
   // @@protoc_insertion_point(destructor:breakermodule.BreakerReading)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void BreakerReading::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete conductingequipmentterminalreading_;
-  if (this != internal_default_instance()) delete diffreadingmmxu_;
-  if (this != internal_default_instance()) delete phasemmtn_;
-  if (this != internal_default_instance()) delete readingmmtr_;
-  if (this != internal_default_instance()) delete readingmmxu_;
+inline void BreakerReading::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.conductingequipmentterminalreading_;
+  if (this != internal_default_instance()) delete _impl_.diffreadingmmxu_;
+  if (this != internal_default_instance()) delete _impl_.phasemmtn_;
+  if (this != internal_default_instance()) delete _impl_.readingmmtr_;
+  if (this != internal_default_instance()) delete _impl_.readingmmxu_;
 }
 
-void BreakerReading::ArenaDtor(void* object) {
-  BreakerReading* _this = reinterpret_cast< BreakerReading* >(object);
-  (void)_this;
-}
-void BreakerReading::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void BreakerReading::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void BreakerReading::Clear() {
 // @@protoc_insertion_point(message_clear_start:breakermodule.BreakerReading)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
-    delete conductingequipmentterminalreading_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipmentterminalreading_ != nullptr) {
+    delete _impl_.conductingequipmentterminalreading_;
   }
-  conductingequipmentterminalreading_ = nullptr;
-  if (GetArena() == nullptr && diffreadingmmxu_ != nullptr) {
-    delete diffreadingmmxu_;
+  _impl_.conductingequipmentterminalreading_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.diffreadingmmxu_ != nullptr) {
+    delete _impl_.diffreadingmmxu_;
   }
-  diffreadingmmxu_ = nullptr;
-  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
-    delete phasemmtn_;
+  _impl_.diffreadingmmxu_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.phasemmtn_ != nullptr) {
+    delete _impl_.phasemmtn_;
   }
-  phasemmtn_ = nullptr;
-  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
-    delete readingmmtr_;
+  _impl_.phasemmtn_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmtr_ != nullptr) {
+    delete _impl_.readingmmtr_;
   }
-  readingmmtr_ = nullptr;
-  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
-    delete readingmmxu_;
+  _impl_.readingmmtr_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmxu_ != nullptr) {
+    delete _impl_.readingmmxu_;
   }
-  readingmmxu_ = nullptr;
+  _impl_.readingmmxu_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* BreakerReading::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* BreakerReading::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_conductingequipmentterminalreading(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ReadingMMXU diffReadingMMXU = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_diffreadingmmxu(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseMMTN phaseMMTN = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_phasemmtn(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ReadingMMTR readingMMTR = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_readingmmtr(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ReadingMMXU readingMMXU = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_readingmmxu(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* BreakerReading::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* BreakerReading::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:breakermodule.BreakerReading)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipmentterminalreading()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_conductingequipmentterminalreading()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::conductingequipmentterminalreading(this), target, stream);
+      InternalWriteMessage(1, _Internal::conductingequipmentterminalreading(this),
+        _Internal::conductingequipmentterminalreading(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ReadingMMXU diffReadingMMXU = 2;
-  if (this->has_diffreadingmmxu()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_diffreadingmmxu()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::diffreadingmmxu(this), target, stream);
+      InternalWriteMessage(2, _Internal::diffreadingmmxu(this),
+        _Internal::diffreadingmmxu(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 3;
-  if (this->has_phasemmtn()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_phasemmtn()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::phasemmtn(this), target, stream);
+      InternalWriteMessage(3, _Internal::phasemmtn(this),
+        _Internal::phasemmtn(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 4;
-  if (this->has_readingmmtr()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_readingmmtr()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::readingmmtr(this), target, stream);
+      InternalWriteMessage(4, _Internal::readingmmtr(this),
+        _Internal::readingmmtr(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 5;
-  if (this->has_readingmmxu()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_readingmmxu()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::readingmmxu(this), target, stream);
+      InternalWriteMessage(5, _Internal::readingmmxu(this),
+        _Internal::readingmmxu(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:breakermodule.BreakerReading)
   return target;
 }
 
-size_t BreakerReading::ByteSizeLong() const {
+::size_t BreakerReading::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:breakermodule.BreakerReading)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipmentterminalreading()) {
+  if (this->_internal_has_conductingequipmentterminalreading()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *conductingequipmentterminalreading_);
+        *_impl_.conductingequipmentterminalreading_);
   }
 
   // .commonmodule.ReadingMMXU diffReadingMMXU = 2;
-  if (this->has_diffreadingmmxu()) {
+  if (this->_internal_has_diffreadingmmxu()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *diffreadingmmxu_);
+        *_impl_.diffreadingmmxu_);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 3;
-  if (this->has_phasemmtn()) {
+  if (this->_internal_has_phasemmtn()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *phasemmtn_);
+        *_impl_.phasemmtn_);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 4;
-  if (this->has_readingmmtr()) {
+  if (this->_internal_has_readingmmtr()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmmtr_);
+        *_impl_.readingmmtr_);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 5;
-  if (this->has_readingmmxu()) {
+  if (this->_internal_has_readingmmxu()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmmxu_);
+        *_impl_.readingmmxu_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void BreakerReading::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:breakermodule.BreakerReading)
-  GOOGLE_DCHECK_NE(&from, this);
-  const BreakerReading* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BreakerReading>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:breakermodule.BreakerReading)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:breakermodule.BreakerReading)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BreakerReading::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    BreakerReading::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BreakerReading::GetClassData() const { return &_class_data_; }
 
-void BreakerReading::MergeFrom(const BreakerReading& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.BreakerReading)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void BreakerReading::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<BreakerReading*>(&to_msg);
+  auto& from = static_cast<const BreakerReading&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.BreakerReading)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_conductingequipmentterminalreading()) {
-    _internal_mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(from._internal_conductingequipmentterminalreading());
+  if (from._internal_has_conductingequipmentterminalreading()) {
+    _this->_internal_mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(
+        from._internal_conductingequipmentterminalreading());
   }
-  if (from.has_diffreadingmmxu()) {
-    _internal_mutable_diffreadingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from._internal_diffreadingmmxu());
+  if (from._internal_has_diffreadingmmxu()) {
+    _this->_internal_mutable_diffreadingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(
+        from._internal_diffreadingmmxu());
   }
-  if (from.has_phasemmtn()) {
-    _internal_mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(from._internal_phasemmtn());
+  if (from._internal_has_phasemmtn()) {
+    _this->_internal_mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(
+        from._internal_phasemmtn());
   }
-  if (from.has_readingmmtr()) {
-    _internal_mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(from._internal_readingmmtr());
+  if (from._internal_has_readingmmtr()) {
+    _this->_internal_mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(
+        from._internal_readingmmtr());
   }
-  if (from.has_readingmmxu()) {
-    _internal_mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from._internal_readingmmxu());
+  if (from._internal_has_readingmmxu()) {
+    _this->_internal_mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(
+        from._internal_readingmmxu());
   }
-}
-
-void BreakerReading::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:breakermodule.BreakerReading)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void BreakerReading::CopyFrom(const BreakerReading& from) {
@@ -2310,20 +2295,20 @@ bool BreakerReading::IsInitialized() const {
 
 void BreakerReading::InternalSwap(BreakerReading* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(BreakerReading, readingmmxu_)
-      + sizeof(BreakerReading::readingmmxu_)
-      - PROTOBUF_FIELD_OFFSET(BreakerReading, conductingequipmentterminalreading_)>(
-          reinterpret_cast<char*>(&conductingequipmentterminalreading_),
-          reinterpret_cast<char*>(&other->conductingequipmentterminalreading_));
+      PROTOBUF_FIELD_OFFSET(BreakerReading, _impl_.readingmmxu_)
+      + sizeof(BreakerReading::_impl_.readingmmxu_)
+      - PROTOBUF_FIELD_OFFSET(BreakerReading, _impl_.conductingequipmentterminalreading_)>(
+          reinterpret_cast<char*>(&_impl_.conductingequipmentterminalreading_),
+          reinterpret_cast<char*>(&other->_impl_.conductingequipmentterminalreading_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata BreakerReading::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_breakermodule_2fbreakermodule_2eproto_getter, &descriptor_table_breakermodule_2fbreakermodule_2eproto_once,
+      file_level_metadata_breakermodule_2fbreakermodule_2eproto[6]);
 }
-
-
 // ===================================================================
 
 class BreakerReadingProfile::_Internal {
@@ -2334,113 +2319,117 @@ class BreakerReadingProfile::_Internal {
 
 const ::commonmodule::ReadingMessageInfo&
 BreakerReadingProfile::_Internal::readingmessageinfo(const BreakerReadingProfile* msg) {
-  return *msg->readingmessageinfo_;
+  return *msg->_impl_.readingmessageinfo_;
 }
 const ::breakermodule::Breaker&
 BreakerReadingProfile::_Internal::breaker(const BreakerReadingProfile* msg) {
-  return *msg->breaker_;
+  return *msg->_impl_.breaker_;
 }
 void BreakerReadingProfile::clear_readingmessageinfo() {
-  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
-    delete readingmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmessageinfo_ != nullptr) {
+    delete _impl_.readingmessageinfo_;
   }
-  readingmessageinfo_ = nullptr;
+  _impl_.readingmessageinfo_ = nullptr;
 }
 BreakerReadingProfile::BreakerReadingProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  breakerreading_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:breakermodule.BreakerReadingProfile)
 }
 BreakerReadingProfile::BreakerReadingProfile(const BreakerReadingProfile& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      breakerreading_(from.breakerreading_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  BreakerReadingProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.breakerreading_){from._impl_.breakerreading_}
+    , decltype(_impl_.readingmessageinfo_){nullptr}
+    , decltype(_impl_.breaker_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_readingmessageinfo()) {
-    readingmessageinfo_ = new ::commonmodule::ReadingMessageInfo(*from.readingmessageinfo_);
-  } else {
-    readingmessageinfo_ = nullptr;
+    _this->_impl_.readingmessageinfo_ = new ::commonmodule::ReadingMessageInfo(*from._impl_.readingmessageinfo_);
   }
   if (from._internal_has_breaker()) {
-    breaker_ = new ::breakermodule::Breaker(*from.breaker_);
-  } else {
-    breaker_ = nullptr;
+    _this->_impl_.breaker_ = new ::breakermodule::Breaker(*from._impl_.breaker_);
   }
   // @@protoc_insertion_point(copy_constructor:breakermodule.BreakerReadingProfile)
 }
 
-void BreakerReadingProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&readingmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&breaker_) -
-    reinterpret_cast<char*>(&readingmessageinfo_)) + sizeof(breaker_));
+inline void BreakerReadingProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.breakerreading_){arena}
+    , decltype(_impl_.readingmessageinfo_){nullptr}
+    , decltype(_impl_.breaker_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 BreakerReadingProfile::~BreakerReadingProfile() {
   // @@protoc_insertion_point(destructor:breakermodule.BreakerReadingProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void BreakerReadingProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete readingmessageinfo_;
-  if (this != internal_default_instance()) delete breaker_;
+inline void BreakerReadingProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.breakerreading_.~RepeatedPtrField();
+  if (this != internal_default_instance()) delete _impl_.readingmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.breaker_;
 }
 
-void BreakerReadingProfile::ArenaDtor(void* object) {
-  BreakerReadingProfile* _this = reinterpret_cast< BreakerReadingProfile* >(object);
-  (void)_this;
-}
-void BreakerReadingProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void BreakerReadingProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void BreakerReadingProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:breakermodule.BreakerReadingProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  breakerreading_.Clear();
-  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
-    delete readingmessageinfo_;
+  _impl_.breakerreading_.Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmessageinfo_ != nullptr) {
+    delete _impl_.readingmessageinfo_;
   }
-  readingmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && breaker_ != nullptr) {
-    delete breaker_;
+  _impl_.readingmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.breaker_ != nullptr) {
+    delete _impl_.breaker_;
   }
-  breaker_ = nullptr;
+  _impl_.breaker_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* BreakerReadingProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* BreakerReadingProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_readingmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .breakermodule.Breaker breaker = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_breaker(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // repeated .breakermodule.BreakerReading breakerReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1, (.uml.option_multiplicity_max) = 2];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -2448,142 +2437,126 @@ const char* BreakerReadingProfile::_InternalParse(const char* ptr, ::PROTOBUF_NA
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* BreakerReadingProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* BreakerReadingProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:breakermodule.BreakerReadingProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_readingmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_readingmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::readingmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::readingmessageinfo(this),
+        _Internal::readingmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .breakermodule.Breaker breaker = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_breaker()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_breaker()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::breaker(this), target, stream);
+      InternalWriteMessage(2, _Internal::breaker(this),
+        _Internal::breaker(this).GetCachedSize(), target, stream);
   }
 
   // repeated .breakermodule.BreakerReading breakerReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1, (.uml.option_multiplicity_max) = 2];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_breakerreading_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_breakerreading_size()); i < n; i++) {
+    const auto& repfield = this->_internal_breakerreading(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(3, this->_internal_breakerreading(i), target, stream);
+        InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:breakermodule.BreakerReadingProfile)
   return target;
 }
 
-size_t BreakerReadingProfile::ByteSizeLong() const {
+::size_t BreakerReadingProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:breakermodule.BreakerReadingProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .breakermodule.BreakerReading breakerReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1, (.uml.option_multiplicity_max) = 2];
   total_size += 1UL * this->_internal_breakerreading_size();
-  for (const auto& msg : this->breakerreading_) {
+  for (const auto& msg : this->_impl_.breakerreading_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_readingmessageinfo()) {
+  if (this->_internal_has_readingmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmessageinfo_);
+        *_impl_.readingmessageinfo_);
   }
 
   // .breakermodule.Breaker breaker = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_breaker()) {
+  if (this->_internal_has_breaker()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *breaker_);
+        *_impl_.breaker_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void BreakerReadingProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:breakermodule.BreakerReadingProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const BreakerReadingProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BreakerReadingProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:breakermodule.BreakerReadingProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:breakermodule.BreakerReadingProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BreakerReadingProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    BreakerReadingProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BreakerReadingProfile::GetClassData() const { return &_class_data_; }
 
-void BreakerReadingProfile::MergeFrom(const BreakerReadingProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.BreakerReadingProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void BreakerReadingProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<BreakerReadingProfile*>(&to_msg);
+  auto& from = static_cast<const BreakerReadingProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.BreakerReadingProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  breakerreading_.MergeFrom(from.breakerreading_);
-  if (from.has_readingmessageinfo()) {
-    _internal_mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(from._internal_readingmessageinfo());
+  _this->_impl_.breakerreading_.MergeFrom(from._impl_.breakerreading_);
+  if (from._internal_has_readingmessageinfo()) {
+    _this->_internal_mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(
+        from._internal_readingmessageinfo());
   }
-  if (from.has_breaker()) {
-    _internal_mutable_breaker()->::breakermodule::Breaker::MergeFrom(from._internal_breaker());
+  if (from._internal_has_breaker()) {
+    _this->_internal_mutable_breaker()->::breakermodule::Breaker::MergeFrom(
+        from._internal_breaker());
   }
-}
-
-void BreakerReadingProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:breakermodule.BreakerReadingProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void BreakerReadingProfile::CopyFrom(const BreakerReadingProfile& from) {
@@ -2599,21 +2572,21 @@ bool BreakerReadingProfile::IsInitialized() const {
 
 void BreakerReadingProfile::InternalSwap(BreakerReadingProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  breakerreading_.InternalSwap(&other->breakerreading_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.breakerreading_.InternalSwap(&other->_impl_.breakerreading_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(BreakerReadingProfile, breaker_)
-      + sizeof(BreakerReadingProfile::breaker_)
-      - PROTOBUF_FIELD_OFFSET(BreakerReadingProfile, readingmessageinfo_)>(
-          reinterpret_cast<char*>(&readingmessageinfo_),
-          reinterpret_cast<char*>(&other->readingmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(BreakerReadingProfile, _impl_.breaker_)
+      + sizeof(BreakerReadingProfile::_impl_.breaker_)
+      - PROTOBUF_FIELD_OFFSET(BreakerReadingProfile, _impl_.readingmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.readingmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.readingmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata BreakerReadingProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_breakermodule_2fbreakermodule_2eproto_getter, &descriptor_table_breakermodule_2fbreakermodule_2eproto_once,
+      file_level_metadata_breakermodule_2fbreakermodule_2eproto[7]);
 }
-
-
 // ===================================================================
 
 class BreakerStatus::_Internal {
@@ -2624,231 +2597,216 @@ class BreakerStatus::_Internal {
 
 const ::commonmodule::StatusValue&
 BreakerStatus::_Internal::statusvalue(const BreakerStatus* msg) {
-  return *msg->statusvalue_;
+  return *msg->_impl_.statusvalue_;
 }
 const ::commonmodule::StatusAndEventXCBR&
 BreakerStatus::_Internal::statusandeventxcbr(const BreakerStatus* msg) {
-  return *msg->statusandeventxcbr_;
+  return *msg->_impl_.statusandeventxcbr_;
 }
 void BreakerStatus::clear_statusvalue() {
-  if (GetArena() == nullptr && statusvalue_ != nullptr) {
-    delete statusvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusvalue_ != nullptr) {
+    delete _impl_.statusvalue_;
   }
-  statusvalue_ = nullptr;
+  _impl_.statusvalue_ = nullptr;
 }
 void BreakerStatus::clear_statusandeventxcbr() {
-  if (GetArena() == nullptr && statusandeventxcbr_ != nullptr) {
-    delete statusandeventxcbr_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusandeventxcbr_ != nullptr) {
+    delete _impl_.statusandeventxcbr_;
   }
-  statusandeventxcbr_ = nullptr;
+  _impl_.statusandeventxcbr_ = nullptr;
 }
 BreakerStatus::BreakerStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:breakermodule.BreakerStatus)
 }
 BreakerStatus::BreakerStatus(const BreakerStatus& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  BreakerStatus* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusvalue_){nullptr}
+    , decltype(_impl_.statusandeventxcbr_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_statusvalue()) {
-    statusvalue_ = new ::commonmodule::StatusValue(*from.statusvalue_);
-  } else {
-    statusvalue_ = nullptr;
+    _this->_impl_.statusvalue_ = new ::commonmodule::StatusValue(*from._impl_.statusvalue_);
   }
   if (from._internal_has_statusandeventxcbr()) {
-    statusandeventxcbr_ = new ::commonmodule::StatusAndEventXCBR(*from.statusandeventxcbr_);
-  } else {
-    statusandeventxcbr_ = nullptr;
+    _this->_impl_.statusandeventxcbr_ = new ::commonmodule::StatusAndEventXCBR(*from._impl_.statusandeventxcbr_);
   }
   // @@protoc_insertion_point(copy_constructor:breakermodule.BreakerStatus)
 }
 
-void BreakerStatus::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&statusvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&statusandeventxcbr_) -
-    reinterpret_cast<char*>(&statusvalue_)) + sizeof(statusandeventxcbr_));
+inline void BreakerStatus::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusvalue_){nullptr}
+    , decltype(_impl_.statusandeventxcbr_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 BreakerStatus::~BreakerStatus() {
   // @@protoc_insertion_point(destructor:breakermodule.BreakerStatus)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void BreakerStatus::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete statusvalue_;
-  if (this != internal_default_instance()) delete statusandeventxcbr_;
+inline void BreakerStatus::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.statusvalue_;
+  if (this != internal_default_instance()) delete _impl_.statusandeventxcbr_;
 }
 
-void BreakerStatus::ArenaDtor(void* object) {
-  BreakerStatus* _this = reinterpret_cast< BreakerStatus* >(object);
-  (void)_this;
-}
-void BreakerStatus::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void BreakerStatus::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void BreakerStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:breakermodule.BreakerStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && statusvalue_ != nullptr) {
-    delete statusvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusvalue_ != nullptr) {
+    delete _impl_.statusvalue_;
   }
-  statusvalue_ = nullptr;
-  if (GetArena() == nullptr && statusandeventxcbr_ != nullptr) {
-    delete statusandeventxcbr_;
+  _impl_.statusvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusandeventxcbr_ != nullptr) {
+    delete _impl_.statusandeventxcbr_;
   }
-  statusandeventxcbr_ = nullptr;
+  _impl_.statusandeventxcbr_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* BreakerStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* BreakerStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_statusvalue(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusAndEventXCBR statusAndEventXCBR = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_statusandeventxcbr(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* BreakerStatus::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* BreakerStatus::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:breakermodule.BreakerStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusvalue()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_statusvalue()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::statusvalue(this), target, stream);
+      InternalWriteMessage(1, _Internal::statusvalue(this),
+        _Internal::statusvalue(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusAndEventXCBR statusAndEventXCBR = 2;
-  if (this->has_statusandeventxcbr()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_statusandeventxcbr()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::statusandeventxcbr(this), target, stream);
+      InternalWriteMessage(2, _Internal::statusandeventxcbr(this),
+        _Internal::statusandeventxcbr(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:breakermodule.BreakerStatus)
   return target;
 }
 
-size_t BreakerStatus::ByteSizeLong() const {
+::size_t BreakerStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:breakermodule.BreakerStatus)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusvalue()) {
+  if (this->_internal_has_statusvalue()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *statusvalue_);
+        *_impl_.statusvalue_);
   }
 
   // .commonmodule.StatusAndEventXCBR statusAndEventXCBR = 2;
-  if (this->has_statusandeventxcbr()) {
+  if (this->_internal_has_statusandeventxcbr()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *statusandeventxcbr_);
+        *_impl_.statusandeventxcbr_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void BreakerStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:breakermodule.BreakerStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  const BreakerStatus* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BreakerStatus>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:breakermodule.BreakerStatus)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:breakermodule.BreakerStatus)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BreakerStatus::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    BreakerStatus::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BreakerStatus::GetClassData() const { return &_class_data_; }
 
-void BreakerStatus::MergeFrom(const BreakerStatus& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.BreakerStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void BreakerStatus::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<BreakerStatus*>(&to_msg);
+  auto& from = static_cast<const BreakerStatus&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.BreakerStatus)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_statusvalue()) {
-    _internal_mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(from._internal_statusvalue());
+  if (from._internal_has_statusvalue()) {
+    _this->_internal_mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(
+        from._internal_statusvalue());
   }
-  if (from.has_statusandeventxcbr()) {
-    _internal_mutable_statusandeventxcbr()->::commonmodule::StatusAndEventXCBR::MergeFrom(from._internal_statusandeventxcbr());
+  if (from._internal_has_statusandeventxcbr()) {
+    _this->_internal_mutable_statusandeventxcbr()->::commonmodule::StatusAndEventXCBR::MergeFrom(
+        from._internal_statusandeventxcbr());
   }
-}
-
-void BreakerStatus::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:breakermodule.BreakerStatus)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void BreakerStatus::CopyFrom(const BreakerStatus& from) {
@@ -2864,20 +2822,20 @@ bool BreakerStatus::IsInitialized() const {
 
 void BreakerStatus::InternalSwap(BreakerStatus* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(BreakerStatus, statusandeventxcbr_)
-      + sizeof(BreakerStatus::statusandeventxcbr_)
-      - PROTOBUF_FIELD_OFFSET(BreakerStatus, statusvalue_)>(
-          reinterpret_cast<char*>(&statusvalue_),
-          reinterpret_cast<char*>(&other->statusvalue_));
+      PROTOBUF_FIELD_OFFSET(BreakerStatus, _impl_.statusandeventxcbr_)
+      + sizeof(BreakerStatus::_impl_.statusandeventxcbr_)
+      - PROTOBUF_FIELD_OFFSET(BreakerStatus, _impl_.statusvalue_)>(
+          reinterpret_cast<char*>(&_impl_.statusvalue_),
+          reinterpret_cast<char*>(&other->_impl_.statusvalue_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata BreakerStatus::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_breakermodule_2fbreakermodule_2eproto_getter, &descriptor_table_breakermodule_2fbreakermodule_2eproto_once,
+      file_level_metadata_breakermodule_2fbreakermodule_2eproto[8]);
 }
-
-
 // ===================================================================
 
 class BreakerStatusProfile::_Internal {
@@ -2889,264 +2847,251 @@ class BreakerStatusProfile::_Internal {
 
 const ::commonmodule::StatusMessageInfo&
 BreakerStatusProfile::_Internal::statusmessageinfo(const BreakerStatusProfile* msg) {
-  return *msg->statusmessageinfo_;
+  return *msg->_impl_.statusmessageinfo_;
 }
 const ::breakermodule::Breaker&
 BreakerStatusProfile::_Internal::breaker(const BreakerStatusProfile* msg) {
-  return *msg->breaker_;
+  return *msg->_impl_.breaker_;
 }
 const ::breakermodule::BreakerStatus&
 BreakerStatusProfile::_Internal::breakerstatus(const BreakerStatusProfile* msg) {
-  return *msg->breakerstatus_;
+  return *msg->_impl_.breakerstatus_;
 }
 void BreakerStatusProfile::clear_statusmessageinfo() {
-  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
-    delete statusmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusmessageinfo_ != nullptr) {
+    delete _impl_.statusmessageinfo_;
   }
-  statusmessageinfo_ = nullptr;
+  _impl_.statusmessageinfo_ = nullptr;
 }
 BreakerStatusProfile::BreakerStatusProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:breakermodule.BreakerStatusProfile)
 }
 BreakerStatusProfile::BreakerStatusProfile(const BreakerStatusProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  BreakerStatusProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusmessageinfo_){nullptr}
+    , decltype(_impl_.breaker_){nullptr}
+    , decltype(_impl_.breakerstatus_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_statusmessageinfo()) {
-    statusmessageinfo_ = new ::commonmodule::StatusMessageInfo(*from.statusmessageinfo_);
-  } else {
-    statusmessageinfo_ = nullptr;
+    _this->_impl_.statusmessageinfo_ = new ::commonmodule::StatusMessageInfo(*from._impl_.statusmessageinfo_);
   }
   if (from._internal_has_breaker()) {
-    breaker_ = new ::breakermodule::Breaker(*from.breaker_);
-  } else {
-    breaker_ = nullptr;
+    _this->_impl_.breaker_ = new ::breakermodule::Breaker(*from._impl_.breaker_);
   }
   if (from._internal_has_breakerstatus()) {
-    breakerstatus_ = new ::breakermodule::BreakerStatus(*from.breakerstatus_);
-  } else {
-    breakerstatus_ = nullptr;
+    _this->_impl_.breakerstatus_ = new ::breakermodule::BreakerStatus(*from._impl_.breakerstatus_);
   }
   // @@protoc_insertion_point(copy_constructor:breakermodule.BreakerStatusProfile)
 }
 
-void BreakerStatusProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&statusmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&breakerstatus_) -
-    reinterpret_cast<char*>(&statusmessageinfo_)) + sizeof(breakerstatus_));
+inline void BreakerStatusProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusmessageinfo_){nullptr}
+    , decltype(_impl_.breaker_){nullptr}
+    , decltype(_impl_.breakerstatus_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 BreakerStatusProfile::~BreakerStatusProfile() {
   // @@protoc_insertion_point(destructor:breakermodule.BreakerStatusProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void BreakerStatusProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete statusmessageinfo_;
-  if (this != internal_default_instance()) delete breaker_;
-  if (this != internal_default_instance()) delete breakerstatus_;
+inline void BreakerStatusProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.statusmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.breaker_;
+  if (this != internal_default_instance()) delete _impl_.breakerstatus_;
 }
 
-void BreakerStatusProfile::ArenaDtor(void* object) {
-  BreakerStatusProfile* _this = reinterpret_cast< BreakerStatusProfile* >(object);
-  (void)_this;
-}
-void BreakerStatusProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void BreakerStatusProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void BreakerStatusProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:breakermodule.BreakerStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
-    delete statusmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusmessageinfo_ != nullptr) {
+    delete _impl_.statusmessageinfo_;
   }
-  statusmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && breaker_ != nullptr) {
-    delete breaker_;
+  _impl_.statusmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.breaker_ != nullptr) {
+    delete _impl_.breaker_;
   }
-  breaker_ = nullptr;
-  if (GetArena() == nullptr && breakerstatus_ != nullptr) {
-    delete breakerstatus_;
+  _impl_.breaker_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.breakerstatus_ != nullptr) {
+    delete _impl_.breakerstatus_;
   }
-  breakerstatus_ = nullptr;
+  _impl_.breakerstatus_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* BreakerStatusProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* BreakerStatusProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_statusmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .breakermodule.Breaker breaker = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_breaker(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .breakermodule.BreakerStatus breakerStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_breakerstatus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* BreakerStatusProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* BreakerStatusProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:breakermodule.BreakerStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_statusmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::statusmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::statusmessageinfo(this),
+        _Internal::statusmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .breakermodule.Breaker breaker = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_breaker()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_breaker()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::breaker(this), target, stream);
+      InternalWriteMessage(2, _Internal::breaker(this),
+        _Internal::breaker(this).GetCachedSize(), target, stream);
   }
 
   // .breakermodule.BreakerStatus breakerStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_breakerstatus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_breakerstatus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::breakerstatus(this), target, stream);
+      InternalWriteMessage(3, _Internal::breakerstatus(this),
+        _Internal::breakerstatus(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:breakermodule.BreakerStatusProfile)
   return target;
 }
 
-size_t BreakerStatusProfile::ByteSizeLong() const {
+::size_t BreakerStatusProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:breakermodule.BreakerStatusProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusmessageinfo()) {
+  if (this->_internal_has_statusmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *statusmessageinfo_);
+        *_impl_.statusmessageinfo_);
   }
 
   // .breakermodule.Breaker breaker = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_breaker()) {
+  if (this->_internal_has_breaker()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *breaker_);
+        *_impl_.breaker_);
   }
 
   // .breakermodule.BreakerStatus breakerStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_breakerstatus()) {
+  if (this->_internal_has_breakerstatus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *breakerstatus_);
+        *_impl_.breakerstatus_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void BreakerStatusProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:breakermodule.BreakerStatusProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const BreakerStatusProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BreakerStatusProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:breakermodule.BreakerStatusProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:breakermodule.BreakerStatusProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BreakerStatusProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    BreakerStatusProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BreakerStatusProfile::GetClassData() const { return &_class_data_; }
 
-void BreakerStatusProfile::MergeFrom(const BreakerStatusProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.BreakerStatusProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void BreakerStatusProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<BreakerStatusProfile*>(&to_msg);
+  auto& from = static_cast<const BreakerStatusProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:breakermodule.BreakerStatusProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_statusmessageinfo()) {
-    _internal_mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(from._internal_statusmessageinfo());
+  if (from._internal_has_statusmessageinfo()) {
+    _this->_internal_mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(
+        from._internal_statusmessageinfo());
   }
-  if (from.has_breaker()) {
-    _internal_mutable_breaker()->::breakermodule::Breaker::MergeFrom(from._internal_breaker());
+  if (from._internal_has_breaker()) {
+    _this->_internal_mutable_breaker()->::breakermodule::Breaker::MergeFrom(
+        from._internal_breaker());
   }
-  if (from.has_breakerstatus()) {
-    _internal_mutable_breakerstatus()->::breakermodule::BreakerStatus::MergeFrom(from._internal_breakerstatus());
+  if (from._internal_has_breakerstatus()) {
+    _this->_internal_mutable_breakerstatus()->::breakermodule::BreakerStatus::MergeFrom(
+        from._internal_breakerstatus());
   }
-}
-
-void BreakerStatusProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:breakermodule.BreakerStatusProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void BreakerStatusProfile::CopyFrom(const BreakerStatusProfile& from) {
@@ -3162,54 +3107,63 @@ bool BreakerStatusProfile::IsInitialized() const {
 
 void BreakerStatusProfile::InternalSwap(BreakerStatusProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(BreakerStatusProfile, breakerstatus_)
-      + sizeof(BreakerStatusProfile::breakerstatus_)
-      - PROTOBUF_FIELD_OFFSET(BreakerStatusProfile, statusmessageinfo_)>(
-          reinterpret_cast<char*>(&statusmessageinfo_),
-          reinterpret_cast<char*>(&other->statusmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(BreakerStatusProfile, _impl_.breakerstatus_)
+      + sizeof(BreakerStatusProfile::_impl_.breakerstatus_)
+      - PROTOBUF_FIELD_OFFSET(BreakerStatusProfile, _impl_.statusmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.statusmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.statusmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata BreakerStatusProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_breakermodule_2fbreakermodule_2eproto_getter, &descriptor_table_breakermodule_2fbreakermodule_2eproto_once,
+      file_level_metadata_breakermodule_2fbreakermodule_2eproto[9]);
 }
-
-
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace breakermodule
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::breakermodule::BreakerDiscreteControlXCBR* Arena::CreateMaybeMessage< ::breakermodule::BreakerDiscreteControlXCBR >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::breakermodule::BreakerDiscreteControlXCBR*
+Arena::CreateMaybeMessage< ::breakermodule::BreakerDiscreteControlXCBR >(Arena* arena) {
   return Arena::CreateMessageInternal< ::breakermodule::BreakerDiscreteControlXCBR >(arena);
 }
-template<> PROTOBUF_NOINLINE ::breakermodule::BreakerDiscreteControl* Arena::CreateMaybeMessage< ::breakermodule::BreakerDiscreteControl >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::breakermodule::BreakerDiscreteControl*
+Arena::CreateMaybeMessage< ::breakermodule::BreakerDiscreteControl >(Arena* arena) {
   return Arena::CreateMessageInternal< ::breakermodule::BreakerDiscreteControl >(arena);
 }
-template<> PROTOBUF_NOINLINE ::breakermodule::Breaker* Arena::CreateMaybeMessage< ::breakermodule::Breaker >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::breakermodule::Breaker*
+Arena::CreateMaybeMessage< ::breakermodule::Breaker >(Arena* arena) {
   return Arena::CreateMessageInternal< ::breakermodule::Breaker >(arena);
 }
-template<> PROTOBUF_NOINLINE ::breakermodule::BreakerDiscreteControlProfile* Arena::CreateMaybeMessage< ::breakermodule::BreakerDiscreteControlProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::breakermodule::BreakerDiscreteControlProfile*
+Arena::CreateMaybeMessage< ::breakermodule::BreakerDiscreteControlProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::breakermodule::BreakerDiscreteControlProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::breakermodule::BreakerEvent* Arena::CreateMaybeMessage< ::breakermodule::BreakerEvent >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::breakermodule::BreakerEvent*
+Arena::CreateMaybeMessage< ::breakermodule::BreakerEvent >(Arena* arena) {
   return Arena::CreateMessageInternal< ::breakermodule::BreakerEvent >(arena);
 }
-template<> PROTOBUF_NOINLINE ::breakermodule::BreakerEventProfile* Arena::CreateMaybeMessage< ::breakermodule::BreakerEventProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::breakermodule::BreakerEventProfile*
+Arena::CreateMaybeMessage< ::breakermodule::BreakerEventProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::breakermodule::BreakerEventProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::breakermodule::BreakerReading* Arena::CreateMaybeMessage< ::breakermodule::BreakerReading >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::breakermodule::BreakerReading*
+Arena::CreateMaybeMessage< ::breakermodule::BreakerReading >(Arena* arena) {
   return Arena::CreateMessageInternal< ::breakermodule::BreakerReading >(arena);
 }
-template<> PROTOBUF_NOINLINE ::breakermodule::BreakerReadingProfile* Arena::CreateMaybeMessage< ::breakermodule::BreakerReadingProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::breakermodule::BreakerReadingProfile*
+Arena::CreateMaybeMessage< ::breakermodule::BreakerReadingProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::breakermodule::BreakerReadingProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::breakermodule::BreakerStatus* Arena::CreateMaybeMessage< ::breakermodule::BreakerStatus >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::breakermodule::BreakerStatus*
+Arena::CreateMaybeMessage< ::breakermodule::BreakerStatus >(Arena* arena) {
   return Arena::CreateMessageInternal< ::breakermodule::BreakerStatus >(arena);
 }
-template<> PROTOBUF_NOINLINE ::breakermodule::BreakerStatusProfile* Arena::CreateMaybeMessage< ::breakermodule::BreakerStatusProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::breakermodule::BreakerStatusProfile*
+Arena::CreateMaybeMessage< ::breakermodule::BreakerStatusProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::breakermodule::BreakerStatusProfile >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
-
 // @@protoc_insertion_point(global_scope)
-#include <google/protobuf/port_undef.inc>
+#include "google/protobuf/port_undef.inc"
