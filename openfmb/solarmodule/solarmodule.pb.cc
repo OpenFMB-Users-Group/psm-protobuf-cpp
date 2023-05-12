@@ -4,2211 +4,1079 @@
 #include "solarmodule/solarmodule.pb.h"
 
 #include <algorithm>
-
-#include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include "google/protobuf/io/coded_stream.h"
+#include "google/protobuf/extension_set.h"
+#include "google/protobuf/wire_format_lite.h"
+#include "google/protobuf/descriptor.h"
+#include "google/protobuf/generated_message_reflection.h"
+#include "google/protobuf/reflection_ops.h"
+#include "google/protobuf/wire_format.h"
 // @@protoc_insertion_point(includes)
-#include <google/protobuf/port_def.inc>
 
+// Must be included last.
+#include "google/protobuf/port_def.inc"
 PROTOBUF_PRAGMA_INIT_SEG
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = ::PROTOBUF_NAMESPACE_ID::internal;
 namespace solarmodule {
-constexpr SolarPoint::SolarPoint(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : frequencysetpointenabled_(nullptr)
-  , mode_(nullptr)
-  , pcthzdroop_(nullptr)
-  , pctvdroop_(nullptr)
-  , ramprates_(nullptr)
-  , reactivepwrsetpointenabled_(nullptr)
-  , realpwrsetpointenabled_(nullptr)
-  , reset_(nullptr)
-  , state_(nullptr)
-  , voltagesetpointenabled_(nullptr)
-  , starttime_(nullptr){}
-struct SolarPointDefaultTypeInternal {
-  constexpr SolarPointDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~SolarPointDefaultTypeInternal() {}
-  union {
-    SolarPoint _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarPointDefaultTypeInternal _SolarPoint_default_instance_;
-constexpr SolarCSG::SolarCSG(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : crvpts_(){}
-struct SolarCSGDefaultTypeInternal {
-  constexpr SolarCSGDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~SolarCSGDefaultTypeInternal() {}
-  union {
-    SolarCSG _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarCSGDefaultTypeInternal _SolarCSG_default_instance_;
-constexpr SolarControlScheduleFSCH::SolarControlScheduleFSCH(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : valdcsg_(nullptr){}
-struct SolarControlScheduleFSCHDefaultTypeInternal {
-  constexpr SolarControlScheduleFSCHDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~SolarControlScheduleFSCHDefaultTypeInternal() {}
-  union {
-    SolarControlScheduleFSCH _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarControlScheduleFSCHDefaultTypeInternal _SolarControlScheduleFSCH_default_instance_;
-constexpr SolarControlFSCC::SolarControlFSCC(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlfscc_(nullptr)
-  , solarcontrolschedulefsch_(nullptr){}
-struct SolarControlFSCCDefaultTypeInternal {
-  constexpr SolarControlFSCCDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~SolarControlFSCCDefaultTypeInternal() {}
-  union {
-    SolarControlFSCC _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarControlFSCCDefaultTypeInternal _SolarControlFSCC_default_instance_;
-constexpr SolarControl::SolarControl(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlvalue_(nullptr)
-  , check_(nullptr)
-  , solarcontrolfscc_(nullptr){}
-struct SolarControlDefaultTypeInternal {
-  constexpr SolarControlDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~SolarControlDefaultTypeInternal() {}
-  union {
-    SolarControl _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarControlDefaultTypeInternal _SolarControl_default_instance_;
-constexpr SolarInverter::SolarInverter(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : conductingequipment_(nullptr){}
+PROTOBUF_CONSTEXPR SolarInverter::SolarInverter(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.conductingequipment_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SolarInverterDefaultTypeInternal {
-  constexpr SolarInverterDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SolarInverterDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~SolarInverterDefaultTypeInternal() {}
   union {
     SolarInverter _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarInverterDefaultTypeInternal _SolarInverter_default_instance_;
-constexpr SolarControlProfile::SolarControlProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlmessageinfo_(nullptr)
-  , solarcontrol_(nullptr)
-  , solarinverter_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarInverterDefaultTypeInternal _SolarInverter_default_instance_;
+PROTOBUF_CONSTEXPR SolarCapabilityConfiguration::SolarCapabilityConfiguration(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.sourcecapabilityconfiguration_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SolarCapabilityConfigurationDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SolarCapabilityConfigurationDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SolarCapabilityConfigurationDefaultTypeInternal() {}
+  union {
+    SolarCapabilityConfiguration _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarCapabilityConfigurationDefaultTypeInternal _SolarCapabilityConfiguration_default_instance_;
+PROTOBUF_CONSTEXPR SolarCapabilityOverride::SolarCapabilityOverride(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.identifiedobject_)*/nullptr
+  , /*decltype(_impl_.solarcapabilityconfiguration_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SolarCapabilityOverrideDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SolarCapabilityOverrideDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SolarCapabilityOverrideDefaultTypeInternal() {}
+  union {
+    SolarCapabilityOverride _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarCapabilityOverrideDefaultTypeInternal _SolarCapabilityOverride_default_instance_;
+PROTOBUF_CONSTEXPR SolarCapabilityOverrideProfile::SolarCapabilityOverrideProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.capabilitymessageinfo_)*/nullptr
+  , /*decltype(_impl_.solarcapabilityoverride_)*/nullptr
+  , /*decltype(_impl_.solarinverter_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SolarCapabilityOverrideProfileDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SolarCapabilityOverrideProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SolarCapabilityOverrideProfileDefaultTypeInternal() {}
+  union {
+    SolarCapabilityOverrideProfile _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarCapabilityOverrideProfileDefaultTypeInternal _SolarCapabilityOverrideProfile_default_instance_;
+PROTOBUF_CONSTEXPR SolarCapabilityRatings::SolarCapabilityRatings(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.sourcecapabilityratings_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SolarCapabilityRatingsDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SolarCapabilityRatingsDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SolarCapabilityRatingsDefaultTypeInternal() {}
+  union {
+    SolarCapabilityRatings _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarCapabilityRatingsDefaultTypeInternal _SolarCapabilityRatings_default_instance_;
+PROTOBUF_CONSTEXPR SolarCapability::SolarCapability(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.nameplatevalue_)*/nullptr
+  , /*decltype(_impl_.solarcapabilityconfiguration_)*/nullptr
+  , /*decltype(_impl_.solarcapabilityratings_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SolarCapabilityDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SolarCapabilityDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SolarCapabilityDefaultTypeInternal() {}
+  union {
+    SolarCapability _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarCapabilityDefaultTypeInternal _SolarCapability_default_instance_;
+PROTOBUF_CONSTEXPR SolarCapabilityProfile::SolarCapabilityProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.capabilitymessageinfo_)*/nullptr
+  , /*decltype(_impl_.solarcapability_)*/nullptr
+  , /*decltype(_impl_.solarinverter_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SolarCapabilityProfileDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SolarCapabilityProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SolarCapabilityProfileDefaultTypeInternal() {}
+  union {
+    SolarCapabilityProfile _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarCapabilityProfileDefaultTypeInternal _SolarCapabilityProfile_default_instance_;
+PROTOBUF_CONSTEXPR SolarPoint::SolarPoint(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.mode_)*/nullptr
+  , /*decltype(_impl_.ramprates_)*/nullptr
+  , /*decltype(_impl_.reset_)*/nullptr
+  , /*decltype(_impl_.state_)*/nullptr
+  , /*decltype(_impl_.enterserviceoperation_)*/nullptr
+  , /*decltype(_impl_.hzwoperation_)*/nullptr
+  , /*decltype(_impl_.limitwoperation_)*/nullptr
+  , /*decltype(_impl_.pfoperation_)*/nullptr
+  , /*decltype(_impl_.tmhztripoperation_)*/nullptr
+  , /*decltype(_impl_.tmvolttripoperation_)*/nullptr
+  , /*decltype(_impl_.varoperation_)*/nullptr
+  , /*decltype(_impl_.voltvaroperation_)*/nullptr
+  , /*decltype(_impl_.voltwoperation_)*/nullptr
+  , /*decltype(_impl_.wvaroperation_)*/nullptr
+  , /*decltype(_impl_.blackstartenabled_)*/nullptr
+  , /*decltype(_impl_.woperation_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SolarPointDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SolarPointDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SolarPointDefaultTypeInternal() {}
+  union {
+    SolarPoint _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarPointDefaultTypeInternal _SolarPoint_default_instance_;
+PROTOBUF_CONSTEXPR SolarCurvePoint::SolarCurvePoint(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.control_)*/nullptr
+  , /*decltype(_impl_.starttime_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SolarCurvePointDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SolarCurvePointDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SolarCurvePointDefaultTypeInternal() {}
+  union {
+    SolarCurvePoint _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarCurvePointDefaultTypeInternal _SolarCurvePoint_default_instance_;
+PROTOBUF_CONSTEXPR SolarCSG::SolarCSG(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.crvpts_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SolarCSGDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SolarCSGDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SolarCSGDefaultTypeInternal() {}
+  union {
+    SolarCSG _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarCSGDefaultTypeInternal _SolarCSG_default_instance_;
+PROTOBUF_CONSTEXPR SolarControlScheduleFSCH::SolarControlScheduleFSCH(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.valdcsg_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SolarControlScheduleFSCHDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SolarControlScheduleFSCHDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SolarControlScheduleFSCHDefaultTypeInternal() {}
+  union {
+    SolarControlScheduleFSCH _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarControlScheduleFSCHDefaultTypeInternal _SolarControlScheduleFSCH_default_instance_;
+PROTOBUF_CONSTEXPR SolarControlFSCC::SolarControlFSCC(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlfscc_)*/nullptr
+  , /*decltype(_impl_.solarcontrolschedulefsch_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SolarControlFSCCDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SolarControlFSCCDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SolarControlFSCCDefaultTypeInternal() {}
+  union {
+    SolarControlFSCC _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarControlFSCCDefaultTypeInternal _SolarControlFSCC_default_instance_;
+PROTOBUF_CONSTEXPR SolarControl::SolarControl(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlvalue_)*/nullptr
+  , /*decltype(_impl_.check_)*/nullptr
+  , /*decltype(_impl_.solarcontrolfscc_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SolarControlDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SolarControlDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SolarControlDefaultTypeInternal() {}
+  union {
+    SolarControl _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarControlDefaultTypeInternal _SolarControl_default_instance_;
+PROTOBUF_CONSTEXPR SolarControlProfile::SolarControlProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlmessageinfo_)*/nullptr
+  , /*decltype(_impl_.solarcontrol_)*/nullptr
+  , /*decltype(_impl_.solarinverter_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SolarControlProfileDefaultTypeInternal {
-  constexpr SolarControlProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SolarControlProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~SolarControlProfileDefaultTypeInternal() {}
   union {
     SolarControlProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarControlProfileDefaultTypeInternal _SolarControlProfile_default_instance_;
-constexpr SolarPointStatus::SolarPointStatus(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : frequencysetpointenabled_(nullptr)
-  , mode_(nullptr)
-  , pcthzdroop_(nullptr)
-  , pctvdroop_(nullptr)
-  , ramprates_(nullptr)
-  , reactivepwrsetpointenabled_(nullptr)
-  , realpwrsetpointenabled_(nullptr)
-  , state_(nullptr)
-  , voltagesetpointenabled_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarControlProfileDefaultTypeInternal _SolarControlProfile_default_instance_;
+PROTOBUF_CONSTEXPR SolarDiscreteControlPV::SolarDiscreteControlPV(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.logicalnodeforcontrol_)*/nullptr
+  , /*decltype(_impl_.control_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SolarDiscreteControlPVDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SolarDiscreteControlPVDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SolarDiscreteControlPVDefaultTypeInternal() {}
+  union {
+    SolarDiscreteControlPV _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarDiscreteControlPVDefaultTypeInternal _SolarDiscreteControlPV_default_instance_;
+PROTOBUF_CONSTEXPR SolarDiscreteControl::SolarDiscreteControl(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlvalue_)*/nullptr
+  , /*decltype(_impl_.check_)*/nullptr
+  , /*decltype(_impl_.solardiscretecontrolpv_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SolarDiscreteControlDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SolarDiscreteControlDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SolarDiscreteControlDefaultTypeInternal() {}
+  union {
+    SolarDiscreteControl _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarDiscreteControlDefaultTypeInternal _SolarDiscreteControl_default_instance_;
+PROTOBUF_CONSTEXPR SolarDiscreteControlProfile::SolarDiscreteControlProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlmessageinfo_)*/nullptr
+  , /*decltype(_impl_.solardiscretecontrol_)*/nullptr
+  , /*decltype(_impl_.solarinverter_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SolarDiscreteControlProfileDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SolarDiscreteControlProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SolarDiscreteControlProfileDefaultTypeInternal() {}
+  union {
+    SolarDiscreteControlProfile _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarDiscreteControlProfileDefaultTypeInternal _SolarDiscreteControlProfile_default_instance_;
+PROTOBUF_CONSTEXPR SolarPointStatus::SolarPointStatus(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.frequencysetpointenabled_)*/nullptr
+  , /*decltype(_impl_.mode_)*/nullptr
+  , /*decltype(_impl_.pcthzdroop_)*/nullptr
+  , /*decltype(_impl_.pctvdroop_)*/nullptr
+  , /*decltype(_impl_.ramprates_)*/nullptr
+  , /*decltype(_impl_.reactivepwrsetpointenabled_)*/nullptr
+  , /*decltype(_impl_.realpwrsetpointenabled_)*/nullptr
+  , /*decltype(_impl_.state_)*/nullptr
+  , /*decltype(_impl_.voltagesetpointenabled_)*/nullptr
+  , /*decltype(_impl_.blackstartenabled_)*/nullptr
+  , /*decltype(_impl_.enterserviceoperation_)*/nullptr
+  , /*decltype(_impl_.hzwoperation_)*/nullptr
+  , /*decltype(_impl_.limitwoperation_)*/nullptr
+  , /*decltype(_impl_.pfoperation_)*/nullptr
+  , /*decltype(_impl_.syncbacktogrid_)*/nullptr
+  , /*decltype(_impl_.tmhztripoperation_)*/nullptr
+  , /*decltype(_impl_.tmvolttripoperation_)*/nullptr
+  , /*decltype(_impl_.varoperation_)*/nullptr
+  , /*decltype(_impl_.voltvaroperation_)*/nullptr
+  , /*decltype(_impl_.voltwoperation_)*/nullptr
+  , /*decltype(_impl_.wvaroperation_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SolarPointStatusDefaultTypeInternal {
-  constexpr SolarPointStatusDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SolarPointStatusDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~SolarPointStatusDefaultTypeInternal() {}
   union {
     SolarPointStatus _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarPointStatusDefaultTypeInternal _SolarPointStatus_default_instance_;
-constexpr SolarEventAndStatusZGEN::SolarEventAndStatusZGEN(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnodeforeventandstatus_(nullptr)
-  , auxpwrst_(nullptr)
-  , dynamictest_(nullptr)
-  , emgstop_(nullptr)
-  , pointstatus_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarPointStatusDefaultTypeInternal _SolarPointStatus_default_instance_;
+PROTOBUF_CONSTEXPR SolarEventAndStatusZGEN::SolarEventAndStatusZGEN(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.logicalnodeforeventandstatus_)*/nullptr
+  , /*decltype(_impl_.auxpwrst_)*/nullptr
+  , /*decltype(_impl_.dynamictest_)*/nullptr
+  , /*decltype(_impl_.emgstop_)*/nullptr
+  , /*decltype(_impl_.pointstatus_)*/nullptr
+  , /*decltype(_impl_.alrm_)*/nullptr
+  , /*decltype(_impl_.gnsynst_)*/nullptr
+  , /*decltype(_impl_.gridconnectionstate_)*/nullptr
+  , /*decltype(_impl_.manalrminfo_)*/nullptr
+  , /*decltype(_impl_.operatingstate_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SolarEventAndStatusZGENDefaultTypeInternal {
-  constexpr SolarEventAndStatusZGENDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SolarEventAndStatusZGENDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~SolarEventAndStatusZGENDefaultTypeInternal() {}
   union {
     SolarEventAndStatusZGEN _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarEventAndStatusZGENDefaultTypeInternal _SolarEventAndStatusZGEN_default_instance_;
-constexpr SolarEventZGEN::SolarEventZGEN(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : solareventandstatuszgen_(nullptr)
-  , grimod_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarEventAndStatusZGENDefaultTypeInternal _SolarEventAndStatusZGEN_default_instance_;
+PROTOBUF_CONSTEXPR SolarEventZGEN::SolarEventZGEN(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.solareventandstatuszgen_)*/nullptr
+  , /*decltype(_impl_.grimod_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SolarEventZGENDefaultTypeInternal {
-  constexpr SolarEventZGENDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SolarEventZGENDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~SolarEventZGENDefaultTypeInternal() {}
   union {
     SolarEventZGEN _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarEventZGENDefaultTypeInternal _SolarEventZGEN_default_instance_;
-constexpr SolarEvent::SolarEvent(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : eventvalue_(nullptr)
-  , solareventzgen_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarEventZGENDefaultTypeInternal _SolarEventZGEN_default_instance_;
+PROTOBUF_CONSTEXPR SolarEvent::SolarEvent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.eventvalue_)*/nullptr
+  , /*decltype(_impl_.solareventzgen_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SolarEventDefaultTypeInternal {
-  constexpr SolarEventDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SolarEventDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~SolarEventDefaultTypeInternal() {}
   union {
     SolarEvent _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarEventDefaultTypeInternal _SolarEvent_default_instance_;
-constexpr SolarEventProfile::SolarEventProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : eventmessageinfo_(nullptr)
-  , solarevent_(nullptr)
-  , solarinverter_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarEventDefaultTypeInternal _SolarEvent_default_instance_;
+PROTOBUF_CONSTEXPR SolarEventProfile::SolarEventProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.eventmessageinfo_)*/nullptr
+  , /*decltype(_impl_.solarevent_)*/nullptr
+  , /*decltype(_impl_.solarinverter_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SolarEventProfileDefaultTypeInternal {
-  constexpr SolarEventProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SolarEventProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~SolarEventProfileDefaultTypeInternal() {}
   union {
     SolarEventProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarEventProfileDefaultTypeInternal _SolarEventProfile_default_instance_;
-constexpr SolarReading::SolarReading(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : conductingequipmentterminalreading_(nullptr)
-  , phasemmtn_(nullptr)
-  , readingmmtr_(nullptr)
-  , readingmmxu_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarEventProfileDefaultTypeInternal _SolarEventProfile_default_instance_;
+PROTOBUF_CONSTEXPR SolarReading::SolarReading(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.conductingequipmentterminalreading_)*/nullptr
+  , /*decltype(_impl_.phasemmtn_)*/nullptr
+  , /*decltype(_impl_.readingmmtr_)*/nullptr
+  , /*decltype(_impl_.readingmmxu_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SolarReadingDefaultTypeInternal {
-  constexpr SolarReadingDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SolarReadingDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~SolarReadingDefaultTypeInternal() {}
   union {
     SolarReading _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarReadingDefaultTypeInternal _SolarReading_default_instance_;
-constexpr SolarReadingProfile::SolarReadingProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : readingmessageinfo_(nullptr)
-  , solarinverter_(nullptr)
-  , solarreading_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarReadingDefaultTypeInternal _SolarReading_default_instance_;
+PROTOBUF_CONSTEXPR SolarReadingProfile::SolarReadingProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.readingmessageinfo_)*/nullptr
+  , /*decltype(_impl_.solarinverter_)*/nullptr
+  , /*decltype(_impl_.solarreading_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SolarReadingProfileDefaultTypeInternal {
-  constexpr SolarReadingProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SolarReadingProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~SolarReadingProfileDefaultTypeInternal() {}
   union {
     SolarReadingProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarReadingProfileDefaultTypeInternal _SolarReadingProfile_default_instance_;
-constexpr SolarStatusZGEN::SolarStatusZGEN(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : solareventandstatuszgen_(nullptr)
-  , grimod_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarReadingProfileDefaultTypeInternal _SolarReadingProfile_default_instance_;
+PROTOBUF_CONSTEXPR SolarStatusZGEN::SolarStatusZGEN(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.solareventandstatuszgen_)*/nullptr
+  , /*decltype(_impl_.grimod_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SolarStatusZGENDefaultTypeInternal {
-  constexpr SolarStatusZGENDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SolarStatusZGENDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~SolarStatusZGENDefaultTypeInternal() {}
   union {
     SolarStatusZGEN _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarStatusZGENDefaultTypeInternal _SolarStatusZGEN_default_instance_;
-constexpr SolarStatus::SolarStatus(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : statusvalue_(nullptr)
-  , solarstatuszgen_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarStatusZGENDefaultTypeInternal _SolarStatusZGEN_default_instance_;
+PROTOBUF_CONSTEXPR SolarStatus::SolarStatus(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.statusvalue_)*/nullptr
+  , /*decltype(_impl_.solarstatuszgen_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SolarStatusDefaultTypeInternal {
-  constexpr SolarStatusDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SolarStatusDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~SolarStatusDefaultTypeInternal() {}
   union {
     SolarStatus _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarStatusDefaultTypeInternal _SolarStatus_default_instance_;
-constexpr SolarStatusProfile::SolarStatusProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : statusmessageinfo_(nullptr)
-  , solarinverter_(nullptr)
-  , solarstatus_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarStatusDefaultTypeInternal _SolarStatus_default_instance_;
+PROTOBUF_CONSTEXPR SolarStatusProfile::SolarStatusProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.statusmessageinfo_)*/nullptr
+  , /*decltype(_impl_.solarinverter_)*/nullptr
+  , /*decltype(_impl_.solarstatus_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SolarStatusProfileDefaultTypeInternal {
-  constexpr SolarStatusProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR SolarStatusProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~SolarStatusProfileDefaultTypeInternal() {}
   union {
     SolarStatusProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SolarStatusProfileDefaultTypeInternal _SolarStatusProfile_default_instance_;
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SolarStatusProfileDefaultTypeInternal _SolarStatusProfile_default_instance_;
 }  // namespace solarmodule
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_solarmodule_2fsolarmodule_2eproto[17];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_solarmodule_2fsolarmodule_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_solarmodule_2fsolarmodule_2eproto = nullptr;
+static ::_pb::Metadata file_level_metadata_solarmodule_2fsolarmodule_2eproto[27];
+static constexpr const ::_pb::EnumDescriptor**
+    file_level_enum_descriptors_solarmodule_2fsolarmodule_2eproto = nullptr;
+static constexpr const ::_pb::ServiceDescriptor**
+    file_level_service_descriptors_solarmodule_2fsolarmodule_2eproto = nullptr;
+const ::uint32_t TableStruct_solarmodule_2fsolarmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
+    protodesc_cold) = {
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarInverter, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarInverter, _impl_.conductingequipment_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCapabilityConfiguration, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCapabilityConfiguration, _impl_.sourcecapabilityconfiguration_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCapabilityOverride, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCapabilityOverride, _impl_.identifiedobject_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCapabilityOverride, _impl_.solarcapabilityconfiguration_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCapabilityOverrideProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCapabilityOverrideProfile, _impl_.capabilitymessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCapabilityOverrideProfile, _impl_.solarcapabilityoverride_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCapabilityOverrideProfile, _impl_.solarinverter_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCapabilityRatings, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCapabilityRatings, _impl_.sourcecapabilityratings_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCapability, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCapability, _impl_.nameplatevalue_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCapability, _impl_.solarcapabilityconfiguration_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCapability, _impl_.solarcapabilityratings_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCapabilityProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCapabilityProfile, _impl_.capabilitymessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCapabilityProfile, _impl_.solarcapability_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCapabilityProfile, _impl_.solarinverter_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, _impl_.mode_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, _impl_.ramprates_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, _impl_.reset_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, _impl_.state_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, _impl_.enterserviceoperation_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, _impl_.hzwoperation_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, _impl_.limitwoperation_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, _impl_.pfoperation_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, _impl_.tmhztripoperation_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, _impl_.tmvolttripoperation_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, _impl_.varoperation_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, _impl_.voltvaroperation_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, _impl_.voltwoperation_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, _impl_.wvaroperation_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, _impl_.blackstartenabled_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, _impl_.woperation_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCurvePoint, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCurvePoint, _impl_.control_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCurvePoint, _impl_.starttime_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCSG, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCSG, _impl_.crvpts_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlScheduleFSCH, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlScheduleFSCH, _impl_.valdcsg_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlFSCC, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlFSCC, _impl_.controlfscc_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlFSCC, _impl_.solarcontrolschedulefsch_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControl, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControl, _impl_.controlvalue_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControl, _impl_.check_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControl, _impl_.solarcontrolfscc_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlProfile, _impl_.controlmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlProfile, _impl_.solarcontrol_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlProfile, _impl_.solarinverter_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarDiscreteControlPV, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarDiscreteControlPV, _impl_.logicalnodeforcontrol_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarDiscreteControlPV, _impl_.control_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarDiscreteControl, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarDiscreteControl, _impl_.controlvalue_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarDiscreteControl, _impl_.check_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarDiscreteControl, _impl_.solardiscretecontrolpv_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarDiscreteControlProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarDiscreteControlProfile, _impl_.controlmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarDiscreteControlProfile, _impl_.solardiscretecontrol_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarDiscreteControlProfile, _impl_.solarinverter_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.frequencysetpointenabled_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.mode_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.pcthzdroop_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.pctvdroop_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.ramprates_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.reactivepwrsetpointenabled_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.realpwrsetpointenabled_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.state_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.voltagesetpointenabled_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.blackstartenabled_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.enterserviceoperation_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.hzwoperation_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.limitwoperation_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.pfoperation_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.syncbacktogrid_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.tmhztripoperation_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.tmvolttripoperation_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.varoperation_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.voltvaroperation_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.voltwoperation_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _impl_.wvaroperation_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventAndStatusZGEN, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventAndStatusZGEN, _impl_.logicalnodeforeventandstatus_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventAndStatusZGEN, _impl_.auxpwrst_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventAndStatusZGEN, _impl_.dynamictest_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventAndStatusZGEN, _impl_.emgstop_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventAndStatusZGEN, _impl_.pointstatus_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventAndStatusZGEN, _impl_.alrm_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventAndStatusZGEN, _impl_.gnsynst_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventAndStatusZGEN, _impl_.gridconnectionstate_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventAndStatusZGEN, _impl_.manalrminfo_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventAndStatusZGEN, _impl_.operatingstate_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventZGEN, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventZGEN, _impl_.solareventandstatuszgen_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventZGEN, _impl_.grimod_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEvent, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEvent, _impl_.eventvalue_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEvent, _impl_.solareventzgen_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventProfile, _impl_.eventmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventProfile, _impl_.solarevent_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventProfile, _impl_.solarinverter_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReading, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReading, _impl_.conductingequipmentterminalreading_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReading, _impl_.phasemmtn_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReading, _impl_.readingmmtr_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReading, _impl_.readingmmxu_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReadingProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReadingProfile, _impl_.readingmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReadingProfile, _impl_.solarinverter_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReadingProfile, _impl_.solarreading_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatusZGEN, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatusZGEN, _impl_.solareventandstatuszgen_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatusZGEN, _impl_.grimod_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatus, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatus, _impl_.statusvalue_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatus, _impl_.solarstatuszgen_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatusProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatusProfile, _impl_.statusmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatusProfile, _impl_.solarinverter_),
+    PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatusProfile, _impl_.solarstatus_),
+};
 
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_solarmodule_2fsolarmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, frequencysetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, mode_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, pcthzdroop_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, pctvdroop_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, ramprates_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, reactivepwrsetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, realpwrsetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, reset_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, state_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, voltagesetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPoint, starttime_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCSG, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarCSG, crvpts_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlScheduleFSCH, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlScheduleFSCH, valdcsg_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlFSCC, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlFSCC, controlfscc_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlFSCC, solarcontrolschedulefsch_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControl, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControl, controlvalue_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControl, check_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControl, solarcontrolfscc_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarInverter, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarInverter, conductingequipment_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlProfile, solarcontrol_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarControlProfile, solarinverter_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, frequencysetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, mode_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, pcthzdroop_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, pctvdroop_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, ramprates_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, reactivepwrsetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, realpwrsetpointenabled_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, state_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarPointStatus, voltagesetpointenabled_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventAndStatusZGEN, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventAndStatusZGEN, logicalnodeforeventandstatus_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventAndStatusZGEN, auxpwrst_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventAndStatusZGEN, dynamictest_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventAndStatusZGEN, emgstop_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventAndStatusZGEN, pointstatus_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventZGEN, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventZGEN, solareventandstatuszgen_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventZGEN, grimod_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEvent, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEvent, eventvalue_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEvent, solareventzgen_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventProfile, eventmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventProfile, solarevent_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarEventProfile, solarinverter_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReading, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReading, conductingequipmentterminalreading_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReading, phasemmtn_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReading, readingmmtr_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReading, readingmmxu_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReadingProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReadingProfile, readingmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReadingProfile, solarinverter_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarReadingProfile, solarreading_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatusZGEN, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatusZGEN, solareventandstatuszgen_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatusZGEN, grimod_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatus, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatus, statusvalue_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatus, solarstatuszgen_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatusProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatusProfile, statusmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatusProfile, solarinverter_),
-  PROTOBUF_FIELD_OFFSET(::solarmodule::SolarStatusProfile, solarstatus_),
-};
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::solarmodule::SolarPoint)},
-  { 16, -1, sizeof(::solarmodule::SolarCSG)},
-  { 22, -1, sizeof(::solarmodule::SolarControlScheduleFSCH)},
-  { 28, -1, sizeof(::solarmodule::SolarControlFSCC)},
-  { 35, -1, sizeof(::solarmodule::SolarControl)},
-  { 43, -1, sizeof(::solarmodule::SolarInverter)},
-  { 49, -1, sizeof(::solarmodule::SolarControlProfile)},
-  { 57, -1, sizeof(::solarmodule::SolarPointStatus)},
-  { 71, -1, sizeof(::solarmodule::SolarEventAndStatusZGEN)},
-  { 81, -1, sizeof(::solarmodule::SolarEventZGEN)},
-  { 88, -1, sizeof(::solarmodule::SolarEvent)},
-  { 95, -1, sizeof(::solarmodule::SolarEventProfile)},
-  { 103, -1, sizeof(::solarmodule::SolarReading)},
-  { 112, -1, sizeof(::solarmodule::SolarReadingProfile)},
-  { 120, -1, sizeof(::solarmodule::SolarStatusZGEN)},
-  { 127, -1, sizeof(::solarmodule::SolarStatus)},
-  { 134, -1, sizeof(::solarmodule::SolarStatusProfile)},
+static const ::_pbi::MigrationSchema
+    schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+        { 0, -1, -1, sizeof(::solarmodule::SolarInverter)},
+        { 9, -1, -1, sizeof(::solarmodule::SolarCapabilityConfiguration)},
+        { 18, -1, -1, sizeof(::solarmodule::SolarCapabilityOverride)},
+        { 28, -1, -1, sizeof(::solarmodule::SolarCapabilityOverrideProfile)},
+        { 39, -1, -1, sizeof(::solarmodule::SolarCapabilityRatings)},
+        { 48, -1, -1, sizeof(::solarmodule::SolarCapability)},
+        { 59, -1, -1, sizeof(::solarmodule::SolarCapabilityProfile)},
+        { 70, -1, -1, sizeof(::solarmodule::SolarPoint)},
+        { 94, -1, -1, sizeof(::solarmodule::SolarCurvePoint)},
+        { 104, -1, -1, sizeof(::solarmodule::SolarCSG)},
+        { 113, -1, -1, sizeof(::solarmodule::SolarControlScheduleFSCH)},
+        { 122, -1, -1, sizeof(::solarmodule::SolarControlFSCC)},
+        { 132, -1, -1, sizeof(::solarmodule::SolarControl)},
+        { 143, -1, -1, sizeof(::solarmodule::SolarControlProfile)},
+        { 154, -1, -1, sizeof(::solarmodule::SolarDiscreteControlPV)},
+        { 164, -1, -1, sizeof(::solarmodule::SolarDiscreteControl)},
+        { 175, -1, -1, sizeof(::solarmodule::SolarDiscreteControlProfile)},
+        { 186, -1, -1, sizeof(::solarmodule::SolarPointStatus)},
+        { 215, -1, -1, sizeof(::solarmodule::SolarEventAndStatusZGEN)},
+        { 233, -1, -1, sizeof(::solarmodule::SolarEventZGEN)},
+        { 243, -1, -1, sizeof(::solarmodule::SolarEvent)},
+        { 253, -1, -1, sizeof(::solarmodule::SolarEventProfile)},
+        { 264, -1, -1, sizeof(::solarmodule::SolarReading)},
+        { 276, -1, -1, sizeof(::solarmodule::SolarReadingProfile)},
+        { 287, -1, -1, sizeof(::solarmodule::SolarStatusZGEN)},
+        { 297, -1, -1, sizeof(::solarmodule::SolarStatus)},
+        { 307, -1, -1, sizeof(::solarmodule::SolarStatusProfile)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarPoint_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarCSG_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarControlScheduleFSCH_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarControlFSCC_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarControl_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarInverter_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarControlProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarPointStatus_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarEventAndStatusZGEN_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarEventZGEN_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarEvent_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarEventProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarReading_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarReadingProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarStatusZGEN_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarStatus_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::solarmodule::_SolarStatusProfile_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+    &::solarmodule::_SolarInverter_default_instance_._instance,
+    &::solarmodule::_SolarCapabilityConfiguration_default_instance_._instance,
+    &::solarmodule::_SolarCapabilityOverride_default_instance_._instance,
+    &::solarmodule::_SolarCapabilityOverrideProfile_default_instance_._instance,
+    &::solarmodule::_SolarCapabilityRatings_default_instance_._instance,
+    &::solarmodule::_SolarCapability_default_instance_._instance,
+    &::solarmodule::_SolarCapabilityProfile_default_instance_._instance,
+    &::solarmodule::_SolarPoint_default_instance_._instance,
+    &::solarmodule::_SolarCurvePoint_default_instance_._instance,
+    &::solarmodule::_SolarCSG_default_instance_._instance,
+    &::solarmodule::_SolarControlScheduleFSCH_default_instance_._instance,
+    &::solarmodule::_SolarControlFSCC_default_instance_._instance,
+    &::solarmodule::_SolarControl_default_instance_._instance,
+    &::solarmodule::_SolarControlProfile_default_instance_._instance,
+    &::solarmodule::_SolarDiscreteControlPV_default_instance_._instance,
+    &::solarmodule::_SolarDiscreteControl_default_instance_._instance,
+    &::solarmodule::_SolarDiscreteControlProfile_default_instance_._instance,
+    &::solarmodule::_SolarPointStatus_default_instance_._instance,
+    &::solarmodule::_SolarEventAndStatusZGEN_default_instance_._instance,
+    &::solarmodule::_SolarEventZGEN_default_instance_._instance,
+    &::solarmodule::_SolarEvent_default_instance_._instance,
+    &::solarmodule::_SolarEventProfile_default_instance_._instance,
+    &::solarmodule::_SolarReading_default_instance_._instance,
+    &::solarmodule::_SolarReadingProfile_default_instance_._instance,
+    &::solarmodule::_SolarStatusZGEN_default_instance_._instance,
+    &::solarmodule::_SolarStatus_default_instance_._instance,
+    &::solarmodule::_SolarStatusProfile_default_instance_._instance,
+};
+const char descriptor_table_protodef_solarmodule_2fsolarmodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+    "\n\035solarmodule/solarmodule.proto\022\013solarmo"
+    "dule\032\tuml.proto\032\036google/protobuf/wrapper"
+    "s.proto\032\037commonmodule/commonmodule.proto"
+    "\"U\n\rSolarInverter\022D\n\023conductingEquipment"
+    "\030\001 \001(\0132!.commonmodule.ConductingEquipmen"
+    "tB\004\200\265\030\001\"x\n\034SolarCapabilityConfiguration\022"
+    "X\n\035sourceCapabilityConfiguration\030\001 \001(\0132+"
+    ".commonmodule.SourceCapabilityConfigurat"
+    "ionB\004\200\265\030\001\"\264\001\n\027SolarCapabilityOverride\022>\n"
+    "\020identifiedObject\030\001 \001(\0132\036.commonmodule.I"
+    "dentifiedObjectB\004\200\265\030\001\022Y\n\034solarCapability"
+    "Configuration\030\002 \001(\0132).solarmodule.SolarC"
+    "apabilityConfigurationB\010\210\265\030\001\220\265\030\001\"\376\001\n\036Sol"
+    "arCapabilityOverrideProfile\022H\n\025capabilit"
+    "yMessageInfo\030\001 \001(\0132#.commonmodule.Capabi"
+    "lityMessageInfoB\004\200\265\030\001\022O\n\027solarCapability"
+    "Override\030\002 \001(\0132$.solarmodule.SolarCapabi"
+    "lityOverrideB\010\210\265\030\001\220\265\030\001\022;\n\rsolarInverter\030"
+    "\003 \001(\0132\032.solarmodule.SolarInverterB\010\210\265\030\001\220"
+    "\265\030\001:\004\300\363\030\001\"f\n\026SolarCapabilityRatings\022L\n\027s"
+    "ourceCapabilityRatings\030\001 \001(\0132%.commonmod"
+    "ule.SourceCapabilityRatingsB\004\200\265\030\001\"\355\001\n\017So"
+    "larCapability\022:\n\016nameplateValue\030\001 \001(\0132\034."
+    "commonmodule.NameplateValueB\004\200\265\030\001\022O\n\034sol"
+    "arCapabilityConfiguration\030\002 \001(\0132).solarm"
+    "odule.SolarCapabilityConfiguration\022M\n\026so"
+    "larCapabilityRatings\030\003 \001(\0132#.solarmodule"
+    ".SolarCapabilityRatingsB\010\210\265\030\001\220\265\030\001\"\346\001\n\026So"
+    "larCapabilityProfile\022H\n\025capabilityMessag"
+    "eInfo\030\001 \001(\0132#.commonmodule.CapabilityMes"
+    "sageInfoB\004\200\265\030\001\022\?\n\017solarCapability\030\002 \001(\0132"
+    "\034.solarmodule.SolarCapabilityB\010\210\265\030\001\220\265\030\001\022"
+    ";\n\rsolarInverter\030\003 \001(\0132\032.solarmodule.Sol"
+    "arInverterB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\271\006\n\nSolarPoin"
+    "t\0223\n\004mode\030\002 \001(\0132%.commonmodule.ENG_GridC"
+    "onnectModeKind\022)\n\trampRates\030\005 \001(\0132\026.comm"
+    "onmodule.RampRate\022\'\n\005reset\030\010 \001(\0132\030.commo"
+    "nmodule.ControlSPC\022/\n\005state\030\t \001(\0132 .comm"
+    "onmodule.Optional_StateKind\022<\n\025enterServ"
+    "iceOperation\030\014 \001(\0132\035.commonmodule.EnterS"
+    "erviceAPC\022*\n\014hzWOperation\030\r \001(\0132\024.common"
+    "module.HzWAPC\0220\n\017limitWOperation\030\016 \001(\0132\027"
+    ".commonmodule.LimitWAPC\022(\n\013pFOperation\030\017"
+    " \001(\0132\023.commonmodule.PFSPC\0220\n\021tmHzTripOpe"
+    "ration\030\020 \001(\0132\025.commonmodule.TmHzCSG\0224\n\023t"
+    "mVoltTripOperation\030\021 \001(\0132\027.commonmodule."
+    "TmVoltCSG\022*\n\014vArOperation\030\022 \001(\0132\024.common"
+    "module.VarSPC\0222\n\020voltVarOperation\030\023 \001(\0132"
+    "\030.commonmodule.VoltVarCSG\022.\n\016voltWOperat"
+    "ion\030\024 \001(\0132\026.commonmodule.VoltWCSG\022,\n\rwVa"
+    "rOperation\030\025 \001(\0132\025.commonmodule.WVarCSG\022"
+    "3\n\021blackStartEnabled\030\026 \001(\0132\030.commonmodul"
+    "e.ControlSPC\022&\n\nwOperation\030\030 \001(\0132\022.commo"
+    "nmodule.WSPCJ\004\010\001\020\002J\004\010\003\020\004J\004\010\004\020\005J\004\010\006\020\007J\004\010\007"
+    "\020\010J\004\010\013\020\014J\004\010\027\020\030\"\202\001\n\017SolarCurvePoint\0222\n\007co"
+    "ntrol\030\001 \001(\0132\027.solarmodule.SolarPointB\010\210\265"
+    "\030\001\220\265\030\001\022;\n\tstartTime\030\002 \001(\0132\036.commonmodule"
+    ".ControlTimestampB\010\210\265\030\001\220\265\030\001\"B\n\010SolarCSG\022"
+    "6\n\006crvPts\030\001 \003(\0132\034.solarmodule.SolarCurve"
+    "PointB\010\210\265\030\001\220\265\030\001\"L\n\030SolarControlScheduleF"
+    "SCH\0220\n\007ValDCSG\030\001 \001(\0132\025.solarmodule.Solar"
+    "CSGB\010\210\265\030\001\220\265\030\001\"\221\001\n\020SolarControlFSCC\0224\n\013co"
+    "ntrolFSCC\030\001 \001(\0132\031.commonmodule.ControlFS"
+    "CCB\004\200\265\030\001\022G\n\030SolarControlScheduleFSCH\030\002 \001"
+    "(\0132%.solarmodule.SolarControlScheduleFSC"
+    "H\"\255\001\n\014SolarControl\0226\n\014controlValue\030\001 \001(\013"
+    "2\032.commonmodule.ControlValueB\004\200\265\030\001\022,\n\005ch"
+    "eck\030\002 \001(\0132\035.commonmodule.CheckConditions"
+    "\0227\n\020solarControlFSCC\030\003 \001(\0132\035.solarmodule"
+    ".SolarControlFSCC\"\327\001\n\023SolarControlProfil"
+    "e\022B\n\022controlMessageInfo\030\001 \001(\0132 .commonmo"
+    "dule.ControlMessageInfoB\004\200\265\030\001\0229\n\014solarCo"
+    "ntrol\030\002 \001(\0132\031.solarmodule.SolarControlB\010"
+    "\210\265\030\001\220\265\030\001\022;\n\rsolarInverter\030\003 \001(\0132\032.solarm"
+    "odule.SolarInverterB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\214\001\n\026"
+    "SolarDiscreteControlPV\022H\n\025logicalNodeFor"
+    "Control\030\001 \001(\0132#.commonmodule.LogicalNode"
+    "ForControlB\004\200\265\030\001\022(\n\007control\030\002 \001(\0132\027.sola"
+    "rmodule.SolarPoint\"\301\001\n\024SolarDiscreteCont"
+    "rol\0226\n\014controlValue\030\001 \001(\0132\032.commonmodule"
+    ".ControlValueB\004\200\265\030\001\022,\n\005check\030\002 \001(\0132\035.com"
+    "monmodule.CheckConditions\022C\n\026solarDiscre"
+    "teControlPV\030\003 \001(\0132#.solarmodule.SolarDis"
+    "creteControlPV\"\357\001\n\033SolarDiscreteControlP"
+    "rofile\022B\n\022controlMessageInfo\030\001 \001(\0132 .com"
+    "monmodule.ControlMessageInfoB\004\200\265\030\001\022I\n\024so"
+    "larDiscreteControl\030\002 \001(\0132!.solarmodule.S"
+    "olarDiscreteControlB\010\210\265\030\001\220\265\030\001\022;\n\rsolarIn"
+    "verter\030\003 \001(\0132\032.solarmodule.SolarInverter"
+    "B\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\303\010\n\020SolarPointStatus\0229\n"
+    "\030frequencySetPointEnabled\030\001 \001(\0132\027.common"
+    "module.StatusSPS\0223\n\004mode\030\002 \001(\0132%.commonm"
+    "odule.ENG_GridConnectModeKind\022/\n\npctHzDr"
+    "oop\030\003 \001(\0132\033.google.protobuf.FloatValue\022."
+    "\n\tpctVDroop\030\004 \001(\0132\033.google.protobuf.Floa"
+    "tValue\022)\n\trampRates\030\005 \001(\0132\026.commonmodule"
+    ".RampRate\022;\n\032reactivePwrSetPointEnabled\030"
+    "\006 \001(\0132\027.commonmodule.StatusSPS\0227\n\026realPw"
+    "rSetPointEnabled\030\007 \001(\0132\027.commonmodule.St"
+    "atusSPS\022/\n\005state\030\010 \001(\0132 .commonmodule.Op"
+    "tional_StateKind\0227\n\026voltageSetPointEnabl"
+    "ed\030\t \001(\0132\027.commonmodule.StatusSPS\0223\n\021bla"
+    "ckStartEnabled\030\n \001(\0132\030.commonmodule.Cont"
+    "rolSPC\022<\n\025enterServiceOperation\030\013 \001(\0132\035."
+    "commonmodule.EnterServiceAPC\022,\n\014hzWOpera"
+    "tion\030\014 \001(\0132\026.commonmodule.HzWPoint\0220\n\017li"
+    "mitWOperation\030\r \001(\0132\027.commonmodule.Limit"
+    "WAPC\022(\n\013pFOperation\030\016 \001(\0132\023.commonmodule"
+    ".PFSPC\0220\n\016syncBackToGrid\030\017 \001(\0132\030.commonm"
+    "odule.ControlSPC\0220\n\021tmHzTripOperation\030\020 "
+    "\001(\0132\025.commonmodule.TmHzCSG\0224\n\023tmVoltTrip"
+    "Operation\030\021 \001(\0132\027.commonmodule.TmVoltCSG"
+    "\022*\n\014vArOperation\030\022 \001(\0132\024.commonmodule.Va"
+    "rSPC\0222\n\020voltVarOperation\030\023 \001(\0132\030.commonm"
+    "odule.VoltVarCSG\022.\n\016voltWOperation\030\024 \001(\013"
+    "2\026.commonmodule.VoltWCSG\022,\n\rwVarOperatio"
+    "n\030\025 \001(\0132\025.commonmodule.WVarCSG\"\316\004\n\027Solar"
+    "EventAndStatusZGEN\022V\n\034logicalNodeForEven"
+    "tAndStatus\030\001 \001(\0132*.commonmodule.LogicalN"
+    "odeForEventAndStatusB\004\200\265\030\001\022)\n\010AuxPwrSt\030\002"
+    " \001(\0132\027.commonmodule.StatusSPS\0226\n\013Dynamic"
+    "Test\030\003 \001(\0132!.commonmodule.ENS_DynamicTes"
+    "tKind\022(\n\007EmgStop\030\004 \001(\0132\027.commonmodule.St"
+    "atusSPS\0222\n\013PointStatus\030\005 \001(\0132\035.solarmodu"
+    "le.SolarPointStatus\022-\n\004Alrm\030\006 \001(\0132\037.comm"
+    "onmodule.Optional_AlrmKind\022(\n\007GnSynSt\030\007 "
+    "\001(\0132\027.commonmodule.StatusSPS\022K\n\023GridConn"
+    "ectionState\030\010 \001(\0132..commonmodule.Optiona"
+    "l_GridConnectionStateKind\0221\n\013ManAlrmInfo"
+    "\030\t \001(\0132\034.google.protobuf.StringValue\022A\n\016"
+    "OperatingState\030\n \001(\0132).commonmodule.Opti"
+    "onal_OperatingStateKind\"\224\001\n\016SolarEventZG"
+    "EN\022K\n\027solarEventAndStatusZGEN\030\001 \001(\0132$.so"
+    "larmodule.SolarEventAndStatusZGENB\004\200\265\030\001\022"
+    "5\n\006GriMod\030\002 \001(\0132%.commonmodule.ENG_GridC"
+    "onnectModeKind\"u\n\nSolarEvent\0222\n\neventVal"
+    "ue\030\001 \001(\0132\030.commonmodule.EventValueB\004\200\265\030\001"
+    "\0223\n\016solarEventZGEN\030\002 \001(\0132\033.solarmodule.S"
+    "olarEventZGEN\"\315\001\n\021SolarEventProfile\022>\n\020e"
+    "ventMessageInfo\030\001 \001(\0132\036.commonmodule.Eve"
+    "ntMessageInfoB\004\200\265\030\001\0225\n\nsolarEvent\030\002 \001(\0132"
+    "\027.solarmodule.SolarEventB\010\210\265\030\001\220\265\030\001\022;\n\rso"
+    "larInverter\030\003 \001(\0132\032.solarmodule.SolarInv"
+    "erterB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\376\001\n\014SolarReading\022b"
+    "\n\"conductingEquipmentTerminalReading\030\001 \001"
+    "(\01320.commonmodule.ConductingEquipmentTer"
+    "minalReadingB\004\200\265\030\001\022*\n\tphaseMMTN\030\002 \001(\0132\027."
+    "commonmodule.PhaseMMTN\022.\n\013readingMMTR\030\003 "
+    "\001(\0132\031.commonmodule.ReadingMMTR\022.\n\013readin"
+    "gMMXU\030\004 \001(\0132\031.commonmodule.ReadingMMXU\"\327"
+    "\001\n\023SolarReadingProfile\022B\n\022readingMessage"
+    "Info\030\001 \001(\0132 .commonmodule.ReadingMessage"
+    "InfoB\004\200\265\030\001\022;\n\rsolarInverter\030\002 \001(\0132\032.sola"
+    "rmodule.SolarInverterB\010\210\265\030\001\220\265\030\001\0229\n\014solar"
+    "Reading\030\003 \001(\0132\031.solarmodule.SolarReading"
+    "B\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\225\001\n\017SolarStatusZGEN\022K\n\027"
+    "solarEventAndStatusZGEN\030\001 \001(\0132$.solarmod"
+    "ule.SolarEventAndStatusZGENB\004\200\265\030\001\0225\n\006Gri"
+    "Mod\030\002 \001(\0132%.commonmodule.ENG_GridConnect"
+    "ModeKind\"z\n\013SolarStatus\0224\n\013statusValue\030\001"
+    " \001(\0132\031.commonmodule.StatusValueB\004\200\265\030\001\0225\n"
+    "\017solarStatusZGEN\030\002 \001(\0132\034.solarmodule.Sol"
+    "arStatusZGEN\"\322\001\n\022SolarStatusProfile\022@\n\021s"
+    "tatusMessageInfo\030\001 \001(\0132\037.commonmodule.St"
+    "atusMessageInfoB\004\200\265\030\001\022;\n\rsolarInverter\030\002"
+    " \001(\0132\032.solarmodule.SolarInverterB\010\210\265\030\001\220\265"
+    "\030\001\0227\n\013solarStatus\030\003 \001(\0132\030.solarmodule.So"
+    "larStatusB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001B\201\001\n\023openfmb.so"
+    "larmoduleP\001ZRgitlab.com/openfmb/psm/ops/"
+    "protobuf/go-openfmb-ops-protobuf/v2/open"
+    "fmb/solarmodule\252\002\023openfmb.solarmoduleb\006p"
+    "roto3"
+};
+static const ::_pbi::DescriptorTable* const descriptor_table_solarmodule_2fsolarmodule_2eproto_deps[3] =
+    {
+        &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
+        &::descriptor_table_google_2fprotobuf_2fwrappers_2eproto,
+        &::descriptor_table_uml_2eproto,
+};
+static ::absl::once_flag descriptor_table_solarmodule_2fsolarmodule_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_solarmodule_2fsolarmodule_2eproto = {
+    false,
+    false,
+    6845,
+    descriptor_table_protodef_solarmodule_2fsolarmodule_2eproto,
+    "solarmodule/solarmodule.proto",
+    &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+    descriptor_table_solarmodule_2fsolarmodule_2eproto_deps,
+    3,
+    27,
+    schemas,
+    file_default_instances,
+    TableStruct_solarmodule_2fsolarmodule_2eproto::offsets,
+    file_level_metadata_solarmodule_2fsolarmodule_2eproto,
+    file_level_enum_descriptors_solarmodule_2fsolarmodule_2eproto,
+    file_level_service_descriptors_solarmodule_2fsolarmodule_2eproto,
 };
 
-const char descriptor_table_protodef_solarmodule_2fsolarmodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\035solarmodule/solarmodule.proto\022\013solarmo"
-  "dule\032\tuml.proto\032\036google/protobuf/wrapper"
-  "s.proto\032\037commonmodule/commonmodule.proto"
-  "\"\322\004\n\nSolarPoint\022:\n\030frequencySetPointEnab"
-  "led\030\001 \001(\0132\030.commonmodule.ControlSPC\0223\n\004m"
-  "ode\030\002 \001(\0132%.commonmodule.ENG_GridConnect"
-  "ModeKind\022/\n\npctHzDroop\030\003 \001(\0132\033.google.pr"
-  "otobuf.FloatValue\022.\n\tpctVDroop\030\004 \001(\0132\033.g"
-  "oogle.protobuf.FloatValue\022)\n\trampRates\030\005"
-  " \001(\0132\026.commonmodule.RampRate\022<\n\032reactive"
-  "PwrSetPointEnabled\030\006 \001(\0132\030.commonmodule."
-  "ControlSPC\0228\n\026realPwrSetPointEnabled\030\007 \001"
-  "(\0132\030.commonmodule.ControlSPC\022\'\n\005reset\030\010 "
-  "\001(\0132\030.commonmodule.ControlSPC\022/\n\005state\030\t"
-  " \001(\0132 .commonmodule.Optional_StateKind\0228"
-  "\n\026voltageSetPointEnabled\030\n \001(\0132\030.commonm"
-  "odule.ControlSPC\022;\n\tstartTime\030\013 \001(\0132\036.co"
-  "mmonmodule.ControlTimestampB\010\210\265\030\001\220\265\030\001\"=\n"
-  "\010SolarCSG\0221\n\006crvPts\030\001 \003(\0132\027.solarmodule."
-  "SolarPointB\010\210\265\030\001\220\265\030\001\"L\n\030SolarControlSche"
-  "duleFSCH\0220\n\007ValDCSG\030\001 \001(\0132\025.solarmodule."
-  "SolarCSGB\010\210\265\030\001\220\265\030\001\"\221\001\n\020SolarControlFSCC\022"
-  "4\n\013controlFSCC\030\001 \001(\0132\031.commonmodule.Cont"
-  "rolFSCCB\004\200\265\030\001\022G\n\030SolarControlScheduleFSC"
-  "H\030\002 \001(\0132%.solarmodule.SolarControlSchedu"
-  "leFSCH\"\255\001\n\014SolarControl\0226\n\014controlValue\030"
-  "\001 \001(\0132\032.commonmodule.ControlValueB\004\200\265\030\001\022"
-  ",\n\005check\030\002 \001(\0132\035.commonmodule.CheckCondi"
-  "tions\0227\n\020solarControlFSCC\030\003 \001(\0132\035.solarm"
-  "odule.SolarControlFSCC\"U\n\rSolarInverter\022"
-  "D\n\023conductingEquipment\030\001 \001(\0132!.commonmod"
-  "ule.ConductingEquipmentB\004\200\265\030\001\"\327\001\n\023SolarC"
-  "ontrolProfile\022B\n\022controlMessageInfo\030\001 \001("
-  "\0132 .commonmodule.ControlMessageInfoB\004\200\265\030"
-  "\001\0229\n\014solarControl\030\002 \001(\0132\031.solarmodule.So"
-  "larControlB\010\210\265\030\001\220\265\030\001\022;\n\rsolarInverter\030\003 "
-  "\001(\0132\032.solarmodule.SolarInverterB\010\210\265\030\001\220\265\030"
-  "\001:\004\300\363\030\001\"\356\003\n\020SolarPointStatus\0229\n\030frequenc"
-  "ySetPointEnabled\030\001 \001(\0132\027.commonmodule.St"
-  "atusSPS\0223\n\004mode\030\002 \001(\0132%.commonmodule.ENG"
-  "_GridConnectModeKind\022/\n\npctHzDroop\030\003 \001(\013"
-  "2\033.google.protobuf.FloatValue\022.\n\tpctVDro"
-  "op\030\004 \001(\0132\033.google.protobuf.FloatValue\022)\n"
-  "\trampRates\030\005 \001(\0132\026.commonmodule.RampRate"
-  "\022;\n\032reactivePwrSetPointEnabled\030\006 \001(\0132\027.c"
-  "ommonmodule.StatusSPS\0227\n\026realPwrSetPoint"
-  "Enabled\030\007 \001(\0132\027.commonmodule.StatusSPS\022/"
-  "\n\005state\030\010 \001(\0132 .commonmodule.Optional_St"
-  "ateKind\0227\n\026voltageSetPointEnabled\030\t \001(\0132"
-  "\027.commonmodule.StatusSPS\"\262\002\n\027SolarEventA"
-  "ndStatusZGEN\022V\n\034logicalNodeForEventAndSt"
-  "atus\030\001 \001(\0132*.commonmodule.LogicalNodeFor"
-  "EventAndStatusB\004\200\265\030\001\022)\n\010AuxPwrSt\030\002 \001(\0132\027"
-  ".commonmodule.StatusSPS\0226\n\013DynamicTest\030\003"
-  " \001(\0132!.commonmodule.ENS_DynamicTestKind\022"
-  "(\n\007EmgStop\030\004 \001(\0132\027.commonmodule.StatusSP"
-  "S\0222\n\013PointStatus\030\005 \001(\0132\035.solarmodule.Sol"
-  "arPointStatus\"\224\001\n\016SolarEventZGEN\022K\n\027sola"
-  "rEventAndStatusZGEN\030\001 \001(\0132$.solarmodule."
-  "SolarEventAndStatusZGENB\004\200\265\030\001\0225\n\006GriMod\030"
-  "\002 \001(\0132%.commonmodule.ENG_GridConnectMode"
-  "Kind\"u\n\nSolarEvent\0222\n\neventValue\030\001 \001(\0132\030"
-  ".commonmodule.EventValueB\004\200\265\030\001\0223\n\016solarE"
-  "ventZGEN\030\002 \001(\0132\033.solarmodule.SolarEventZ"
-  "GEN\"\315\001\n\021SolarEventProfile\022>\n\020eventMessag"
-  "eInfo\030\001 \001(\0132\036.commonmodule.EventMessageI"
-  "nfoB\004\200\265\030\001\0225\n\nsolarEvent\030\002 \001(\0132\027.solarmod"
-  "ule.SolarEventB\010\210\265\030\001\220\265\030\001\022;\n\rsolarInverte"
-  "r\030\003 \001(\0132\032.solarmodule.SolarInverterB\010\210\265\030"
-  "\001\220\265\030\001:\004\300\363\030\001\"\376\001\n\014SolarReading\022b\n\"conducti"
-  "ngEquipmentTerminalReading\030\001 \001(\01320.commo"
-  "nmodule.ConductingEquipmentTerminalReadi"
-  "ngB\004\200\265\030\001\022*\n\tphaseMMTN\030\002 \001(\0132\027.commonmodu"
-  "le.PhaseMMTN\022.\n\013readingMMTR\030\003 \001(\0132\031.comm"
-  "onmodule.ReadingMMTR\022.\n\013readingMMXU\030\004 \001("
-  "\0132\031.commonmodule.ReadingMMXU\"\327\001\n\023SolarRe"
-  "adingProfile\022B\n\022readingMessageInfo\030\001 \001(\013"
-  "2 .commonmodule.ReadingMessageInfoB\004\200\265\030\001"
-  "\022;\n\rsolarInverter\030\002 \001(\0132\032.solarmodule.So"
-  "larInverterB\010\210\265\030\001\220\265\030\001\0229\n\014solarReading\030\003 "
-  "\001(\0132\031.solarmodule.SolarReadingB\010\210\265\030\001\220\265\030\001"
-  ":\004\300\363\030\001\"\225\001\n\017SolarStatusZGEN\022K\n\027solarEvent"
-  "AndStatusZGEN\030\001 \001(\0132$.solarmodule.SolarE"
-  "ventAndStatusZGENB\004\200\265\030\001\0225\n\006GriMod\030\002 \001(\0132"
-  "%.commonmodule.ENG_GridConnectModeKind\"z"
-  "\n\013SolarStatus\0224\n\013statusValue\030\001 \001(\0132\031.com"
-  "monmodule.StatusValueB\004\200\265\030\001\0225\n\017solarStat"
-  "usZGEN\030\002 \001(\0132\034.solarmodule.SolarStatusZG"
-  "EN\"\322\001\n\022SolarStatusProfile\022@\n\021statusMessa"
-  "geInfo\030\001 \001(\0132\037.commonmodule.StatusMessag"
-  "eInfoB\004\200\265\030\001\022;\n\rsolarInverter\030\002 \001(\0132\032.sol"
-  "armodule.SolarInverterB\010\210\265\030\001\220\265\030\001\0227\n\013sola"
-  "rStatus\030\003 \001(\0132\030.solarmodule.SolarStatusB"
-  "\010\210\265\030\001\220\265\030\001:\004\300\363\030\001B\201\001\n\023openfmb.solarmoduleP"
-  "\001ZRgitlab.com/openfmb/psm/ops/protobuf/g"
-  "o-openfmb-ops-protobuf/v2/openfmb/solarm"
-  "odule\252\002\023openfmb.solarmoduleb\006proto3"
-  ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_solarmodule_2fsolarmodule_2eproto_deps[3] = {
-  &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
-  &::descriptor_table_google_2fprotobuf_2fwrappers_2eproto,
-  &::descriptor_table_uml_2eproto,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_solarmodule_2fsolarmodule_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_solarmodule_2fsolarmodule_2eproto = {
-  false, false, 3875, descriptor_table_protodef_solarmodule_2fsolarmodule_2eproto, "solarmodule/solarmodule.proto", 
-  &descriptor_table_solarmodule_2fsolarmodule_2eproto_once, descriptor_table_solarmodule_2fsolarmodule_2eproto_deps, 3, 17,
-  schemas, file_default_instances, TableStruct_solarmodule_2fsolarmodule_2eproto::offsets,
-  file_level_metadata_solarmodule_2fsolarmodule_2eproto, file_level_enum_descriptors_solarmodule_2fsolarmodule_2eproto, file_level_service_descriptors_solarmodule_2fsolarmodule_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
-descriptor_table_solarmodule_2fsolarmodule_2eproto_metadata_getter(int index) {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_solarmodule_2fsolarmodule_2eproto);
-  return descriptor_table_solarmodule_2fsolarmodule_2eproto.file_level_metadata[index];
+// This function exists to be marked as weak.
+// It can significantly speed up compilation by breaking up LLVM's SCC
+// in the .pb.cc translation units. Large translation units see a
+// reduction of more than 35% of walltime for optimized builds. Without
+// the weak attribute all the messages in the file, including all the
+// vtables and everything they use become part of the same SCC through
+// a cycle like:
+// GetMetadata -> descriptor table -> default instances ->
+//   vtables -> GetMetadata
+// By adding a weak function here we break the connection from the
+// individual vtables back into the descriptor table.
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_solarmodule_2fsolarmodule_2eproto_getter() {
+  return &descriptor_table_solarmodule_2fsolarmodule_2eproto;
 }
-
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_solarmodule_2fsolarmodule_2eproto(&descriptor_table_solarmodule_2fsolarmodule_2eproto);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
+static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_solarmodule_2fsolarmodule_2eproto(&descriptor_table_solarmodule_2fsolarmodule_2eproto);
 namespace solarmodule {
-
-// ===================================================================
-
-class SolarPoint::_Internal {
- public:
-  static const ::commonmodule::ControlSPC& frequencysetpointenabled(const SolarPoint* msg);
-  static const ::commonmodule::ENG_GridConnectModeKind& mode(const SolarPoint* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pcthzdroop(const SolarPoint* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pctvdroop(const SolarPoint* msg);
-  static const ::commonmodule::RampRate& ramprates(const SolarPoint* msg);
-  static const ::commonmodule::ControlSPC& reactivepwrsetpointenabled(const SolarPoint* msg);
-  static const ::commonmodule::ControlSPC& realpwrsetpointenabled(const SolarPoint* msg);
-  static const ::commonmodule::ControlSPC& reset(const SolarPoint* msg);
-  static const ::commonmodule::Optional_StateKind& state(const SolarPoint* msg);
-  static const ::commonmodule::ControlSPC& voltagesetpointenabled(const SolarPoint* msg);
-  static const ::commonmodule::ControlTimestamp& starttime(const SolarPoint* msg);
-};
-
-const ::commonmodule::ControlSPC&
-SolarPoint::_Internal::frequencysetpointenabled(const SolarPoint* msg) {
-  return *msg->frequencysetpointenabled_;
-}
-const ::commonmodule::ENG_GridConnectModeKind&
-SolarPoint::_Internal::mode(const SolarPoint* msg) {
-  return *msg->mode_;
-}
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-SolarPoint::_Internal::pcthzdroop(const SolarPoint* msg) {
-  return *msg->pcthzdroop_;
-}
-const PROTOBUF_NAMESPACE_ID::FloatValue&
-SolarPoint::_Internal::pctvdroop(const SolarPoint* msg) {
-  return *msg->pctvdroop_;
-}
-const ::commonmodule::RampRate&
-SolarPoint::_Internal::ramprates(const SolarPoint* msg) {
-  return *msg->ramprates_;
-}
-const ::commonmodule::ControlSPC&
-SolarPoint::_Internal::reactivepwrsetpointenabled(const SolarPoint* msg) {
-  return *msg->reactivepwrsetpointenabled_;
-}
-const ::commonmodule::ControlSPC&
-SolarPoint::_Internal::realpwrsetpointenabled(const SolarPoint* msg) {
-  return *msg->realpwrsetpointenabled_;
-}
-const ::commonmodule::ControlSPC&
-SolarPoint::_Internal::reset(const SolarPoint* msg) {
-  return *msg->reset_;
-}
-const ::commonmodule::Optional_StateKind&
-SolarPoint::_Internal::state(const SolarPoint* msg) {
-  return *msg->state_;
-}
-const ::commonmodule::ControlSPC&
-SolarPoint::_Internal::voltagesetpointenabled(const SolarPoint* msg) {
-  return *msg->voltagesetpointenabled_;
-}
-const ::commonmodule::ControlTimestamp&
-SolarPoint::_Internal::starttime(const SolarPoint* msg) {
-  return *msg->starttime_;
-}
-void SolarPoint::clear_frequencysetpointenabled() {
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
-    delete frequencysetpointenabled_;
-  }
-  frequencysetpointenabled_ = nullptr;
-}
-void SolarPoint::clear_mode() {
-  if (GetArena() == nullptr && mode_ != nullptr) {
-    delete mode_;
-  }
-  mode_ = nullptr;
-}
-void SolarPoint::clear_pcthzdroop() {
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
-    delete pcthzdroop_;
-  }
-  pcthzdroop_ = nullptr;
-}
-void SolarPoint::clear_pctvdroop() {
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
-    delete pctvdroop_;
-  }
-  pctvdroop_ = nullptr;
-}
-void SolarPoint::clear_ramprates() {
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
-    delete ramprates_;
-  }
-  ramprates_ = nullptr;
-}
-void SolarPoint::clear_reactivepwrsetpointenabled() {
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
-    delete reactivepwrsetpointenabled_;
-  }
-  reactivepwrsetpointenabled_ = nullptr;
-}
-void SolarPoint::clear_realpwrsetpointenabled() {
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
-    delete realpwrsetpointenabled_;
-  }
-  realpwrsetpointenabled_ = nullptr;
-}
-void SolarPoint::clear_reset() {
-  if (GetArena() == nullptr && reset_ != nullptr) {
-    delete reset_;
-  }
-  reset_ = nullptr;
-}
-void SolarPoint::clear_state() {
-  if (GetArena() == nullptr && state_ != nullptr) {
-    delete state_;
-  }
-  state_ = nullptr;
-}
-void SolarPoint::clear_voltagesetpointenabled() {
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
-    delete voltagesetpointenabled_;
-  }
-  voltagesetpointenabled_ = nullptr;
-}
-void SolarPoint::clear_starttime() {
-  if (GetArena() == nullptr && starttime_ != nullptr) {
-    delete starttime_;
-  }
-  starttime_ = nullptr;
-}
-SolarPoint::SolarPoint(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarPoint)
-}
-SolarPoint::SolarPoint(const SolarPoint& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_frequencysetpointenabled()) {
-    frequencysetpointenabled_ = new ::commonmodule::ControlSPC(*from.frequencysetpointenabled_);
-  } else {
-    frequencysetpointenabled_ = nullptr;
-  }
-  if (from._internal_has_mode()) {
-    mode_ = new ::commonmodule::ENG_GridConnectModeKind(*from.mode_);
-  } else {
-    mode_ = nullptr;
-  }
-  if (from._internal_has_pcthzdroop()) {
-    pcthzdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pcthzdroop_);
-  } else {
-    pcthzdroop_ = nullptr;
-  }
-  if (from._internal_has_pctvdroop()) {
-    pctvdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pctvdroop_);
-  } else {
-    pctvdroop_ = nullptr;
-  }
-  if (from._internal_has_ramprates()) {
-    ramprates_ = new ::commonmodule::RampRate(*from.ramprates_);
-  } else {
-    ramprates_ = nullptr;
-  }
-  if (from._internal_has_reactivepwrsetpointenabled()) {
-    reactivepwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from.reactivepwrsetpointenabled_);
-  } else {
-    reactivepwrsetpointenabled_ = nullptr;
-  }
-  if (from._internal_has_realpwrsetpointenabled()) {
-    realpwrsetpointenabled_ = new ::commonmodule::ControlSPC(*from.realpwrsetpointenabled_);
-  } else {
-    realpwrsetpointenabled_ = nullptr;
-  }
-  if (from._internal_has_reset()) {
-    reset_ = new ::commonmodule::ControlSPC(*from.reset_);
-  } else {
-    reset_ = nullptr;
-  }
-  if (from._internal_has_state()) {
-    state_ = new ::commonmodule::Optional_StateKind(*from.state_);
-  } else {
-    state_ = nullptr;
-  }
-  if (from._internal_has_voltagesetpointenabled()) {
-    voltagesetpointenabled_ = new ::commonmodule::ControlSPC(*from.voltagesetpointenabled_);
-  } else {
-    voltagesetpointenabled_ = nullptr;
-  }
-  if (from._internal_has_starttime()) {
-    starttime_ = new ::commonmodule::ControlTimestamp(*from.starttime_);
-  } else {
-    starttime_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarPoint)
-}
-
-void SolarPoint::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&frequencysetpointenabled_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&starttime_) -
-    reinterpret_cast<char*>(&frequencysetpointenabled_)) + sizeof(starttime_));
-}
-
-SolarPoint::~SolarPoint() {
-  // @@protoc_insertion_point(destructor:solarmodule.SolarPoint)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void SolarPoint::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete frequencysetpointenabled_;
-  if (this != internal_default_instance()) delete mode_;
-  if (this != internal_default_instance()) delete pcthzdroop_;
-  if (this != internal_default_instance()) delete pctvdroop_;
-  if (this != internal_default_instance()) delete ramprates_;
-  if (this != internal_default_instance()) delete reactivepwrsetpointenabled_;
-  if (this != internal_default_instance()) delete realpwrsetpointenabled_;
-  if (this != internal_default_instance()) delete reset_;
-  if (this != internal_default_instance()) delete state_;
-  if (this != internal_default_instance()) delete voltagesetpointenabled_;
-  if (this != internal_default_instance()) delete starttime_;
-}
-
-void SolarPoint::ArenaDtor(void* object) {
-  SolarPoint* _this = reinterpret_cast< SolarPoint* >(object);
-  (void)_this;
-}
-void SolarPoint::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void SolarPoint::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void SolarPoint::Clear() {
-// @@protoc_insertion_point(message_clear_start:solarmodule.SolarPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
-    delete frequencysetpointenabled_;
-  }
-  frequencysetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && mode_ != nullptr) {
-    delete mode_;
-  }
-  mode_ = nullptr;
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
-    delete pcthzdroop_;
-  }
-  pcthzdroop_ = nullptr;
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
-    delete pctvdroop_;
-  }
-  pctvdroop_ = nullptr;
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
-    delete ramprates_;
-  }
-  ramprates_ = nullptr;
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
-    delete reactivepwrsetpointenabled_;
-  }
-  reactivepwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
-    delete realpwrsetpointenabled_;
-  }
-  realpwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && reset_ != nullptr) {
-    delete reset_;
-  }
-  reset_ = nullptr;
-  if (GetArena() == nullptr && state_ != nullptr) {
-    delete state_;
-  }
-  state_ = nullptr;
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
-    delete voltagesetpointenabled_;
-  }
-  voltagesetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && starttime_ != nullptr) {
-    delete starttime_;
-  }
-  starttime_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* SolarPoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .commonmodule.ControlSPC frequencySetPointEnabled = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_frequencysetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ENG_GridConnectModeKind mode = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_mode(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .google.protobuf.FloatValue pctHzDroop = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_pcthzdroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .google.protobuf.FloatValue pctVDroop = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_pctvdroop(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.RampRate rampRates = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ctx->ParseMessage(_internal_mutable_ramprates(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(_internal_mutable_reactivepwrsetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC realPwrSetPointEnabled = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ctx->ParseMessage(_internal_mutable_realpwrsetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC reset = 8;
-      case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          ptr = ctx->ParseMessage(_internal_mutable_reset(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.Optional_StateKind state = 9;
-      case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
-          ptr = ctx->ParseMessage(_internal_mutable_state(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlSPC voltageSetPointEnabled = 10;
-      case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
-          ptr = ctx->ParseMessage(_internal_mutable_voltagesetpointenabled(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.ControlTimestamp startTime = 11 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
-          ptr = ctx->ParseMessage(_internal_mutable_starttime(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* SolarPoint::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlSPC frequencySetPointEnabled = 1;
-  if (this->has_frequencysetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::frequencysetpointenabled(this), target, stream);
-  }
-
-  // .commonmodule.ENG_GridConnectModeKind mode = 2;
-  if (this->has_mode()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::mode(this), target, stream);
-  }
-
-  // .google.protobuf.FloatValue pctHzDroop = 3;
-  if (this->has_pcthzdroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::pcthzdroop(this), target, stream);
-  }
-
-  // .google.protobuf.FloatValue pctVDroop = 4;
-  if (this->has_pctvdroop()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::pctvdroop(this), target, stream);
-  }
-
-  // .commonmodule.RampRate rampRates = 5;
-  if (this->has_ramprates()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::ramprates(this), target, stream);
-  }
-
-  // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 6;
-  if (this->has_reactivepwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::reactivepwrsetpointenabled(this), target, stream);
-  }
-
-  // .commonmodule.ControlSPC realPwrSetPointEnabled = 7;
-  if (this->has_realpwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::realpwrsetpointenabled(this), target, stream);
-  }
-
-  // .commonmodule.ControlSPC reset = 8;
-  if (this->has_reset()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::reset(this), target, stream);
-  }
-
-  // .commonmodule.Optional_StateKind state = 9;
-  if (this->has_state()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        9, _Internal::state(this), target, stream);
-  }
-
-  // .commonmodule.ControlSPC voltageSetPointEnabled = 10;
-  if (this->has_voltagesetpointenabled()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        10, _Internal::voltagesetpointenabled(this), target, stream);
-  }
-
-  // .commonmodule.ControlTimestamp startTime = 11 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_starttime()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        11, _Internal::starttime(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarPoint)
-  return target;
-}
-
-size_t SolarPoint::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarPoint)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlSPC frequencySetPointEnabled = 1;
-  if (this->has_frequencysetpointenabled()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *frequencysetpointenabled_);
-  }
-
-  // .commonmodule.ENG_GridConnectModeKind mode = 2;
-  if (this->has_mode()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *mode_);
-  }
-
-  // .google.protobuf.FloatValue pctHzDroop = 3;
-  if (this->has_pcthzdroop()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *pcthzdroop_);
-  }
-
-  // .google.protobuf.FloatValue pctVDroop = 4;
-  if (this->has_pctvdroop()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *pctvdroop_);
-  }
-
-  // .commonmodule.RampRate rampRates = 5;
-  if (this->has_ramprates()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ramprates_);
-  }
-
-  // .commonmodule.ControlSPC reactivePwrSetPointEnabled = 6;
-  if (this->has_reactivepwrsetpointenabled()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *reactivepwrsetpointenabled_);
-  }
-
-  // .commonmodule.ControlSPC realPwrSetPointEnabled = 7;
-  if (this->has_realpwrsetpointenabled()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *realpwrsetpointenabled_);
-  }
-
-  // .commonmodule.ControlSPC reset = 8;
-  if (this->has_reset()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *reset_);
-  }
-
-  // .commonmodule.Optional_StateKind state = 9;
-  if (this->has_state()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *state_);
-  }
-
-  // .commonmodule.ControlSPC voltageSetPointEnabled = 10;
-  if (this->has_voltagesetpointenabled()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *voltagesetpointenabled_);
-  }
-
-  // .commonmodule.ControlTimestamp startTime = 11 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_starttime()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *starttime_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void SolarPoint::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarPoint)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SolarPoint* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarPoint>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarPoint)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarPoint)
-    MergeFrom(*source);
-  }
-}
-
-void SolarPoint::MergeFrom(const SolarPoint& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarPoint)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_frequencysetpointenabled()) {
-    _internal_mutable_frequencysetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_frequencysetpointenabled());
-  }
-  if (from.has_mode()) {
-    _internal_mutable_mode()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from._internal_mode());
-  }
-  if (from.has_pcthzdroop()) {
-    _internal_mutable_pcthzdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pcthzdroop());
-  }
-  if (from.has_pctvdroop()) {
-    _internal_mutable_pctvdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pctvdroop());
-  }
-  if (from.has_ramprates()) {
-    _internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from._internal_ramprates());
-  }
-  if (from.has_reactivepwrsetpointenabled()) {
-    _internal_mutable_reactivepwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_reactivepwrsetpointenabled());
-  }
-  if (from.has_realpwrsetpointenabled()) {
-    _internal_mutable_realpwrsetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_realpwrsetpointenabled());
-  }
-  if (from.has_reset()) {
-    _internal_mutable_reset()->::commonmodule::ControlSPC::MergeFrom(from._internal_reset());
-  }
-  if (from.has_state()) {
-    _internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from._internal_state());
-  }
-  if (from.has_voltagesetpointenabled()) {
-    _internal_mutable_voltagesetpointenabled()->::commonmodule::ControlSPC::MergeFrom(from._internal_voltagesetpointenabled());
-  }
-  if (from.has_starttime()) {
-    _internal_mutable_starttime()->::commonmodule::ControlTimestamp::MergeFrom(from._internal_starttime());
-  }
-}
-
-void SolarPoint::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarPoint)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void SolarPoint::CopyFrom(const SolarPoint& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarPoint)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool SolarPoint::IsInitialized() const {
-  return true;
-}
-
-void SolarPoint::InternalSwap(SolarPoint* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SolarPoint, starttime_)
-      + sizeof(SolarPoint::starttime_)
-      - PROTOBUF_FIELD_OFFSET(SolarPoint, frequencysetpointenabled_)>(
-          reinterpret_cast<char*>(&frequencysetpointenabled_),
-          reinterpret_cast<char*>(&other->frequencysetpointenabled_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata SolarPoint::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-class SolarCSG::_Internal {
- public:
-};
-
-SolarCSG::SolarCSG(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  crvpts_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarCSG)
-}
-SolarCSG::SolarCSG(const SolarCSG& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      crvpts_(from.crvpts_) {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarCSG)
-}
-
-void SolarCSG::SharedCtor() {
-}
-
-SolarCSG::~SolarCSG() {
-  // @@protoc_insertion_point(destructor:solarmodule.SolarCSG)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void SolarCSG::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-}
-
-void SolarCSG::ArenaDtor(void* object) {
-  SolarCSG* _this = reinterpret_cast< SolarCSG* >(object);
-  (void)_this;
-}
-void SolarCSG::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void SolarCSG::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void SolarCSG::Clear() {
-// @@protoc_insertion_point(message_clear_start:solarmodule.SolarCSG)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  crvpts_.Clear();
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* SolarCSG::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // repeated .solarmodule.SolarPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_crvpts(), ptr);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* SolarCSG::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarCSG)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated .solarmodule.SolarPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_crvpts_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_crvpts(i), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarCSG)
-  return target;
-}
-
-size_t SolarCSG::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarCSG)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // repeated .solarmodule.SolarPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  total_size += 1UL * this->_internal_crvpts_size();
-  for (const auto& msg : this->crvpts_) {
-    total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void SolarCSG::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarCSG)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SolarCSG* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarCSG>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarCSG)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarCSG)
-    MergeFrom(*source);
-  }
-}
-
-void SolarCSG::MergeFrom(const SolarCSG& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarCSG)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  crvpts_.MergeFrom(from.crvpts_);
-}
-
-void SolarCSG::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarCSG)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void SolarCSG::CopyFrom(const SolarCSG& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarCSG)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool SolarCSG::IsInitialized() const {
-  return true;
-}
-
-void SolarCSG::InternalSwap(SolarCSG* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  crvpts_.InternalSwap(&other->crvpts_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata SolarCSG::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-class SolarControlScheduleFSCH::_Internal {
- public:
-  static const ::solarmodule::SolarCSG& valdcsg(const SolarControlScheduleFSCH* msg);
-};
-
-const ::solarmodule::SolarCSG&
-SolarControlScheduleFSCH::_Internal::valdcsg(const SolarControlScheduleFSCH* msg) {
-  return *msg->valdcsg_;
-}
-SolarControlScheduleFSCH::SolarControlScheduleFSCH(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarControlScheduleFSCH)
-}
-SolarControlScheduleFSCH::SolarControlScheduleFSCH(const SolarControlScheduleFSCH& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_valdcsg()) {
-    valdcsg_ = new ::solarmodule::SolarCSG(*from.valdcsg_);
-  } else {
-    valdcsg_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarControlScheduleFSCH)
-}
-
-void SolarControlScheduleFSCH::SharedCtor() {
-valdcsg_ = nullptr;
-}
-
-SolarControlScheduleFSCH::~SolarControlScheduleFSCH() {
-  // @@protoc_insertion_point(destructor:solarmodule.SolarControlScheduleFSCH)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void SolarControlScheduleFSCH::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete valdcsg_;
-}
-
-void SolarControlScheduleFSCH::ArenaDtor(void* object) {
-  SolarControlScheduleFSCH* _this = reinterpret_cast< SolarControlScheduleFSCH* >(object);
-  (void)_this;
-}
-void SolarControlScheduleFSCH::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void SolarControlScheduleFSCH::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void SolarControlScheduleFSCH::Clear() {
-// @@protoc_insertion_point(message_clear_start:solarmodule.SolarControlScheduleFSCH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && valdcsg_ != nullptr) {
-    delete valdcsg_;
-  }
-  valdcsg_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* SolarControlScheduleFSCH::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .solarmodule.SolarCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_valdcsg(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* SolarControlScheduleFSCH::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarControlScheduleFSCH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .solarmodule.SolarCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_valdcsg()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::valdcsg(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarControlScheduleFSCH)
-  return target;
-}
-
-size_t SolarControlScheduleFSCH::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarControlScheduleFSCH)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .solarmodule.SolarCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_valdcsg()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *valdcsg_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void SolarControlScheduleFSCH::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarControlScheduleFSCH)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SolarControlScheduleFSCH* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarControlScheduleFSCH>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarControlScheduleFSCH)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarControlScheduleFSCH)
-    MergeFrom(*source);
-  }
-}
-
-void SolarControlScheduleFSCH::MergeFrom(const SolarControlScheduleFSCH& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarControlScheduleFSCH)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_valdcsg()) {
-    _internal_mutable_valdcsg()->::solarmodule::SolarCSG::MergeFrom(from._internal_valdcsg());
-  }
-}
-
-void SolarControlScheduleFSCH::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarControlScheduleFSCH)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void SolarControlScheduleFSCH::CopyFrom(const SolarControlScheduleFSCH& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarControlScheduleFSCH)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool SolarControlScheduleFSCH::IsInitialized() const {
-  return true;
-}
-
-void SolarControlScheduleFSCH::InternalSwap(SolarControlScheduleFSCH* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(valdcsg_, other->valdcsg_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata SolarControlScheduleFSCH::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-class SolarControlFSCC::_Internal {
- public:
-  static const ::commonmodule::ControlFSCC& controlfscc(const SolarControlFSCC* msg);
-  static const ::solarmodule::SolarControlScheduleFSCH& solarcontrolschedulefsch(const SolarControlFSCC* msg);
-};
-
-const ::commonmodule::ControlFSCC&
-SolarControlFSCC::_Internal::controlfscc(const SolarControlFSCC* msg) {
-  return *msg->controlfscc_;
-}
-const ::solarmodule::SolarControlScheduleFSCH&
-SolarControlFSCC::_Internal::solarcontrolschedulefsch(const SolarControlFSCC* msg) {
-  return *msg->solarcontrolschedulefsch_;
-}
-void SolarControlFSCC::clear_controlfscc() {
-  if (GetArena() == nullptr && controlfscc_ != nullptr) {
-    delete controlfscc_;
-  }
-  controlfscc_ = nullptr;
-}
-SolarControlFSCC::SolarControlFSCC(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarControlFSCC)
-}
-SolarControlFSCC::SolarControlFSCC(const SolarControlFSCC& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_controlfscc()) {
-    controlfscc_ = new ::commonmodule::ControlFSCC(*from.controlfscc_);
-  } else {
-    controlfscc_ = nullptr;
-  }
-  if (from._internal_has_solarcontrolschedulefsch()) {
-    solarcontrolschedulefsch_ = new ::solarmodule::SolarControlScheduleFSCH(*from.solarcontrolschedulefsch_);
-  } else {
-    solarcontrolschedulefsch_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarControlFSCC)
-}
-
-void SolarControlFSCC::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlfscc_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&solarcontrolschedulefsch_) -
-    reinterpret_cast<char*>(&controlfscc_)) + sizeof(solarcontrolschedulefsch_));
-}
-
-SolarControlFSCC::~SolarControlFSCC() {
-  // @@protoc_insertion_point(destructor:solarmodule.SolarControlFSCC)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void SolarControlFSCC::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlfscc_;
-  if (this != internal_default_instance()) delete solarcontrolschedulefsch_;
-}
-
-void SolarControlFSCC::ArenaDtor(void* object) {
-  SolarControlFSCC* _this = reinterpret_cast< SolarControlFSCC* >(object);
-  (void)_this;
-}
-void SolarControlFSCC::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void SolarControlFSCC::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void SolarControlFSCC::Clear() {
-// @@protoc_insertion_point(message_clear_start:solarmodule.SolarControlFSCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && controlfscc_ != nullptr) {
-    delete controlfscc_;
-  }
-  controlfscc_ = nullptr;
-  if (GetArena() == nullptr && solarcontrolschedulefsch_ != nullptr) {
-    delete solarcontrolschedulefsch_;
-  }
-  solarcontrolschedulefsch_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* SolarControlFSCC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_controlfscc(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .solarmodule.SolarControlScheduleFSCH SolarControlScheduleFSCH = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_solarcontrolschedulefsch(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* SolarControlFSCC::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarControlFSCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlfscc()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlfscc(this), target, stream);
-  }
-
-  // .solarmodule.SolarControlScheduleFSCH SolarControlScheduleFSCH = 2;
-  if (this->has_solarcontrolschedulefsch()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::solarcontrolschedulefsch(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarControlFSCC)
-  return target;
-}
-
-size_t SolarControlFSCC::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarControlFSCC)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlfscc()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlfscc_);
-  }
-
-  // .solarmodule.SolarControlScheduleFSCH SolarControlScheduleFSCH = 2;
-  if (this->has_solarcontrolschedulefsch()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *solarcontrolschedulefsch_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void SolarControlFSCC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarControlFSCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SolarControlFSCC* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarControlFSCC>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarControlFSCC)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarControlFSCC)
-    MergeFrom(*source);
-  }
-}
-
-void SolarControlFSCC::MergeFrom(const SolarControlFSCC& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarControlFSCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_controlfscc()) {
-    _internal_mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(from._internal_controlfscc());
-  }
-  if (from.has_solarcontrolschedulefsch()) {
-    _internal_mutable_solarcontrolschedulefsch()->::solarmodule::SolarControlScheduleFSCH::MergeFrom(from._internal_solarcontrolschedulefsch());
-  }
-}
-
-void SolarControlFSCC::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarControlFSCC)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void SolarControlFSCC::CopyFrom(const SolarControlFSCC& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarControlFSCC)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool SolarControlFSCC::IsInitialized() const {
-  return true;
-}
-
-void SolarControlFSCC::InternalSwap(SolarControlFSCC* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SolarControlFSCC, solarcontrolschedulefsch_)
-      + sizeof(SolarControlFSCC::solarcontrolschedulefsch_)
-      - PROTOBUF_FIELD_OFFSET(SolarControlFSCC, controlfscc_)>(
-          reinterpret_cast<char*>(&controlfscc_),
-          reinterpret_cast<char*>(&other->controlfscc_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata SolarControlFSCC::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
-class SolarControl::_Internal {
- public:
-  static const ::commonmodule::ControlValue& controlvalue(const SolarControl* msg);
-  static const ::commonmodule::CheckConditions& check(const SolarControl* msg);
-  static const ::solarmodule::SolarControlFSCC& solarcontrolfscc(const SolarControl* msg);
-};
-
-const ::commonmodule::ControlValue&
-SolarControl::_Internal::controlvalue(const SolarControl* msg) {
-  return *msg->controlvalue_;
-}
-const ::commonmodule::CheckConditions&
-SolarControl::_Internal::check(const SolarControl* msg) {
-  return *msg->check_;
-}
-const ::solarmodule::SolarControlFSCC&
-SolarControl::_Internal::solarcontrolfscc(const SolarControl* msg) {
-  return *msg->solarcontrolfscc_;
-}
-void SolarControl::clear_controlvalue() {
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
-  }
-  controlvalue_ = nullptr;
-}
-void SolarControl::clear_check() {
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
-  }
-  check_ = nullptr;
-}
-SolarControl::SolarControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarControl)
-}
-SolarControl::SolarControl(const SolarControl& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_controlvalue()) {
-    controlvalue_ = new ::commonmodule::ControlValue(*from.controlvalue_);
-  } else {
-    controlvalue_ = nullptr;
-  }
-  if (from._internal_has_check()) {
-    check_ = new ::commonmodule::CheckConditions(*from.check_);
-  } else {
-    check_ = nullptr;
-  }
-  if (from._internal_has_solarcontrolfscc()) {
-    solarcontrolfscc_ = new ::solarmodule::SolarControlFSCC(*from.solarcontrolfscc_);
-  } else {
-    solarcontrolfscc_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarControl)
-}
-
-void SolarControl::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&solarcontrolfscc_) -
-    reinterpret_cast<char*>(&controlvalue_)) + sizeof(solarcontrolfscc_));
-}
-
-SolarControl::~SolarControl() {
-  // @@protoc_insertion_point(destructor:solarmodule.SolarControl)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void SolarControl::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlvalue_;
-  if (this != internal_default_instance()) delete check_;
-  if (this != internal_default_instance()) delete solarcontrolfscc_;
-}
-
-void SolarControl::ArenaDtor(void* object) {
-  SolarControl* _this = reinterpret_cast< SolarControl* >(object);
-  (void)_this;
-}
-void SolarControl::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void SolarControl::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void SolarControl::Clear() {
-// @@protoc_insertion_point(message_clear_start:solarmodule.SolarControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
-  }
-  controlvalue_ = nullptr;
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
-  }
-  check_ = nullptr;
-  if (GetArena() == nullptr && solarcontrolfscc_ != nullptr) {
-    delete solarcontrolfscc_;
-  }
-  solarcontrolfscc_ = nullptr;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* SolarControl::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_controlvalue(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .commonmodule.CheckConditions check = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .solarmodule.SolarControlFSCC solarControlFSCC = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr = ctx->ParseMessage(_internal_mutable_solarcontrolfscc(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* SolarControl::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlvalue(this), target, stream);
-  }
-
-  // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::check(this), target, stream);
-  }
-
-  // .solarmodule.SolarControlFSCC solarControlFSCC = 3;
-  if (this->has_solarcontrolfscc()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::solarcontrolfscc(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarControl)
-  return target;
-}
-
-size_t SolarControl::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarControl)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlvalue_);
-  }
-
-  // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *check_);
-  }
-
-  // .solarmodule.SolarControlFSCC solarControlFSCC = 3;
-  if (this->has_solarcontrolfscc()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *solarcontrolfscc_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void SolarControl::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SolarControl* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarControl>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarControl)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarControl)
-    MergeFrom(*source);
-  }
-}
-
-void SolarControl::MergeFrom(const SolarControl& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.has_controlvalue()) {
-    _internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(from._internal_controlvalue());
-  }
-  if (from.has_check()) {
-    _internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(from._internal_check());
-  }
-  if (from.has_solarcontrolfscc()) {
-    _internal_mutable_solarcontrolfscc()->::solarmodule::SolarControlFSCC::MergeFrom(from._internal_solarcontrolfscc());
-  }
-}
-
-void SolarControl::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarControl)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void SolarControl::CopyFrom(const SolarControl& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarControl)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool SolarControl::IsInitialized() const {
-  return true;
-}
-
-void SolarControl::InternalSwap(SolarControl* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SolarControl, solarcontrolfscc_)
-      + sizeof(SolarControl::solarcontrolfscc_)
-      - PROTOBUF_FIELD_OFFSET(SolarControl, controlvalue_)>(
-          reinterpret_cast<char*>(&controlvalue_),
-          reinterpret_cast<char*>(&other->controlvalue_));
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata SolarControl::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
 // ===================================================================
 
 class SolarInverter::_Internal {
@@ -2218,183 +1086,169 @@ class SolarInverter::_Internal {
 
 const ::commonmodule::ConductingEquipment&
 SolarInverter::_Internal::conductingequipment(const SolarInverter* msg) {
-  return *msg->conductingequipment_;
+  return *msg->_impl_.conductingequipment_;
 }
 void SolarInverter::clear_conductingequipment() {
-  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
-    delete conductingequipment_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipment_ != nullptr) {
+    delete _impl_.conductingequipment_;
   }
-  conductingequipment_ = nullptr;
+  _impl_.conductingequipment_ = nullptr;
 }
 SolarInverter::SolarInverter(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:solarmodule.SolarInverter)
 }
 SolarInverter::SolarInverter(const SolarInverter& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarInverter* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipment_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_conductingequipment()) {
-    conductingequipment_ = new ::commonmodule::ConductingEquipment(*from.conductingequipment_);
-  } else {
-    conductingequipment_ = nullptr;
+    _this->_impl_.conductingequipment_ = new ::commonmodule::ConductingEquipment(*from._impl_.conductingequipment_);
   }
   // @@protoc_insertion_point(copy_constructor:solarmodule.SolarInverter)
 }
 
-void SolarInverter::SharedCtor() {
-conductingequipment_ = nullptr;
+inline void SolarInverter::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipment_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SolarInverter::~SolarInverter() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarInverter)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void SolarInverter::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete conductingequipment_;
+inline void SolarInverter::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.conductingequipment_;
 }
 
-void SolarInverter::ArenaDtor(void* object) {
-  SolarInverter* _this = reinterpret_cast< SolarInverter* >(object);
-  (void)_this;
-}
-void SolarInverter::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SolarInverter::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SolarInverter::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarInverter)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
-    delete conductingequipment_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipment_ != nullptr) {
+    delete _impl_.conductingequipment_;
   }
-  conductingequipment_ = nullptr;
+  _impl_.conductingequipment_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SolarInverter::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SolarInverter::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_conductingequipment(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SolarInverter::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* SolarInverter::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarInverter)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipment()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_conductingequipment()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::conductingequipment(this), target, stream);
+      InternalWriteMessage(1, _Internal::conductingequipment(this),
+        _Internal::conductingequipment(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarInverter)
   return target;
 }
 
-size_t SolarInverter::ByteSizeLong() const {
+::size_t SolarInverter::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarInverter)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipment()) {
+  if (this->_internal_has_conductingequipment()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *conductingequipment_);
+        *_impl_.conductingequipment_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SolarInverter::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarInverter)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SolarInverter* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarInverter>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarInverter)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarInverter)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarInverter::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarInverter::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarInverter::GetClassData() const { return &_class_data_; }
 
-void SolarInverter::MergeFrom(const SolarInverter& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarInverter)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void SolarInverter::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarInverter*>(&to_msg);
+  auto& from = static_cast<const SolarInverter&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarInverter)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_conductingequipment()) {
-    _internal_mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(from._internal_conductingequipment());
+  if (from._internal_has_conductingequipment()) {
+    _this->_internal_mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(
+        from._internal_conductingequipment());
   }
-}
-
-void SolarInverter::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarInverter)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SolarInverter::CopyFrom(const SolarInverter& from) {
@@ -2410,15 +1264,3575 @@ bool SolarInverter::IsInitialized() const {
 
 void SolarInverter::InternalSwap(SolarInverter* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(conductingequipment_, other->conductingequipment_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.conductingequipment_, other->_impl_.conductingequipment_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SolarInverter::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[0]);
+}
+// ===================================================================
+
+class SolarCapabilityConfiguration::_Internal {
+ public:
+  static const ::commonmodule::SourceCapabilityConfiguration& sourcecapabilityconfiguration(const SolarCapabilityConfiguration* msg);
+};
+
+const ::commonmodule::SourceCapabilityConfiguration&
+SolarCapabilityConfiguration::_Internal::sourcecapabilityconfiguration(const SolarCapabilityConfiguration* msg) {
+  return *msg->_impl_.sourcecapabilityconfiguration_;
+}
+void SolarCapabilityConfiguration::clear_sourcecapabilityconfiguration() {
+  if (GetArenaForAllocation() == nullptr && _impl_.sourcecapabilityconfiguration_ != nullptr) {
+    delete _impl_.sourcecapabilityconfiguration_;
+  }
+  _impl_.sourcecapabilityconfiguration_ = nullptr;
+}
+SolarCapabilityConfiguration::SolarCapabilityConfiguration(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarCapabilityConfiguration)
+}
+SolarCapabilityConfiguration::SolarCapabilityConfiguration(const SolarCapabilityConfiguration& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarCapabilityConfiguration* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.sourcecapabilityconfiguration_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_sourcecapabilityconfiguration()) {
+    _this->_impl_.sourcecapabilityconfiguration_ = new ::commonmodule::SourceCapabilityConfiguration(*from._impl_.sourcecapabilityconfiguration_);
+  }
+  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarCapabilityConfiguration)
 }
 
+inline void SolarCapabilityConfiguration::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.sourcecapabilityconfiguration_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
 
+SolarCapabilityConfiguration::~SolarCapabilityConfiguration() {
+  // @@protoc_insertion_point(destructor:solarmodule.SolarCapabilityConfiguration)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SolarCapabilityConfiguration::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.sourcecapabilityconfiguration_;
+}
+
+void SolarCapabilityConfiguration::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SolarCapabilityConfiguration::Clear() {
+// @@protoc_insertion_point(message_clear_start:solarmodule.SolarCapabilityConfiguration)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.sourcecapabilityconfiguration_ != nullptr) {
+    delete _impl_.sourcecapabilityconfiguration_;
+  }
+  _impl_.sourcecapabilityconfiguration_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SolarCapabilityConfiguration::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.SourceCapabilityConfiguration sourceCapabilityConfiguration = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_sourcecapabilityconfiguration(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* SolarCapabilityConfiguration::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarCapabilityConfiguration)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.SourceCapabilityConfiguration sourceCapabilityConfiguration = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_sourcecapabilityconfiguration()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::sourcecapabilityconfiguration(this),
+        _Internal::sourcecapabilityconfiguration(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarCapabilityConfiguration)
+  return target;
+}
+
+::size_t SolarCapabilityConfiguration::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarCapabilityConfiguration)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.SourceCapabilityConfiguration sourceCapabilityConfiguration = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_sourcecapabilityconfiguration()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.sourcecapabilityconfiguration_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarCapabilityConfiguration::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarCapabilityConfiguration::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarCapabilityConfiguration::GetClassData() const { return &_class_data_; }
+
+
+void SolarCapabilityConfiguration::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarCapabilityConfiguration*>(&to_msg);
+  auto& from = static_cast<const SolarCapabilityConfiguration&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarCapabilityConfiguration)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_sourcecapabilityconfiguration()) {
+    _this->_internal_mutable_sourcecapabilityconfiguration()->::commonmodule::SourceCapabilityConfiguration::MergeFrom(
+        from._internal_sourcecapabilityconfiguration());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SolarCapabilityConfiguration::CopyFrom(const SolarCapabilityConfiguration& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarCapabilityConfiguration)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SolarCapabilityConfiguration::IsInitialized() const {
+  return true;
+}
+
+void SolarCapabilityConfiguration::InternalSwap(SolarCapabilityConfiguration* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.sourcecapabilityconfiguration_, other->_impl_.sourcecapabilityconfiguration_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SolarCapabilityConfiguration::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[1]);
+}
+// ===================================================================
+
+class SolarCapabilityOverride::_Internal {
+ public:
+  static const ::commonmodule::IdentifiedObject& identifiedobject(const SolarCapabilityOverride* msg);
+  static const ::solarmodule::SolarCapabilityConfiguration& solarcapabilityconfiguration(const SolarCapabilityOverride* msg);
+};
+
+const ::commonmodule::IdentifiedObject&
+SolarCapabilityOverride::_Internal::identifiedobject(const SolarCapabilityOverride* msg) {
+  return *msg->_impl_.identifiedobject_;
+}
+const ::solarmodule::SolarCapabilityConfiguration&
+SolarCapabilityOverride::_Internal::solarcapabilityconfiguration(const SolarCapabilityOverride* msg) {
+  return *msg->_impl_.solarcapabilityconfiguration_;
+}
+void SolarCapabilityOverride::clear_identifiedobject() {
+  if (GetArenaForAllocation() == nullptr && _impl_.identifiedobject_ != nullptr) {
+    delete _impl_.identifiedobject_;
+  }
+  _impl_.identifiedobject_ = nullptr;
+}
+SolarCapabilityOverride::SolarCapabilityOverride(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarCapabilityOverride)
+}
+SolarCapabilityOverride::SolarCapabilityOverride(const SolarCapabilityOverride& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarCapabilityOverride* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.identifiedobject_){nullptr}
+    , decltype(_impl_.solarcapabilityconfiguration_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_identifiedobject()) {
+    _this->_impl_.identifiedobject_ = new ::commonmodule::IdentifiedObject(*from._impl_.identifiedobject_);
+  }
+  if (from._internal_has_solarcapabilityconfiguration()) {
+    _this->_impl_.solarcapabilityconfiguration_ = new ::solarmodule::SolarCapabilityConfiguration(*from._impl_.solarcapabilityconfiguration_);
+  }
+  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarCapabilityOverride)
+}
+
+inline void SolarCapabilityOverride::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.identifiedobject_){nullptr}
+    , decltype(_impl_.solarcapabilityconfiguration_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+SolarCapabilityOverride::~SolarCapabilityOverride() {
+  // @@protoc_insertion_point(destructor:solarmodule.SolarCapabilityOverride)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SolarCapabilityOverride::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.identifiedobject_;
+  if (this != internal_default_instance()) delete _impl_.solarcapabilityconfiguration_;
+}
+
+void SolarCapabilityOverride::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SolarCapabilityOverride::Clear() {
+// @@protoc_insertion_point(message_clear_start:solarmodule.SolarCapabilityOverride)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.identifiedobject_ != nullptr) {
+    delete _impl_.identifiedobject_;
+  }
+  _impl_.identifiedobject_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solarcapabilityconfiguration_ != nullptr) {
+    delete _impl_.solarcapabilityconfiguration_;
+  }
+  _impl_.solarcapabilityconfiguration_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SolarCapabilityOverride::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_identifiedobject(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .solarmodule.SolarCapabilityConfiguration solarCapabilityConfiguration = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarcapabilityconfiguration(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* SolarCapabilityOverride::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarCapabilityOverride)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_identifiedobject()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::identifiedobject(this),
+        _Internal::identifiedobject(this).GetCachedSize(), target, stream);
+  }
+
+  // .solarmodule.SolarCapabilityConfiguration solarCapabilityConfiguration = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_solarcapabilityconfiguration()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::solarcapabilityconfiguration(this),
+        _Internal::solarcapabilityconfiguration(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarCapabilityOverride)
+  return target;
+}
+
+::size_t SolarCapabilityOverride::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarCapabilityOverride)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.IdentifiedObject identifiedObject = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_identifiedobject()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.identifiedobject_);
+  }
+
+  // .solarmodule.SolarCapabilityConfiguration solarCapabilityConfiguration = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_solarcapabilityconfiguration()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.solarcapabilityconfiguration_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarCapabilityOverride::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarCapabilityOverride::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarCapabilityOverride::GetClassData() const { return &_class_data_; }
+
+
+void SolarCapabilityOverride::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarCapabilityOverride*>(&to_msg);
+  auto& from = static_cast<const SolarCapabilityOverride&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarCapabilityOverride)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_identifiedobject()) {
+    _this->_internal_mutable_identifiedobject()->::commonmodule::IdentifiedObject::MergeFrom(
+        from._internal_identifiedobject());
+  }
+  if (from._internal_has_solarcapabilityconfiguration()) {
+    _this->_internal_mutable_solarcapabilityconfiguration()->::solarmodule::SolarCapabilityConfiguration::MergeFrom(
+        from._internal_solarcapabilityconfiguration());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SolarCapabilityOverride::CopyFrom(const SolarCapabilityOverride& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarCapabilityOverride)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SolarCapabilityOverride::IsInitialized() const {
+  return true;
+}
+
+void SolarCapabilityOverride::InternalSwap(SolarCapabilityOverride* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarCapabilityOverride, _impl_.solarcapabilityconfiguration_)
+      + sizeof(SolarCapabilityOverride::_impl_.solarcapabilityconfiguration_)
+      - PROTOBUF_FIELD_OFFSET(SolarCapabilityOverride, _impl_.identifiedobject_)>(
+          reinterpret_cast<char*>(&_impl_.identifiedobject_),
+          reinterpret_cast<char*>(&other->_impl_.identifiedobject_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SolarCapabilityOverride::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[2]);
+}
+// ===================================================================
+
+class SolarCapabilityOverrideProfile::_Internal {
+ public:
+  static const ::commonmodule::CapabilityMessageInfo& capabilitymessageinfo(const SolarCapabilityOverrideProfile* msg);
+  static const ::solarmodule::SolarCapabilityOverride& solarcapabilityoverride(const SolarCapabilityOverrideProfile* msg);
+  static const ::solarmodule::SolarInverter& solarinverter(const SolarCapabilityOverrideProfile* msg);
+};
+
+const ::commonmodule::CapabilityMessageInfo&
+SolarCapabilityOverrideProfile::_Internal::capabilitymessageinfo(const SolarCapabilityOverrideProfile* msg) {
+  return *msg->_impl_.capabilitymessageinfo_;
+}
+const ::solarmodule::SolarCapabilityOverride&
+SolarCapabilityOverrideProfile::_Internal::solarcapabilityoverride(const SolarCapabilityOverrideProfile* msg) {
+  return *msg->_impl_.solarcapabilityoverride_;
+}
+const ::solarmodule::SolarInverter&
+SolarCapabilityOverrideProfile::_Internal::solarinverter(const SolarCapabilityOverrideProfile* msg) {
+  return *msg->_impl_.solarinverter_;
+}
+void SolarCapabilityOverrideProfile::clear_capabilitymessageinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.capabilitymessageinfo_ != nullptr) {
+    delete _impl_.capabilitymessageinfo_;
+  }
+  _impl_.capabilitymessageinfo_ = nullptr;
+}
+SolarCapabilityOverrideProfile::SolarCapabilityOverrideProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarCapabilityOverrideProfile)
+}
+SolarCapabilityOverrideProfile::SolarCapabilityOverrideProfile(const SolarCapabilityOverrideProfile& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarCapabilityOverrideProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.capabilitymessageinfo_){nullptr}
+    , decltype(_impl_.solarcapabilityoverride_){nullptr}
+    , decltype(_impl_.solarinverter_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_capabilitymessageinfo()) {
+    _this->_impl_.capabilitymessageinfo_ = new ::commonmodule::CapabilityMessageInfo(*from._impl_.capabilitymessageinfo_);
+  }
+  if (from._internal_has_solarcapabilityoverride()) {
+    _this->_impl_.solarcapabilityoverride_ = new ::solarmodule::SolarCapabilityOverride(*from._impl_.solarcapabilityoverride_);
+  }
+  if (from._internal_has_solarinverter()) {
+    _this->_impl_.solarinverter_ = new ::solarmodule::SolarInverter(*from._impl_.solarinverter_);
+  }
+  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarCapabilityOverrideProfile)
+}
+
+inline void SolarCapabilityOverrideProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.capabilitymessageinfo_){nullptr}
+    , decltype(_impl_.solarcapabilityoverride_){nullptr}
+    , decltype(_impl_.solarinverter_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+SolarCapabilityOverrideProfile::~SolarCapabilityOverrideProfile() {
+  // @@protoc_insertion_point(destructor:solarmodule.SolarCapabilityOverrideProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SolarCapabilityOverrideProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.capabilitymessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.solarcapabilityoverride_;
+  if (this != internal_default_instance()) delete _impl_.solarinverter_;
+}
+
+void SolarCapabilityOverrideProfile::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SolarCapabilityOverrideProfile::Clear() {
+// @@protoc_insertion_point(message_clear_start:solarmodule.SolarCapabilityOverrideProfile)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.capabilitymessageinfo_ != nullptr) {
+    delete _impl_.capabilitymessageinfo_;
+  }
+  _impl_.capabilitymessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solarcapabilityoverride_ != nullptr) {
+    delete _impl_.solarcapabilityoverride_;
+  }
+  _impl_.solarcapabilityoverride_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solarinverter_ != nullptr) {
+    delete _impl_.solarinverter_;
+  }
+  _impl_.solarinverter_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SolarCapabilityOverrideProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.CapabilityMessageInfo capabilityMessageInfo = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_capabilitymessageinfo(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .solarmodule.SolarCapabilityOverride solarCapabilityOverride = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarcapabilityoverride(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarinverter(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* SolarCapabilityOverrideProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarCapabilityOverrideProfile)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.CapabilityMessageInfo capabilityMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_capabilitymessageinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::capabilitymessageinfo(this),
+        _Internal::capabilitymessageinfo(this).GetCachedSize(), target, stream);
+  }
+
+  // .solarmodule.SolarCapabilityOverride solarCapabilityOverride = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_solarcapabilityoverride()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::solarcapabilityoverride(this),
+        _Internal::solarcapabilityoverride(this).GetCachedSize(), target, stream);
+  }
+
+  // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_solarinverter()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::solarinverter(this),
+        _Internal::solarinverter(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarCapabilityOverrideProfile)
+  return target;
+}
+
+::size_t SolarCapabilityOverrideProfile::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarCapabilityOverrideProfile)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.CapabilityMessageInfo capabilityMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_capabilitymessageinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.capabilitymessageinfo_);
+  }
+
+  // .solarmodule.SolarCapabilityOverride solarCapabilityOverride = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_solarcapabilityoverride()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.solarcapabilityoverride_);
+  }
+
+  // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_solarinverter()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.solarinverter_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarCapabilityOverrideProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarCapabilityOverrideProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarCapabilityOverrideProfile::GetClassData() const { return &_class_data_; }
+
+
+void SolarCapabilityOverrideProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarCapabilityOverrideProfile*>(&to_msg);
+  auto& from = static_cast<const SolarCapabilityOverrideProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarCapabilityOverrideProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_capabilitymessageinfo()) {
+    _this->_internal_mutable_capabilitymessageinfo()->::commonmodule::CapabilityMessageInfo::MergeFrom(
+        from._internal_capabilitymessageinfo());
+  }
+  if (from._internal_has_solarcapabilityoverride()) {
+    _this->_internal_mutable_solarcapabilityoverride()->::solarmodule::SolarCapabilityOverride::MergeFrom(
+        from._internal_solarcapabilityoverride());
+  }
+  if (from._internal_has_solarinverter()) {
+    _this->_internal_mutable_solarinverter()->::solarmodule::SolarInverter::MergeFrom(
+        from._internal_solarinverter());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SolarCapabilityOverrideProfile::CopyFrom(const SolarCapabilityOverrideProfile& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarCapabilityOverrideProfile)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SolarCapabilityOverrideProfile::IsInitialized() const {
+  return true;
+}
+
+void SolarCapabilityOverrideProfile::InternalSwap(SolarCapabilityOverrideProfile* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarCapabilityOverrideProfile, _impl_.solarinverter_)
+      + sizeof(SolarCapabilityOverrideProfile::_impl_.solarinverter_)
+      - PROTOBUF_FIELD_OFFSET(SolarCapabilityOverrideProfile, _impl_.capabilitymessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.capabilitymessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.capabilitymessageinfo_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SolarCapabilityOverrideProfile::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[3]);
+}
+// ===================================================================
+
+class SolarCapabilityRatings::_Internal {
+ public:
+  static const ::commonmodule::SourceCapabilityRatings& sourcecapabilityratings(const SolarCapabilityRatings* msg);
+};
+
+const ::commonmodule::SourceCapabilityRatings&
+SolarCapabilityRatings::_Internal::sourcecapabilityratings(const SolarCapabilityRatings* msg) {
+  return *msg->_impl_.sourcecapabilityratings_;
+}
+void SolarCapabilityRatings::clear_sourcecapabilityratings() {
+  if (GetArenaForAllocation() == nullptr && _impl_.sourcecapabilityratings_ != nullptr) {
+    delete _impl_.sourcecapabilityratings_;
+  }
+  _impl_.sourcecapabilityratings_ = nullptr;
+}
+SolarCapabilityRatings::SolarCapabilityRatings(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarCapabilityRatings)
+}
+SolarCapabilityRatings::SolarCapabilityRatings(const SolarCapabilityRatings& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarCapabilityRatings* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.sourcecapabilityratings_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_sourcecapabilityratings()) {
+    _this->_impl_.sourcecapabilityratings_ = new ::commonmodule::SourceCapabilityRatings(*from._impl_.sourcecapabilityratings_);
+  }
+  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarCapabilityRatings)
+}
+
+inline void SolarCapabilityRatings::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.sourcecapabilityratings_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+SolarCapabilityRatings::~SolarCapabilityRatings() {
+  // @@protoc_insertion_point(destructor:solarmodule.SolarCapabilityRatings)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SolarCapabilityRatings::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.sourcecapabilityratings_;
+}
+
+void SolarCapabilityRatings::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SolarCapabilityRatings::Clear() {
+// @@protoc_insertion_point(message_clear_start:solarmodule.SolarCapabilityRatings)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.sourcecapabilityratings_ != nullptr) {
+    delete _impl_.sourcecapabilityratings_;
+  }
+  _impl_.sourcecapabilityratings_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SolarCapabilityRatings::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.SourceCapabilityRatings sourceCapabilityRatings = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_sourcecapabilityratings(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* SolarCapabilityRatings::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarCapabilityRatings)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.SourceCapabilityRatings sourceCapabilityRatings = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_sourcecapabilityratings()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::sourcecapabilityratings(this),
+        _Internal::sourcecapabilityratings(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarCapabilityRatings)
+  return target;
+}
+
+::size_t SolarCapabilityRatings::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarCapabilityRatings)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.SourceCapabilityRatings sourceCapabilityRatings = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_sourcecapabilityratings()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.sourcecapabilityratings_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarCapabilityRatings::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarCapabilityRatings::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarCapabilityRatings::GetClassData() const { return &_class_data_; }
+
+
+void SolarCapabilityRatings::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarCapabilityRatings*>(&to_msg);
+  auto& from = static_cast<const SolarCapabilityRatings&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarCapabilityRatings)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_sourcecapabilityratings()) {
+    _this->_internal_mutable_sourcecapabilityratings()->::commonmodule::SourceCapabilityRatings::MergeFrom(
+        from._internal_sourcecapabilityratings());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SolarCapabilityRatings::CopyFrom(const SolarCapabilityRatings& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarCapabilityRatings)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SolarCapabilityRatings::IsInitialized() const {
+  return true;
+}
+
+void SolarCapabilityRatings::InternalSwap(SolarCapabilityRatings* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.sourcecapabilityratings_, other->_impl_.sourcecapabilityratings_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SolarCapabilityRatings::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[4]);
+}
+// ===================================================================
+
+class SolarCapability::_Internal {
+ public:
+  static const ::commonmodule::NameplateValue& nameplatevalue(const SolarCapability* msg);
+  static const ::solarmodule::SolarCapabilityConfiguration& solarcapabilityconfiguration(const SolarCapability* msg);
+  static const ::solarmodule::SolarCapabilityRatings& solarcapabilityratings(const SolarCapability* msg);
+};
+
+const ::commonmodule::NameplateValue&
+SolarCapability::_Internal::nameplatevalue(const SolarCapability* msg) {
+  return *msg->_impl_.nameplatevalue_;
+}
+const ::solarmodule::SolarCapabilityConfiguration&
+SolarCapability::_Internal::solarcapabilityconfiguration(const SolarCapability* msg) {
+  return *msg->_impl_.solarcapabilityconfiguration_;
+}
+const ::solarmodule::SolarCapabilityRatings&
+SolarCapability::_Internal::solarcapabilityratings(const SolarCapability* msg) {
+  return *msg->_impl_.solarcapabilityratings_;
+}
+void SolarCapability::clear_nameplatevalue() {
+  if (GetArenaForAllocation() == nullptr && _impl_.nameplatevalue_ != nullptr) {
+    delete _impl_.nameplatevalue_;
+  }
+  _impl_.nameplatevalue_ = nullptr;
+}
+SolarCapability::SolarCapability(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarCapability)
+}
+SolarCapability::SolarCapability(const SolarCapability& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarCapability* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.nameplatevalue_){nullptr}
+    , decltype(_impl_.solarcapabilityconfiguration_){nullptr}
+    , decltype(_impl_.solarcapabilityratings_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_nameplatevalue()) {
+    _this->_impl_.nameplatevalue_ = new ::commonmodule::NameplateValue(*from._impl_.nameplatevalue_);
+  }
+  if (from._internal_has_solarcapabilityconfiguration()) {
+    _this->_impl_.solarcapabilityconfiguration_ = new ::solarmodule::SolarCapabilityConfiguration(*from._impl_.solarcapabilityconfiguration_);
+  }
+  if (from._internal_has_solarcapabilityratings()) {
+    _this->_impl_.solarcapabilityratings_ = new ::solarmodule::SolarCapabilityRatings(*from._impl_.solarcapabilityratings_);
+  }
+  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarCapability)
+}
+
+inline void SolarCapability::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.nameplatevalue_){nullptr}
+    , decltype(_impl_.solarcapabilityconfiguration_){nullptr}
+    , decltype(_impl_.solarcapabilityratings_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+SolarCapability::~SolarCapability() {
+  // @@protoc_insertion_point(destructor:solarmodule.SolarCapability)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SolarCapability::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.nameplatevalue_;
+  if (this != internal_default_instance()) delete _impl_.solarcapabilityconfiguration_;
+  if (this != internal_default_instance()) delete _impl_.solarcapabilityratings_;
+}
+
+void SolarCapability::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SolarCapability::Clear() {
+// @@protoc_insertion_point(message_clear_start:solarmodule.SolarCapability)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.nameplatevalue_ != nullptr) {
+    delete _impl_.nameplatevalue_;
+  }
+  _impl_.nameplatevalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solarcapabilityconfiguration_ != nullptr) {
+    delete _impl_.solarcapabilityconfiguration_;
+  }
+  _impl_.solarcapabilityconfiguration_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solarcapabilityratings_ != nullptr) {
+    delete _impl_.solarcapabilityratings_;
+  }
+  _impl_.solarcapabilityratings_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SolarCapability::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.NameplateValue nameplateValue = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_nameplatevalue(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .solarmodule.SolarCapabilityConfiguration solarCapabilityConfiguration = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarcapabilityconfiguration(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .solarmodule.SolarCapabilityRatings solarCapabilityRatings = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarcapabilityratings(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* SolarCapability::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarCapability)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.NameplateValue nameplateValue = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_nameplatevalue()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::nameplatevalue(this),
+        _Internal::nameplatevalue(this).GetCachedSize(), target, stream);
+  }
+
+  // .solarmodule.SolarCapabilityConfiguration solarCapabilityConfiguration = 2;
+  if (this->_internal_has_solarcapabilityconfiguration()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::solarcapabilityconfiguration(this),
+        _Internal::solarcapabilityconfiguration(this).GetCachedSize(), target, stream);
+  }
+
+  // .solarmodule.SolarCapabilityRatings solarCapabilityRatings = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_solarcapabilityratings()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::solarcapabilityratings(this),
+        _Internal::solarcapabilityratings(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarCapability)
+  return target;
+}
+
+::size_t SolarCapability::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarCapability)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.NameplateValue nameplateValue = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_nameplatevalue()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.nameplatevalue_);
+  }
+
+  // .solarmodule.SolarCapabilityConfiguration solarCapabilityConfiguration = 2;
+  if (this->_internal_has_solarcapabilityconfiguration()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.solarcapabilityconfiguration_);
+  }
+
+  // .solarmodule.SolarCapabilityRatings solarCapabilityRatings = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_solarcapabilityratings()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.solarcapabilityratings_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarCapability::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarCapability::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarCapability::GetClassData() const { return &_class_data_; }
+
+
+void SolarCapability::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarCapability*>(&to_msg);
+  auto& from = static_cast<const SolarCapability&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarCapability)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_nameplatevalue()) {
+    _this->_internal_mutable_nameplatevalue()->::commonmodule::NameplateValue::MergeFrom(
+        from._internal_nameplatevalue());
+  }
+  if (from._internal_has_solarcapabilityconfiguration()) {
+    _this->_internal_mutable_solarcapabilityconfiguration()->::solarmodule::SolarCapabilityConfiguration::MergeFrom(
+        from._internal_solarcapabilityconfiguration());
+  }
+  if (from._internal_has_solarcapabilityratings()) {
+    _this->_internal_mutable_solarcapabilityratings()->::solarmodule::SolarCapabilityRatings::MergeFrom(
+        from._internal_solarcapabilityratings());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SolarCapability::CopyFrom(const SolarCapability& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarCapability)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SolarCapability::IsInitialized() const {
+  return true;
+}
+
+void SolarCapability::InternalSwap(SolarCapability* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarCapability, _impl_.solarcapabilityratings_)
+      + sizeof(SolarCapability::_impl_.solarcapabilityratings_)
+      - PROTOBUF_FIELD_OFFSET(SolarCapability, _impl_.nameplatevalue_)>(
+          reinterpret_cast<char*>(&_impl_.nameplatevalue_),
+          reinterpret_cast<char*>(&other->_impl_.nameplatevalue_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SolarCapability::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[5]);
+}
+// ===================================================================
+
+class SolarCapabilityProfile::_Internal {
+ public:
+  static const ::commonmodule::CapabilityMessageInfo& capabilitymessageinfo(const SolarCapabilityProfile* msg);
+  static const ::solarmodule::SolarCapability& solarcapability(const SolarCapabilityProfile* msg);
+  static const ::solarmodule::SolarInverter& solarinverter(const SolarCapabilityProfile* msg);
+};
+
+const ::commonmodule::CapabilityMessageInfo&
+SolarCapabilityProfile::_Internal::capabilitymessageinfo(const SolarCapabilityProfile* msg) {
+  return *msg->_impl_.capabilitymessageinfo_;
+}
+const ::solarmodule::SolarCapability&
+SolarCapabilityProfile::_Internal::solarcapability(const SolarCapabilityProfile* msg) {
+  return *msg->_impl_.solarcapability_;
+}
+const ::solarmodule::SolarInverter&
+SolarCapabilityProfile::_Internal::solarinverter(const SolarCapabilityProfile* msg) {
+  return *msg->_impl_.solarinverter_;
+}
+void SolarCapabilityProfile::clear_capabilitymessageinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.capabilitymessageinfo_ != nullptr) {
+    delete _impl_.capabilitymessageinfo_;
+  }
+  _impl_.capabilitymessageinfo_ = nullptr;
+}
+SolarCapabilityProfile::SolarCapabilityProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarCapabilityProfile)
+}
+SolarCapabilityProfile::SolarCapabilityProfile(const SolarCapabilityProfile& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarCapabilityProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.capabilitymessageinfo_){nullptr}
+    , decltype(_impl_.solarcapability_){nullptr}
+    , decltype(_impl_.solarinverter_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_capabilitymessageinfo()) {
+    _this->_impl_.capabilitymessageinfo_ = new ::commonmodule::CapabilityMessageInfo(*from._impl_.capabilitymessageinfo_);
+  }
+  if (from._internal_has_solarcapability()) {
+    _this->_impl_.solarcapability_ = new ::solarmodule::SolarCapability(*from._impl_.solarcapability_);
+  }
+  if (from._internal_has_solarinverter()) {
+    _this->_impl_.solarinverter_ = new ::solarmodule::SolarInverter(*from._impl_.solarinverter_);
+  }
+  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarCapabilityProfile)
+}
+
+inline void SolarCapabilityProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.capabilitymessageinfo_){nullptr}
+    , decltype(_impl_.solarcapability_){nullptr}
+    , decltype(_impl_.solarinverter_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+SolarCapabilityProfile::~SolarCapabilityProfile() {
+  // @@protoc_insertion_point(destructor:solarmodule.SolarCapabilityProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SolarCapabilityProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.capabilitymessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.solarcapability_;
+  if (this != internal_default_instance()) delete _impl_.solarinverter_;
+}
+
+void SolarCapabilityProfile::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SolarCapabilityProfile::Clear() {
+// @@protoc_insertion_point(message_clear_start:solarmodule.SolarCapabilityProfile)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.capabilitymessageinfo_ != nullptr) {
+    delete _impl_.capabilitymessageinfo_;
+  }
+  _impl_.capabilitymessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solarcapability_ != nullptr) {
+    delete _impl_.solarcapability_;
+  }
+  _impl_.solarcapability_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solarinverter_ != nullptr) {
+    delete _impl_.solarinverter_;
+  }
+  _impl_.solarinverter_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SolarCapabilityProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.CapabilityMessageInfo capabilityMessageInfo = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_capabilitymessageinfo(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .solarmodule.SolarCapability solarCapability = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarcapability(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarinverter(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* SolarCapabilityProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarCapabilityProfile)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.CapabilityMessageInfo capabilityMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_capabilitymessageinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::capabilitymessageinfo(this),
+        _Internal::capabilitymessageinfo(this).GetCachedSize(), target, stream);
+  }
+
+  // .solarmodule.SolarCapability solarCapability = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_solarcapability()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::solarcapability(this),
+        _Internal::solarcapability(this).GetCachedSize(), target, stream);
+  }
+
+  // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_solarinverter()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::solarinverter(this),
+        _Internal::solarinverter(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarCapabilityProfile)
+  return target;
+}
+
+::size_t SolarCapabilityProfile::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarCapabilityProfile)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.CapabilityMessageInfo capabilityMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_capabilitymessageinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.capabilitymessageinfo_);
+  }
+
+  // .solarmodule.SolarCapability solarCapability = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_solarcapability()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.solarcapability_);
+  }
+
+  // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_solarinverter()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.solarinverter_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarCapabilityProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarCapabilityProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarCapabilityProfile::GetClassData() const { return &_class_data_; }
+
+
+void SolarCapabilityProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarCapabilityProfile*>(&to_msg);
+  auto& from = static_cast<const SolarCapabilityProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarCapabilityProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_capabilitymessageinfo()) {
+    _this->_internal_mutable_capabilitymessageinfo()->::commonmodule::CapabilityMessageInfo::MergeFrom(
+        from._internal_capabilitymessageinfo());
+  }
+  if (from._internal_has_solarcapability()) {
+    _this->_internal_mutable_solarcapability()->::solarmodule::SolarCapability::MergeFrom(
+        from._internal_solarcapability());
+  }
+  if (from._internal_has_solarinverter()) {
+    _this->_internal_mutable_solarinverter()->::solarmodule::SolarInverter::MergeFrom(
+        from._internal_solarinverter());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SolarCapabilityProfile::CopyFrom(const SolarCapabilityProfile& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarCapabilityProfile)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SolarCapabilityProfile::IsInitialized() const {
+  return true;
+}
+
+void SolarCapabilityProfile::InternalSwap(SolarCapabilityProfile* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarCapabilityProfile, _impl_.solarinverter_)
+      + sizeof(SolarCapabilityProfile::_impl_.solarinverter_)
+      - PROTOBUF_FIELD_OFFSET(SolarCapabilityProfile, _impl_.capabilitymessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.capabilitymessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.capabilitymessageinfo_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SolarCapabilityProfile::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[6]);
+}
+// ===================================================================
+
+class SolarPoint::_Internal {
+ public:
+  static const ::commonmodule::ENG_GridConnectModeKind& mode(const SolarPoint* msg);
+  static const ::commonmodule::RampRate& ramprates(const SolarPoint* msg);
+  static const ::commonmodule::ControlSPC& reset(const SolarPoint* msg);
+  static const ::commonmodule::Optional_StateKind& state(const SolarPoint* msg);
+  static const ::commonmodule::EnterServiceAPC& enterserviceoperation(const SolarPoint* msg);
+  static const ::commonmodule::HzWAPC& hzwoperation(const SolarPoint* msg);
+  static const ::commonmodule::LimitWAPC& limitwoperation(const SolarPoint* msg);
+  static const ::commonmodule::PFSPC& pfoperation(const SolarPoint* msg);
+  static const ::commonmodule::TmHzCSG& tmhztripoperation(const SolarPoint* msg);
+  static const ::commonmodule::TmVoltCSG& tmvolttripoperation(const SolarPoint* msg);
+  static const ::commonmodule::VarSPC& varoperation(const SolarPoint* msg);
+  static const ::commonmodule::VoltVarCSG& voltvaroperation(const SolarPoint* msg);
+  static const ::commonmodule::VoltWCSG& voltwoperation(const SolarPoint* msg);
+  static const ::commonmodule::WVarCSG& wvaroperation(const SolarPoint* msg);
+  static const ::commonmodule::ControlSPC& blackstartenabled(const SolarPoint* msg);
+  static const ::commonmodule::WSPC& woperation(const SolarPoint* msg);
+};
+
+const ::commonmodule::ENG_GridConnectModeKind&
+SolarPoint::_Internal::mode(const SolarPoint* msg) {
+  return *msg->_impl_.mode_;
+}
+const ::commonmodule::RampRate&
+SolarPoint::_Internal::ramprates(const SolarPoint* msg) {
+  return *msg->_impl_.ramprates_;
+}
+const ::commonmodule::ControlSPC&
+SolarPoint::_Internal::reset(const SolarPoint* msg) {
+  return *msg->_impl_.reset_;
+}
+const ::commonmodule::Optional_StateKind&
+SolarPoint::_Internal::state(const SolarPoint* msg) {
+  return *msg->_impl_.state_;
+}
+const ::commonmodule::EnterServiceAPC&
+SolarPoint::_Internal::enterserviceoperation(const SolarPoint* msg) {
+  return *msg->_impl_.enterserviceoperation_;
+}
+const ::commonmodule::HzWAPC&
+SolarPoint::_Internal::hzwoperation(const SolarPoint* msg) {
+  return *msg->_impl_.hzwoperation_;
+}
+const ::commonmodule::LimitWAPC&
+SolarPoint::_Internal::limitwoperation(const SolarPoint* msg) {
+  return *msg->_impl_.limitwoperation_;
+}
+const ::commonmodule::PFSPC&
+SolarPoint::_Internal::pfoperation(const SolarPoint* msg) {
+  return *msg->_impl_.pfoperation_;
+}
+const ::commonmodule::TmHzCSG&
+SolarPoint::_Internal::tmhztripoperation(const SolarPoint* msg) {
+  return *msg->_impl_.tmhztripoperation_;
+}
+const ::commonmodule::TmVoltCSG&
+SolarPoint::_Internal::tmvolttripoperation(const SolarPoint* msg) {
+  return *msg->_impl_.tmvolttripoperation_;
+}
+const ::commonmodule::VarSPC&
+SolarPoint::_Internal::varoperation(const SolarPoint* msg) {
+  return *msg->_impl_.varoperation_;
+}
+const ::commonmodule::VoltVarCSG&
+SolarPoint::_Internal::voltvaroperation(const SolarPoint* msg) {
+  return *msg->_impl_.voltvaroperation_;
+}
+const ::commonmodule::VoltWCSG&
+SolarPoint::_Internal::voltwoperation(const SolarPoint* msg) {
+  return *msg->_impl_.voltwoperation_;
+}
+const ::commonmodule::WVarCSG&
+SolarPoint::_Internal::wvaroperation(const SolarPoint* msg) {
+  return *msg->_impl_.wvaroperation_;
+}
+const ::commonmodule::ControlSPC&
+SolarPoint::_Internal::blackstartenabled(const SolarPoint* msg) {
+  return *msg->_impl_.blackstartenabled_;
+}
+const ::commonmodule::WSPC&
+SolarPoint::_Internal::woperation(const SolarPoint* msg) {
+  return *msg->_impl_.woperation_;
+}
+void SolarPoint::clear_mode() {
+  if (GetArenaForAllocation() == nullptr && _impl_.mode_ != nullptr) {
+    delete _impl_.mode_;
+  }
+  _impl_.mode_ = nullptr;
+}
+void SolarPoint::clear_ramprates() {
+  if (GetArenaForAllocation() == nullptr && _impl_.ramprates_ != nullptr) {
+    delete _impl_.ramprates_;
+  }
+  _impl_.ramprates_ = nullptr;
+}
+void SolarPoint::clear_reset() {
+  if (GetArenaForAllocation() == nullptr && _impl_.reset_ != nullptr) {
+    delete _impl_.reset_;
+  }
+  _impl_.reset_ = nullptr;
+}
+void SolarPoint::clear_state() {
+  if (GetArenaForAllocation() == nullptr && _impl_.state_ != nullptr) {
+    delete _impl_.state_;
+  }
+  _impl_.state_ = nullptr;
+}
+void SolarPoint::clear_enterserviceoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.enterserviceoperation_ != nullptr) {
+    delete _impl_.enterserviceoperation_;
+  }
+  _impl_.enterserviceoperation_ = nullptr;
+}
+void SolarPoint::clear_hzwoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.hzwoperation_ != nullptr) {
+    delete _impl_.hzwoperation_;
+  }
+  _impl_.hzwoperation_ = nullptr;
+}
+void SolarPoint::clear_limitwoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.limitwoperation_ != nullptr) {
+    delete _impl_.limitwoperation_;
+  }
+  _impl_.limitwoperation_ = nullptr;
+}
+void SolarPoint::clear_pfoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.pfoperation_ != nullptr) {
+    delete _impl_.pfoperation_;
+  }
+  _impl_.pfoperation_ = nullptr;
+}
+void SolarPoint::clear_tmhztripoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.tmhztripoperation_ != nullptr) {
+    delete _impl_.tmhztripoperation_;
+  }
+  _impl_.tmhztripoperation_ = nullptr;
+}
+void SolarPoint::clear_tmvolttripoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.tmvolttripoperation_ != nullptr) {
+    delete _impl_.tmvolttripoperation_;
+  }
+  _impl_.tmvolttripoperation_ = nullptr;
+}
+void SolarPoint::clear_varoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.varoperation_ != nullptr) {
+    delete _impl_.varoperation_;
+  }
+  _impl_.varoperation_ = nullptr;
+}
+void SolarPoint::clear_voltvaroperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.voltvaroperation_ != nullptr) {
+    delete _impl_.voltvaroperation_;
+  }
+  _impl_.voltvaroperation_ = nullptr;
+}
+void SolarPoint::clear_voltwoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.voltwoperation_ != nullptr) {
+    delete _impl_.voltwoperation_;
+  }
+  _impl_.voltwoperation_ = nullptr;
+}
+void SolarPoint::clear_wvaroperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.wvaroperation_ != nullptr) {
+    delete _impl_.wvaroperation_;
+  }
+  _impl_.wvaroperation_ = nullptr;
+}
+void SolarPoint::clear_blackstartenabled() {
+  if (GetArenaForAllocation() == nullptr && _impl_.blackstartenabled_ != nullptr) {
+    delete _impl_.blackstartenabled_;
+  }
+  _impl_.blackstartenabled_ = nullptr;
+}
+void SolarPoint::clear_woperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.woperation_ != nullptr) {
+    delete _impl_.woperation_;
+  }
+  _impl_.woperation_ = nullptr;
+}
+SolarPoint::SolarPoint(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarPoint)
+}
+SolarPoint::SolarPoint(const SolarPoint& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarPoint* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.mode_){nullptr}
+    , decltype(_impl_.ramprates_){nullptr}
+    , decltype(_impl_.reset_){nullptr}
+    , decltype(_impl_.state_){nullptr}
+    , decltype(_impl_.enterserviceoperation_){nullptr}
+    , decltype(_impl_.hzwoperation_){nullptr}
+    , decltype(_impl_.limitwoperation_){nullptr}
+    , decltype(_impl_.pfoperation_){nullptr}
+    , decltype(_impl_.tmhztripoperation_){nullptr}
+    , decltype(_impl_.tmvolttripoperation_){nullptr}
+    , decltype(_impl_.varoperation_){nullptr}
+    , decltype(_impl_.voltvaroperation_){nullptr}
+    , decltype(_impl_.voltwoperation_){nullptr}
+    , decltype(_impl_.wvaroperation_){nullptr}
+    , decltype(_impl_.blackstartenabled_){nullptr}
+    , decltype(_impl_.woperation_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_mode()) {
+    _this->_impl_.mode_ = new ::commonmodule::ENG_GridConnectModeKind(*from._impl_.mode_);
+  }
+  if (from._internal_has_ramprates()) {
+    _this->_impl_.ramprates_ = new ::commonmodule::RampRate(*from._impl_.ramprates_);
+  }
+  if (from._internal_has_reset()) {
+    _this->_impl_.reset_ = new ::commonmodule::ControlSPC(*from._impl_.reset_);
+  }
+  if (from._internal_has_state()) {
+    _this->_impl_.state_ = new ::commonmodule::Optional_StateKind(*from._impl_.state_);
+  }
+  if (from._internal_has_enterserviceoperation()) {
+    _this->_impl_.enterserviceoperation_ = new ::commonmodule::EnterServiceAPC(*from._impl_.enterserviceoperation_);
+  }
+  if (from._internal_has_hzwoperation()) {
+    _this->_impl_.hzwoperation_ = new ::commonmodule::HzWAPC(*from._impl_.hzwoperation_);
+  }
+  if (from._internal_has_limitwoperation()) {
+    _this->_impl_.limitwoperation_ = new ::commonmodule::LimitWAPC(*from._impl_.limitwoperation_);
+  }
+  if (from._internal_has_pfoperation()) {
+    _this->_impl_.pfoperation_ = new ::commonmodule::PFSPC(*from._impl_.pfoperation_);
+  }
+  if (from._internal_has_tmhztripoperation()) {
+    _this->_impl_.tmhztripoperation_ = new ::commonmodule::TmHzCSG(*from._impl_.tmhztripoperation_);
+  }
+  if (from._internal_has_tmvolttripoperation()) {
+    _this->_impl_.tmvolttripoperation_ = new ::commonmodule::TmVoltCSG(*from._impl_.tmvolttripoperation_);
+  }
+  if (from._internal_has_varoperation()) {
+    _this->_impl_.varoperation_ = new ::commonmodule::VarSPC(*from._impl_.varoperation_);
+  }
+  if (from._internal_has_voltvaroperation()) {
+    _this->_impl_.voltvaroperation_ = new ::commonmodule::VoltVarCSG(*from._impl_.voltvaroperation_);
+  }
+  if (from._internal_has_voltwoperation()) {
+    _this->_impl_.voltwoperation_ = new ::commonmodule::VoltWCSG(*from._impl_.voltwoperation_);
+  }
+  if (from._internal_has_wvaroperation()) {
+    _this->_impl_.wvaroperation_ = new ::commonmodule::WVarCSG(*from._impl_.wvaroperation_);
+  }
+  if (from._internal_has_blackstartenabled()) {
+    _this->_impl_.blackstartenabled_ = new ::commonmodule::ControlSPC(*from._impl_.blackstartenabled_);
+  }
+  if (from._internal_has_woperation()) {
+    _this->_impl_.woperation_ = new ::commonmodule::WSPC(*from._impl_.woperation_);
+  }
+  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarPoint)
+}
+
+inline void SolarPoint::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.mode_){nullptr}
+    , decltype(_impl_.ramprates_){nullptr}
+    , decltype(_impl_.reset_){nullptr}
+    , decltype(_impl_.state_){nullptr}
+    , decltype(_impl_.enterserviceoperation_){nullptr}
+    , decltype(_impl_.hzwoperation_){nullptr}
+    , decltype(_impl_.limitwoperation_){nullptr}
+    , decltype(_impl_.pfoperation_){nullptr}
+    , decltype(_impl_.tmhztripoperation_){nullptr}
+    , decltype(_impl_.tmvolttripoperation_){nullptr}
+    , decltype(_impl_.varoperation_){nullptr}
+    , decltype(_impl_.voltvaroperation_){nullptr}
+    , decltype(_impl_.voltwoperation_){nullptr}
+    , decltype(_impl_.wvaroperation_){nullptr}
+    , decltype(_impl_.blackstartenabled_){nullptr}
+    , decltype(_impl_.woperation_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+SolarPoint::~SolarPoint() {
+  // @@protoc_insertion_point(destructor:solarmodule.SolarPoint)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SolarPoint::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.mode_;
+  if (this != internal_default_instance()) delete _impl_.ramprates_;
+  if (this != internal_default_instance()) delete _impl_.reset_;
+  if (this != internal_default_instance()) delete _impl_.state_;
+  if (this != internal_default_instance()) delete _impl_.enterserviceoperation_;
+  if (this != internal_default_instance()) delete _impl_.hzwoperation_;
+  if (this != internal_default_instance()) delete _impl_.limitwoperation_;
+  if (this != internal_default_instance()) delete _impl_.pfoperation_;
+  if (this != internal_default_instance()) delete _impl_.tmhztripoperation_;
+  if (this != internal_default_instance()) delete _impl_.tmvolttripoperation_;
+  if (this != internal_default_instance()) delete _impl_.varoperation_;
+  if (this != internal_default_instance()) delete _impl_.voltvaroperation_;
+  if (this != internal_default_instance()) delete _impl_.voltwoperation_;
+  if (this != internal_default_instance()) delete _impl_.wvaroperation_;
+  if (this != internal_default_instance()) delete _impl_.blackstartenabled_;
+  if (this != internal_default_instance()) delete _impl_.woperation_;
+}
+
+void SolarPoint::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SolarPoint::Clear() {
+// @@protoc_insertion_point(message_clear_start:solarmodule.SolarPoint)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.mode_ != nullptr) {
+    delete _impl_.mode_;
+  }
+  _impl_.mode_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ramprates_ != nullptr) {
+    delete _impl_.ramprates_;
+  }
+  _impl_.ramprates_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.reset_ != nullptr) {
+    delete _impl_.reset_;
+  }
+  _impl_.reset_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.state_ != nullptr) {
+    delete _impl_.state_;
+  }
+  _impl_.state_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.enterserviceoperation_ != nullptr) {
+    delete _impl_.enterserviceoperation_;
+  }
+  _impl_.enterserviceoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.hzwoperation_ != nullptr) {
+    delete _impl_.hzwoperation_;
+  }
+  _impl_.hzwoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.limitwoperation_ != nullptr) {
+    delete _impl_.limitwoperation_;
+  }
+  _impl_.limitwoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.pfoperation_ != nullptr) {
+    delete _impl_.pfoperation_;
+  }
+  _impl_.pfoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.tmhztripoperation_ != nullptr) {
+    delete _impl_.tmhztripoperation_;
+  }
+  _impl_.tmhztripoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.tmvolttripoperation_ != nullptr) {
+    delete _impl_.tmvolttripoperation_;
+  }
+  _impl_.tmvolttripoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.varoperation_ != nullptr) {
+    delete _impl_.varoperation_;
+  }
+  _impl_.varoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltvaroperation_ != nullptr) {
+    delete _impl_.voltvaroperation_;
+  }
+  _impl_.voltvaroperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltwoperation_ != nullptr) {
+    delete _impl_.voltwoperation_;
+  }
+  _impl_.voltwoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.wvaroperation_ != nullptr) {
+    delete _impl_.wvaroperation_;
+  }
+  _impl_.wvaroperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.blackstartenabled_ != nullptr) {
+    delete _impl_.blackstartenabled_;
+  }
+  _impl_.blackstartenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.woperation_ != nullptr) {
+    delete _impl_.woperation_;
+  }
+  _impl_.woperation_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SolarPoint::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.ENG_GridConnectModeKind mode = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_mode(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.RampRate rampRates = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_ramprates(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ControlSPC reset = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 66)) {
+          ptr = ctx->ParseMessage(_internal_mutable_reset(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.Optional_StateKind state = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 74)) {
+          ptr = ctx->ParseMessage(_internal_mutable_state(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.EnterServiceAPC enterServiceOperation = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 98)) {
+          ptr = ctx->ParseMessage(_internal_mutable_enterserviceoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.HzWAPC hzWOperation = 13;
+      case 13:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 106)) {
+          ptr = ctx->ParseMessage(_internal_mutable_hzwoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.LimitWAPC limitWOperation = 14;
+      case 14:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 114)) {
+          ptr = ctx->ParseMessage(_internal_mutable_limitwoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.PFSPC pFOperation = 15;
+      case 15:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 122)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pfoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.TmHzCSG tmHzTripOperation = 16;
+      case 16:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 130)) {
+          ptr = ctx->ParseMessage(_internal_mutable_tmhztripoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.TmVoltCSG tmVoltTripOperation = 17;
+      case 17:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 138)) {
+          ptr = ctx->ParseMessage(_internal_mutable_tmvolttripoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.VarSPC vArOperation = 18;
+      case 18:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 146)) {
+          ptr = ctx->ParseMessage(_internal_mutable_varoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.VoltVarCSG voltVarOperation = 19;
+      case 19:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 154)) {
+          ptr = ctx->ParseMessage(_internal_mutable_voltvaroperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.VoltWCSG voltWOperation = 20;
+      case 20:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 162)) {
+          ptr = ctx->ParseMessage(_internal_mutable_voltwoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.WVarCSG wVarOperation = 21;
+      case 21:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 170)) {
+          ptr = ctx->ParseMessage(_internal_mutable_wvaroperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ControlSPC blackStartEnabled = 22;
+      case 22:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 178)) {
+          ptr = ctx->ParseMessage(_internal_mutable_blackstartenabled(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.WSPC wOperation = 24;
+      case 24:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 194)) {
+          ptr = ctx->ParseMessage(_internal_mutable_woperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* SolarPoint::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarPoint)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ENG_GridConnectModeKind mode = 2;
+  if (this->_internal_has_mode()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::mode(this),
+        _Internal::mode(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.RampRate rampRates = 5;
+  if (this->_internal_has_ramprates()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(5, _Internal::ramprates(this),
+        _Internal::ramprates(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ControlSPC reset = 8;
+  if (this->_internal_has_reset()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(8, _Internal::reset(this),
+        _Internal::reset(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.Optional_StateKind state = 9;
+  if (this->_internal_has_state()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(9, _Internal::state(this),
+        _Internal::state(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.EnterServiceAPC enterServiceOperation = 12;
+  if (this->_internal_has_enterserviceoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(12, _Internal::enterserviceoperation(this),
+        _Internal::enterserviceoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.HzWAPC hzWOperation = 13;
+  if (this->_internal_has_hzwoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(13, _Internal::hzwoperation(this),
+        _Internal::hzwoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.LimitWAPC limitWOperation = 14;
+  if (this->_internal_has_limitwoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(14, _Internal::limitwoperation(this),
+        _Internal::limitwoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.PFSPC pFOperation = 15;
+  if (this->_internal_has_pfoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(15, _Internal::pfoperation(this),
+        _Internal::pfoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.TmHzCSG tmHzTripOperation = 16;
+  if (this->_internal_has_tmhztripoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(16, _Internal::tmhztripoperation(this),
+        _Internal::tmhztripoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.TmVoltCSG tmVoltTripOperation = 17;
+  if (this->_internal_has_tmvolttripoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(17, _Internal::tmvolttripoperation(this),
+        _Internal::tmvolttripoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.VarSPC vArOperation = 18;
+  if (this->_internal_has_varoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(18, _Internal::varoperation(this),
+        _Internal::varoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.VoltVarCSG voltVarOperation = 19;
+  if (this->_internal_has_voltvaroperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(19, _Internal::voltvaroperation(this),
+        _Internal::voltvaroperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.VoltWCSG voltWOperation = 20;
+  if (this->_internal_has_voltwoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(20, _Internal::voltwoperation(this),
+        _Internal::voltwoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.WVarCSG wVarOperation = 21;
+  if (this->_internal_has_wvaroperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(21, _Internal::wvaroperation(this),
+        _Internal::wvaroperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ControlSPC blackStartEnabled = 22;
+  if (this->_internal_has_blackstartenabled()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(22, _Internal::blackstartenabled(this),
+        _Internal::blackstartenabled(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.WSPC wOperation = 24;
+  if (this->_internal_has_woperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(24, _Internal::woperation(this),
+        _Internal::woperation(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarPoint)
+  return target;
+}
+
+::size_t SolarPoint::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarPoint)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.ENG_GridConnectModeKind mode = 2;
+  if (this->_internal_has_mode()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.mode_);
+  }
+
+  // .commonmodule.RampRate rampRates = 5;
+  if (this->_internal_has_ramprates()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.ramprates_);
+  }
+
+  // .commonmodule.ControlSPC reset = 8;
+  if (this->_internal_has_reset()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.reset_);
+  }
+
+  // .commonmodule.Optional_StateKind state = 9;
+  if (this->_internal_has_state()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.state_);
+  }
+
+  // .commonmodule.EnterServiceAPC enterServiceOperation = 12;
+  if (this->_internal_has_enterserviceoperation()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.enterserviceoperation_);
+  }
+
+  // .commonmodule.HzWAPC hzWOperation = 13;
+  if (this->_internal_has_hzwoperation()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.hzwoperation_);
+  }
+
+  // .commonmodule.LimitWAPC limitWOperation = 14;
+  if (this->_internal_has_limitwoperation()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.limitwoperation_);
+  }
+
+  // .commonmodule.PFSPC pFOperation = 15;
+  if (this->_internal_has_pfoperation()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.pfoperation_);
+  }
+
+  // .commonmodule.TmHzCSG tmHzTripOperation = 16;
+  if (this->_internal_has_tmhztripoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.tmhztripoperation_);
+  }
+
+  // .commonmodule.TmVoltCSG tmVoltTripOperation = 17;
+  if (this->_internal_has_tmvolttripoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.tmvolttripoperation_);
+  }
+
+  // .commonmodule.VarSPC vArOperation = 18;
+  if (this->_internal_has_varoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.varoperation_);
+  }
+
+  // .commonmodule.VoltVarCSG voltVarOperation = 19;
+  if (this->_internal_has_voltvaroperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.voltvaroperation_);
+  }
+
+  // .commonmodule.VoltWCSG voltWOperation = 20;
+  if (this->_internal_has_voltwoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.voltwoperation_);
+  }
+
+  // .commonmodule.WVarCSG wVarOperation = 21;
+  if (this->_internal_has_wvaroperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.wvaroperation_);
+  }
+
+  // .commonmodule.ControlSPC blackStartEnabled = 22;
+  if (this->_internal_has_blackstartenabled()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.blackstartenabled_);
+  }
+
+  // .commonmodule.WSPC wOperation = 24;
+  if (this->_internal_has_woperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.woperation_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarPoint::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarPoint::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarPoint::GetClassData() const { return &_class_data_; }
+
+
+void SolarPoint::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarPoint*>(&to_msg);
+  auto& from = static_cast<const SolarPoint&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarPoint)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_mode()) {
+    _this->_internal_mutable_mode()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(
+        from._internal_mode());
+  }
+  if (from._internal_has_ramprates()) {
+    _this->_internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(
+        from._internal_ramprates());
+  }
+  if (from._internal_has_reset()) {
+    _this->_internal_mutable_reset()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_reset());
+  }
+  if (from._internal_has_state()) {
+    _this->_internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(
+        from._internal_state());
+  }
+  if (from._internal_has_enterserviceoperation()) {
+    _this->_internal_mutable_enterserviceoperation()->::commonmodule::EnterServiceAPC::MergeFrom(
+        from._internal_enterserviceoperation());
+  }
+  if (from._internal_has_hzwoperation()) {
+    _this->_internal_mutable_hzwoperation()->::commonmodule::HzWAPC::MergeFrom(
+        from._internal_hzwoperation());
+  }
+  if (from._internal_has_limitwoperation()) {
+    _this->_internal_mutable_limitwoperation()->::commonmodule::LimitWAPC::MergeFrom(
+        from._internal_limitwoperation());
+  }
+  if (from._internal_has_pfoperation()) {
+    _this->_internal_mutable_pfoperation()->::commonmodule::PFSPC::MergeFrom(
+        from._internal_pfoperation());
+  }
+  if (from._internal_has_tmhztripoperation()) {
+    _this->_internal_mutable_tmhztripoperation()->::commonmodule::TmHzCSG::MergeFrom(
+        from._internal_tmhztripoperation());
+  }
+  if (from._internal_has_tmvolttripoperation()) {
+    _this->_internal_mutable_tmvolttripoperation()->::commonmodule::TmVoltCSG::MergeFrom(
+        from._internal_tmvolttripoperation());
+  }
+  if (from._internal_has_varoperation()) {
+    _this->_internal_mutable_varoperation()->::commonmodule::VarSPC::MergeFrom(
+        from._internal_varoperation());
+  }
+  if (from._internal_has_voltvaroperation()) {
+    _this->_internal_mutable_voltvaroperation()->::commonmodule::VoltVarCSG::MergeFrom(
+        from._internal_voltvaroperation());
+  }
+  if (from._internal_has_voltwoperation()) {
+    _this->_internal_mutable_voltwoperation()->::commonmodule::VoltWCSG::MergeFrom(
+        from._internal_voltwoperation());
+  }
+  if (from._internal_has_wvaroperation()) {
+    _this->_internal_mutable_wvaroperation()->::commonmodule::WVarCSG::MergeFrom(
+        from._internal_wvaroperation());
+  }
+  if (from._internal_has_blackstartenabled()) {
+    _this->_internal_mutable_blackstartenabled()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_blackstartenabled());
+  }
+  if (from._internal_has_woperation()) {
+    _this->_internal_mutable_woperation()->::commonmodule::WSPC::MergeFrom(
+        from._internal_woperation());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SolarPoint::CopyFrom(const SolarPoint& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarPoint)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SolarPoint::IsInitialized() const {
+  return true;
+}
+
+void SolarPoint::InternalSwap(SolarPoint* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarPoint, _impl_.woperation_)
+      + sizeof(SolarPoint::_impl_.woperation_)
+      - PROTOBUF_FIELD_OFFSET(SolarPoint, _impl_.mode_)>(
+          reinterpret_cast<char*>(&_impl_.mode_),
+          reinterpret_cast<char*>(&other->_impl_.mode_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SolarPoint::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[7]);
+}
+// ===================================================================
+
+class SolarCurvePoint::_Internal {
+ public:
+  static const ::solarmodule::SolarPoint& control(const SolarCurvePoint* msg);
+  static const ::commonmodule::ControlTimestamp& starttime(const SolarCurvePoint* msg);
+};
+
+const ::solarmodule::SolarPoint&
+SolarCurvePoint::_Internal::control(const SolarCurvePoint* msg) {
+  return *msg->_impl_.control_;
+}
+const ::commonmodule::ControlTimestamp&
+SolarCurvePoint::_Internal::starttime(const SolarCurvePoint* msg) {
+  return *msg->_impl_.starttime_;
+}
+void SolarCurvePoint::clear_starttime() {
+  if (GetArenaForAllocation() == nullptr && _impl_.starttime_ != nullptr) {
+    delete _impl_.starttime_;
+  }
+  _impl_.starttime_ = nullptr;
+}
+SolarCurvePoint::SolarCurvePoint(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarCurvePoint)
+}
+SolarCurvePoint::SolarCurvePoint(const SolarCurvePoint& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarCurvePoint* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.control_){nullptr}
+    , decltype(_impl_.starttime_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_control()) {
+    _this->_impl_.control_ = new ::solarmodule::SolarPoint(*from._impl_.control_);
+  }
+  if (from._internal_has_starttime()) {
+    _this->_impl_.starttime_ = new ::commonmodule::ControlTimestamp(*from._impl_.starttime_);
+  }
+  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarCurvePoint)
+}
+
+inline void SolarCurvePoint::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.control_){nullptr}
+    , decltype(_impl_.starttime_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+SolarCurvePoint::~SolarCurvePoint() {
+  // @@protoc_insertion_point(destructor:solarmodule.SolarCurvePoint)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SolarCurvePoint::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.control_;
+  if (this != internal_default_instance()) delete _impl_.starttime_;
+}
+
+void SolarCurvePoint::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SolarCurvePoint::Clear() {
+// @@protoc_insertion_point(message_clear_start:solarmodule.SolarCurvePoint)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.control_ != nullptr) {
+    delete _impl_.control_;
+  }
+  _impl_.control_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.starttime_ != nullptr) {
+    delete _impl_.starttime_;
+  }
+  _impl_.starttime_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SolarCurvePoint::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .solarmodule.SolarPoint control = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_control(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ControlTimestamp startTime = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_starttime(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* SolarCurvePoint::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarCurvePoint)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .solarmodule.SolarPoint control = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_control()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::control(this),
+        _Internal::control(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ControlTimestamp startTime = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_starttime()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::starttime(this),
+        _Internal::starttime(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarCurvePoint)
+  return target;
+}
+
+::size_t SolarCurvePoint::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarCurvePoint)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .solarmodule.SolarPoint control = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_control()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.control_);
+  }
+
+  // .commonmodule.ControlTimestamp startTime = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_starttime()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.starttime_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarCurvePoint::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarCurvePoint::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarCurvePoint::GetClassData() const { return &_class_data_; }
+
+
+void SolarCurvePoint::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarCurvePoint*>(&to_msg);
+  auto& from = static_cast<const SolarCurvePoint&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarCurvePoint)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_control()) {
+    _this->_internal_mutable_control()->::solarmodule::SolarPoint::MergeFrom(
+        from._internal_control());
+  }
+  if (from._internal_has_starttime()) {
+    _this->_internal_mutable_starttime()->::commonmodule::ControlTimestamp::MergeFrom(
+        from._internal_starttime());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SolarCurvePoint::CopyFrom(const SolarCurvePoint& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarCurvePoint)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SolarCurvePoint::IsInitialized() const {
+  return true;
+}
+
+void SolarCurvePoint::InternalSwap(SolarCurvePoint* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarCurvePoint, _impl_.starttime_)
+      + sizeof(SolarCurvePoint::_impl_.starttime_)
+      - PROTOBUF_FIELD_OFFSET(SolarCurvePoint, _impl_.control_)>(
+          reinterpret_cast<char*>(&_impl_.control_),
+          reinterpret_cast<char*>(&other->_impl_.control_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SolarCurvePoint::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[8]);
+}
+// ===================================================================
+
+class SolarCSG::_Internal {
+ public:
+};
+
+SolarCSG::SolarCSG(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarCSG)
+}
+SolarCSG::SolarCSG(const SolarCSG& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarCSG* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.crvpts_){from._impl_.crvpts_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarCSG)
+}
+
+inline void SolarCSG::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.crvpts_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+SolarCSG::~SolarCSG() {
+  // @@protoc_insertion_point(destructor:solarmodule.SolarCSG)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SolarCSG::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.crvpts_.~RepeatedPtrField();
+}
+
+void SolarCSG::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SolarCSG::Clear() {
+// @@protoc_insertion_point(message_clear_start:solarmodule.SolarCSG)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.crvpts_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SolarCSG::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // repeated .solarmodule.SolarCurvePoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_crvpts(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* SolarCSG::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarCSG)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .solarmodule.SolarCurvePoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_crvpts_size()); i < n; i++) {
+    const auto& repfield = this->_internal_crvpts(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarCSG)
+  return target;
+}
+
+::size_t SolarCSG::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarCSG)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .solarmodule.SolarCurvePoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  total_size += 1UL * this->_internal_crvpts_size();
+  for (const auto& msg : this->_impl_.crvpts_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarCSG::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarCSG::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarCSG::GetClassData() const { return &_class_data_; }
+
+
+void SolarCSG::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarCSG*>(&to_msg);
+  auto& from = static_cast<const SolarCSG&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarCSG)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_impl_.crvpts_.MergeFrom(from._impl_.crvpts_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SolarCSG::CopyFrom(const SolarCSG& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarCSG)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SolarCSG::IsInitialized() const {
+  return true;
+}
+
+void SolarCSG::InternalSwap(SolarCSG* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.crvpts_.InternalSwap(&other->_impl_.crvpts_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SolarCSG::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[9]);
+}
+// ===================================================================
+
+class SolarControlScheduleFSCH::_Internal {
+ public:
+  static const ::solarmodule::SolarCSG& valdcsg(const SolarControlScheduleFSCH* msg);
+};
+
+const ::solarmodule::SolarCSG&
+SolarControlScheduleFSCH::_Internal::valdcsg(const SolarControlScheduleFSCH* msg) {
+  return *msg->_impl_.valdcsg_;
+}
+SolarControlScheduleFSCH::SolarControlScheduleFSCH(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarControlScheduleFSCH)
+}
+SolarControlScheduleFSCH::SolarControlScheduleFSCH(const SolarControlScheduleFSCH& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarControlScheduleFSCH* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.valdcsg_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_valdcsg()) {
+    _this->_impl_.valdcsg_ = new ::solarmodule::SolarCSG(*from._impl_.valdcsg_);
+  }
+  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarControlScheduleFSCH)
+}
+
+inline void SolarControlScheduleFSCH::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.valdcsg_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+SolarControlScheduleFSCH::~SolarControlScheduleFSCH() {
+  // @@protoc_insertion_point(destructor:solarmodule.SolarControlScheduleFSCH)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SolarControlScheduleFSCH::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.valdcsg_;
+}
+
+void SolarControlScheduleFSCH::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SolarControlScheduleFSCH::Clear() {
+// @@protoc_insertion_point(message_clear_start:solarmodule.SolarControlScheduleFSCH)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.valdcsg_ != nullptr) {
+    delete _impl_.valdcsg_;
+  }
+  _impl_.valdcsg_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SolarControlScheduleFSCH::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .solarmodule.SolarCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_valdcsg(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* SolarControlScheduleFSCH::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarControlScheduleFSCH)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .solarmodule.SolarCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_valdcsg()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::valdcsg(this),
+        _Internal::valdcsg(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarControlScheduleFSCH)
+  return target;
+}
+
+::size_t SolarControlScheduleFSCH::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarControlScheduleFSCH)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .solarmodule.SolarCSG ValDCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_valdcsg()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.valdcsg_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarControlScheduleFSCH::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarControlScheduleFSCH::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarControlScheduleFSCH::GetClassData() const { return &_class_data_; }
+
+
+void SolarControlScheduleFSCH::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarControlScheduleFSCH*>(&to_msg);
+  auto& from = static_cast<const SolarControlScheduleFSCH&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarControlScheduleFSCH)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_valdcsg()) {
+    _this->_internal_mutable_valdcsg()->::solarmodule::SolarCSG::MergeFrom(
+        from._internal_valdcsg());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SolarControlScheduleFSCH::CopyFrom(const SolarControlScheduleFSCH& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarControlScheduleFSCH)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SolarControlScheduleFSCH::IsInitialized() const {
+  return true;
+}
+
+void SolarControlScheduleFSCH::InternalSwap(SolarControlScheduleFSCH* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.valdcsg_, other->_impl_.valdcsg_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SolarControlScheduleFSCH::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[10]);
+}
+// ===================================================================
+
+class SolarControlFSCC::_Internal {
+ public:
+  static const ::commonmodule::ControlFSCC& controlfscc(const SolarControlFSCC* msg);
+  static const ::solarmodule::SolarControlScheduleFSCH& solarcontrolschedulefsch(const SolarControlFSCC* msg);
+};
+
+const ::commonmodule::ControlFSCC&
+SolarControlFSCC::_Internal::controlfscc(const SolarControlFSCC* msg) {
+  return *msg->_impl_.controlfscc_;
+}
+const ::solarmodule::SolarControlScheduleFSCH&
+SolarControlFSCC::_Internal::solarcontrolschedulefsch(const SolarControlFSCC* msg) {
+  return *msg->_impl_.solarcontrolschedulefsch_;
+}
+void SolarControlFSCC::clear_controlfscc() {
+  if (GetArenaForAllocation() == nullptr && _impl_.controlfscc_ != nullptr) {
+    delete _impl_.controlfscc_;
+  }
+  _impl_.controlfscc_ = nullptr;
+}
+SolarControlFSCC::SolarControlFSCC(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarControlFSCC)
+}
+SolarControlFSCC::SolarControlFSCC(const SolarControlFSCC& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarControlFSCC* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlfscc_){nullptr}
+    , decltype(_impl_.solarcontrolschedulefsch_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_controlfscc()) {
+    _this->_impl_.controlfscc_ = new ::commonmodule::ControlFSCC(*from._impl_.controlfscc_);
+  }
+  if (from._internal_has_solarcontrolschedulefsch()) {
+    _this->_impl_.solarcontrolschedulefsch_ = new ::solarmodule::SolarControlScheduleFSCH(*from._impl_.solarcontrolschedulefsch_);
+  }
+  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarControlFSCC)
+}
+
+inline void SolarControlFSCC::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlfscc_){nullptr}
+    , decltype(_impl_.solarcontrolschedulefsch_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+SolarControlFSCC::~SolarControlFSCC() {
+  // @@protoc_insertion_point(destructor:solarmodule.SolarControlFSCC)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SolarControlFSCC::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlfscc_;
+  if (this != internal_default_instance()) delete _impl_.solarcontrolschedulefsch_;
+}
+
+void SolarControlFSCC::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SolarControlFSCC::Clear() {
+// @@protoc_insertion_point(message_clear_start:solarmodule.SolarControlFSCC)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.controlfscc_ != nullptr) {
+    delete _impl_.controlfscc_;
+  }
+  _impl_.controlfscc_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solarcontrolschedulefsch_ != nullptr) {
+    delete _impl_.solarcontrolschedulefsch_;
+  }
+  _impl_.solarcontrolschedulefsch_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SolarControlFSCC::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_controlfscc(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .solarmodule.SolarControlScheduleFSCH SolarControlScheduleFSCH = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarcontrolschedulefsch(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* SolarControlFSCC::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarControlFSCC)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_controlfscc()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::controlfscc(this),
+        _Internal::controlfscc(this).GetCachedSize(), target, stream);
+  }
+
+  // .solarmodule.SolarControlScheduleFSCH SolarControlScheduleFSCH = 2;
+  if (this->_internal_has_solarcontrolschedulefsch()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::solarcontrolschedulefsch(this),
+        _Internal::solarcontrolschedulefsch(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarControlFSCC)
+  return target;
+}
+
+::size_t SolarControlFSCC::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarControlFSCC)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_controlfscc()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.controlfscc_);
+  }
+
+  // .solarmodule.SolarControlScheduleFSCH SolarControlScheduleFSCH = 2;
+  if (this->_internal_has_solarcontrolschedulefsch()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.solarcontrolschedulefsch_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarControlFSCC::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarControlFSCC::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarControlFSCC::GetClassData() const { return &_class_data_; }
+
+
+void SolarControlFSCC::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarControlFSCC*>(&to_msg);
+  auto& from = static_cast<const SolarControlFSCC&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarControlFSCC)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_controlfscc()) {
+    _this->_internal_mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(
+        from._internal_controlfscc());
+  }
+  if (from._internal_has_solarcontrolschedulefsch()) {
+    _this->_internal_mutable_solarcontrolschedulefsch()->::solarmodule::SolarControlScheduleFSCH::MergeFrom(
+        from._internal_solarcontrolschedulefsch());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SolarControlFSCC::CopyFrom(const SolarControlFSCC& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarControlFSCC)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SolarControlFSCC::IsInitialized() const {
+  return true;
+}
+
+void SolarControlFSCC::InternalSwap(SolarControlFSCC* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarControlFSCC, _impl_.solarcontrolschedulefsch_)
+      + sizeof(SolarControlFSCC::_impl_.solarcontrolschedulefsch_)
+      - PROTOBUF_FIELD_OFFSET(SolarControlFSCC, _impl_.controlfscc_)>(
+          reinterpret_cast<char*>(&_impl_.controlfscc_),
+          reinterpret_cast<char*>(&other->_impl_.controlfscc_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SolarControlFSCC::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[11]);
+}
+// ===================================================================
+
+class SolarControl::_Internal {
+ public:
+  static const ::commonmodule::ControlValue& controlvalue(const SolarControl* msg);
+  static const ::commonmodule::CheckConditions& check(const SolarControl* msg);
+  static const ::solarmodule::SolarControlFSCC& solarcontrolfscc(const SolarControl* msg);
+};
+
+const ::commonmodule::ControlValue&
+SolarControl::_Internal::controlvalue(const SolarControl* msg) {
+  return *msg->_impl_.controlvalue_;
+}
+const ::commonmodule::CheckConditions&
+SolarControl::_Internal::check(const SolarControl* msg) {
+  return *msg->_impl_.check_;
+}
+const ::solarmodule::SolarControlFSCC&
+SolarControl::_Internal::solarcontrolfscc(const SolarControl* msg) {
+  return *msg->_impl_.solarcontrolfscc_;
+}
+void SolarControl::clear_controlvalue() {
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
+  }
+  _impl_.controlvalue_ = nullptr;
+}
+void SolarControl::clear_check() {
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
+  }
+  _impl_.check_ = nullptr;
+}
+SolarControl::SolarControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarControl)
+}
+SolarControl::SolarControl(const SolarControl& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarControl* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.solarcontrolfscc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_controlvalue()) {
+    _this->_impl_.controlvalue_ = new ::commonmodule::ControlValue(*from._impl_.controlvalue_);
+  }
+  if (from._internal_has_check()) {
+    _this->_impl_.check_ = new ::commonmodule::CheckConditions(*from._impl_.check_);
+  }
+  if (from._internal_has_solarcontrolfscc()) {
+    _this->_impl_.solarcontrolfscc_ = new ::solarmodule::SolarControlFSCC(*from._impl_.solarcontrolfscc_);
+  }
+  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarControl)
+}
+
+inline void SolarControl::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.solarcontrolfscc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+SolarControl::~SolarControl() {
+  // @@protoc_insertion_point(destructor:solarmodule.SolarControl)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SolarControl::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlvalue_;
+  if (this != internal_default_instance()) delete _impl_.check_;
+  if (this != internal_default_instance()) delete _impl_.solarcontrolfscc_;
+}
+
+void SolarControl::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SolarControl::Clear() {
+// @@protoc_insertion_point(message_clear_start:solarmodule.SolarControl)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
+  }
+  _impl_.controlvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
+  }
+  _impl_.check_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solarcontrolfscc_ != nullptr) {
+    delete _impl_.solarcontrolfscc_;
+  }
+  _impl_.solarcontrolfscc_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SolarControl::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_controlvalue(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.CheckConditions check = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .solarmodule.SolarControlFSCC solarControlFSCC = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarcontrolfscc(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* SolarControl::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarControl)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_controlvalue()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::controlvalue(this),
+        _Internal::controlvalue(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.CheckConditions check = 2;
+  if (this->_internal_has_check()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::check(this),
+        _Internal::check(this).GetCachedSize(), target, stream);
+  }
+
+  // .solarmodule.SolarControlFSCC solarControlFSCC = 3;
+  if (this->_internal_has_solarcontrolfscc()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::solarcontrolfscc(this),
+        _Internal::solarcontrolfscc(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarControl)
+  return target;
+}
+
+::size_t SolarControl::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarControl)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_controlvalue()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.controlvalue_);
+  }
+
+  // .commonmodule.CheckConditions check = 2;
+  if (this->_internal_has_check()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.check_);
+  }
+
+  // .solarmodule.SolarControlFSCC solarControlFSCC = 3;
+  if (this->_internal_has_solarcontrolfscc()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.solarcontrolfscc_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarControl::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarControl::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarControl::GetClassData() const { return &_class_data_; }
+
+
+void SolarControl::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarControl*>(&to_msg);
+  auto& from = static_cast<const SolarControl&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarControl)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_controlvalue()) {
+    _this->_internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(
+        from._internal_controlvalue());
+  }
+  if (from._internal_has_check()) {
+    _this->_internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(
+        from._internal_check());
+  }
+  if (from._internal_has_solarcontrolfscc()) {
+    _this->_internal_mutable_solarcontrolfscc()->::solarmodule::SolarControlFSCC::MergeFrom(
+        from._internal_solarcontrolfscc());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SolarControl::CopyFrom(const SolarControl& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarControl)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SolarControl::IsInitialized() const {
+  return true;
+}
+
+void SolarControl::InternalSwap(SolarControl* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarControl, _impl_.solarcontrolfscc_)
+      + sizeof(SolarControl::_impl_.solarcontrolfscc_)
+      - PROTOBUF_FIELD_OFFSET(SolarControl, _impl_.controlvalue_)>(
+          reinterpret_cast<char*>(&_impl_.controlvalue_),
+          reinterpret_cast<char*>(&other->_impl_.controlvalue_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SolarControl::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[12]);
+}
 // ===================================================================
 
 class SolarControlProfile::_Internal {
@@ -2430,264 +4844,251 @@ class SolarControlProfile::_Internal {
 
 const ::commonmodule::ControlMessageInfo&
 SolarControlProfile::_Internal::controlmessageinfo(const SolarControlProfile* msg) {
-  return *msg->controlmessageinfo_;
+  return *msg->_impl_.controlmessageinfo_;
 }
 const ::solarmodule::SolarControl&
 SolarControlProfile::_Internal::solarcontrol(const SolarControlProfile* msg) {
-  return *msg->solarcontrol_;
+  return *msg->_impl_.solarcontrol_;
 }
 const ::solarmodule::SolarInverter&
 SolarControlProfile::_Internal::solarinverter(const SolarControlProfile* msg) {
-  return *msg->solarinverter_;
+  return *msg->_impl_.solarinverter_;
 }
 void SolarControlProfile::clear_controlmessageinfo() {
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
+  _impl_.controlmessageinfo_ = nullptr;
 }
 SolarControlProfile::SolarControlProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:solarmodule.SolarControlProfile)
 }
 SolarControlProfile::SolarControlProfile(const SolarControlProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarControlProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.solarcontrol_){nullptr}
+    , decltype(_impl_.solarinverter_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlmessageinfo()) {
-    controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
-  } else {
-    controlmessageinfo_ = nullptr;
+    _this->_impl_.controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from._impl_.controlmessageinfo_);
   }
   if (from._internal_has_solarcontrol()) {
-    solarcontrol_ = new ::solarmodule::SolarControl(*from.solarcontrol_);
-  } else {
-    solarcontrol_ = nullptr;
+    _this->_impl_.solarcontrol_ = new ::solarmodule::SolarControl(*from._impl_.solarcontrol_);
   }
   if (from._internal_has_solarinverter()) {
-    solarinverter_ = new ::solarmodule::SolarInverter(*from.solarinverter_);
-  } else {
-    solarinverter_ = nullptr;
+    _this->_impl_.solarinverter_ = new ::solarmodule::SolarInverter(*from._impl_.solarinverter_);
   }
   // @@protoc_insertion_point(copy_constructor:solarmodule.SolarControlProfile)
 }
 
-void SolarControlProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&solarinverter_) -
-    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(solarinverter_));
+inline void SolarControlProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.solarcontrol_){nullptr}
+    , decltype(_impl_.solarinverter_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SolarControlProfile::~SolarControlProfile() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarControlProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void SolarControlProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete solarcontrol_;
-  if (this != internal_default_instance()) delete solarinverter_;
+inline void SolarControlProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.solarcontrol_;
+  if (this != internal_default_instance()) delete _impl_.solarinverter_;
 }
 
-void SolarControlProfile::ArenaDtor(void* object) {
-  SolarControlProfile* _this = reinterpret_cast< SolarControlProfile* >(object);
-  (void)_this;
-}
-void SolarControlProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SolarControlProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SolarControlProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && solarcontrol_ != nullptr) {
-    delete solarcontrol_;
+  _impl_.controlmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solarcontrol_ != nullptr) {
+    delete _impl_.solarcontrol_;
   }
-  solarcontrol_ = nullptr;
-  if (GetArena() == nullptr && solarinverter_ != nullptr) {
-    delete solarinverter_;
+  _impl_.solarcontrol_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solarinverter_ != nullptr) {
+    delete _impl_.solarinverter_;
   }
-  solarinverter_ = nullptr;
+  _impl_.solarinverter_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SolarControlProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SolarControlProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .solarmodule.SolarControl solarControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_solarcontrol(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_solarinverter(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SolarControlProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* SolarControlProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlmessageinfo(this),
+        _Internal::controlmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .solarmodule.SolarControl solarControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarcontrol()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_solarcontrol()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::solarcontrol(this), target, stream);
+      InternalWriteMessage(2, _Internal::solarcontrol(this),
+        _Internal::solarcontrol(this).GetCachedSize(), target, stream);
   }
 
   // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarinverter()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_solarinverter()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::solarinverter(this), target, stream);
+      InternalWriteMessage(3, _Internal::solarinverter(this),
+        _Internal::solarinverter(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarControlProfile)
   return target;
 }
 
-size_t SolarControlProfile::ByteSizeLong() const {
+::size_t SolarControlProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarControlProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
+  if (this->_internal_has_controlmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlmessageinfo_);
+        *_impl_.controlmessageinfo_);
   }
 
   // .solarmodule.SolarControl solarControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarcontrol()) {
+  if (this->_internal_has_solarcontrol()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *solarcontrol_);
+        *_impl_.solarcontrol_);
   }
 
   // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarinverter()) {
+  if (this->_internal_has_solarinverter()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *solarinverter_);
+        *_impl_.solarinverter_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SolarControlProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SolarControlProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarControlProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarControlProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarControlProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarControlProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarControlProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarControlProfile::GetClassData() const { return &_class_data_; }
 
-void SolarControlProfile::MergeFrom(const SolarControlProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void SolarControlProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarControlProfile*>(&to_msg);
+  auto& from = static_cast<const SolarControlProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarControlProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlmessageinfo()) {
-    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
+  if (from._internal_has_controlmessageinfo()) {
+    _this->_internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(
+        from._internal_controlmessageinfo());
   }
-  if (from.has_solarcontrol()) {
-    _internal_mutable_solarcontrol()->::solarmodule::SolarControl::MergeFrom(from._internal_solarcontrol());
+  if (from._internal_has_solarcontrol()) {
+    _this->_internal_mutable_solarcontrol()->::solarmodule::SolarControl::MergeFrom(
+        from._internal_solarcontrol());
   }
-  if (from.has_solarinverter()) {
-    _internal_mutable_solarinverter()->::solarmodule::SolarInverter::MergeFrom(from._internal_solarinverter());
+  if (from._internal_has_solarinverter()) {
+    _this->_internal_mutable_solarinverter()->::solarmodule::SolarInverter::MergeFrom(
+        from._internal_solarinverter());
   }
-}
-
-void SolarControlProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarControlProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SolarControlProfile::CopyFrom(const SolarControlProfile& from) {
@@ -2703,577 +5104,1971 @@ bool SolarControlProfile::IsInitialized() const {
 
 void SolarControlProfile::InternalSwap(SolarControlProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SolarControlProfile, solarinverter_)
-      + sizeof(SolarControlProfile::solarinverter_)
-      - PROTOBUF_FIELD_OFFSET(SolarControlProfile, controlmessageinfo_)>(
-          reinterpret_cast<char*>(&controlmessageinfo_),
-          reinterpret_cast<char*>(&other->controlmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(SolarControlProfile, _impl_.solarinverter_)
+      + sizeof(SolarControlProfile::_impl_.solarinverter_)
+      - PROTOBUF_FIELD_OFFSET(SolarControlProfile, _impl_.controlmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.controlmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.controlmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SolarControlProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[13]);
+}
+// ===================================================================
+
+class SolarDiscreteControlPV::_Internal {
+ public:
+  static const ::commonmodule::LogicalNodeForControl& logicalnodeforcontrol(const SolarDiscreteControlPV* msg);
+  static const ::solarmodule::SolarPoint& control(const SolarDiscreteControlPV* msg);
+};
+
+const ::commonmodule::LogicalNodeForControl&
+SolarDiscreteControlPV::_Internal::logicalnodeforcontrol(const SolarDiscreteControlPV* msg) {
+  return *msg->_impl_.logicalnodeforcontrol_;
+}
+const ::solarmodule::SolarPoint&
+SolarDiscreteControlPV::_Internal::control(const SolarDiscreteControlPV* msg) {
+  return *msg->_impl_.control_;
+}
+void SolarDiscreteControlPV::clear_logicalnodeforcontrol() {
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforcontrol_ != nullptr) {
+    delete _impl_.logicalnodeforcontrol_;
+  }
+  _impl_.logicalnodeforcontrol_ = nullptr;
+}
+SolarDiscreteControlPV::SolarDiscreteControlPV(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarDiscreteControlPV)
+}
+SolarDiscreteControlPV::SolarDiscreteControlPV(const SolarDiscreteControlPV& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarDiscreteControlPV* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforcontrol_){nullptr}
+    , decltype(_impl_.control_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_logicalnodeforcontrol()) {
+    _this->_impl_.logicalnodeforcontrol_ = new ::commonmodule::LogicalNodeForControl(*from._impl_.logicalnodeforcontrol_);
+  }
+  if (from._internal_has_control()) {
+    _this->_impl_.control_ = new ::solarmodule::SolarPoint(*from._impl_.control_);
+  }
+  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarDiscreteControlPV)
 }
 
+inline void SolarDiscreteControlPV::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforcontrol_){nullptr}
+    , decltype(_impl_.control_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
 
+SolarDiscreteControlPV::~SolarDiscreteControlPV() {
+  // @@protoc_insertion_point(destructor:solarmodule.SolarDiscreteControlPV)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SolarDiscreteControlPV::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.logicalnodeforcontrol_;
+  if (this != internal_default_instance()) delete _impl_.control_;
+}
+
+void SolarDiscreteControlPV::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SolarDiscreteControlPV::Clear() {
+// @@protoc_insertion_point(message_clear_start:solarmodule.SolarDiscreteControlPV)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforcontrol_ != nullptr) {
+    delete _impl_.logicalnodeforcontrol_;
+  }
+  _impl_.logicalnodeforcontrol_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.control_ != nullptr) {
+    delete _impl_.control_;
+  }
+  _impl_.control_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SolarDiscreteControlPV::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforcontrol(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .solarmodule.SolarPoint control = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_control(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* SolarDiscreteControlPV::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarDiscreteControlPV)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_logicalnodeforcontrol()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::logicalnodeforcontrol(this),
+        _Internal::logicalnodeforcontrol(this).GetCachedSize(), target, stream);
+  }
+
+  // .solarmodule.SolarPoint control = 2;
+  if (this->_internal_has_control()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::control(this),
+        _Internal::control(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarDiscreteControlPV)
+  return target;
+}
+
+::size_t SolarDiscreteControlPV::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarDiscreteControlPV)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_logicalnodeforcontrol()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.logicalnodeforcontrol_);
+  }
+
+  // .solarmodule.SolarPoint control = 2;
+  if (this->_internal_has_control()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.control_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarDiscreteControlPV::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarDiscreteControlPV::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarDiscreteControlPV::GetClassData() const { return &_class_data_; }
+
+
+void SolarDiscreteControlPV::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarDiscreteControlPV*>(&to_msg);
+  auto& from = static_cast<const SolarDiscreteControlPV&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarDiscreteControlPV)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_logicalnodeforcontrol()) {
+    _this->_internal_mutable_logicalnodeforcontrol()->::commonmodule::LogicalNodeForControl::MergeFrom(
+        from._internal_logicalnodeforcontrol());
+  }
+  if (from._internal_has_control()) {
+    _this->_internal_mutable_control()->::solarmodule::SolarPoint::MergeFrom(
+        from._internal_control());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SolarDiscreteControlPV::CopyFrom(const SolarDiscreteControlPV& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarDiscreteControlPV)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SolarDiscreteControlPV::IsInitialized() const {
+  return true;
+}
+
+void SolarDiscreteControlPV::InternalSwap(SolarDiscreteControlPV* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarDiscreteControlPV, _impl_.control_)
+      + sizeof(SolarDiscreteControlPV::_impl_.control_)
+      - PROTOBUF_FIELD_OFFSET(SolarDiscreteControlPV, _impl_.logicalnodeforcontrol_)>(
+          reinterpret_cast<char*>(&_impl_.logicalnodeforcontrol_),
+          reinterpret_cast<char*>(&other->_impl_.logicalnodeforcontrol_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SolarDiscreteControlPV::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[14]);
+}
+// ===================================================================
+
+class SolarDiscreteControl::_Internal {
+ public:
+  static const ::commonmodule::ControlValue& controlvalue(const SolarDiscreteControl* msg);
+  static const ::commonmodule::CheckConditions& check(const SolarDiscreteControl* msg);
+  static const ::solarmodule::SolarDiscreteControlPV& solardiscretecontrolpv(const SolarDiscreteControl* msg);
+};
+
+const ::commonmodule::ControlValue&
+SolarDiscreteControl::_Internal::controlvalue(const SolarDiscreteControl* msg) {
+  return *msg->_impl_.controlvalue_;
+}
+const ::commonmodule::CheckConditions&
+SolarDiscreteControl::_Internal::check(const SolarDiscreteControl* msg) {
+  return *msg->_impl_.check_;
+}
+const ::solarmodule::SolarDiscreteControlPV&
+SolarDiscreteControl::_Internal::solardiscretecontrolpv(const SolarDiscreteControl* msg) {
+  return *msg->_impl_.solardiscretecontrolpv_;
+}
+void SolarDiscreteControl::clear_controlvalue() {
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
+  }
+  _impl_.controlvalue_ = nullptr;
+}
+void SolarDiscreteControl::clear_check() {
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
+  }
+  _impl_.check_ = nullptr;
+}
+SolarDiscreteControl::SolarDiscreteControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarDiscreteControl)
+}
+SolarDiscreteControl::SolarDiscreteControl(const SolarDiscreteControl& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarDiscreteControl* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.solardiscretecontrolpv_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_controlvalue()) {
+    _this->_impl_.controlvalue_ = new ::commonmodule::ControlValue(*from._impl_.controlvalue_);
+  }
+  if (from._internal_has_check()) {
+    _this->_impl_.check_ = new ::commonmodule::CheckConditions(*from._impl_.check_);
+  }
+  if (from._internal_has_solardiscretecontrolpv()) {
+    _this->_impl_.solardiscretecontrolpv_ = new ::solarmodule::SolarDiscreteControlPV(*from._impl_.solardiscretecontrolpv_);
+  }
+  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarDiscreteControl)
+}
+
+inline void SolarDiscreteControl::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.solardiscretecontrolpv_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+SolarDiscreteControl::~SolarDiscreteControl() {
+  // @@protoc_insertion_point(destructor:solarmodule.SolarDiscreteControl)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SolarDiscreteControl::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlvalue_;
+  if (this != internal_default_instance()) delete _impl_.check_;
+  if (this != internal_default_instance()) delete _impl_.solardiscretecontrolpv_;
+}
+
+void SolarDiscreteControl::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SolarDiscreteControl::Clear() {
+// @@protoc_insertion_point(message_clear_start:solarmodule.SolarDiscreteControl)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
+  }
+  _impl_.controlvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
+  }
+  _impl_.check_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solardiscretecontrolpv_ != nullptr) {
+    delete _impl_.solardiscretecontrolpv_;
+  }
+  _impl_.solardiscretecontrolpv_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SolarDiscreteControl::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_controlvalue(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.CheckConditions check = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .solarmodule.SolarDiscreteControlPV solarDiscreteControlPV = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solardiscretecontrolpv(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* SolarDiscreteControl::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarDiscreteControl)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_controlvalue()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::controlvalue(this),
+        _Internal::controlvalue(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.CheckConditions check = 2;
+  if (this->_internal_has_check()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::check(this),
+        _Internal::check(this).GetCachedSize(), target, stream);
+  }
+
+  // .solarmodule.SolarDiscreteControlPV solarDiscreteControlPV = 3;
+  if (this->_internal_has_solardiscretecontrolpv()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::solardiscretecontrolpv(this),
+        _Internal::solardiscretecontrolpv(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarDiscreteControl)
+  return target;
+}
+
+::size_t SolarDiscreteControl::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarDiscreteControl)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_controlvalue()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.controlvalue_);
+  }
+
+  // .commonmodule.CheckConditions check = 2;
+  if (this->_internal_has_check()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.check_);
+  }
+
+  // .solarmodule.SolarDiscreteControlPV solarDiscreteControlPV = 3;
+  if (this->_internal_has_solardiscretecontrolpv()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.solardiscretecontrolpv_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarDiscreteControl::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarDiscreteControl::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarDiscreteControl::GetClassData() const { return &_class_data_; }
+
+
+void SolarDiscreteControl::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarDiscreteControl*>(&to_msg);
+  auto& from = static_cast<const SolarDiscreteControl&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarDiscreteControl)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_controlvalue()) {
+    _this->_internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(
+        from._internal_controlvalue());
+  }
+  if (from._internal_has_check()) {
+    _this->_internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(
+        from._internal_check());
+  }
+  if (from._internal_has_solardiscretecontrolpv()) {
+    _this->_internal_mutable_solardiscretecontrolpv()->::solarmodule::SolarDiscreteControlPV::MergeFrom(
+        from._internal_solardiscretecontrolpv());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SolarDiscreteControl::CopyFrom(const SolarDiscreteControl& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarDiscreteControl)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SolarDiscreteControl::IsInitialized() const {
+  return true;
+}
+
+void SolarDiscreteControl::InternalSwap(SolarDiscreteControl* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarDiscreteControl, _impl_.solardiscretecontrolpv_)
+      + sizeof(SolarDiscreteControl::_impl_.solardiscretecontrolpv_)
+      - PROTOBUF_FIELD_OFFSET(SolarDiscreteControl, _impl_.controlvalue_)>(
+          reinterpret_cast<char*>(&_impl_.controlvalue_),
+          reinterpret_cast<char*>(&other->_impl_.controlvalue_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SolarDiscreteControl::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[15]);
+}
+// ===================================================================
+
+class SolarDiscreteControlProfile::_Internal {
+ public:
+  static const ::commonmodule::ControlMessageInfo& controlmessageinfo(const SolarDiscreteControlProfile* msg);
+  static const ::solarmodule::SolarDiscreteControl& solardiscretecontrol(const SolarDiscreteControlProfile* msg);
+  static const ::solarmodule::SolarInverter& solarinverter(const SolarDiscreteControlProfile* msg);
+};
+
+const ::commonmodule::ControlMessageInfo&
+SolarDiscreteControlProfile::_Internal::controlmessageinfo(const SolarDiscreteControlProfile* msg) {
+  return *msg->_impl_.controlmessageinfo_;
+}
+const ::solarmodule::SolarDiscreteControl&
+SolarDiscreteControlProfile::_Internal::solardiscretecontrol(const SolarDiscreteControlProfile* msg) {
+  return *msg->_impl_.solardiscretecontrol_;
+}
+const ::solarmodule::SolarInverter&
+SolarDiscreteControlProfile::_Internal::solarinverter(const SolarDiscreteControlProfile* msg) {
+  return *msg->_impl_.solarinverter_;
+}
+void SolarDiscreteControlProfile::clear_controlmessageinfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
+  }
+  _impl_.controlmessageinfo_ = nullptr;
+}
+SolarDiscreteControlProfile::SolarDiscreteControlProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:solarmodule.SolarDiscreteControlProfile)
+}
+SolarDiscreteControlProfile::SolarDiscreteControlProfile(const SolarDiscreteControlProfile& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarDiscreteControlProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.solardiscretecontrol_){nullptr}
+    , decltype(_impl_.solarinverter_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_controlmessageinfo()) {
+    _this->_impl_.controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from._impl_.controlmessageinfo_);
+  }
+  if (from._internal_has_solardiscretecontrol()) {
+    _this->_impl_.solardiscretecontrol_ = new ::solarmodule::SolarDiscreteControl(*from._impl_.solardiscretecontrol_);
+  }
+  if (from._internal_has_solarinverter()) {
+    _this->_impl_.solarinverter_ = new ::solarmodule::SolarInverter(*from._impl_.solarinverter_);
+  }
+  // @@protoc_insertion_point(copy_constructor:solarmodule.SolarDiscreteControlProfile)
+}
+
+inline void SolarDiscreteControlProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.solardiscretecontrol_){nullptr}
+    , decltype(_impl_.solarinverter_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+SolarDiscreteControlProfile::~SolarDiscreteControlProfile() {
+  // @@protoc_insertion_point(destructor:solarmodule.SolarDiscreteControlProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void SolarDiscreteControlProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.solardiscretecontrol_;
+  if (this != internal_default_instance()) delete _impl_.solarinverter_;
+}
+
+void SolarDiscreteControlProfile::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void SolarDiscreteControlProfile::Clear() {
+// @@protoc_insertion_point(message_clear_start:solarmodule.SolarDiscreteControlProfile)
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
+  }
+  _impl_.controlmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solardiscretecontrol_ != nullptr) {
+    delete _impl_.solardiscretecontrol_;
+  }
+  _impl_.solardiscretecontrol_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solarinverter_ != nullptr) {
+    delete _impl_.solarinverter_;
+  }
+  _impl_.solarinverter_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SolarDiscreteControlProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .solarmodule.SolarDiscreteControl solarDiscreteControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solardiscretecontrol(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_solarinverter(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+::uint8_t* SolarDiscreteControlProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarDiscreteControlProfile)
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_controlmessageinfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::controlmessageinfo(this),
+        _Internal::controlmessageinfo(this).GetCachedSize(), target, stream);
+  }
+
+  // .solarmodule.SolarDiscreteControl solarDiscreteControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_solardiscretecontrol()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::solardiscretecontrol(this),
+        _Internal::solardiscretecontrol(this).GetCachedSize(), target, stream);
+  }
+
+  // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_solarinverter()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::solarinverter(this),
+        _Internal::solarinverter(this).GetCachedSize(), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarDiscreteControlProfile)
+  return target;
+}
+
+::size_t SolarDiscreteControlProfile::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarDiscreteControlProfile)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
+  if (this->_internal_has_controlmessageinfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.controlmessageinfo_);
+  }
+
+  // .solarmodule.SolarDiscreteControl solarDiscreteControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_solardiscretecontrol()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.solardiscretecontrol_);
+  }
+
+  // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
+  if (this->_internal_has_solarinverter()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.solarinverter_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarDiscreteControlProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarDiscreteControlProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarDiscreteControlProfile::GetClassData() const { return &_class_data_; }
+
+
+void SolarDiscreteControlProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarDiscreteControlProfile*>(&to_msg);
+  auto& from = static_cast<const SolarDiscreteControlProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarDiscreteControlProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_has_controlmessageinfo()) {
+    _this->_internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(
+        from._internal_controlmessageinfo());
+  }
+  if (from._internal_has_solardiscretecontrol()) {
+    _this->_internal_mutable_solardiscretecontrol()->::solarmodule::SolarDiscreteControl::MergeFrom(
+        from._internal_solardiscretecontrol());
+  }
+  if (from._internal_has_solarinverter()) {
+    _this->_internal_mutable_solarinverter()->::solarmodule::SolarInverter::MergeFrom(
+        from._internal_solarinverter());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void SolarDiscreteControlProfile::CopyFrom(const SolarDiscreteControlProfile& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:solarmodule.SolarDiscreteControlProfile)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SolarDiscreteControlProfile::IsInitialized() const {
+  return true;
+}
+
+void SolarDiscreteControlProfile::InternalSwap(SolarDiscreteControlProfile* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SolarDiscreteControlProfile, _impl_.solarinverter_)
+      + sizeof(SolarDiscreteControlProfile::_impl_.solarinverter_)
+      - PROTOBUF_FIELD_OFFSET(SolarDiscreteControlProfile, _impl_.controlmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.controlmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.controlmessageinfo_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SolarDiscreteControlProfile::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[16]);
+}
 // ===================================================================
 
 class SolarPointStatus::_Internal {
  public:
   static const ::commonmodule::StatusSPS& frequencysetpointenabled(const SolarPointStatus* msg);
   static const ::commonmodule::ENG_GridConnectModeKind& mode(const SolarPointStatus* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pcthzdroop(const SolarPointStatus* msg);
-  static const PROTOBUF_NAMESPACE_ID::FloatValue& pctvdroop(const SolarPointStatus* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& pcthzdroop(const SolarPointStatus* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::FloatValue& pctvdroop(const SolarPointStatus* msg);
   static const ::commonmodule::RampRate& ramprates(const SolarPointStatus* msg);
   static const ::commonmodule::StatusSPS& reactivepwrsetpointenabled(const SolarPointStatus* msg);
   static const ::commonmodule::StatusSPS& realpwrsetpointenabled(const SolarPointStatus* msg);
   static const ::commonmodule::Optional_StateKind& state(const SolarPointStatus* msg);
   static const ::commonmodule::StatusSPS& voltagesetpointenabled(const SolarPointStatus* msg);
+  static const ::commonmodule::ControlSPC& blackstartenabled(const SolarPointStatus* msg);
+  static const ::commonmodule::EnterServiceAPC& enterserviceoperation(const SolarPointStatus* msg);
+  static const ::commonmodule::HzWPoint& hzwoperation(const SolarPointStatus* msg);
+  static const ::commonmodule::LimitWAPC& limitwoperation(const SolarPointStatus* msg);
+  static const ::commonmodule::PFSPC& pfoperation(const SolarPointStatus* msg);
+  static const ::commonmodule::ControlSPC& syncbacktogrid(const SolarPointStatus* msg);
+  static const ::commonmodule::TmHzCSG& tmhztripoperation(const SolarPointStatus* msg);
+  static const ::commonmodule::TmVoltCSG& tmvolttripoperation(const SolarPointStatus* msg);
+  static const ::commonmodule::VarSPC& varoperation(const SolarPointStatus* msg);
+  static const ::commonmodule::VoltVarCSG& voltvaroperation(const SolarPointStatus* msg);
+  static const ::commonmodule::VoltWCSG& voltwoperation(const SolarPointStatus* msg);
+  static const ::commonmodule::WVarCSG& wvaroperation(const SolarPointStatus* msg);
 };
 
 const ::commonmodule::StatusSPS&
 SolarPointStatus::_Internal::frequencysetpointenabled(const SolarPointStatus* msg) {
-  return *msg->frequencysetpointenabled_;
+  return *msg->_impl_.frequencysetpointenabled_;
 }
 const ::commonmodule::ENG_GridConnectModeKind&
 SolarPointStatus::_Internal::mode(const SolarPointStatus* msg) {
-  return *msg->mode_;
+  return *msg->_impl_.mode_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 SolarPointStatus::_Internal::pcthzdroop(const SolarPointStatus* msg) {
-  return *msg->pcthzdroop_;
+  return *msg->_impl_.pcthzdroop_;
 }
-const PROTOBUF_NAMESPACE_ID::FloatValue&
+const ::PROTOBUF_NAMESPACE_ID::FloatValue&
 SolarPointStatus::_Internal::pctvdroop(const SolarPointStatus* msg) {
-  return *msg->pctvdroop_;
+  return *msg->_impl_.pctvdroop_;
 }
 const ::commonmodule::RampRate&
 SolarPointStatus::_Internal::ramprates(const SolarPointStatus* msg) {
-  return *msg->ramprates_;
+  return *msg->_impl_.ramprates_;
 }
 const ::commonmodule::StatusSPS&
 SolarPointStatus::_Internal::reactivepwrsetpointenabled(const SolarPointStatus* msg) {
-  return *msg->reactivepwrsetpointenabled_;
+  return *msg->_impl_.reactivepwrsetpointenabled_;
 }
 const ::commonmodule::StatusSPS&
 SolarPointStatus::_Internal::realpwrsetpointenabled(const SolarPointStatus* msg) {
-  return *msg->realpwrsetpointenabled_;
+  return *msg->_impl_.realpwrsetpointenabled_;
 }
 const ::commonmodule::Optional_StateKind&
 SolarPointStatus::_Internal::state(const SolarPointStatus* msg) {
-  return *msg->state_;
+  return *msg->_impl_.state_;
 }
 const ::commonmodule::StatusSPS&
 SolarPointStatus::_Internal::voltagesetpointenabled(const SolarPointStatus* msg) {
-  return *msg->voltagesetpointenabled_;
+  return *msg->_impl_.voltagesetpointenabled_;
+}
+const ::commonmodule::ControlSPC&
+SolarPointStatus::_Internal::blackstartenabled(const SolarPointStatus* msg) {
+  return *msg->_impl_.blackstartenabled_;
+}
+const ::commonmodule::EnterServiceAPC&
+SolarPointStatus::_Internal::enterserviceoperation(const SolarPointStatus* msg) {
+  return *msg->_impl_.enterserviceoperation_;
+}
+const ::commonmodule::HzWPoint&
+SolarPointStatus::_Internal::hzwoperation(const SolarPointStatus* msg) {
+  return *msg->_impl_.hzwoperation_;
+}
+const ::commonmodule::LimitWAPC&
+SolarPointStatus::_Internal::limitwoperation(const SolarPointStatus* msg) {
+  return *msg->_impl_.limitwoperation_;
+}
+const ::commonmodule::PFSPC&
+SolarPointStatus::_Internal::pfoperation(const SolarPointStatus* msg) {
+  return *msg->_impl_.pfoperation_;
+}
+const ::commonmodule::ControlSPC&
+SolarPointStatus::_Internal::syncbacktogrid(const SolarPointStatus* msg) {
+  return *msg->_impl_.syncbacktogrid_;
+}
+const ::commonmodule::TmHzCSG&
+SolarPointStatus::_Internal::tmhztripoperation(const SolarPointStatus* msg) {
+  return *msg->_impl_.tmhztripoperation_;
+}
+const ::commonmodule::TmVoltCSG&
+SolarPointStatus::_Internal::tmvolttripoperation(const SolarPointStatus* msg) {
+  return *msg->_impl_.tmvolttripoperation_;
+}
+const ::commonmodule::VarSPC&
+SolarPointStatus::_Internal::varoperation(const SolarPointStatus* msg) {
+  return *msg->_impl_.varoperation_;
+}
+const ::commonmodule::VoltVarCSG&
+SolarPointStatus::_Internal::voltvaroperation(const SolarPointStatus* msg) {
+  return *msg->_impl_.voltvaroperation_;
+}
+const ::commonmodule::VoltWCSG&
+SolarPointStatus::_Internal::voltwoperation(const SolarPointStatus* msg) {
+  return *msg->_impl_.voltwoperation_;
+}
+const ::commonmodule::WVarCSG&
+SolarPointStatus::_Internal::wvaroperation(const SolarPointStatus* msg) {
+  return *msg->_impl_.wvaroperation_;
 }
 void SolarPointStatus::clear_frequencysetpointenabled() {
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
-    delete frequencysetpointenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.frequencysetpointenabled_ != nullptr) {
+    delete _impl_.frequencysetpointenabled_;
   }
-  frequencysetpointenabled_ = nullptr;
+  _impl_.frequencysetpointenabled_ = nullptr;
 }
 void SolarPointStatus::clear_mode() {
-  if (GetArena() == nullptr && mode_ != nullptr) {
-    delete mode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.mode_ != nullptr) {
+    delete _impl_.mode_;
   }
-  mode_ = nullptr;
+  _impl_.mode_ = nullptr;
 }
 void SolarPointStatus::clear_pcthzdroop() {
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
-    delete pcthzdroop_;
+  if (GetArenaForAllocation() == nullptr && _impl_.pcthzdroop_ != nullptr) {
+    delete _impl_.pcthzdroop_;
   }
-  pcthzdroop_ = nullptr;
+  _impl_.pcthzdroop_ = nullptr;
 }
 void SolarPointStatus::clear_pctvdroop() {
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
-    delete pctvdroop_;
+  if (GetArenaForAllocation() == nullptr && _impl_.pctvdroop_ != nullptr) {
+    delete _impl_.pctvdroop_;
   }
-  pctvdroop_ = nullptr;
+  _impl_.pctvdroop_ = nullptr;
 }
 void SolarPointStatus::clear_ramprates() {
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
-    delete ramprates_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ramprates_ != nullptr) {
+    delete _impl_.ramprates_;
   }
-  ramprates_ = nullptr;
+  _impl_.ramprates_ = nullptr;
 }
 void SolarPointStatus::clear_reactivepwrsetpointenabled() {
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
-    delete reactivepwrsetpointenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.reactivepwrsetpointenabled_ != nullptr) {
+    delete _impl_.reactivepwrsetpointenabled_;
   }
-  reactivepwrsetpointenabled_ = nullptr;
+  _impl_.reactivepwrsetpointenabled_ = nullptr;
 }
 void SolarPointStatus::clear_realpwrsetpointenabled() {
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
-    delete realpwrsetpointenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.realpwrsetpointenabled_ != nullptr) {
+    delete _impl_.realpwrsetpointenabled_;
   }
-  realpwrsetpointenabled_ = nullptr;
+  _impl_.realpwrsetpointenabled_ = nullptr;
 }
 void SolarPointStatus::clear_state() {
-  if (GetArena() == nullptr && state_ != nullptr) {
-    delete state_;
+  if (GetArenaForAllocation() == nullptr && _impl_.state_ != nullptr) {
+    delete _impl_.state_;
   }
-  state_ = nullptr;
+  _impl_.state_ = nullptr;
 }
 void SolarPointStatus::clear_voltagesetpointenabled() {
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
-    delete voltagesetpointenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagesetpointenabled_ != nullptr) {
+    delete _impl_.voltagesetpointenabled_;
   }
-  voltagesetpointenabled_ = nullptr;
+  _impl_.voltagesetpointenabled_ = nullptr;
+}
+void SolarPointStatus::clear_blackstartenabled() {
+  if (GetArenaForAllocation() == nullptr && _impl_.blackstartenabled_ != nullptr) {
+    delete _impl_.blackstartenabled_;
+  }
+  _impl_.blackstartenabled_ = nullptr;
+}
+void SolarPointStatus::clear_enterserviceoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.enterserviceoperation_ != nullptr) {
+    delete _impl_.enterserviceoperation_;
+  }
+  _impl_.enterserviceoperation_ = nullptr;
+}
+void SolarPointStatus::clear_hzwoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.hzwoperation_ != nullptr) {
+    delete _impl_.hzwoperation_;
+  }
+  _impl_.hzwoperation_ = nullptr;
+}
+void SolarPointStatus::clear_limitwoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.limitwoperation_ != nullptr) {
+    delete _impl_.limitwoperation_;
+  }
+  _impl_.limitwoperation_ = nullptr;
+}
+void SolarPointStatus::clear_pfoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.pfoperation_ != nullptr) {
+    delete _impl_.pfoperation_;
+  }
+  _impl_.pfoperation_ = nullptr;
+}
+void SolarPointStatus::clear_syncbacktogrid() {
+  if (GetArenaForAllocation() == nullptr && _impl_.syncbacktogrid_ != nullptr) {
+    delete _impl_.syncbacktogrid_;
+  }
+  _impl_.syncbacktogrid_ = nullptr;
+}
+void SolarPointStatus::clear_tmhztripoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.tmhztripoperation_ != nullptr) {
+    delete _impl_.tmhztripoperation_;
+  }
+  _impl_.tmhztripoperation_ = nullptr;
+}
+void SolarPointStatus::clear_tmvolttripoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.tmvolttripoperation_ != nullptr) {
+    delete _impl_.tmvolttripoperation_;
+  }
+  _impl_.tmvolttripoperation_ = nullptr;
+}
+void SolarPointStatus::clear_varoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.varoperation_ != nullptr) {
+    delete _impl_.varoperation_;
+  }
+  _impl_.varoperation_ = nullptr;
+}
+void SolarPointStatus::clear_voltvaroperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.voltvaroperation_ != nullptr) {
+    delete _impl_.voltvaroperation_;
+  }
+  _impl_.voltvaroperation_ = nullptr;
+}
+void SolarPointStatus::clear_voltwoperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.voltwoperation_ != nullptr) {
+    delete _impl_.voltwoperation_;
+  }
+  _impl_.voltwoperation_ = nullptr;
+}
+void SolarPointStatus::clear_wvaroperation() {
+  if (GetArenaForAllocation() == nullptr && _impl_.wvaroperation_ != nullptr) {
+    delete _impl_.wvaroperation_;
+  }
+  _impl_.wvaroperation_ = nullptr;
 }
 SolarPointStatus::SolarPointStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:solarmodule.SolarPointStatus)
 }
 SolarPointStatus::SolarPointStatus(const SolarPointStatus& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarPointStatus* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.frequencysetpointenabled_){nullptr}
+    , decltype(_impl_.mode_){nullptr}
+    , decltype(_impl_.pcthzdroop_){nullptr}
+    , decltype(_impl_.pctvdroop_){nullptr}
+    , decltype(_impl_.ramprates_){nullptr}
+    , decltype(_impl_.reactivepwrsetpointenabled_){nullptr}
+    , decltype(_impl_.realpwrsetpointenabled_){nullptr}
+    , decltype(_impl_.state_){nullptr}
+    , decltype(_impl_.voltagesetpointenabled_){nullptr}
+    , decltype(_impl_.blackstartenabled_){nullptr}
+    , decltype(_impl_.enterserviceoperation_){nullptr}
+    , decltype(_impl_.hzwoperation_){nullptr}
+    , decltype(_impl_.limitwoperation_){nullptr}
+    , decltype(_impl_.pfoperation_){nullptr}
+    , decltype(_impl_.syncbacktogrid_){nullptr}
+    , decltype(_impl_.tmhztripoperation_){nullptr}
+    , decltype(_impl_.tmvolttripoperation_){nullptr}
+    , decltype(_impl_.varoperation_){nullptr}
+    , decltype(_impl_.voltvaroperation_){nullptr}
+    , decltype(_impl_.voltwoperation_){nullptr}
+    , decltype(_impl_.wvaroperation_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_frequencysetpointenabled()) {
-    frequencysetpointenabled_ = new ::commonmodule::StatusSPS(*from.frequencysetpointenabled_);
-  } else {
-    frequencysetpointenabled_ = nullptr;
+    _this->_impl_.frequencysetpointenabled_ = new ::commonmodule::StatusSPS(*from._impl_.frequencysetpointenabled_);
   }
   if (from._internal_has_mode()) {
-    mode_ = new ::commonmodule::ENG_GridConnectModeKind(*from.mode_);
-  } else {
-    mode_ = nullptr;
+    _this->_impl_.mode_ = new ::commonmodule::ENG_GridConnectModeKind(*from._impl_.mode_);
   }
   if (from._internal_has_pcthzdroop()) {
-    pcthzdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pcthzdroop_);
-  } else {
-    pcthzdroop_ = nullptr;
+    _this->_impl_.pcthzdroop_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.pcthzdroop_);
   }
   if (from._internal_has_pctvdroop()) {
-    pctvdroop_ = new PROTOBUF_NAMESPACE_ID::FloatValue(*from.pctvdroop_);
-  } else {
-    pctvdroop_ = nullptr;
+    _this->_impl_.pctvdroop_ = new ::PROTOBUF_NAMESPACE_ID::FloatValue(*from._impl_.pctvdroop_);
   }
   if (from._internal_has_ramprates()) {
-    ramprates_ = new ::commonmodule::RampRate(*from.ramprates_);
-  } else {
-    ramprates_ = nullptr;
+    _this->_impl_.ramprates_ = new ::commonmodule::RampRate(*from._impl_.ramprates_);
   }
   if (from._internal_has_reactivepwrsetpointenabled()) {
-    reactivepwrsetpointenabled_ = new ::commonmodule::StatusSPS(*from.reactivepwrsetpointenabled_);
-  } else {
-    reactivepwrsetpointenabled_ = nullptr;
+    _this->_impl_.reactivepwrsetpointenabled_ = new ::commonmodule::StatusSPS(*from._impl_.reactivepwrsetpointenabled_);
   }
   if (from._internal_has_realpwrsetpointenabled()) {
-    realpwrsetpointenabled_ = new ::commonmodule::StatusSPS(*from.realpwrsetpointenabled_);
-  } else {
-    realpwrsetpointenabled_ = nullptr;
+    _this->_impl_.realpwrsetpointenabled_ = new ::commonmodule::StatusSPS(*from._impl_.realpwrsetpointenabled_);
   }
   if (from._internal_has_state()) {
-    state_ = new ::commonmodule::Optional_StateKind(*from.state_);
-  } else {
-    state_ = nullptr;
+    _this->_impl_.state_ = new ::commonmodule::Optional_StateKind(*from._impl_.state_);
   }
   if (from._internal_has_voltagesetpointenabled()) {
-    voltagesetpointenabled_ = new ::commonmodule::StatusSPS(*from.voltagesetpointenabled_);
-  } else {
-    voltagesetpointenabled_ = nullptr;
+    _this->_impl_.voltagesetpointenabled_ = new ::commonmodule::StatusSPS(*from._impl_.voltagesetpointenabled_);
+  }
+  if (from._internal_has_blackstartenabled()) {
+    _this->_impl_.blackstartenabled_ = new ::commonmodule::ControlSPC(*from._impl_.blackstartenabled_);
+  }
+  if (from._internal_has_enterserviceoperation()) {
+    _this->_impl_.enterserviceoperation_ = new ::commonmodule::EnterServiceAPC(*from._impl_.enterserviceoperation_);
+  }
+  if (from._internal_has_hzwoperation()) {
+    _this->_impl_.hzwoperation_ = new ::commonmodule::HzWPoint(*from._impl_.hzwoperation_);
+  }
+  if (from._internal_has_limitwoperation()) {
+    _this->_impl_.limitwoperation_ = new ::commonmodule::LimitWAPC(*from._impl_.limitwoperation_);
+  }
+  if (from._internal_has_pfoperation()) {
+    _this->_impl_.pfoperation_ = new ::commonmodule::PFSPC(*from._impl_.pfoperation_);
+  }
+  if (from._internal_has_syncbacktogrid()) {
+    _this->_impl_.syncbacktogrid_ = new ::commonmodule::ControlSPC(*from._impl_.syncbacktogrid_);
+  }
+  if (from._internal_has_tmhztripoperation()) {
+    _this->_impl_.tmhztripoperation_ = new ::commonmodule::TmHzCSG(*from._impl_.tmhztripoperation_);
+  }
+  if (from._internal_has_tmvolttripoperation()) {
+    _this->_impl_.tmvolttripoperation_ = new ::commonmodule::TmVoltCSG(*from._impl_.tmvolttripoperation_);
+  }
+  if (from._internal_has_varoperation()) {
+    _this->_impl_.varoperation_ = new ::commonmodule::VarSPC(*from._impl_.varoperation_);
+  }
+  if (from._internal_has_voltvaroperation()) {
+    _this->_impl_.voltvaroperation_ = new ::commonmodule::VoltVarCSG(*from._impl_.voltvaroperation_);
+  }
+  if (from._internal_has_voltwoperation()) {
+    _this->_impl_.voltwoperation_ = new ::commonmodule::VoltWCSG(*from._impl_.voltwoperation_);
+  }
+  if (from._internal_has_wvaroperation()) {
+    _this->_impl_.wvaroperation_ = new ::commonmodule::WVarCSG(*from._impl_.wvaroperation_);
   }
   // @@protoc_insertion_point(copy_constructor:solarmodule.SolarPointStatus)
 }
 
-void SolarPointStatus::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&frequencysetpointenabled_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&voltagesetpointenabled_) -
-    reinterpret_cast<char*>(&frequencysetpointenabled_)) + sizeof(voltagesetpointenabled_));
+inline void SolarPointStatus::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.frequencysetpointenabled_){nullptr}
+    , decltype(_impl_.mode_){nullptr}
+    , decltype(_impl_.pcthzdroop_){nullptr}
+    , decltype(_impl_.pctvdroop_){nullptr}
+    , decltype(_impl_.ramprates_){nullptr}
+    , decltype(_impl_.reactivepwrsetpointenabled_){nullptr}
+    , decltype(_impl_.realpwrsetpointenabled_){nullptr}
+    , decltype(_impl_.state_){nullptr}
+    , decltype(_impl_.voltagesetpointenabled_){nullptr}
+    , decltype(_impl_.blackstartenabled_){nullptr}
+    , decltype(_impl_.enterserviceoperation_){nullptr}
+    , decltype(_impl_.hzwoperation_){nullptr}
+    , decltype(_impl_.limitwoperation_){nullptr}
+    , decltype(_impl_.pfoperation_){nullptr}
+    , decltype(_impl_.syncbacktogrid_){nullptr}
+    , decltype(_impl_.tmhztripoperation_){nullptr}
+    , decltype(_impl_.tmvolttripoperation_){nullptr}
+    , decltype(_impl_.varoperation_){nullptr}
+    , decltype(_impl_.voltvaroperation_){nullptr}
+    , decltype(_impl_.voltwoperation_){nullptr}
+    , decltype(_impl_.wvaroperation_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SolarPointStatus::~SolarPointStatus() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarPointStatus)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void SolarPointStatus::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete frequencysetpointenabled_;
-  if (this != internal_default_instance()) delete mode_;
-  if (this != internal_default_instance()) delete pcthzdroop_;
-  if (this != internal_default_instance()) delete pctvdroop_;
-  if (this != internal_default_instance()) delete ramprates_;
-  if (this != internal_default_instance()) delete reactivepwrsetpointenabled_;
-  if (this != internal_default_instance()) delete realpwrsetpointenabled_;
-  if (this != internal_default_instance()) delete state_;
-  if (this != internal_default_instance()) delete voltagesetpointenabled_;
+inline void SolarPointStatus::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.frequencysetpointenabled_;
+  if (this != internal_default_instance()) delete _impl_.mode_;
+  if (this != internal_default_instance()) delete _impl_.pcthzdroop_;
+  if (this != internal_default_instance()) delete _impl_.pctvdroop_;
+  if (this != internal_default_instance()) delete _impl_.ramprates_;
+  if (this != internal_default_instance()) delete _impl_.reactivepwrsetpointenabled_;
+  if (this != internal_default_instance()) delete _impl_.realpwrsetpointenabled_;
+  if (this != internal_default_instance()) delete _impl_.state_;
+  if (this != internal_default_instance()) delete _impl_.voltagesetpointenabled_;
+  if (this != internal_default_instance()) delete _impl_.blackstartenabled_;
+  if (this != internal_default_instance()) delete _impl_.enterserviceoperation_;
+  if (this != internal_default_instance()) delete _impl_.hzwoperation_;
+  if (this != internal_default_instance()) delete _impl_.limitwoperation_;
+  if (this != internal_default_instance()) delete _impl_.pfoperation_;
+  if (this != internal_default_instance()) delete _impl_.syncbacktogrid_;
+  if (this != internal_default_instance()) delete _impl_.tmhztripoperation_;
+  if (this != internal_default_instance()) delete _impl_.tmvolttripoperation_;
+  if (this != internal_default_instance()) delete _impl_.varoperation_;
+  if (this != internal_default_instance()) delete _impl_.voltvaroperation_;
+  if (this != internal_default_instance()) delete _impl_.voltwoperation_;
+  if (this != internal_default_instance()) delete _impl_.wvaroperation_;
 }
 
-void SolarPointStatus::ArenaDtor(void* object) {
-  SolarPointStatus* _this = reinterpret_cast< SolarPointStatus* >(object);
-  (void)_this;
-}
-void SolarPointStatus::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SolarPointStatus::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SolarPointStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarPointStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && frequencysetpointenabled_ != nullptr) {
-    delete frequencysetpointenabled_;
+  if (GetArenaForAllocation() == nullptr && _impl_.frequencysetpointenabled_ != nullptr) {
+    delete _impl_.frequencysetpointenabled_;
   }
-  frequencysetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && mode_ != nullptr) {
-    delete mode_;
+  _impl_.frequencysetpointenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.mode_ != nullptr) {
+    delete _impl_.mode_;
   }
-  mode_ = nullptr;
-  if (GetArena() == nullptr && pcthzdroop_ != nullptr) {
-    delete pcthzdroop_;
+  _impl_.mode_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.pcthzdroop_ != nullptr) {
+    delete _impl_.pcthzdroop_;
   }
-  pcthzdroop_ = nullptr;
-  if (GetArena() == nullptr && pctvdroop_ != nullptr) {
-    delete pctvdroop_;
+  _impl_.pcthzdroop_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.pctvdroop_ != nullptr) {
+    delete _impl_.pctvdroop_;
   }
-  pctvdroop_ = nullptr;
-  if (GetArena() == nullptr && ramprates_ != nullptr) {
-    delete ramprates_;
+  _impl_.pctvdroop_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ramprates_ != nullptr) {
+    delete _impl_.ramprates_;
   }
-  ramprates_ = nullptr;
-  if (GetArena() == nullptr && reactivepwrsetpointenabled_ != nullptr) {
-    delete reactivepwrsetpointenabled_;
+  _impl_.ramprates_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.reactivepwrsetpointenabled_ != nullptr) {
+    delete _impl_.reactivepwrsetpointenabled_;
   }
-  reactivepwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && realpwrsetpointenabled_ != nullptr) {
-    delete realpwrsetpointenabled_;
+  _impl_.reactivepwrsetpointenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.realpwrsetpointenabled_ != nullptr) {
+    delete _impl_.realpwrsetpointenabled_;
   }
-  realpwrsetpointenabled_ = nullptr;
-  if (GetArena() == nullptr && state_ != nullptr) {
-    delete state_;
+  _impl_.realpwrsetpointenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.state_ != nullptr) {
+    delete _impl_.state_;
   }
-  state_ = nullptr;
-  if (GetArena() == nullptr && voltagesetpointenabled_ != nullptr) {
-    delete voltagesetpointenabled_;
+  _impl_.state_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltagesetpointenabled_ != nullptr) {
+    delete _impl_.voltagesetpointenabled_;
   }
-  voltagesetpointenabled_ = nullptr;
+  _impl_.voltagesetpointenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.blackstartenabled_ != nullptr) {
+    delete _impl_.blackstartenabled_;
+  }
+  _impl_.blackstartenabled_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.enterserviceoperation_ != nullptr) {
+    delete _impl_.enterserviceoperation_;
+  }
+  _impl_.enterserviceoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.hzwoperation_ != nullptr) {
+    delete _impl_.hzwoperation_;
+  }
+  _impl_.hzwoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.limitwoperation_ != nullptr) {
+    delete _impl_.limitwoperation_;
+  }
+  _impl_.limitwoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.pfoperation_ != nullptr) {
+    delete _impl_.pfoperation_;
+  }
+  _impl_.pfoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.syncbacktogrid_ != nullptr) {
+    delete _impl_.syncbacktogrid_;
+  }
+  _impl_.syncbacktogrid_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.tmhztripoperation_ != nullptr) {
+    delete _impl_.tmhztripoperation_;
+  }
+  _impl_.tmhztripoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.tmvolttripoperation_ != nullptr) {
+    delete _impl_.tmvolttripoperation_;
+  }
+  _impl_.tmvolttripoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.varoperation_ != nullptr) {
+    delete _impl_.varoperation_;
+  }
+  _impl_.varoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltvaroperation_ != nullptr) {
+    delete _impl_.voltvaroperation_;
+  }
+  _impl_.voltvaroperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.voltwoperation_ != nullptr) {
+    delete _impl_.voltwoperation_;
+  }
+  _impl_.voltwoperation_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.wvaroperation_ != nullptr) {
+    delete _impl_.wvaroperation_;
+  }
+  _impl_.wvaroperation_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SolarPointStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SolarPointStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.StatusSPS frequencySetPointEnabled = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_frequencysetpointenabled(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ENG_GridConnectModeKind mode = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_mode(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue pctHzDroop = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_pcthzdroop(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .google.protobuf.FloatValue pctVDroop = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_pctvdroop(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.RampRate rampRates = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_ramprates(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_reactivepwrsetpointenabled(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS realPwrSetPointEnabled = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_realpwrsetpointenabled(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.Optional_StateKind state = 8;
       case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 66)) {
           ptr = ctx->ParseMessage(_internal_mutable_state(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS voltageSetPointEnabled = 9;
       case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 74)) {
           ptr = ctx->ParseMessage(_internal_mutable_voltagesetpointenabled(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      // .commonmodule.ControlSPC blackStartEnabled = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 82)) {
+          ptr = ctx->ParseMessage(_internal_mutable_blackstartenabled(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.EnterServiceAPC enterServiceOperation = 11;
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 90)) {
+          ptr = ctx->ParseMessage(_internal_mutable_enterserviceoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.HzWPoint hzWOperation = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 98)) {
+          ptr = ctx->ParseMessage(_internal_mutable_hzwoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.LimitWAPC limitWOperation = 13;
+      case 13:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 106)) {
+          ptr = ctx->ParseMessage(_internal_mutable_limitwoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.PFSPC pFOperation = 14;
+      case 14:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 114)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pfoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.ControlSPC syncBackToGrid = 15;
+      case 15:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 122)) {
+          ptr = ctx->ParseMessage(_internal_mutable_syncbacktogrid(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.TmHzCSG tmHzTripOperation = 16;
+      case 16:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 130)) {
+          ptr = ctx->ParseMessage(_internal_mutable_tmhztripoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.TmVoltCSG tmVoltTripOperation = 17;
+      case 17:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 138)) {
+          ptr = ctx->ParseMessage(_internal_mutable_tmvolttripoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.VarSPC vArOperation = 18;
+      case 18:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 146)) {
+          ptr = ctx->ParseMessage(_internal_mutable_varoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.VoltVarCSG voltVarOperation = 19;
+      case 19:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 154)) {
+          ptr = ctx->ParseMessage(_internal_mutable_voltvaroperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.VoltWCSG voltWOperation = 20;
+      case 20:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 162)) {
+          ptr = ctx->ParseMessage(_internal_mutable_voltwoperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.WVarCSG wVarOperation = 21;
+      case 21:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 170)) {
+          ptr = ctx->ParseMessage(_internal_mutable_wvaroperation(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SolarPointStatus::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* SolarPointStatus::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarPointStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusSPS frequencySetPointEnabled = 1;
-  if (this->has_frequencysetpointenabled()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_frequencysetpointenabled()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::frequencysetpointenabled(this), target, stream);
+      InternalWriteMessage(1, _Internal::frequencysetpointenabled(this),
+        _Internal::frequencysetpointenabled(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ENG_GridConnectModeKind mode = 2;
-  if (this->has_mode()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_mode()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::mode(this), target, stream);
+      InternalWriteMessage(2, _Internal::mode(this),
+        _Internal::mode(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue pctHzDroop = 3;
-  if (this->has_pcthzdroop()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_pcthzdroop()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::pcthzdroop(this), target, stream);
+      InternalWriteMessage(3, _Internal::pcthzdroop(this),
+        _Internal::pcthzdroop(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue pctVDroop = 4;
-  if (this->has_pctvdroop()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_pctvdroop()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::pctvdroop(this), target, stream);
+      InternalWriteMessage(4, _Internal::pctvdroop(this),
+        _Internal::pctvdroop(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.RampRate rampRates = 5;
-  if (this->has_ramprates()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ramprates()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::ramprates(this), target, stream);
+      InternalWriteMessage(5, _Internal::ramprates(this),
+        _Internal::ramprates(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 6;
-  if (this->has_reactivepwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_reactivepwrsetpointenabled()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::reactivepwrsetpointenabled(this), target, stream);
+      InternalWriteMessage(6, _Internal::reactivepwrsetpointenabled(this),
+        _Internal::reactivepwrsetpointenabled(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS realPwrSetPointEnabled = 7;
-  if (this->has_realpwrsetpointenabled()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_realpwrsetpointenabled()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::realpwrsetpointenabled(this), target, stream);
+      InternalWriteMessage(7, _Internal::realpwrsetpointenabled(this),
+        _Internal::realpwrsetpointenabled(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.Optional_StateKind state = 8;
-  if (this->has_state()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_state()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::state(this), target, stream);
+      InternalWriteMessage(8, _Internal::state(this),
+        _Internal::state(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS voltageSetPointEnabled = 9;
-  if (this->has_voltagesetpointenabled()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_voltagesetpointenabled()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        9, _Internal::voltagesetpointenabled(this), target, stream);
+      InternalWriteMessage(9, _Internal::voltagesetpointenabled(this),
+        _Internal::voltagesetpointenabled(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ControlSPC blackStartEnabled = 10;
+  if (this->_internal_has_blackstartenabled()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(10, _Internal::blackstartenabled(this),
+        _Internal::blackstartenabled(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.EnterServiceAPC enterServiceOperation = 11;
+  if (this->_internal_has_enterserviceoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(11, _Internal::enterserviceoperation(this),
+        _Internal::enterserviceoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.HzWPoint hzWOperation = 12;
+  if (this->_internal_has_hzwoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(12, _Internal::hzwoperation(this),
+        _Internal::hzwoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.LimitWAPC limitWOperation = 13;
+  if (this->_internal_has_limitwoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(13, _Internal::limitwoperation(this),
+        _Internal::limitwoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.PFSPC pFOperation = 14;
+  if (this->_internal_has_pfoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(14, _Internal::pfoperation(this),
+        _Internal::pfoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.ControlSPC syncBackToGrid = 15;
+  if (this->_internal_has_syncbacktogrid()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(15, _Internal::syncbacktogrid(this),
+        _Internal::syncbacktogrid(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.TmHzCSG tmHzTripOperation = 16;
+  if (this->_internal_has_tmhztripoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(16, _Internal::tmhztripoperation(this),
+        _Internal::tmhztripoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.TmVoltCSG tmVoltTripOperation = 17;
+  if (this->_internal_has_tmvolttripoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(17, _Internal::tmvolttripoperation(this),
+        _Internal::tmvolttripoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.VarSPC vArOperation = 18;
+  if (this->_internal_has_varoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(18, _Internal::varoperation(this),
+        _Internal::varoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.VoltVarCSG voltVarOperation = 19;
+  if (this->_internal_has_voltvaroperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(19, _Internal::voltvaroperation(this),
+        _Internal::voltvaroperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.VoltWCSG voltWOperation = 20;
+  if (this->_internal_has_voltwoperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(20, _Internal::voltwoperation(this),
+        _Internal::voltwoperation(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.WVarCSG wVarOperation = 21;
+  if (this->_internal_has_wvaroperation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(21, _Internal::wvaroperation(this),
+        _Internal::wvaroperation(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarPointStatus)
   return target;
 }
 
-size_t SolarPointStatus::ByteSizeLong() const {
+::size_t SolarPointStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarPointStatus)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusSPS frequencySetPointEnabled = 1;
-  if (this->has_frequencysetpointenabled()) {
+  if (this->_internal_has_frequencysetpointenabled()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *frequencysetpointenabled_);
+        *_impl_.frequencysetpointenabled_);
   }
 
   // .commonmodule.ENG_GridConnectModeKind mode = 2;
-  if (this->has_mode()) {
+  if (this->_internal_has_mode()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *mode_);
+        *_impl_.mode_);
   }
 
   // .google.protobuf.FloatValue pctHzDroop = 3;
-  if (this->has_pcthzdroop()) {
+  if (this->_internal_has_pcthzdroop()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *pcthzdroop_);
+        *_impl_.pcthzdroop_);
   }
 
   // .google.protobuf.FloatValue pctVDroop = 4;
-  if (this->has_pctvdroop()) {
+  if (this->_internal_has_pctvdroop()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *pctvdroop_);
+        *_impl_.pctvdroop_);
   }
 
   // .commonmodule.RampRate rampRates = 5;
-  if (this->has_ramprates()) {
+  if (this->_internal_has_ramprates()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ramprates_);
+        *_impl_.ramprates_);
   }
 
   // .commonmodule.StatusSPS reactivePwrSetPointEnabled = 6;
-  if (this->has_reactivepwrsetpointenabled()) {
+  if (this->_internal_has_reactivepwrsetpointenabled()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *reactivepwrsetpointenabled_);
+        *_impl_.reactivepwrsetpointenabled_);
   }
 
   // .commonmodule.StatusSPS realPwrSetPointEnabled = 7;
-  if (this->has_realpwrsetpointenabled()) {
+  if (this->_internal_has_realpwrsetpointenabled()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *realpwrsetpointenabled_);
+        *_impl_.realpwrsetpointenabled_);
   }
 
   // .commonmodule.Optional_StateKind state = 8;
-  if (this->has_state()) {
+  if (this->_internal_has_state()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *state_);
+        *_impl_.state_);
   }
 
   // .commonmodule.StatusSPS voltageSetPointEnabled = 9;
-  if (this->has_voltagesetpointenabled()) {
+  if (this->_internal_has_voltagesetpointenabled()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *voltagesetpointenabled_);
+        *_impl_.voltagesetpointenabled_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
+  // .commonmodule.ControlSPC blackStartEnabled = 10;
+  if (this->_internal_has_blackstartenabled()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.blackstartenabled_);
   }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // .commonmodule.EnterServiceAPC enterServiceOperation = 11;
+  if (this->_internal_has_enterserviceoperation()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.enterserviceoperation_);
+  }
+
+  // .commonmodule.HzWPoint hzWOperation = 12;
+  if (this->_internal_has_hzwoperation()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.hzwoperation_);
+  }
+
+  // .commonmodule.LimitWAPC limitWOperation = 13;
+  if (this->_internal_has_limitwoperation()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.limitwoperation_);
+  }
+
+  // .commonmodule.PFSPC pFOperation = 14;
+  if (this->_internal_has_pfoperation()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.pfoperation_);
+  }
+
+  // .commonmodule.ControlSPC syncBackToGrid = 15;
+  if (this->_internal_has_syncbacktogrid()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.syncbacktogrid_);
+  }
+
+  // .commonmodule.TmHzCSG tmHzTripOperation = 16;
+  if (this->_internal_has_tmhztripoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.tmhztripoperation_);
+  }
+
+  // .commonmodule.TmVoltCSG tmVoltTripOperation = 17;
+  if (this->_internal_has_tmvolttripoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.tmvolttripoperation_);
+  }
+
+  // .commonmodule.VarSPC vArOperation = 18;
+  if (this->_internal_has_varoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.varoperation_);
+  }
+
+  // .commonmodule.VoltVarCSG voltVarOperation = 19;
+  if (this->_internal_has_voltvaroperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.voltvaroperation_);
+  }
+
+  // .commonmodule.VoltWCSG voltWOperation = 20;
+  if (this->_internal_has_voltwoperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.voltwoperation_);
+  }
+
+  // .commonmodule.WVarCSG wVarOperation = 21;
+  if (this->_internal_has_wvaroperation()) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.wvaroperation_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SolarPointStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarPointStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SolarPointStatus* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarPointStatus>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarPointStatus)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarPointStatus)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarPointStatus::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarPointStatus::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarPointStatus::GetClassData() const { return &_class_data_; }
 
-void SolarPointStatus::MergeFrom(const SolarPointStatus& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarPointStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void SolarPointStatus::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarPointStatus*>(&to_msg);
+  auto& from = static_cast<const SolarPointStatus&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarPointStatus)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_frequencysetpointenabled()) {
-    _internal_mutable_frequencysetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_frequencysetpointenabled());
+  if (from._internal_has_frequencysetpointenabled()) {
+    _this->_internal_mutable_frequencysetpointenabled()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_frequencysetpointenabled());
   }
-  if (from.has_mode()) {
-    _internal_mutable_mode()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from._internal_mode());
+  if (from._internal_has_mode()) {
+    _this->_internal_mutable_mode()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(
+        from._internal_mode());
   }
-  if (from.has_pcthzdroop()) {
-    _internal_mutable_pcthzdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pcthzdroop());
+  if (from._internal_has_pcthzdroop()) {
+    _this->_internal_mutable_pcthzdroop()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_pcthzdroop());
   }
-  if (from.has_pctvdroop()) {
-    _internal_mutable_pctvdroop()->PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(from._internal_pctvdroop());
+  if (from._internal_has_pctvdroop()) {
+    _this->_internal_mutable_pctvdroop()->::PROTOBUF_NAMESPACE_ID::FloatValue::MergeFrom(
+        from._internal_pctvdroop());
   }
-  if (from.has_ramprates()) {
-    _internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(from._internal_ramprates());
+  if (from._internal_has_ramprates()) {
+    _this->_internal_mutable_ramprates()->::commonmodule::RampRate::MergeFrom(
+        from._internal_ramprates());
   }
-  if (from.has_reactivepwrsetpointenabled()) {
-    _internal_mutable_reactivepwrsetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_reactivepwrsetpointenabled());
+  if (from._internal_has_reactivepwrsetpointenabled()) {
+    _this->_internal_mutable_reactivepwrsetpointenabled()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_reactivepwrsetpointenabled());
   }
-  if (from.has_realpwrsetpointenabled()) {
-    _internal_mutable_realpwrsetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_realpwrsetpointenabled());
+  if (from._internal_has_realpwrsetpointenabled()) {
+    _this->_internal_mutable_realpwrsetpointenabled()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_realpwrsetpointenabled());
   }
-  if (from.has_state()) {
-    _internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(from._internal_state());
+  if (from._internal_has_state()) {
+    _this->_internal_mutable_state()->::commonmodule::Optional_StateKind::MergeFrom(
+        from._internal_state());
   }
-  if (from.has_voltagesetpointenabled()) {
-    _internal_mutable_voltagesetpointenabled()->::commonmodule::StatusSPS::MergeFrom(from._internal_voltagesetpointenabled());
+  if (from._internal_has_voltagesetpointenabled()) {
+    _this->_internal_mutable_voltagesetpointenabled()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_voltagesetpointenabled());
   }
-}
-
-void SolarPointStatus::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarPointStatus)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  if (from._internal_has_blackstartenabled()) {
+    _this->_internal_mutable_blackstartenabled()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_blackstartenabled());
+  }
+  if (from._internal_has_enterserviceoperation()) {
+    _this->_internal_mutable_enterserviceoperation()->::commonmodule::EnterServiceAPC::MergeFrom(
+        from._internal_enterserviceoperation());
+  }
+  if (from._internal_has_hzwoperation()) {
+    _this->_internal_mutable_hzwoperation()->::commonmodule::HzWPoint::MergeFrom(
+        from._internal_hzwoperation());
+  }
+  if (from._internal_has_limitwoperation()) {
+    _this->_internal_mutable_limitwoperation()->::commonmodule::LimitWAPC::MergeFrom(
+        from._internal_limitwoperation());
+  }
+  if (from._internal_has_pfoperation()) {
+    _this->_internal_mutable_pfoperation()->::commonmodule::PFSPC::MergeFrom(
+        from._internal_pfoperation());
+  }
+  if (from._internal_has_syncbacktogrid()) {
+    _this->_internal_mutable_syncbacktogrid()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_syncbacktogrid());
+  }
+  if (from._internal_has_tmhztripoperation()) {
+    _this->_internal_mutable_tmhztripoperation()->::commonmodule::TmHzCSG::MergeFrom(
+        from._internal_tmhztripoperation());
+  }
+  if (from._internal_has_tmvolttripoperation()) {
+    _this->_internal_mutable_tmvolttripoperation()->::commonmodule::TmVoltCSG::MergeFrom(
+        from._internal_tmvolttripoperation());
+  }
+  if (from._internal_has_varoperation()) {
+    _this->_internal_mutable_varoperation()->::commonmodule::VarSPC::MergeFrom(
+        from._internal_varoperation());
+  }
+  if (from._internal_has_voltvaroperation()) {
+    _this->_internal_mutable_voltvaroperation()->::commonmodule::VoltVarCSG::MergeFrom(
+        from._internal_voltvaroperation());
+  }
+  if (from._internal_has_voltwoperation()) {
+    _this->_internal_mutable_voltwoperation()->::commonmodule::VoltWCSG::MergeFrom(
+        from._internal_voltwoperation());
+  }
+  if (from._internal_has_wvaroperation()) {
+    _this->_internal_mutable_wvaroperation()->::commonmodule::WVarCSG::MergeFrom(
+        from._internal_wvaroperation());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SolarPointStatus::CopyFrom(const SolarPointStatus& from) {
@@ -3289,20 +7084,20 @@ bool SolarPointStatus::IsInitialized() const {
 
 void SolarPointStatus::InternalSwap(SolarPointStatus* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SolarPointStatus, voltagesetpointenabled_)
-      + sizeof(SolarPointStatus::voltagesetpointenabled_)
-      - PROTOBUF_FIELD_OFFSET(SolarPointStatus, frequencysetpointenabled_)>(
-          reinterpret_cast<char*>(&frequencysetpointenabled_),
-          reinterpret_cast<char*>(&other->frequencysetpointenabled_));
+      PROTOBUF_FIELD_OFFSET(SolarPointStatus, _impl_.wvaroperation_)
+      + sizeof(SolarPointStatus::_impl_.wvaroperation_)
+      - PROTOBUF_FIELD_OFFSET(SolarPointStatus, _impl_.frequencysetpointenabled_)>(
+          reinterpret_cast<char*>(&_impl_.frequencysetpointenabled_),
+          reinterpret_cast<char*>(&other->_impl_.frequencysetpointenabled_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SolarPointStatus::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[17]);
 }
-
-
 // ===================================================================
 
 class SolarEventAndStatusZGEN::_Internal {
@@ -3312,364 +7107,595 @@ class SolarEventAndStatusZGEN::_Internal {
   static const ::commonmodule::ENS_DynamicTestKind& dynamictest(const SolarEventAndStatusZGEN* msg);
   static const ::commonmodule::StatusSPS& emgstop(const SolarEventAndStatusZGEN* msg);
   static const ::solarmodule::SolarPointStatus& pointstatus(const SolarEventAndStatusZGEN* msg);
+  static const ::commonmodule::Optional_AlrmKind& alrm(const SolarEventAndStatusZGEN* msg);
+  static const ::commonmodule::StatusSPS& gnsynst(const SolarEventAndStatusZGEN* msg);
+  static const ::commonmodule::Optional_GridConnectionStateKind& gridconnectionstate(const SolarEventAndStatusZGEN* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::StringValue& manalrminfo(const SolarEventAndStatusZGEN* msg);
+  static const ::commonmodule::Optional_OperatingStateKind& operatingstate(const SolarEventAndStatusZGEN* msg);
 };
 
 const ::commonmodule::LogicalNodeForEventAndStatus&
 SolarEventAndStatusZGEN::_Internal::logicalnodeforeventandstatus(const SolarEventAndStatusZGEN* msg) {
-  return *msg->logicalnodeforeventandstatus_;
+  return *msg->_impl_.logicalnodeforeventandstatus_;
 }
 const ::commonmodule::StatusSPS&
 SolarEventAndStatusZGEN::_Internal::auxpwrst(const SolarEventAndStatusZGEN* msg) {
-  return *msg->auxpwrst_;
+  return *msg->_impl_.auxpwrst_;
 }
 const ::commonmodule::ENS_DynamicTestKind&
 SolarEventAndStatusZGEN::_Internal::dynamictest(const SolarEventAndStatusZGEN* msg) {
-  return *msg->dynamictest_;
+  return *msg->_impl_.dynamictest_;
 }
 const ::commonmodule::StatusSPS&
 SolarEventAndStatusZGEN::_Internal::emgstop(const SolarEventAndStatusZGEN* msg) {
-  return *msg->emgstop_;
+  return *msg->_impl_.emgstop_;
 }
 const ::solarmodule::SolarPointStatus&
 SolarEventAndStatusZGEN::_Internal::pointstatus(const SolarEventAndStatusZGEN* msg) {
-  return *msg->pointstatus_;
+  return *msg->_impl_.pointstatus_;
+}
+const ::commonmodule::Optional_AlrmKind&
+SolarEventAndStatusZGEN::_Internal::alrm(const SolarEventAndStatusZGEN* msg) {
+  return *msg->_impl_.alrm_;
+}
+const ::commonmodule::StatusSPS&
+SolarEventAndStatusZGEN::_Internal::gnsynst(const SolarEventAndStatusZGEN* msg) {
+  return *msg->_impl_.gnsynst_;
+}
+const ::commonmodule::Optional_GridConnectionStateKind&
+SolarEventAndStatusZGEN::_Internal::gridconnectionstate(const SolarEventAndStatusZGEN* msg) {
+  return *msg->_impl_.gridconnectionstate_;
+}
+const ::PROTOBUF_NAMESPACE_ID::StringValue&
+SolarEventAndStatusZGEN::_Internal::manalrminfo(const SolarEventAndStatusZGEN* msg) {
+  return *msg->_impl_.manalrminfo_;
+}
+const ::commonmodule::Optional_OperatingStateKind&
+SolarEventAndStatusZGEN::_Internal::operatingstate(const SolarEventAndStatusZGEN* msg) {
+  return *msg->_impl_.operatingstate_;
 }
 void SolarEventAndStatusZGEN::clear_logicalnodeforeventandstatus() {
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
-    delete logicalnodeforeventandstatus_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforeventandstatus_ != nullptr) {
+    delete _impl_.logicalnodeforeventandstatus_;
   }
-  logicalnodeforeventandstatus_ = nullptr;
+  _impl_.logicalnodeforeventandstatus_ = nullptr;
 }
 void SolarEventAndStatusZGEN::clear_auxpwrst() {
-  if (GetArena() == nullptr && auxpwrst_ != nullptr) {
-    delete auxpwrst_;
+  if (GetArenaForAllocation() == nullptr && _impl_.auxpwrst_ != nullptr) {
+    delete _impl_.auxpwrst_;
   }
-  auxpwrst_ = nullptr;
+  _impl_.auxpwrst_ = nullptr;
 }
 void SolarEventAndStatusZGEN::clear_dynamictest() {
-  if (GetArena() == nullptr && dynamictest_ != nullptr) {
-    delete dynamictest_;
+  if (GetArenaForAllocation() == nullptr && _impl_.dynamictest_ != nullptr) {
+    delete _impl_.dynamictest_;
   }
-  dynamictest_ = nullptr;
+  _impl_.dynamictest_ = nullptr;
 }
 void SolarEventAndStatusZGEN::clear_emgstop() {
-  if (GetArena() == nullptr && emgstop_ != nullptr) {
-    delete emgstop_;
+  if (GetArenaForAllocation() == nullptr && _impl_.emgstop_ != nullptr) {
+    delete _impl_.emgstop_;
   }
-  emgstop_ = nullptr;
+  _impl_.emgstop_ = nullptr;
+}
+void SolarEventAndStatusZGEN::clear_alrm() {
+  if (GetArenaForAllocation() == nullptr && _impl_.alrm_ != nullptr) {
+    delete _impl_.alrm_;
+  }
+  _impl_.alrm_ = nullptr;
+}
+void SolarEventAndStatusZGEN::clear_gnsynst() {
+  if (GetArenaForAllocation() == nullptr && _impl_.gnsynst_ != nullptr) {
+    delete _impl_.gnsynst_;
+  }
+  _impl_.gnsynst_ = nullptr;
+}
+void SolarEventAndStatusZGEN::clear_gridconnectionstate() {
+  if (GetArenaForAllocation() == nullptr && _impl_.gridconnectionstate_ != nullptr) {
+    delete _impl_.gridconnectionstate_;
+  }
+  _impl_.gridconnectionstate_ = nullptr;
+}
+void SolarEventAndStatusZGEN::clear_manalrminfo() {
+  if (GetArenaForAllocation() == nullptr && _impl_.manalrminfo_ != nullptr) {
+    delete _impl_.manalrminfo_;
+  }
+  _impl_.manalrminfo_ = nullptr;
+}
+void SolarEventAndStatusZGEN::clear_operatingstate() {
+  if (GetArenaForAllocation() == nullptr && _impl_.operatingstate_ != nullptr) {
+    delete _impl_.operatingstate_;
+  }
+  _impl_.operatingstate_ = nullptr;
 }
 SolarEventAndStatusZGEN::SolarEventAndStatusZGEN(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:solarmodule.SolarEventAndStatusZGEN)
 }
 SolarEventAndStatusZGEN::SolarEventAndStatusZGEN(const SolarEventAndStatusZGEN& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarEventAndStatusZGEN* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforeventandstatus_){nullptr}
+    , decltype(_impl_.auxpwrst_){nullptr}
+    , decltype(_impl_.dynamictest_){nullptr}
+    , decltype(_impl_.emgstop_){nullptr}
+    , decltype(_impl_.pointstatus_){nullptr}
+    , decltype(_impl_.alrm_){nullptr}
+    , decltype(_impl_.gnsynst_){nullptr}
+    , decltype(_impl_.gridconnectionstate_){nullptr}
+    , decltype(_impl_.manalrminfo_){nullptr}
+    , decltype(_impl_.operatingstate_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_logicalnodeforeventandstatus()) {
-    logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from.logicalnodeforeventandstatus_);
-  } else {
-    logicalnodeforeventandstatus_ = nullptr;
+    _this->_impl_.logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from._impl_.logicalnodeforeventandstatus_);
   }
   if (from._internal_has_auxpwrst()) {
-    auxpwrst_ = new ::commonmodule::StatusSPS(*from.auxpwrst_);
-  } else {
-    auxpwrst_ = nullptr;
+    _this->_impl_.auxpwrst_ = new ::commonmodule::StatusSPS(*from._impl_.auxpwrst_);
   }
   if (from._internal_has_dynamictest()) {
-    dynamictest_ = new ::commonmodule::ENS_DynamicTestKind(*from.dynamictest_);
-  } else {
-    dynamictest_ = nullptr;
+    _this->_impl_.dynamictest_ = new ::commonmodule::ENS_DynamicTestKind(*from._impl_.dynamictest_);
   }
   if (from._internal_has_emgstop()) {
-    emgstop_ = new ::commonmodule::StatusSPS(*from.emgstop_);
-  } else {
-    emgstop_ = nullptr;
+    _this->_impl_.emgstop_ = new ::commonmodule::StatusSPS(*from._impl_.emgstop_);
   }
   if (from._internal_has_pointstatus()) {
-    pointstatus_ = new ::solarmodule::SolarPointStatus(*from.pointstatus_);
-  } else {
-    pointstatus_ = nullptr;
+    _this->_impl_.pointstatus_ = new ::solarmodule::SolarPointStatus(*from._impl_.pointstatus_);
+  }
+  if (from._internal_has_alrm()) {
+    _this->_impl_.alrm_ = new ::commonmodule::Optional_AlrmKind(*from._impl_.alrm_);
+  }
+  if (from._internal_has_gnsynst()) {
+    _this->_impl_.gnsynst_ = new ::commonmodule::StatusSPS(*from._impl_.gnsynst_);
+  }
+  if (from._internal_has_gridconnectionstate()) {
+    _this->_impl_.gridconnectionstate_ = new ::commonmodule::Optional_GridConnectionStateKind(*from._impl_.gridconnectionstate_);
+  }
+  if (from._internal_has_manalrminfo()) {
+    _this->_impl_.manalrminfo_ = new ::PROTOBUF_NAMESPACE_ID::StringValue(*from._impl_.manalrminfo_);
+  }
+  if (from._internal_has_operatingstate()) {
+    _this->_impl_.operatingstate_ = new ::commonmodule::Optional_OperatingStateKind(*from._impl_.operatingstate_);
   }
   // @@protoc_insertion_point(copy_constructor:solarmodule.SolarEventAndStatusZGEN)
 }
 
-void SolarEventAndStatusZGEN::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&pointstatus_) -
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(pointstatus_));
+inline void SolarEventAndStatusZGEN::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforeventandstatus_){nullptr}
+    , decltype(_impl_.auxpwrst_){nullptr}
+    , decltype(_impl_.dynamictest_){nullptr}
+    , decltype(_impl_.emgstop_){nullptr}
+    , decltype(_impl_.pointstatus_){nullptr}
+    , decltype(_impl_.alrm_){nullptr}
+    , decltype(_impl_.gnsynst_){nullptr}
+    , decltype(_impl_.gridconnectionstate_){nullptr}
+    , decltype(_impl_.manalrminfo_){nullptr}
+    , decltype(_impl_.operatingstate_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SolarEventAndStatusZGEN::~SolarEventAndStatusZGEN() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarEventAndStatusZGEN)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void SolarEventAndStatusZGEN::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete logicalnodeforeventandstatus_;
-  if (this != internal_default_instance()) delete auxpwrst_;
-  if (this != internal_default_instance()) delete dynamictest_;
-  if (this != internal_default_instance()) delete emgstop_;
-  if (this != internal_default_instance()) delete pointstatus_;
+inline void SolarEventAndStatusZGEN::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.logicalnodeforeventandstatus_;
+  if (this != internal_default_instance()) delete _impl_.auxpwrst_;
+  if (this != internal_default_instance()) delete _impl_.dynamictest_;
+  if (this != internal_default_instance()) delete _impl_.emgstop_;
+  if (this != internal_default_instance()) delete _impl_.pointstatus_;
+  if (this != internal_default_instance()) delete _impl_.alrm_;
+  if (this != internal_default_instance()) delete _impl_.gnsynst_;
+  if (this != internal_default_instance()) delete _impl_.gridconnectionstate_;
+  if (this != internal_default_instance()) delete _impl_.manalrminfo_;
+  if (this != internal_default_instance()) delete _impl_.operatingstate_;
 }
 
-void SolarEventAndStatusZGEN::ArenaDtor(void* object) {
-  SolarEventAndStatusZGEN* _this = reinterpret_cast< SolarEventAndStatusZGEN* >(object);
-  (void)_this;
-}
-void SolarEventAndStatusZGEN::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SolarEventAndStatusZGEN::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SolarEventAndStatusZGEN::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarEventAndStatusZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
-    delete logicalnodeforeventandstatus_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforeventandstatus_ != nullptr) {
+    delete _impl_.logicalnodeforeventandstatus_;
   }
-  logicalnodeforeventandstatus_ = nullptr;
-  if (GetArena() == nullptr && auxpwrst_ != nullptr) {
-    delete auxpwrst_;
+  _impl_.logicalnodeforeventandstatus_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.auxpwrst_ != nullptr) {
+    delete _impl_.auxpwrst_;
   }
-  auxpwrst_ = nullptr;
-  if (GetArena() == nullptr && dynamictest_ != nullptr) {
-    delete dynamictest_;
+  _impl_.auxpwrst_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.dynamictest_ != nullptr) {
+    delete _impl_.dynamictest_;
   }
-  dynamictest_ = nullptr;
-  if (GetArena() == nullptr && emgstop_ != nullptr) {
-    delete emgstop_;
+  _impl_.dynamictest_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.emgstop_ != nullptr) {
+    delete _impl_.emgstop_;
   }
-  emgstop_ = nullptr;
-  if (GetArena() == nullptr && pointstatus_ != nullptr) {
-    delete pointstatus_;
+  _impl_.emgstop_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.pointstatus_ != nullptr) {
+    delete _impl_.pointstatus_;
   }
-  pointstatus_ = nullptr;
+  _impl_.pointstatus_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.alrm_ != nullptr) {
+    delete _impl_.alrm_;
+  }
+  _impl_.alrm_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.gnsynst_ != nullptr) {
+    delete _impl_.gnsynst_;
+  }
+  _impl_.gnsynst_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.gridconnectionstate_ != nullptr) {
+    delete _impl_.gridconnectionstate_;
+  }
+  _impl_.gridconnectionstate_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.manalrminfo_ != nullptr) {
+    delete _impl_.manalrminfo_;
+  }
+  _impl_.manalrminfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.operatingstate_ != nullptr) {
+    delete _impl_.operatingstate_;
+  }
+  _impl_.operatingstate_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SolarEventAndStatusZGEN::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SolarEventAndStatusZGEN::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforeventandstatus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS AuxPwrSt = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_auxpwrst(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_dynamictest(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.StatusSPS EmgStop = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_emgstop(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .solarmodule.SolarPointStatus PointStatus = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_pointstatus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      // .commonmodule.Optional_AlrmKind Alrm = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_alrm(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.StatusSPS GnSynSt = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 58)) {
+          ptr = ctx->ParseMessage(_internal_mutable_gnsynst(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.Optional_GridConnectionStateKind GridConnectionState = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 66)) {
+          ptr = ctx->ParseMessage(_internal_mutable_gridconnectionstate(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .google.protobuf.StringValue ManAlrmInfo = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 74)) {
+          ptr = ctx->ParseMessage(_internal_mutable_manalrminfo(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // .commonmodule.Optional_OperatingStateKind OperatingState = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 82)) {
+          ptr = ctx->ParseMessage(_internal_mutable_operatingstate(), ptr);
+          CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SolarEventAndStatusZGEN::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* SolarEventAndStatusZGEN::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarEventAndStatusZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforeventandstatus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_logicalnodeforeventandstatus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnodeforeventandstatus(this), target, stream);
+      InternalWriteMessage(1, _Internal::logicalnodeforeventandstatus(this),
+        _Internal::logicalnodeforeventandstatus(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS AuxPwrSt = 2;
-  if (this->has_auxpwrst()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_auxpwrst()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::auxpwrst(this), target, stream);
+      InternalWriteMessage(2, _Internal::auxpwrst(this),
+        _Internal::auxpwrst(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
-  if (this->has_dynamictest()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_dynamictest()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::dynamictest(this), target, stream);
+      InternalWriteMessage(3, _Internal::dynamictest(this),
+        _Internal::dynamictest(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.StatusSPS EmgStop = 4;
-  if (this->has_emgstop()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_emgstop()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::emgstop(this), target, stream);
+      InternalWriteMessage(4, _Internal::emgstop(this),
+        _Internal::emgstop(this).GetCachedSize(), target, stream);
   }
 
   // .solarmodule.SolarPointStatus PointStatus = 5;
-  if (this->has_pointstatus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_pointstatus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::pointstatus(this), target, stream);
+      InternalWriteMessage(5, _Internal::pointstatus(this),
+        _Internal::pointstatus(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.Optional_AlrmKind Alrm = 6;
+  if (this->_internal_has_alrm()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(6, _Internal::alrm(this),
+        _Internal::alrm(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.StatusSPS GnSynSt = 7;
+  if (this->_internal_has_gnsynst()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(7, _Internal::gnsynst(this),
+        _Internal::gnsynst(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.Optional_GridConnectionStateKind GridConnectionState = 8;
+  if (this->_internal_has_gridconnectionstate()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(8, _Internal::gridconnectionstate(this),
+        _Internal::gridconnectionstate(this).GetCachedSize(), target, stream);
+  }
+
+  // .google.protobuf.StringValue ManAlrmInfo = 9;
+  if (this->_internal_has_manalrminfo()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(9, _Internal::manalrminfo(this),
+        _Internal::manalrminfo(this).GetCachedSize(), target, stream);
+  }
+
+  // .commonmodule.Optional_OperatingStateKind OperatingState = 10;
+  if (this->_internal_has_operatingstate()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(10, _Internal::operatingstate(this),
+        _Internal::operatingstate(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarEventAndStatusZGEN)
   return target;
 }
 
-size_t SolarEventAndStatusZGEN::ByteSizeLong() const {
+::size_t SolarEventAndStatusZGEN::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarEventAndStatusZGEN)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforeventandstatus()) {
+  if (this->_internal_has_logicalnodeforeventandstatus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *logicalnodeforeventandstatus_);
+        *_impl_.logicalnodeforeventandstatus_);
   }
 
   // .commonmodule.StatusSPS AuxPwrSt = 2;
-  if (this->has_auxpwrst()) {
+  if (this->_internal_has_auxpwrst()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *auxpwrst_);
+        *_impl_.auxpwrst_);
   }
 
   // .commonmodule.ENS_DynamicTestKind DynamicTest = 3;
-  if (this->has_dynamictest()) {
+  if (this->_internal_has_dynamictest()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *dynamictest_);
+        *_impl_.dynamictest_);
   }
 
   // .commonmodule.StatusSPS EmgStop = 4;
-  if (this->has_emgstop()) {
+  if (this->_internal_has_emgstop()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *emgstop_);
+        *_impl_.emgstop_);
   }
 
   // .solarmodule.SolarPointStatus PointStatus = 5;
-  if (this->has_pointstatus()) {
+  if (this->_internal_has_pointstatus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *pointstatus_);
+        *_impl_.pointstatus_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
+  // .commonmodule.Optional_AlrmKind Alrm = 6;
+  if (this->_internal_has_alrm()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.alrm_);
   }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+
+  // .commonmodule.StatusSPS GnSynSt = 7;
+  if (this->_internal_has_gnsynst()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.gnsynst_);
+  }
+
+  // .commonmodule.Optional_GridConnectionStateKind GridConnectionState = 8;
+  if (this->_internal_has_gridconnectionstate()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.gridconnectionstate_);
+  }
+
+  // .google.protobuf.StringValue ManAlrmInfo = 9;
+  if (this->_internal_has_manalrminfo()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.manalrminfo_);
+  }
+
+  // .commonmodule.Optional_OperatingStateKind OperatingState = 10;
+  if (this->_internal_has_operatingstate()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.operatingstate_);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SolarEventAndStatusZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarEventAndStatusZGEN)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SolarEventAndStatusZGEN* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarEventAndStatusZGEN>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarEventAndStatusZGEN)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarEventAndStatusZGEN)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarEventAndStatusZGEN::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarEventAndStatusZGEN::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarEventAndStatusZGEN::GetClassData() const { return &_class_data_; }
 
-void SolarEventAndStatusZGEN::MergeFrom(const SolarEventAndStatusZGEN& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarEventAndStatusZGEN)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void SolarEventAndStatusZGEN::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarEventAndStatusZGEN*>(&to_msg);
+  auto& from = static_cast<const SolarEventAndStatusZGEN&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarEventAndStatusZGEN)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_logicalnodeforeventandstatus()) {
-    _internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from._internal_logicalnodeforeventandstatus());
+  if (from._internal_has_logicalnodeforeventandstatus()) {
+    _this->_internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(
+        from._internal_logicalnodeforeventandstatus());
   }
-  if (from.has_auxpwrst()) {
-    _internal_mutable_auxpwrst()->::commonmodule::StatusSPS::MergeFrom(from._internal_auxpwrst());
+  if (from._internal_has_auxpwrst()) {
+    _this->_internal_mutable_auxpwrst()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_auxpwrst());
   }
-  if (from.has_dynamictest()) {
-    _internal_mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(from._internal_dynamictest());
+  if (from._internal_has_dynamictest()) {
+    _this->_internal_mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(
+        from._internal_dynamictest());
   }
-  if (from.has_emgstop()) {
-    _internal_mutable_emgstop()->::commonmodule::StatusSPS::MergeFrom(from._internal_emgstop());
+  if (from._internal_has_emgstop()) {
+    _this->_internal_mutable_emgstop()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_emgstop());
   }
-  if (from.has_pointstatus()) {
-    _internal_mutable_pointstatus()->::solarmodule::SolarPointStatus::MergeFrom(from._internal_pointstatus());
+  if (from._internal_has_pointstatus()) {
+    _this->_internal_mutable_pointstatus()->::solarmodule::SolarPointStatus::MergeFrom(
+        from._internal_pointstatus());
   }
-}
-
-void SolarEventAndStatusZGEN::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarEventAndStatusZGEN)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  if (from._internal_has_alrm()) {
+    _this->_internal_mutable_alrm()->::commonmodule::Optional_AlrmKind::MergeFrom(
+        from._internal_alrm());
+  }
+  if (from._internal_has_gnsynst()) {
+    _this->_internal_mutable_gnsynst()->::commonmodule::StatusSPS::MergeFrom(
+        from._internal_gnsynst());
+  }
+  if (from._internal_has_gridconnectionstate()) {
+    _this->_internal_mutable_gridconnectionstate()->::commonmodule::Optional_GridConnectionStateKind::MergeFrom(
+        from._internal_gridconnectionstate());
+  }
+  if (from._internal_has_manalrminfo()) {
+    _this->_internal_mutable_manalrminfo()->::PROTOBUF_NAMESPACE_ID::StringValue::MergeFrom(
+        from._internal_manalrminfo());
+  }
+  if (from._internal_has_operatingstate()) {
+    _this->_internal_mutable_operatingstate()->::commonmodule::Optional_OperatingStateKind::MergeFrom(
+        from._internal_operatingstate());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SolarEventAndStatusZGEN::CopyFrom(const SolarEventAndStatusZGEN& from) {
@@ -3685,20 +7711,20 @@ bool SolarEventAndStatusZGEN::IsInitialized() const {
 
 void SolarEventAndStatusZGEN::InternalSwap(SolarEventAndStatusZGEN* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SolarEventAndStatusZGEN, pointstatus_)
-      + sizeof(SolarEventAndStatusZGEN::pointstatus_)
-      - PROTOBUF_FIELD_OFFSET(SolarEventAndStatusZGEN, logicalnodeforeventandstatus_)>(
-          reinterpret_cast<char*>(&logicalnodeforeventandstatus_),
-          reinterpret_cast<char*>(&other->logicalnodeforeventandstatus_));
+      PROTOBUF_FIELD_OFFSET(SolarEventAndStatusZGEN, _impl_.operatingstate_)
+      + sizeof(SolarEventAndStatusZGEN::_impl_.operatingstate_)
+      - PROTOBUF_FIELD_OFFSET(SolarEventAndStatusZGEN, _impl_.logicalnodeforeventandstatus_)>(
+          reinterpret_cast<char*>(&_impl_.logicalnodeforeventandstatus_),
+          reinterpret_cast<char*>(&other->_impl_.logicalnodeforeventandstatus_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SolarEventAndStatusZGEN::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[18]);
 }
-
-
 // ===================================================================
 
 class SolarEventZGEN::_Internal {
@@ -3709,225 +7735,210 @@ class SolarEventZGEN::_Internal {
 
 const ::solarmodule::SolarEventAndStatusZGEN&
 SolarEventZGEN::_Internal::solareventandstatuszgen(const SolarEventZGEN* msg) {
-  return *msg->solareventandstatuszgen_;
+  return *msg->_impl_.solareventandstatuszgen_;
 }
 const ::commonmodule::ENG_GridConnectModeKind&
 SolarEventZGEN::_Internal::grimod(const SolarEventZGEN* msg) {
-  return *msg->grimod_;
+  return *msg->_impl_.grimod_;
 }
 void SolarEventZGEN::clear_grimod() {
-  if (GetArena() == nullptr && grimod_ != nullptr) {
-    delete grimod_;
+  if (GetArenaForAllocation() == nullptr && _impl_.grimod_ != nullptr) {
+    delete _impl_.grimod_;
   }
-  grimod_ = nullptr;
+  _impl_.grimod_ = nullptr;
 }
 SolarEventZGEN::SolarEventZGEN(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:solarmodule.SolarEventZGEN)
 }
 SolarEventZGEN::SolarEventZGEN(const SolarEventZGEN& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarEventZGEN* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.solareventandstatuszgen_){nullptr}
+    , decltype(_impl_.grimod_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_solareventandstatuszgen()) {
-    solareventandstatuszgen_ = new ::solarmodule::SolarEventAndStatusZGEN(*from.solareventandstatuszgen_);
-  } else {
-    solareventandstatuszgen_ = nullptr;
+    _this->_impl_.solareventandstatuszgen_ = new ::solarmodule::SolarEventAndStatusZGEN(*from._impl_.solareventandstatuszgen_);
   }
   if (from._internal_has_grimod()) {
-    grimod_ = new ::commonmodule::ENG_GridConnectModeKind(*from.grimod_);
-  } else {
-    grimod_ = nullptr;
+    _this->_impl_.grimod_ = new ::commonmodule::ENG_GridConnectModeKind(*from._impl_.grimod_);
   }
   // @@protoc_insertion_point(copy_constructor:solarmodule.SolarEventZGEN)
 }
 
-void SolarEventZGEN::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&solareventandstatuszgen_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&grimod_) -
-    reinterpret_cast<char*>(&solareventandstatuszgen_)) + sizeof(grimod_));
+inline void SolarEventZGEN::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.solareventandstatuszgen_){nullptr}
+    , decltype(_impl_.grimod_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SolarEventZGEN::~SolarEventZGEN() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarEventZGEN)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void SolarEventZGEN::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete solareventandstatuszgen_;
-  if (this != internal_default_instance()) delete grimod_;
+inline void SolarEventZGEN::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.solareventandstatuszgen_;
+  if (this != internal_default_instance()) delete _impl_.grimod_;
 }
 
-void SolarEventZGEN::ArenaDtor(void* object) {
-  SolarEventZGEN* _this = reinterpret_cast< SolarEventZGEN* >(object);
-  (void)_this;
-}
-void SolarEventZGEN::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SolarEventZGEN::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SolarEventZGEN::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarEventZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && solareventandstatuszgen_ != nullptr) {
-    delete solareventandstatuszgen_;
+  if (GetArenaForAllocation() == nullptr && _impl_.solareventandstatuszgen_ != nullptr) {
+    delete _impl_.solareventandstatuszgen_;
   }
-  solareventandstatuszgen_ = nullptr;
-  if (GetArena() == nullptr && grimod_ != nullptr) {
-    delete grimod_;
+  _impl_.solareventandstatuszgen_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.grimod_ != nullptr) {
+    delete _impl_.grimod_;
   }
-  grimod_ = nullptr;
+  _impl_.grimod_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SolarEventZGEN::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SolarEventZGEN::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .solarmodule.SolarEventAndStatusZGEN solarEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_solareventandstatuszgen(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ENG_GridConnectModeKind GriMod = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_grimod(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SolarEventZGEN::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* SolarEventZGEN::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarEventZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .solarmodule.SolarEventAndStatusZGEN solarEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-  if (this->has_solareventandstatuszgen()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_solareventandstatuszgen()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::solareventandstatuszgen(this), target, stream);
+      InternalWriteMessage(1, _Internal::solareventandstatuszgen(this),
+        _Internal::solareventandstatuszgen(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ENG_GridConnectModeKind GriMod = 2;
-  if (this->has_grimod()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_grimod()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::grimod(this), target, stream);
+      InternalWriteMessage(2, _Internal::grimod(this),
+        _Internal::grimod(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarEventZGEN)
   return target;
 }
 
-size_t SolarEventZGEN::ByteSizeLong() const {
+::size_t SolarEventZGEN::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarEventZGEN)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .solarmodule.SolarEventAndStatusZGEN solarEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-  if (this->has_solareventandstatuszgen()) {
+  if (this->_internal_has_solareventandstatuszgen()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *solareventandstatuszgen_);
+        *_impl_.solareventandstatuszgen_);
   }
 
   // .commonmodule.ENG_GridConnectModeKind GriMod = 2;
-  if (this->has_grimod()) {
+  if (this->_internal_has_grimod()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *grimod_);
+        *_impl_.grimod_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SolarEventZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarEventZGEN)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SolarEventZGEN* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarEventZGEN>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarEventZGEN)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarEventZGEN)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarEventZGEN::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarEventZGEN::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarEventZGEN::GetClassData() const { return &_class_data_; }
 
-void SolarEventZGEN::MergeFrom(const SolarEventZGEN& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarEventZGEN)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void SolarEventZGEN::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarEventZGEN*>(&to_msg);
+  auto& from = static_cast<const SolarEventZGEN&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarEventZGEN)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_solareventandstatuszgen()) {
-    _internal_mutable_solareventandstatuszgen()->::solarmodule::SolarEventAndStatusZGEN::MergeFrom(from._internal_solareventandstatuszgen());
+  if (from._internal_has_solareventandstatuszgen()) {
+    _this->_internal_mutable_solareventandstatuszgen()->::solarmodule::SolarEventAndStatusZGEN::MergeFrom(
+        from._internal_solareventandstatuszgen());
   }
-  if (from.has_grimod()) {
-    _internal_mutable_grimod()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from._internal_grimod());
+  if (from._internal_has_grimod()) {
+    _this->_internal_mutable_grimod()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(
+        from._internal_grimod());
   }
-}
-
-void SolarEventZGEN::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarEventZGEN)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SolarEventZGEN::CopyFrom(const SolarEventZGEN& from) {
@@ -3943,20 +7954,20 @@ bool SolarEventZGEN::IsInitialized() const {
 
 void SolarEventZGEN::InternalSwap(SolarEventZGEN* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SolarEventZGEN, grimod_)
-      + sizeof(SolarEventZGEN::grimod_)
-      - PROTOBUF_FIELD_OFFSET(SolarEventZGEN, solareventandstatuszgen_)>(
-          reinterpret_cast<char*>(&solareventandstatuszgen_),
-          reinterpret_cast<char*>(&other->solareventandstatuszgen_));
+      PROTOBUF_FIELD_OFFSET(SolarEventZGEN, _impl_.grimod_)
+      + sizeof(SolarEventZGEN::_impl_.grimod_)
+      - PROTOBUF_FIELD_OFFSET(SolarEventZGEN, _impl_.solareventandstatuszgen_)>(
+          reinterpret_cast<char*>(&_impl_.solareventandstatuszgen_),
+          reinterpret_cast<char*>(&other->_impl_.solareventandstatuszgen_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SolarEventZGEN::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[19]);
 }
-
-
 // ===================================================================
 
 class SolarEvent::_Internal {
@@ -3967,225 +7978,210 @@ class SolarEvent::_Internal {
 
 const ::commonmodule::EventValue&
 SolarEvent::_Internal::eventvalue(const SolarEvent* msg) {
-  return *msg->eventvalue_;
+  return *msg->_impl_.eventvalue_;
 }
 const ::solarmodule::SolarEventZGEN&
 SolarEvent::_Internal::solareventzgen(const SolarEvent* msg) {
-  return *msg->solareventzgen_;
+  return *msg->_impl_.solareventzgen_;
 }
 void SolarEvent::clear_eventvalue() {
-  if (GetArena() == nullptr && eventvalue_ != nullptr) {
-    delete eventvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventvalue_ != nullptr) {
+    delete _impl_.eventvalue_;
   }
-  eventvalue_ = nullptr;
+  _impl_.eventvalue_ = nullptr;
 }
 SolarEvent::SolarEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:solarmodule.SolarEvent)
 }
 SolarEvent::SolarEvent(const SolarEvent& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarEvent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventvalue_){nullptr}
+    , decltype(_impl_.solareventzgen_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_eventvalue()) {
-    eventvalue_ = new ::commonmodule::EventValue(*from.eventvalue_);
-  } else {
-    eventvalue_ = nullptr;
+    _this->_impl_.eventvalue_ = new ::commonmodule::EventValue(*from._impl_.eventvalue_);
   }
   if (from._internal_has_solareventzgen()) {
-    solareventzgen_ = new ::solarmodule::SolarEventZGEN(*from.solareventzgen_);
-  } else {
-    solareventzgen_ = nullptr;
+    _this->_impl_.solareventzgen_ = new ::solarmodule::SolarEventZGEN(*from._impl_.solareventzgen_);
   }
   // @@protoc_insertion_point(copy_constructor:solarmodule.SolarEvent)
 }
 
-void SolarEvent::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&eventvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&solareventzgen_) -
-    reinterpret_cast<char*>(&eventvalue_)) + sizeof(solareventzgen_));
+inline void SolarEvent::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventvalue_){nullptr}
+    , decltype(_impl_.solareventzgen_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SolarEvent::~SolarEvent() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarEvent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void SolarEvent::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete eventvalue_;
-  if (this != internal_default_instance()) delete solareventzgen_;
+inline void SolarEvent::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.eventvalue_;
+  if (this != internal_default_instance()) delete _impl_.solareventzgen_;
 }
 
-void SolarEvent::ArenaDtor(void* object) {
-  SolarEvent* _this = reinterpret_cast< SolarEvent* >(object);
-  (void)_this;
-}
-void SolarEvent::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SolarEvent::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SolarEvent::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && eventvalue_ != nullptr) {
-    delete eventvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventvalue_ != nullptr) {
+    delete _impl_.eventvalue_;
   }
-  eventvalue_ = nullptr;
-  if (GetArena() == nullptr && solareventzgen_ != nullptr) {
-    delete solareventzgen_;
+  _impl_.eventvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solareventzgen_ != nullptr) {
+    delete _impl_.solareventzgen_;
   }
-  solareventzgen_ = nullptr;
+  _impl_.solareventzgen_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SolarEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SolarEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_eventvalue(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .solarmodule.SolarEventZGEN solarEventZGEN = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_solareventzgen(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SolarEvent::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* SolarEvent::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventvalue()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_eventvalue()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::eventvalue(this), target, stream);
+      InternalWriteMessage(1, _Internal::eventvalue(this),
+        _Internal::eventvalue(this).GetCachedSize(), target, stream);
   }
 
   // .solarmodule.SolarEventZGEN solarEventZGEN = 2;
-  if (this->has_solareventzgen()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_solareventzgen()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::solareventzgen(this), target, stream);
+      InternalWriteMessage(2, _Internal::solareventzgen(this),
+        _Internal::solareventzgen(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarEvent)
   return target;
 }
 
-size_t SolarEvent::ByteSizeLong() const {
+::size_t SolarEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarEvent)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventvalue()) {
+  if (this->_internal_has_eventvalue()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *eventvalue_);
+        *_impl_.eventvalue_);
   }
 
   // .solarmodule.SolarEventZGEN solarEventZGEN = 2;
-  if (this->has_solareventzgen()) {
+  if (this->_internal_has_solareventzgen()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *solareventzgen_);
+        *_impl_.solareventzgen_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SolarEvent::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarEvent)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SolarEvent* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarEvent>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarEvent)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarEvent)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarEvent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarEvent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarEvent::GetClassData() const { return &_class_data_; }
 
-void SolarEvent::MergeFrom(const SolarEvent& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarEvent)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void SolarEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarEvent*>(&to_msg);
+  auto& from = static_cast<const SolarEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarEvent)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_eventvalue()) {
-    _internal_mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(from._internal_eventvalue());
+  if (from._internal_has_eventvalue()) {
+    _this->_internal_mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(
+        from._internal_eventvalue());
   }
-  if (from.has_solareventzgen()) {
-    _internal_mutable_solareventzgen()->::solarmodule::SolarEventZGEN::MergeFrom(from._internal_solareventzgen());
+  if (from._internal_has_solareventzgen()) {
+    _this->_internal_mutable_solareventzgen()->::solarmodule::SolarEventZGEN::MergeFrom(
+        from._internal_solareventzgen());
   }
-}
-
-void SolarEvent::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarEvent)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SolarEvent::CopyFrom(const SolarEvent& from) {
@@ -4201,20 +8197,20 @@ bool SolarEvent::IsInitialized() const {
 
 void SolarEvent::InternalSwap(SolarEvent* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SolarEvent, solareventzgen_)
-      + sizeof(SolarEvent::solareventzgen_)
-      - PROTOBUF_FIELD_OFFSET(SolarEvent, eventvalue_)>(
-          reinterpret_cast<char*>(&eventvalue_),
-          reinterpret_cast<char*>(&other->eventvalue_));
+      PROTOBUF_FIELD_OFFSET(SolarEvent, _impl_.solareventzgen_)
+      + sizeof(SolarEvent::_impl_.solareventzgen_)
+      - PROTOBUF_FIELD_OFFSET(SolarEvent, _impl_.eventvalue_)>(
+          reinterpret_cast<char*>(&_impl_.eventvalue_),
+          reinterpret_cast<char*>(&other->_impl_.eventvalue_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SolarEvent::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[20]);
 }
-
-
 // ===================================================================
 
 class SolarEventProfile::_Internal {
@@ -4226,264 +8222,251 @@ class SolarEventProfile::_Internal {
 
 const ::commonmodule::EventMessageInfo&
 SolarEventProfile::_Internal::eventmessageinfo(const SolarEventProfile* msg) {
-  return *msg->eventmessageinfo_;
+  return *msg->_impl_.eventmessageinfo_;
 }
 const ::solarmodule::SolarEvent&
 SolarEventProfile::_Internal::solarevent(const SolarEventProfile* msg) {
-  return *msg->solarevent_;
+  return *msg->_impl_.solarevent_;
 }
 const ::solarmodule::SolarInverter&
 SolarEventProfile::_Internal::solarinverter(const SolarEventProfile* msg) {
-  return *msg->solarinverter_;
+  return *msg->_impl_.solarinverter_;
 }
 void SolarEventProfile::clear_eventmessageinfo() {
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
-    delete eventmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventmessageinfo_ != nullptr) {
+    delete _impl_.eventmessageinfo_;
   }
-  eventmessageinfo_ = nullptr;
+  _impl_.eventmessageinfo_ = nullptr;
 }
 SolarEventProfile::SolarEventProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:solarmodule.SolarEventProfile)
 }
 SolarEventProfile::SolarEventProfile(const SolarEventProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarEventProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventmessageinfo_){nullptr}
+    , decltype(_impl_.solarevent_){nullptr}
+    , decltype(_impl_.solarinverter_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_eventmessageinfo()) {
-    eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from.eventmessageinfo_);
-  } else {
-    eventmessageinfo_ = nullptr;
+    _this->_impl_.eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from._impl_.eventmessageinfo_);
   }
   if (from._internal_has_solarevent()) {
-    solarevent_ = new ::solarmodule::SolarEvent(*from.solarevent_);
-  } else {
-    solarevent_ = nullptr;
+    _this->_impl_.solarevent_ = new ::solarmodule::SolarEvent(*from._impl_.solarevent_);
   }
   if (from._internal_has_solarinverter()) {
-    solarinverter_ = new ::solarmodule::SolarInverter(*from.solarinverter_);
-  } else {
-    solarinverter_ = nullptr;
+    _this->_impl_.solarinverter_ = new ::solarmodule::SolarInverter(*from._impl_.solarinverter_);
   }
   // @@protoc_insertion_point(copy_constructor:solarmodule.SolarEventProfile)
 }
 
-void SolarEventProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&eventmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&solarinverter_) -
-    reinterpret_cast<char*>(&eventmessageinfo_)) + sizeof(solarinverter_));
+inline void SolarEventProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventmessageinfo_){nullptr}
+    , decltype(_impl_.solarevent_){nullptr}
+    , decltype(_impl_.solarinverter_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SolarEventProfile::~SolarEventProfile() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarEventProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void SolarEventProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete eventmessageinfo_;
-  if (this != internal_default_instance()) delete solarevent_;
-  if (this != internal_default_instance()) delete solarinverter_;
+inline void SolarEventProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.eventmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.solarevent_;
+  if (this != internal_default_instance()) delete _impl_.solarinverter_;
 }
 
-void SolarEventProfile::ArenaDtor(void* object) {
-  SolarEventProfile* _this = reinterpret_cast< SolarEventProfile* >(object);
-  (void)_this;
-}
-void SolarEventProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SolarEventProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SolarEventProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
-    delete eventmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventmessageinfo_ != nullptr) {
+    delete _impl_.eventmessageinfo_;
   }
-  eventmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && solarevent_ != nullptr) {
-    delete solarevent_;
+  _impl_.eventmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solarevent_ != nullptr) {
+    delete _impl_.solarevent_;
   }
-  solarevent_ = nullptr;
-  if (GetArena() == nullptr && solarinverter_ != nullptr) {
-    delete solarinverter_;
+  _impl_.solarevent_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solarinverter_ != nullptr) {
+    delete _impl_.solarinverter_;
   }
-  solarinverter_ = nullptr;
+  _impl_.solarinverter_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SolarEventProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SolarEventProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_eventmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .solarmodule.SolarEvent solarEvent = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_solarevent(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_solarinverter(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SolarEventProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* SolarEventProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_eventmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::eventmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::eventmessageinfo(this),
+        _Internal::eventmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .solarmodule.SolarEvent solarEvent = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarevent()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_solarevent()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::solarevent(this), target, stream);
+      InternalWriteMessage(2, _Internal::solarevent(this),
+        _Internal::solarevent(this).GetCachedSize(), target, stream);
   }
 
   // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarinverter()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_solarinverter()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::solarinverter(this), target, stream);
+      InternalWriteMessage(3, _Internal::solarinverter(this),
+        _Internal::solarinverter(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarEventProfile)
   return target;
 }
 
-size_t SolarEventProfile::ByteSizeLong() const {
+::size_t SolarEventProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarEventProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
+  if (this->_internal_has_eventmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *eventmessageinfo_);
+        *_impl_.eventmessageinfo_);
   }
 
   // .solarmodule.SolarEvent solarEvent = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarevent()) {
+  if (this->_internal_has_solarevent()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *solarevent_);
+        *_impl_.solarevent_);
   }
 
   // .solarmodule.SolarInverter solarInverter = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarinverter()) {
+  if (this->_internal_has_solarinverter()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *solarinverter_);
+        *_impl_.solarinverter_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SolarEventProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarEventProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SolarEventProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarEventProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarEventProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarEventProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarEventProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarEventProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarEventProfile::GetClassData() const { return &_class_data_; }
 
-void SolarEventProfile::MergeFrom(const SolarEventProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarEventProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void SolarEventProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarEventProfile*>(&to_msg);
+  auto& from = static_cast<const SolarEventProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarEventProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_eventmessageinfo()) {
-    _internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(from._internal_eventmessageinfo());
+  if (from._internal_has_eventmessageinfo()) {
+    _this->_internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(
+        from._internal_eventmessageinfo());
   }
-  if (from.has_solarevent()) {
-    _internal_mutable_solarevent()->::solarmodule::SolarEvent::MergeFrom(from._internal_solarevent());
+  if (from._internal_has_solarevent()) {
+    _this->_internal_mutable_solarevent()->::solarmodule::SolarEvent::MergeFrom(
+        from._internal_solarevent());
   }
-  if (from.has_solarinverter()) {
-    _internal_mutable_solarinverter()->::solarmodule::SolarInverter::MergeFrom(from._internal_solarinverter());
+  if (from._internal_has_solarinverter()) {
+    _this->_internal_mutable_solarinverter()->::solarmodule::SolarInverter::MergeFrom(
+        from._internal_solarinverter());
   }
-}
-
-void SolarEventProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarEventProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SolarEventProfile::CopyFrom(const SolarEventProfile& from) {
@@ -4499,20 +8482,20 @@ bool SolarEventProfile::IsInitialized() const {
 
 void SolarEventProfile::InternalSwap(SolarEventProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SolarEventProfile, solarinverter_)
-      + sizeof(SolarEventProfile::solarinverter_)
-      - PROTOBUF_FIELD_OFFSET(SolarEventProfile, eventmessageinfo_)>(
-          reinterpret_cast<char*>(&eventmessageinfo_),
-          reinterpret_cast<char*>(&other->eventmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(SolarEventProfile, _impl_.solarinverter_)
+      + sizeof(SolarEventProfile::_impl_.solarinverter_)
+      - PROTOBUF_FIELD_OFFSET(SolarEventProfile, _impl_.eventmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.eventmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.eventmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SolarEventProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[21]);
 }
-
-
 // ===================================================================
 
 class SolarReading::_Internal {
@@ -4525,321 +8508,310 @@ class SolarReading::_Internal {
 
 const ::commonmodule::ConductingEquipmentTerminalReading&
 SolarReading::_Internal::conductingequipmentterminalreading(const SolarReading* msg) {
-  return *msg->conductingequipmentterminalreading_;
+  return *msg->_impl_.conductingequipmentterminalreading_;
 }
 const ::commonmodule::PhaseMMTN&
 SolarReading::_Internal::phasemmtn(const SolarReading* msg) {
-  return *msg->phasemmtn_;
+  return *msg->_impl_.phasemmtn_;
 }
 const ::commonmodule::ReadingMMTR&
 SolarReading::_Internal::readingmmtr(const SolarReading* msg) {
-  return *msg->readingmmtr_;
+  return *msg->_impl_.readingmmtr_;
 }
 const ::commonmodule::ReadingMMXU&
 SolarReading::_Internal::readingmmxu(const SolarReading* msg) {
-  return *msg->readingmmxu_;
+  return *msg->_impl_.readingmmxu_;
 }
 void SolarReading::clear_conductingequipmentterminalreading() {
-  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
-    delete conductingequipmentterminalreading_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipmentterminalreading_ != nullptr) {
+    delete _impl_.conductingequipmentterminalreading_;
   }
-  conductingequipmentterminalreading_ = nullptr;
+  _impl_.conductingequipmentterminalreading_ = nullptr;
 }
 void SolarReading::clear_phasemmtn() {
-  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
-    delete phasemmtn_;
+  if (GetArenaForAllocation() == nullptr && _impl_.phasemmtn_ != nullptr) {
+    delete _impl_.phasemmtn_;
   }
-  phasemmtn_ = nullptr;
+  _impl_.phasemmtn_ = nullptr;
 }
 void SolarReading::clear_readingmmtr() {
-  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
-    delete readingmmtr_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmtr_ != nullptr) {
+    delete _impl_.readingmmtr_;
   }
-  readingmmtr_ = nullptr;
+  _impl_.readingmmtr_ = nullptr;
 }
 void SolarReading::clear_readingmmxu() {
-  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
-    delete readingmmxu_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmxu_ != nullptr) {
+    delete _impl_.readingmmxu_;
   }
-  readingmmxu_ = nullptr;
+  _impl_.readingmmxu_ = nullptr;
 }
 SolarReading::SolarReading(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:solarmodule.SolarReading)
 }
 SolarReading::SolarReading(const SolarReading& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarReading* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipmentterminalreading_){nullptr}
+    , decltype(_impl_.phasemmtn_){nullptr}
+    , decltype(_impl_.readingmmtr_){nullptr}
+    , decltype(_impl_.readingmmxu_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_conductingequipmentterminalreading()) {
-    conductingequipmentterminalreading_ = new ::commonmodule::ConductingEquipmentTerminalReading(*from.conductingequipmentterminalreading_);
-  } else {
-    conductingequipmentterminalreading_ = nullptr;
+    _this->_impl_.conductingequipmentterminalreading_ = new ::commonmodule::ConductingEquipmentTerminalReading(*from._impl_.conductingequipmentterminalreading_);
   }
   if (from._internal_has_phasemmtn()) {
-    phasemmtn_ = new ::commonmodule::PhaseMMTN(*from.phasemmtn_);
-  } else {
-    phasemmtn_ = nullptr;
+    _this->_impl_.phasemmtn_ = new ::commonmodule::PhaseMMTN(*from._impl_.phasemmtn_);
   }
   if (from._internal_has_readingmmtr()) {
-    readingmmtr_ = new ::commonmodule::ReadingMMTR(*from.readingmmtr_);
-  } else {
-    readingmmtr_ = nullptr;
+    _this->_impl_.readingmmtr_ = new ::commonmodule::ReadingMMTR(*from._impl_.readingmmtr_);
   }
   if (from._internal_has_readingmmxu()) {
-    readingmmxu_ = new ::commonmodule::ReadingMMXU(*from.readingmmxu_);
-  } else {
-    readingmmxu_ = nullptr;
+    _this->_impl_.readingmmxu_ = new ::commonmodule::ReadingMMXU(*from._impl_.readingmmxu_);
   }
   // @@protoc_insertion_point(copy_constructor:solarmodule.SolarReading)
 }
 
-void SolarReading::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&conductingequipmentterminalreading_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&readingmmxu_) -
-    reinterpret_cast<char*>(&conductingequipmentterminalreading_)) + sizeof(readingmmxu_));
+inline void SolarReading::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipmentterminalreading_){nullptr}
+    , decltype(_impl_.phasemmtn_){nullptr}
+    , decltype(_impl_.readingmmtr_){nullptr}
+    , decltype(_impl_.readingmmxu_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SolarReading::~SolarReading() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarReading)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void SolarReading::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete conductingequipmentterminalreading_;
-  if (this != internal_default_instance()) delete phasemmtn_;
-  if (this != internal_default_instance()) delete readingmmtr_;
-  if (this != internal_default_instance()) delete readingmmxu_;
+inline void SolarReading::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.conductingequipmentterminalreading_;
+  if (this != internal_default_instance()) delete _impl_.phasemmtn_;
+  if (this != internal_default_instance()) delete _impl_.readingmmtr_;
+  if (this != internal_default_instance()) delete _impl_.readingmmxu_;
 }
 
-void SolarReading::ArenaDtor(void* object) {
-  SolarReading* _this = reinterpret_cast< SolarReading* >(object);
-  (void)_this;
-}
-void SolarReading::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SolarReading::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SolarReading::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarReading)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
-    delete conductingequipmentterminalreading_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipmentterminalreading_ != nullptr) {
+    delete _impl_.conductingequipmentterminalreading_;
   }
-  conductingequipmentterminalreading_ = nullptr;
-  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
-    delete phasemmtn_;
+  _impl_.conductingequipmentterminalreading_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.phasemmtn_ != nullptr) {
+    delete _impl_.phasemmtn_;
   }
-  phasemmtn_ = nullptr;
-  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
-    delete readingmmtr_;
+  _impl_.phasemmtn_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmtr_ != nullptr) {
+    delete _impl_.readingmmtr_;
   }
-  readingmmtr_ = nullptr;
-  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
-    delete readingmmxu_;
+  _impl_.readingmmtr_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmxu_ != nullptr) {
+    delete _impl_.readingmmxu_;
   }
-  readingmmxu_ = nullptr;
+  _impl_.readingmmxu_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SolarReading::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SolarReading::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_conductingequipmentterminalreading(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseMMTN phaseMMTN = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_phasemmtn(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ReadingMMTR readingMMTR = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_readingmmtr(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ReadingMMXU readingMMXU = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_readingmmxu(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SolarReading::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* SolarReading::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarReading)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipmentterminalreading()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_conductingequipmentterminalreading()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::conductingequipmentterminalreading(this), target, stream);
+      InternalWriteMessage(1, _Internal::conductingequipmentterminalreading(this),
+        _Internal::conductingequipmentterminalreading(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 2;
-  if (this->has_phasemmtn()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_phasemmtn()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::phasemmtn(this), target, stream);
+      InternalWriteMessage(2, _Internal::phasemmtn(this),
+        _Internal::phasemmtn(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 3;
-  if (this->has_readingmmtr()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_readingmmtr()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::readingmmtr(this), target, stream);
+      InternalWriteMessage(3, _Internal::readingmmtr(this),
+        _Internal::readingmmtr(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 4;
-  if (this->has_readingmmxu()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_readingmmxu()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::readingmmxu(this), target, stream);
+      InternalWriteMessage(4, _Internal::readingmmxu(this),
+        _Internal::readingmmxu(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarReading)
   return target;
 }
 
-size_t SolarReading::ByteSizeLong() const {
+::size_t SolarReading::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarReading)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipmentterminalreading()) {
+  if (this->_internal_has_conductingequipmentterminalreading()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *conductingequipmentterminalreading_);
+        *_impl_.conductingequipmentterminalreading_);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 2;
-  if (this->has_phasemmtn()) {
+  if (this->_internal_has_phasemmtn()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *phasemmtn_);
+        *_impl_.phasemmtn_);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 3;
-  if (this->has_readingmmtr()) {
+  if (this->_internal_has_readingmmtr()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmmtr_);
+        *_impl_.readingmmtr_);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 4;
-  if (this->has_readingmmxu()) {
+  if (this->_internal_has_readingmmxu()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmmxu_);
+        *_impl_.readingmmxu_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SolarReading::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarReading)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SolarReading* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarReading>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarReading)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarReading)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarReading::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarReading::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarReading::GetClassData() const { return &_class_data_; }
 
-void SolarReading::MergeFrom(const SolarReading& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarReading)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void SolarReading::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarReading*>(&to_msg);
+  auto& from = static_cast<const SolarReading&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarReading)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_conductingequipmentterminalreading()) {
-    _internal_mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(from._internal_conductingequipmentterminalreading());
+  if (from._internal_has_conductingequipmentterminalreading()) {
+    _this->_internal_mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(
+        from._internal_conductingequipmentterminalreading());
   }
-  if (from.has_phasemmtn()) {
-    _internal_mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(from._internal_phasemmtn());
+  if (from._internal_has_phasemmtn()) {
+    _this->_internal_mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(
+        from._internal_phasemmtn());
   }
-  if (from.has_readingmmtr()) {
-    _internal_mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(from._internal_readingmmtr());
+  if (from._internal_has_readingmmtr()) {
+    _this->_internal_mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(
+        from._internal_readingmmtr());
   }
-  if (from.has_readingmmxu()) {
-    _internal_mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from._internal_readingmmxu());
+  if (from._internal_has_readingmmxu()) {
+    _this->_internal_mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(
+        from._internal_readingmmxu());
   }
-}
-
-void SolarReading::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarReading)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SolarReading::CopyFrom(const SolarReading& from) {
@@ -4855,20 +8827,20 @@ bool SolarReading::IsInitialized() const {
 
 void SolarReading::InternalSwap(SolarReading* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SolarReading, readingmmxu_)
-      + sizeof(SolarReading::readingmmxu_)
-      - PROTOBUF_FIELD_OFFSET(SolarReading, conductingequipmentterminalreading_)>(
-          reinterpret_cast<char*>(&conductingequipmentterminalreading_),
-          reinterpret_cast<char*>(&other->conductingequipmentterminalreading_));
+      PROTOBUF_FIELD_OFFSET(SolarReading, _impl_.readingmmxu_)
+      + sizeof(SolarReading::_impl_.readingmmxu_)
+      - PROTOBUF_FIELD_OFFSET(SolarReading, _impl_.conductingequipmentterminalreading_)>(
+          reinterpret_cast<char*>(&_impl_.conductingequipmentterminalreading_),
+          reinterpret_cast<char*>(&other->_impl_.conductingequipmentterminalreading_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SolarReading::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[22]);
 }
-
-
 // ===================================================================
 
 class SolarReadingProfile::_Internal {
@@ -4880,264 +8852,251 @@ class SolarReadingProfile::_Internal {
 
 const ::commonmodule::ReadingMessageInfo&
 SolarReadingProfile::_Internal::readingmessageinfo(const SolarReadingProfile* msg) {
-  return *msg->readingmessageinfo_;
+  return *msg->_impl_.readingmessageinfo_;
 }
 const ::solarmodule::SolarInverter&
 SolarReadingProfile::_Internal::solarinverter(const SolarReadingProfile* msg) {
-  return *msg->solarinverter_;
+  return *msg->_impl_.solarinverter_;
 }
 const ::solarmodule::SolarReading&
 SolarReadingProfile::_Internal::solarreading(const SolarReadingProfile* msg) {
-  return *msg->solarreading_;
+  return *msg->_impl_.solarreading_;
 }
 void SolarReadingProfile::clear_readingmessageinfo() {
-  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
-    delete readingmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmessageinfo_ != nullptr) {
+    delete _impl_.readingmessageinfo_;
   }
-  readingmessageinfo_ = nullptr;
+  _impl_.readingmessageinfo_ = nullptr;
 }
 SolarReadingProfile::SolarReadingProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:solarmodule.SolarReadingProfile)
 }
 SolarReadingProfile::SolarReadingProfile(const SolarReadingProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarReadingProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.readingmessageinfo_){nullptr}
+    , decltype(_impl_.solarinverter_){nullptr}
+    , decltype(_impl_.solarreading_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_readingmessageinfo()) {
-    readingmessageinfo_ = new ::commonmodule::ReadingMessageInfo(*from.readingmessageinfo_);
-  } else {
-    readingmessageinfo_ = nullptr;
+    _this->_impl_.readingmessageinfo_ = new ::commonmodule::ReadingMessageInfo(*from._impl_.readingmessageinfo_);
   }
   if (from._internal_has_solarinverter()) {
-    solarinverter_ = new ::solarmodule::SolarInverter(*from.solarinverter_);
-  } else {
-    solarinverter_ = nullptr;
+    _this->_impl_.solarinverter_ = new ::solarmodule::SolarInverter(*from._impl_.solarinverter_);
   }
   if (from._internal_has_solarreading()) {
-    solarreading_ = new ::solarmodule::SolarReading(*from.solarreading_);
-  } else {
-    solarreading_ = nullptr;
+    _this->_impl_.solarreading_ = new ::solarmodule::SolarReading(*from._impl_.solarreading_);
   }
   // @@protoc_insertion_point(copy_constructor:solarmodule.SolarReadingProfile)
 }
 
-void SolarReadingProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&readingmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&solarreading_) -
-    reinterpret_cast<char*>(&readingmessageinfo_)) + sizeof(solarreading_));
+inline void SolarReadingProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.readingmessageinfo_){nullptr}
+    , decltype(_impl_.solarinverter_){nullptr}
+    , decltype(_impl_.solarreading_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SolarReadingProfile::~SolarReadingProfile() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarReadingProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void SolarReadingProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete readingmessageinfo_;
-  if (this != internal_default_instance()) delete solarinverter_;
-  if (this != internal_default_instance()) delete solarreading_;
+inline void SolarReadingProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.readingmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.solarinverter_;
+  if (this != internal_default_instance()) delete _impl_.solarreading_;
 }
 
-void SolarReadingProfile::ArenaDtor(void* object) {
-  SolarReadingProfile* _this = reinterpret_cast< SolarReadingProfile* >(object);
-  (void)_this;
-}
-void SolarReadingProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SolarReadingProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SolarReadingProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarReadingProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
-    delete readingmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmessageinfo_ != nullptr) {
+    delete _impl_.readingmessageinfo_;
   }
-  readingmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && solarinverter_ != nullptr) {
-    delete solarinverter_;
+  _impl_.readingmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solarinverter_ != nullptr) {
+    delete _impl_.solarinverter_;
   }
-  solarinverter_ = nullptr;
-  if (GetArena() == nullptr && solarreading_ != nullptr) {
-    delete solarreading_;
+  _impl_.solarinverter_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solarreading_ != nullptr) {
+    delete _impl_.solarreading_;
   }
-  solarreading_ = nullptr;
+  _impl_.solarreading_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SolarReadingProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SolarReadingProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_readingmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .solarmodule.SolarInverter solarInverter = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_solarinverter(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .solarmodule.SolarReading solarReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_solarreading(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SolarReadingProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* SolarReadingProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarReadingProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_readingmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_readingmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::readingmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::readingmessageinfo(this),
+        _Internal::readingmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .solarmodule.SolarInverter solarInverter = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarinverter()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_solarinverter()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::solarinverter(this), target, stream);
+      InternalWriteMessage(2, _Internal::solarinverter(this),
+        _Internal::solarinverter(this).GetCachedSize(), target, stream);
   }
 
   // .solarmodule.SolarReading solarReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarreading()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_solarreading()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::solarreading(this), target, stream);
+      InternalWriteMessage(3, _Internal::solarreading(this),
+        _Internal::solarreading(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarReadingProfile)
   return target;
 }
 
-size_t SolarReadingProfile::ByteSizeLong() const {
+::size_t SolarReadingProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarReadingProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_readingmessageinfo()) {
+  if (this->_internal_has_readingmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmessageinfo_);
+        *_impl_.readingmessageinfo_);
   }
 
   // .solarmodule.SolarInverter solarInverter = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarinverter()) {
+  if (this->_internal_has_solarinverter()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *solarinverter_);
+        *_impl_.solarinverter_);
   }
 
   // .solarmodule.SolarReading solarReading = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarreading()) {
+  if (this->_internal_has_solarreading()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *solarreading_);
+        *_impl_.solarreading_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SolarReadingProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarReadingProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SolarReadingProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarReadingProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarReadingProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarReadingProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarReadingProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarReadingProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarReadingProfile::GetClassData() const { return &_class_data_; }
 
-void SolarReadingProfile::MergeFrom(const SolarReadingProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarReadingProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void SolarReadingProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarReadingProfile*>(&to_msg);
+  auto& from = static_cast<const SolarReadingProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarReadingProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_readingmessageinfo()) {
-    _internal_mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(from._internal_readingmessageinfo());
+  if (from._internal_has_readingmessageinfo()) {
+    _this->_internal_mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(
+        from._internal_readingmessageinfo());
   }
-  if (from.has_solarinverter()) {
-    _internal_mutable_solarinverter()->::solarmodule::SolarInverter::MergeFrom(from._internal_solarinverter());
+  if (from._internal_has_solarinverter()) {
+    _this->_internal_mutable_solarinverter()->::solarmodule::SolarInverter::MergeFrom(
+        from._internal_solarinverter());
   }
-  if (from.has_solarreading()) {
-    _internal_mutable_solarreading()->::solarmodule::SolarReading::MergeFrom(from._internal_solarreading());
+  if (from._internal_has_solarreading()) {
+    _this->_internal_mutable_solarreading()->::solarmodule::SolarReading::MergeFrom(
+        from._internal_solarreading());
   }
-}
-
-void SolarReadingProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarReadingProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SolarReadingProfile::CopyFrom(const SolarReadingProfile& from) {
@@ -5153,20 +9112,20 @@ bool SolarReadingProfile::IsInitialized() const {
 
 void SolarReadingProfile::InternalSwap(SolarReadingProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SolarReadingProfile, solarreading_)
-      + sizeof(SolarReadingProfile::solarreading_)
-      - PROTOBUF_FIELD_OFFSET(SolarReadingProfile, readingmessageinfo_)>(
-          reinterpret_cast<char*>(&readingmessageinfo_),
-          reinterpret_cast<char*>(&other->readingmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(SolarReadingProfile, _impl_.solarreading_)
+      + sizeof(SolarReadingProfile::_impl_.solarreading_)
+      - PROTOBUF_FIELD_OFFSET(SolarReadingProfile, _impl_.readingmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.readingmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.readingmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SolarReadingProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[23]);
 }
-
-
 // ===================================================================
 
 class SolarStatusZGEN::_Internal {
@@ -5177,225 +9136,210 @@ class SolarStatusZGEN::_Internal {
 
 const ::solarmodule::SolarEventAndStatusZGEN&
 SolarStatusZGEN::_Internal::solareventandstatuszgen(const SolarStatusZGEN* msg) {
-  return *msg->solareventandstatuszgen_;
+  return *msg->_impl_.solareventandstatuszgen_;
 }
 const ::commonmodule::ENG_GridConnectModeKind&
 SolarStatusZGEN::_Internal::grimod(const SolarStatusZGEN* msg) {
-  return *msg->grimod_;
+  return *msg->_impl_.grimod_;
 }
 void SolarStatusZGEN::clear_grimod() {
-  if (GetArena() == nullptr && grimod_ != nullptr) {
-    delete grimod_;
+  if (GetArenaForAllocation() == nullptr && _impl_.grimod_ != nullptr) {
+    delete _impl_.grimod_;
   }
-  grimod_ = nullptr;
+  _impl_.grimod_ = nullptr;
 }
 SolarStatusZGEN::SolarStatusZGEN(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:solarmodule.SolarStatusZGEN)
 }
 SolarStatusZGEN::SolarStatusZGEN(const SolarStatusZGEN& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarStatusZGEN* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.solareventandstatuszgen_){nullptr}
+    , decltype(_impl_.grimod_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_solareventandstatuszgen()) {
-    solareventandstatuszgen_ = new ::solarmodule::SolarEventAndStatusZGEN(*from.solareventandstatuszgen_);
-  } else {
-    solareventandstatuszgen_ = nullptr;
+    _this->_impl_.solareventandstatuszgen_ = new ::solarmodule::SolarEventAndStatusZGEN(*from._impl_.solareventandstatuszgen_);
   }
   if (from._internal_has_grimod()) {
-    grimod_ = new ::commonmodule::ENG_GridConnectModeKind(*from.grimod_);
-  } else {
-    grimod_ = nullptr;
+    _this->_impl_.grimod_ = new ::commonmodule::ENG_GridConnectModeKind(*from._impl_.grimod_);
   }
   // @@protoc_insertion_point(copy_constructor:solarmodule.SolarStatusZGEN)
 }
 
-void SolarStatusZGEN::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&solareventandstatuszgen_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&grimod_) -
-    reinterpret_cast<char*>(&solareventandstatuszgen_)) + sizeof(grimod_));
+inline void SolarStatusZGEN::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.solareventandstatuszgen_){nullptr}
+    , decltype(_impl_.grimod_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SolarStatusZGEN::~SolarStatusZGEN() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarStatusZGEN)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void SolarStatusZGEN::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete solareventandstatuszgen_;
-  if (this != internal_default_instance()) delete grimod_;
+inline void SolarStatusZGEN::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.solareventandstatuszgen_;
+  if (this != internal_default_instance()) delete _impl_.grimod_;
 }
 
-void SolarStatusZGEN::ArenaDtor(void* object) {
-  SolarStatusZGEN* _this = reinterpret_cast< SolarStatusZGEN* >(object);
-  (void)_this;
-}
-void SolarStatusZGEN::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SolarStatusZGEN::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SolarStatusZGEN::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarStatusZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && solareventandstatuszgen_ != nullptr) {
-    delete solareventandstatuszgen_;
+  if (GetArenaForAllocation() == nullptr && _impl_.solareventandstatuszgen_ != nullptr) {
+    delete _impl_.solareventandstatuszgen_;
   }
-  solareventandstatuszgen_ = nullptr;
-  if (GetArena() == nullptr && grimod_ != nullptr) {
-    delete grimod_;
+  _impl_.solareventandstatuszgen_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.grimod_ != nullptr) {
+    delete _impl_.grimod_;
   }
-  grimod_ = nullptr;
+  _impl_.grimod_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SolarStatusZGEN::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SolarStatusZGEN::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .solarmodule.SolarEventAndStatusZGEN solarEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_solareventandstatuszgen(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ENG_GridConnectModeKind GriMod = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_grimod(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SolarStatusZGEN::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* SolarStatusZGEN::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarStatusZGEN)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .solarmodule.SolarEventAndStatusZGEN solarEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-  if (this->has_solareventandstatuszgen()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_solareventandstatuszgen()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::solareventandstatuszgen(this), target, stream);
+      InternalWriteMessage(1, _Internal::solareventandstatuszgen(this),
+        _Internal::solareventandstatuszgen(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ENG_GridConnectModeKind GriMod = 2;
-  if (this->has_grimod()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_grimod()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::grimod(this), target, stream);
+      InternalWriteMessage(2, _Internal::grimod(this),
+        _Internal::grimod(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarStatusZGEN)
   return target;
 }
 
-size_t SolarStatusZGEN::ByteSizeLong() const {
+::size_t SolarStatusZGEN::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarStatusZGEN)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .solarmodule.SolarEventAndStatusZGEN solarEventAndStatusZGEN = 1 [(.uml.option_parent_message) = true];
-  if (this->has_solareventandstatuszgen()) {
+  if (this->_internal_has_solareventandstatuszgen()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *solareventandstatuszgen_);
+        *_impl_.solareventandstatuszgen_);
   }
 
   // .commonmodule.ENG_GridConnectModeKind GriMod = 2;
-  if (this->has_grimod()) {
+  if (this->_internal_has_grimod()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *grimod_);
+        *_impl_.grimod_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SolarStatusZGEN::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarStatusZGEN)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SolarStatusZGEN* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarStatusZGEN>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarStatusZGEN)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarStatusZGEN)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarStatusZGEN::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarStatusZGEN::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarStatusZGEN::GetClassData() const { return &_class_data_; }
 
-void SolarStatusZGEN::MergeFrom(const SolarStatusZGEN& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarStatusZGEN)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void SolarStatusZGEN::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarStatusZGEN*>(&to_msg);
+  auto& from = static_cast<const SolarStatusZGEN&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarStatusZGEN)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_solareventandstatuszgen()) {
-    _internal_mutable_solareventandstatuszgen()->::solarmodule::SolarEventAndStatusZGEN::MergeFrom(from._internal_solareventandstatuszgen());
+  if (from._internal_has_solareventandstatuszgen()) {
+    _this->_internal_mutable_solareventandstatuszgen()->::solarmodule::SolarEventAndStatusZGEN::MergeFrom(
+        from._internal_solareventandstatuszgen());
   }
-  if (from.has_grimod()) {
-    _internal_mutable_grimod()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(from._internal_grimod());
+  if (from._internal_has_grimod()) {
+    _this->_internal_mutable_grimod()->::commonmodule::ENG_GridConnectModeKind::MergeFrom(
+        from._internal_grimod());
   }
-}
-
-void SolarStatusZGEN::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarStatusZGEN)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SolarStatusZGEN::CopyFrom(const SolarStatusZGEN& from) {
@@ -5411,20 +9355,20 @@ bool SolarStatusZGEN::IsInitialized() const {
 
 void SolarStatusZGEN::InternalSwap(SolarStatusZGEN* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SolarStatusZGEN, grimod_)
-      + sizeof(SolarStatusZGEN::grimod_)
-      - PROTOBUF_FIELD_OFFSET(SolarStatusZGEN, solareventandstatuszgen_)>(
-          reinterpret_cast<char*>(&solareventandstatuszgen_),
-          reinterpret_cast<char*>(&other->solareventandstatuszgen_));
+      PROTOBUF_FIELD_OFFSET(SolarStatusZGEN, _impl_.grimod_)
+      + sizeof(SolarStatusZGEN::_impl_.grimod_)
+      - PROTOBUF_FIELD_OFFSET(SolarStatusZGEN, _impl_.solareventandstatuszgen_)>(
+          reinterpret_cast<char*>(&_impl_.solareventandstatuszgen_),
+          reinterpret_cast<char*>(&other->_impl_.solareventandstatuszgen_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SolarStatusZGEN::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[24]);
 }
-
-
 // ===================================================================
 
 class SolarStatus::_Internal {
@@ -5435,225 +9379,210 @@ class SolarStatus::_Internal {
 
 const ::commonmodule::StatusValue&
 SolarStatus::_Internal::statusvalue(const SolarStatus* msg) {
-  return *msg->statusvalue_;
+  return *msg->_impl_.statusvalue_;
 }
 const ::solarmodule::SolarStatusZGEN&
 SolarStatus::_Internal::solarstatuszgen(const SolarStatus* msg) {
-  return *msg->solarstatuszgen_;
+  return *msg->_impl_.solarstatuszgen_;
 }
 void SolarStatus::clear_statusvalue() {
-  if (GetArena() == nullptr && statusvalue_ != nullptr) {
-    delete statusvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusvalue_ != nullptr) {
+    delete _impl_.statusvalue_;
   }
-  statusvalue_ = nullptr;
+  _impl_.statusvalue_ = nullptr;
 }
 SolarStatus::SolarStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:solarmodule.SolarStatus)
 }
 SolarStatus::SolarStatus(const SolarStatus& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarStatus* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusvalue_){nullptr}
+    , decltype(_impl_.solarstatuszgen_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_statusvalue()) {
-    statusvalue_ = new ::commonmodule::StatusValue(*from.statusvalue_);
-  } else {
-    statusvalue_ = nullptr;
+    _this->_impl_.statusvalue_ = new ::commonmodule::StatusValue(*from._impl_.statusvalue_);
   }
   if (from._internal_has_solarstatuszgen()) {
-    solarstatuszgen_ = new ::solarmodule::SolarStatusZGEN(*from.solarstatuszgen_);
-  } else {
-    solarstatuszgen_ = nullptr;
+    _this->_impl_.solarstatuszgen_ = new ::solarmodule::SolarStatusZGEN(*from._impl_.solarstatuszgen_);
   }
   // @@protoc_insertion_point(copy_constructor:solarmodule.SolarStatus)
 }
 
-void SolarStatus::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&statusvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&solarstatuszgen_) -
-    reinterpret_cast<char*>(&statusvalue_)) + sizeof(solarstatuszgen_));
+inline void SolarStatus::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusvalue_){nullptr}
+    , decltype(_impl_.solarstatuszgen_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SolarStatus::~SolarStatus() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarStatus)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void SolarStatus::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete statusvalue_;
-  if (this != internal_default_instance()) delete solarstatuszgen_;
+inline void SolarStatus::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.statusvalue_;
+  if (this != internal_default_instance()) delete _impl_.solarstatuszgen_;
 }
 
-void SolarStatus::ArenaDtor(void* object) {
-  SolarStatus* _this = reinterpret_cast< SolarStatus* >(object);
-  (void)_this;
-}
-void SolarStatus::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SolarStatus::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SolarStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && statusvalue_ != nullptr) {
-    delete statusvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusvalue_ != nullptr) {
+    delete _impl_.statusvalue_;
   }
-  statusvalue_ = nullptr;
-  if (GetArena() == nullptr && solarstatuszgen_ != nullptr) {
-    delete solarstatuszgen_;
+  _impl_.statusvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solarstatuszgen_ != nullptr) {
+    delete _impl_.solarstatuszgen_;
   }
-  solarstatuszgen_ = nullptr;
+  _impl_.solarstatuszgen_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SolarStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SolarStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_statusvalue(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .solarmodule.SolarStatusZGEN solarStatusZGEN = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_solarstatuszgen(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SolarStatus::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* SolarStatus::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusvalue()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_statusvalue()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::statusvalue(this), target, stream);
+      InternalWriteMessage(1, _Internal::statusvalue(this),
+        _Internal::statusvalue(this).GetCachedSize(), target, stream);
   }
 
   // .solarmodule.SolarStatusZGEN solarStatusZGEN = 2;
-  if (this->has_solarstatuszgen()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_solarstatuszgen()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::solarstatuszgen(this), target, stream);
+      InternalWriteMessage(2, _Internal::solarstatuszgen(this),
+        _Internal::solarstatuszgen(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarStatus)
   return target;
 }
 
-size_t SolarStatus::ByteSizeLong() const {
+::size_t SolarStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarStatus)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusvalue()) {
+  if (this->_internal_has_statusvalue()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *statusvalue_);
+        *_impl_.statusvalue_);
   }
 
   // .solarmodule.SolarStatusZGEN solarStatusZGEN = 2;
-  if (this->has_solarstatuszgen()) {
+  if (this->_internal_has_solarstatuszgen()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *solarstatuszgen_);
+        *_impl_.solarstatuszgen_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SolarStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SolarStatus* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarStatus>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarStatus)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarStatus)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarStatus::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarStatus::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarStatus::GetClassData() const { return &_class_data_; }
 
-void SolarStatus::MergeFrom(const SolarStatus& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void SolarStatus::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarStatus*>(&to_msg);
+  auto& from = static_cast<const SolarStatus&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarStatus)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_statusvalue()) {
-    _internal_mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(from._internal_statusvalue());
+  if (from._internal_has_statusvalue()) {
+    _this->_internal_mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(
+        from._internal_statusvalue());
   }
-  if (from.has_solarstatuszgen()) {
-    _internal_mutable_solarstatuszgen()->::solarmodule::SolarStatusZGEN::MergeFrom(from._internal_solarstatuszgen());
+  if (from._internal_has_solarstatuszgen()) {
+    _this->_internal_mutable_solarstatuszgen()->::solarmodule::SolarStatusZGEN::MergeFrom(
+        from._internal_solarstatuszgen());
   }
-}
-
-void SolarStatus::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarStatus)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SolarStatus::CopyFrom(const SolarStatus& from) {
@@ -5669,20 +9598,20 @@ bool SolarStatus::IsInitialized() const {
 
 void SolarStatus::InternalSwap(SolarStatus* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SolarStatus, solarstatuszgen_)
-      + sizeof(SolarStatus::solarstatuszgen_)
-      - PROTOBUF_FIELD_OFFSET(SolarStatus, statusvalue_)>(
-          reinterpret_cast<char*>(&statusvalue_),
-          reinterpret_cast<char*>(&other->statusvalue_));
+      PROTOBUF_FIELD_OFFSET(SolarStatus, _impl_.solarstatuszgen_)
+      + sizeof(SolarStatus::_impl_.solarstatuszgen_)
+      - PROTOBUF_FIELD_OFFSET(SolarStatus, _impl_.statusvalue_)>(
+          reinterpret_cast<char*>(&_impl_.statusvalue_),
+          reinterpret_cast<char*>(&other->_impl_.statusvalue_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SolarStatus::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[25]);
 }
-
-
 // ===================================================================
 
 class SolarStatusProfile::_Internal {
@@ -5694,264 +9623,251 @@ class SolarStatusProfile::_Internal {
 
 const ::commonmodule::StatusMessageInfo&
 SolarStatusProfile::_Internal::statusmessageinfo(const SolarStatusProfile* msg) {
-  return *msg->statusmessageinfo_;
+  return *msg->_impl_.statusmessageinfo_;
 }
 const ::solarmodule::SolarInverter&
 SolarStatusProfile::_Internal::solarinverter(const SolarStatusProfile* msg) {
-  return *msg->solarinverter_;
+  return *msg->_impl_.solarinverter_;
 }
 const ::solarmodule::SolarStatus&
 SolarStatusProfile::_Internal::solarstatus(const SolarStatusProfile* msg) {
-  return *msg->solarstatus_;
+  return *msg->_impl_.solarstatus_;
 }
 void SolarStatusProfile::clear_statusmessageinfo() {
-  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
-    delete statusmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusmessageinfo_ != nullptr) {
+    delete _impl_.statusmessageinfo_;
   }
-  statusmessageinfo_ = nullptr;
+  _impl_.statusmessageinfo_ = nullptr;
 }
 SolarStatusProfile::SolarStatusProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:solarmodule.SolarStatusProfile)
 }
 SolarStatusProfile::SolarStatusProfile(const SolarStatusProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SolarStatusProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusmessageinfo_){nullptr}
+    , decltype(_impl_.solarinverter_){nullptr}
+    , decltype(_impl_.solarstatus_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_statusmessageinfo()) {
-    statusmessageinfo_ = new ::commonmodule::StatusMessageInfo(*from.statusmessageinfo_);
-  } else {
-    statusmessageinfo_ = nullptr;
+    _this->_impl_.statusmessageinfo_ = new ::commonmodule::StatusMessageInfo(*from._impl_.statusmessageinfo_);
   }
   if (from._internal_has_solarinverter()) {
-    solarinverter_ = new ::solarmodule::SolarInverter(*from.solarinverter_);
-  } else {
-    solarinverter_ = nullptr;
+    _this->_impl_.solarinverter_ = new ::solarmodule::SolarInverter(*from._impl_.solarinverter_);
   }
   if (from._internal_has_solarstatus()) {
-    solarstatus_ = new ::solarmodule::SolarStatus(*from.solarstatus_);
-  } else {
-    solarstatus_ = nullptr;
+    _this->_impl_.solarstatus_ = new ::solarmodule::SolarStatus(*from._impl_.solarstatus_);
   }
   // @@protoc_insertion_point(copy_constructor:solarmodule.SolarStatusProfile)
 }
 
-void SolarStatusProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&statusmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&solarstatus_) -
-    reinterpret_cast<char*>(&statusmessageinfo_)) + sizeof(solarstatus_));
+inline void SolarStatusProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusmessageinfo_){nullptr}
+    , decltype(_impl_.solarinverter_){nullptr}
+    , decltype(_impl_.solarstatus_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SolarStatusProfile::~SolarStatusProfile() {
   // @@protoc_insertion_point(destructor:solarmodule.SolarStatusProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void SolarStatusProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete statusmessageinfo_;
-  if (this != internal_default_instance()) delete solarinverter_;
-  if (this != internal_default_instance()) delete solarstatus_;
+inline void SolarStatusProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.statusmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.solarinverter_;
+  if (this != internal_default_instance()) delete _impl_.solarstatus_;
 }
 
-void SolarStatusProfile::ArenaDtor(void* object) {
-  SolarStatusProfile* _this = reinterpret_cast< SolarStatusProfile* >(object);
-  (void)_this;
-}
-void SolarStatusProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SolarStatusProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void SolarStatusProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:solarmodule.SolarStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
-    delete statusmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusmessageinfo_ != nullptr) {
+    delete _impl_.statusmessageinfo_;
   }
-  statusmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && solarinverter_ != nullptr) {
-    delete solarinverter_;
+  _impl_.statusmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solarinverter_ != nullptr) {
+    delete _impl_.solarinverter_;
   }
-  solarinverter_ = nullptr;
-  if (GetArena() == nullptr && solarstatus_ != nullptr) {
-    delete solarstatus_;
+  _impl_.solarinverter_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.solarstatus_ != nullptr) {
+    delete _impl_.solarstatus_;
   }
-  solarstatus_ = nullptr;
+  _impl_.solarstatus_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SolarStatusProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SolarStatusProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_statusmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .solarmodule.SolarInverter solarInverter = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_solarinverter(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .solarmodule.SolarStatus solarStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_solarstatus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SolarStatusProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* SolarStatusProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:solarmodule.SolarStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_statusmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::statusmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::statusmessageinfo(this),
+        _Internal::statusmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .solarmodule.SolarInverter solarInverter = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarinverter()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_solarinverter()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::solarinverter(this), target, stream);
+      InternalWriteMessage(2, _Internal::solarinverter(this),
+        _Internal::solarinverter(this).GetCachedSize(), target, stream);
   }
 
   // .solarmodule.SolarStatus solarStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarstatus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_solarstatus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::solarstatus(this), target, stream);
+      InternalWriteMessage(3, _Internal::solarstatus(this),
+        _Internal::solarstatus(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:solarmodule.SolarStatusProfile)
   return target;
 }
 
-size_t SolarStatusProfile::ByteSizeLong() const {
+::size_t SolarStatusProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:solarmodule.SolarStatusProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusmessageinfo()) {
+  if (this->_internal_has_statusmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *statusmessageinfo_);
+        *_impl_.statusmessageinfo_);
   }
 
   // .solarmodule.SolarInverter solarInverter = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarinverter()) {
+  if (this->_internal_has_solarinverter()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *solarinverter_);
+        *_impl_.solarinverter_);
   }
 
   // .solarmodule.SolarStatus solarStatus = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_solarstatus()) {
+  if (this->_internal_has_solarstatus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *solarstatus_);
+        *_impl_.solarstatus_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SolarStatusProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:solarmodule.SolarStatusProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SolarStatusProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SolarStatusProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:solarmodule.SolarStatusProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:solarmodule.SolarStatusProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SolarStatusProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SolarStatusProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SolarStatusProfile::GetClassData() const { return &_class_data_; }
 
-void SolarStatusProfile::MergeFrom(const SolarStatusProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarStatusProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void SolarStatusProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SolarStatusProfile*>(&to_msg);
+  auto& from = static_cast<const SolarStatusProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:solarmodule.SolarStatusProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_statusmessageinfo()) {
-    _internal_mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(from._internal_statusmessageinfo());
+  if (from._internal_has_statusmessageinfo()) {
+    _this->_internal_mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(
+        from._internal_statusmessageinfo());
   }
-  if (from.has_solarinverter()) {
-    _internal_mutable_solarinverter()->::solarmodule::SolarInverter::MergeFrom(from._internal_solarinverter());
+  if (from._internal_has_solarinverter()) {
+    _this->_internal_mutable_solarinverter()->::solarmodule::SolarInverter::MergeFrom(
+        from._internal_solarinverter());
   }
-  if (from.has_solarstatus()) {
-    _internal_mutable_solarstatus()->::solarmodule::SolarStatus::MergeFrom(from._internal_solarstatus());
+  if (from._internal_has_solarstatus()) {
+    _this->_internal_mutable_solarstatus()->::solarmodule::SolarStatus::MergeFrom(
+        from._internal_solarstatus());
   }
-}
-
-void SolarStatusProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:solarmodule.SolarStatusProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SolarStatusProfile::CopyFrom(const SolarStatusProfile& from) {
@@ -5967,75 +9883,131 @@ bool SolarStatusProfile::IsInitialized() const {
 
 void SolarStatusProfile::InternalSwap(SolarStatusProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SolarStatusProfile, solarstatus_)
-      + sizeof(SolarStatusProfile::solarstatus_)
-      - PROTOBUF_FIELD_OFFSET(SolarStatusProfile, statusmessageinfo_)>(
-          reinterpret_cast<char*>(&statusmessageinfo_),
-          reinterpret_cast<char*>(&other->statusmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(SolarStatusProfile, _impl_.solarstatus_)
+      + sizeof(SolarStatusProfile::_impl_.solarstatus_)
+      - PROTOBUF_FIELD_OFFSET(SolarStatusProfile, _impl_.statusmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.statusmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.statusmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SolarStatusProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_solarmodule_2fsolarmodule_2eproto_getter, &descriptor_table_solarmodule_2fsolarmodule_2eproto_once,
+      file_level_metadata_solarmodule_2fsolarmodule_2eproto[26]);
 }
-
-
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace solarmodule
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::solarmodule::SolarPoint* Arena::CreateMaybeMessage< ::solarmodule::SolarPoint >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::solarmodule::SolarPoint >(arena);
-}
-template<> PROTOBUF_NOINLINE ::solarmodule::SolarCSG* Arena::CreateMaybeMessage< ::solarmodule::SolarCSG >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::solarmodule::SolarCSG >(arena);
-}
-template<> PROTOBUF_NOINLINE ::solarmodule::SolarControlScheduleFSCH* Arena::CreateMaybeMessage< ::solarmodule::SolarControlScheduleFSCH >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::solarmodule::SolarControlScheduleFSCH >(arena);
-}
-template<> PROTOBUF_NOINLINE ::solarmodule::SolarControlFSCC* Arena::CreateMaybeMessage< ::solarmodule::SolarControlFSCC >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::solarmodule::SolarControlFSCC >(arena);
-}
-template<> PROTOBUF_NOINLINE ::solarmodule::SolarControl* Arena::CreateMaybeMessage< ::solarmodule::SolarControl >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::solarmodule::SolarControl >(arena);
-}
-template<> PROTOBUF_NOINLINE ::solarmodule::SolarInverter* Arena::CreateMaybeMessage< ::solarmodule::SolarInverter >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarInverter*
+Arena::CreateMaybeMessage< ::solarmodule::SolarInverter >(Arena* arena) {
   return Arena::CreateMessageInternal< ::solarmodule::SolarInverter >(arena);
 }
-template<> PROTOBUF_NOINLINE ::solarmodule::SolarControlProfile* Arena::CreateMaybeMessage< ::solarmodule::SolarControlProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarCapabilityConfiguration*
+Arena::CreateMaybeMessage< ::solarmodule::SolarCapabilityConfiguration >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::solarmodule::SolarCapabilityConfiguration >(arena);
+}
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarCapabilityOverride*
+Arena::CreateMaybeMessage< ::solarmodule::SolarCapabilityOverride >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::solarmodule::SolarCapabilityOverride >(arena);
+}
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarCapabilityOverrideProfile*
+Arena::CreateMaybeMessage< ::solarmodule::SolarCapabilityOverrideProfile >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::solarmodule::SolarCapabilityOverrideProfile >(arena);
+}
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarCapabilityRatings*
+Arena::CreateMaybeMessage< ::solarmodule::SolarCapabilityRatings >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::solarmodule::SolarCapabilityRatings >(arena);
+}
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarCapability*
+Arena::CreateMaybeMessage< ::solarmodule::SolarCapability >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::solarmodule::SolarCapability >(arena);
+}
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarCapabilityProfile*
+Arena::CreateMaybeMessage< ::solarmodule::SolarCapabilityProfile >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::solarmodule::SolarCapabilityProfile >(arena);
+}
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarPoint*
+Arena::CreateMaybeMessage< ::solarmodule::SolarPoint >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::solarmodule::SolarPoint >(arena);
+}
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarCurvePoint*
+Arena::CreateMaybeMessage< ::solarmodule::SolarCurvePoint >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::solarmodule::SolarCurvePoint >(arena);
+}
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarCSG*
+Arena::CreateMaybeMessage< ::solarmodule::SolarCSG >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::solarmodule::SolarCSG >(arena);
+}
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarControlScheduleFSCH*
+Arena::CreateMaybeMessage< ::solarmodule::SolarControlScheduleFSCH >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::solarmodule::SolarControlScheduleFSCH >(arena);
+}
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarControlFSCC*
+Arena::CreateMaybeMessage< ::solarmodule::SolarControlFSCC >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::solarmodule::SolarControlFSCC >(arena);
+}
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarControl*
+Arena::CreateMaybeMessage< ::solarmodule::SolarControl >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::solarmodule::SolarControl >(arena);
+}
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarControlProfile*
+Arena::CreateMaybeMessage< ::solarmodule::SolarControlProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::solarmodule::SolarControlProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::solarmodule::SolarPointStatus* Arena::CreateMaybeMessage< ::solarmodule::SolarPointStatus >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarDiscreteControlPV*
+Arena::CreateMaybeMessage< ::solarmodule::SolarDiscreteControlPV >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::solarmodule::SolarDiscreteControlPV >(arena);
+}
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarDiscreteControl*
+Arena::CreateMaybeMessage< ::solarmodule::SolarDiscreteControl >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::solarmodule::SolarDiscreteControl >(arena);
+}
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarDiscreteControlProfile*
+Arena::CreateMaybeMessage< ::solarmodule::SolarDiscreteControlProfile >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::solarmodule::SolarDiscreteControlProfile >(arena);
+}
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarPointStatus*
+Arena::CreateMaybeMessage< ::solarmodule::SolarPointStatus >(Arena* arena) {
   return Arena::CreateMessageInternal< ::solarmodule::SolarPointStatus >(arena);
 }
-template<> PROTOBUF_NOINLINE ::solarmodule::SolarEventAndStatusZGEN* Arena::CreateMaybeMessage< ::solarmodule::SolarEventAndStatusZGEN >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarEventAndStatusZGEN*
+Arena::CreateMaybeMessage< ::solarmodule::SolarEventAndStatusZGEN >(Arena* arena) {
   return Arena::CreateMessageInternal< ::solarmodule::SolarEventAndStatusZGEN >(arena);
 }
-template<> PROTOBUF_NOINLINE ::solarmodule::SolarEventZGEN* Arena::CreateMaybeMessage< ::solarmodule::SolarEventZGEN >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarEventZGEN*
+Arena::CreateMaybeMessage< ::solarmodule::SolarEventZGEN >(Arena* arena) {
   return Arena::CreateMessageInternal< ::solarmodule::SolarEventZGEN >(arena);
 }
-template<> PROTOBUF_NOINLINE ::solarmodule::SolarEvent* Arena::CreateMaybeMessage< ::solarmodule::SolarEvent >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarEvent*
+Arena::CreateMaybeMessage< ::solarmodule::SolarEvent >(Arena* arena) {
   return Arena::CreateMessageInternal< ::solarmodule::SolarEvent >(arena);
 }
-template<> PROTOBUF_NOINLINE ::solarmodule::SolarEventProfile* Arena::CreateMaybeMessage< ::solarmodule::SolarEventProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarEventProfile*
+Arena::CreateMaybeMessage< ::solarmodule::SolarEventProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::solarmodule::SolarEventProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::solarmodule::SolarReading* Arena::CreateMaybeMessage< ::solarmodule::SolarReading >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarReading*
+Arena::CreateMaybeMessage< ::solarmodule::SolarReading >(Arena* arena) {
   return Arena::CreateMessageInternal< ::solarmodule::SolarReading >(arena);
 }
-template<> PROTOBUF_NOINLINE ::solarmodule::SolarReadingProfile* Arena::CreateMaybeMessage< ::solarmodule::SolarReadingProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarReadingProfile*
+Arena::CreateMaybeMessage< ::solarmodule::SolarReadingProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::solarmodule::SolarReadingProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::solarmodule::SolarStatusZGEN* Arena::CreateMaybeMessage< ::solarmodule::SolarStatusZGEN >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarStatusZGEN*
+Arena::CreateMaybeMessage< ::solarmodule::SolarStatusZGEN >(Arena* arena) {
   return Arena::CreateMessageInternal< ::solarmodule::SolarStatusZGEN >(arena);
 }
-template<> PROTOBUF_NOINLINE ::solarmodule::SolarStatus* Arena::CreateMaybeMessage< ::solarmodule::SolarStatus >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarStatus*
+Arena::CreateMaybeMessage< ::solarmodule::SolarStatus >(Arena* arena) {
   return Arena::CreateMessageInternal< ::solarmodule::SolarStatus >(arena);
 }
-template<> PROTOBUF_NOINLINE ::solarmodule::SolarStatusProfile* Arena::CreateMaybeMessage< ::solarmodule::SolarStatusProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::solarmodule::SolarStatusProfile*
+Arena::CreateMaybeMessage< ::solarmodule::SolarStatusProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::solarmodule::SolarStatusProfile >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
-
 // @@protoc_insertion_point(global_scope)
-#include <google/protobuf/port_undef.inc>
+#include "google/protobuf/port_undef.inc"

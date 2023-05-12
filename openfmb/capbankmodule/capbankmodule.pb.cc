@@ -4,617 +4,733 @@
 #include "capbankmodule/capbankmodule.pb.h"
 
 #include <algorithm>
-
-#include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include "google/protobuf/io/coded_stream.h"
+#include "google/protobuf/extension_set.h"
+#include "google/protobuf/wire_format_lite.h"
+#include "google/protobuf/descriptor.h"
+#include "google/protobuf/generated_message_reflection.h"
+#include "google/protobuf/reflection_ops.h"
+#include "google/protobuf/wire_format.h"
 // @@protoc_insertion_point(includes)
-#include <google/protobuf/port_def.inc>
 
+// Must be included last.
+#include "google/protobuf/port_def.inc"
 PROTOBUF_PRAGMA_INIT_SEG
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = ::PROTOBUF_NAMESPACE_ID::internal;
 namespace capbankmodule {
-constexpr CapBankSystem::CapBankSystem(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : conductingequipment_(nullptr){}
+PROTOBUF_CONSTEXPR CapBankSystem::CapBankSystem(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.conductingequipment_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CapBankSystemDefaultTypeInternal {
-  constexpr CapBankSystemDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CapBankSystemDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CapBankSystemDefaultTypeInternal() {}
   union {
     CapBankSystem _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapBankSystemDefaultTypeInternal _CapBankSystem_default_instance_;
-constexpr CapBankControlYPSH::CapBankControlYPSH(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : amplmt_(nullptr)
-  , ampthdhi_(nullptr)
-  , ampthdlo_(nullptr)
-  , ctlmodeauto_(nullptr)
-  , ctlmodeovrrd_(nullptr)
-  , ctlmoderem_(nullptr)
-  , dirmode_(nullptr)
-  , pos_(nullptr)
-  , templmt_(nullptr)
-  , tempthdhi_(nullptr)
-  , tempthdlo_(nullptr)
-  , varlmt_(nullptr)
-  , varthdhi_(nullptr)
-  , varthdlo_(nullptr)
-  , vollmt_(nullptr)
-  , volthdhi_(nullptr)
-  , volthdlo_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CapBankSystemDefaultTypeInternal _CapBankSystem_default_instance_;
+PROTOBUF_CONSTEXPR CapBankControlYPSH::CapBankControlYPSH(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.amplmt_)*/nullptr
+  , /*decltype(_impl_.ampthdhi_)*/nullptr
+  , /*decltype(_impl_.ampthdlo_)*/nullptr
+  , /*decltype(_impl_.ctlmodeauto_)*/nullptr
+  , /*decltype(_impl_.ctlmodeovrrd_)*/nullptr
+  , /*decltype(_impl_.ctlmoderem_)*/nullptr
+  , /*decltype(_impl_.dirmode_)*/nullptr
+  , /*decltype(_impl_.pos_)*/nullptr
+  , /*decltype(_impl_.templmt_)*/nullptr
+  , /*decltype(_impl_.tempthdhi_)*/nullptr
+  , /*decltype(_impl_.tempthdlo_)*/nullptr
+  , /*decltype(_impl_.varlmt_)*/nullptr
+  , /*decltype(_impl_.varthdhi_)*/nullptr
+  , /*decltype(_impl_.varthdlo_)*/nullptr
+  , /*decltype(_impl_.vollmt_)*/nullptr
+  , /*decltype(_impl_.volthdhi_)*/nullptr
+  , /*decltype(_impl_.volthdlo_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CapBankControlYPSHDefaultTypeInternal {
-  constexpr CapBankControlYPSHDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CapBankControlYPSHDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CapBankControlYPSHDefaultTypeInternal() {}
   union {
     CapBankControlYPSH _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapBankControlYPSHDefaultTypeInternal _CapBankControlYPSH_default_instance_;
-constexpr CapBankPoint::CapBankPoint(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : control_(nullptr)
-  , starttime_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CapBankControlYPSHDefaultTypeInternal _CapBankControlYPSH_default_instance_;
+PROTOBUF_CONSTEXPR CapBankPoint::CapBankPoint(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.control_)*/nullptr
+  , /*decltype(_impl_.starttime_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CapBankPointDefaultTypeInternal {
-  constexpr CapBankPointDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CapBankPointDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CapBankPointDefaultTypeInternal() {}
   union {
     CapBankPoint _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapBankPointDefaultTypeInternal _CapBankPoint_default_instance_;
-constexpr CapBankCSG::CapBankCSG(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : crvpts_(){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CapBankPointDefaultTypeInternal _CapBankPoint_default_instance_;
+PROTOBUF_CONSTEXPR CapBankCSG::CapBankCSG(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.crvpts_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CapBankCSGDefaultTypeInternal {
-  constexpr CapBankCSGDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CapBankCSGDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CapBankCSGDefaultTypeInternal() {}
   union {
     CapBankCSG _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapBankCSGDefaultTypeInternal _CapBankCSG_default_instance_;
-constexpr CapBankControlScheduleFSCH::CapBankControlScheduleFSCH(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : valcsg_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CapBankCSGDefaultTypeInternal _CapBankCSG_default_instance_;
+PROTOBUF_CONSTEXPR CapBankControlScheduleFSCH::CapBankControlScheduleFSCH(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.valcsg_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CapBankControlScheduleFSCHDefaultTypeInternal {
-  constexpr CapBankControlScheduleFSCHDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CapBankControlScheduleFSCHDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CapBankControlScheduleFSCHDefaultTypeInternal() {}
   union {
     CapBankControlScheduleFSCH _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapBankControlScheduleFSCHDefaultTypeInternal _CapBankControlScheduleFSCH_default_instance_;
-constexpr CapBankControlFSCC::CapBankControlFSCC(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlfscc_(nullptr)
-  , capbankcontrolschedulefsch_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CapBankControlScheduleFSCHDefaultTypeInternal _CapBankControlScheduleFSCH_default_instance_;
+PROTOBUF_CONSTEXPR CapBankControlFSCC::CapBankControlFSCC(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlfscc_)*/nullptr
+  , /*decltype(_impl_.capbankcontrolschedulefsch_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CapBankControlFSCCDefaultTypeInternal {
-  constexpr CapBankControlFSCCDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CapBankControlFSCCDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CapBankControlFSCCDefaultTypeInternal() {}
   union {
     CapBankControlFSCC _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapBankControlFSCCDefaultTypeInternal _CapBankControlFSCC_default_instance_;
-constexpr CapBankControl::CapBankControl(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlvalue_(nullptr)
-  , check_(nullptr)
-  , capbankcontrolfscc_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CapBankControlFSCCDefaultTypeInternal _CapBankControlFSCC_default_instance_;
+PROTOBUF_CONSTEXPR CapBankControl::CapBankControl(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlvalue_)*/nullptr
+  , /*decltype(_impl_.check_)*/nullptr
+  , /*decltype(_impl_.capbankcontrolfscc_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CapBankControlDefaultTypeInternal {
-  constexpr CapBankControlDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CapBankControlDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CapBankControlDefaultTypeInternal() {}
   union {
     CapBankControl _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapBankControlDefaultTypeInternal _CapBankControl_default_instance_;
-constexpr CapBankControlProfile::CapBankControlProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlmessageinfo_(nullptr)
-  , capbankcontrol_(nullptr)
-  , capbanksystem_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CapBankControlDefaultTypeInternal _CapBankControl_default_instance_;
+PROTOBUF_CONSTEXPR CapBankControlProfile::CapBankControlProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlmessageinfo_)*/nullptr
+  , /*decltype(_impl_.capbankcontrol_)*/nullptr
+  , /*decltype(_impl_.capbanksystem_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CapBankControlProfileDefaultTypeInternal {
-  constexpr CapBankControlProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CapBankControlProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CapBankControlProfileDefaultTypeInternal() {}
   union {
     CapBankControlProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapBankControlProfileDefaultTypeInternal _CapBankControlProfile_default_instance_;
-constexpr CapBankDiscreteControlYPSH::CapBankDiscreteControlYPSH(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnodeforcontrol_(nullptr)
-  , control_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CapBankControlProfileDefaultTypeInternal _CapBankControlProfile_default_instance_;
+PROTOBUF_CONSTEXPR CapBankDiscreteControlYPSH::CapBankDiscreteControlYPSH(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.logicalnodeforcontrol_)*/nullptr
+  , /*decltype(_impl_.control_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CapBankDiscreteControlYPSHDefaultTypeInternal {
-  constexpr CapBankDiscreteControlYPSHDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CapBankDiscreteControlYPSHDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CapBankDiscreteControlYPSHDefaultTypeInternal() {}
   union {
     CapBankDiscreteControlYPSH _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapBankDiscreteControlYPSHDefaultTypeInternal _CapBankDiscreteControlYPSH_default_instance_;
-constexpr CapBankDiscreteControl::CapBankDiscreteControl(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlvalue_(nullptr)
-  , check_(nullptr)
-  , capbankdiscretecontrolypsh_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CapBankDiscreteControlYPSHDefaultTypeInternal _CapBankDiscreteControlYPSH_default_instance_;
+PROTOBUF_CONSTEXPR CapBankDiscreteControl::CapBankDiscreteControl(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlvalue_)*/nullptr
+  , /*decltype(_impl_.check_)*/nullptr
+  , /*decltype(_impl_.capbankdiscretecontrolypsh_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CapBankDiscreteControlDefaultTypeInternal {
-  constexpr CapBankDiscreteControlDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CapBankDiscreteControlDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CapBankDiscreteControlDefaultTypeInternal() {}
   union {
     CapBankDiscreteControl _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapBankDiscreteControlDefaultTypeInternal _CapBankDiscreteControl_default_instance_;
-constexpr CapBankDiscreteControlProfile::CapBankDiscreteControlProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : controlmessageinfo_(nullptr)
-  , capbankcontrol_(nullptr)
-  , capbanksystem_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CapBankDiscreteControlDefaultTypeInternal _CapBankDiscreteControl_default_instance_;
+PROTOBUF_CONSTEXPR CapBankDiscreteControlProfile::CapBankDiscreteControlProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.controlmessageinfo_)*/nullptr
+  , /*decltype(_impl_.capbankcontrol_)*/nullptr
+  , /*decltype(_impl_.capbanksystem_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CapBankDiscreteControlProfileDefaultTypeInternal {
-  constexpr CapBankDiscreteControlProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CapBankDiscreteControlProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CapBankDiscreteControlProfileDefaultTypeInternal() {}
   union {
     CapBankDiscreteControlProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapBankDiscreteControlProfileDefaultTypeInternal _CapBankDiscreteControlProfile_default_instance_;
-constexpr CapBankEventAndStatusYPSH::CapBankEventAndStatusYPSH(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : logicalnodeforeventandstatus_(nullptr)
-  , amplmt_(nullptr)
-  , ctlmode_(nullptr)
-  , dirrev_(nullptr)
-  , dynamictest_(nullptr)
-  , pos_(nullptr)
-  , templmt_(nullptr)
-  , varlmt_(nullptr)
-  , vollmt_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CapBankDiscreteControlProfileDefaultTypeInternal _CapBankDiscreteControlProfile_default_instance_;
+PROTOBUF_CONSTEXPR CapBankEventAndStatusYPSH::CapBankEventAndStatusYPSH(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.logicalnodeforeventandstatus_)*/nullptr
+  , /*decltype(_impl_.amplmt_)*/nullptr
+  , /*decltype(_impl_.ctlmode_)*/nullptr
+  , /*decltype(_impl_.dirrev_)*/nullptr
+  , /*decltype(_impl_.dynamictest_)*/nullptr
+  , /*decltype(_impl_.pos_)*/nullptr
+  , /*decltype(_impl_.templmt_)*/nullptr
+  , /*decltype(_impl_.varlmt_)*/nullptr
+  , /*decltype(_impl_.vollmt_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CapBankEventAndStatusYPSHDefaultTypeInternal {
-  constexpr CapBankEventAndStatusYPSHDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CapBankEventAndStatusYPSHDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CapBankEventAndStatusYPSHDefaultTypeInternal() {}
   union {
     CapBankEventAndStatusYPSH _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapBankEventAndStatusYPSHDefaultTypeInternal _CapBankEventAndStatusYPSH_default_instance_;
-constexpr CapBankEvent::CapBankEvent(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : eventvalue_(nullptr)
-  , capbankeventandstatusypsh_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CapBankEventAndStatusYPSHDefaultTypeInternal _CapBankEventAndStatusYPSH_default_instance_;
+PROTOBUF_CONSTEXPR CapBankEvent::CapBankEvent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.eventvalue_)*/nullptr
+  , /*decltype(_impl_.capbankeventandstatusypsh_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CapBankEventDefaultTypeInternal {
-  constexpr CapBankEventDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CapBankEventDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CapBankEventDefaultTypeInternal() {}
   union {
     CapBankEvent _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapBankEventDefaultTypeInternal _CapBankEvent_default_instance_;
-constexpr CapBankEventProfile::CapBankEventProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : eventmessageinfo_(nullptr)
-  , capbankevent_(nullptr)
-  , capbanksystem_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CapBankEventDefaultTypeInternal _CapBankEvent_default_instance_;
+PROTOBUF_CONSTEXPR CapBankEventProfile::CapBankEventProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.eventmessageinfo_)*/nullptr
+  , /*decltype(_impl_.capbankevent_)*/nullptr
+  , /*decltype(_impl_.capbanksystem_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CapBankEventProfileDefaultTypeInternal {
-  constexpr CapBankEventProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CapBankEventProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CapBankEventProfileDefaultTypeInternal() {}
   union {
     CapBankEventProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapBankEventProfileDefaultTypeInternal _CapBankEventProfile_default_instance_;
-constexpr CapBankReading::CapBankReading(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : conductingequipmentterminalreading_(nullptr)
-  , phasemmtn_(nullptr)
-  , readingmmtr_(nullptr)
-  , readingmmxu_(nullptr)
-  , secondaryreadingmmxu_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CapBankEventProfileDefaultTypeInternal _CapBankEventProfile_default_instance_;
+PROTOBUF_CONSTEXPR CapBankReading::CapBankReading(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.conductingequipmentterminalreading_)*/nullptr
+  , /*decltype(_impl_.phasemmtn_)*/nullptr
+  , /*decltype(_impl_.readingmmtr_)*/nullptr
+  , /*decltype(_impl_.readingmmxu_)*/nullptr
+  , /*decltype(_impl_.secondaryreadingmmxu_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CapBankReadingDefaultTypeInternal {
-  constexpr CapBankReadingDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CapBankReadingDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CapBankReadingDefaultTypeInternal() {}
   union {
     CapBankReading _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapBankReadingDefaultTypeInternal _CapBankReading_default_instance_;
-constexpr CapBankReadingProfile::CapBankReadingProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : readingmessageinfo_(nullptr)
-  , capbankreading_(nullptr)
-  , capbanksystem_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CapBankReadingDefaultTypeInternal _CapBankReading_default_instance_;
+PROTOBUF_CONSTEXPR CapBankReadingProfile::CapBankReadingProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.readingmessageinfo_)*/nullptr
+  , /*decltype(_impl_.capbankreading_)*/nullptr
+  , /*decltype(_impl_.capbanksystem_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CapBankReadingProfileDefaultTypeInternal {
-  constexpr CapBankReadingProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CapBankReadingProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CapBankReadingProfileDefaultTypeInternal() {}
   union {
     CapBankReadingProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapBankReadingProfileDefaultTypeInternal _CapBankReadingProfile_default_instance_;
-constexpr CapBankStatus::CapBankStatus(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : statusvalue_(nullptr)
-  , capbankeventandstatusypsh_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CapBankReadingProfileDefaultTypeInternal _CapBankReadingProfile_default_instance_;
+PROTOBUF_CONSTEXPR CapBankStatus::CapBankStatus(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.statusvalue_)*/nullptr
+  , /*decltype(_impl_.capbankeventandstatusypsh_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CapBankStatusDefaultTypeInternal {
-  constexpr CapBankStatusDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CapBankStatusDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CapBankStatusDefaultTypeInternal() {}
   union {
     CapBankStatus _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapBankStatusDefaultTypeInternal _CapBankStatus_default_instance_;
-constexpr CapBankStatusProfile::CapBankStatusProfile(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : statusmessageinfo_(nullptr)
-  , capbankstatus_(nullptr)
-  , capbanksystem_(nullptr){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CapBankStatusDefaultTypeInternal _CapBankStatus_default_instance_;
+PROTOBUF_CONSTEXPR CapBankStatusProfile::CapBankStatusProfile(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.statusmessageinfo_)*/nullptr
+  , /*decltype(_impl_.capbankstatus_)*/nullptr
+  , /*decltype(_impl_.capbanksystem_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CapBankStatusProfileDefaultTypeInternal {
-  constexpr CapBankStatusProfileDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR CapBankStatusProfileDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CapBankStatusProfileDefaultTypeInternal() {}
   union {
     CapBankStatusProfile _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapBankStatusProfileDefaultTypeInternal _CapBankStatusProfile_default_instance_;
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CapBankStatusProfileDefaultTypeInternal _CapBankStatusProfile_default_instance_;
 }  // namespace capbankmodule
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[18];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_capbankmodule_2fcapbankmodule_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_capbankmodule_2fcapbankmodule_2eproto = nullptr;
+static ::_pb::Metadata file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[18];
+static constexpr const ::_pb::EnumDescriptor**
+    file_level_enum_descriptors_capbankmodule_2fcapbankmodule_2eproto = nullptr;
+static constexpr const ::_pb::ServiceDescriptor**
+    file_level_service_descriptors_capbankmodule_2fcapbankmodule_2eproto = nullptr;
+const ::uint32_t TableStruct_capbankmodule_2fcapbankmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(
+    protodesc_cold) = {
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankSystem, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankSystem, _impl_.conductingequipment_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, _impl_.amplmt_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, _impl_.ampthdhi_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, _impl_.ampthdlo_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, _impl_.ctlmodeauto_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, _impl_.ctlmodeovrrd_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, _impl_.ctlmoderem_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, _impl_.dirmode_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, _impl_.pos_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, _impl_.templmt_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, _impl_.tempthdhi_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, _impl_.tempthdlo_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, _impl_.varlmt_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, _impl_.varthdhi_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, _impl_.varthdlo_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, _impl_.vollmt_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, _impl_.volthdhi_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, _impl_.volthdlo_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankPoint, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankPoint, _impl_.control_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankPoint, _impl_.starttime_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankCSG, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankCSG, _impl_.crvpts_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlScheduleFSCH, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlScheduleFSCH, _impl_.valcsg_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlFSCC, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlFSCC, _impl_.controlfscc_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlFSCC, _impl_.capbankcontrolschedulefsch_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControl, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControl, _impl_.controlvalue_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControl, _impl_.check_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControl, _impl_.capbankcontrolfscc_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlProfile, _impl_.controlmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlProfile, _impl_.capbankcontrol_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlProfile, _impl_.capbanksystem_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControlYPSH, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControlYPSH, _impl_.logicalnodeforcontrol_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControlYPSH, _impl_.control_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControl, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControl, _impl_.controlvalue_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControl, _impl_.check_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControl, _impl_.capbankdiscretecontrolypsh_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControlProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControlProfile, _impl_.controlmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControlProfile, _impl_.capbankcontrol_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControlProfile, _impl_.capbanksystem_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, _impl_.logicalnodeforeventandstatus_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, _impl_.amplmt_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, _impl_.ctlmode_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, _impl_.dirrev_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, _impl_.dynamictest_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, _impl_.pos_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, _impl_.templmt_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, _impl_.varlmt_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, _impl_.vollmt_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEvent, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEvent, _impl_.eventvalue_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEvent, _impl_.capbankeventandstatusypsh_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventProfile, _impl_.eventmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventProfile, _impl_.capbankevent_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventProfile, _impl_.capbanksystem_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReading, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReading, _impl_.conductingequipmentterminalreading_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReading, _impl_.phasemmtn_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReading, _impl_.readingmmtr_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReading, _impl_.readingmmxu_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReading, _impl_.secondaryreadingmmxu_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReadingProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReadingProfile, _impl_.readingmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReadingProfile, _impl_.capbankreading_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReadingProfile, _impl_.capbanksystem_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankStatus, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankStatus, _impl_.statusvalue_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankStatus, _impl_.capbankeventandstatusypsh_),
+    ~0u,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankStatusProfile, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    ~0u,  // no _weak_field_map_
+    ~0u,  // no _inlined_string_donated_
+    ~0u,  // no _split_
+    ~0u,  // no sizeof(Split)
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankStatusProfile, _impl_.statusmessageinfo_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankStatusProfile, _impl_.capbankstatus_),
+    PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankStatusProfile, _impl_.capbanksystem_),
+};
 
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_capbankmodule_2fcapbankmodule_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankSystem, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankSystem, conductingequipment_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, amplmt_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, ampthdhi_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, ampthdlo_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, ctlmodeauto_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, ctlmodeovrrd_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, ctlmoderem_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, dirmode_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, pos_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, templmt_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, tempthdhi_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, tempthdlo_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, varlmt_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, varthdhi_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, varthdlo_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, vollmt_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, volthdhi_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlYPSH, volthdlo_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankPoint, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankPoint, control_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankPoint, starttime_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankCSG, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankCSG, crvpts_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlScheduleFSCH, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlScheduleFSCH, valcsg_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlFSCC, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlFSCC, controlfscc_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlFSCC, capbankcontrolschedulefsch_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControl, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControl, controlvalue_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControl, check_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControl, capbankcontrolfscc_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlProfile, capbankcontrol_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankControlProfile, capbanksystem_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControlYPSH, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControlYPSH, logicalnodeforcontrol_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControlYPSH, control_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControl, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControl, controlvalue_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControl, check_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControl, capbankdiscretecontrolypsh_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControlProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControlProfile, controlmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControlProfile, capbankcontrol_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankDiscreteControlProfile, capbanksystem_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, logicalnodeforeventandstatus_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, amplmt_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, ctlmode_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, dirrev_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, dynamictest_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, pos_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, templmt_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, varlmt_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventAndStatusYPSH, vollmt_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEvent, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEvent, eventvalue_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEvent, capbankeventandstatusypsh_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventProfile, eventmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventProfile, capbankevent_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankEventProfile, capbanksystem_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReading, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReading, conductingequipmentterminalreading_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReading, phasemmtn_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReading, readingmmtr_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReading, readingmmxu_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReading, secondaryreadingmmxu_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReadingProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReadingProfile, readingmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReadingProfile, capbankreading_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankReadingProfile, capbanksystem_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankStatus, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankStatus, statusvalue_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankStatus, capbankeventandstatusypsh_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankStatusProfile, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankStatusProfile, statusmessageinfo_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankStatusProfile, capbankstatus_),
-  PROTOBUF_FIELD_OFFSET(::capbankmodule::CapBankStatusProfile, capbanksystem_),
-};
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::capbankmodule::CapBankSystem)},
-  { 6, -1, sizeof(::capbankmodule::CapBankControlYPSH)},
-  { 28, -1, sizeof(::capbankmodule::CapBankPoint)},
-  { 35, -1, sizeof(::capbankmodule::CapBankCSG)},
-  { 41, -1, sizeof(::capbankmodule::CapBankControlScheduleFSCH)},
-  { 47, -1, sizeof(::capbankmodule::CapBankControlFSCC)},
-  { 54, -1, sizeof(::capbankmodule::CapBankControl)},
-  { 62, -1, sizeof(::capbankmodule::CapBankControlProfile)},
-  { 70, -1, sizeof(::capbankmodule::CapBankDiscreteControlYPSH)},
-  { 77, -1, sizeof(::capbankmodule::CapBankDiscreteControl)},
-  { 85, -1, sizeof(::capbankmodule::CapBankDiscreteControlProfile)},
-  { 93, -1, sizeof(::capbankmodule::CapBankEventAndStatusYPSH)},
-  { 107, -1, sizeof(::capbankmodule::CapBankEvent)},
-  { 114, -1, sizeof(::capbankmodule::CapBankEventProfile)},
-  { 122, -1, sizeof(::capbankmodule::CapBankReading)},
-  { 132, -1, sizeof(::capbankmodule::CapBankReadingProfile)},
-  { 140, -1, sizeof(::capbankmodule::CapBankStatus)},
-  { 147, -1, sizeof(::capbankmodule::CapBankStatusProfile)},
+static const ::_pbi::MigrationSchema
+    schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+        { 0, -1, -1, sizeof(::capbankmodule::CapBankSystem)},
+        { 9, -1, -1, sizeof(::capbankmodule::CapBankControlYPSH)},
+        { 34, -1, -1, sizeof(::capbankmodule::CapBankPoint)},
+        { 44, -1, -1, sizeof(::capbankmodule::CapBankCSG)},
+        { 53, -1, -1, sizeof(::capbankmodule::CapBankControlScheduleFSCH)},
+        { 62, -1, -1, sizeof(::capbankmodule::CapBankControlFSCC)},
+        { 72, -1, -1, sizeof(::capbankmodule::CapBankControl)},
+        { 83, -1, -1, sizeof(::capbankmodule::CapBankControlProfile)},
+        { 94, -1, -1, sizeof(::capbankmodule::CapBankDiscreteControlYPSH)},
+        { 104, -1, -1, sizeof(::capbankmodule::CapBankDiscreteControl)},
+        { 115, -1, -1, sizeof(::capbankmodule::CapBankDiscreteControlProfile)},
+        { 126, -1, -1, sizeof(::capbankmodule::CapBankEventAndStatusYPSH)},
+        { 143, -1, -1, sizeof(::capbankmodule::CapBankEvent)},
+        { 153, -1, -1, sizeof(::capbankmodule::CapBankEventProfile)},
+        { 164, -1, -1, sizeof(::capbankmodule::CapBankReading)},
+        { 177, -1, -1, sizeof(::capbankmodule::CapBankReadingProfile)},
+        { 188, -1, -1, sizeof(::capbankmodule::CapBankStatus)},
+        { 198, -1, -1, sizeof(::capbankmodule::CapBankStatusProfile)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::capbankmodule::_CapBankSystem_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::capbankmodule::_CapBankControlYPSH_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::capbankmodule::_CapBankPoint_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::capbankmodule::_CapBankCSG_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::capbankmodule::_CapBankControlScheduleFSCH_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::capbankmodule::_CapBankControlFSCC_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::capbankmodule::_CapBankControl_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::capbankmodule::_CapBankControlProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::capbankmodule::_CapBankDiscreteControlYPSH_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::capbankmodule::_CapBankDiscreteControl_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::capbankmodule::_CapBankDiscreteControlProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::capbankmodule::_CapBankEventAndStatusYPSH_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::capbankmodule::_CapBankEvent_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::capbankmodule::_CapBankEventProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::capbankmodule::_CapBankReading_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::capbankmodule::_CapBankReadingProfile_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::capbankmodule::_CapBankStatus_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::capbankmodule::_CapBankStatusProfile_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+    &::capbankmodule::_CapBankSystem_default_instance_._instance,
+    &::capbankmodule::_CapBankControlYPSH_default_instance_._instance,
+    &::capbankmodule::_CapBankPoint_default_instance_._instance,
+    &::capbankmodule::_CapBankCSG_default_instance_._instance,
+    &::capbankmodule::_CapBankControlScheduleFSCH_default_instance_._instance,
+    &::capbankmodule::_CapBankControlFSCC_default_instance_._instance,
+    &::capbankmodule::_CapBankControl_default_instance_._instance,
+    &::capbankmodule::_CapBankControlProfile_default_instance_._instance,
+    &::capbankmodule::_CapBankDiscreteControlYPSH_default_instance_._instance,
+    &::capbankmodule::_CapBankDiscreteControl_default_instance_._instance,
+    &::capbankmodule::_CapBankDiscreteControlProfile_default_instance_._instance,
+    &::capbankmodule::_CapBankEventAndStatusYPSH_default_instance_._instance,
+    &::capbankmodule::_CapBankEvent_default_instance_._instance,
+    &::capbankmodule::_CapBankEventProfile_default_instance_._instance,
+    &::capbankmodule::_CapBankReading_default_instance_._instance,
+    &::capbankmodule::_CapBankReadingProfile_default_instance_._instance,
+    &::capbankmodule::_CapBankStatus_default_instance_._instance,
+    &::capbankmodule::_CapBankStatusProfile_default_instance_._instance,
+};
+const char descriptor_table_protodef_capbankmodule_2fcapbankmodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+    "\n!capbankmodule/capbankmodule.proto\022\rcap"
+    "bankmodule\032\tuml.proto\032\037commonmodule/comm"
+    "onmodule.proto\"U\n\rCapBankSystem\022D\n\023condu"
+    "ctingEquipment\030\001 \001(\0132!.commonmodule.Cond"
+    "uctingEquipmentB\004\200\265\030\001\"\372\005\n\022CapBankControl"
+    "YPSH\022&\n\006AmpLmt\030\001 \001(\0132\026.commonmodule.Phas"
+    "eSPC\022(\n\010AmpThdHi\030\002 \001(\0132\026.commonmodule.Ph"
+    "aseAPC\022(\n\010AmpThdLo\030\003 \001(\0132\026.commonmodule."
+    "PhaseAPC\022-\n\013CtlModeAuto\030\004 \001(\0132\030.commonmo"
+    "dule.ControlSPC\022.\n\014CtlModeOvrRd\030\005 \001(\0132\030."
+    "commonmodule.ControlSPC\022,\n\nCtlModeRem\030\006 "
+    "\001(\0132\030.commonmodule.ControlSPC\0229\n\007DirMode"
+    "\030\007 \001(\0132(.commonmodule.Optional_Direction"
+    "ModeKind\022#\n\003Pos\030\010 \001(\0132\026.commonmodule.Pha"
+    "seSPC\022)\n\007TempLmt\030\t \001(\0132\030.commonmodule.Co"
+    "ntrolSPC\022+\n\tTempThdHi\030\n \001(\0132\030.commonmodu"
+    "le.ControlAPC\022+\n\tTempThdLo\030\013 \001(\0132\030.commo"
+    "nmodule.ControlAPC\022&\n\006VArLmt\030\014 \001(\0132\026.com"
+    "monmodule.PhaseSPC\022(\n\010VArThdHi\030\r \001(\0132\026.c"
+    "ommonmodule.PhaseAPC\022(\n\010VArThdLo\030\016 \001(\0132\026"
+    ".commonmodule.PhaseAPC\022&\n\006VolLmt\030\017 \001(\0132\026"
+    ".commonmodule.PhaseSPC\022(\n\010VolThdHi\030\020 \001(\013"
+    "2\026.commonmodule.PhaseAPC\022(\n\010VolThdLo\030\021 \001"
+    "(\0132\026.commonmodule.PhaseAPC\"x\n\014CapBankPoi"
+    "nt\0222\n\007control\030\001 \001(\0132!.capbankmodule.CapB"
+    "ankControlYPSH\0224\n\tstartTime\030\002 \001(\0132\027.comm"
+    "onmodule.TimestampB\010\210\265\030\001\220\265\030\001\"C\n\nCapBankC"
+    "SG\0225\n\006crvPts\030\001 \003(\0132\033.capbankmodule.CapBa"
+    "nkPointB\010\210\265\030\001\220\265\030\001\"Q\n\032CapBankControlSched"
+    "uleFSCH\0223\n\006ValCSG\030\001 \001(\0132\031.capbankmodule."
+    "CapBankCSGB\010\210\265\030\001\220\265\030\001\"\231\001\n\022CapBankControlF"
+    "SCC\0224\n\013controlFSCC\030\001 \001(\0132\031.commonmodule."
+    "ControlFSCCB\004\200\265\030\001\022M\n\032capBankControlSched"
+    "uleFSCH\030\002 \001(\0132).capbankmodule.CapBankCon"
+    "trolScheduleFSCH\"\265\001\n\016CapBankControl\0226\n\014c"
+    "ontrolValue\030\001 \001(\0132\032.commonmodule.Control"
+    "ValueB\004\200\265\030\001\022,\n\005check\030\002 \001(\0132\035.commonmodul"
+    "e.CheckConditions\022=\n\022capBankControlFSCC\030"
+    "\003 \001(\0132!.capbankmodule.CapBankControlFSCC"
+    "\"\341\001\n\025CapBankControlProfile\022B\n\022controlMes"
+    "sageInfo\030\001 \001(\0132 .commonmodule.ControlMes"
+    "sageInfoB\004\200\265\030\001\022\?\n\016capBankControl\030\002 \001(\0132\035"
+    ".capbankmodule.CapBankControlB\010\210\265\030\001\220\265\030\001\022"
+    "=\n\rcapBankSystem\030\003 \001(\0132\034.capbankmodule.C"
+    "apBankSystemB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\232\001\n\032CapBank"
+    "DiscreteControlYPSH\022H\n\025logicalNodeForCon"
+    "trol\030\001 \001(\0132#.commonmodule.LogicalNodeFor"
+    "ControlB\004\200\265\030\001\0222\n\007control\030\002 \001(\0132!.capbank"
+    "module.CapBankControlYPSH\"\315\001\n\026CapBankDis"
+    "creteControl\0226\n\014controlValue\030\001 \001(\0132\032.com"
+    "monmodule.ControlValueB\004\200\265\030\001\022,\n\005check\030\002 "
+    "\001(\0132\035.commonmodule.CheckConditions\022M\n\032ca"
+    "pBankDiscreteControlYPSH\030\003 \001(\0132).capbank"
+    "module.CapBankDiscreteControlYPSH\"\361\001\n\035Ca"
+    "pBankDiscreteControlProfile\022B\n\022controlMe"
+    "ssageInfo\030\001 \001(\0132 .commonmodule.ControlMe"
+    "ssageInfoB\004\200\265\030\001\022G\n\016capBankControl\030\002 \001(\0132"
+    "%.capbankmodule.CapBankDiscreteControlB\010"
+    "\210\265\030\001\220\265\030\001\022=\n\rcapBankSystem\030\003 \001(\0132\034.capban"
+    "kmodule.CapBankSystemB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\322\003"
+    "\n\031CapBankEventAndStatusYPSH\022V\n\034logicalNo"
+    "deForEventAndStatus\030\001 \001(\0132*.commonmodule"
+    ".LogicalNodeForEventAndStatusB\004\200\265\030\001\022&\n\006A"
+    "mpLmt\030\002 \001(\0132\026.commonmodule.PhaseSPS\0227\n\007C"
+    "tlMode\030\003 \001(\0132&.commonmodule.Optional_Con"
+    "trolModeKind\022&\n\006DirRev\030\004 \001(\0132\026.commonmod"
+    "ule.PhaseSPS\0226\n\013DynamicTest\030\005 \001(\0132!.comm"
+    "onmodule.ENS_DynamicTestKind\022#\n\003Pos\030\006 \001("
+    "\0132\026.commonmodule.PhaseDPS\022\'\n\007TempLmt\030\007 \001"
+    "(\0132\026.commonmodule.PhaseSPS\022&\n\006VArLmt\030\010 \001"
+    "(\0132\026.commonmodule.PhaseSPS\022&\n\006VolLmt\030\t \001"
+    "(\0132\026.commonmodule.PhaseSPS\"\217\001\n\014CapBankEv"
+    "ent\0222\n\neventValue\030\001 \001(\0132\030.commonmodule.E"
+    "ventValueB\004\200\265\030\001\022K\n\031CapBankEventAndStatus"
+    "YPSH\030\002 \001(\0132(.capbankmodule.CapBankEventA"
+    "ndStatusYPSH\"\327\001\n\023CapBankEventProfile\022>\n\020"
+    "eventMessageInfo\030\001 \001(\0132\036.commonmodule.Ev"
+    "entMessageInfoB\004\200\265\030\001\022;\n\014capBankEvent\030\002 \001"
+    "(\0132\033.capbankmodule.CapBankEventB\010\210\265\030\001\220\265\030"
+    "\001\022=\n\rcapBankSystem\030\003 \001(\0132\034.capbankmodule"
+    ".CapBankSystemB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\271\002\n\016CapBa"
+    "nkReading\022b\n\"conductingEquipmentTerminal"
+    "Reading\030\001 \001(\01320.commonmodule.ConductingE"
+    "quipmentTerminalReadingB\004\200\265\030\001\022*\n\tphaseMM"
+    "TN\030\002 \001(\0132\027.commonmodule.PhaseMMTN\022.\n\013rea"
+    "dingMMTR\030\003 \001(\0132\031.commonmodule.ReadingMMT"
+    "R\022.\n\013readingMMXU\030\004 \001(\0132\031.commonmodule.Re"
+    "adingMMXU\0227\n\024secondaryReadingMMXU\030\005 \001(\0132"
+    "\031.commonmodule.ReadingMMXU\"\341\001\n\025CapBankRe"
+    "adingProfile\022B\n\022readingMessageInfo\030\001 \001(\013"
+    "2 .commonmodule.ReadingMessageInfoB\004\200\265\030\001"
+    "\022\?\n\016capBankReading\030\002 \001(\0132\035.capbankmodule"
+    ".CapBankReadingB\010\210\265\030\001\220\265\030\001\022=\n\rcapBankSyst"
+    "em\030\003 \001(\0132\034.capbankmodule.CapBankSystemB\010"
+    "\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\222\001\n\rCapBankStatus\0224\n\013stat"
+    "usValue\030\001 \001(\0132\031.commonmodule.StatusValue"
+    "B\004\200\265\030\001\022K\n\031capBankEventAndStatusYPSH\030\002 \001("
+    "\0132(.capbankmodule.CapBankEventAndStatusY"
+    "PSH\"\334\001\n\024CapBankStatusProfile\022@\n\021statusMe"
+    "ssageInfo\030\001 \001(\0132\037.commonmodule.StatusMes"
+    "sageInfoB\004\200\265\030\001\022=\n\rcapBankStatus\030\002 \001(\0132\034."
+    "capbankmodule.CapBankStatusB\010\210\265\030\001\220\265\030\001\022=\n"
+    "\rcapBankSystem\030\003 \001(\0132\034.capbankmodule.Cap"
+    "BankSystemB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001B\207\001\n\025openfmb.c"
+    "apbankmoduleP\001ZTgitlab.com/openfmb/psm/o"
+    "ps/protobuf/go-openfmb-ops-protobuf/v2/o"
+    "penfmb/capbankmodule\252\002\025openfmb.capbankmo"
+    "duleb\006proto3"
+};
+static const ::_pbi::DescriptorTable* const descriptor_table_capbankmodule_2fcapbankmodule_2eproto_deps[2] =
+    {
+        &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
+        &::descriptor_table_uml_2eproto,
+};
+static ::absl::once_flag descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_capbankmodule_2fcapbankmodule_2eproto = {
+    false,
+    false,
+    4292,
+    descriptor_table_protodef_capbankmodule_2fcapbankmodule_2eproto,
+    "capbankmodule/capbankmodule.proto",
+    &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once,
+    descriptor_table_capbankmodule_2fcapbankmodule_2eproto_deps,
+    2,
+    18,
+    schemas,
+    file_default_instances,
+    TableStruct_capbankmodule_2fcapbankmodule_2eproto::offsets,
+    file_level_metadata_capbankmodule_2fcapbankmodule_2eproto,
+    file_level_enum_descriptors_capbankmodule_2fcapbankmodule_2eproto,
+    file_level_service_descriptors_capbankmodule_2fcapbankmodule_2eproto,
 };
 
-const char descriptor_table_protodef_capbankmodule_2fcapbankmodule_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n!capbankmodule/capbankmodule.proto\022\rcap"
-  "bankmodule\032\tuml.proto\032\037commonmodule/comm"
-  "onmodule.proto\"U\n\rCapBankSystem\022D\n\023condu"
-  "ctingEquipment\030\001 \001(\0132!.commonmodule.Cond"
-  "uctingEquipmentB\004\200\265\030\001\"\372\005\n\022CapBankControl"
-  "YPSH\022&\n\006AmpLmt\030\001 \001(\0132\026.commonmodule.Phas"
-  "eSPC\022(\n\010AmpThdHi\030\002 \001(\0132\026.commonmodule.Ph"
-  "aseAPC\022(\n\010AmpThdLo\030\003 \001(\0132\026.commonmodule."
-  "PhaseAPC\022-\n\013CtlModeAuto\030\004 \001(\0132\030.commonmo"
-  "dule.ControlSPC\022.\n\014CtlModeOvrRd\030\005 \001(\0132\030."
-  "commonmodule.ControlSPC\022,\n\nCtlModeRem\030\006 "
-  "\001(\0132\030.commonmodule.ControlSPC\0229\n\007DirMode"
-  "\030\007 \001(\0132(.commonmodule.Optional_Direction"
-  "ModeKind\022#\n\003Pos\030\010 \001(\0132\026.commonmodule.Pha"
-  "seSPC\022)\n\007TempLmt\030\t \001(\0132\030.commonmodule.Co"
-  "ntrolSPC\022+\n\tTempThdHi\030\n \001(\0132\030.commonmodu"
-  "le.ControlAPC\022+\n\tTempThdLo\030\013 \001(\0132\030.commo"
-  "nmodule.ControlAPC\022&\n\006VArLmt\030\014 \001(\0132\026.com"
-  "monmodule.PhaseSPC\022(\n\010VArThdHi\030\r \001(\0132\026.c"
-  "ommonmodule.PhaseAPC\022(\n\010VArThdLo\030\016 \001(\0132\026"
-  ".commonmodule.PhaseAPC\022&\n\006VolLmt\030\017 \001(\0132\026"
-  ".commonmodule.PhaseSPC\022(\n\010VolThdHi\030\020 \001(\013"
-  "2\026.commonmodule.PhaseAPC\022(\n\010VolThdLo\030\021 \001"
-  "(\0132\026.commonmodule.PhaseAPC\"x\n\014CapBankPoi"
-  "nt\0222\n\007control\030\001 \001(\0132!.capbankmodule.CapB"
-  "ankControlYPSH\0224\n\tstartTime\030\002 \001(\0132\027.comm"
-  "onmodule.TimestampB\010\210\265\030\001\220\265\030\001\"C\n\nCapBankC"
-  "SG\0225\n\006crvPts\030\001 \003(\0132\033.capbankmodule.CapBa"
-  "nkPointB\010\210\265\030\001\220\265\030\001\"Q\n\032CapBankControlSched"
-  "uleFSCH\0223\n\006ValCSG\030\001 \001(\0132\031.capbankmodule."
-  "CapBankCSGB\010\210\265\030\001\220\265\030\001\"\231\001\n\022CapBankControlF"
-  "SCC\0224\n\013controlFSCC\030\001 \001(\0132\031.commonmodule."
-  "ControlFSCCB\004\200\265\030\001\022M\n\032capBankControlSched"
-  "uleFSCH\030\002 \001(\0132).capbankmodule.CapBankCon"
-  "trolScheduleFSCH\"\265\001\n\016CapBankControl\0226\n\014c"
-  "ontrolValue\030\001 \001(\0132\032.commonmodule.Control"
-  "ValueB\004\200\265\030\001\022,\n\005check\030\002 \001(\0132\035.commonmodul"
-  "e.CheckConditions\022=\n\022capBankControlFSCC\030"
-  "\003 \001(\0132!.capbankmodule.CapBankControlFSCC"
-  "\"\341\001\n\025CapBankControlProfile\022B\n\022controlMes"
-  "sageInfo\030\001 \001(\0132 .commonmodule.ControlMes"
-  "sageInfoB\004\200\265\030\001\022\?\n\016capBankControl\030\002 \001(\0132\035"
-  ".capbankmodule.CapBankControlB\010\210\265\030\001\220\265\030\001\022"
-  "=\n\rcapBankSystem\030\003 \001(\0132\034.capbankmodule.C"
-  "apBankSystemB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\232\001\n\032CapBank"
-  "DiscreteControlYPSH\022H\n\025logicalNodeForCon"
-  "trol\030\001 \001(\0132#.commonmodule.LogicalNodeFor"
-  "ControlB\004\200\265\030\001\0222\n\007control\030\002 \001(\0132!.capbank"
-  "module.CapBankControlYPSH\"\315\001\n\026CapBankDis"
-  "creteControl\0226\n\014controlValue\030\001 \001(\0132\032.com"
-  "monmodule.ControlValueB\004\200\265\030\001\022,\n\005check\030\002 "
-  "\001(\0132\035.commonmodule.CheckConditions\022M\n\032ca"
-  "pBankDiscreteControlYPSH\030\003 \001(\0132).capbank"
-  "module.CapBankDiscreteControlYPSH\"\361\001\n\035Ca"
-  "pBankDiscreteControlProfile\022B\n\022controlMe"
-  "ssageInfo\030\001 \001(\0132 .commonmodule.ControlMe"
-  "ssageInfoB\004\200\265\030\001\022G\n\016capBankControl\030\002 \001(\0132"
-  "%.capbankmodule.CapBankDiscreteControlB\010"
-  "\210\265\030\001\220\265\030\001\022=\n\rcapBankSystem\030\003 \001(\0132\034.capban"
-  "kmodule.CapBankSystemB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\322\003"
-  "\n\031CapBankEventAndStatusYPSH\022V\n\034logicalNo"
-  "deForEventAndStatus\030\001 \001(\0132*.commonmodule"
-  ".LogicalNodeForEventAndStatusB\004\200\265\030\001\022&\n\006A"
-  "mpLmt\030\002 \001(\0132\026.commonmodule.PhaseSPS\0227\n\007C"
-  "tlMode\030\003 \001(\0132&.commonmodule.Optional_Con"
-  "trolModeKind\022&\n\006DirRev\030\004 \001(\0132\026.commonmod"
-  "ule.PhaseSPS\0226\n\013DynamicTest\030\005 \001(\0132!.comm"
-  "onmodule.ENS_DynamicTestKind\022#\n\003Pos\030\006 \001("
-  "\0132\026.commonmodule.PhaseDPS\022\'\n\007TempLmt\030\007 \001"
-  "(\0132\026.commonmodule.PhaseSPS\022&\n\006VArLmt\030\010 \001"
-  "(\0132\026.commonmodule.PhaseSPS\022&\n\006VolLmt\030\t \001"
-  "(\0132\026.commonmodule.PhaseSPS\"\217\001\n\014CapBankEv"
-  "ent\0222\n\neventValue\030\001 \001(\0132\030.commonmodule.E"
-  "ventValueB\004\200\265\030\001\022K\n\031CapBankEventAndStatus"
-  "YPSH\030\002 \001(\0132(.capbankmodule.CapBankEventA"
-  "ndStatusYPSH\"\327\001\n\023CapBankEventProfile\022>\n\020"
-  "eventMessageInfo\030\001 \001(\0132\036.commonmodule.Ev"
-  "entMessageInfoB\004\200\265\030\001\022;\n\014capBankEvent\030\002 \001"
-  "(\0132\033.capbankmodule.CapBankEventB\010\210\265\030\001\220\265\030"
-  "\001\022=\n\rcapBankSystem\030\003 \001(\0132\034.capbankmodule"
-  ".CapBankSystemB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\271\002\n\016CapBa"
-  "nkReading\022b\n\"conductingEquipmentTerminal"
-  "Reading\030\001 \001(\01320.commonmodule.ConductingE"
-  "quipmentTerminalReadingB\004\200\265\030\001\022*\n\tphaseMM"
-  "TN\030\002 \001(\0132\027.commonmodule.PhaseMMTN\022.\n\013rea"
-  "dingMMTR\030\003 \001(\0132\031.commonmodule.ReadingMMT"
-  "R\022.\n\013readingMMXU\030\004 \001(\0132\031.commonmodule.Re"
-  "adingMMXU\0227\n\024secondaryReadingMMXU\030\005 \001(\0132"
-  "\031.commonmodule.ReadingMMXU\"\341\001\n\025CapBankRe"
-  "adingProfile\022B\n\022readingMessageInfo\030\001 \001(\013"
-  "2 .commonmodule.ReadingMessageInfoB\004\200\265\030\001"
-  "\022\?\n\016capBankReading\030\002 \001(\0132\035.capbankmodule"
-  ".CapBankReadingB\010\210\265\030\001\220\265\030\001\022=\n\rcapBankSyst"
-  "em\030\003 \001(\0132\034.capbankmodule.CapBankSystemB\010"
-  "\210\265\030\001\220\265\030\001:\004\300\363\030\001\"\222\001\n\rCapBankStatus\0224\n\013stat"
-  "usValue\030\001 \001(\0132\031.commonmodule.StatusValue"
-  "B\004\200\265\030\001\022K\n\031capBankEventAndStatusYPSH\030\002 \001("
-  "\0132(.capbankmodule.CapBankEventAndStatusY"
-  "PSH\"\334\001\n\024CapBankStatusProfile\022@\n\021statusMe"
-  "ssageInfo\030\001 \001(\0132\037.commonmodule.StatusMes"
-  "sageInfoB\004\200\265\030\001\022=\n\rcapBankStatus\030\002 \001(\0132\034."
-  "capbankmodule.CapBankStatusB\010\210\265\030\001\220\265\030\001\022=\n"
-  "\rcapBankSystem\030\003 \001(\0132\034.capbankmodule.Cap"
-  "BankSystemB\010\210\265\030\001\220\265\030\001:\004\300\363\030\001B\207\001\n\025openfmb.c"
-  "apbankmoduleP\001ZTgitlab.com/openfmb/psm/o"
-  "ps/protobuf/go-openfmb-ops-protobuf/v2/o"
-  "penfmb/capbankmodule\252\002\025openfmb.capbankmo"
-  "duleb\006proto3"
-  ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_capbankmodule_2fcapbankmodule_2eproto_deps[2] = {
-  &::descriptor_table_commonmodule_2fcommonmodule_2eproto,
-  &::descriptor_table_uml_2eproto,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_capbankmodule_2fcapbankmodule_2eproto = {
-  false, false, 4292, descriptor_table_protodef_capbankmodule_2fcapbankmodule_2eproto, "capbankmodule/capbankmodule.proto", 
-  &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once, descriptor_table_capbankmodule_2fcapbankmodule_2eproto_deps, 2, 18,
-  schemas, file_default_instances, TableStruct_capbankmodule_2fcapbankmodule_2eproto::offsets,
-  file_level_metadata_capbankmodule_2fcapbankmodule_2eproto, file_level_enum_descriptors_capbankmodule_2fcapbankmodule_2eproto, file_level_service_descriptors_capbankmodule_2fcapbankmodule_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
-descriptor_table_capbankmodule_2fcapbankmodule_2eproto_metadata_getter(int index) {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_capbankmodule_2fcapbankmodule_2eproto);
-  return descriptor_table_capbankmodule_2fcapbankmodule_2eproto.file_level_metadata[index];
+// This function exists to be marked as weak.
+// It can significantly speed up compilation by breaking up LLVM's SCC
+// in the .pb.cc translation units. Large translation units see a
+// reduction of more than 35% of walltime for optimized builds. Without
+// the weak attribute all the messages in the file, including all the
+// vtables and everything they use become part of the same SCC through
+// a cycle like:
+// GetMetadata -> descriptor table -> default instances ->
+//   vtables -> GetMetadata
+// By adding a weak function here we break the connection from the
+// individual vtables back into the descriptor table.
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_capbankmodule_2fcapbankmodule_2eproto_getter() {
+  return &descriptor_table_capbankmodule_2fcapbankmodule_2eproto;
 }
-
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_capbankmodule_2fcapbankmodule_2eproto(&descriptor_table_capbankmodule_2fcapbankmodule_2eproto);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
+static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_capbankmodule_2fcapbankmodule_2eproto(&descriptor_table_capbankmodule_2fcapbankmodule_2eproto);
 namespace capbankmodule {
-
 // ===================================================================
 
 class CapBankSystem::_Internal {
@@ -624,183 +740,169 @@ class CapBankSystem::_Internal {
 
 const ::commonmodule::ConductingEquipment&
 CapBankSystem::_Internal::conductingequipment(const CapBankSystem* msg) {
-  return *msg->conductingequipment_;
+  return *msg->_impl_.conductingequipment_;
 }
 void CapBankSystem::clear_conductingequipment() {
-  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
-    delete conductingequipment_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipment_ != nullptr) {
+    delete _impl_.conductingequipment_;
   }
-  conductingequipment_ = nullptr;
+  _impl_.conductingequipment_ = nullptr;
 }
 CapBankSystem::CapBankSystem(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:capbankmodule.CapBankSystem)
 }
 CapBankSystem::CapBankSystem(const CapBankSystem& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CapBankSystem* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipment_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_conductingequipment()) {
-    conductingequipment_ = new ::commonmodule::ConductingEquipment(*from.conductingequipment_);
-  } else {
-    conductingequipment_ = nullptr;
+    _this->_impl_.conductingequipment_ = new ::commonmodule::ConductingEquipment(*from._impl_.conductingequipment_);
   }
   // @@protoc_insertion_point(copy_constructor:capbankmodule.CapBankSystem)
 }
 
-void CapBankSystem::SharedCtor() {
-conductingequipment_ = nullptr;
+inline void CapBankSystem::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipment_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CapBankSystem::~CapBankSystem() {
   // @@protoc_insertion_point(destructor:capbankmodule.CapBankSystem)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CapBankSystem::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete conductingequipment_;
+inline void CapBankSystem::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.conductingequipment_;
 }
 
-void CapBankSystem::ArenaDtor(void* object) {
-  CapBankSystem* _this = reinterpret_cast< CapBankSystem* >(object);
-  (void)_this;
-}
-void CapBankSystem::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapBankSystem::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CapBankSystem::Clear() {
 // @@protoc_insertion_point(message_clear_start:capbankmodule.CapBankSystem)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && conductingequipment_ != nullptr) {
-    delete conductingequipment_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipment_ != nullptr) {
+    delete _impl_.conductingequipment_;
   }
-  conductingequipment_ = nullptr;
+  _impl_.conductingequipment_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CapBankSystem::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CapBankSystem::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_conductingequipment(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapBankSystem::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CapBankSystem::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:capbankmodule.CapBankSystem)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipment()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_conductingequipment()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::conductingequipment(this), target, stream);
+      InternalWriteMessage(1, _Internal::conductingequipment(this),
+        _Internal::conductingequipment(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:capbankmodule.CapBankSystem)
   return target;
 }
 
-size_t CapBankSystem::ByteSizeLong() const {
+::size_t CapBankSystem::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:capbankmodule.CapBankSystem)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipment conductingEquipment = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipment()) {
+  if (this->_internal_has_conductingequipment()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *conductingequipment_);
+        *_impl_.conductingequipment_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CapBankSystem::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:capbankmodule.CapBankSystem)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CapBankSystem* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapBankSystem>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:capbankmodule.CapBankSystem)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:capbankmodule.CapBankSystem)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CapBankSystem::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CapBankSystem::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CapBankSystem::GetClassData() const { return &_class_data_; }
 
-void CapBankSystem::MergeFrom(const CapBankSystem& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankSystem)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CapBankSystem::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CapBankSystem*>(&to_msg);
+  auto& from = static_cast<const CapBankSystem&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankSystem)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_conductingequipment()) {
-    _internal_mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(from._internal_conductingequipment());
+  if (from._internal_has_conductingequipment()) {
+    _this->_internal_mutable_conductingequipment()->::commonmodule::ConductingEquipment::MergeFrom(
+        from._internal_conductingequipment());
   }
-}
-
-void CapBankSystem::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:capbankmodule.CapBankSystem)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapBankSystem::CopyFrom(const CapBankSystem& from) {
@@ -816,15 +918,15 @@ bool CapBankSystem::IsInitialized() const {
 
 void CapBankSystem::InternalSwap(CapBankSystem* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(conductingequipment_, other->conductingequipment_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.conductingequipment_, other->_impl_.conductingequipment_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CapBankSystem::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_getter, &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once,
+      file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[0]);
 }
-
-
 // ===================================================================
 
 class CapBankControlYPSH::_Internal {
@@ -850,906 +952,921 @@ class CapBankControlYPSH::_Internal {
 
 const ::commonmodule::PhaseSPC&
 CapBankControlYPSH::_Internal::amplmt(const CapBankControlYPSH* msg) {
-  return *msg->amplmt_;
+  return *msg->_impl_.amplmt_;
 }
 const ::commonmodule::PhaseAPC&
 CapBankControlYPSH::_Internal::ampthdhi(const CapBankControlYPSH* msg) {
-  return *msg->ampthdhi_;
+  return *msg->_impl_.ampthdhi_;
 }
 const ::commonmodule::PhaseAPC&
 CapBankControlYPSH::_Internal::ampthdlo(const CapBankControlYPSH* msg) {
-  return *msg->ampthdlo_;
+  return *msg->_impl_.ampthdlo_;
 }
 const ::commonmodule::ControlSPC&
 CapBankControlYPSH::_Internal::ctlmodeauto(const CapBankControlYPSH* msg) {
-  return *msg->ctlmodeauto_;
+  return *msg->_impl_.ctlmodeauto_;
 }
 const ::commonmodule::ControlSPC&
 CapBankControlYPSH::_Internal::ctlmodeovrrd(const CapBankControlYPSH* msg) {
-  return *msg->ctlmodeovrrd_;
+  return *msg->_impl_.ctlmodeovrrd_;
 }
 const ::commonmodule::ControlSPC&
 CapBankControlYPSH::_Internal::ctlmoderem(const CapBankControlYPSH* msg) {
-  return *msg->ctlmoderem_;
+  return *msg->_impl_.ctlmoderem_;
 }
 const ::commonmodule::Optional_DirectionModeKind&
 CapBankControlYPSH::_Internal::dirmode(const CapBankControlYPSH* msg) {
-  return *msg->dirmode_;
+  return *msg->_impl_.dirmode_;
 }
 const ::commonmodule::PhaseSPC&
 CapBankControlYPSH::_Internal::pos(const CapBankControlYPSH* msg) {
-  return *msg->pos_;
+  return *msg->_impl_.pos_;
 }
 const ::commonmodule::ControlSPC&
 CapBankControlYPSH::_Internal::templmt(const CapBankControlYPSH* msg) {
-  return *msg->templmt_;
+  return *msg->_impl_.templmt_;
 }
 const ::commonmodule::ControlAPC&
 CapBankControlYPSH::_Internal::tempthdhi(const CapBankControlYPSH* msg) {
-  return *msg->tempthdhi_;
+  return *msg->_impl_.tempthdhi_;
 }
 const ::commonmodule::ControlAPC&
 CapBankControlYPSH::_Internal::tempthdlo(const CapBankControlYPSH* msg) {
-  return *msg->tempthdlo_;
+  return *msg->_impl_.tempthdlo_;
 }
 const ::commonmodule::PhaseSPC&
 CapBankControlYPSH::_Internal::varlmt(const CapBankControlYPSH* msg) {
-  return *msg->varlmt_;
+  return *msg->_impl_.varlmt_;
 }
 const ::commonmodule::PhaseAPC&
 CapBankControlYPSH::_Internal::varthdhi(const CapBankControlYPSH* msg) {
-  return *msg->varthdhi_;
+  return *msg->_impl_.varthdhi_;
 }
 const ::commonmodule::PhaseAPC&
 CapBankControlYPSH::_Internal::varthdlo(const CapBankControlYPSH* msg) {
-  return *msg->varthdlo_;
+  return *msg->_impl_.varthdlo_;
 }
 const ::commonmodule::PhaseSPC&
 CapBankControlYPSH::_Internal::vollmt(const CapBankControlYPSH* msg) {
-  return *msg->vollmt_;
+  return *msg->_impl_.vollmt_;
 }
 const ::commonmodule::PhaseAPC&
 CapBankControlYPSH::_Internal::volthdhi(const CapBankControlYPSH* msg) {
-  return *msg->volthdhi_;
+  return *msg->_impl_.volthdhi_;
 }
 const ::commonmodule::PhaseAPC&
 CapBankControlYPSH::_Internal::volthdlo(const CapBankControlYPSH* msg) {
-  return *msg->volthdlo_;
+  return *msg->_impl_.volthdlo_;
 }
 void CapBankControlYPSH::clear_amplmt() {
-  if (GetArena() == nullptr && amplmt_ != nullptr) {
-    delete amplmt_;
+  if (GetArenaForAllocation() == nullptr && _impl_.amplmt_ != nullptr) {
+    delete _impl_.amplmt_;
   }
-  amplmt_ = nullptr;
+  _impl_.amplmt_ = nullptr;
 }
 void CapBankControlYPSH::clear_ampthdhi() {
-  if (GetArena() == nullptr && ampthdhi_ != nullptr) {
-    delete ampthdhi_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ampthdhi_ != nullptr) {
+    delete _impl_.ampthdhi_;
   }
-  ampthdhi_ = nullptr;
+  _impl_.ampthdhi_ = nullptr;
 }
 void CapBankControlYPSH::clear_ampthdlo() {
-  if (GetArena() == nullptr && ampthdlo_ != nullptr) {
-    delete ampthdlo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ampthdlo_ != nullptr) {
+    delete _impl_.ampthdlo_;
   }
-  ampthdlo_ = nullptr;
+  _impl_.ampthdlo_ = nullptr;
 }
 void CapBankControlYPSH::clear_ctlmodeauto() {
-  if (GetArena() == nullptr && ctlmodeauto_ != nullptr) {
-    delete ctlmodeauto_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ctlmodeauto_ != nullptr) {
+    delete _impl_.ctlmodeauto_;
   }
-  ctlmodeauto_ = nullptr;
+  _impl_.ctlmodeauto_ = nullptr;
 }
 void CapBankControlYPSH::clear_ctlmodeovrrd() {
-  if (GetArena() == nullptr && ctlmodeovrrd_ != nullptr) {
-    delete ctlmodeovrrd_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ctlmodeovrrd_ != nullptr) {
+    delete _impl_.ctlmodeovrrd_;
   }
-  ctlmodeovrrd_ = nullptr;
+  _impl_.ctlmodeovrrd_ = nullptr;
 }
 void CapBankControlYPSH::clear_ctlmoderem() {
-  if (GetArena() == nullptr && ctlmoderem_ != nullptr) {
-    delete ctlmoderem_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ctlmoderem_ != nullptr) {
+    delete _impl_.ctlmoderem_;
   }
-  ctlmoderem_ = nullptr;
+  _impl_.ctlmoderem_ = nullptr;
 }
 void CapBankControlYPSH::clear_dirmode() {
-  if (GetArena() == nullptr && dirmode_ != nullptr) {
-    delete dirmode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.dirmode_ != nullptr) {
+    delete _impl_.dirmode_;
   }
-  dirmode_ = nullptr;
+  _impl_.dirmode_ = nullptr;
 }
 void CapBankControlYPSH::clear_pos() {
-  if (GetArena() == nullptr && pos_ != nullptr) {
-    delete pos_;
+  if (GetArenaForAllocation() == nullptr && _impl_.pos_ != nullptr) {
+    delete _impl_.pos_;
   }
-  pos_ = nullptr;
+  _impl_.pos_ = nullptr;
 }
 void CapBankControlYPSH::clear_templmt() {
-  if (GetArena() == nullptr && templmt_ != nullptr) {
-    delete templmt_;
+  if (GetArenaForAllocation() == nullptr && _impl_.templmt_ != nullptr) {
+    delete _impl_.templmt_;
   }
-  templmt_ = nullptr;
+  _impl_.templmt_ = nullptr;
 }
 void CapBankControlYPSH::clear_tempthdhi() {
-  if (GetArena() == nullptr && tempthdhi_ != nullptr) {
-    delete tempthdhi_;
+  if (GetArenaForAllocation() == nullptr && _impl_.tempthdhi_ != nullptr) {
+    delete _impl_.tempthdhi_;
   }
-  tempthdhi_ = nullptr;
+  _impl_.tempthdhi_ = nullptr;
 }
 void CapBankControlYPSH::clear_tempthdlo() {
-  if (GetArena() == nullptr && tempthdlo_ != nullptr) {
-    delete tempthdlo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.tempthdlo_ != nullptr) {
+    delete _impl_.tempthdlo_;
   }
-  tempthdlo_ = nullptr;
+  _impl_.tempthdlo_ = nullptr;
 }
 void CapBankControlYPSH::clear_varlmt() {
-  if (GetArena() == nullptr && varlmt_ != nullptr) {
-    delete varlmt_;
+  if (GetArenaForAllocation() == nullptr && _impl_.varlmt_ != nullptr) {
+    delete _impl_.varlmt_;
   }
-  varlmt_ = nullptr;
+  _impl_.varlmt_ = nullptr;
 }
 void CapBankControlYPSH::clear_varthdhi() {
-  if (GetArena() == nullptr && varthdhi_ != nullptr) {
-    delete varthdhi_;
+  if (GetArenaForAllocation() == nullptr && _impl_.varthdhi_ != nullptr) {
+    delete _impl_.varthdhi_;
   }
-  varthdhi_ = nullptr;
+  _impl_.varthdhi_ = nullptr;
 }
 void CapBankControlYPSH::clear_varthdlo() {
-  if (GetArena() == nullptr && varthdlo_ != nullptr) {
-    delete varthdlo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.varthdlo_ != nullptr) {
+    delete _impl_.varthdlo_;
   }
-  varthdlo_ = nullptr;
+  _impl_.varthdlo_ = nullptr;
 }
 void CapBankControlYPSH::clear_vollmt() {
-  if (GetArena() == nullptr && vollmt_ != nullptr) {
-    delete vollmt_;
+  if (GetArenaForAllocation() == nullptr && _impl_.vollmt_ != nullptr) {
+    delete _impl_.vollmt_;
   }
-  vollmt_ = nullptr;
+  _impl_.vollmt_ = nullptr;
 }
 void CapBankControlYPSH::clear_volthdhi() {
-  if (GetArena() == nullptr && volthdhi_ != nullptr) {
-    delete volthdhi_;
+  if (GetArenaForAllocation() == nullptr && _impl_.volthdhi_ != nullptr) {
+    delete _impl_.volthdhi_;
   }
-  volthdhi_ = nullptr;
+  _impl_.volthdhi_ = nullptr;
 }
 void CapBankControlYPSH::clear_volthdlo() {
-  if (GetArena() == nullptr && volthdlo_ != nullptr) {
-    delete volthdlo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.volthdlo_ != nullptr) {
+    delete _impl_.volthdlo_;
   }
-  volthdlo_ = nullptr;
+  _impl_.volthdlo_ = nullptr;
 }
 CapBankControlYPSH::CapBankControlYPSH(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:capbankmodule.CapBankControlYPSH)
 }
 CapBankControlYPSH::CapBankControlYPSH(const CapBankControlYPSH& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CapBankControlYPSH* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.amplmt_){nullptr}
+    , decltype(_impl_.ampthdhi_){nullptr}
+    , decltype(_impl_.ampthdlo_){nullptr}
+    , decltype(_impl_.ctlmodeauto_){nullptr}
+    , decltype(_impl_.ctlmodeovrrd_){nullptr}
+    , decltype(_impl_.ctlmoderem_){nullptr}
+    , decltype(_impl_.dirmode_){nullptr}
+    , decltype(_impl_.pos_){nullptr}
+    , decltype(_impl_.templmt_){nullptr}
+    , decltype(_impl_.tempthdhi_){nullptr}
+    , decltype(_impl_.tempthdlo_){nullptr}
+    , decltype(_impl_.varlmt_){nullptr}
+    , decltype(_impl_.varthdhi_){nullptr}
+    , decltype(_impl_.varthdlo_){nullptr}
+    , decltype(_impl_.vollmt_){nullptr}
+    , decltype(_impl_.volthdhi_){nullptr}
+    , decltype(_impl_.volthdlo_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_amplmt()) {
-    amplmt_ = new ::commonmodule::PhaseSPC(*from.amplmt_);
-  } else {
-    amplmt_ = nullptr;
+    _this->_impl_.amplmt_ = new ::commonmodule::PhaseSPC(*from._impl_.amplmt_);
   }
   if (from._internal_has_ampthdhi()) {
-    ampthdhi_ = new ::commonmodule::PhaseAPC(*from.ampthdhi_);
-  } else {
-    ampthdhi_ = nullptr;
+    _this->_impl_.ampthdhi_ = new ::commonmodule::PhaseAPC(*from._impl_.ampthdhi_);
   }
   if (from._internal_has_ampthdlo()) {
-    ampthdlo_ = new ::commonmodule::PhaseAPC(*from.ampthdlo_);
-  } else {
-    ampthdlo_ = nullptr;
+    _this->_impl_.ampthdlo_ = new ::commonmodule::PhaseAPC(*from._impl_.ampthdlo_);
   }
   if (from._internal_has_ctlmodeauto()) {
-    ctlmodeauto_ = new ::commonmodule::ControlSPC(*from.ctlmodeauto_);
-  } else {
-    ctlmodeauto_ = nullptr;
+    _this->_impl_.ctlmodeauto_ = new ::commonmodule::ControlSPC(*from._impl_.ctlmodeauto_);
   }
   if (from._internal_has_ctlmodeovrrd()) {
-    ctlmodeovrrd_ = new ::commonmodule::ControlSPC(*from.ctlmodeovrrd_);
-  } else {
-    ctlmodeovrrd_ = nullptr;
+    _this->_impl_.ctlmodeovrrd_ = new ::commonmodule::ControlSPC(*from._impl_.ctlmodeovrrd_);
   }
   if (from._internal_has_ctlmoderem()) {
-    ctlmoderem_ = new ::commonmodule::ControlSPC(*from.ctlmoderem_);
-  } else {
-    ctlmoderem_ = nullptr;
+    _this->_impl_.ctlmoderem_ = new ::commonmodule::ControlSPC(*from._impl_.ctlmoderem_);
   }
   if (from._internal_has_dirmode()) {
-    dirmode_ = new ::commonmodule::Optional_DirectionModeKind(*from.dirmode_);
-  } else {
-    dirmode_ = nullptr;
+    _this->_impl_.dirmode_ = new ::commonmodule::Optional_DirectionModeKind(*from._impl_.dirmode_);
   }
   if (from._internal_has_pos()) {
-    pos_ = new ::commonmodule::PhaseSPC(*from.pos_);
-  } else {
-    pos_ = nullptr;
+    _this->_impl_.pos_ = new ::commonmodule::PhaseSPC(*from._impl_.pos_);
   }
   if (from._internal_has_templmt()) {
-    templmt_ = new ::commonmodule::ControlSPC(*from.templmt_);
-  } else {
-    templmt_ = nullptr;
+    _this->_impl_.templmt_ = new ::commonmodule::ControlSPC(*from._impl_.templmt_);
   }
   if (from._internal_has_tempthdhi()) {
-    tempthdhi_ = new ::commonmodule::ControlAPC(*from.tempthdhi_);
-  } else {
-    tempthdhi_ = nullptr;
+    _this->_impl_.tempthdhi_ = new ::commonmodule::ControlAPC(*from._impl_.tempthdhi_);
   }
   if (from._internal_has_tempthdlo()) {
-    tempthdlo_ = new ::commonmodule::ControlAPC(*from.tempthdlo_);
-  } else {
-    tempthdlo_ = nullptr;
+    _this->_impl_.tempthdlo_ = new ::commonmodule::ControlAPC(*from._impl_.tempthdlo_);
   }
   if (from._internal_has_varlmt()) {
-    varlmt_ = new ::commonmodule::PhaseSPC(*from.varlmt_);
-  } else {
-    varlmt_ = nullptr;
+    _this->_impl_.varlmt_ = new ::commonmodule::PhaseSPC(*from._impl_.varlmt_);
   }
   if (from._internal_has_varthdhi()) {
-    varthdhi_ = new ::commonmodule::PhaseAPC(*from.varthdhi_);
-  } else {
-    varthdhi_ = nullptr;
+    _this->_impl_.varthdhi_ = new ::commonmodule::PhaseAPC(*from._impl_.varthdhi_);
   }
   if (from._internal_has_varthdlo()) {
-    varthdlo_ = new ::commonmodule::PhaseAPC(*from.varthdlo_);
-  } else {
-    varthdlo_ = nullptr;
+    _this->_impl_.varthdlo_ = new ::commonmodule::PhaseAPC(*from._impl_.varthdlo_);
   }
   if (from._internal_has_vollmt()) {
-    vollmt_ = new ::commonmodule::PhaseSPC(*from.vollmt_);
-  } else {
-    vollmt_ = nullptr;
+    _this->_impl_.vollmt_ = new ::commonmodule::PhaseSPC(*from._impl_.vollmt_);
   }
   if (from._internal_has_volthdhi()) {
-    volthdhi_ = new ::commonmodule::PhaseAPC(*from.volthdhi_);
-  } else {
-    volthdhi_ = nullptr;
+    _this->_impl_.volthdhi_ = new ::commonmodule::PhaseAPC(*from._impl_.volthdhi_);
   }
   if (from._internal_has_volthdlo()) {
-    volthdlo_ = new ::commonmodule::PhaseAPC(*from.volthdlo_);
-  } else {
-    volthdlo_ = nullptr;
+    _this->_impl_.volthdlo_ = new ::commonmodule::PhaseAPC(*from._impl_.volthdlo_);
   }
   // @@protoc_insertion_point(copy_constructor:capbankmodule.CapBankControlYPSH)
 }
 
-void CapBankControlYPSH::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&amplmt_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&volthdlo_) -
-    reinterpret_cast<char*>(&amplmt_)) + sizeof(volthdlo_));
+inline void CapBankControlYPSH::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.amplmt_){nullptr}
+    , decltype(_impl_.ampthdhi_){nullptr}
+    , decltype(_impl_.ampthdlo_){nullptr}
+    , decltype(_impl_.ctlmodeauto_){nullptr}
+    , decltype(_impl_.ctlmodeovrrd_){nullptr}
+    , decltype(_impl_.ctlmoderem_){nullptr}
+    , decltype(_impl_.dirmode_){nullptr}
+    , decltype(_impl_.pos_){nullptr}
+    , decltype(_impl_.templmt_){nullptr}
+    , decltype(_impl_.tempthdhi_){nullptr}
+    , decltype(_impl_.tempthdlo_){nullptr}
+    , decltype(_impl_.varlmt_){nullptr}
+    , decltype(_impl_.varthdhi_){nullptr}
+    , decltype(_impl_.varthdlo_){nullptr}
+    , decltype(_impl_.vollmt_){nullptr}
+    , decltype(_impl_.volthdhi_){nullptr}
+    , decltype(_impl_.volthdlo_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CapBankControlYPSH::~CapBankControlYPSH() {
   // @@protoc_insertion_point(destructor:capbankmodule.CapBankControlYPSH)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CapBankControlYPSH::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete amplmt_;
-  if (this != internal_default_instance()) delete ampthdhi_;
-  if (this != internal_default_instance()) delete ampthdlo_;
-  if (this != internal_default_instance()) delete ctlmodeauto_;
-  if (this != internal_default_instance()) delete ctlmodeovrrd_;
-  if (this != internal_default_instance()) delete ctlmoderem_;
-  if (this != internal_default_instance()) delete dirmode_;
-  if (this != internal_default_instance()) delete pos_;
-  if (this != internal_default_instance()) delete templmt_;
-  if (this != internal_default_instance()) delete tempthdhi_;
-  if (this != internal_default_instance()) delete tempthdlo_;
-  if (this != internal_default_instance()) delete varlmt_;
-  if (this != internal_default_instance()) delete varthdhi_;
-  if (this != internal_default_instance()) delete varthdlo_;
-  if (this != internal_default_instance()) delete vollmt_;
-  if (this != internal_default_instance()) delete volthdhi_;
-  if (this != internal_default_instance()) delete volthdlo_;
+inline void CapBankControlYPSH::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.amplmt_;
+  if (this != internal_default_instance()) delete _impl_.ampthdhi_;
+  if (this != internal_default_instance()) delete _impl_.ampthdlo_;
+  if (this != internal_default_instance()) delete _impl_.ctlmodeauto_;
+  if (this != internal_default_instance()) delete _impl_.ctlmodeovrrd_;
+  if (this != internal_default_instance()) delete _impl_.ctlmoderem_;
+  if (this != internal_default_instance()) delete _impl_.dirmode_;
+  if (this != internal_default_instance()) delete _impl_.pos_;
+  if (this != internal_default_instance()) delete _impl_.templmt_;
+  if (this != internal_default_instance()) delete _impl_.tempthdhi_;
+  if (this != internal_default_instance()) delete _impl_.tempthdlo_;
+  if (this != internal_default_instance()) delete _impl_.varlmt_;
+  if (this != internal_default_instance()) delete _impl_.varthdhi_;
+  if (this != internal_default_instance()) delete _impl_.varthdlo_;
+  if (this != internal_default_instance()) delete _impl_.vollmt_;
+  if (this != internal_default_instance()) delete _impl_.volthdhi_;
+  if (this != internal_default_instance()) delete _impl_.volthdlo_;
 }
 
-void CapBankControlYPSH::ArenaDtor(void* object) {
-  CapBankControlYPSH* _this = reinterpret_cast< CapBankControlYPSH* >(object);
-  (void)_this;
-}
-void CapBankControlYPSH::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapBankControlYPSH::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CapBankControlYPSH::Clear() {
 // @@protoc_insertion_point(message_clear_start:capbankmodule.CapBankControlYPSH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && amplmt_ != nullptr) {
-    delete amplmt_;
+  if (GetArenaForAllocation() == nullptr && _impl_.amplmt_ != nullptr) {
+    delete _impl_.amplmt_;
   }
-  amplmt_ = nullptr;
-  if (GetArena() == nullptr && ampthdhi_ != nullptr) {
-    delete ampthdhi_;
+  _impl_.amplmt_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ampthdhi_ != nullptr) {
+    delete _impl_.ampthdhi_;
   }
-  ampthdhi_ = nullptr;
-  if (GetArena() == nullptr && ampthdlo_ != nullptr) {
-    delete ampthdlo_;
+  _impl_.ampthdhi_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ampthdlo_ != nullptr) {
+    delete _impl_.ampthdlo_;
   }
-  ampthdlo_ = nullptr;
-  if (GetArena() == nullptr && ctlmodeauto_ != nullptr) {
-    delete ctlmodeauto_;
+  _impl_.ampthdlo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ctlmodeauto_ != nullptr) {
+    delete _impl_.ctlmodeauto_;
   }
-  ctlmodeauto_ = nullptr;
-  if (GetArena() == nullptr && ctlmodeovrrd_ != nullptr) {
-    delete ctlmodeovrrd_;
+  _impl_.ctlmodeauto_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ctlmodeovrrd_ != nullptr) {
+    delete _impl_.ctlmodeovrrd_;
   }
-  ctlmodeovrrd_ = nullptr;
-  if (GetArena() == nullptr && ctlmoderem_ != nullptr) {
-    delete ctlmoderem_;
+  _impl_.ctlmodeovrrd_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ctlmoderem_ != nullptr) {
+    delete _impl_.ctlmoderem_;
   }
-  ctlmoderem_ = nullptr;
-  if (GetArena() == nullptr && dirmode_ != nullptr) {
-    delete dirmode_;
+  _impl_.ctlmoderem_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.dirmode_ != nullptr) {
+    delete _impl_.dirmode_;
   }
-  dirmode_ = nullptr;
-  if (GetArena() == nullptr && pos_ != nullptr) {
-    delete pos_;
+  _impl_.dirmode_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.pos_ != nullptr) {
+    delete _impl_.pos_;
   }
-  pos_ = nullptr;
-  if (GetArena() == nullptr && templmt_ != nullptr) {
-    delete templmt_;
+  _impl_.pos_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.templmt_ != nullptr) {
+    delete _impl_.templmt_;
   }
-  templmt_ = nullptr;
-  if (GetArena() == nullptr && tempthdhi_ != nullptr) {
-    delete tempthdhi_;
+  _impl_.templmt_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.tempthdhi_ != nullptr) {
+    delete _impl_.tempthdhi_;
   }
-  tempthdhi_ = nullptr;
-  if (GetArena() == nullptr && tempthdlo_ != nullptr) {
-    delete tempthdlo_;
+  _impl_.tempthdhi_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.tempthdlo_ != nullptr) {
+    delete _impl_.tempthdlo_;
   }
-  tempthdlo_ = nullptr;
-  if (GetArena() == nullptr && varlmt_ != nullptr) {
-    delete varlmt_;
+  _impl_.tempthdlo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.varlmt_ != nullptr) {
+    delete _impl_.varlmt_;
   }
-  varlmt_ = nullptr;
-  if (GetArena() == nullptr && varthdhi_ != nullptr) {
-    delete varthdhi_;
+  _impl_.varlmt_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.varthdhi_ != nullptr) {
+    delete _impl_.varthdhi_;
   }
-  varthdhi_ = nullptr;
-  if (GetArena() == nullptr && varthdlo_ != nullptr) {
-    delete varthdlo_;
+  _impl_.varthdhi_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.varthdlo_ != nullptr) {
+    delete _impl_.varthdlo_;
   }
-  varthdlo_ = nullptr;
-  if (GetArena() == nullptr && vollmt_ != nullptr) {
-    delete vollmt_;
+  _impl_.varthdlo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.vollmt_ != nullptr) {
+    delete _impl_.vollmt_;
   }
-  vollmt_ = nullptr;
-  if (GetArena() == nullptr && volthdhi_ != nullptr) {
-    delete volthdhi_;
+  _impl_.vollmt_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.volthdhi_ != nullptr) {
+    delete _impl_.volthdhi_;
   }
-  volthdhi_ = nullptr;
-  if (GetArena() == nullptr && volthdlo_ != nullptr) {
-    delete volthdlo_;
+  _impl_.volthdhi_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.volthdlo_ != nullptr) {
+    delete _impl_.volthdlo_;
   }
-  volthdlo_ = nullptr;
+  _impl_.volthdlo_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CapBankControlYPSH::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CapBankControlYPSH::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.PhaseSPC AmpLmt = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_amplmt(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseAPC AmpThdHi = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_ampthdhi(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseAPC AmpThdLo = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_ampthdlo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlSPC CtlModeAuto = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_ctlmodeauto(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlSPC CtlModeOvrRd = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_ctlmodeovrrd(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlSPC CtlModeRem = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_ctlmoderem(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.Optional_DirectionModeKind DirMode = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_dirmode(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseSPC Pos = 8;
       case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 66)) {
           ptr = ctx->ParseMessage(_internal_mutable_pos(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlSPC TempLmt = 9;
       case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 74)) {
           ptr = ctx->ParseMessage(_internal_mutable_templmt(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlAPC TempThdHi = 10;
       case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 82)) {
           ptr = ctx->ParseMessage(_internal_mutable_tempthdhi(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ControlAPC TempThdLo = 11;
       case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 90)) {
           ptr = ctx->ParseMessage(_internal_mutable_tempthdlo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseSPC VArLmt = 12;
       case 12:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 98)) {
           ptr = ctx->ParseMessage(_internal_mutable_varlmt(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseAPC VArThdHi = 13;
       case 13:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 106)) {
           ptr = ctx->ParseMessage(_internal_mutable_varthdhi(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseAPC VArThdLo = 14;
       case 14:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 114)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 114)) {
           ptr = ctx->ParseMessage(_internal_mutable_varthdlo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseSPC VolLmt = 15;
       case 15:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 122)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 122)) {
           ptr = ctx->ParseMessage(_internal_mutable_vollmt(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseAPC VolThdHi = 16;
       case 16:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 130)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 130)) {
           ptr = ctx->ParseMessage(_internal_mutable_volthdhi(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseAPC VolThdLo = 17;
       case 17:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 138)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 138)) {
           ptr = ctx->ParseMessage(_internal_mutable_volthdlo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapBankControlYPSH::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CapBankControlYPSH::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:capbankmodule.CapBankControlYPSH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.PhaseSPC AmpLmt = 1;
-  if (this->has_amplmt()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_amplmt()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::amplmt(this), target, stream);
+      InternalWriteMessage(1, _Internal::amplmt(this),
+        _Internal::amplmt(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseAPC AmpThdHi = 2;
-  if (this->has_ampthdhi()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ampthdhi()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::ampthdhi(this), target, stream);
+      InternalWriteMessage(2, _Internal::ampthdhi(this),
+        _Internal::ampthdhi(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseAPC AmpThdLo = 3;
-  if (this->has_ampthdlo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ampthdlo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::ampthdlo(this), target, stream);
+      InternalWriteMessage(3, _Internal::ampthdlo(this),
+        _Internal::ampthdlo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlSPC CtlModeAuto = 4;
-  if (this->has_ctlmodeauto()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ctlmodeauto()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::ctlmodeauto(this), target, stream);
+      InternalWriteMessage(4, _Internal::ctlmodeauto(this),
+        _Internal::ctlmodeauto(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlSPC CtlModeOvrRd = 5;
-  if (this->has_ctlmodeovrrd()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ctlmodeovrrd()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::ctlmodeovrrd(this), target, stream);
+      InternalWriteMessage(5, _Internal::ctlmodeovrrd(this),
+        _Internal::ctlmodeovrrd(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlSPC CtlModeRem = 6;
-  if (this->has_ctlmoderem()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ctlmoderem()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::ctlmoderem(this), target, stream);
+      InternalWriteMessage(6, _Internal::ctlmoderem(this),
+        _Internal::ctlmoderem(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.Optional_DirectionModeKind DirMode = 7;
-  if (this->has_dirmode()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_dirmode()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::dirmode(this), target, stream);
+      InternalWriteMessage(7, _Internal::dirmode(this),
+        _Internal::dirmode(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseSPC Pos = 8;
-  if (this->has_pos()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_pos()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::pos(this), target, stream);
+      InternalWriteMessage(8, _Internal::pos(this),
+        _Internal::pos(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlSPC TempLmt = 9;
-  if (this->has_templmt()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_templmt()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        9, _Internal::templmt(this), target, stream);
+      InternalWriteMessage(9, _Internal::templmt(this),
+        _Internal::templmt(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlAPC TempThdHi = 10;
-  if (this->has_tempthdhi()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_tempthdhi()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        10, _Internal::tempthdhi(this), target, stream);
+      InternalWriteMessage(10, _Internal::tempthdhi(this),
+        _Internal::tempthdhi(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ControlAPC TempThdLo = 11;
-  if (this->has_tempthdlo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_tempthdlo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        11, _Internal::tempthdlo(this), target, stream);
+      InternalWriteMessage(11, _Internal::tempthdlo(this),
+        _Internal::tempthdlo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseSPC VArLmt = 12;
-  if (this->has_varlmt()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_varlmt()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        12, _Internal::varlmt(this), target, stream);
+      InternalWriteMessage(12, _Internal::varlmt(this),
+        _Internal::varlmt(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseAPC VArThdHi = 13;
-  if (this->has_varthdhi()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_varthdhi()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        13, _Internal::varthdhi(this), target, stream);
+      InternalWriteMessage(13, _Internal::varthdhi(this),
+        _Internal::varthdhi(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseAPC VArThdLo = 14;
-  if (this->has_varthdlo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_varthdlo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        14, _Internal::varthdlo(this), target, stream);
+      InternalWriteMessage(14, _Internal::varthdlo(this),
+        _Internal::varthdlo(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseSPC VolLmt = 15;
-  if (this->has_vollmt()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_vollmt()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        15, _Internal::vollmt(this), target, stream);
+      InternalWriteMessage(15, _Internal::vollmt(this),
+        _Internal::vollmt(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseAPC VolThdHi = 16;
-  if (this->has_volthdhi()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_volthdhi()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        16, _Internal::volthdhi(this), target, stream);
+      InternalWriteMessage(16, _Internal::volthdhi(this),
+        _Internal::volthdhi(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseAPC VolThdLo = 17;
-  if (this->has_volthdlo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_volthdlo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        17, _Internal::volthdlo(this), target, stream);
+      InternalWriteMessage(17, _Internal::volthdlo(this),
+        _Internal::volthdlo(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:capbankmodule.CapBankControlYPSH)
   return target;
 }
 
-size_t CapBankControlYPSH::ByteSizeLong() const {
+::size_t CapBankControlYPSH::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:capbankmodule.CapBankControlYPSH)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.PhaseSPC AmpLmt = 1;
-  if (this->has_amplmt()) {
+  if (this->_internal_has_amplmt()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *amplmt_);
+        *_impl_.amplmt_);
   }
 
   // .commonmodule.PhaseAPC AmpThdHi = 2;
-  if (this->has_ampthdhi()) {
+  if (this->_internal_has_ampthdhi()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ampthdhi_);
+        *_impl_.ampthdhi_);
   }
 
   // .commonmodule.PhaseAPC AmpThdLo = 3;
-  if (this->has_ampthdlo()) {
+  if (this->_internal_has_ampthdlo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ampthdlo_);
+        *_impl_.ampthdlo_);
   }
 
   // .commonmodule.ControlSPC CtlModeAuto = 4;
-  if (this->has_ctlmodeauto()) {
+  if (this->_internal_has_ctlmodeauto()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ctlmodeauto_);
+        *_impl_.ctlmodeauto_);
   }
 
   // .commonmodule.ControlSPC CtlModeOvrRd = 5;
-  if (this->has_ctlmodeovrrd()) {
+  if (this->_internal_has_ctlmodeovrrd()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ctlmodeovrrd_);
+        *_impl_.ctlmodeovrrd_);
   }
 
   // .commonmodule.ControlSPC CtlModeRem = 6;
-  if (this->has_ctlmoderem()) {
+  if (this->_internal_has_ctlmoderem()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ctlmoderem_);
+        *_impl_.ctlmoderem_);
   }
 
   // .commonmodule.Optional_DirectionModeKind DirMode = 7;
-  if (this->has_dirmode()) {
+  if (this->_internal_has_dirmode()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *dirmode_);
+        *_impl_.dirmode_);
   }
 
   // .commonmodule.PhaseSPC Pos = 8;
-  if (this->has_pos()) {
+  if (this->_internal_has_pos()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *pos_);
+        *_impl_.pos_);
   }
 
   // .commonmodule.ControlSPC TempLmt = 9;
-  if (this->has_templmt()) {
+  if (this->_internal_has_templmt()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *templmt_);
+        *_impl_.templmt_);
   }
 
   // .commonmodule.ControlAPC TempThdHi = 10;
-  if (this->has_tempthdhi()) {
+  if (this->_internal_has_tempthdhi()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *tempthdhi_);
+        *_impl_.tempthdhi_);
   }
 
   // .commonmodule.ControlAPC TempThdLo = 11;
-  if (this->has_tempthdlo()) {
+  if (this->_internal_has_tempthdlo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *tempthdlo_);
+        *_impl_.tempthdlo_);
   }
 
   // .commonmodule.PhaseSPC VArLmt = 12;
-  if (this->has_varlmt()) {
+  if (this->_internal_has_varlmt()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *varlmt_);
+        *_impl_.varlmt_);
   }
 
   // .commonmodule.PhaseAPC VArThdHi = 13;
-  if (this->has_varthdhi()) {
+  if (this->_internal_has_varthdhi()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *varthdhi_);
+        *_impl_.varthdhi_);
   }
 
   // .commonmodule.PhaseAPC VArThdLo = 14;
-  if (this->has_varthdlo()) {
+  if (this->_internal_has_varthdlo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *varthdlo_);
+        *_impl_.varthdlo_);
   }
 
   // .commonmodule.PhaseSPC VolLmt = 15;
-  if (this->has_vollmt()) {
+  if (this->_internal_has_vollmt()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *vollmt_);
+        *_impl_.vollmt_);
   }
 
   // .commonmodule.PhaseAPC VolThdHi = 16;
-  if (this->has_volthdhi()) {
+  if (this->_internal_has_volthdhi()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *volthdhi_);
+        *_impl_.volthdhi_);
   }
 
   // .commonmodule.PhaseAPC VolThdLo = 17;
-  if (this->has_volthdlo()) {
+  if (this->_internal_has_volthdlo()) {
     total_size += 2 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *volthdlo_);
+        *_impl_.volthdlo_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CapBankControlYPSH::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:capbankmodule.CapBankControlYPSH)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CapBankControlYPSH* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapBankControlYPSH>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:capbankmodule.CapBankControlYPSH)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:capbankmodule.CapBankControlYPSH)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CapBankControlYPSH::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CapBankControlYPSH::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CapBankControlYPSH::GetClassData() const { return &_class_data_; }
 
-void CapBankControlYPSH::MergeFrom(const CapBankControlYPSH& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankControlYPSH)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CapBankControlYPSH::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CapBankControlYPSH*>(&to_msg);
+  auto& from = static_cast<const CapBankControlYPSH&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankControlYPSH)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_amplmt()) {
-    _internal_mutable_amplmt()->::commonmodule::PhaseSPC::MergeFrom(from._internal_amplmt());
+  if (from._internal_has_amplmt()) {
+    _this->_internal_mutable_amplmt()->::commonmodule::PhaseSPC::MergeFrom(
+        from._internal_amplmt());
   }
-  if (from.has_ampthdhi()) {
-    _internal_mutable_ampthdhi()->::commonmodule::PhaseAPC::MergeFrom(from._internal_ampthdhi());
+  if (from._internal_has_ampthdhi()) {
+    _this->_internal_mutable_ampthdhi()->::commonmodule::PhaseAPC::MergeFrom(
+        from._internal_ampthdhi());
   }
-  if (from.has_ampthdlo()) {
-    _internal_mutable_ampthdlo()->::commonmodule::PhaseAPC::MergeFrom(from._internal_ampthdlo());
+  if (from._internal_has_ampthdlo()) {
+    _this->_internal_mutable_ampthdlo()->::commonmodule::PhaseAPC::MergeFrom(
+        from._internal_ampthdlo());
   }
-  if (from.has_ctlmodeauto()) {
-    _internal_mutable_ctlmodeauto()->::commonmodule::ControlSPC::MergeFrom(from._internal_ctlmodeauto());
+  if (from._internal_has_ctlmodeauto()) {
+    _this->_internal_mutable_ctlmodeauto()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_ctlmodeauto());
   }
-  if (from.has_ctlmodeovrrd()) {
-    _internal_mutable_ctlmodeovrrd()->::commonmodule::ControlSPC::MergeFrom(from._internal_ctlmodeovrrd());
+  if (from._internal_has_ctlmodeovrrd()) {
+    _this->_internal_mutable_ctlmodeovrrd()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_ctlmodeovrrd());
   }
-  if (from.has_ctlmoderem()) {
-    _internal_mutable_ctlmoderem()->::commonmodule::ControlSPC::MergeFrom(from._internal_ctlmoderem());
+  if (from._internal_has_ctlmoderem()) {
+    _this->_internal_mutable_ctlmoderem()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_ctlmoderem());
   }
-  if (from.has_dirmode()) {
-    _internal_mutable_dirmode()->::commonmodule::Optional_DirectionModeKind::MergeFrom(from._internal_dirmode());
+  if (from._internal_has_dirmode()) {
+    _this->_internal_mutable_dirmode()->::commonmodule::Optional_DirectionModeKind::MergeFrom(
+        from._internal_dirmode());
   }
-  if (from.has_pos()) {
-    _internal_mutable_pos()->::commonmodule::PhaseSPC::MergeFrom(from._internal_pos());
+  if (from._internal_has_pos()) {
+    _this->_internal_mutable_pos()->::commonmodule::PhaseSPC::MergeFrom(
+        from._internal_pos());
   }
-  if (from.has_templmt()) {
-    _internal_mutable_templmt()->::commonmodule::ControlSPC::MergeFrom(from._internal_templmt());
+  if (from._internal_has_templmt()) {
+    _this->_internal_mutable_templmt()->::commonmodule::ControlSPC::MergeFrom(
+        from._internal_templmt());
   }
-  if (from.has_tempthdhi()) {
-    _internal_mutable_tempthdhi()->::commonmodule::ControlAPC::MergeFrom(from._internal_tempthdhi());
+  if (from._internal_has_tempthdhi()) {
+    _this->_internal_mutable_tempthdhi()->::commonmodule::ControlAPC::MergeFrom(
+        from._internal_tempthdhi());
   }
-  if (from.has_tempthdlo()) {
-    _internal_mutable_tempthdlo()->::commonmodule::ControlAPC::MergeFrom(from._internal_tempthdlo());
+  if (from._internal_has_tempthdlo()) {
+    _this->_internal_mutable_tempthdlo()->::commonmodule::ControlAPC::MergeFrom(
+        from._internal_tempthdlo());
   }
-  if (from.has_varlmt()) {
-    _internal_mutable_varlmt()->::commonmodule::PhaseSPC::MergeFrom(from._internal_varlmt());
+  if (from._internal_has_varlmt()) {
+    _this->_internal_mutable_varlmt()->::commonmodule::PhaseSPC::MergeFrom(
+        from._internal_varlmt());
   }
-  if (from.has_varthdhi()) {
-    _internal_mutable_varthdhi()->::commonmodule::PhaseAPC::MergeFrom(from._internal_varthdhi());
+  if (from._internal_has_varthdhi()) {
+    _this->_internal_mutable_varthdhi()->::commonmodule::PhaseAPC::MergeFrom(
+        from._internal_varthdhi());
   }
-  if (from.has_varthdlo()) {
-    _internal_mutable_varthdlo()->::commonmodule::PhaseAPC::MergeFrom(from._internal_varthdlo());
+  if (from._internal_has_varthdlo()) {
+    _this->_internal_mutable_varthdlo()->::commonmodule::PhaseAPC::MergeFrom(
+        from._internal_varthdlo());
   }
-  if (from.has_vollmt()) {
-    _internal_mutable_vollmt()->::commonmodule::PhaseSPC::MergeFrom(from._internal_vollmt());
+  if (from._internal_has_vollmt()) {
+    _this->_internal_mutable_vollmt()->::commonmodule::PhaseSPC::MergeFrom(
+        from._internal_vollmt());
   }
-  if (from.has_volthdhi()) {
-    _internal_mutable_volthdhi()->::commonmodule::PhaseAPC::MergeFrom(from._internal_volthdhi());
+  if (from._internal_has_volthdhi()) {
+    _this->_internal_mutable_volthdhi()->::commonmodule::PhaseAPC::MergeFrom(
+        from._internal_volthdhi());
   }
-  if (from.has_volthdlo()) {
-    _internal_mutable_volthdlo()->::commonmodule::PhaseAPC::MergeFrom(from._internal_volthdlo());
+  if (from._internal_has_volthdlo()) {
+    _this->_internal_mutable_volthdlo()->::commonmodule::PhaseAPC::MergeFrom(
+        from._internal_volthdlo());
   }
-}
-
-void CapBankControlYPSH::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:capbankmodule.CapBankControlYPSH)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapBankControlYPSH::CopyFrom(const CapBankControlYPSH& from) {
@@ -1765,20 +1882,20 @@ bool CapBankControlYPSH::IsInitialized() const {
 
 void CapBankControlYPSH::InternalSwap(CapBankControlYPSH* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CapBankControlYPSH, volthdlo_)
-      + sizeof(CapBankControlYPSH::volthdlo_)
-      - PROTOBUF_FIELD_OFFSET(CapBankControlYPSH, amplmt_)>(
-          reinterpret_cast<char*>(&amplmt_),
-          reinterpret_cast<char*>(&other->amplmt_));
+      PROTOBUF_FIELD_OFFSET(CapBankControlYPSH, _impl_.volthdlo_)
+      + sizeof(CapBankControlYPSH::_impl_.volthdlo_)
+      - PROTOBUF_FIELD_OFFSET(CapBankControlYPSH, _impl_.amplmt_)>(
+          reinterpret_cast<char*>(&_impl_.amplmt_),
+          reinterpret_cast<char*>(&other->_impl_.amplmt_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CapBankControlYPSH::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_getter, &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once,
+      file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[1]);
 }
-
-
 // ===================================================================
 
 class CapBankPoint::_Internal {
@@ -1789,225 +1906,210 @@ class CapBankPoint::_Internal {
 
 const ::capbankmodule::CapBankControlYPSH&
 CapBankPoint::_Internal::control(const CapBankPoint* msg) {
-  return *msg->control_;
+  return *msg->_impl_.control_;
 }
 const ::commonmodule::Timestamp&
 CapBankPoint::_Internal::starttime(const CapBankPoint* msg) {
-  return *msg->starttime_;
+  return *msg->_impl_.starttime_;
 }
 void CapBankPoint::clear_starttime() {
-  if (GetArena() == nullptr && starttime_ != nullptr) {
-    delete starttime_;
+  if (GetArenaForAllocation() == nullptr && _impl_.starttime_ != nullptr) {
+    delete _impl_.starttime_;
   }
-  starttime_ = nullptr;
+  _impl_.starttime_ = nullptr;
 }
 CapBankPoint::CapBankPoint(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:capbankmodule.CapBankPoint)
 }
 CapBankPoint::CapBankPoint(const CapBankPoint& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CapBankPoint* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.control_){nullptr}
+    , decltype(_impl_.starttime_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_control()) {
-    control_ = new ::capbankmodule::CapBankControlYPSH(*from.control_);
-  } else {
-    control_ = nullptr;
+    _this->_impl_.control_ = new ::capbankmodule::CapBankControlYPSH(*from._impl_.control_);
   }
   if (from._internal_has_starttime()) {
-    starttime_ = new ::commonmodule::Timestamp(*from.starttime_);
-  } else {
-    starttime_ = nullptr;
+    _this->_impl_.starttime_ = new ::commonmodule::Timestamp(*from._impl_.starttime_);
   }
   // @@protoc_insertion_point(copy_constructor:capbankmodule.CapBankPoint)
 }
 
-void CapBankPoint::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&control_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&starttime_) -
-    reinterpret_cast<char*>(&control_)) + sizeof(starttime_));
+inline void CapBankPoint::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.control_){nullptr}
+    , decltype(_impl_.starttime_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CapBankPoint::~CapBankPoint() {
   // @@protoc_insertion_point(destructor:capbankmodule.CapBankPoint)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CapBankPoint::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete control_;
-  if (this != internal_default_instance()) delete starttime_;
+inline void CapBankPoint::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.control_;
+  if (this != internal_default_instance()) delete _impl_.starttime_;
 }
 
-void CapBankPoint::ArenaDtor(void* object) {
-  CapBankPoint* _this = reinterpret_cast< CapBankPoint* >(object);
-  (void)_this;
-}
-void CapBankPoint::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapBankPoint::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CapBankPoint::Clear() {
 // @@protoc_insertion_point(message_clear_start:capbankmodule.CapBankPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && control_ != nullptr) {
-    delete control_;
+  if (GetArenaForAllocation() == nullptr && _impl_.control_ != nullptr) {
+    delete _impl_.control_;
   }
-  control_ = nullptr;
-  if (GetArena() == nullptr && starttime_ != nullptr) {
-    delete starttime_;
+  _impl_.control_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.starttime_ != nullptr) {
+    delete _impl_.starttime_;
   }
-  starttime_ = nullptr;
+  _impl_.starttime_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CapBankPoint::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CapBankPoint::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .capbankmodule.CapBankControlYPSH control = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_control(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.Timestamp startTime = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_starttime(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapBankPoint::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CapBankPoint::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:capbankmodule.CapBankPoint)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .capbankmodule.CapBankControlYPSH control = 1;
-  if (this->has_control()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_control()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::control(this), target, stream);
+      InternalWriteMessage(1, _Internal::control(this),
+        _Internal::control(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.Timestamp startTime = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_starttime()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_starttime()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::starttime(this), target, stream);
+      InternalWriteMessage(2, _Internal::starttime(this),
+        _Internal::starttime(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:capbankmodule.CapBankPoint)
   return target;
 }
 
-size_t CapBankPoint::ByteSizeLong() const {
+::size_t CapBankPoint::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:capbankmodule.CapBankPoint)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .capbankmodule.CapBankControlYPSH control = 1;
-  if (this->has_control()) {
+  if (this->_internal_has_control()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *control_);
+        *_impl_.control_);
   }
 
   // .commonmodule.Timestamp startTime = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_starttime()) {
+  if (this->_internal_has_starttime()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *starttime_);
+        *_impl_.starttime_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CapBankPoint::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:capbankmodule.CapBankPoint)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CapBankPoint* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapBankPoint>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:capbankmodule.CapBankPoint)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:capbankmodule.CapBankPoint)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CapBankPoint::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CapBankPoint::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CapBankPoint::GetClassData() const { return &_class_data_; }
 
-void CapBankPoint::MergeFrom(const CapBankPoint& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankPoint)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CapBankPoint::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CapBankPoint*>(&to_msg);
+  auto& from = static_cast<const CapBankPoint&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankPoint)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_control()) {
-    _internal_mutable_control()->::capbankmodule::CapBankControlYPSH::MergeFrom(from._internal_control());
+  if (from._internal_has_control()) {
+    _this->_internal_mutable_control()->::capbankmodule::CapBankControlYPSH::MergeFrom(
+        from._internal_control());
   }
-  if (from.has_starttime()) {
-    _internal_mutable_starttime()->::commonmodule::Timestamp::MergeFrom(from._internal_starttime());
+  if (from._internal_has_starttime()) {
+    _this->_internal_mutable_starttime()->::commonmodule::Timestamp::MergeFrom(
+        from._internal_starttime());
   }
-}
-
-void CapBankPoint::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:capbankmodule.CapBankPoint)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapBankPoint::CopyFrom(const CapBankPoint& from) {
@@ -2023,20 +2125,20 @@ bool CapBankPoint::IsInitialized() const {
 
 void CapBankPoint::InternalSwap(CapBankPoint* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CapBankPoint, starttime_)
-      + sizeof(CapBankPoint::starttime_)
-      - PROTOBUF_FIELD_OFFSET(CapBankPoint, control_)>(
-          reinterpret_cast<char*>(&control_),
-          reinterpret_cast<char*>(&other->control_));
+      PROTOBUF_FIELD_OFFSET(CapBankPoint, _impl_.starttime_)
+      + sizeof(CapBankPoint::_impl_.starttime_)
+      - PROTOBUF_FIELD_OFFSET(CapBankPoint, _impl_.control_)>(
+          reinterpret_cast<char*>(&_impl_.control_),
+          reinterpret_cast<char*>(&other->_impl_.control_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CapBankPoint::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_getter, &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once,
+      file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[2]);
 }
-
-
 // ===================================================================
 
 class CapBankCSG::_Internal {
@@ -2044,62 +2146,66 @@ class CapBankCSG::_Internal {
 };
 
 CapBankCSG::CapBankCSG(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  crvpts_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:capbankmodule.CapBankCSG)
 }
 CapBankCSG::CapBankCSG(const CapBankCSG& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      crvpts_(from.crvpts_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CapBankCSG* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.crvpts_){from._impl_.crvpts_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:capbankmodule.CapBankCSG)
 }
 
-void CapBankCSG::SharedCtor() {
+inline void CapBankCSG::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.crvpts_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CapBankCSG::~CapBankCSG() {
   // @@protoc_insertion_point(destructor:capbankmodule.CapBankCSG)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CapBankCSG::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void CapBankCSG::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.crvpts_.~RepeatedPtrField();
 }
 
-void CapBankCSG::ArenaDtor(void* object) {
-  CapBankCSG* _this = reinterpret_cast< CapBankCSG* >(object);
-  (void)_this;
-}
-void CapBankCSG::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapBankCSG::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CapBankCSG::Clear() {
 // @@protoc_insertion_point(message_clear_start:capbankmodule.CapBankCSG)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  crvpts_.Clear();
+  _impl_.crvpts_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CapBankCSG::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CapBankCSG::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated .capbankmodule.CapBankPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -2107,106 +2213,90 @@ const char* CapBankCSG::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapBankCSG::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CapBankCSG::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:capbankmodule.CapBankCSG)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .capbankmodule.CapBankPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_crvpts_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_crvpts_size()); i < n; i++) {
+    const auto& repfield = this->_internal_crvpts(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_crvpts(i), target, stream);
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:capbankmodule.CapBankCSG)
   return target;
 }
 
-size_t CapBankCSG::ByteSizeLong() const {
+::size_t CapBankCSG::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:capbankmodule.CapBankCSG)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .capbankmodule.CapBankPoint crvPts = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
   total_size += 1UL * this->_internal_crvpts_size();
-  for (const auto& msg : this->crvpts_) {
+  for (const auto& msg : this->_impl_.crvpts_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CapBankCSG::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:capbankmodule.CapBankCSG)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CapBankCSG* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapBankCSG>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:capbankmodule.CapBankCSG)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:capbankmodule.CapBankCSG)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CapBankCSG::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CapBankCSG::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CapBankCSG::GetClassData() const { return &_class_data_; }
 
-void CapBankCSG::MergeFrom(const CapBankCSG& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankCSG)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CapBankCSG::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CapBankCSG*>(&to_msg);
+  auto& from = static_cast<const CapBankCSG&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankCSG)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  crvpts_.MergeFrom(from.crvpts_);
-}
-
-void CapBankCSG::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:capbankmodule.CapBankCSG)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_impl_.crvpts_.MergeFrom(from._impl_.crvpts_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapBankCSG::CopyFrom(const CapBankCSG& from) {
@@ -2222,15 +2312,15 @@ bool CapBankCSG::IsInitialized() const {
 
 void CapBankCSG::InternalSwap(CapBankCSG* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  crvpts_.InternalSwap(&other->crvpts_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.crvpts_.InternalSwap(&other->_impl_.crvpts_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CapBankCSG::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_getter, &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once,
+      file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[3]);
 }
-
-
 // ===================================================================
 
 class CapBankControlScheduleFSCH::_Internal {
@@ -2240,177 +2330,163 @@ class CapBankControlScheduleFSCH::_Internal {
 
 const ::capbankmodule::CapBankCSG&
 CapBankControlScheduleFSCH::_Internal::valcsg(const CapBankControlScheduleFSCH* msg) {
-  return *msg->valcsg_;
+  return *msg->_impl_.valcsg_;
 }
 CapBankControlScheduleFSCH::CapBankControlScheduleFSCH(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:capbankmodule.CapBankControlScheduleFSCH)
 }
 CapBankControlScheduleFSCH::CapBankControlScheduleFSCH(const CapBankControlScheduleFSCH& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CapBankControlScheduleFSCH* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.valcsg_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_valcsg()) {
-    valcsg_ = new ::capbankmodule::CapBankCSG(*from.valcsg_);
-  } else {
-    valcsg_ = nullptr;
+    _this->_impl_.valcsg_ = new ::capbankmodule::CapBankCSG(*from._impl_.valcsg_);
   }
   // @@protoc_insertion_point(copy_constructor:capbankmodule.CapBankControlScheduleFSCH)
 }
 
-void CapBankControlScheduleFSCH::SharedCtor() {
-valcsg_ = nullptr;
+inline void CapBankControlScheduleFSCH::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.valcsg_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CapBankControlScheduleFSCH::~CapBankControlScheduleFSCH() {
   // @@protoc_insertion_point(destructor:capbankmodule.CapBankControlScheduleFSCH)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CapBankControlScheduleFSCH::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete valcsg_;
+inline void CapBankControlScheduleFSCH::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.valcsg_;
 }
 
-void CapBankControlScheduleFSCH::ArenaDtor(void* object) {
-  CapBankControlScheduleFSCH* _this = reinterpret_cast< CapBankControlScheduleFSCH* >(object);
-  (void)_this;
-}
-void CapBankControlScheduleFSCH::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapBankControlScheduleFSCH::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CapBankControlScheduleFSCH::Clear() {
 // @@protoc_insertion_point(message_clear_start:capbankmodule.CapBankControlScheduleFSCH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && valcsg_ != nullptr) {
-    delete valcsg_;
+  if (GetArenaForAllocation() == nullptr && _impl_.valcsg_ != nullptr) {
+    delete _impl_.valcsg_;
   }
-  valcsg_ = nullptr;
+  _impl_.valcsg_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CapBankControlScheduleFSCH::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CapBankControlScheduleFSCH::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .capbankmodule.CapBankCSG ValCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_valcsg(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapBankControlScheduleFSCH::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CapBankControlScheduleFSCH::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:capbankmodule.CapBankControlScheduleFSCH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .capbankmodule.CapBankCSG ValCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_valcsg()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_valcsg()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::valcsg(this), target, stream);
+      InternalWriteMessage(1, _Internal::valcsg(this),
+        _Internal::valcsg(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:capbankmodule.CapBankControlScheduleFSCH)
   return target;
 }
 
-size_t CapBankControlScheduleFSCH::ByteSizeLong() const {
+::size_t CapBankControlScheduleFSCH::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:capbankmodule.CapBankControlScheduleFSCH)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .capbankmodule.CapBankCSG ValCSG = 1 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_valcsg()) {
+  if (this->_internal_has_valcsg()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *valcsg_);
+        *_impl_.valcsg_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CapBankControlScheduleFSCH::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:capbankmodule.CapBankControlScheduleFSCH)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CapBankControlScheduleFSCH* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapBankControlScheduleFSCH>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:capbankmodule.CapBankControlScheduleFSCH)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:capbankmodule.CapBankControlScheduleFSCH)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CapBankControlScheduleFSCH::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CapBankControlScheduleFSCH::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CapBankControlScheduleFSCH::GetClassData() const { return &_class_data_; }
 
-void CapBankControlScheduleFSCH::MergeFrom(const CapBankControlScheduleFSCH& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankControlScheduleFSCH)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CapBankControlScheduleFSCH::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CapBankControlScheduleFSCH*>(&to_msg);
+  auto& from = static_cast<const CapBankControlScheduleFSCH&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankControlScheduleFSCH)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_valcsg()) {
-    _internal_mutable_valcsg()->::capbankmodule::CapBankCSG::MergeFrom(from._internal_valcsg());
+  if (from._internal_has_valcsg()) {
+    _this->_internal_mutable_valcsg()->::capbankmodule::CapBankCSG::MergeFrom(
+        from._internal_valcsg());
   }
-}
-
-void CapBankControlScheduleFSCH::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:capbankmodule.CapBankControlScheduleFSCH)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapBankControlScheduleFSCH::CopyFrom(const CapBankControlScheduleFSCH& from) {
@@ -2426,15 +2502,15 @@ bool CapBankControlScheduleFSCH::IsInitialized() const {
 
 void CapBankControlScheduleFSCH::InternalSwap(CapBankControlScheduleFSCH* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(valcsg_, other->valcsg_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.valcsg_, other->_impl_.valcsg_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CapBankControlScheduleFSCH::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_getter, &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once,
+      file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[4]);
 }
-
-
 // ===================================================================
 
 class CapBankControlFSCC::_Internal {
@@ -2445,225 +2521,210 @@ class CapBankControlFSCC::_Internal {
 
 const ::commonmodule::ControlFSCC&
 CapBankControlFSCC::_Internal::controlfscc(const CapBankControlFSCC* msg) {
-  return *msg->controlfscc_;
+  return *msg->_impl_.controlfscc_;
 }
 const ::capbankmodule::CapBankControlScheduleFSCH&
 CapBankControlFSCC::_Internal::capbankcontrolschedulefsch(const CapBankControlFSCC* msg) {
-  return *msg->capbankcontrolschedulefsch_;
+  return *msg->_impl_.capbankcontrolschedulefsch_;
 }
 void CapBankControlFSCC::clear_controlfscc() {
-  if (GetArena() == nullptr && controlfscc_ != nullptr) {
-    delete controlfscc_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlfscc_ != nullptr) {
+    delete _impl_.controlfscc_;
   }
-  controlfscc_ = nullptr;
+  _impl_.controlfscc_ = nullptr;
 }
 CapBankControlFSCC::CapBankControlFSCC(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:capbankmodule.CapBankControlFSCC)
 }
 CapBankControlFSCC::CapBankControlFSCC(const CapBankControlFSCC& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CapBankControlFSCC* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlfscc_){nullptr}
+    , decltype(_impl_.capbankcontrolschedulefsch_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlfscc()) {
-    controlfscc_ = new ::commonmodule::ControlFSCC(*from.controlfscc_);
-  } else {
-    controlfscc_ = nullptr;
+    _this->_impl_.controlfscc_ = new ::commonmodule::ControlFSCC(*from._impl_.controlfscc_);
   }
   if (from._internal_has_capbankcontrolschedulefsch()) {
-    capbankcontrolschedulefsch_ = new ::capbankmodule::CapBankControlScheduleFSCH(*from.capbankcontrolschedulefsch_);
-  } else {
-    capbankcontrolschedulefsch_ = nullptr;
+    _this->_impl_.capbankcontrolschedulefsch_ = new ::capbankmodule::CapBankControlScheduleFSCH(*from._impl_.capbankcontrolschedulefsch_);
   }
   // @@protoc_insertion_point(copy_constructor:capbankmodule.CapBankControlFSCC)
 }
 
-void CapBankControlFSCC::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlfscc_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&capbankcontrolschedulefsch_) -
-    reinterpret_cast<char*>(&controlfscc_)) + sizeof(capbankcontrolschedulefsch_));
+inline void CapBankControlFSCC::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlfscc_){nullptr}
+    , decltype(_impl_.capbankcontrolschedulefsch_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CapBankControlFSCC::~CapBankControlFSCC() {
   // @@protoc_insertion_point(destructor:capbankmodule.CapBankControlFSCC)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CapBankControlFSCC::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlfscc_;
-  if (this != internal_default_instance()) delete capbankcontrolschedulefsch_;
+inline void CapBankControlFSCC::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlfscc_;
+  if (this != internal_default_instance()) delete _impl_.capbankcontrolschedulefsch_;
 }
 
-void CapBankControlFSCC::ArenaDtor(void* object) {
-  CapBankControlFSCC* _this = reinterpret_cast< CapBankControlFSCC* >(object);
-  (void)_this;
-}
-void CapBankControlFSCC::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapBankControlFSCC::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CapBankControlFSCC::Clear() {
 // @@protoc_insertion_point(message_clear_start:capbankmodule.CapBankControlFSCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlfscc_ != nullptr) {
-    delete controlfscc_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlfscc_ != nullptr) {
+    delete _impl_.controlfscc_;
   }
-  controlfscc_ = nullptr;
-  if (GetArena() == nullptr && capbankcontrolschedulefsch_ != nullptr) {
-    delete capbankcontrolschedulefsch_;
+  _impl_.controlfscc_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.capbankcontrolschedulefsch_ != nullptr) {
+    delete _impl_.capbankcontrolschedulefsch_;
   }
-  capbankcontrolschedulefsch_ = nullptr;
+  _impl_.capbankcontrolschedulefsch_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CapBankControlFSCC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CapBankControlFSCC::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlfscc(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .capbankmodule.CapBankControlScheduleFSCH capBankControlScheduleFSCH = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_capbankcontrolschedulefsch(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapBankControlFSCC::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CapBankControlFSCC::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:capbankmodule.CapBankControlFSCC)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlfscc()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlfscc()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlfscc(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlfscc(this),
+        _Internal::controlfscc(this).GetCachedSize(), target, stream);
   }
 
   // .capbankmodule.CapBankControlScheduleFSCH capBankControlScheduleFSCH = 2;
-  if (this->has_capbankcontrolschedulefsch()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_capbankcontrolschedulefsch()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::capbankcontrolschedulefsch(this), target, stream);
+      InternalWriteMessage(2, _Internal::capbankcontrolschedulefsch(this),
+        _Internal::capbankcontrolschedulefsch(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:capbankmodule.CapBankControlFSCC)
   return target;
 }
 
-size_t CapBankControlFSCC::ByteSizeLong() const {
+::size_t CapBankControlFSCC::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:capbankmodule.CapBankControlFSCC)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlFSCC controlFSCC = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlfscc()) {
+  if (this->_internal_has_controlfscc()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlfscc_);
+        *_impl_.controlfscc_);
   }
 
   // .capbankmodule.CapBankControlScheduleFSCH capBankControlScheduleFSCH = 2;
-  if (this->has_capbankcontrolschedulefsch()) {
+  if (this->_internal_has_capbankcontrolschedulefsch()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *capbankcontrolschedulefsch_);
+        *_impl_.capbankcontrolschedulefsch_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CapBankControlFSCC::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:capbankmodule.CapBankControlFSCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CapBankControlFSCC* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapBankControlFSCC>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:capbankmodule.CapBankControlFSCC)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:capbankmodule.CapBankControlFSCC)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CapBankControlFSCC::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CapBankControlFSCC::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CapBankControlFSCC::GetClassData() const { return &_class_data_; }
 
-void CapBankControlFSCC::MergeFrom(const CapBankControlFSCC& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankControlFSCC)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CapBankControlFSCC::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CapBankControlFSCC*>(&to_msg);
+  auto& from = static_cast<const CapBankControlFSCC&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankControlFSCC)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlfscc()) {
-    _internal_mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(from._internal_controlfscc());
+  if (from._internal_has_controlfscc()) {
+    _this->_internal_mutable_controlfscc()->::commonmodule::ControlFSCC::MergeFrom(
+        from._internal_controlfscc());
   }
-  if (from.has_capbankcontrolschedulefsch()) {
-    _internal_mutable_capbankcontrolschedulefsch()->::capbankmodule::CapBankControlScheduleFSCH::MergeFrom(from._internal_capbankcontrolschedulefsch());
+  if (from._internal_has_capbankcontrolschedulefsch()) {
+    _this->_internal_mutable_capbankcontrolschedulefsch()->::capbankmodule::CapBankControlScheduleFSCH::MergeFrom(
+        from._internal_capbankcontrolschedulefsch());
   }
-}
-
-void CapBankControlFSCC::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:capbankmodule.CapBankControlFSCC)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapBankControlFSCC::CopyFrom(const CapBankControlFSCC& from) {
@@ -2679,20 +2740,20 @@ bool CapBankControlFSCC::IsInitialized() const {
 
 void CapBankControlFSCC::InternalSwap(CapBankControlFSCC* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CapBankControlFSCC, capbankcontrolschedulefsch_)
-      + sizeof(CapBankControlFSCC::capbankcontrolschedulefsch_)
-      - PROTOBUF_FIELD_OFFSET(CapBankControlFSCC, controlfscc_)>(
-          reinterpret_cast<char*>(&controlfscc_),
-          reinterpret_cast<char*>(&other->controlfscc_));
+      PROTOBUF_FIELD_OFFSET(CapBankControlFSCC, _impl_.capbankcontrolschedulefsch_)
+      + sizeof(CapBankControlFSCC::_impl_.capbankcontrolschedulefsch_)
+      - PROTOBUF_FIELD_OFFSET(CapBankControlFSCC, _impl_.controlfscc_)>(
+          reinterpret_cast<char*>(&_impl_.controlfscc_),
+          reinterpret_cast<char*>(&other->_impl_.controlfscc_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CapBankControlFSCC::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_getter, &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once,
+      file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[5]);
 }
-
-
 // ===================================================================
 
 class CapBankControl::_Internal {
@@ -2704,270 +2765,257 @@ class CapBankControl::_Internal {
 
 const ::commonmodule::ControlValue&
 CapBankControl::_Internal::controlvalue(const CapBankControl* msg) {
-  return *msg->controlvalue_;
+  return *msg->_impl_.controlvalue_;
 }
 const ::commonmodule::CheckConditions&
 CapBankControl::_Internal::check(const CapBankControl* msg) {
-  return *msg->check_;
+  return *msg->_impl_.check_;
 }
 const ::capbankmodule::CapBankControlFSCC&
 CapBankControl::_Internal::capbankcontrolfscc(const CapBankControl* msg) {
-  return *msg->capbankcontrolfscc_;
+  return *msg->_impl_.capbankcontrolfscc_;
 }
 void CapBankControl::clear_controlvalue() {
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
   }
-  controlvalue_ = nullptr;
+  _impl_.controlvalue_ = nullptr;
 }
 void CapBankControl::clear_check() {
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
+  _impl_.check_ = nullptr;
 }
 CapBankControl::CapBankControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:capbankmodule.CapBankControl)
 }
 CapBankControl::CapBankControl(const CapBankControl& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CapBankControl* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.capbankcontrolfscc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlvalue()) {
-    controlvalue_ = new ::commonmodule::ControlValue(*from.controlvalue_);
-  } else {
-    controlvalue_ = nullptr;
+    _this->_impl_.controlvalue_ = new ::commonmodule::ControlValue(*from._impl_.controlvalue_);
   }
   if (from._internal_has_check()) {
-    check_ = new ::commonmodule::CheckConditions(*from.check_);
-  } else {
-    check_ = nullptr;
+    _this->_impl_.check_ = new ::commonmodule::CheckConditions(*from._impl_.check_);
   }
   if (from._internal_has_capbankcontrolfscc()) {
-    capbankcontrolfscc_ = new ::capbankmodule::CapBankControlFSCC(*from.capbankcontrolfscc_);
-  } else {
-    capbankcontrolfscc_ = nullptr;
+    _this->_impl_.capbankcontrolfscc_ = new ::capbankmodule::CapBankControlFSCC(*from._impl_.capbankcontrolfscc_);
   }
   // @@protoc_insertion_point(copy_constructor:capbankmodule.CapBankControl)
 }
 
-void CapBankControl::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&capbankcontrolfscc_) -
-    reinterpret_cast<char*>(&controlvalue_)) + sizeof(capbankcontrolfscc_));
+inline void CapBankControl::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.capbankcontrolfscc_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CapBankControl::~CapBankControl() {
   // @@protoc_insertion_point(destructor:capbankmodule.CapBankControl)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CapBankControl::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlvalue_;
-  if (this != internal_default_instance()) delete check_;
-  if (this != internal_default_instance()) delete capbankcontrolfscc_;
+inline void CapBankControl::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlvalue_;
+  if (this != internal_default_instance()) delete _impl_.check_;
+  if (this != internal_default_instance()) delete _impl_.capbankcontrolfscc_;
 }
 
-void CapBankControl::ArenaDtor(void* object) {
-  CapBankControl* _this = reinterpret_cast< CapBankControl* >(object);
-  (void)_this;
-}
-void CapBankControl::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapBankControl::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CapBankControl::Clear() {
 // @@protoc_insertion_point(message_clear_start:capbankmodule.CapBankControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
   }
-  controlvalue_ = nullptr;
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  _impl_.controlvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
-  if (GetArena() == nullptr && capbankcontrolfscc_ != nullptr) {
-    delete capbankcontrolfscc_;
+  _impl_.check_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.capbankcontrolfscc_ != nullptr) {
+    delete _impl_.capbankcontrolfscc_;
   }
-  capbankcontrolfscc_ = nullptr;
+  _impl_.capbankcontrolfscc_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CapBankControl::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CapBankControl::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlvalue(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.CheckConditions check = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .capbankmodule.CapBankControlFSCC capBankControlFSCC = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_capbankcontrolfscc(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapBankControl::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CapBankControl::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:capbankmodule.CapBankControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlvalue()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlvalue(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlvalue(this),
+        _Internal::controlvalue(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_check()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::check(this), target, stream);
+      InternalWriteMessage(2, _Internal::check(this),
+        _Internal::check(this).GetCachedSize(), target, stream);
   }
 
   // .capbankmodule.CapBankControlFSCC capBankControlFSCC = 3;
-  if (this->has_capbankcontrolfscc()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_capbankcontrolfscc()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::capbankcontrolfscc(this), target, stream);
+      InternalWriteMessage(3, _Internal::capbankcontrolfscc(this),
+        _Internal::capbankcontrolfscc(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:capbankmodule.CapBankControl)
   return target;
 }
 
-size_t CapBankControl::ByteSizeLong() const {
+::size_t CapBankControl::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:capbankmodule.CapBankControl)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
+  if (this->_internal_has_controlvalue()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlvalue_);
+        *_impl_.controlvalue_);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
+  if (this->_internal_has_check()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *check_);
+        *_impl_.check_);
   }
 
   // .capbankmodule.CapBankControlFSCC capBankControlFSCC = 3;
-  if (this->has_capbankcontrolfscc()) {
+  if (this->_internal_has_capbankcontrolfscc()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *capbankcontrolfscc_);
+        *_impl_.capbankcontrolfscc_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CapBankControl::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:capbankmodule.CapBankControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CapBankControl* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapBankControl>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:capbankmodule.CapBankControl)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:capbankmodule.CapBankControl)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CapBankControl::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CapBankControl::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CapBankControl::GetClassData() const { return &_class_data_; }
 
-void CapBankControl::MergeFrom(const CapBankControl& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CapBankControl::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CapBankControl*>(&to_msg);
+  auto& from = static_cast<const CapBankControl&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankControl)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlvalue()) {
-    _internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(from._internal_controlvalue());
+  if (from._internal_has_controlvalue()) {
+    _this->_internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(
+        from._internal_controlvalue());
   }
-  if (from.has_check()) {
-    _internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(from._internal_check());
+  if (from._internal_has_check()) {
+    _this->_internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(
+        from._internal_check());
   }
-  if (from.has_capbankcontrolfscc()) {
-    _internal_mutable_capbankcontrolfscc()->::capbankmodule::CapBankControlFSCC::MergeFrom(from._internal_capbankcontrolfscc());
+  if (from._internal_has_capbankcontrolfscc()) {
+    _this->_internal_mutable_capbankcontrolfscc()->::capbankmodule::CapBankControlFSCC::MergeFrom(
+        from._internal_capbankcontrolfscc());
   }
-}
-
-void CapBankControl::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:capbankmodule.CapBankControl)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapBankControl::CopyFrom(const CapBankControl& from) {
@@ -2983,20 +3031,20 @@ bool CapBankControl::IsInitialized() const {
 
 void CapBankControl::InternalSwap(CapBankControl* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CapBankControl, capbankcontrolfscc_)
-      + sizeof(CapBankControl::capbankcontrolfscc_)
-      - PROTOBUF_FIELD_OFFSET(CapBankControl, controlvalue_)>(
-          reinterpret_cast<char*>(&controlvalue_),
-          reinterpret_cast<char*>(&other->controlvalue_));
+      PROTOBUF_FIELD_OFFSET(CapBankControl, _impl_.capbankcontrolfscc_)
+      + sizeof(CapBankControl::_impl_.capbankcontrolfscc_)
+      - PROTOBUF_FIELD_OFFSET(CapBankControl, _impl_.controlvalue_)>(
+          reinterpret_cast<char*>(&_impl_.controlvalue_),
+          reinterpret_cast<char*>(&other->_impl_.controlvalue_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CapBankControl::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_getter, &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once,
+      file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[6]);
 }
-
-
 // ===================================================================
 
 class CapBankControlProfile::_Internal {
@@ -3008,264 +3056,251 @@ class CapBankControlProfile::_Internal {
 
 const ::commonmodule::ControlMessageInfo&
 CapBankControlProfile::_Internal::controlmessageinfo(const CapBankControlProfile* msg) {
-  return *msg->controlmessageinfo_;
+  return *msg->_impl_.controlmessageinfo_;
 }
 const ::capbankmodule::CapBankControl&
 CapBankControlProfile::_Internal::capbankcontrol(const CapBankControlProfile* msg) {
-  return *msg->capbankcontrol_;
+  return *msg->_impl_.capbankcontrol_;
 }
 const ::capbankmodule::CapBankSystem&
 CapBankControlProfile::_Internal::capbanksystem(const CapBankControlProfile* msg) {
-  return *msg->capbanksystem_;
+  return *msg->_impl_.capbanksystem_;
 }
 void CapBankControlProfile::clear_controlmessageinfo() {
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
+  _impl_.controlmessageinfo_ = nullptr;
 }
 CapBankControlProfile::CapBankControlProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:capbankmodule.CapBankControlProfile)
 }
 CapBankControlProfile::CapBankControlProfile(const CapBankControlProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CapBankControlProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.capbankcontrol_){nullptr}
+    , decltype(_impl_.capbanksystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlmessageinfo()) {
-    controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
-  } else {
-    controlmessageinfo_ = nullptr;
+    _this->_impl_.controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from._impl_.controlmessageinfo_);
   }
   if (from._internal_has_capbankcontrol()) {
-    capbankcontrol_ = new ::capbankmodule::CapBankControl(*from.capbankcontrol_);
-  } else {
-    capbankcontrol_ = nullptr;
+    _this->_impl_.capbankcontrol_ = new ::capbankmodule::CapBankControl(*from._impl_.capbankcontrol_);
   }
   if (from._internal_has_capbanksystem()) {
-    capbanksystem_ = new ::capbankmodule::CapBankSystem(*from.capbanksystem_);
-  } else {
-    capbanksystem_ = nullptr;
+    _this->_impl_.capbanksystem_ = new ::capbankmodule::CapBankSystem(*from._impl_.capbanksystem_);
   }
   // @@protoc_insertion_point(copy_constructor:capbankmodule.CapBankControlProfile)
 }
 
-void CapBankControlProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&capbanksystem_) -
-    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(capbanksystem_));
+inline void CapBankControlProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.capbankcontrol_){nullptr}
+    , decltype(_impl_.capbanksystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CapBankControlProfile::~CapBankControlProfile() {
   // @@protoc_insertion_point(destructor:capbankmodule.CapBankControlProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CapBankControlProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete capbankcontrol_;
-  if (this != internal_default_instance()) delete capbanksystem_;
+inline void CapBankControlProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.capbankcontrol_;
+  if (this != internal_default_instance()) delete _impl_.capbanksystem_;
 }
 
-void CapBankControlProfile::ArenaDtor(void* object) {
-  CapBankControlProfile* _this = reinterpret_cast< CapBankControlProfile* >(object);
-  (void)_this;
-}
-void CapBankControlProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapBankControlProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CapBankControlProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:capbankmodule.CapBankControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && capbankcontrol_ != nullptr) {
-    delete capbankcontrol_;
+  _impl_.controlmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.capbankcontrol_ != nullptr) {
+    delete _impl_.capbankcontrol_;
   }
-  capbankcontrol_ = nullptr;
-  if (GetArena() == nullptr && capbanksystem_ != nullptr) {
-    delete capbanksystem_;
+  _impl_.capbankcontrol_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.capbanksystem_ != nullptr) {
+    delete _impl_.capbanksystem_;
   }
-  capbanksystem_ = nullptr;
+  _impl_.capbanksystem_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CapBankControlProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CapBankControlProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .capbankmodule.CapBankControl capBankControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_capbankcontrol(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .capbankmodule.CapBankSystem capBankSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_capbanksystem(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapBankControlProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CapBankControlProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:capbankmodule.CapBankControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlmessageinfo(this),
+        _Internal::controlmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .capbankmodule.CapBankControl capBankControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbankcontrol()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_capbankcontrol()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::capbankcontrol(this), target, stream);
+      InternalWriteMessage(2, _Internal::capbankcontrol(this),
+        _Internal::capbankcontrol(this).GetCachedSize(), target, stream);
   }
 
   // .capbankmodule.CapBankSystem capBankSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbanksystem()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_capbanksystem()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::capbanksystem(this), target, stream);
+      InternalWriteMessage(3, _Internal::capbanksystem(this),
+        _Internal::capbanksystem(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:capbankmodule.CapBankControlProfile)
   return target;
 }
 
-size_t CapBankControlProfile::ByteSizeLong() const {
+::size_t CapBankControlProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:capbankmodule.CapBankControlProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
+  if (this->_internal_has_controlmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlmessageinfo_);
+        *_impl_.controlmessageinfo_);
   }
 
   // .capbankmodule.CapBankControl capBankControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbankcontrol()) {
+  if (this->_internal_has_capbankcontrol()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *capbankcontrol_);
+        *_impl_.capbankcontrol_);
   }
 
   // .capbankmodule.CapBankSystem capBankSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbanksystem()) {
+  if (this->_internal_has_capbanksystem()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *capbanksystem_);
+        *_impl_.capbanksystem_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CapBankControlProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:capbankmodule.CapBankControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CapBankControlProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapBankControlProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:capbankmodule.CapBankControlProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:capbankmodule.CapBankControlProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CapBankControlProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CapBankControlProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CapBankControlProfile::GetClassData() const { return &_class_data_; }
 
-void CapBankControlProfile::MergeFrom(const CapBankControlProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CapBankControlProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CapBankControlProfile*>(&to_msg);
+  auto& from = static_cast<const CapBankControlProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankControlProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlmessageinfo()) {
-    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
+  if (from._internal_has_controlmessageinfo()) {
+    _this->_internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(
+        from._internal_controlmessageinfo());
   }
-  if (from.has_capbankcontrol()) {
-    _internal_mutable_capbankcontrol()->::capbankmodule::CapBankControl::MergeFrom(from._internal_capbankcontrol());
+  if (from._internal_has_capbankcontrol()) {
+    _this->_internal_mutable_capbankcontrol()->::capbankmodule::CapBankControl::MergeFrom(
+        from._internal_capbankcontrol());
   }
-  if (from.has_capbanksystem()) {
-    _internal_mutable_capbanksystem()->::capbankmodule::CapBankSystem::MergeFrom(from._internal_capbanksystem());
+  if (from._internal_has_capbanksystem()) {
+    _this->_internal_mutable_capbanksystem()->::capbankmodule::CapBankSystem::MergeFrom(
+        from._internal_capbanksystem());
   }
-}
-
-void CapBankControlProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:capbankmodule.CapBankControlProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapBankControlProfile::CopyFrom(const CapBankControlProfile& from) {
@@ -3281,20 +3316,20 @@ bool CapBankControlProfile::IsInitialized() const {
 
 void CapBankControlProfile::InternalSwap(CapBankControlProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CapBankControlProfile, capbanksystem_)
-      + sizeof(CapBankControlProfile::capbanksystem_)
-      - PROTOBUF_FIELD_OFFSET(CapBankControlProfile, controlmessageinfo_)>(
-          reinterpret_cast<char*>(&controlmessageinfo_),
-          reinterpret_cast<char*>(&other->controlmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(CapBankControlProfile, _impl_.capbanksystem_)
+      + sizeof(CapBankControlProfile::_impl_.capbanksystem_)
+      - PROTOBUF_FIELD_OFFSET(CapBankControlProfile, _impl_.controlmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.controlmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.controlmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CapBankControlProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_getter, &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once,
+      file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[7]);
 }
-
-
 // ===================================================================
 
 class CapBankDiscreteControlYPSH::_Internal {
@@ -3305,225 +3340,210 @@ class CapBankDiscreteControlYPSH::_Internal {
 
 const ::commonmodule::LogicalNodeForControl&
 CapBankDiscreteControlYPSH::_Internal::logicalnodeforcontrol(const CapBankDiscreteControlYPSH* msg) {
-  return *msg->logicalnodeforcontrol_;
+  return *msg->_impl_.logicalnodeforcontrol_;
 }
 const ::capbankmodule::CapBankControlYPSH&
 CapBankDiscreteControlYPSH::_Internal::control(const CapBankDiscreteControlYPSH* msg) {
-  return *msg->control_;
+  return *msg->_impl_.control_;
 }
 void CapBankDiscreteControlYPSH::clear_logicalnodeforcontrol() {
-  if (GetArena() == nullptr && logicalnodeforcontrol_ != nullptr) {
-    delete logicalnodeforcontrol_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforcontrol_ != nullptr) {
+    delete _impl_.logicalnodeforcontrol_;
   }
-  logicalnodeforcontrol_ = nullptr;
+  _impl_.logicalnodeforcontrol_ = nullptr;
 }
 CapBankDiscreteControlYPSH::CapBankDiscreteControlYPSH(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:capbankmodule.CapBankDiscreteControlYPSH)
 }
 CapBankDiscreteControlYPSH::CapBankDiscreteControlYPSH(const CapBankDiscreteControlYPSH& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CapBankDiscreteControlYPSH* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforcontrol_){nullptr}
+    , decltype(_impl_.control_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_logicalnodeforcontrol()) {
-    logicalnodeforcontrol_ = new ::commonmodule::LogicalNodeForControl(*from.logicalnodeforcontrol_);
-  } else {
-    logicalnodeforcontrol_ = nullptr;
+    _this->_impl_.logicalnodeforcontrol_ = new ::commonmodule::LogicalNodeForControl(*from._impl_.logicalnodeforcontrol_);
   }
   if (from._internal_has_control()) {
-    control_ = new ::capbankmodule::CapBankControlYPSH(*from.control_);
-  } else {
-    control_ = nullptr;
+    _this->_impl_.control_ = new ::capbankmodule::CapBankControlYPSH(*from._impl_.control_);
   }
   // @@protoc_insertion_point(copy_constructor:capbankmodule.CapBankDiscreteControlYPSH)
 }
 
-void CapBankDiscreteControlYPSH::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnodeforcontrol_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&control_) -
-    reinterpret_cast<char*>(&logicalnodeforcontrol_)) + sizeof(control_));
+inline void CapBankDiscreteControlYPSH::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforcontrol_){nullptr}
+    , decltype(_impl_.control_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CapBankDiscreteControlYPSH::~CapBankDiscreteControlYPSH() {
   // @@protoc_insertion_point(destructor:capbankmodule.CapBankDiscreteControlYPSH)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CapBankDiscreteControlYPSH::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete logicalnodeforcontrol_;
-  if (this != internal_default_instance()) delete control_;
+inline void CapBankDiscreteControlYPSH::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.logicalnodeforcontrol_;
+  if (this != internal_default_instance()) delete _impl_.control_;
 }
 
-void CapBankDiscreteControlYPSH::ArenaDtor(void* object) {
-  CapBankDiscreteControlYPSH* _this = reinterpret_cast< CapBankDiscreteControlYPSH* >(object);
-  (void)_this;
-}
-void CapBankDiscreteControlYPSH::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapBankDiscreteControlYPSH::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CapBankDiscreteControlYPSH::Clear() {
 // @@protoc_insertion_point(message_clear_start:capbankmodule.CapBankDiscreteControlYPSH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && logicalnodeforcontrol_ != nullptr) {
-    delete logicalnodeforcontrol_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforcontrol_ != nullptr) {
+    delete _impl_.logicalnodeforcontrol_;
   }
-  logicalnodeforcontrol_ = nullptr;
-  if (GetArena() == nullptr && control_ != nullptr) {
-    delete control_;
+  _impl_.logicalnodeforcontrol_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.control_ != nullptr) {
+    delete _impl_.control_;
   }
-  control_ = nullptr;
+  _impl_.control_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CapBankDiscreteControlYPSH::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CapBankDiscreteControlYPSH::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforcontrol(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .capbankmodule.CapBankControlYPSH control = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_control(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapBankDiscreteControlYPSH::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CapBankDiscreteControlYPSH::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:capbankmodule.CapBankDiscreteControlYPSH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforcontrol()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_logicalnodeforcontrol()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnodeforcontrol(this), target, stream);
+      InternalWriteMessage(1, _Internal::logicalnodeforcontrol(this),
+        _Internal::logicalnodeforcontrol(this).GetCachedSize(), target, stream);
   }
 
   // .capbankmodule.CapBankControlYPSH control = 2;
-  if (this->has_control()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_control()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::control(this), target, stream);
+      InternalWriteMessage(2, _Internal::control(this),
+        _Internal::control(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:capbankmodule.CapBankDiscreteControlYPSH)
   return target;
 }
 
-size_t CapBankDiscreteControlYPSH::ByteSizeLong() const {
+::size_t CapBankDiscreteControlYPSH::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:capbankmodule.CapBankDiscreteControlYPSH)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForControl logicalNodeForControl = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforcontrol()) {
+  if (this->_internal_has_logicalnodeforcontrol()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *logicalnodeforcontrol_);
+        *_impl_.logicalnodeforcontrol_);
   }
 
   // .capbankmodule.CapBankControlYPSH control = 2;
-  if (this->has_control()) {
+  if (this->_internal_has_control()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *control_);
+        *_impl_.control_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CapBankDiscreteControlYPSH::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:capbankmodule.CapBankDiscreteControlYPSH)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CapBankDiscreteControlYPSH* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapBankDiscreteControlYPSH>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:capbankmodule.CapBankDiscreteControlYPSH)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:capbankmodule.CapBankDiscreteControlYPSH)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CapBankDiscreteControlYPSH::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CapBankDiscreteControlYPSH::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CapBankDiscreteControlYPSH::GetClassData() const { return &_class_data_; }
 
-void CapBankDiscreteControlYPSH::MergeFrom(const CapBankDiscreteControlYPSH& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankDiscreteControlYPSH)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CapBankDiscreteControlYPSH::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CapBankDiscreteControlYPSH*>(&to_msg);
+  auto& from = static_cast<const CapBankDiscreteControlYPSH&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankDiscreteControlYPSH)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_logicalnodeforcontrol()) {
-    _internal_mutable_logicalnodeforcontrol()->::commonmodule::LogicalNodeForControl::MergeFrom(from._internal_logicalnodeforcontrol());
+  if (from._internal_has_logicalnodeforcontrol()) {
+    _this->_internal_mutable_logicalnodeforcontrol()->::commonmodule::LogicalNodeForControl::MergeFrom(
+        from._internal_logicalnodeforcontrol());
   }
-  if (from.has_control()) {
-    _internal_mutable_control()->::capbankmodule::CapBankControlYPSH::MergeFrom(from._internal_control());
+  if (from._internal_has_control()) {
+    _this->_internal_mutable_control()->::capbankmodule::CapBankControlYPSH::MergeFrom(
+        from._internal_control());
   }
-}
-
-void CapBankDiscreteControlYPSH::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:capbankmodule.CapBankDiscreteControlYPSH)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapBankDiscreteControlYPSH::CopyFrom(const CapBankDiscreteControlYPSH& from) {
@@ -3539,20 +3559,20 @@ bool CapBankDiscreteControlYPSH::IsInitialized() const {
 
 void CapBankDiscreteControlYPSH::InternalSwap(CapBankDiscreteControlYPSH* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CapBankDiscreteControlYPSH, control_)
-      + sizeof(CapBankDiscreteControlYPSH::control_)
-      - PROTOBUF_FIELD_OFFSET(CapBankDiscreteControlYPSH, logicalnodeforcontrol_)>(
-          reinterpret_cast<char*>(&logicalnodeforcontrol_),
-          reinterpret_cast<char*>(&other->logicalnodeforcontrol_));
+      PROTOBUF_FIELD_OFFSET(CapBankDiscreteControlYPSH, _impl_.control_)
+      + sizeof(CapBankDiscreteControlYPSH::_impl_.control_)
+      - PROTOBUF_FIELD_OFFSET(CapBankDiscreteControlYPSH, _impl_.logicalnodeforcontrol_)>(
+          reinterpret_cast<char*>(&_impl_.logicalnodeforcontrol_),
+          reinterpret_cast<char*>(&other->_impl_.logicalnodeforcontrol_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CapBankDiscreteControlYPSH::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_getter, &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once,
+      file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[8]);
 }
-
-
 // ===================================================================
 
 class CapBankDiscreteControl::_Internal {
@@ -3564,270 +3584,257 @@ class CapBankDiscreteControl::_Internal {
 
 const ::commonmodule::ControlValue&
 CapBankDiscreteControl::_Internal::controlvalue(const CapBankDiscreteControl* msg) {
-  return *msg->controlvalue_;
+  return *msg->_impl_.controlvalue_;
 }
 const ::commonmodule::CheckConditions&
 CapBankDiscreteControl::_Internal::check(const CapBankDiscreteControl* msg) {
-  return *msg->check_;
+  return *msg->_impl_.check_;
 }
 const ::capbankmodule::CapBankDiscreteControlYPSH&
 CapBankDiscreteControl::_Internal::capbankdiscretecontrolypsh(const CapBankDiscreteControl* msg) {
-  return *msg->capbankdiscretecontrolypsh_;
+  return *msg->_impl_.capbankdiscretecontrolypsh_;
 }
 void CapBankDiscreteControl::clear_controlvalue() {
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
   }
-  controlvalue_ = nullptr;
+  _impl_.controlvalue_ = nullptr;
 }
 void CapBankDiscreteControl::clear_check() {
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
+  _impl_.check_ = nullptr;
 }
 CapBankDiscreteControl::CapBankDiscreteControl(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:capbankmodule.CapBankDiscreteControl)
 }
 CapBankDiscreteControl::CapBankDiscreteControl(const CapBankDiscreteControl& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CapBankDiscreteControl* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.capbankdiscretecontrolypsh_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlvalue()) {
-    controlvalue_ = new ::commonmodule::ControlValue(*from.controlvalue_);
-  } else {
-    controlvalue_ = nullptr;
+    _this->_impl_.controlvalue_ = new ::commonmodule::ControlValue(*from._impl_.controlvalue_);
   }
   if (from._internal_has_check()) {
-    check_ = new ::commonmodule::CheckConditions(*from.check_);
-  } else {
-    check_ = nullptr;
+    _this->_impl_.check_ = new ::commonmodule::CheckConditions(*from._impl_.check_);
   }
   if (from._internal_has_capbankdiscretecontrolypsh()) {
-    capbankdiscretecontrolypsh_ = new ::capbankmodule::CapBankDiscreteControlYPSH(*from.capbankdiscretecontrolypsh_);
-  } else {
-    capbankdiscretecontrolypsh_ = nullptr;
+    _this->_impl_.capbankdiscretecontrolypsh_ = new ::capbankmodule::CapBankDiscreteControlYPSH(*from._impl_.capbankdiscretecontrolypsh_);
   }
   // @@protoc_insertion_point(copy_constructor:capbankmodule.CapBankDiscreteControl)
 }
 
-void CapBankDiscreteControl::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&capbankdiscretecontrolypsh_) -
-    reinterpret_cast<char*>(&controlvalue_)) + sizeof(capbankdiscretecontrolypsh_));
+inline void CapBankDiscreteControl::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlvalue_){nullptr}
+    , decltype(_impl_.check_){nullptr}
+    , decltype(_impl_.capbankdiscretecontrolypsh_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CapBankDiscreteControl::~CapBankDiscreteControl() {
   // @@protoc_insertion_point(destructor:capbankmodule.CapBankDiscreteControl)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CapBankDiscreteControl::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlvalue_;
-  if (this != internal_default_instance()) delete check_;
-  if (this != internal_default_instance()) delete capbankdiscretecontrolypsh_;
+inline void CapBankDiscreteControl::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlvalue_;
+  if (this != internal_default_instance()) delete _impl_.check_;
+  if (this != internal_default_instance()) delete _impl_.capbankdiscretecontrolypsh_;
 }
 
-void CapBankDiscreteControl::ArenaDtor(void* object) {
-  CapBankDiscreteControl* _this = reinterpret_cast< CapBankDiscreteControl* >(object);
-  (void)_this;
-}
-void CapBankDiscreteControl::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapBankDiscreteControl::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CapBankDiscreteControl::Clear() {
 // @@protoc_insertion_point(message_clear_start:capbankmodule.CapBankDiscreteControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlvalue_ != nullptr) {
-    delete controlvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlvalue_ != nullptr) {
+    delete _impl_.controlvalue_;
   }
-  controlvalue_ = nullptr;
-  if (GetArena() == nullptr && check_ != nullptr) {
-    delete check_;
+  _impl_.controlvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.check_ != nullptr) {
+    delete _impl_.check_;
   }
-  check_ = nullptr;
-  if (GetArena() == nullptr && capbankdiscretecontrolypsh_ != nullptr) {
-    delete capbankdiscretecontrolypsh_;
+  _impl_.check_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.capbankdiscretecontrolypsh_ != nullptr) {
+    delete _impl_.capbankdiscretecontrolypsh_;
   }
-  capbankdiscretecontrolypsh_ = nullptr;
+  _impl_.capbankdiscretecontrolypsh_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CapBankDiscreteControl::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CapBankDiscreteControl::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlvalue(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.CheckConditions check = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_check(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .capbankmodule.CapBankDiscreteControlYPSH capBankDiscreteControlYPSH = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_capbankdiscretecontrolypsh(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapBankDiscreteControl::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CapBankDiscreteControl::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:capbankmodule.CapBankDiscreteControl)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlvalue()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlvalue(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlvalue(this),
+        _Internal::controlvalue(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_check()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::check(this), target, stream);
+      InternalWriteMessage(2, _Internal::check(this),
+        _Internal::check(this).GetCachedSize(), target, stream);
   }
 
   // .capbankmodule.CapBankDiscreteControlYPSH capBankDiscreteControlYPSH = 3;
-  if (this->has_capbankdiscretecontrolypsh()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_capbankdiscretecontrolypsh()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::capbankdiscretecontrolypsh(this), target, stream);
+      InternalWriteMessage(3, _Internal::capbankdiscretecontrolypsh(this),
+        _Internal::capbankdiscretecontrolypsh(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:capbankmodule.CapBankDiscreteControl)
   return target;
 }
 
-size_t CapBankDiscreteControl::ByteSizeLong() const {
+::size_t CapBankDiscreteControl::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:capbankmodule.CapBankDiscreteControl)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlValue controlValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlvalue()) {
+  if (this->_internal_has_controlvalue()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlvalue_);
+        *_impl_.controlvalue_);
   }
 
   // .commonmodule.CheckConditions check = 2;
-  if (this->has_check()) {
+  if (this->_internal_has_check()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *check_);
+        *_impl_.check_);
   }
 
   // .capbankmodule.CapBankDiscreteControlYPSH capBankDiscreteControlYPSH = 3;
-  if (this->has_capbankdiscretecontrolypsh()) {
+  if (this->_internal_has_capbankdiscretecontrolypsh()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *capbankdiscretecontrolypsh_);
+        *_impl_.capbankdiscretecontrolypsh_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CapBankDiscreteControl::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:capbankmodule.CapBankDiscreteControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CapBankDiscreteControl* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapBankDiscreteControl>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:capbankmodule.CapBankDiscreteControl)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:capbankmodule.CapBankDiscreteControl)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CapBankDiscreteControl::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CapBankDiscreteControl::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CapBankDiscreteControl::GetClassData() const { return &_class_data_; }
 
-void CapBankDiscreteControl::MergeFrom(const CapBankDiscreteControl& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankDiscreteControl)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CapBankDiscreteControl::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CapBankDiscreteControl*>(&to_msg);
+  auto& from = static_cast<const CapBankDiscreteControl&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankDiscreteControl)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlvalue()) {
-    _internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(from._internal_controlvalue());
+  if (from._internal_has_controlvalue()) {
+    _this->_internal_mutable_controlvalue()->::commonmodule::ControlValue::MergeFrom(
+        from._internal_controlvalue());
   }
-  if (from.has_check()) {
-    _internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(from._internal_check());
+  if (from._internal_has_check()) {
+    _this->_internal_mutable_check()->::commonmodule::CheckConditions::MergeFrom(
+        from._internal_check());
   }
-  if (from.has_capbankdiscretecontrolypsh()) {
-    _internal_mutable_capbankdiscretecontrolypsh()->::capbankmodule::CapBankDiscreteControlYPSH::MergeFrom(from._internal_capbankdiscretecontrolypsh());
+  if (from._internal_has_capbankdiscretecontrolypsh()) {
+    _this->_internal_mutable_capbankdiscretecontrolypsh()->::capbankmodule::CapBankDiscreteControlYPSH::MergeFrom(
+        from._internal_capbankdiscretecontrolypsh());
   }
-}
-
-void CapBankDiscreteControl::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:capbankmodule.CapBankDiscreteControl)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapBankDiscreteControl::CopyFrom(const CapBankDiscreteControl& from) {
@@ -3843,20 +3850,20 @@ bool CapBankDiscreteControl::IsInitialized() const {
 
 void CapBankDiscreteControl::InternalSwap(CapBankDiscreteControl* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CapBankDiscreteControl, capbankdiscretecontrolypsh_)
-      + sizeof(CapBankDiscreteControl::capbankdiscretecontrolypsh_)
-      - PROTOBUF_FIELD_OFFSET(CapBankDiscreteControl, controlvalue_)>(
-          reinterpret_cast<char*>(&controlvalue_),
-          reinterpret_cast<char*>(&other->controlvalue_));
+      PROTOBUF_FIELD_OFFSET(CapBankDiscreteControl, _impl_.capbankdiscretecontrolypsh_)
+      + sizeof(CapBankDiscreteControl::_impl_.capbankdiscretecontrolypsh_)
+      - PROTOBUF_FIELD_OFFSET(CapBankDiscreteControl, _impl_.controlvalue_)>(
+          reinterpret_cast<char*>(&_impl_.controlvalue_),
+          reinterpret_cast<char*>(&other->_impl_.controlvalue_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CapBankDiscreteControl::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_getter, &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once,
+      file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[9]);
 }
-
-
 // ===================================================================
 
 class CapBankDiscreteControlProfile::_Internal {
@@ -3868,264 +3875,251 @@ class CapBankDiscreteControlProfile::_Internal {
 
 const ::commonmodule::ControlMessageInfo&
 CapBankDiscreteControlProfile::_Internal::controlmessageinfo(const CapBankDiscreteControlProfile* msg) {
-  return *msg->controlmessageinfo_;
+  return *msg->_impl_.controlmessageinfo_;
 }
 const ::capbankmodule::CapBankDiscreteControl&
 CapBankDiscreteControlProfile::_Internal::capbankcontrol(const CapBankDiscreteControlProfile* msg) {
-  return *msg->capbankcontrol_;
+  return *msg->_impl_.capbankcontrol_;
 }
 const ::capbankmodule::CapBankSystem&
 CapBankDiscreteControlProfile::_Internal::capbanksystem(const CapBankDiscreteControlProfile* msg) {
-  return *msg->capbanksystem_;
+  return *msg->_impl_.capbanksystem_;
 }
 void CapBankDiscreteControlProfile::clear_controlmessageinfo() {
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
+  _impl_.controlmessageinfo_ = nullptr;
 }
 CapBankDiscreteControlProfile::CapBankDiscreteControlProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:capbankmodule.CapBankDiscreteControlProfile)
 }
 CapBankDiscreteControlProfile::CapBankDiscreteControlProfile(const CapBankDiscreteControlProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CapBankDiscreteControlProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.capbankcontrol_){nullptr}
+    , decltype(_impl_.capbanksystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_controlmessageinfo()) {
-    controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from.controlmessageinfo_);
-  } else {
-    controlmessageinfo_ = nullptr;
+    _this->_impl_.controlmessageinfo_ = new ::commonmodule::ControlMessageInfo(*from._impl_.controlmessageinfo_);
   }
   if (from._internal_has_capbankcontrol()) {
-    capbankcontrol_ = new ::capbankmodule::CapBankDiscreteControl(*from.capbankcontrol_);
-  } else {
-    capbankcontrol_ = nullptr;
+    _this->_impl_.capbankcontrol_ = new ::capbankmodule::CapBankDiscreteControl(*from._impl_.capbankcontrol_);
   }
   if (from._internal_has_capbanksystem()) {
-    capbanksystem_ = new ::capbankmodule::CapBankSystem(*from.capbanksystem_);
-  } else {
-    capbanksystem_ = nullptr;
+    _this->_impl_.capbanksystem_ = new ::capbankmodule::CapBankSystem(*from._impl_.capbanksystem_);
   }
   // @@protoc_insertion_point(copy_constructor:capbankmodule.CapBankDiscreteControlProfile)
 }
 
-void CapBankDiscreteControlProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&controlmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&capbanksystem_) -
-    reinterpret_cast<char*>(&controlmessageinfo_)) + sizeof(capbanksystem_));
+inline void CapBankDiscreteControlProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.controlmessageinfo_){nullptr}
+    , decltype(_impl_.capbankcontrol_){nullptr}
+    , decltype(_impl_.capbanksystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CapBankDiscreteControlProfile::~CapBankDiscreteControlProfile() {
   // @@protoc_insertion_point(destructor:capbankmodule.CapBankDiscreteControlProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CapBankDiscreteControlProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete controlmessageinfo_;
-  if (this != internal_default_instance()) delete capbankcontrol_;
-  if (this != internal_default_instance()) delete capbanksystem_;
+inline void CapBankDiscreteControlProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.controlmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.capbankcontrol_;
+  if (this != internal_default_instance()) delete _impl_.capbanksystem_;
 }
 
-void CapBankDiscreteControlProfile::ArenaDtor(void* object) {
-  CapBankDiscreteControlProfile* _this = reinterpret_cast< CapBankDiscreteControlProfile* >(object);
-  (void)_this;
-}
-void CapBankDiscreteControlProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapBankDiscreteControlProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CapBankDiscreteControlProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:capbankmodule.CapBankDiscreteControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && controlmessageinfo_ != nullptr) {
-    delete controlmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.controlmessageinfo_ != nullptr) {
+    delete _impl_.controlmessageinfo_;
   }
-  controlmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && capbankcontrol_ != nullptr) {
-    delete capbankcontrol_;
+  _impl_.controlmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.capbankcontrol_ != nullptr) {
+    delete _impl_.capbankcontrol_;
   }
-  capbankcontrol_ = nullptr;
-  if (GetArena() == nullptr && capbanksystem_ != nullptr) {
-    delete capbanksystem_;
+  _impl_.capbankcontrol_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.capbanksystem_ != nullptr) {
+    delete _impl_.capbanksystem_;
   }
-  capbanksystem_ = nullptr;
+  _impl_.capbanksystem_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CapBankDiscreteControlProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CapBankDiscreteControlProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_controlmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .capbankmodule.CapBankDiscreteControl capBankControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_capbankcontrol(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .capbankmodule.CapBankSystem capBankSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_capbanksystem(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapBankDiscreteControlProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CapBankDiscreteControlProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:capbankmodule.CapBankDiscreteControlProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_controlmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::controlmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::controlmessageinfo(this),
+        _Internal::controlmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .capbankmodule.CapBankDiscreteControl capBankControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbankcontrol()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_capbankcontrol()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::capbankcontrol(this), target, stream);
+      InternalWriteMessage(2, _Internal::capbankcontrol(this),
+        _Internal::capbankcontrol(this).GetCachedSize(), target, stream);
   }
 
   // .capbankmodule.CapBankSystem capBankSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbanksystem()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_capbanksystem()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::capbanksystem(this), target, stream);
+      InternalWriteMessage(3, _Internal::capbanksystem(this),
+        _Internal::capbanksystem(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:capbankmodule.CapBankDiscreteControlProfile)
   return target;
 }
 
-size_t CapBankDiscreteControlProfile::ByteSizeLong() const {
+::size_t CapBankDiscreteControlProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:capbankmodule.CapBankDiscreteControlProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ControlMessageInfo controlMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_controlmessageinfo()) {
+  if (this->_internal_has_controlmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *controlmessageinfo_);
+        *_impl_.controlmessageinfo_);
   }
 
   // .capbankmodule.CapBankDiscreteControl capBankControl = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbankcontrol()) {
+  if (this->_internal_has_capbankcontrol()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *capbankcontrol_);
+        *_impl_.capbankcontrol_);
   }
 
   // .capbankmodule.CapBankSystem capBankSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbanksystem()) {
+  if (this->_internal_has_capbanksystem()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *capbanksystem_);
+        *_impl_.capbanksystem_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CapBankDiscreteControlProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:capbankmodule.CapBankDiscreteControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CapBankDiscreteControlProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapBankDiscreteControlProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:capbankmodule.CapBankDiscreteControlProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:capbankmodule.CapBankDiscreteControlProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CapBankDiscreteControlProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CapBankDiscreteControlProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CapBankDiscreteControlProfile::GetClassData() const { return &_class_data_; }
 
-void CapBankDiscreteControlProfile::MergeFrom(const CapBankDiscreteControlProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankDiscreteControlProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CapBankDiscreteControlProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CapBankDiscreteControlProfile*>(&to_msg);
+  auto& from = static_cast<const CapBankDiscreteControlProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankDiscreteControlProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_controlmessageinfo()) {
-    _internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(from._internal_controlmessageinfo());
+  if (from._internal_has_controlmessageinfo()) {
+    _this->_internal_mutable_controlmessageinfo()->::commonmodule::ControlMessageInfo::MergeFrom(
+        from._internal_controlmessageinfo());
   }
-  if (from.has_capbankcontrol()) {
-    _internal_mutable_capbankcontrol()->::capbankmodule::CapBankDiscreteControl::MergeFrom(from._internal_capbankcontrol());
+  if (from._internal_has_capbankcontrol()) {
+    _this->_internal_mutable_capbankcontrol()->::capbankmodule::CapBankDiscreteControl::MergeFrom(
+        from._internal_capbankcontrol());
   }
-  if (from.has_capbanksystem()) {
-    _internal_mutable_capbanksystem()->::capbankmodule::CapBankSystem::MergeFrom(from._internal_capbanksystem());
+  if (from._internal_has_capbanksystem()) {
+    _this->_internal_mutable_capbanksystem()->::capbankmodule::CapBankSystem::MergeFrom(
+        from._internal_capbanksystem());
   }
-}
-
-void CapBankDiscreteControlProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:capbankmodule.CapBankDiscreteControlProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapBankDiscreteControlProfile::CopyFrom(const CapBankDiscreteControlProfile& from) {
@@ -4141,20 +4135,20 @@ bool CapBankDiscreteControlProfile::IsInitialized() const {
 
 void CapBankDiscreteControlProfile::InternalSwap(CapBankDiscreteControlProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CapBankDiscreteControlProfile, capbanksystem_)
-      + sizeof(CapBankDiscreteControlProfile::capbanksystem_)
-      - PROTOBUF_FIELD_OFFSET(CapBankDiscreteControlProfile, controlmessageinfo_)>(
-          reinterpret_cast<char*>(&controlmessageinfo_),
-          reinterpret_cast<char*>(&other->controlmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(CapBankDiscreteControlProfile, _impl_.capbanksystem_)
+      + sizeof(CapBankDiscreteControlProfile::_impl_.capbanksystem_)
+      - PROTOBUF_FIELD_OFFSET(CapBankDiscreteControlProfile, _impl_.controlmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.controlmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.controlmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CapBankDiscreteControlProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_getter, &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once,
+      file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[10]);
 }
-
-
 // ===================================================================
 
 class CapBankEventAndStatusYPSH::_Internal {
@@ -4172,546 +4166,545 @@ class CapBankEventAndStatusYPSH::_Internal {
 
 const ::commonmodule::LogicalNodeForEventAndStatus&
 CapBankEventAndStatusYPSH::_Internal::logicalnodeforeventandstatus(const CapBankEventAndStatusYPSH* msg) {
-  return *msg->logicalnodeforeventandstatus_;
+  return *msg->_impl_.logicalnodeforeventandstatus_;
 }
 const ::commonmodule::PhaseSPS&
 CapBankEventAndStatusYPSH::_Internal::amplmt(const CapBankEventAndStatusYPSH* msg) {
-  return *msg->amplmt_;
+  return *msg->_impl_.amplmt_;
 }
 const ::commonmodule::Optional_ControlModeKind&
 CapBankEventAndStatusYPSH::_Internal::ctlmode(const CapBankEventAndStatusYPSH* msg) {
-  return *msg->ctlmode_;
+  return *msg->_impl_.ctlmode_;
 }
 const ::commonmodule::PhaseSPS&
 CapBankEventAndStatusYPSH::_Internal::dirrev(const CapBankEventAndStatusYPSH* msg) {
-  return *msg->dirrev_;
+  return *msg->_impl_.dirrev_;
 }
 const ::commonmodule::ENS_DynamicTestKind&
 CapBankEventAndStatusYPSH::_Internal::dynamictest(const CapBankEventAndStatusYPSH* msg) {
-  return *msg->dynamictest_;
+  return *msg->_impl_.dynamictest_;
 }
 const ::commonmodule::PhaseDPS&
 CapBankEventAndStatusYPSH::_Internal::pos(const CapBankEventAndStatusYPSH* msg) {
-  return *msg->pos_;
+  return *msg->_impl_.pos_;
 }
 const ::commonmodule::PhaseSPS&
 CapBankEventAndStatusYPSH::_Internal::templmt(const CapBankEventAndStatusYPSH* msg) {
-  return *msg->templmt_;
+  return *msg->_impl_.templmt_;
 }
 const ::commonmodule::PhaseSPS&
 CapBankEventAndStatusYPSH::_Internal::varlmt(const CapBankEventAndStatusYPSH* msg) {
-  return *msg->varlmt_;
+  return *msg->_impl_.varlmt_;
 }
 const ::commonmodule::PhaseSPS&
 CapBankEventAndStatusYPSH::_Internal::vollmt(const CapBankEventAndStatusYPSH* msg) {
-  return *msg->vollmt_;
+  return *msg->_impl_.vollmt_;
 }
 void CapBankEventAndStatusYPSH::clear_logicalnodeforeventandstatus() {
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
-    delete logicalnodeforeventandstatus_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforeventandstatus_ != nullptr) {
+    delete _impl_.logicalnodeforeventandstatus_;
   }
-  logicalnodeforeventandstatus_ = nullptr;
+  _impl_.logicalnodeforeventandstatus_ = nullptr;
 }
 void CapBankEventAndStatusYPSH::clear_amplmt() {
-  if (GetArena() == nullptr && amplmt_ != nullptr) {
-    delete amplmt_;
+  if (GetArenaForAllocation() == nullptr && _impl_.amplmt_ != nullptr) {
+    delete _impl_.amplmt_;
   }
-  amplmt_ = nullptr;
+  _impl_.amplmt_ = nullptr;
 }
 void CapBankEventAndStatusYPSH::clear_ctlmode() {
-  if (GetArena() == nullptr && ctlmode_ != nullptr) {
-    delete ctlmode_;
+  if (GetArenaForAllocation() == nullptr && _impl_.ctlmode_ != nullptr) {
+    delete _impl_.ctlmode_;
   }
-  ctlmode_ = nullptr;
+  _impl_.ctlmode_ = nullptr;
 }
 void CapBankEventAndStatusYPSH::clear_dirrev() {
-  if (GetArena() == nullptr && dirrev_ != nullptr) {
-    delete dirrev_;
+  if (GetArenaForAllocation() == nullptr && _impl_.dirrev_ != nullptr) {
+    delete _impl_.dirrev_;
   }
-  dirrev_ = nullptr;
+  _impl_.dirrev_ = nullptr;
 }
 void CapBankEventAndStatusYPSH::clear_dynamictest() {
-  if (GetArena() == nullptr && dynamictest_ != nullptr) {
-    delete dynamictest_;
+  if (GetArenaForAllocation() == nullptr && _impl_.dynamictest_ != nullptr) {
+    delete _impl_.dynamictest_;
   }
-  dynamictest_ = nullptr;
+  _impl_.dynamictest_ = nullptr;
 }
 void CapBankEventAndStatusYPSH::clear_pos() {
-  if (GetArena() == nullptr && pos_ != nullptr) {
-    delete pos_;
+  if (GetArenaForAllocation() == nullptr && _impl_.pos_ != nullptr) {
+    delete _impl_.pos_;
   }
-  pos_ = nullptr;
+  _impl_.pos_ = nullptr;
 }
 void CapBankEventAndStatusYPSH::clear_templmt() {
-  if (GetArena() == nullptr && templmt_ != nullptr) {
-    delete templmt_;
+  if (GetArenaForAllocation() == nullptr && _impl_.templmt_ != nullptr) {
+    delete _impl_.templmt_;
   }
-  templmt_ = nullptr;
+  _impl_.templmt_ = nullptr;
 }
 void CapBankEventAndStatusYPSH::clear_varlmt() {
-  if (GetArena() == nullptr && varlmt_ != nullptr) {
-    delete varlmt_;
+  if (GetArenaForAllocation() == nullptr && _impl_.varlmt_ != nullptr) {
+    delete _impl_.varlmt_;
   }
-  varlmt_ = nullptr;
+  _impl_.varlmt_ = nullptr;
 }
 void CapBankEventAndStatusYPSH::clear_vollmt() {
-  if (GetArena() == nullptr && vollmt_ != nullptr) {
-    delete vollmt_;
+  if (GetArenaForAllocation() == nullptr && _impl_.vollmt_ != nullptr) {
+    delete _impl_.vollmt_;
   }
-  vollmt_ = nullptr;
+  _impl_.vollmt_ = nullptr;
 }
 CapBankEventAndStatusYPSH::CapBankEventAndStatusYPSH(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:capbankmodule.CapBankEventAndStatusYPSH)
 }
 CapBankEventAndStatusYPSH::CapBankEventAndStatusYPSH(const CapBankEventAndStatusYPSH& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CapBankEventAndStatusYPSH* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforeventandstatus_){nullptr}
+    , decltype(_impl_.amplmt_){nullptr}
+    , decltype(_impl_.ctlmode_){nullptr}
+    , decltype(_impl_.dirrev_){nullptr}
+    , decltype(_impl_.dynamictest_){nullptr}
+    , decltype(_impl_.pos_){nullptr}
+    , decltype(_impl_.templmt_){nullptr}
+    , decltype(_impl_.varlmt_){nullptr}
+    , decltype(_impl_.vollmt_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_logicalnodeforeventandstatus()) {
-    logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from.logicalnodeforeventandstatus_);
-  } else {
-    logicalnodeforeventandstatus_ = nullptr;
+    _this->_impl_.logicalnodeforeventandstatus_ = new ::commonmodule::LogicalNodeForEventAndStatus(*from._impl_.logicalnodeforeventandstatus_);
   }
   if (from._internal_has_amplmt()) {
-    amplmt_ = new ::commonmodule::PhaseSPS(*from.amplmt_);
-  } else {
-    amplmt_ = nullptr;
+    _this->_impl_.amplmt_ = new ::commonmodule::PhaseSPS(*from._impl_.amplmt_);
   }
   if (from._internal_has_ctlmode()) {
-    ctlmode_ = new ::commonmodule::Optional_ControlModeKind(*from.ctlmode_);
-  } else {
-    ctlmode_ = nullptr;
+    _this->_impl_.ctlmode_ = new ::commonmodule::Optional_ControlModeKind(*from._impl_.ctlmode_);
   }
   if (from._internal_has_dirrev()) {
-    dirrev_ = new ::commonmodule::PhaseSPS(*from.dirrev_);
-  } else {
-    dirrev_ = nullptr;
+    _this->_impl_.dirrev_ = new ::commonmodule::PhaseSPS(*from._impl_.dirrev_);
   }
   if (from._internal_has_dynamictest()) {
-    dynamictest_ = new ::commonmodule::ENS_DynamicTestKind(*from.dynamictest_);
-  } else {
-    dynamictest_ = nullptr;
+    _this->_impl_.dynamictest_ = new ::commonmodule::ENS_DynamicTestKind(*from._impl_.dynamictest_);
   }
   if (from._internal_has_pos()) {
-    pos_ = new ::commonmodule::PhaseDPS(*from.pos_);
-  } else {
-    pos_ = nullptr;
+    _this->_impl_.pos_ = new ::commonmodule::PhaseDPS(*from._impl_.pos_);
   }
   if (from._internal_has_templmt()) {
-    templmt_ = new ::commonmodule::PhaseSPS(*from.templmt_);
-  } else {
-    templmt_ = nullptr;
+    _this->_impl_.templmt_ = new ::commonmodule::PhaseSPS(*from._impl_.templmt_);
   }
   if (from._internal_has_varlmt()) {
-    varlmt_ = new ::commonmodule::PhaseSPS(*from.varlmt_);
-  } else {
-    varlmt_ = nullptr;
+    _this->_impl_.varlmt_ = new ::commonmodule::PhaseSPS(*from._impl_.varlmt_);
   }
   if (from._internal_has_vollmt()) {
-    vollmt_ = new ::commonmodule::PhaseSPS(*from.vollmt_);
-  } else {
-    vollmt_ = nullptr;
+    _this->_impl_.vollmt_ = new ::commonmodule::PhaseSPS(*from._impl_.vollmt_);
   }
   // @@protoc_insertion_point(copy_constructor:capbankmodule.CapBankEventAndStatusYPSH)
 }
 
-void CapBankEventAndStatusYPSH::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&vollmt_) -
-    reinterpret_cast<char*>(&logicalnodeforeventandstatus_)) + sizeof(vollmt_));
+inline void CapBankEventAndStatusYPSH::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.logicalnodeforeventandstatus_){nullptr}
+    , decltype(_impl_.amplmt_){nullptr}
+    , decltype(_impl_.ctlmode_){nullptr}
+    , decltype(_impl_.dirrev_){nullptr}
+    , decltype(_impl_.dynamictest_){nullptr}
+    , decltype(_impl_.pos_){nullptr}
+    , decltype(_impl_.templmt_){nullptr}
+    , decltype(_impl_.varlmt_){nullptr}
+    , decltype(_impl_.vollmt_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CapBankEventAndStatusYPSH::~CapBankEventAndStatusYPSH() {
   // @@protoc_insertion_point(destructor:capbankmodule.CapBankEventAndStatusYPSH)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CapBankEventAndStatusYPSH::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete logicalnodeforeventandstatus_;
-  if (this != internal_default_instance()) delete amplmt_;
-  if (this != internal_default_instance()) delete ctlmode_;
-  if (this != internal_default_instance()) delete dirrev_;
-  if (this != internal_default_instance()) delete dynamictest_;
-  if (this != internal_default_instance()) delete pos_;
-  if (this != internal_default_instance()) delete templmt_;
-  if (this != internal_default_instance()) delete varlmt_;
-  if (this != internal_default_instance()) delete vollmt_;
+inline void CapBankEventAndStatusYPSH::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.logicalnodeforeventandstatus_;
+  if (this != internal_default_instance()) delete _impl_.amplmt_;
+  if (this != internal_default_instance()) delete _impl_.ctlmode_;
+  if (this != internal_default_instance()) delete _impl_.dirrev_;
+  if (this != internal_default_instance()) delete _impl_.dynamictest_;
+  if (this != internal_default_instance()) delete _impl_.pos_;
+  if (this != internal_default_instance()) delete _impl_.templmt_;
+  if (this != internal_default_instance()) delete _impl_.varlmt_;
+  if (this != internal_default_instance()) delete _impl_.vollmt_;
 }
 
-void CapBankEventAndStatusYPSH::ArenaDtor(void* object) {
-  CapBankEventAndStatusYPSH* _this = reinterpret_cast< CapBankEventAndStatusYPSH* >(object);
-  (void)_this;
-}
-void CapBankEventAndStatusYPSH::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapBankEventAndStatusYPSH::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CapBankEventAndStatusYPSH::Clear() {
 // @@protoc_insertion_point(message_clear_start:capbankmodule.CapBankEventAndStatusYPSH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && logicalnodeforeventandstatus_ != nullptr) {
-    delete logicalnodeforeventandstatus_;
+  if (GetArenaForAllocation() == nullptr && _impl_.logicalnodeforeventandstatus_ != nullptr) {
+    delete _impl_.logicalnodeforeventandstatus_;
   }
-  logicalnodeforeventandstatus_ = nullptr;
-  if (GetArena() == nullptr && amplmt_ != nullptr) {
-    delete amplmt_;
+  _impl_.logicalnodeforeventandstatus_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.amplmt_ != nullptr) {
+    delete _impl_.amplmt_;
   }
-  amplmt_ = nullptr;
-  if (GetArena() == nullptr && ctlmode_ != nullptr) {
-    delete ctlmode_;
+  _impl_.amplmt_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ctlmode_ != nullptr) {
+    delete _impl_.ctlmode_;
   }
-  ctlmode_ = nullptr;
-  if (GetArena() == nullptr && dirrev_ != nullptr) {
-    delete dirrev_;
+  _impl_.ctlmode_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.dirrev_ != nullptr) {
+    delete _impl_.dirrev_;
   }
-  dirrev_ = nullptr;
-  if (GetArena() == nullptr && dynamictest_ != nullptr) {
-    delete dynamictest_;
+  _impl_.dirrev_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.dynamictest_ != nullptr) {
+    delete _impl_.dynamictest_;
   }
-  dynamictest_ = nullptr;
-  if (GetArena() == nullptr && pos_ != nullptr) {
-    delete pos_;
+  _impl_.dynamictest_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.pos_ != nullptr) {
+    delete _impl_.pos_;
   }
-  pos_ = nullptr;
-  if (GetArena() == nullptr && templmt_ != nullptr) {
-    delete templmt_;
+  _impl_.pos_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.templmt_ != nullptr) {
+    delete _impl_.templmt_;
   }
-  templmt_ = nullptr;
-  if (GetArena() == nullptr && varlmt_ != nullptr) {
-    delete varlmt_;
+  _impl_.templmt_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.varlmt_ != nullptr) {
+    delete _impl_.varlmt_;
   }
-  varlmt_ = nullptr;
-  if (GetArena() == nullptr && vollmt_ != nullptr) {
-    delete vollmt_;
+  _impl_.varlmt_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.vollmt_ != nullptr) {
+    delete _impl_.vollmt_;
   }
-  vollmt_ = nullptr;
+  _impl_.vollmt_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CapBankEventAndStatusYPSH::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CapBankEventAndStatusYPSH::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_logicalnodeforeventandstatus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseSPS AmpLmt = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_amplmt(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.Optional_ControlModeKind CtlMode = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_ctlmode(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseSPS DirRev = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_dirrev(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ENS_DynamicTestKind DynamicTest = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_dynamictest(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseDPS Pos = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_pos(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseSPS TempLmt = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_templmt(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseSPS VArLmt = 8;
       case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 66)) {
           ptr = ctx->ParseMessage(_internal_mutable_varlmt(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseSPS VolLmt = 9;
       case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 74)) {
           ptr = ctx->ParseMessage(_internal_mutable_vollmt(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapBankEventAndStatusYPSH::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CapBankEventAndStatusYPSH::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:capbankmodule.CapBankEventAndStatusYPSH)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforeventandstatus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_logicalnodeforeventandstatus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::logicalnodeforeventandstatus(this), target, stream);
+      InternalWriteMessage(1, _Internal::logicalnodeforeventandstatus(this),
+        _Internal::logicalnodeforeventandstatus(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseSPS AmpLmt = 2;
-  if (this->has_amplmt()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_amplmt()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::amplmt(this), target, stream);
+      InternalWriteMessage(2, _Internal::amplmt(this),
+        _Internal::amplmt(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.Optional_ControlModeKind CtlMode = 3;
-  if (this->has_ctlmode()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ctlmode()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::ctlmode(this), target, stream);
+      InternalWriteMessage(3, _Internal::ctlmode(this),
+        _Internal::ctlmode(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseSPS DirRev = 4;
-  if (this->has_dirrev()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_dirrev()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::dirrev(this), target, stream);
+      InternalWriteMessage(4, _Internal::dirrev(this),
+        _Internal::dirrev(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ENS_DynamicTestKind DynamicTest = 5;
-  if (this->has_dynamictest()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_dynamictest()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::dynamictest(this), target, stream);
+      InternalWriteMessage(5, _Internal::dynamictest(this),
+        _Internal::dynamictest(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseDPS Pos = 6;
-  if (this->has_pos()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_pos()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::pos(this), target, stream);
+      InternalWriteMessage(6, _Internal::pos(this),
+        _Internal::pos(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseSPS TempLmt = 7;
-  if (this->has_templmt()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_templmt()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        7, _Internal::templmt(this), target, stream);
+      InternalWriteMessage(7, _Internal::templmt(this),
+        _Internal::templmt(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseSPS VArLmt = 8;
-  if (this->has_varlmt()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_varlmt()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        8, _Internal::varlmt(this), target, stream);
+      InternalWriteMessage(8, _Internal::varlmt(this),
+        _Internal::varlmt(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseSPS VolLmt = 9;
-  if (this->has_vollmt()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_vollmt()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        9, _Internal::vollmt(this), target, stream);
+      InternalWriteMessage(9, _Internal::vollmt(this),
+        _Internal::vollmt(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:capbankmodule.CapBankEventAndStatusYPSH)
   return target;
 }
 
-size_t CapBankEventAndStatusYPSH::ByteSizeLong() const {
+::size_t CapBankEventAndStatusYPSH::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:capbankmodule.CapBankEventAndStatusYPSH)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.LogicalNodeForEventAndStatus logicalNodeForEventAndStatus = 1 [(.uml.option_parent_message) = true];
-  if (this->has_logicalnodeforeventandstatus()) {
+  if (this->_internal_has_logicalnodeforeventandstatus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *logicalnodeforeventandstatus_);
+        *_impl_.logicalnodeforeventandstatus_);
   }
 
   // .commonmodule.PhaseSPS AmpLmt = 2;
-  if (this->has_amplmt()) {
+  if (this->_internal_has_amplmt()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *amplmt_);
+        *_impl_.amplmt_);
   }
 
   // .commonmodule.Optional_ControlModeKind CtlMode = 3;
-  if (this->has_ctlmode()) {
+  if (this->_internal_has_ctlmode()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ctlmode_);
+        *_impl_.ctlmode_);
   }
 
   // .commonmodule.PhaseSPS DirRev = 4;
-  if (this->has_dirrev()) {
+  if (this->_internal_has_dirrev()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *dirrev_);
+        *_impl_.dirrev_);
   }
 
   // .commonmodule.ENS_DynamicTestKind DynamicTest = 5;
-  if (this->has_dynamictest()) {
+  if (this->_internal_has_dynamictest()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *dynamictest_);
+        *_impl_.dynamictest_);
   }
 
   // .commonmodule.PhaseDPS Pos = 6;
-  if (this->has_pos()) {
+  if (this->_internal_has_pos()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *pos_);
+        *_impl_.pos_);
   }
 
   // .commonmodule.PhaseSPS TempLmt = 7;
-  if (this->has_templmt()) {
+  if (this->_internal_has_templmt()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *templmt_);
+        *_impl_.templmt_);
   }
 
   // .commonmodule.PhaseSPS VArLmt = 8;
-  if (this->has_varlmt()) {
+  if (this->_internal_has_varlmt()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *varlmt_);
+        *_impl_.varlmt_);
   }
 
   // .commonmodule.PhaseSPS VolLmt = 9;
-  if (this->has_vollmt()) {
+  if (this->_internal_has_vollmt()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *vollmt_);
+        *_impl_.vollmt_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CapBankEventAndStatusYPSH::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:capbankmodule.CapBankEventAndStatusYPSH)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CapBankEventAndStatusYPSH* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapBankEventAndStatusYPSH>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:capbankmodule.CapBankEventAndStatusYPSH)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:capbankmodule.CapBankEventAndStatusYPSH)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CapBankEventAndStatusYPSH::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CapBankEventAndStatusYPSH::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CapBankEventAndStatusYPSH::GetClassData() const { return &_class_data_; }
 
-void CapBankEventAndStatusYPSH::MergeFrom(const CapBankEventAndStatusYPSH& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankEventAndStatusYPSH)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CapBankEventAndStatusYPSH::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CapBankEventAndStatusYPSH*>(&to_msg);
+  auto& from = static_cast<const CapBankEventAndStatusYPSH&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankEventAndStatusYPSH)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_logicalnodeforeventandstatus()) {
-    _internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(from._internal_logicalnodeforeventandstatus());
+  if (from._internal_has_logicalnodeforeventandstatus()) {
+    _this->_internal_mutable_logicalnodeforeventandstatus()->::commonmodule::LogicalNodeForEventAndStatus::MergeFrom(
+        from._internal_logicalnodeforeventandstatus());
   }
-  if (from.has_amplmt()) {
-    _internal_mutable_amplmt()->::commonmodule::PhaseSPS::MergeFrom(from._internal_amplmt());
+  if (from._internal_has_amplmt()) {
+    _this->_internal_mutable_amplmt()->::commonmodule::PhaseSPS::MergeFrom(
+        from._internal_amplmt());
   }
-  if (from.has_ctlmode()) {
-    _internal_mutable_ctlmode()->::commonmodule::Optional_ControlModeKind::MergeFrom(from._internal_ctlmode());
+  if (from._internal_has_ctlmode()) {
+    _this->_internal_mutable_ctlmode()->::commonmodule::Optional_ControlModeKind::MergeFrom(
+        from._internal_ctlmode());
   }
-  if (from.has_dirrev()) {
-    _internal_mutable_dirrev()->::commonmodule::PhaseSPS::MergeFrom(from._internal_dirrev());
+  if (from._internal_has_dirrev()) {
+    _this->_internal_mutable_dirrev()->::commonmodule::PhaseSPS::MergeFrom(
+        from._internal_dirrev());
   }
-  if (from.has_dynamictest()) {
-    _internal_mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(from._internal_dynamictest());
+  if (from._internal_has_dynamictest()) {
+    _this->_internal_mutable_dynamictest()->::commonmodule::ENS_DynamicTestKind::MergeFrom(
+        from._internal_dynamictest());
   }
-  if (from.has_pos()) {
-    _internal_mutable_pos()->::commonmodule::PhaseDPS::MergeFrom(from._internal_pos());
+  if (from._internal_has_pos()) {
+    _this->_internal_mutable_pos()->::commonmodule::PhaseDPS::MergeFrom(
+        from._internal_pos());
   }
-  if (from.has_templmt()) {
-    _internal_mutable_templmt()->::commonmodule::PhaseSPS::MergeFrom(from._internal_templmt());
+  if (from._internal_has_templmt()) {
+    _this->_internal_mutable_templmt()->::commonmodule::PhaseSPS::MergeFrom(
+        from._internal_templmt());
   }
-  if (from.has_varlmt()) {
-    _internal_mutable_varlmt()->::commonmodule::PhaseSPS::MergeFrom(from._internal_varlmt());
+  if (from._internal_has_varlmt()) {
+    _this->_internal_mutable_varlmt()->::commonmodule::PhaseSPS::MergeFrom(
+        from._internal_varlmt());
   }
-  if (from.has_vollmt()) {
-    _internal_mutable_vollmt()->::commonmodule::PhaseSPS::MergeFrom(from._internal_vollmt());
+  if (from._internal_has_vollmt()) {
+    _this->_internal_mutable_vollmt()->::commonmodule::PhaseSPS::MergeFrom(
+        from._internal_vollmt());
   }
-}
-
-void CapBankEventAndStatusYPSH::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:capbankmodule.CapBankEventAndStatusYPSH)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapBankEventAndStatusYPSH::CopyFrom(const CapBankEventAndStatusYPSH& from) {
@@ -4727,20 +4720,20 @@ bool CapBankEventAndStatusYPSH::IsInitialized() const {
 
 void CapBankEventAndStatusYPSH::InternalSwap(CapBankEventAndStatusYPSH* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CapBankEventAndStatusYPSH, vollmt_)
-      + sizeof(CapBankEventAndStatusYPSH::vollmt_)
-      - PROTOBUF_FIELD_OFFSET(CapBankEventAndStatusYPSH, logicalnodeforeventandstatus_)>(
-          reinterpret_cast<char*>(&logicalnodeforeventandstatus_),
-          reinterpret_cast<char*>(&other->logicalnodeforeventandstatus_));
+      PROTOBUF_FIELD_OFFSET(CapBankEventAndStatusYPSH, _impl_.vollmt_)
+      + sizeof(CapBankEventAndStatusYPSH::_impl_.vollmt_)
+      - PROTOBUF_FIELD_OFFSET(CapBankEventAndStatusYPSH, _impl_.logicalnodeforeventandstatus_)>(
+          reinterpret_cast<char*>(&_impl_.logicalnodeforeventandstatus_),
+          reinterpret_cast<char*>(&other->_impl_.logicalnodeforeventandstatus_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CapBankEventAndStatusYPSH::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_getter, &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once,
+      file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[11]);
 }
-
-
 // ===================================================================
 
 class CapBankEvent::_Internal {
@@ -4751,225 +4744,210 @@ class CapBankEvent::_Internal {
 
 const ::commonmodule::EventValue&
 CapBankEvent::_Internal::eventvalue(const CapBankEvent* msg) {
-  return *msg->eventvalue_;
+  return *msg->_impl_.eventvalue_;
 }
 const ::capbankmodule::CapBankEventAndStatusYPSH&
 CapBankEvent::_Internal::capbankeventandstatusypsh(const CapBankEvent* msg) {
-  return *msg->capbankeventandstatusypsh_;
+  return *msg->_impl_.capbankeventandstatusypsh_;
 }
 void CapBankEvent::clear_eventvalue() {
-  if (GetArena() == nullptr && eventvalue_ != nullptr) {
-    delete eventvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventvalue_ != nullptr) {
+    delete _impl_.eventvalue_;
   }
-  eventvalue_ = nullptr;
+  _impl_.eventvalue_ = nullptr;
 }
 CapBankEvent::CapBankEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:capbankmodule.CapBankEvent)
 }
 CapBankEvent::CapBankEvent(const CapBankEvent& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CapBankEvent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventvalue_){nullptr}
+    , decltype(_impl_.capbankeventandstatusypsh_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_eventvalue()) {
-    eventvalue_ = new ::commonmodule::EventValue(*from.eventvalue_);
-  } else {
-    eventvalue_ = nullptr;
+    _this->_impl_.eventvalue_ = new ::commonmodule::EventValue(*from._impl_.eventvalue_);
   }
   if (from._internal_has_capbankeventandstatusypsh()) {
-    capbankeventandstatusypsh_ = new ::capbankmodule::CapBankEventAndStatusYPSH(*from.capbankeventandstatusypsh_);
-  } else {
-    capbankeventandstatusypsh_ = nullptr;
+    _this->_impl_.capbankeventandstatusypsh_ = new ::capbankmodule::CapBankEventAndStatusYPSH(*from._impl_.capbankeventandstatusypsh_);
   }
   // @@protoc_insertion_point(copy_constructor:capbankmodule.CapBankEvent)
 }
 
-void CapBankEvent::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&eventvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&capbankeventandstatusypsh_) -
-    reinterpret_cast<char*>(&eventvalue_)) + sizeof(capbankeventandstatusypsh_));
+inline void CapBankEvent::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventvalue_){nullptr}
+    , decltype(_impl_.capbankeventandstatusypsh_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CapBankEvent::~CapBankEvent() {
   // @@protoc_insertion_point(destructor:capbankmodule.CapBankEvent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CapBankEvent::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete eventvalue_;
-  if (this != internal_default_instance()) delete capbankeventandstatusypsh_;
+inline void CapBankEvent::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.eventvalue_;
+  if (this != internal_default_instance()) delete _impl_.capbankeventandstatusypsh_;
 }
 
-void CapBankEvent::ArenaDtor(void* object) {
-  CapBankEvent* _this = reinterpret_cast< CapBankEvent* >(object);
-  (void)_this;
-}
-void CapBankEvent::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapBankEvent::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CapBankEvent::Clear() {
 // @@protoc_insertion_point(message_clear_start:capbankmodule.CapBankEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && eventvalue_ != nullptr) {
-    delete eventvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventvalue_ != nullptr) {
+    delete _impl_.eventvalue_;
   }
-  eventvalue_ = nullptr;
-  if (GetArena() == nullptr && capbankeventandstatusypsh_ != nullptr) {
-    delete capbankeventandstatusypsh_;
+  _impl_.eventvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.capbankeventandstatusypsh_ != nullptr) {
+    delete _impl_.capbankeventandstatusypsh_;
   }
-  capbankeventandstatusypsh_ = nullptr;
+  _impl_.capbankeventandstatusypsh_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CapBankEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CapBankEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_eventvalue(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .capbankmodule.CapBankEventAndStatusYPSH CapBankEventAndStatusYPSH = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_capbankeventandstatusypsh(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapBankEvent::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CapBankEvent::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:capbankmodule.CapBankEvent)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventvalue()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_eventvalue()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::eventvalue(this), target, stream);
+      InternalWriteMessage(1, _Internal::eventvalue(this),
+        _Internal::eventvalue(this).GetCachedSize(), target, stream);
   }
 
   // .capbankmodule.CapBankEventAndStatusYPSH CapBankEventAndStatusYPSH = 2;
-  if (this->has_capbankeventandstatusypsh()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_capbankeventandstatusypsh()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::capbankeventandstatusypsh(this), target, stream);
+      InternalWriteMessage(2, _Internal::capbankeventandstatusypsh(this),
+        _Internal::capbankeventandstatusypsh(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:capbankmodule.CapBankEvent)
   return target;
 }
 
-size_t CapBankEvent::ByteSizeLong() const {
+::size_t CapBankEvent::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:capbankmodule.CapBankEvent)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventValue eventValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventvalue()) {
+  if (this->_internal_has_eventvalue()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *eventvalue_);
+        *_impl_.eventvalue_);
   }
 
   // .capbankmodule.CapBankEventAndStatusYPSH CapBankEventAndStatusYPSH = 2;
-  if (this->has_capbankeventandstatusypsh()) {
+  if (this->_internal_has_capbankeventandstatusypsh()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *capbankeventandstatusypsh_);
+        *_impl_.capbankeventandstatusypsh_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CapBankEvent::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:capbankmodule.CapBankEvent)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CapBankEvent* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapBankEvent>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:capbankmodule.CapBankEvent)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:capbankmodule.CapBankEvent)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CapBankEvent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CapBankEvent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CapBankEvent::GetClassData() const { return &_class_data_; }
 
-void CapBankEvent::MergeFrom(const CapBankEvent& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankEvent)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CapBankEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CapBankEvent*>(&to_msg);
+  auto& from = static_cast<const CapBankEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankEvent)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_eventvalue()) {
-    _internal_mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(from._internal_eventvalue());
+  if (from._internal_has_eventvalue()) {
+    _this->_internal_mutable_eventvalue()->::commonmodule::EventValue::MergeFrom(
+        from._internal_eventvalue());
   }
-  if (from.has_capbankeventandstatusypsh()) {
-    _internal_mutable_capbankeventandstatusypsh()->::capbankmodule::CapBankEventAndStatusYPSH::MergeFrom(from._internal_capbankeventandstatusypsh());
+  if (from._internal_has_capbankeventandstatusypsh()) {
+    _this->_internal_mutable_capbankeventandstatusypsh()->::capbankmodule::CapBankEventAndStatusYPSH::MergeFrom(
+        from._internal_capbankeventandstatusypsh());
   }
-}
-
-void CapBankEvent::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:capbankmodule.CapBankEvent)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapBankEvent::CopyFrom(const CapBankEvent& from) {
@@ -4985,20 +4963,20 @@ bool CapBankEvent::IsInitialized() const {
 
 void CapBankEvent::InternalSwap(CapBankEvent* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CapBankEvent, capbankeventandstatusypsh_)
-      + sizeof(CapBankEvent::capbankeventandstatusypsh_)
-      - PROTOBUF_FIELD_OFFSET(CapBankEvent, eventvalue_)>(
-          reinterpret_cast<char*>(&eventvalue_),
-          reinterpret_cast<char*>(&other->eventvalue_));
+      PROTOBUF_FIELD_OFFSET(CapBankEvent, _impl_.capbankeventandstatusypsh_)
+      + sizeof(CapBankEvent::_impl_.capbankeventandstatusypsh_)
+      - PROTOBUF_FIELD_OFFSET(CapBankEvent, _impl_.eventvalue_)>(
+          reinterpret_cast<char*>(&_impl_.eventvalue_),
+          reinterpret_cast<char*>(&other->_impl_.eventvalue_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CapBankEvent::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_getter, &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once,
+      file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[12]);
 }
-
-
 // ===================================================================
 
 class CapBankEventProfile::_Internal {
@@ -5010,264 +4988,251 @@ class CapBankEventProfile::_Internal {
 
 const ::commonmodule::EventMessageInfo&
 CapBankEventProfile::_Internal::eventmessageinfo(const CapBankEventProfile* msg) {
-  return *msg->eventmessageinfo_;
+  return *msg->_impl_.eventmessageinfo_;
 }
 const ::capbankmodule::CapBankEvent&
 CapBankEventProfile::_Internal::capbankevent(const CapBankEventProfile* msg) {
-  return *msg->capbankevent_;
+  return *msg->_impl_.capbankevent_;
 }
 const ::capbankmodule::CapBankSystem&
 CapBankEventProfile::_Internal::capbanksystem(const CapBankEventProfile* msg) {
-  return *msg->capbanksystem_;
+  return *msg->_impl_.capbanksystem_;
 }
 void CapBankEventProfile::clear_eventmessageinfo() {
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
-    delete eventmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventmessageinfo_ != nullptr) {
+    delete _impl_.eventmessageinfo_;
   }
-  eventmessageinfo_ = nullptr;
+  _impl_.eventmessageinfo_ = nullptr;
 }
 CapBankEventProfile::CapBankEventProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:capbankmodule.CapBankEventProfile)
 }
 CapBankEventProfile::CapBankEventProfile(const CapBankEventProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CapBankEventProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventmessageinfo_){nullptr}
+    , decltype(_impl_.capbankevent_){nullptr}
+    , decltype(_impl_.capbanksystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_eventmessageinfo()) {
-    eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from.eventmessageinfo_);
-  } else {
-    eventmessageinfo_ = nullptr;
+    _this->_impl_.eventmessageinfo_ = new ::commonmodule::EventMessageInfo(*from._impl_.eventmessageinfo_);
   }
   if (from._internal_has_capbankevent()) {
-    capbankevent_ = new ::capbankmodule::CapBankEvent(*from.capbankevent_);
-  } else {
-    capbankevent_ = nullptr;
+    _this->_impl_.capbankevent_ = new ::capbankmodule::CapBankEvent(*from._impl_.capbankevent_);
   }
   if (from._internal_has_capbanksystem()) {
-    capbanksystem_ = new ::capbankmodule::CapBankSystem(*from.capbanksystem_);
-  } else {
-    capbanksystem_ = nullptr;
+    _this->_impl_.capbanksystem_ = new ::capbankmodule::CapBankSystem(*from._impl_.capbanksystem_);
   }
   // @@protoc_insertion_point(copy_constructor:capbankmodule.CapBankEventProfile)
 }
 
-void CapBankEventProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&eventmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&capbanksystem_) -
-    reinterpret_cast<char*>(&eventmessageinfo_)) + sizeof(capbanksystem_));
+inline void CapBankEventProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.eventmessageinfo_){nullptr}
+    , decltype(_impl_.capbankevent_){nullptr}
+    , decltype(_impl_.capbanksystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CapBankEventProfile::~CapBankEventProfile() {
   // @@protoc_insertion_point(destructor:capbankmodule.CapBankEventProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CapBankEventProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete eventmessageinfo_;
-  if (this != internal_default_instance()) delete capbankevent_;
-  if (this != internal_default_instance()) delete capbanksystem_;
+inline void CapBankEventProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.eventmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.capbankevent_;
+  if (this != internal_default_instance()) delete _impl_.capbanksystem_;
 }
 
-void CapBankEventProfile::ArenaDtor(void* object) {
-  CapBankEventProfile* _this = reinterpret_cast< CapBankEventProfile* >(object);
-  (void)_this;
-}
-void CapBankEventProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapBankEventProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CapBankEventProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:capbankmodule.CapBankEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && eventmessageinfo_ != nullptr) {
-    delete eventmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.eventmessageinfo_ != nullptr) {
+    delete _impl_.eventmessageinfo_;
   }
-  eventmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && capbankevent_ != nullptr) {
-    delete capbankevent_;
+  _impl_.eventmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.capbankevent_ != nullptr) {
+    delete _impl_.capbankevent_;
   }
-  capbankevent_ = nullptr;
-  if (GetArena() == nullptr && capbanksystem_ != nullptr) {
-    delete capbanksystem_;
+  _impl_.capbankevent_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.capbanksystem_ != nullptr) {
+    delete _impl_.capbanksystem_;
   }
-  capbanksystem_ = nullptr;
+  _impl_.capbanksystem_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CapBankEventProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CapBankEventProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_eventmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .capbankmodule.CapBankEvent capBankEvent = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_capbankevent(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .capbankmodule.CapBankSystem capBankSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_capbanksystem(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapBankEventProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CapBankEventProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:capbankmodule.CapBankEventProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_eventmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::eventmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::eventmessageinfo(this),
+        _Internal::eventmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .capbankmodule.CapBankEvent capBankEvent = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbankevent()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_capbankevent()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::capbankevent(this), target, stream);
+      InternalWriteMessage(2, _Internal::capbankevent(this),
+        _Internal::capbankevent(this).GetCachedSize(), target, stream);
   }
 
   // .capbankmodule.CapBankSystem capBankSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbanksystem()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_capbanksystem()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::capbanksystem(this), target, stream);
+      InternalWriteMessage(3, _Internal::capbanksystem(this),
+        _Internal::capbanksystem(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:capbankmodule.CapBankEventProfile)
   return target;
 }
 
-size_t CapBankEventProfile::ByteSizeLong() const {
+::size_t CapBankEventProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:capbankmodule.CapBankEventProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.EventMessageInfo eventMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_eventmessageinfo()) {
+  if (this->_internal_has_eventmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *eventmessageinfo_);
+        *_impl_.eventmessageinfo_);
   }
 
   // .capbankmodule.CapBankEvent capBankEvent = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbankevent()) {
+  if (this->_internal_has_capbankevent()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *capbankevent_);
+        *_impl_.capbankevent_);
   }
 
   // .capbankmodule.CapBankSystem capBankSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbanksystem()) {
+  if (this->_internal_has_capbanksystem()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *capbanksystem_);
+        *_impl_.capbanksystem_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CapBankEventProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:capbankmodule.CapBankEventProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CapBankEventProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapBankEventProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:capbankmodule.CapBankEventProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:capbankmodule.CapBankEventProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CapBankEventProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CapBankEventProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CapBankEventProfile::GetClassData() const { return &_class_data_; }
 
-void CapBankEventProfile::MergeFrom(const CapBankEventProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankEventProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CapBankEventProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CapBankEventProfile*>(&to_msg);
+  auto& from = static_cast<const CapBankEventProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankEventProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_eventmessageinfo()) {
-    _internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(from._internal_eventmessageinfo());
+  if (from._internal_has_eventmessageinfo()) {
+    _this->_internal_mutable_eventmessageinfo()->::commonmodule::EventMessageInfo::MergeFrom(
+        from._internal_eventmessageinfo());
   }
-  if (from.has_capbankevent()) {
-    _internal_mutable_capbankevent()->::capbankmodule::CapBankEvent::MergeFrom(from._internal_capbankevent());
+  if (from._internal_has_capbankevent()) {
+    _this->_internal_mutable_capbankevent()->::capbankmodule::CapBankEvent::MergeFrom(
+        from._internal_capbankevent());
   }
-  if (from.has_capbanksystem()) {
-    _internal_mutable_capbanksystem()->::capbankmodule::CapBankSystem::MergeFrom(from._internal_capbanksystem());
+  if (from._internal_has_capbanksystem()) {
+    _this->_internal_mutable_capbanksystem()->::capbankmodule::CapBankSystem::MergeFrom(
+        from._internal_capbanksystem());
   }
-}
-
-void CapBankEventProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:capbankmodule.CapBankEventProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapBankEventProfile::CopyFrom(const CapBankEventProfile& from) {
@@ -5283,20 +5248,20 @@ bool CapBankEventProfile::IsInitialized() const {
 
 void CapBankEventProfile::InternalSwap(CapBankEventProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CapBankEventProfile, capbanksystem_)
-      + sizeof(CapBankEventProfile::capbanksystem_)
-      - PROTOBUF_FIELD_OFFSET(CapBankEventProfile, eventmessageinfo_)>(
-          reinterpret_cast<char*>(&eventmessageinfo_),
-          reinterpret_cast<char*>(&other->eventmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(CapBankEventProfile, _impl_.capbanksystem_)
+      + sizeof(CapBankEventProfile::_impl_.capbanksystem_)
+      - PROTOBUF_FIELD_OFFSET(CapBankEventProfile, _impl_.eventmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.eventmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.eventmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CapBankEventProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_getter, &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once,
+      file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[13]);
 }
-
-
 // ===================================================================
 
 class CapBankReading::_Internal {
@@ -5310,366 +5275,357 @@ class CapBankReading::_Internal {
 
 const ::commonmodule::ConductingEquipmentTerminalReading&
 CapBankReading::_Internal::conductingequipmentterminalreading(const CapBankReading* msg) {
-  return *msg->conductingequipmentterminalreading_;
+  return *msg->_impl_.conductingequipmentterminalreading_;
 }
 const ::commonmodule::PhaseMMTN&
 CapBankReading::_Internal::phasemmtn(const CapBankReading* msg) {
-  return *msg->phasemmtn_;
+  return *msg->_impl_.phasemmtn_;
 }
 const ::commonmodule::ReadingMMTR&
 CapBankReading::_Internal::readingmmtr(const CapBankReading* msg) {
-  return *msg->readingmmtr_;
+  return *msg->_impl_.readingmmtr_;
 }
 const ::commonmodule::ReadingMMXU&
 CapBankReading::_Internal::readingmmxu(const CapBankReading* msg) {
-  return *msg->readingmmxu_;
+  return *msg->_impl_.readingmmxu_;
 }
 const ::commonmodule::ReadingMMXU&
 CapBankReading::_Internal::secondaryreadingmmxu(const CapBankReading* msg) {
-  return *msg->secondaryreadingmmxu_;
+  return *msg->_impl_.secondaryreadingmmxu_;
 }
 void CapBankReading::clear_conductingequipmentterminalreading() {
-  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
-    delete conductingequipmentterminalreading_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipmentterminalreading_ != nullptr) {
+    delete _impl_.conductingequipmentterminalreading_;
   }
-  conductingequipmentterminalreading_ = nullptr;
+  _impl_.conductingequipmentterminalreading_ = nullptr;
 }
 void CapBankReading::clear_phasemmtn() {
-  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
-    delete phasemmtn_;
+  if (GetArenaForAllocation() == nullptr && _impl_.phasemmtn_ != nullptr) {
+    delete _impl_.phasemmtn_;
   }
-  phasemmtn_ = nullptr;
+  _impl_.phasemmtn_ = nullptr;
 }
 void CapBankReading::clear_readingmmtr() {
-  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
-    delete readingmmtr_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmtr_ != nullptr) {
+    delete _impl_.readingmmtr_;
   }
-  readingmmtr_ = nullptr;
+  _impl_.readingmmtr_ = nullptr;
 }
 void CapBankReading::clear_readingmmxu() {
-  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
-    delete readingmmxu_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmxu_ != nullptr) {
+    delete _impl_.readingmmxu_;
   }
-  readingmmxu_ = nullptr;
+  _impl_.readingmmxu_ = nullptr;
 }
 void CapBankReading::clear_secondaryreadingmmxu() {
-  if (GetArena() == nullptr && secondaryreadingmmxu_ != nullptr) {
-    delete secondaryreadingmmxu_;
+  if (GetArenaForAllocation() == nullptr && _impl_.secondaryreadingmmxu_ != nullptr) {
+    delete _impl_.secondaryreadingmmxu_;
   }
-  secondaryreadingmmxu_ = nullptr;
+  _impl_.secondaryreadingmmxu_ = nullptr;
 }
 CapBankReading::CapBankReading(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:capbankmodule.CapBankReading)
 }
 CapBankReading::CapBankReading(const CapBankReading& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CapBankReading* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipmentterminalreading_){nullptr}
+    , decltype(_impl_.phasemmtn_){nullptr}
+    , decltype(_impl_.readingmmtr_){nullptr}
+    , decltype(_impl_.readingmmxu_){nullptr}
+    , decltype(_impl_.secondaryreadingmmxu_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_conductingequipmentterminalreading()) {
-    conductingequipmentterminalreading_ = new ::commonmodule::ConductingEquipmentTerminalReading(*from.conductingequipmentterminalreading_);
-  } else {
-    conductingequipmentterminalreading_ = nullptr;
+    _this->_impl_.conductingequipmentterminalreading_ = new ::commonmodule::ConductingEquipmentTerminalReading(*from._impl_.conductingequipmentterminalreading_);
   }
   if (from._internal_has_phasemmtn()) {
-    phasemmtn_ = new ::commonmodule::PhaseMMTN(*from.phasemmtn_);
-  } else {
-    phasemmtn_ = nullptr;
+    _this->_impl_.phasemmtn_ = new ::commonmodule::PhaseMMTN(*from._impl_.phasemmtn_);
   }
   if (from._internal_has_readingmmtr()) {
-    readingmmtr_ = new ::commonmodule::ReadingMMTR(*from.readingmmtr_);
-  } else {
-    readingmmtr_ = nullptr;
+    _this->_impl_.readingmmtr_ = new ::commonmodule::ReadingMMTR(*from._impl_.readingmmtr_);
   }
   if (from._internal_has_readingmmxu()) {
-    readingmmxu_ = new ::commonmodule::ReadingMMXU(*from.readingmmxu_);
-  } else {
-    readingmmxu_ = nullptr;
+    _this->_impl_.readingmmxu_ = new ::commonmodule::ReadingMMXU(*from._impl_.readingmmxu_);
   }
   if (from._internal_has_secondaryreadingmmxu()) {
-    secondaryreadingmmxu_ = new ::commonmodule::ReadingMMXU(*from.secondaryreadingmmxu_);
-  } else {
-    secondaryreadingmmxu_ = nullptr;
+    _this->_impl_.secondaryreadingmmxu_ = new ::commonmodule::ReadingMMXU(*from._impl_.secondaryreadingmmxu_);
   }
   // @@protoc_insertion_point(copy_constructor:capbankmodule.CapBankReading)
 }
 
-void CapBankReading::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&conductingequipmentterminalreading_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&secondaryreadingmmxu_) -
-    reinterpret_cast<char*>(&conductingequipmentterminalreading_)) + sizeof(secondaryreadingmmxu_));
+inline void CapBankReading::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.conductingequipmentterminalreading_){nullptr}
+    , decltype(_impl_.phasemmtn_){nullptr}
+    , decltype(_impl_.readingmmtr_){nullptr}
+    , decltype(_impl_.readingmmxu_){nullptr}
+    , decltype(_impl_.secondaryreadingmmxu_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CapBankReading::~CapBankReading() {
   // @@protoc_insertion_point(destructor:capbankmodule.CapBankReading)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CapBankReading::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete conductingequipmentterminalreading_;
-  if (this != internal_default_instance()) delete phasemmtn_;
-  if (this != internal_default_instance()) delete readingmmtr_;
-  if (this != internal_default_instance()) delete readingmmxu_;
-  if (this != internal_default_instance()) delete secondaryreadingmmxu_;
+inline void CapBankReading::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.conductingequipmentterminalreading_;
+  if (this != internal_default_instance()) delete _impl_.phasemmtn_;
+  if (this != internal_default_instance()) delete _impl_.readingmmtr_;
+  if (this != internal_default_instance()) delete _impl_.readingmmxu_;
+  if (this != internal_default_instance()) delete _impl_.secondaryreadingmmxu_;
 }
 
-void CapBankReading::ArenaDtor(void* object) {
-  CapBankReading* _this = reinterpret_cast< CapBankReading* >(object);
-  (void)_this;
-}
-void CapBankReading::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapBankReading::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CapBankReading::Clear() {
 // @@protoc_insertion_point(message_clear_start:capbankmodule.CapBankReading)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && conductingequipmentterminalreading_ != nullptr) {
-    delete conductingequipmentterminalreading_;
+  if (GetArenaForAllocation() == nullptr && _impl_.conductingequipmentterminalreading_ != nullptr) {
+    delete _impl_.conductingequipmentterminalreading_;
   }
-  conductingequipmentterminalreading_ = nullptr;
-  if (GetArena() == nullptr && phasemmtn_ != nullptr) {
-    delete phasemmtn_;
+  _impl_.conductingequipmentterminalreading_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.phasemmtn_ != nullptr) {
+    delete _impl_.phasemmtn_;
   }
-  phasemmtn_ = nullptr;
-  if (GetArena() == nullptr && readingmmtr_ != nullptr) {
-    delete readingmmtr_;
+  _impl_.phasemmtn_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmtr_ != nullptr) {
+    delete _impl_.readingmmtr_;
   }
-  readingmmtr_ = nullptr;
-  if (GetArena() == nullptr && readingmmxu_ != nullptr) {
-    delete readingmmxu_;
+  _impl_.readingmmtr_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmmxu_ != nullptr) {
+    delete _impl_.readingmmxu_;
   }
-  readingmmxu_ = nullptr;
-  if (GetArena() == nullptr && secondaryreadingmmxu_ != nullptr) {
-    delete secondaryreadingmmxu_;
+  _impl_.readingmmxu_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.secondaryreadingmmxu_ != nullptr) {
+    delete _impl_.secondaryreadingmmxu_;
   }
-  secondaryreadingmmxu_ = nullptr;
+  _impl_.secondaryreadingmmxu_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CapBankReading::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CapBankReading::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_conductingequipmentterminalreading(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.PhaseMMTN phaseMMTN = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_phasemmtn(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ReadingMMTR readingMMTR = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_readingmmtr(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ReadingMMXU readingMMXU = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_readingmmxu(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .commonmodule.ReadingMMXU secondaryReadingMMXU = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_secondaryreadingmmxu(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapBankReading::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CapBankReading::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:capbankmodule.CapBankReading)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipmentterminalreading()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_conductingequipmentterminalreading()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::conductingequipmentterminalreading(this), target, stream);
+      InternalWriteMessage(1, _Internal::conductingequipmentterminalreading(this),
+        _Internal::conductingequipmentterminalreading(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 2;
-  if (this->has_phasemmtn()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_phasemmtn()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::phasemmtn(this), target, stream);
+      InternalWriteMessage(2, _Internal::phasemmtn(this),
+        _Internal::phasemmtn(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 3;
-  if (this->has_readingmmtr()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_readingmmtr()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::readingmmtr(this), target, stream);
+      InternalWriteMessage(3, _Internal::readingmmtr(this),
+        _Internal::readingmmtr(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 4;
-  if (this->has_readingmmxu()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_readingmmxu()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::readingmmxu(this), target, stream);
+      InternalWriteMessage(4, _Internal::readingmmxu(this),
+        _Internal::readingmmxu(this).GetCachedSize(), target, stream);
   }
 
   // .commonmodule.ReadingMMXU secondaryReadingMMXU = 5;
-  if (this->has_secondaryreadingmmxu()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_secondaryreadingmmxu()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::secondaryreadingmmxu(this), target, stream);
+      InternalWriteMessage(5, _Internal::secondaryreadingmmxu(this),
+        _Internal::secondaryreadingmmxu(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:capbankmodule.CapBankReading)
   return target;
 }
 
-size_t CapBankReading::ByteSizeLong() const {
+::size_t CapBankReading::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:capbankmodule.CapBankReading)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ConductingEquipmentTerminalReading conductingEquipmentTerminalReading = 1 [(.uml.option_parent_message) = true];
-  if (this->has_conductingequipmentterminalreading()) {
+  if (this->_internal_has_conductingequipmentterminalreading()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *conductingequipmentterminalreading_);
+        *_impl_.conductingequipmentterminalreading_);
   }
 
   // .commonmodule.PhaseMMTN phaseMMTN = 2;
-  if (this->has_phasemmtn()) {
+  if (this->_internal_has_phasemmtn()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *phasemmtn_);
+        *_impl_.phasemmtn_);
   }
 
   // .commonmodule.ReadingMMTR readingMMTR = 3;
-  if (this->has_readingmmtr()) {
+  if (this->_internal_has_readingmmtr()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmmtr_);
+        *_impl_.readingmmtr_);
   }
 
   // .commonmodule.ReadingMMXU readingMMXU = 4;
-  if (this->has_readingmmxu()) {
+  if (this->_internal_has_readingmmxu()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmmxu_);
+        *_impl_.readingmmxu_);
   }
 
   // .commonmodule.ReadingMMXU secondaryReadingMMXU = 5;
-  if (this->has_secondaryreadingmmxu()) {
+  if (this->_internal_has_secondaryreadingmmxu()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *secondaryreadingmmxu_);
+        *_impl_.secondaryreadingmmxu_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CapBankReading::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:capbankmodule.CapBankReading)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CapBankReading* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapBankReading>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:capbankmodule.CapBankReading)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:capbankmodule.CapBankReading)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CapBankReading::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CapBankReading::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CapBankReading::GetClassData() const { return &_class_data_; }
 
-void CapBankReading::MergeFrom(const CapBankReading& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankReading)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CapBankReading::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CapBankReading*>(&to_msg);
+  auto& from = static_cast<const CapBankReading&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankReading)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_conductingequipmentterminalreading()) {
-    _internal_mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(from._internal_conductingequipmentterminalreading());
+  if (from._internal_has_conductingequipmentterminalreading()) {
+    _this->_internal_mutable_conductingequipmentterminalreading()->::commonmodule::ConductingEquipmentTerminalReading::MergeFrom(
+        from._internal_conductingequipmentterminalreading());
   }
-  if (from.has_phasemmtn()) {
-    _internal_mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(from._internal_phasemmtn());
+  if (from._internal_has_phasemmtn()) {
+    _this->_internal_mutable_phasemmtn()->::commonmodule::PhaseMMTN::MergeFrom(
+        from._internal_phasemmtn());
   }
-  if (from.has_readingmmtr()) {
-    _internal_mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(from._internal_readingmmtr());
+  if (from._internal_has_readingmmtr()) {
+    _this->_internal_mutable_readingmmtr()->::commonmodule::ReadingMMTR::MergeFrom(
+        from._internal_readingmmtr());
   }
-  if (from.has_readingmmxu()) {
-    _internal_mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from._internal_readingmmxu());
+  if (from._internal_has_readingmmxu()) {
+    _this->_internal_mutable_readingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(
+        from._internal_readingmmxu());
   }
-  if (from.has_secondaryreadingmmxu()) {
-    _internal_mutable_secondaryreadingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(from._internal_secondaryreadingmmxu());
+  if (from._internal_has_secondaryreadingmmxu()) {
+    _this->_internal_mutable_secondaryreadingmmxu()->::commonmodule::ReadingMMXU::MergeFrom(
+        from._internal_secondaryreadingmmxu());
   }
-}
-
-void CapBankReading::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:capbankmodule.CapBankReading)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapBankReading::CopyFrom(const CapBankReading& from) {
@@ -5685,20 +5641,20 @@ bool CapBankReading::IsInitialized() const {
 
 void CapBankReading::InternalSwap(CapBankReading* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CapBankReading, secondaryreadingmmxu_)
-      + sizeof(CapBankReading::secondaryreadingmmxu_)
-      - PROTOBUF_FIELD_OFFSET(CapBankReading, conductingequipmentterminalreading_)>(
-          reinterpret_cast<char*>(&conductingequipmentterminalreading_),
-          reinterpret_cast<char*>(&other->conductingequipmentterminalreading_));
+      PROTOBUF_FIELD_OFFSET(CapBankReading, _impl_.secondaryreadingmmxu_)
+      + sizeof(CapBankReading::_impl_.secondaryreadingmmxu_)
+      - PROTOBUF_FIELD_OFFSET(CapBankReading, _impl_.conductingequipmentterminalreading_)>(
+          reinterpret_cast<char*>(&_impl_.conductingequipmentterminalreading_),
+          reinterpret_cast<char*>(&other->_impl_.conductingequipmentterminalreading_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CapBankReading::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_getter, &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once,
+      file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[14]);
 }
-
-
 // ===================================================================
 
 class CapBankReadingProfile::_Internal {
@@ -5710,264 +5666,251 @@ class CapBankReadingProfile::_Internal {
 
 const ::commonmodule::ReadingMessageInfo&
 CapBankReadingProfile::_Internal::readingmessageinfo(const CapBankReadingProfile* msg) {
-  return *msg->readingmessageinfo_;
+  return *msg->_impl_.readingmessageinfo_;
 }
 const ::capbankmodule::CapBankReading&
 CapBankReadingProfile::_Internal::capbankreading(const CapBankReadingProfile* msg) {
-  return *msg->capbankreading_;
+  return *msg->_impl_.capbankreading_;
 }
 const ::capbankmodule::CapBankSystem&
 CapBankReadingProfile::_Internal::capbanksystem(const CapBankReadingProfile* msg) {
-  return *msg->capbanksystem_;
+  return *msg->_impl_.capbanksystem_;
 }
 void CapBankReadingProfile::clear_readingmessageinfo() {
-  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
-    delete readingmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmessageinfo_ != nullptr) {
+    delete _impl_.readingmessageinfo_;
   }
-  readingmessageinfo_ = nullptr;
+  _impl_.readingmessageinfo_ = nullptr;
 }
 CapBankReadingProfile::CapBankReadingProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:capbankmodule.CapBankReadingProfile)
 }
 CapBankReadingProfile::CapBankReadingProfile(const CapBankReadingProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CapBankReadingProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.readingmessageinfo_){nullptr}
+    , decltype(_impl_.capbankreading_){nullptr}
+    , decltype(_impl_.capbanksystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_readingmessageinfo()) {
-    readingmessageinfo_ = new ::commonmodule::ReadingMessageInfo(*from.readingmessageinfo_);
-  } else {
-    readingmessageinfo_ = nullptr;
+    _this->_impl_.readingmessageinfo_ = new ::commonmodule::ReadingMessageInfo(*from._impl_.readingmessageinfo_);
   }
   if (from._internal_has_capbankreading()) {
-    capbankreading_ = new ::capbankmodule::CapBankReading(*from.capbankreading_);
-  } else {
-    capbankreading_ = nullptr;
+    _this->_impl_.capbankreading_ = new ::capbankmodule::CapBankReading(*from._impl_.capbankreading_);
   }
   if (from._internal_has_capbanksystem()) {
-    capbanksystem_ = new ::capbankmodule::CapBankSystem(*from.capbanksystem_);
-  } else {
-    capbanksystem_ = nullptr;
+    _this->_impl_.capbanksystem_ = new ::capbankmodule::CapBankSystem(*from._impl_.capbanksystem_);
   }
   // @@protoc_insertion_point(copy_constructor:capbankmodule.CapBankReadingProfile)
 }
 
-void CapBankReadingProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&readingmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&capbanksystem_) -
-    reinterpret_cast<char*>(&readingmessageinfo_)) + sizeof(capbanksystem_));
+inline void CapBankReadingProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.readingmessageinfo_){nullptr}
+    , decltype(_impl_.capbankreading_){nullptr}
+    , decltype(_impl_.capbanksystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CapBankReadingProfile::~CapBankReadingProfile() {
   // @@protoc_insertion_point(destructor:capbankmodule.CapBankReadingProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CapBankReadingProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete readingmessageinfo_;
-  if (this != internal_default_instance()) delete capbankreading_;
-  if (this != internal_default_instance()) delete capbanksystem_;
+inline void CapBankReadingProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.readingmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.capbankreading_;
+  if (this != internal_default_instance()) delete _impl_.capbanksystem_;
 }
 
-void CapBankReadingProfile::ArenaDtor(void* object) {
-  CapBankReadingProfile* _this = reinterpret_cast< CapBankReadingProfile* >(object);
-  (void)_this;
-}
-void CapBankReadingProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapBankReadingProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CapBankReadingProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:capbankmodule.CapBankReadingProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && readingmessageinfo_ != nullptr) {
-    delete readingmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.readingmessageinfo_ != nullptr) {
+    delete _impl_.readingmessageinfo_;
   }
-  readingmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && capbankreading_ != nullptr) {
-    delete capbankreading_;
+  _impl_.readingmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.capbankreading_ != nullptr) {
+    delete _impl_.capbankreading_;
   }
-  capbankreading_ = nullptr;
-  if (GetArena() == nullptr && capbanksystem_ != nullptr) {
-    delete capbanksystem_;
+  _impl_.capbankreading_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.capbanksystem_ != nullptr) {
+    delete _impl_.capbanksystem_;
   }
-  capbanksystem_ = nullptr;
+  _impl_.capbanksystem_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CapBankReadingProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CapBankReadingProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_readingmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .capbankmodule.CapBankReading capBankReading = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_capbankreading(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .capbankmodule.CapBankSystem capBankSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_capbanksystem(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapBankReadingProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CapBankReadingProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:capbankmodule.CapBankReadingProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_readingmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_readingmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::readingmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::readingmessageinfo(this),
+        _Internal::readingmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .capbankmodule.CapBankReading capBankReading = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbankreading()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_capbankreading()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::capbankreading(this), target, stream);
+      InternalWriteMessage(2, _Internal::capbankreading(this),
+        _Internal::capbankreading(this).GetCachedSize(), target, stream);
   }
 
   // .capbankmodule.CapBankSystem capBankSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbanksystem()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_capbanksystem()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::capbanksystem(this), target, stream);
+      InternalWriteMessage(3, _Internal::capbanksystem(this),
+        _Internal::capbanksystem(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:capbankmodule.CapBankReadingProfile)
   return target;
 }
 
-size_t CapBankReadingProfile::ByteSizeLong() const {
+::size_t CapBankReadingProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:capbankmodule.CapBankReadingProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.ReadingMessageInfo readingMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_readingmessageinfo()) {
+  if (this->_internal_has_readingmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *readingmessageinfo_);
+        *_impl_.readingmessageinfo_);
   }
 
   // .capbankmodule.CapBankReading capBankReading = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbankreading()) {
+  if (this->_internal_has_capbankreading()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *capbankreading_);
+        *_impl_.capbankreading_);
   }
 
   // .capbankmodule.CapBankSystem capBankSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbanksystem()) {
+  if (this->_internal_has_capbanksystem()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *capbanksystem_);
+        *_impl_.capbanksystem_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CapBankReadingProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:capbankmodule.CapBankReadingProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CapBankReadingProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapBankReadingProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:capbankmodule.CapBankReadingProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:capbankmodule.CapBankReadingProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CapBankReadingProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CapBankReadingProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CapBankReadingProfile::GetClassData() const { return &_class_data_; }
 
-void CapBankReadingProfile::MergeFrom(const CapBankReadingProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankReadingProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CapBankReadingProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CapBankReadingProfile*>(&to_msg);
+  auto& from = static_cast<const CapBankReadingProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankReadingProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_readingmessageinfo()) {
-    _internal_mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(from._internal_readingmessageinfo());
+  if (from._internal_has_readingmessageinfo()) {
+    _this->_internal_mutable_readingmessageinfo()->::commonmodule::ReadingMessageInfo::MergeFrom(
+        from._internal_readingmessageinfo());
   }
-  if (from.has_capbankreading()) {
-    _internal_mutable_capbankreading()->::capbankmodule::CapBankReading::MergeFrom(from._internal_capbankreading());
+  if (from._internal_has_capbankreading()) {
+    _this->_internal_mutable_capbankreading()->::capbankmodule::CapBankReading::MergeFrom(
+        from._internal_capbankreading());
   }
-  if (from.has_capbanksystem()) {
-    _internal_mutable_capbanksystem()->::capbankmodule::CapBankSystem::MergeFrom(from._internal_capbanksystem());
+  if (from._internal_has_capbanksystem()) {
+    _this->_internal_mutable_capbanksystem()->::capbankmodule::CapBankSystem::MergeFrom(
+        from._internal_capbanksystem());
   }
-}
-
-void CapBankReadingProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:capbankmodule.CapBankReadingProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapBankReadingProfile::CopyFrom(const CapBankReadingProfile& from) {
@@ -5983,20 +5926,20 @@ bool CapBankReadingProfile::IsInitialized() const {
 
 void CapBankReadingProfile::InternalSwap(CapBankReadingProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CapBankReadingProfile, capbanksystem_)
-      + sizeof(CapBankReadingProfile::capbanksystem_)
-      - PROTOBUF_FIELD_OFFSET(CapBankReadingProfile, readingmessageinfo_)>(
-          reinterpret_cast<char*>(&readingmessageinfo_),
-          reinterpret_cast<char*>(&other->readingmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(CapBankReadingProfile, _impl_.capbanksystem_)
+      + sizeof(CapBankReadingProfile::_impl_.capbanksystem_)
+      - PROTOBUF_FIELD_OFFSET(CapBankReadingProfile, _impl_.readingmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.readingmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.readingmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CapBankReadingProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_getter, &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once,
+      file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[15]);
 }
-
-
 // ===================================================================
 
 class CapBankStatus::_Internal {
@@ -6007,225 +5950,210 @@ class CapBankStatus::_Internal {
 
 const ::commonmodule::StatusValue&
 CapBankStatus::_Internal::statusvalue(const CapBankStatus* msg) {
-  return *msg->statusvalue_;
+  return *msg->_impl_.statusvalue_;
 }
 const ::capbankmodule::CapBankEventAndStatusYPSH&
 CapBankStatus::_Internal::capbankeventandstatusypsh(const CapBankStatus* msg) {
-  return *msg->capbankeventandstatusypsh_;
+  return *msg->_impl_.capbankeventandstatusypsh_;
 }
 void CapBankStatus::clear_statusvalue() {
-  if (GetArena() == nullptr && statusvalue_ != nullptr) {
-    delete statusvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusvalue_ != nullptr) {
+    delete _impl_.statusvalue_;
   }
-  statusvalue_ = nullptr;
+  _impl_.statusvalue_ = nullptr;
 }
 CapBankStatus::CapBankStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:capbankmodule.CapBankStatus)
 }
 CapBankStatus::CapBankStatus(const CapBankStatus& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CapBankStatus* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusvalue_){nullptr}
+    , decltype(_impl_.capbankeventandstatusypsh_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_statusvalue()) {
-    statusvalue_ = new ::commonmodule::StatusValue(*from.statusvalue_);
-  } else {
-    statusvalue_ = nullptr;
+    _this->_impl_.statusvalue_ = new ::commonmodule::StatusValue(*from._impl_.statusvalue_);
   }
   if (from._internal_has_capbankeventandstatusypsh()) {
-    capbankeventandstatusypsh_ = new ::capbankmodule::CapBankEventAndStatusYPSH(*from.capbankeventandstatusypsh_);
-  } else {
-    capbankeventandstatusypsh_ = nullptr;
+    _this->_impl_.capbankeventandstatusypsh_ = new ::capbankmodule::CapBankEventAndStatusYPSH(*from._impl_.capbankeventandstatusypsh_);
   }
   // @@protoc_insertion_point(copy_constructor:capbankmodule.CapBankStatus)
 }
 
-void CapBankStatus::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&statusvalue_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&capbankeventandstatusypsh_) -
-    reinterpret_cast<char*>(&statusvalue_)) + sizeof(capbankeventandstatusypsh_));
+inline void CapBankStatus::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusvalue_){nullptr}
+    , decltype(_impl_.capbankeventandstatusypsh_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CapBankStatus::~CapBankStatus() {
   // @@protoc_insertion_point(destructor:capbankmodule.CapBankStatus)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CapBankStatus::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete statusvalue_;
-  if (this != internal_default_instance()) delete capbankeventandstatusypsh_;
+inline void CapBankStatus::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.statusvalue_;
+  if (this != internal_default_instance()) delete _impl_.capbankeventandstatusypsh_;
 }
 
-void CapBankStatus::ArenaDtor(void* object) {
-  CapBankStatus* _this = reinterpret_cast< CapBankStatus* >(object);
-  (void)_this;
-}
-void CapBankStatus::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapBankStatus::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CapBankStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:capbankmodule.CapBankStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && statusvalue_ != nullptr) {
-    delete statusvalue_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusvalue_ != nullptr) {
+    delete _impl_.statusvalue_;
   }
-  statusvalue_ = nullptr;
-  if (GetArena() == nullptr && capbankeventandstatusypsh_ != nullptr) {
-    delete capbankeventandstatusypsh_;
+  _impl_.statusvalue_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.capbankeventandstatusypsh_ != nullptr) {
+    delete _impl_.capbankeventandstatusypsh_;
   }
-  capbankeventandstatusypsh_ = nullptr;
+  _impl_.capbankeventandstatusypsh_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CapBankStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CapBankStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_statusvalue(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .capbankmodule.CapBankEventAndStatusYPSH capBankEventAndStatusYPSH = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_capbankeventandstatusypsh(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapBankStatus::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CapBankStatus::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:capbankmodule.CapBankStatus)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusvalue()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_statusvalue()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::statusvalue(this), target, stream);
+      InternalWriteMessage(1, _Internal::statusvalue(this),
+        _Internal::statusvalue(this).GetCachedSize(), target, stream);
   }
 
   // .capbankmodule.CapBankEventAndStatusYPSH capBankEventAndStatusYPSH = 2;
-  if (this->has_capbankeventandstatusypsh()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_capbankeventandstatusypsh()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::capbankeventandstatusypsh(this), target, stream);
+      InternalWriteMessage(2, _Internal::capbankeventandstatusypsh(this),
+        _Internal::capbankeventandstatusypsh(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:capbankmodule.CapBankStatus)
   return target;
 }
 
-size_t CapBankStatus::ByteSizeLong() const {
+::size_t CapBankStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:capbankmodule.CapBankStatus)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusValue statusValue = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusvalue()) {
+  if (this->_internal_has_statusvalue()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *statusvalue_);
+        *_impl_.statusvalue_);
   }
 
   // .capbankmodule.CapBankEventAndStatusYPSH capBankEventAndStatusYPSH = 2;
-  if (this->has_capbankeventandstatusypsh()) {
+  if (this->_internal_has_capbankeventandstatusypsh()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *capbankeventandstatusypsh_);
+        *_impl_.capbankeventandstatusypsh_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CapBankStatus::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:capbankmodule.CapBankStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CapBankStatus* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapBankStatus>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:capbankmodule.CapBankStatus)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:capbankmodule.CapBankStatus)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CapBankStatus::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CapBankStatus::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CapBankStatus::GetClassData() const { return &_class_data_; }
 
-void CapBankStatus::MergeFrom(const CapBankStatus& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankStatus)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CapBankStatus::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CapBankStatus*>(&to_msg);
+  auto& from = static_cast<const CapBankStatus&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankStatus)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_statusvalue()) {
-    _internal_mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(from._internal_statusvalue());
+  if (from._internal_has_statusvalue()) {
+    _this->_internal_mutable_statusvalue()->::commonmodule::StatusValue::MergeFrom(
+        from._internal_statusvalue());
   }
-  if (from.has_capbankeventandstatusypsh()) {
-    _internal_mutable_capbankeventandstatusypsh()->::capbankmodule::CapBankEventAndStatusYPSH::MergeFrom(from._internal_capbankeventandstatusypsh());
+  if (from._internal_has_capbankeventandstatusypsh()) {
+    _this->_internal_mutable_capbankeventandstatusypsh()->::capbankmodule::CapBankEventAndStatusYPSH::MergeFrom(
+        from._internal_capbankeventandstatusypsh());
   }
-}
-
-void CapBankStatus::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:capbankmodule.CapBankStatus)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapBankStatus::CopyFrom(const CapBankStatus& from) {
@@ -6241,20 +6169,20 @@ bool CapBankStatus::IsInitialized() const {
 
 void CapBankStatus::InternalSwap(CapBankStatus* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CapBankStatus, capbankeventandstatusypsh_)
-      + sizeof(CapBankStatus::capbankeventandstatusypsh_)
-      - PROTOBUF_FIELD_OFFSET(CapBankStatus, statusvalue_)>(
-          reinterpret_cast<char*>(&statusvalue_),
-          reinterpret_cast<char*>(&other->statusvalue_));
+      PROTOBUF_FIELD_OFFSET(CapBankStatus, _impl_.capbankeventandstatusypsh_)
+      + sizeof(CapBankStatus::_impl_.capbankeventandstatusypsh_)
+      - PROTOBUF_FIELD_OFFSET(CapBankStatus, _impl_.statusvalue_)>(
+          reinterpret_cast<char*>(&_impl_.statusvalue_),
+          reinterpret_cast<char*>(&other->_impl_.statusvalue_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CapBankStatus::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_getter, &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once,
+      file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[16]);
 }
-
-
 // ===================================================================
 
 class CapBankStatusProfile::_Internal {
@@ -6266,264 +6194,251 @@ class CapBankStatusProfile::_Internal {
 
 const ::commonmodule::StatusMessageInfo&
 CapBankStatusProfile::_Internal::statusmessageinfo(const CapBankStatusProfile* msg) {
-  return *msg->statusmessageinfo_;
+  return *msg->_impl_.statusmessageinfo_;
 }
 const ::capbankmodule::CapBankStatus&
 CapBankStatusProfile::_Internal::capbankstatus(const CapBankStatusProfile* msg) {
-  return *msg->capbankstatus_;
+  return *msg->_impl_.capbankstatus_;
 }
 const ::capbankmodule::CapBankSystem&
 CapBankStatusProfile::_Internal::capbanksystem(const CapBankStatusProfile* msg) {
-  return *msg->capbanksystem_;
+  return *msg->_impl_.capbanksystem_;
 }
 void CapBankStatusProfile::clear_statusmessageinfo() {
-  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
-    delete statusmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusmessageinfo_ != nullptr) {
+    delete _impl_.statusmessageinfo_;
   }
-  statusmessageinfo_ = nullptr;
+  _impl_.statusmessageinfo_ = nullptr;
 }
 CapBankStatusProfile::CapBankStatusProfile(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:capbankmodule.CapBankStatusProfile)
 }
 CapBankStatusProfile::CapBankStatusProfile(const CapBankStatusProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CapBankStatusProfile* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusmessageinfo_){nullptr}
+    , decltype(_impl_.capbankstatus_){nullptr}
+    , decltype(_impl_.capbanksystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_statusmessageinfo()) {
-    statusmessageinfo_ = new ::commonmodule::StatusMessageInfo(*from.statusmessageinfo_);
-  } else {
-    statusmessageinfo_ = nullptr;
+    _this->_impl_.statusmessageinfo_ = new ::commonmodule::StatusMessageInfo(*from._impl_.statusmessageinfo_);
   }
   if (from._internal_has_capbankstatus()) {
-    capbankstatus_ = new ::capbankmodule::CapBankStatus(*from.capbankstatus_);
-  } else {
-    capbankstatus_ = nullptr;
+    _this->_impl_.capbankstatus_ = new ::capbankmodule::CapBankStatus(*from._impl_.capbankstatus_);
   }
   if (from._internal_has_capbanksystem()) {
-    capbanksystem_ = new ::capbankmodule::CapBankSystem(*from.capbanksystem_);
-  } else {
-    capbanksystem_ = nullptr;
+    _this->_impl_.capbanksystem_ = new ::capbankmodule::CapBankSystem(*from._impl_.capbanksystem_);
   }
   // @@protoc_insertion_point(copy_constructor:capbankmodule.CapBankStatusProfile)
 }
 
-void CapBankStatusProfile::SharedCtor() {
-::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&statusmessageinfo_) - reinterpret_cast<char*>(this)),
-    0, static_cast<size_t>(reinterpret_cast<char*>(&capbanksystem_) -
-    reinterpret_cast<char*>(&statusmessageinfo_)) + sizeof(capbanksystem_));
+inline void CapBankStatusProfile::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_.statusmessageinfo_){nullptr}
+    , decltype(_impl_.capbankstatus_){nullptr}
+    , decltype(_impl_.capbanksystem_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CapBankStatusProfile::~CapBankStatusProfile() {
   // @@protoc_insertion_point(destructor:capbankmodule.CapBankStatusProfile)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CapBankStatusProfile::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete statusmessageinfo_;
-  if (this != internal_default_instance()) delete capbankstatus_;
-  if (this != internal_default_instance()) delete capbanksystem_;
+inline void CapBankStatusProfile::SharedDtor() {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.statusmessageinfo_;
+  if (this != internal_default_instance()) delete _impl_.capbankstatus_;
+  if (this != internal_default_instance()) delete _impl_.capbanksystem_;
 }
 
-void CapBankStatusProfile::ArenaDtor(void* object) {
-  CapBankStatusProfile* _this = reinterpret_cast< CapBankStatusProfile* >(object);
-  (void)_this;
-}
-void CapBankStatusProfile::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CapBankStatusProfile::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
 void CapBankStatusProfile::Clear() {
 // @@protoc_insertion_point(message_clear_start:capbankmodule.CapBankStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && statusmessageinfo_ != nullptr) {
-    delete statusmessageinfo_;
+  if (GetArenaForAllocation() == nullptr && _impl_.statusmessageinfo_ != nullptr) {
+    delete _impl_.statusmessageinfo_;
   }
-  statusmessageinfo_ = nullptr;
-  if (GetArena() == nullptr && capbankstatus_ != nullptr) {
-    delete capbankstatus_;
+  _impl_.statusmessageinfo_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.capbankstatus_ != nullptr) {
+    delete _impl_.capbankstatus_;
   }
-  capbankstatus_ = nullptr;
-  if (GetArena() == nullptr && capbanksystem_ != nullptr) {
-    delete capbanksystem_;
+  _impl_.capbankstatus_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.capbanksystem_ != nullptr) {
+    delete _impl_.capbanksystem_;
   }
-  capbanksystem_ = nullptr;
+  _impl_.capbanksystem_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CapBankStatusProfile::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CapBankStatusProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    ::uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_statusmessageinfo(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .capbankmodule.CapBankStatus capBankStatus = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_capbankstatus(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else {
+          goto handle_unusual;
+        }
         continue;
       // .capbankmodule.CapBankSystem capBankSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_capbanksystem(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
+        } else {
+          goto handle_unusual;
         }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
         continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CapBankStatusProfile::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::uint8_t* CapBankStatusProfile::_InternalSerialize(
+    ::uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:capbankmodule.CapBankStatusProfile)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusmessageinfo()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_statusmessageinfo()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::statusmessageinfo(this), target, stream);
+      InternalWriteMessage(1, _Internal::statusmessageinfo(this),
+        _Internal::statusmessageinfo(this).GetCachedSize(), target, stream);
   }
 
   // .capbankmodule.CapBankStatus capBankStatus = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbankstatus()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_capbankstatus()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::capbankstatus(this), target, stream);
+      InternalWriteMessage(2, _Internal::capbankstatus(this),
+        _Internal::capbankstatus(this).GetCachedSize(), target, stream);
   }
 
   // .capbankmodule.CapBankSystem capBankSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbanksystem()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_capbanksystem()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::capbanksystem(this), target, stream);
+      InternalWriteMessage(3, _Internal::capbanksystem(this),
+        _Internal::capbanksystem(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:capbankmodule.CapBankStatusProfile)
   return target;
 }
 
-size_t CapBankStatusProfile::ByteSizeLong() const {
+::size_t CapBankStatusProfile::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:capbankmodule.CapBankStatusProfile)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .commonmodule.StatusMessageInfo statusMessageInfo = 1 [(.uml.option_parent_message) = true];
-  if (this->has_statusmessageinfo()) {
+  if (this->_internal_has_statusmessageinfo()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *statusmessageinfo_);
+        *_impl_.statusmessageinfo_);
   }
 
   // .capbankmodule.CapBankStatus capBankStatus = 2 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbankstatus()) {
+  if (this->_internal_has_capbankstatus()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *capbankstatus_);
+        *_impl_.capbankstatus_);
   }
 
   // .capbankmodule.CapBankSystem capBankSystem = 3 [(.uml.option_required_field) = true, (.uml.option_multiplicity_min) = 1];
-  if (this->has_capbanksystem()) {
+  if (this->_internal_has_capbanksystem()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *capbanksystem_);
+        *_impl_.capbanksystem_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CapBankStatusProfile::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:capbankmodule.CapBankStatusProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CapBankStatusProfile* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CapBankStatusProfile>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:capbankmodule.CapBankStatusProfile)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:capbankmodule.CapBankStatusProfile)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CapBankStatusProfile::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CapBankStatusProfile::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CapBankStatusProfile::GetClassData() const { return &_class_data_; }
 
-void CapBankStatusProfile::MergeFrom(const CapBankStatusProfile& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankStatusProfile)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CapBankStatusProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CapBankStatusProfile*>(&to_msg);
+  auto& from = static_cast<const CapBankStatusProfile&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:capbankmodule.CapBankStatusProfile)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_statusmessageinfo()) {
-    _internal_mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(from._internal_statusmessageinfo());
+  if (from._internal_has_statusmessageinfo()) {
+    _this->_internal_mutable_statusmessageinfo()->::commonmodule::StatusMessageInfo::MergeFrom(
+        from._internal_statusmessageinfo());
   }
-  if (from.has_capbankstatus()) {
-    _internal_mutable_capbankstatus()->::capbankmodule::CapBankStatus::MergeFrom(from._internal_capbankstatus());
+  if (from._internal_has_capbankstatus()) {
+    _this->_internal_mutable_capbankstatus()->::capbankmodule::CapBankStatus::MergeFrom(
+        from._internal_capbankstatus());
   }
-  if (from.has_capbanksystem()) {
-    _internal_mutable_capbanksystem()->::capbankmodule::CapBankSystem::MergeFrom(from._internal_capbanksystem());
+  if (from._internal_has_capbanksystem()) {
+    _this->_internal_mutable_capbanksystem()->::capbankmodule::CapBankSystem::MergeFrom(
+        from._internal_capbanksystem());
   }
-}
-
-void CapBankStatusProfile::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:capbankmodule.CapBankStatusProfile)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CapBankStatusProfile::CopyFrom(const CapBankStatusProfile& from) {
@@ -6539,78 +6454,95 @@ bool CapBankStatusProfile::IsInitialized() const {
 
 void CapBankStatusProfile::InternalSwap(CapBankStatusProfile* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CapBankStatusProfile, capbanksystem_)
-      + sizeof(CapBankStatusProfile::capbanksystem_)
-      - PROTOBUF_FIELD_OFFSET(CapBankStatusProfile, statusmessageinfo_)>(
-          reinterpret_cast<char*>(&statusmessageinfo_),
-          reinterpret_cast<char*>(&other->statusmessageinfo_));
+      PROTOBUF_FIELD_OFFSET(CapBankStatusProfile, _impl_.capbanksystem_)
+      + sizeof(CapBankStatusProfile::_impl_.capbanksystem_)
+      - PROTOBUF_FIELD_OFFSET(CapBankStatusProfile, _impl_.statusmessageinfo_)>(
+          reinterpret_cast<char*>(&_impl_.statusmessageinfo_),
+          reinterpret_cast<char*>(&other->_impl_.statusmessageinfo_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CapBankStatusProfile::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_getter, &descriptor_table_capbankmodule_2fcapbankmodule_2eproto_once,
+      file_level_metadata_capbankmodule_2fcapbankmodule_2eproto[17]);
 }
-
-
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace capbankmodule
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankSystem* Arena::CreateMaybeMessage< ::capbankmodule::CapBankSystem >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankSystem*
+Arena::CreateMaybeMessage< ::capbankmodule::CapBankSystem >(Arena* arena) {
   return Arena::CreateMessageInternal< ::capbankmodule::CapBankSystem >(arena);
 }
-template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankControlYPSH* Arena::CreateMaybeMessage< ::capbankmodule::CapBankControlYPSH >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankControlYPSH*
+Arena::CreateMaybeMessage< ::capbankmodule::CapBankControlYPSH >(Arena* arena) {
   return Arena::CreateMessageInternal< ::capbankmodule::CapBankControlYPSH >(arena);
 }
-template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankPoint* Arena::CreateMaybeMessage< ::capbankmodule::CapBankPoint >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankPoint*
+Arena::CreateMaybeMessage< ::capbankmodule::CapBankPoint >(Arena* arena) {
   return Arena::CreateMessageInternal< ::capbankmodule::CapBankPoint >(arena);
 }
-template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankCSG* Arena::CreateMaybeMessage< ::capbankmodule::CapBankCSG >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankCSG*
+Arena::CreateMaybeMessage< ::capbankmodule::CapBankCSG >(Arena* arena) {
   return Arena::CreateMessageInternal< ::capbankmodule::CapBankCSG >(arena);
 }
-template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankControlScheduleFSCH* Arena::CreateMaybeMessage< ::capbankmodule::CapBankControlScheduleFSCH >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankControlScheduleFSCH*
+Arena::CreateMaybeMessage< ::capbankmodule::CapBankControlScheduleFSCH >(Arena* arena) {
   return Arena::CreateMessageInternal< ::capbankmodule::CapBankControlScheduleFSCH >(arena);
 }
-template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankControlFSCC* Arena::CreateMaybeMessage< ::capbankmodule::CapBankControlFSCC >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankControlFSCC*
+Arena::CreateMaybeMessage< ::capbankmodule::CapBankControlFSCC >(Arena* arena) {
   return Arena::CreateMessageInternal< ::capbankmodule::CapBankControlFSCC >(arena);
 }
-template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankControl* Arena::CreateMaybeMessage< ::capbankmodule::CapBankControl >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankControl*
+Arena::CreateMaybeMessage< ::capbankmodule::CapBankControl >(Arena* arena) {
   return Arena::CreateMessageInternal< ::capbankmodule::CapBankControl >(arena);
 }
-template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankControlProfile* Arena::CreateMaybeMessage< ::capbankmodule::CapBankControlProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankControlProfile*
+Arena::CreateMaybeMessage< ::capbankmodule::CapBankControlProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::capbankmodule::CapBankControlProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankDiscreteControlYPSH* Arena::CreateMaybeMessage< ::capbankmodule::CapBankDiscreteControlYPSH >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankDiscreteControlYPSH*
+Arena::CreateMaybeMessage< ::capbankmodule::CapBankDiscreteControlYPSH >(Arena* arena) {
   return Arena::CreateMessageInternal< ::capbankmodule::CapBankDiscreteControlYPSH >(arena);
 }
-template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankDiscreteControl* Arena::CreateMaybeMessage< ::capbankmodule::CapBankDiscreteControl >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankDiscreteControl*
+Arena::CreateMaybeMessage< ::capbankmodule::CapBankDiscreteControl >(Arena* arena) {
   return Arena::CreateMessageInternal< ::capbankmodule::CapBankDiscreteControl >(arena);
 }
-template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankDiscreteControlProfile* Arena::CreateMaybeMessage< ::capbankmodule::CapBankDiscreteControlProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankDiscreteControlProfile*
+Arena::CreateMaybeMessage< ::capbankmodule::CapBankDiscreteControlProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::capbankmodule::CapBankDiscreteControlProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankEventAndStatusYPSH* Arena::CreateMaybeMessage< ::capbankmodule::CapBankEventAndStatusYPSH >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankEventAndStatusYPSH*
+Arena::CreateMaybeMessage< ::capbankmodule::CapBankEventAndStatusYPSH >(Arena* arena) {
   return Arena::CreateMessageInternal< ::capbankmodule::CapBankEventAndStatusYPSH >(arena);
 }
-template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankEvent* Arena::CreateMaybeMessage< ::capbankmodule::CapBankEvent >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankEvent*
+Arena::CreateMaybeMessage< ::capbankmodule::CapBankEvent >(Arena* arena) {
   return Arena::CreateMessageInternal< ::capbankmodule::CapBankEvent >(arena);
 }
-template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankEventProfile* Arena::CreateMaybeMessage< ::capbankmodule::CapBankEventProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankEventProfile*
+Arena::CreateMaybeMessage< ::capbankmodule::CapBankEventProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::capbankmodule::CapBankEventProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankReading* Arena::CreateMaybeMessage< ::capbankmodule::CapBankReading >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankReading*
+Arena::CreateMaybeMessage< ::capbankmodule::CapBankReading >(Arena* arena) {
   return Arena::CreateMessageInternal< ::capbankmodule::CapBankReading >(arena);
 }
-template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankReadingProfile* Arena::CreateMaybeMessage< ::capbankmodule::CapBankReadingProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankReadingProfile*
+Arena::CreateMaybeMessage< ::capbankmodule::CapBankReadingProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::capbankmodule::CapBankReadingProfile >(arena);
 }
-template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankStatus* Arena::CreateMaybeMessage< ::capbankmodule::CapBankStatus >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankStatus*
+Arena::CreateMaybeMessage< ::capbankmodule::CapBankStatus >(Arena* arena) {
   return Arena::CreateMessageInternal< ::capbankmodule::CapBankStatus >(arena);
 }
-template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankStatusProfile* Arena::CreateMaybeMessage< ::capbankmodule::CapBankStatusProfile >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::capbankmodule::CapBankStatusProfile*
+Arena::CreateMaybeMessage< ::capbankmodule::CapBankStatusProfile >(Arena* arena) {
   return Arena::CreateMessageInternal< ::capbankmodule::CapBankStatusProfile >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
-
 // @@protoc_insertion_point(global_scope)
-#include <google/protobuf/port_undef.inc>
+#include "google/protobuf/port_undef.inc"

@@ -4,89 +4,111 @@
 #include "uml.pb.h"
 
 #include <algorithm>
-
-#include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/descriptor.h>
-#include <google/protobuf/generated_message_reflection.h>
-#include <google/protobuf/reflection_ops.h>
-#include <google/protobuf/wire_format.h>
+#include "google/protobuf/io/coded_stream.h"
+#include "google/protobuf/extension_set.h"
+#include "google/protobuf/wire_format_lite.h"
+#include "google/protobuf/descriptor.h"
+#include "google/protobuf/generated_message_reflection.h"
+#include "google/protobuf/reflection_ops.h"
+#include "google/protobuf/wire_format.h"
 // @@protoc_insertion_point(includes)
-#include <google/protobuf/port_def.inc>
 
+// Must be included last.
+#include "google/protobuf/port_def.inc"
 PROTOBUF_PRAGMA_INIT_SEG
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = ::PROTOBUF_NAMESPACE_ID::internal;
 namespace uml {
 }  // namespace uml
-static constexpr ::PROTOBUF_NAMESPACE_ID::Metadata* file_level_metadata_uml_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_uml_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_uml_2eproto = nullptr;
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_uml_2eproto::offsets[1] = {};
-static constexpr ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema* schemas = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::Message* const* file_default_instances = nullptr;
+static constexpr const ::_pb::EnumDescriptor**
+    file_level_enum_descriptors_uml_2eproto = nullptr;
+static constexpr const ::_pb::ServiceDescriptor**
+    file_level_service_descriptors_uml_2eproto = nullptr;
+const ::uint32_t TableStruct_uml_2eproto::offsets[1] = {};
+static constexpr ::_pbi::MigrationSchema* schemas = nullptr;
+static constexpr ::_pb::Message* const* file_default_instances = nullptr;
+const char descriptor_table_protodef_uml_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+    "\n\tuml.proto\022\003uml\032 google/protobuf/descri"
+    "ptor.proto:>\n\025option_parent_message\022\035.go"
+    "ogle.protobuf.FieldOptions\030\320\206\003 \001(\010:>\n\025op"
+    "tion_required_field\022\035.google.protobuf.Fi"
+    "eldOptions\030\321\206\003 \001(\010:@\n\027option_multiplicit"
+    "y_min\022\035.google.protobuf.FieldOptions\030\322\206\003"
+    " \001(\005:@\n\027option_multiplicity_max\022\035.google"
+    ".protobuf.FieldOptions\030\323\206\003 \001(\005:4\n\013option"
+    "_uuid\022\035.google.protobuf.FieldOptions\030\324\206\003"
+    " \001(\010:3\n\noption_key\022\035.google.protobuf.Fie"
+    "ldOptions\030\325\206\003 \001(\010:A\n\026option_openfmb_prof"
+    "ile\022\037.google.protobuf.MessageOptions\030\270\216\003"
+    " \001(\010B]\n\007openfmbP\001ZFgitlab.com/openfmb/ps"
+    "m/ops/protobuf/go-openfmb-ops-protobuf/v"
+    "2/openfmb\252\002\007openfmbb\006proto3"
+};
+static const ::_pbi::DescriptorTable* const descriptor_table_uml_2eproto_deps[1] =
+    {
+        &::descriptor_table_google_2fprotobuf_2fdescriptor_2eproto,
+};
+static ::absl::once_flag descriptor_table_uml_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_uml_2eproto = {
+    false,
+    false,
+    587,
+    descriptor_table_protodef_uml_2eproto,
+    "uml.proto",
+    &descriptor_table_uml_2eproto_once,
+    descriptor_table_uml_2eproto_deps,
+    1,
+    0,
+    schemas,
+    file_default_instances,
+    TableStruct_uml_2eproto::offsets,
+    nullptr,
+    file_level_enum_descriptors_uml_2eproto,
+    file_level_service_descriptors_uml_2eproto,
+};
 
-const char descriptor_table_protodef_uml_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\tuml.proto\022\003uml\032 google/protobuf/descri"
-  "ptor.proto:>\n\025option_parent_message\022\035.go"
-  "ogle.protobuf.FieldOptions\030\320\206\003 \001(\010:>\n\025op"
-  "tion_required_field\022\035.google.protobuf.Fi"
-  "eldOptions\030\321\206\003 \001(\010:@\n\027option_multiplicit"
-  "y_min\022\035.google.protobuf.FieldOptions\030\322\206\003"
-  " \001(\005:@\n\027option_multiplicity_max\022\035.google"
-  ".protobuf.FieldOptions\030\323\206\003 \001(\005:4\n\013option"
-  "_uuid\022\035.google.protobuf.FieldOptions\030\324\206\003"
-  " \001(\010:3\n\noption_key\022\035.google.protobuf.Fie"
-  "ldOptions\030\325\206\003 \001(\010:A\n\026option_openfmb_prof"
-  "ile\022\037.google.protobuf.MessageOptions\030\270\216\003"
-  " \001(\010B]\n\007openfmbP\001ZFgitlab.com/openfmb/ps"
-  "m/ops/protobuf/go-openfmb-ops-protobuf/v"
-  "2/openfmb\252\002\007openfmbb\006proto3"
-  ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_uml_2eproto_deps[1] = {
-  &::descriptor_table_google_2fprotobuf_2fdescriptor_2eproto,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_uml_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_uml_2eproto = {
-  false, false, 587, descriptor_table_protodef_uml_2eproto, "uml.proto", 
-  &descriptor_table_uml_2eproto_once, descriptor_table_uml_2eproto_deps, 1, 0,
-  schemas, file_default_instances, TableStruct_uml_2eproto::offsets,
-  file_level_metadata_uml_2eproto, file_level_enum_descriptors_uml_2eproto, file_level_service_descriptors_uml_2eproto,
-};
-PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
-descriptor_table_uml_2eproto_metadata_getter(int index) {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_uml_2eproto);
-  return descriptor_table_uml_2eproto.file_level_metadata[index];
+// This function exists to be marked as weak.
+// It can significantly speed up compilation by breaking up LLVM's SCC
+// in the .pb.cc translation units. Large translation units see a
+// reduction of more than 35% of walltime for optimized builds. Without
+// the weak attribute all the messages in the file, including all the
+// vtables and everything they use become part of the same SCC through
+// a cycle like:
+// GetMetadata -> descriptor table -> default instances ->
+//   vtables -> GetMetadata
+// By adding a weak function here we break the connection from the
+// individual vtables back into the descriptor table.
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_uml_2eproto_getter() {
+  return &descriptor_table_uml_2eproto;
 }
-
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_uml_2eproto(&descriptor_table_uml_2eproto);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
+static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_uml_2eproto(&descriptor_table_uml_2eproto);
 namespace uml {
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::FieldOptions,
-    ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< bool >, 8, false >
-  option_parent_message(kOptionParentMessageFieldNumber, false);
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::FieldOptions,
-    ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< bool >, 8, false >
-  option_required_field(kOptionRequiredFieldFieldNumber, false);
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::FieldOptions,
-    ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< ::PROTOBUF_NAMESPACE_ID::int32 >, 5, false >
-  option_multiplicity_min(kOptionMultiplicityMinFieldNumber, 0);
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::FieldOptions,
-    ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< ::PROTOBUF_NAMESPACE_ID::int32 >, 5, false >
-  option_multiplicity_max(kOptionMultiplicityMaxFieldNumber, 0);
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::FieldOptions,
-    ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< bool >, 8, false >
-  option_uuid(kOptionUuidFieldNumber, false);
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::FieldOptions,
-    ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< bool >, 8, false >
-  option_key(kOptionKeyFieldNumber, false);
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::MessageOptions,
-    ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< bool >, 8, false >
-  option_openfmb_profile(kOptionOpenfmbProfileFieldNumber, false);
-
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::PROTOBUF_NAMESPACE_ID::FieldOptions,
+    ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< bool >, 8, false>
+  option_parent_message(kOptionParentMessageFieldNumber, false, nullptr);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::PROTOBUF_NAMESPACE_ID::FieldOptions,
+    ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< bool >, 8, false>
+  option_required_field(kOptionRequiredFieldFieldNumber, false, nullptr);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::PROTOBUF_NAMESPACE_ID::FieldOptions,
+    ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< ::int32_t >, 5, false>
+  option_multiplicity_min(kOptionMultiplicityMinFieldNumber, 0, nullptr);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::PROTOBUF_NAMESPACE_ID::FieldOptions,
+    ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< ::int32_t >, 5, false>
+  option_multiplicity_max(kOptionMultiplicityMaxFieldNumber, 0, nullptr);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::PROTOBUF_NAMESPACE_ID::FieldOptions,
+    ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< bool >, 8, false>
+  option_uuid(kOptionUuidFieldNumber, false, nullptr);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::PROTOBUF_NAMESPACE_ID::FieldOptions,
+    ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< bool >, 8, false>
+  option_key(kOptionKeyFieldNumber, false, nullptr);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::PROTOBUF_NAMESPACE_ID::MessageOptions,
+    ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< bool >, 8, false>
+  option_openfmb_profile(kOptionOpenfmbProfileFieldNumber, false, nullptr);
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace uml
 PROTOBUF_NAMESPACE_OPEN
 PROTOBUF_NAMESPACE_CLOSE
-
 // @@protoc_insertion_point(global_scope)
-#include <google/protobuf/port_undef.inc>
+#include "google/protobuf/port_undef.inc"
